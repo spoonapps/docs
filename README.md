@@ -1,12 +1,12 @@
-# Spoonium Documentation #
+# Spoonium Documentation
 
 This is the official Git repository for Spoonium's public documentation. 
 
 Live version of the docs can be found at http://spoonium.net/docs
 
-## Building the Docs ##
+## Building the Docs
 
-### What You'll Need ###
+### What You'll Need
 
 - Python 2.7
 - Pip
@@ -16,9 +16,14 @@ Python dependencies are listed in the py-reqs.txt file in the root directory of 
 To install these dependencies, run: 
 	`pip install -r py-reqs.txt` 
 
-### Building ###
+### Building
 
 Execute: `python build.py` from the root directory of the repo. 
 
 This will generate a "build" folder with the same structure as the "docs" folder, but with each .md file converted to and saved as an HTML file. 
+
+## Writing the Docs
+
+Only 1 h1 should be used per page. 
+This will be title that appears in the left side-nav for that section of the doc. 
 
