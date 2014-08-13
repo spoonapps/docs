@@ -1,5 +1,4 @@
 import sys,os
-import re
 from markdown2 import markdown_path
 
 def main(root_dir):
