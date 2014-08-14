@@ -82,11 +82,16 @@ The Spoon command line interface is also aliased as `spn`. Thus, when using Spoo
 
 ## import
 
-	'import' - Copies a Spoon image into the local registry
+	'import' - Constructs an image from the specified file and adds it to the local registry
 
-	Expected usage: spoon import <options> <path>
+	Expected usage: spoon import <options> <filetype> <path>
 	Example: spoon import -n="my-new-image" \\f2\images\image.svm
+			 spoon import -n="my-msi-image" C:\root\app.msi
 
+	<filetype>: the type of file to import.
+		-svm 					Spoon image file
+		-msi						Microsoft software installer
+		-thinapp					Thinapp configuration file 
 	<path>: the path to the spoon image to import
 	<options> available:
 		-n, --name				The name to give the imported image
