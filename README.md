@@ -24,6 +24,11 @@ This will generate a "build" folder with the same structure as the "docs" folder
 
 ## Writing the Docs
 
-Only 1 h1 should be used per page. 
-This will be title that appears in the left side-nav for that section of the doc. 
+### Style Guide
+
+When contributing to the docs on Spoonium, please take into consideration the following style guidelines. 
+
+1. Only 1 `h1` should be specified in each `.md` file. This `h1` is used to populate the sidenav bar on the Spoonium doc page. 
+
+### Contributing 
 
