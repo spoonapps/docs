@@ -1,3 +1,5 @@
+# Getting Started with Spoon IDE #
+
 ## System Requirements ##
 
 Spoon IDE runs on most Microsoft Windows operating systems as old as or newer than Windows 2000. For a full list of supported platforms, see What Platforms are Supported?
@@ -49,8 +51,6 @@ Spoon Server using the content and settings from that machine.
 
 ### Running the Desktop Scan ###
 
-
-
 1. Open the Configuration Wizard from the Virtual Application tab.
 2. Click the button next to Scan desktop for installed applications.
 3. A progress window displays while the filesystem and registry are scanned for application identifying information.
@@ -74,3 +74,14 @@ To enable logging for the desktop scan add the following registry key.
     "TraceLevel"="Debug"
 
 After adding this registry key, logging information can be viewed through the DebugView console available from Microsoft's website.
+
+## Packaging Applications using the Template Wizard ##
+For applications that are not picked up in the Desktop scan, or if the application configuration needs to be modified, the template wizard can be used:
+
+1. Open the Studio Configuration Wizard. The wizard starts automatically when Spoon IDE is launched. You can also open the wizard by selecting **Configuration Wizard** on the **Virtual Application** ribbon bar.
+2. Select the box labeled **Build a virtual application from a template**.
+3. Select an application from the Application drop-down menu.
+4. The application information will be harvested from the local machine unless the application is flagged with a ' * '. If the application is not flagged, it must be installed on the local machine as part of the packaging process.
+5. Follow the wizard steps to construct the virtual application.
+
+After completing the wizard the application configuration remains loaded in the Spoon IDE interface while the settings are inspected and additional customization is performed. Refer to [Configure Virtual Applications](#configure-virtual-applications) and [Customize Virtual Applications](#customize-virtual-applications) for more information about configuration and customization.
