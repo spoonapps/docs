@@ -10,4 +10,8 @@ The image to pull can be specified with up to 3 identifiers, only 1 of which (th
 - Name
 - Tag
 
+If a namespace is not specified, it will default to that of the logged-in user. 
+
+If a tag is not specified, the default tag of `master` is applied. 
+
 

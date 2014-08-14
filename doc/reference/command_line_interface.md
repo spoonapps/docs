@@ -203,6 +203,30 @@ The Spoon command line interface is also aliased as `spn`. Thus, when using Spoo
 
 	<container>: The ID of the container to restart
 
+## tag
+
+	'tag' - Creates a copy of an image with a new name
+
+	Expected usage: spoon tag <image> [<namespace>/]<name>:<tag>
+	Example: spoon tag spoonbrew/git:master user/my-git:master
+			 spoon tag my-new-image:master user/my-new-image:1.0
+
+	<image>: the name of the image to rename. Includes the image's namespace or tag, if applicable
+	<namespace>: the namespace of the new copy
+	<name>: the name of the new copy
+	<tag>: the tag of the new copy
+
+## top
+
+	'top' - Displays the running processes in a container
+	
+	Expected usage: spoon top <options> <container>
+	Example: spoon top 55kj8dx
+
+	<container>: the ID of the container to examine
+	<options> available: 
+		-l						Display long-formatted table of results
+
 ## version
 
 	'version' - Shows the current version of the Spoon IDE and VM

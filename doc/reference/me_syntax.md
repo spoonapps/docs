@@ -1,4 +1,4 @@
-# Syntax for `.me` Scripts
+# Syntax for .me Scripts
 
 ## Rules
 
