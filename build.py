@@ -1,5 +1,7 @@
 import sys,os
+from BeautifulSoup import BeautifulSoup
 from markdown2 import markdown_path
+
 
 def main(root_dir):
 	"""Do the actual work of the script
@@ -40,9 +42,18 @@ def convert_to_html(md_file_path):
 
 def convert_html_to_spooniumHTML(html_in):
 	"""Wraps the input html in a <div class="wiki-content"></div>
-	for use in the spoonium docs
+	for use in the spoonium docs. It will also find the h1 and assign it an ID corresponding to
+	the content of that h1. 
+
+	Example h1 conversion: <h1>Spoonium Basics</h1> --> <h1 id="Spoonium_Basics">Spoonium Basics</h1>
 	"""
-	return '<div class="wiki-content">\n' + html_in + '\n</div>'
+	#find any h1's and convert them
+	soup = BeautifulSoup(html_in)
+	for h1 in soup.findAll('h1'):
+		h1['id'] = h1.string.replace(' ', '_')
+
+	#wrap the content in a div and return
+	return '<div class="wiki-content">\n' + str(soup) + '\n</div>'
 
 def write_to_file(file_path, text):
 	"""Write the contents of the input text to a file
