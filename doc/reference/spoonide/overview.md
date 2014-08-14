@@ -79,4 +79,8 @@ Spoon IDE supports both 32- and 64-bit applications. Both 32-bit (under 32-bit m
 
 Spoon IDE supports these operating systems running within VMware and Microsoft hardware virtualization and hypervisor environments. Spoon IDE has limited support for the Windows Preinstallation Environment (WinPE), though certain applications (depending on operating system features unavailable in WinPE) may not function properly.
 
-**Note:** IDE does not support creation of 16-bit executables. To run 16-bit DOS applications, virtualize an appropriate emulator with the application and launch the application through the emulator.
+**Note:** Spoon IDE does not support creation of 16-bit executables. To run 16-bit DOS applications, virtualize an appropriate emulator with the application and launch the application through the emulator.
+
+## What Applications Can Be Virtualized Using Spoon IDE? ##
+
+Spoon IDE and the Spoon virtualization engine support most major Windows desktop applications. However, certain applications are unsuitable for virtualization using Spoon's user-mode technology. These include application features which contain, or directly depend upon, interaction with specialized kernel-mode device drivers or other kernel-mode extensions, operating system components and extensions, anti-virus applications, and kernel event filtering, monitoring, and intrusion detection applications. Spoon applications are compatible with most major anti-virus, runtime, and security packages.
