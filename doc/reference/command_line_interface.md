@@ -169,6 +169,10 @@ The Spoon command line interface is also aliased as `spn`. Thus, when using Spoo
 	Usage: spoon pull [<repository>/]<image>[:<tag>]
 	Example: spoon pull spoonbrew/git:master
 
+	<repository>: the repository of the image
+	<image>: the name of the image
+	<tag>: the tagged version of the image to pull
+
 ## push
 
 	'push' - Upload the specified image to the remote hub
@@ -176,6 +180,19 @@ The Spoon command line interface is also aliased as `spn`. Thus, when using Spoo
 	Usage: spoon push [<repository>] <image>[:<tag>]
 	Example: spoon push my-new-repo my-new-image
 			 spoon push my-new-image:1.0
+
+	<repository>: the repository to push to
+	<image>: the name of the image to push
+	<tag>: the tagged version of the image to push
+
+## register
+
+	'register' - Create shortcuts and file associations on the local machine
+
+	Usage: spoon register <image>
+	Example: spoon register spoonbrew/python
+
+	<image>: the image to register
 
 ## rm
 
@@ -253,6 +270,15 @@ The Spoon command line interface is also aliased as `spn`. Thus, when using Spoo
 	<container>: the ID of the container to examine
 	<options> available: 
 		-l						Display long-formatted table of results
+
+## unregister
+
+	'unregister' - Remove shortcuts and file associations on the local machine
+
+	Usage: spoon unregister <image>
+	Example: spoon unregister spoonbrew/python
+
+	<image>: the name of the image to unregister
 
 ## version
 
