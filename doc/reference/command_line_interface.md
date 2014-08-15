@@ -12,9 +12,9 @@ The Spoon command line interface is also aliased as `spn`. Thus, when using Spoo
 
 ## build
 
-	'build' - Builds a new image from a Spoon.me build script or XAPPL configuration file.
+	'build' - Build a new image from a Spoon.me build script or XAPPL configuration file
 
-	Expected usage: spoon build <options> <path>
+	Usage: spoon build <options> <path>
 	Example: spoon build -n="My Container" -w="C:\myapp" -e=VAR1=foo "C:\directory\installscript.me"
 
 	<path>: path to Spoon.me script or .xappl configuration file
@@ -28,9 +28,9 @@ The Spoon command line interface is also aliased as `spn`. Thus, when using Spoo
 		
 ## commit
 
-	'commit' - Creates a new image from a container
+	'commit' - Create a new image from a container
 
-	Expected usage: spoon commit <options> <container> <image>
+	Usage: spoon commit <options> <container> <image>
 	Example: spoon commit --no-base 55kj8dx my-new-image
 
 	<container>: the ID of the container to build a new image from
@@ -42,17 +42,28 @@ The Spoon command line interface is also aliased as `spn`. Thus, when using Spoo
 
 	'config' - 	View and modify configuration settings
 
-	Expected usage: spoon config <options>
+	Usage: spoon config <options>
 	Example: spoon config --hub=http://spoonium.net
 
 	<options> available:
 		--hub=VALUE				The remote registry to push to and pull from
 
+## cp
+
+	'cp' - Copy a file or directory from a container to the local machine
+
+	Usage: spoon cp <container>:<path> <local path>
+	Example: spoon cp 55kj8dx:C:\root\file.txt C:\Users\Administrator
+
+	<container>: the container to copy from
+	<path>: the absolute path to the file or directory to copy
+	<local path>: the absolute or relative destination path for the copied file or directory
+		
 ## diff
 
-	'diff' - Inspects changes to a container's filesystem and/or registry
+	'diff' - Inspect changes to a container's filesystem and/or registry
 
-	Expected usage: spoon diff <options> <container>
+	Usage: spoon diff <options> <container>
 	Example: spoon diff 55kj8dx
 	
 	<container>: the ID of the container to inspect
@@ -61,9 +72,9 @@ The Spoon command line interface is also aliased as `spn`. Thus, when using Spoo
 
 ## export
 
-	'export' - Copies a Spoon image in the local registry to a path on the local machine
+	'export' - Copy a Spoon image in the local registry to a path on the local machine
 	
-	Expected usage: spoon export <image> <path>
+	Usage: spoon export <image> <path>
 	Example: spoon export my-new-image:master C:\images
 	
 	<image>: The image to export
@@ -71,9 +82,9 @@ The Spoon command line interface is also aliased as `spn`. Thus, when using Spoo
 
 ## images
 
-	'images' - Lists the images in the local registry
+	'images' - List the images in the local registry
 
-	Expected usage: spoon images <options>
+	Usage: spoon images <options>
 	Example: spoon images
 
 	<options> available:
@@ -82,9 +93,9 @@ The Spoon command line interface is also aliased as `spn`. Thus, when using Spoo
 
 ## import
 
-	'import' - Constructs an image from the specified file and adds it to the local registry
+	'import' - Build an image from the specified file and adds it to the local registry
 
-	Expected usage: spoon import <options> <filetype> <path>
+	Usage: spoon import <options> <filetype> <path>
 	Example: spoon import -n="my-new-image" \\f2\images\image.svm
 			 spoon import -n="my-msi-image" C:\root\app.msi
 
@@ -98,24 +109,24 @@ The Spoon command line interface is also aliased as `spn`. Thus, when using Spoo
 
 ## login
 
-	'login' - Logs the user into the remote registry. 
+	'login' - Log the user into the remote registry. 
 
-	Expected usage: spoon login <username> <password>
+	Usage: spoon login <username> <password>
 	Example: spoon login my-new-username fake-password
 
 ## logout
 
-	'logout' - Logs the current user out
+	'logout' - Log the current user out
 
-	Expected usage: spoon logout
+	Usage: spoon logout
 	Example: spoon logout
 
 
 ## logs
 
-	'logs' - Fetches any logs associated with a container
+	'logs' - Fetch diagnostic logs for a container
 
-	Expected usage: spoon logs <options> <container>
+	Usage: spoon logs <options> <container>
 	Example: spoon logs -t 55kj8dx
 
 	<container>: the ID of the container to fetch the logs of
@@ -128,9 +139,9 @@ The Spoon command line interface is also aliased as `spn`. Thus, when using Spoo
 
 ## ps
 
-	'ps' - Lists the running containers on the device
+	'ps' - List the running containers on the device
 
-	Expected usage: spoon ps <options>
+	Usage: spoon ps <options>
 	Example: spoon ps --all
 
 	<options> available:
@@ -142,24 +153,24 @@ The Spoon command line interface is also aliased as `spn`. Thus, when using Spoo
 
 ## pull
 
-	'pull' - Copies an image from a remote hub to the local registry
+	'pull' - Copy an image from a remote hub to the local registry
 
-	Expected usage: spoon pull [<repository>/]<image>[:<tag>]
+	Usage: spoon pull [<repository>/]<image>[:<tag>]
 	Example: spoon pull spoonbrew/git:master
 
 ## push
 
-	'push' - Uploads the specified image to the remote hub
+	'push' - Upload the specified image to the remote hub
 
-	Expected uage: spoon push [<repository>] <image>[:<tag>]
+	Usage: spoon push [<repository>] <image>[:<tag>]
 	Example: spoon push my-new-repo my-new-image
 			 spoon push my-new-image:1.0
 
 ## rm
 
-	'rm' - Removes one or more containers from the local machine
+	'rm' - Remove one or more containers from the local machine
 	
-	Expected usage: spoon rm <options> <container>
+	Usage: spoon rm <options> <container>
 	Example: spoon rm 55kj8dx
 
 	<container>: the ID of the container to remove
@@ -168,9 +179,9 @@ The Spoon command line interface is also aliased as `spn`. Thus, when using Spoo
 
 ## rmi 
 
-	'rmi' - Removes one or more images from the local machine
+	'rmi' - Remove one or more images from the local machine
 
-	Expected usage: spoon rmi <options> <image>
+	Usage: spoon rmi <options> <image>
 	Example: spoon rmi my-new-image
 
 	<image>: the name of the image to remove
@@ -179,9 +190,9 @@ The Spoon command line interface is also aliased as `spn`. Thus, when using Spoo
 
 ## run
 
-	'run' - Creates and runs a command in a container
+	'run' - Create and run a command in a container
 
-	Expected usage: spoon run <options> <image> <command> [<args>...]
+	Usage: spoon run <options> <image> <command> [<args>...]
 	Example: spoon run -a spoonbrew/nuget cmd.exe
 			 spoon run -w=C:\ my-new-image cmd.exe
 
@@ -201,18 +212,18 @@ The Spoon command line interface is also aliased as `spn`. Thus, when using Spoo
 
 ## start
 
-	'start' - Restarts a container that is not running
+	'start' - Restart a container that is not running
 
-	Expected usage: spoon start <container>
+	Usage: spoon start <container>
 	Example: spoon start 55kj8dx
 
 	<container>: The ID of the container to restart
 
 ## tag
 
-	'tag' - Creates a copy of an image with a new name
+	'tag' - Create a copy of an image with a new name
 
-	Expected usage: spoon tag <image> [<namespace>/]<name>:<tag>
+	Usage: spoon tag <image> [<namespace>/]<name>:<tag>
 	Example: spoon tag spoonbrew/git:master user/my-git:master
 			 spoon tag my-new-image:master user/my-new-image:1.0
 
@@ -223,9 +234,9 @@ The Spoon command line interface is also aliased as `spn`. Thus, when using Spoo
 
 ## top
 
-	'top' - Displays the running processes in a container
+	'top' - Display the running processes in a container
 	
-	Expected usage: spoon top <options> <container>
+	Usage: spoon top <options> <container>
 	Example: spoon top 55kj8dx
 
 	<container>: the ID of the container to examine
@@ -234,5 +245,5 @@ The Spoon command line interface is also aliased as `spn`. Thus, when using Spoo
 
 ## version
 
-	'version' - Shows the current version of the Spoon IDE and VM
-	Expected usage: spoon version
+	'version' - Show the current version of the Spoon IDE
+	Usage: spoon version
