@@ -48,6 +48,17 @@ The Spoon command line interface is also aliased as `spn`. Thus, when using Spoo
 	<options> available:
 		--hub=VALUE				The remote registry to push to and pull from
 
+## containers
+
+	'containers' - List the containers on the local machine
+
+	Usage: spoon containers <options>
+	Example: spoon containers --no-trunc
+
+	<options> available:
+		--csv					Print the output with tab-separated columns
+		--no-trunc				Do not truncate columns
+
 ## cp
 
 	'cp' - Copy a file or directory from a container to the local machine
