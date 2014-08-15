@@ -247,3 +247,13 @@ The Spoon command line interface is also aliased as `spn`. Thus, when using Spoo
 
 	'version' - Show the current version of the Spoon IDE
 	Usage: spoon version
+
+## vm
+
+	'vm' - Show the current version of the Spoon VM
+	Usage: spoon vm
+
+## vms
+
+	'vms' - Show all available versions of the Spoon VM
+	Usage: spoon vms
