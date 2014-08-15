@@ -100,3 +100,5 @@ Diagnostic logging is enabled through the `--diagnostic` switch.
 
 The working directory inside the container can be specified with the `-w` or `--working-dir` flags. This flag may be overridden by any `WORKDIR` instructions in the container. 
 
+Note that this flag sets the woring directory within the intermediate container used to build the output image. It does *not* set the initial working directory of the image. 
+
