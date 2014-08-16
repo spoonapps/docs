@@ -4,7 +4,7 @@
 
 Spoon IDE runs on most Microsoft Windows operating systems as old as or newer than Windows 2000. For a full list of supported platforms, see What Platforms are Supported?
 
-The Spoon IDE graphical interface assumes a screen resolution of at least 800×600, although a screen resolution of at least 1024×768 is recommended.
+The Spoon IDE graphical interface assumes a screen resolution of at least 800x600, although a screen resolution of at least 1024x768 is recommended.
 
 ## User Interface Overview ##
 
@@ -17,7 +17,7 @@ Using the Spoon IDE user interface enables you to configure the filesystem and r
 - The Help bar provides access to Spoon IDE documentation, including a searchable version of this document.
 
 ### Spoon IDE Ribbon Bar ###
-
+t
 - The Virtual Application tab provides access to the snapshot and build features, as well as output configuration options such as the startup file, output directory, and diagnostic-mode selection.
 - The Runtimes tab provides a selection of auto-configurable runtime engines which can be embedded into your application with a single click. These include .NET Framework, Java, Flash, Shockwave, Acrobat Reader, and SQL Server 2005 Express runtimes.
 - The Advanced tab provides advanced Spoon IDE functions such as Platform Merge and Streaming.
@@ -64,7 +64,7 @@ Spoon Server using the content and settings from that machine.
 
 The application is now ready to be imported into Spoon Server.
 
-**Note: **Applications packaged with this method may retain the user settings that were in place at the time of the scan.
+**Note**: Applications packaged with this method may retain the user settings that were in place at the time of the scan.
 
 ### Troubleshooting the Desktop Scan ###
 To enable logging for the desktop scan add the following registry key.
