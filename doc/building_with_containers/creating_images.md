@@ -5,7 +5,7 @@ There are four ways to create an image:
 1. By manually committing a container, with the spoon commit command.
 2. Using the `spoon build` command to automatically create images from a build script.
 3. Using the `spoon import` command to build images from Spoon XAPPL configuration files. 
-3. By using the `spoon import` command to convert other file types to Spoon images.
+4. By using the `spoon import` command to convert other file types to Spoon images.
 
 ## Commit a Container
 
@@ -13,7 +13,7 @@ There are four ways to create an image:
 
 If you have an existing container that you would like to create an image from, use the spoon commit command. Before committing a container, make sure that it is not running.
 
-## Automated Images Builds
+## Automate Images Builds
 
 **Associated Command**: `spoon build`
 
@@ -29,7 +29,7 @@ After the container is committed, it is automatically removed from your machine.
 
 ## Building from a XAPPL File
 
-**Associated Command**: `spoon build` 
+**Associate Command**: `spoon build` 
 
 XAPPL files are static configuration files that specify all of the files, registry keys/values, and virtual machine settings to use when building a new image. The Spoon IDE can build images based on XAPPL configuration files using `spoon build` command. 
 

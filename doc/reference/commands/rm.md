@@ -16,3 +16,4 @@ To remove all of the containers in your local registry, specify the `-a` flag in
 
 	spoon rm -a
 
+
