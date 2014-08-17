@@ -1,3 +1,14 @@
+"""The primary build script for the spoonium docs! 
+
+To build the docs, run this script from the command line: 
+>python build.py 
+
+This will generate:
+1. a /build folder that mirrors the structure of the /doc folder except all the markdown has been converted
+to html
+2. a new docs.html file in the /build -- this is the new version of /docs on spoonium.net
+"""
+
 import sys, os
 from _classes import DocTemplate, DocTopic, DocSection, NoMetaFileError
 from _funcs import create_doc_from_yaml, process_dir, write_docshtml

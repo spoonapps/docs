@@ -137,12 +137,13 @@ def make_parser():
                         help="the display_name to change the object to")
     return parser
 
-def topic_migration(meta_yaml, current_name, to_name):
+def topic_migration(doc_dir, current_name, to_name):
     """Convert the topic from the current_name to the to_name
     """
     #should only have to conver the display_name for the topic in the meta.yaml
     new_topics = []  #empty list of converted topics
     found = False
+    meta_yaml = os.path.join(doc_dir, "meta.yaml")
     with open(meta_yaml, 'r') as f:
         topics = yaml.load_all(f)
         for topic in topics:
@@ -165,10 +166,61 @@ def topic_migration(meta_yaml, current_name, to_name):
             yaml.dump(topic, f, default_flow_style=False)
     return 0
 
-            
 
-
-
-def section_migration(current_name, to_name):
+def section_migration(doc_dir, current_name, to_name):
     """Convert the section from the current_name to the to_name
+
+    this will handle the change in meta.yaml and change any matching sections in meta.md files
     """
+    found = False
+    new_topics = []
+    meta_yaml = os.path.join(doc_dir, "meta.yaml")
+    with open(meta_yaml, 'r') as f:
+        topics = yaml.load_all(f)
+        for topic in topics:
+            print("Comparing sections in topic {0}".format(topic['display_name']))
+            for section in topic['sections']:
+                print('  comparing {0} and {1}'.format(current_name, section['display_name']))
+                if current_name == section['display_name']:
+                    found = True
+                    print('matched!')
+                    #migrate the link id for the topic, if necessary
+                    link = "cmdTabContent{0}"
+                    if topic['link'] == link.format(current_name.replace(' ', '')):
+                        topic['link'] = link.format(to_name.replace(' ', ''))
+                    migrate_meta_files(doc_dir, current_name, to_name)  #migrate the meta files
+                    section['display_name'] = to_name  #assign the new name
+                else:
+                    pass
+            new_topics.append(topic)
+        if not found:
+            print("didn't find section with display_name %s" % current_name)
+            return 1
+    #should now have a bunch of yaml objects representing the new_topics
+    with open(meta_yaml, 'w') as f:
+        for topic in new_topics:
+            f.write('---\n')
+            yaml.dump(topic, f, default_flow_style=False)
+    return 0
+
+def migrate_meta_files(doc_dir, current_name, to_name):
+    """migrate meta files with the maching section name to the new name
+    """
+    replacement_string = "---\nsection: {0}\n---"
+    for dirpath, sub_dirs, files in os.walk(doc_dir):
+        if "meta.md" not in files:
+            continue
+        else:
+            #open the meta file and read it
+            meta_file = os.path.join(dirpath, 'meta.md')
+            with open(meta_file, 'r') as f:
+                text = f.read()
+                meta = markdown(text, extras=['metadata'])
+            if meta.metadata['section'].lower() == current_name.lower():  #use case-insensitive compare like in build
+                #match!
+                print("found matching meta.md file in {0}".format(dirpath))
+                with open(meta_file, 'w') as f:
+                    f.write(replacement_string.format(to_name))
+            else:
+                #do nothing
+                continue

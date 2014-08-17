@@ -1,3 +1,3 @@
 ---
-section: containerizing a java application
+section: Containerizing a Java Application
 ---

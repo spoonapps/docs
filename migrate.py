@@ -9,7 +9,7 @@ from _funcs import make_parser, topic_migration, section_migration
 
 def main():
 	script_dir = os.path.dirname(os.path.realpath(__file__))
-	yaml_path = os.path.join(script_dir, "doc\\meta.yaml")
+	doc_dir = os.path.join(script_dir, "doc")
 	#parse the command line args
 	parser = make_parser()
 	args = CommandLineArgs()
@@ -23,9 +23,9 @@ def main():
 		raise MissingArgError("to")
 	#split off based on type of migration
 	if args.type == "topic":
-		topic_migration(yaml_path, args.current, args.to)
+		topic_migration(doc_dir, args.current, args.to)
 	else:
-		section_migration(args.current, args.to)
+		section_migration(doc_dir, args.current, args.to)
 	
 if __name__ == "__main__":
 	main()

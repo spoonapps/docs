@@ -105,7 +105,7 @@ The Spoonium website runs on `NodeJS` and uses `EJS` templating to abstract out 
 
 ## The Migration Tool
 
-If you want to change the display_name of a topic or section, use the migration tool -- migrate.py. This will take care of all the internal dependencies for you. 
+If you want to change the `display_name` of a topic or section, use the migration tool -- migrate.py. This will take care of all the internal dependencies for you. 
 
 The script takes 3 parameters:
 
@@ -114,4 +114,13 @@ The script takes 3 parameters:
 3. The name to change the topic/section to
 
 USAGE: `python migrate.py --type topic --current <current name> --to <new name>`
+
+A topic migration will really just change the name in the **meta.yaml** file. 
+
+A section migration will: 
+
+1. Change the section display_name in **meta.yaml**
+2. Traverse the /docs dir and find any **meta.md** files with the old display_name, and change them appropriately
+3. Change the topic link, if it was for the migrated section
+
 
