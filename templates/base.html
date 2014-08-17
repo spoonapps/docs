@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    {% include "head.html" %}
+    <body>
+        <% include components/universalHeader.html %>
+        {% block docsheader %}
+        {% endblock docsheader %}
+        {% block docscontent %}
+        {% endblock docscontent %}
+        {% include "footer.html" %}
+    </body>
+</html>

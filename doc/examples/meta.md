@@ -1,3 +1,3 @@
 ---
-section: examples
+section: automating .net containerization
 ---

@@ -1,3 +1,3 @@
 ---
-section:test-auto
+section: automated browser testing
 ---

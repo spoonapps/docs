@@ -1,3 +1,3 @@
 ---
-section: test-manual
+section: manual browser testing
 ---

@@ -1,3 +1,3 @@
 ---
-section: reference
+section: spoon ide
 ---

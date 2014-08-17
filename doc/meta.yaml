@@ -1,0 +1,72 @@
+# top level defines the topics that will appear in the nav bar
+# sections will display_name in the dropdown for each section
+---
+display_name: Basics
+ordering: 1
+link: cmdTabContentAboutSpoonium
+sections:
+    - display_name: About Spoonium
+      ordering: 1
+      pages: []
+    - display_name: Understanding Spoonium
+      ordering: 2
+      pages: []
+    - display_name: Beginner Tutorial
+      ordering: 3
+      pages: []
+---
+display_name: Building
+ordering: 2
+link: cmdTabContentCreatingContainers
+sections: 
+    - display_name: Containers
+      ordering: 1
+      pages: []
+    - display_name: Images
+      ordering: 2
+      pages: []
+    - display_name: Spoonium CI
+      ordering: 3
+      pages: []
+---
+display_name: Testing
+ordering: 3
+link: cmdTabContentManualBrowserTesting
+sections: 
+    - display_name: Manual Browser Testing
+      ordering: 2
+      pages: []
+    - display_name: Automated Browser Testing
+      ordering: 1
+      pages: []
+---
+display_name: Examples
+ordering: 4
+link: cmdTabContentContainerizingaJavaApplication
+sections: 
+    - display_name: Containerizing a Java Application
+      ordering: 1
+      pages: []
+    - display_name: Containerizing a NodeJS Project
+      ordering: 2
+      pages: []
+    - display_name: Automating .NET Containerization
+      ordering: 3 
+      pages: []
+---
+display_name: Reference
+ordering: 5
+link: cmdTabContentSpoonCLI
+sections: 
+    - display_name: Spoon CLI
+      ordering: 1
+      pages: []
+    - display_name: Spoon IDE
+      ordering: 2
+      pages: []
+    - display_name: Spoon.me
+      ordering: 3 
+      pages: []
+    - display_name: Xappl Files
+      ordering: 4
+      pages: []
