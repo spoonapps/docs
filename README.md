@@ -102,3 +102,16 @@ This template only controls the creation of the navbar and populates the page's 
 You may notice that there's some `EJS` templating sprinkled into the page. 
 
 The Spoonium website runs on `NodeJS` and uses `EJS` templating to abstract out some resources. These resources are not held in this repository. 
+
+## The Migration Tool
+
+If you want to change the display_name of a topic or section, use the migration tool -- migrate.py. This will take care of all the internal dependencies for you. 
+
+The script takes 3 parameters:
+
+1. The type of migration (two valid values: "topic" or "section")
+2. The current display_name of the topic/section
+3. The name to change the topic/section to
+
+USAGE: `python migrate.py --type topic --current <current name> --to <new name>`
+

@@ -1,8 +1,13 @@
 import os, yaml
 from BeautifulSoup import BeautifulSoup
+from argparse import ArgumentParser
 from markdown2 import markdown
 from jinja2 import Environment, FileSystemLoader
 from _classes import DocTemplate, DocTopic, DocSection
+
+#=======================
+#BUILD SCRIPT FUNCTIONS
+#=======================
 
 def mutate_path_for_web(file_path, _dir):
     """Mutates the file path provided and turns it into a
@@ -115,3 +120,55 @@ def write_to_file(file_path, text):
     """
     with open(file_path, 'w') as f:
         f.write(text)
+
+#==========================
+#MIGRATION SCRIPT FUNCTIONS
+#==========================
+
+def make_parser():
+    """creates an argument parser for the migration SCRIPT
+    """
+    parser = ArgumentParser()
+    parser.add_argument("--type", action="store", default=None, choices=['section', 'topic'],
+                        help="the type of migration to perform")
+    parser.add_argument("--current", action="store", default=None,
+                        help="the current display_name of the object")
+    parser.add_argument("--to", action="store", default=None,
+                        help="the display_name to change the object to")
+    return parser
+
+def topic_migration(meta_yaml, current_name, to_name):
+    """Convert the topic from the current_name to the to_name
+    """
+    #should only have to conver the display_name for the topic in the meta.yaml
+    new_topics = []  #empty list of converted topics
+    found = False
+    with open(meta_yaml, 'r') as f:
+        topics = yaml.load_all(f)
+        for topic in topics:
+            print("comparing {0} and {1}".format(current_name, topic['display_name']))
+            if current_name == topic['display_name']:
+                #match!
+                topic['display_name'] = to_name
+                print('matched!')
+                found = True
+            else:
+                pass
+            new_topics.append(topic)
+    if not found:
+        print("didn't find topic %s" % current_name)
+        return 1
+    #should now have a bunch of yaml objects representing the new_topics
+    with open(meta_yaml, 'w') as f:
+        for topic in new_topics:
+            f.write('---\n')
+            yaml.dump(topic, f, default_flow_style=False)
+    return 0
+
+            
+
+
+
+def section_migration(current_name, to_name):
+    """Convert the section from the current_name to the to_name
+    """

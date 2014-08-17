@@ -1,3 +1,7 @@
+#====================
+#BUILD SCRIPT CLASSES
+#====================
+
 class DocTemplate(object):
     """Represents a template from which the docs page can be generated
     """
@@ -69,6 +73,25 @@ class NoMetaFileError(Exception):
 class NoSuchSectionError(Exception):
     """Raised when a meta.md file specifies a section that is not specified
     in the doc template
+    """
+
+    def __init__(self, value):
+        self.value = value
+
+    def __str__(self):
+        return repr(self.value)
+
+#========================
+#MIGRATION SCRIPT CLASSES
+#========================
+
+class CommandLineArgs(object):
+    """dummy class for holding parsed command line arguments
+    """
+    pass
+
+class MissingArgError(Exception):
+    """Raised when the script is missing a command line argument
     """
 
     def __init__(self, value):
