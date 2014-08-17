@@ -12,7 +12,7 @@ The Spoon command line interface is also aliased as `spn`. Thus, when using Spoo
 
 ## build
 
-	'build' - Build a new image from a Spoon.me build script or XAPPL configuration file
+	'build' - Build a new image from a build script or XAPPL configuration file
 
 	Usage: spoon build <options> <path>
 	Example: spoon build -n="My Container" -w="C:\myapp" -e=VAR1=foo "C:\directory\installscript.me"

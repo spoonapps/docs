@@ -1,0 +1,3 @@
+---
+section: test-auto
+---
