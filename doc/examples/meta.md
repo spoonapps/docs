@@ -1,3 +1,0 @@
----
-section: automating .net containerization
----

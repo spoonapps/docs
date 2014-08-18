@@ -54,8 +54,11 @@ sections:
 - display_name: Containerizing a NodeJS Project
   ordering: 2
   pages: []
-- display_name: Automating .NET Containerization
+- display_name: Using MSNet on Spoonium
   ordering: 3
+  pages: []
+- display_name: Python on Spoonium
+  ordering: 4
   pages: []
 ---
 display_name: Reference
