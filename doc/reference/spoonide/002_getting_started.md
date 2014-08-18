@@ -1,4 +1,4 @@
-# Getting Started with Spoon IDE #
+# Getting Started #
 
 ## System Requirements ##
 

@@ -1,4 +1,4 @@
-# Spoon IDE Overview #
+# Overview #
 
 Spoon IDE enables you to convert your Windows, .NET, Java, AIR, Flash, Shockwave, or other Windows-compatible applications into self-contained virtual applications. These applications are streamed from the web and run instantly on end-user devices. Unlike traditional deployment methods, virtual applications do not require reboots, administrative privileges, or separate setup steps for external components and runtimes. Virtual applications are isolated from other system applications, preventing DLL conflicts and other deployment nightmares.
 
