@@ -32,10 +32,16 @@ def process_markdown_file(markdown_file):
     with open(markdown_file, 'r') as f:
         text = f.read()
     html = markdown(text)
-    #process the html for spoonium
+    #roll our own IDs at h1s
     soup = BeautifulSoup(html)
     for h1 in soup.findAll('h1'):
         h1['id'] = h1.string.replace(' ', '_')
+    #switch <blockquote><p> --> <pre><code>
+    for blockquote in soup.findAll('blockquote'):
+        blockquote.name = 'pre'
+        for p in blockquote.findAll('p'):
+            p.name = 'code'
+
     return '<div class="wiki-content">\n' + str(soup) + '\n</div>'
 
 
