@@ -1,25 +1,24 @@
-﻿
-# What is Spoonium
+# A. Initial Setup and Configuration
 
-Spoonium is a container platform built on top of the Spoon virtual machine. Spoonium allows developers and systems administrators to isolate their applications from any underlying infrastructure, so that the same application runs the same way on any computer.
+Before getting started with Spoonium, you'll need to: 
 
-The Spoon virtualization machine, or Spoon VM, acts as a lightweight virtualization layer that sits between your application and the operating system. Applications run in a container interact with a virtual filesystem and registry, while the Spoon VM handles internal requests while selectively deferring certain commands to the underlying operating system. The Spoon VM also acts as a compatibility layer, allowing the same application to run the same way on any Windows NT 5.0+ OS.
-Why Use Spoonium?
+1. Create an account on [Spoonium](http://spoonium.net). If you do not already have an account, you can sign up for one [here](https://spoon.net/sso/spoonium.net/register). **Note**: Existing Spoon.net accounts can be used on Spoonium. 
+2. Download and install the Spoon Plugin. The Spoon Plugin can be downloaded from [http://start.spoon.net/install](http://start.spoon.net/install). Once downloaded, run the executable to install the plugin. 
+3. Upon successful installation, a login dialog will appear. Log in using your Spoonium credentials. 
+4. Verify the plugin was installed properly. To do this: 
+	1. Open a new command prompt (Start Menu > All Programs > Accessories > Command Prompt)
+	2. Type `spoon`. The `Spoon IDE` help dialog should appear. 
 
-#### Write once, run anywhere.
+Once you've verified that the plugin was installed properly, you're ready to get started! 
 
-1. **Simplify application deployment**
+## Login
 
-It's happened to us all – an application that was working on your development machine gets moved to another machine and suddenly breaks. With Spoonium, that issue is no more. Developers can containerize and share their development stack through Spoonium. When the application is ready for primetime, their entire environment can be containerized and deployed to a production machine.
+At this time, you should have a command prompt open and the Spoon Plugin installed. 
 
-2. **Easier bug tracking and QA**
+Before beginning, you'll need to log into the Spoonium Hub using your Spoonium/Spoon.net credentials.
 
-Any unit or code-level integration tests can be executed within a container, ensuring the same environment that will be used in production is properly tested against. When an application is ready for manual testing, a Spoonium container can be pushed to a remote hub where it can be shared with testers. Manual testers can pull the application down to their local machine and test against their local copy of the container. This ensures that testers see the same environment as the developer who will need to reproduce and patch any reported issues.
-For web applications, Spoonium also offers unlimited manual and automated browser testing. Spoonium's Selenium service has containerized versions of all major browsers which are built to self-configure a Selenium Grid on any Windows computer. These browsers are also available in their native, unaltered form at http://spoonium.net/manual for manual testing.
+	>spoon login spoonuser type-password-here
+	Logged in as spoonuser
 
-#### Popular Use Cases
-
-- Spoonium can be used as a version control system for your entire application.
-- Simplify **multi-step development cycles**. Ensure that the same code the developer writes is the same code the QA team tests and that the ops team deploys.
-- **Isolate **your application from the underlying operating system.
+	 
 
