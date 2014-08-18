@@ -1,4 +1,4 @@
-# C. Commit Changes and Push
+# Commit Changes and Push
 
 Now it's time to memorialize your changes by creating a new image from the container.
 

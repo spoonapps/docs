@@ -50,4 +50,28 @@ To import an `MSI`, use the command `spoon import -msi <path to msi>`.
 
 To import a Thinapp configuration, use the command `spoon import -thinapp <path to msi>`. 
 
+# Adding Existing Images
+
+There are two commands that can be used to add an existing Spoon image to the local registry. 
+
+1. Pull
+2. Import
+
+## Pull
+
+The `pull` command is used to copy an image from a remote registry (the **Spoonium Hub**, for example) the user's local registry. The user must be logged in to a remote registry to use the `pull` command. 
+
+The `pull` command takes a single parameter: the image to pull. When specifying the image to pull, one may optionally specify a repository and tag to pull. If these options are not specified, the following defaults will be applied: 
+
+1. The tag `master` will be applied to the specified image
+1. Spoon will look in the logged-in user's account on the remote registry for a matching image
+2. If an image is not found, Spoon will look in the `spoonbrew` account for a matching image
+
+If no matching image is found, the `pull` will fail. 
+
+## Import
+
+If you have an existing image on your local machine (such as from **Spoon IDE** or from a legacy version of **Spoon Studio**), you can `import` it to your local registry. 
+
+The `import` command requires a single parameter: the path to the image to be imported. You can optionally specify a name for the image using the `-n` or `--name` flag. If the image is not named, its ID will be used as a default name. 
 

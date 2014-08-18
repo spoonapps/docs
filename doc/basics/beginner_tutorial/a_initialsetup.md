@@ -1,4 +1,4 @@
-# A. Initial Setup and Configuration
+# Initial Setup and Configuration
 
 Before getting started with Spoonium, you'll need to: 
 

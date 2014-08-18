@@ -1,4 +1,4 @@
-# B. Run Your First Container
+# Run Your First Container
 
 Now that you're logged into Spoonium, you're ready to run your first container! We'll begin by pulling (downloading) an image from the Spoonium Hub. 
 

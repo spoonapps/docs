@@ -71,7 +71,7 @@ sections:
 - display_name: Spoon IDE
   ordering: 2
   pages: []
-- display_name: Spoon.me
+- display_name: ME Build Scripting
   ordering: 3
   pages: []
 - display_name: Xappl Files
