@@ -1,3 +1,3 @@
 ---
-section: python on spoonium
+section: Python on Spoonium
 ---
