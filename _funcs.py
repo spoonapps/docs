@@ -157,7 +157,7 @@ def topic_migration(doc_dir, current_name, to_name):
             if current_name == topic['display_name']:
                 #match!
                 topic['display_name'] = to_name
-                print('matched!')
+                print(    'matched!')
                 found = True
             else:
                 pass
@@ -189,7 +189,7 @@ def section_migration(doc_dir, current_name, to_name):
                 print('  comparing {0} and {1}'.format(current_name, section['display_name']))
                 if current_name == section['display_name']:
                     found = True
-                    print('matched!')
+                    print(    'matched!')
                     #migrate the link id for the topic, if necessary
                     link = "cmdTabContent{0}"
                     if topic['link'] == link.format(current_name.replace(' ', '')):
@@ -224,7 +224,7 @@ def migrate_meta_files(doc_dir, current_name, to_name):
                 meta = markdown(text, extras=['metadata'])
             if meta.metadata['section'].lower() == current_name.lower():  #use case-insensitive compare like in build
                 #match!
-                print("found matching meta.md file in {0}".format(dirpath))
+                print(      "found matching meta.md file in {0}".format(dirpath))
                 with open(meta_file, 'w') as f:
                     f.write(replacement_string.format(to_name))
             else:

@@ -1,3 +1,0 @@
----
-section: the virtual registry
----

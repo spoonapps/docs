@@ -1,4 +1,4 @@
-# About
+# The Virtual Filesystem
 
 Through the Spoon IDE, you can embed a *virtual filesystem* into an application container. Embedded files are accessible by your Spoon-processed application as if they were present in the actual filesystem. 
 

@@ -23,14 +23,11 @@ sections:
 - display_name: Images
   ordering: 2
   pages: []
-- display_name: The Virtual Filesystem
+- display_name: Spoon Virtualization
   ordering: 3
   pages: []
-- display_name: The Virtual Registry
-  ordering: 4
-  pages: []
 - display_name: Spoonium CI
-  ordering: 5
+  ordering: 4
   pages: []
 ---
 display_name: Testing

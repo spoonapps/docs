@@ -1,4 +1,4 @@
-# About
+# The Virtual Registry
 
 **Spoon IDE** enables you to embed a *virtual registry* into your executable. Embedded registry keys are accessible by your Spoon-processed application as if they were present in the actual registry. 
 

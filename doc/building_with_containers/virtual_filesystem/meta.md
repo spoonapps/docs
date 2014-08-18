@@ -1,4 +1,0 @@
----
-section: the virtual filesystem
----
-

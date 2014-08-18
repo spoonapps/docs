@@ -14,7 +14,7 @@ By default, all Spoon VM settings are *disabled*.
 
 ## Available Settings
 
-#### SpawnVM
+### SpawnVM
 
 **Default Value**: Enabled
 
@@ -22,25 +22,21 @@ By default, all Spoon VM settings are *disabled*.
 
 All child processes of containerized processes are, by default, launched inside the container. To disable this so that child processes launch on the native system, specify `--disable=SpawnVm` at `run` or `build` time. 
 
-#### ReadOnly
+### ReadOnly
 
 **Default Value**: Disabled
 
 **Persisted to Images**: Yes
 
-#### SuppressLogging
+### SuppressLogging
 
 **Default Value**: Disabled
 
 **Persisted to Images**: Yes
 
-#### AccurateFolders
 
-**Default Value**: Disabled
 
-**Persisted to Images**: Yes
-
-#### SpawnComServers
+### SpawnComServers
 
 **Default Value**: Disabled
 
@@ -50,7 +46,7 @@ COM servers are, by default, created outside the virtual environment. This allow
 
 When this setting is enabled, COM servers will be spawned within the container. 
 
-#### IsolateWindowsClasses
+### IsolateWindowsClasses
 
 **Default Value**: Disabled
 
@@ -58,13 +54,7 @@ When this setting is enabled, COM servers will be spawned within the container.
 
 Enabling this setting prevents a containerized process from viewing window classes that are registered by external processes. You can use this to prevent interaction between containerized and non-containerized versions of the same program when the application checks for existing class registrations. 
 
-#### IndicateVirtualization
-
-**Default Value**: Disabled
-
-**Persisted to Images**: No
-
-#### ReadShare
+### ReadShare
 
 **Default Value**: Disabled
 
@@ -72,7 +62,7 @@ Enabling this setting prevents a containerized process from viewing window class
 
 This setting forces any files opened within the container to open with the `READ_SHARE` flag. Enabling this setting may help resolve compatibility issues caused by sharing violations. 
 
-#### DRMCompat
+### DRMCompat
 
 **Default Value**: Disabled
 
@@ -80,7 +70,7 @@ This setting forces any files opened within the container to open with the `READ
 
 The `DRMCompat` setting enables additional compatibility with common DRM systems, such as Armadillo. 
 
-#### ShutdownProcTree
+### ShutdownProcTree
 
 **Default Value**: Disabled
 
@@ -88,7 +78,7 @@ The `DRMCompat` setting enables additional compatibility with common DRM systems
 
 Enabling this setting will shutdown all child processes in the container when the root process exits. 
 
-#### DEPCompat
+### DEPCompat
 
 **Default Value**: Disabled
 
@@ -96,7 +86,7 @@ Enabling this setting will shutdown all child processes in the container when th
 
 This setting enables compatibility for systems with Data Execution Protection (DEP) enabled. Enable this setting for containerized applications running on Windows 2003. 
 
-#### IndicateElevated
+### IndicateElevated
 
 **Default Value**: Disabled
 
@@ -104,7 +94,7 @@ This setting enables compatibility for systems with Data Execution Protection (D
 
 Enabling the `IndicateElevated` setting will force an application to run as if it has elevated security privileges, even if the application does not. Enabling this setting will also eliminate UAC security prompts for elevation and subsequent application crashes. 
 
-#### SuppressInjection
+### SuppressInjection
 
 **Default Value**: Disabled
 
@@ -112,33 +102,30 @@ Enabling the `IndicateElevated` setting will force an application to run as if i
 
 The `SuppressInjection` flag disables DLL injection from occurring within the container. 
 
-#### FaultExecutables
+### FaultExecutables
 
 **Default Value**: Disabled
 
 **Persisted to Images**: Yes
 
-#### HonorWow6464Access
+This option will force all executable files to be faulted into the application container. 
+
+### HonorWow6464Access
 
 **Default Value**: Disabled
 
 **Persisted to Images**: Yes
 
-#### SuppressPopups
+
+
+### SuppressPopups
 
 **Default Value**: Disabled
 
 Enabling this setting will suppress any error popups that the Windows operating system generates during application runtime. 
 
-#### HideShellWindow
 
-**Default Value**: Disabled
-
-**Persisted to Images**: Yes
-
-
-
-#### PeriodicRegFlush
+### PeriodicRegFlush
 
 **Default Value**: Disabled
 
@@ -146,7 +133,7 @@ Enabling this setting will suppress any error popups that the Windows operating 
 
 When enabled, the registry in the container will be periodically "flushed." 
 
-#### EnableDiagnostics
+### EnableDiagnostics
 
 **Default Value**: Disabled
 
@@ -154,22 +141,14 @@ When enabled, the registry in the container will be periodically "flushed."
 
 When enabled, the `EnableDiagnostics` flag will persist diagnostic logging to an image. 
 
-#### ForceWriteCopyIsolation
-
-**Default Value**: Enabled
-
-**Persisted to Images**: No
-
-  
-
-#### EnableCrashLogging
+### EnableCrashLogging
 
 **Default Value**: Disabled
 **Persisted to Images**: No
 
 Enabling this setting turns on crash logging within the Spoon VM. 
 
-#### AttachConsole
+### AttachConsole
 
 **Default Value**: Disabled
 
@@ -177,7 +156,7 @@ Enabling this setting turns on crash logging within the Spoon VM.
 
 Enabling this process will attach the console to the root process of the container. 
 
-#### MergePathEnvVars
+### MergePathEnvVars
 
 **Default Value**: Disabled
 
@@ -185,7 +164,7 @@ Enabling this process will attach the console to the root process of the contain
 
 When enabled, this flag will cause all of the `PATH` variables for a set of merged Spoon images to be merged together (instead of overriding one another). 
 
-#### MergeVmSettings
+### MergeVmSettings
 
 **Default Value**: Disabled
 
