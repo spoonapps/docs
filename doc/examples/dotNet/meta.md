@@ -1,3 +1,3 @@
 ---
-section: Using MSNet on Spoonium
+section: MSNet
 ---

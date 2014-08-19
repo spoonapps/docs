@@ -1,21 +1,57 @@
 ---
-display_name: Basics
-link: cmdTabContentAboutSpoonium
+display_name: Quick Start
+link: cmdTabContentTutorial
 ordering: 1
 sections:
-- display_name: About Spoonium
+- display_name: Tutorial
   ordering: 1
   pages: []
-- display_name: Understanding Spoonium
+---
+display_name: About
+link: cmdTabContentVirtualMachine
+ordering: 2
+sections:
+- display_name: Virtual Machine
+  ordering: 1
+  pages: []
+- display_name: Containers
   ordering: 2
   pages: []
-- display_name: Beginner Tutorial
+- display_name: Images
+  ordering: 3
+  pages: []
+- display_name: Hub
+  ordering: 4
+  pages: []
+- display_name: Spoon Server
+  ordering: 5
+  pages: []
+---
+display_name: Installation
+link: cmdTabContentWindows
+ordering: 3
+sections:
+- display_name: Windows
+  ordering: 1
+  pages: []
+- display_name: EC2 (coming soon)
+  ordering: 2
+  pages: []
+- display_name: Azure (coming soon)
   ordering: 3
   pages: []
 ---
-display_name: Building
+display_name: Hub
+link: cmdTabContentBasics
+ordering: 4
+sections:
+- display_name: Basics
+  ordering: 1
+  pages: []
+---
+display_name: Build
 link: cmdTabContentCreatingContainers
-ordering: 2
+ordering: 5
 sections:
 - display_name: Containers
   ordering: 1
@@ -23,16 +59,19 @@ sections:
 - display_name: Images
   ordering: 2
   pages: []
-- display_name: Spoon Virtualization
+- display_name: Snapshotting with IDE
   ordering: 3
   pages: []
-- display_name: Spoonium CI
+- display_name: Desktop Scan with IDE
   ordering: 4
   pages: []
+- display_name: Continuous Integration
+  ordering: 5
+  pages: []
 ---
-display_name: Testing
+display_name: Test
 link: cmdTabContentAutomatedBrowserTesting
-ordering: 3
+ordering: 6
 sections:
 - display_name: Manual Browser Testing
   ordering: 2
@@ -40,37 +79,54 @@ sections:
 - display_name: Automated Browser Testing
   ordering: 1
   pages: []
----
-display_name: Examples
-link: cmdTabContentContainerizingaJavaApplication
-ordering: 4
-sections:
-- display_name: Containerizing a Java Application
-  ordering: 1
-  pages: []
-- display_name: Containerizing a NodeJS Project
-  ordering: 2
-  pages: []
-- display_name: Using MSNet on Spoonium
+- display_name: Nightly Builds
   ordering: 3
   pages: []
-- display_name: Python on Spoonium
+---
+display_name: Deploy
+link: cmdTabContentWithIDE
+ordering: 7
+sections:
+- display_name: With IDE
+  ordering: 1
+  pages: []
+- display_name: Hub
+  ordering: 2
+  pages: []
+- display_name: Spoon Server
+  ordering: 3
+  pages: []
+---
+display_name: Samples
+link: cmdTabContentJava
+ordering: 8
+sections:
+- display_name: Java
+  ordering: 1
+  pages: []
+- display_name: NodeJS
+  ordering: 2
+  pages: []
+- display_name: MSNet
+  ordering: 3
+  pages: []
+- display_name: Python
   ordering: 4
   pages: []
 ---
 display_name: Reference
-link: cmdTabContentSpoonCLI
-ordering: 5
+link: cmdTabContentCommandLine
+ordering: 9
 sections:
-- display_name: Spoon CLI
+- display_name: Command Line
   ordering: 1
   pages: []
-- display_name: Spoon IDE
+- display_name: IDE
   ordering: 2
   pages: []
-- display_name: ME Build Scripting
+- display_name: me Scripts
   ordering: 3
   pages: []
-- display_name: Xappl Files
+- display_name: XAPPL
   ordering: 4
   pages: []

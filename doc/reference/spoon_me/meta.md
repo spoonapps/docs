@@ -1,3 +1,3 @@
 ---
-section: me build scripting
+section: me Scripts
 ---

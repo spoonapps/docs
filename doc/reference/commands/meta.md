@@ -1,3 +1,3 @@
 ---
-section: spoon cli
+section: Command Line
 ---

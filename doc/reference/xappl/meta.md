@@ -1,3 +1,3 @@
 ---
-section: xappl files
+section: XAPPL
 ---

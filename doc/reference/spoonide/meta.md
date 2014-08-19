@@ -1,3 +1,3 @@
 ---
-section: spoon ide
+section: IDE
 ---

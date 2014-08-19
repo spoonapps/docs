@@ -1,4 +1,4 @@
-import os, yaml
+import re, os, yaml
 from BeautifulSoup import BeautifulSoup
 from argparse import ArgumentParser
 from markdown2 import markdown
@@ -98,6 +98,11 @@ def process_dir(dirpath, files, root_build_dir, doc_template):
         else:
             continue
         raise NoSuchSectionError(dirpath)
+
+
+def generate_output_dir(dirpath):
+    """Generates an output directory for the build folder"""
+
 
 
 def process_dir_meta(meta_file):
