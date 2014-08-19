@@ -34,7 +34,7 @@ def process_markdown_file(markdown_file):
     return markdown(text, extras=['wiki-tables'])
 
 
-def process_html_for_spoonium(html, topic):
+def process_html_for_spoonium(html):
     #roll our own IDs at h1s
     soup = BeautifulSoup(html)
     for h1 in soup.findAll('h1'):
@@ -91,6 +91,7 @@ def process_dir(dirpath, files, root_build_dir, doc_template):
                 else:
                     #generate html and add to build dir
                     html = process_markdown_file(os.path.join(dirpath, f))
+                    html = process_html_for_spoonium(html)
                     output_file_path = os.path.join(output_dir, f[:-2] + "html")
                     write_to_file(output_file_path, html)
                     #add to doc template
