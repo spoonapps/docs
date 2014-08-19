@@ -31,7 +31,10 @@ def process_markdown_file(markdown_file):
     #convert to html
     with open(markdown_file, 'r') as f:
         text = f.read()
-    html = markdown(text)
+    return markdown(text, extras=['wiki-tables'])
+
+
+def process_html_for_spoonium(html, topic):
     #roll our own IDs at h1s
     soup = BeautifulSoup(html)
     for h1 in soup.findAll('h1'):
@@ -41,7 +44,6 @@ def process_markdown_file(markdown_file):
         blockquote.name = 'pre'
         for p in blockquote.findAll('p'):
             p.name = 'code'
-
     return '<div class="wiki-content">\n' + str(soup) + '\n</div>'
 
 
@@ -98,11 +100,6 @@ def process_dir(dirpath, files, root_build_dir, doc_template):
         else:
             continue
         raise NoSuchSectionError(dirpath)
-
-
-def generate_output_dir(dirpath):
-    """Generates an output directory for the build folder"""
-
 
 
 def process_dir_meta(meta_file):
