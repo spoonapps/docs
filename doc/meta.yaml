@@ -48,6 +48,12 @@ sections:
 - display_name: Basics
   ordering: 1
   pages: []
+- display_name: Repositories
+  ordering: 2
+  pages: []
+- display_name: Templates
+  ordering: 3
+  pages: []
 ---
 display_name: Build
 link: cmdTabContentCreatingContainers
