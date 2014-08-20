@@ -1,6 +1,6 @@
 ## Installing Spoonium on Windows
 
-The lightweight **Spoon Plugin** contains all tools required for using Spoonium.
+The lightweight **Spoon Plugin** contains all tools required for using Spoonium. It allows users to use and manage containers.
 
 To download the installer, click [here](http://start.spoon.net/install). Run the executable to install.
 
