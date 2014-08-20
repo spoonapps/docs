@@ -48,15 +48,21 @@ sections:
 - display_name: Basics
   ordering: 1
   pages: []
+- display_name: Repositories
+  ordering: 2
+  pages: []
+- display_name: Templates
+  ordering: 3
+  pages: []
 ---
 display_name: Build
 link: cmdTabContentCreatingContainers
 ordering: 5
 sections:
-- display_name: Containers
+- display_name: Building Containers
   ordering: 1
   pages: []
-- display_name: Images
+- display_name: Building Images
   ordering: 2
   pages: []
 - display_name: Snapshotting with IDE
@@ -90,7 +96,7 @@ sections:
 - display_name: With IDE
   ordering: 1
   pages: []
-- display_name: Hub
+- display_name: To Hub
   ordering: 2
   pages: []
 - display_name: Spoon Server

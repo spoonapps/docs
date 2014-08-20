@@ -1,4 +1,4 @@
-# vms
+## vms
 
 The `vms` command lists all versions of the Spoon VM available to the current user. 
 

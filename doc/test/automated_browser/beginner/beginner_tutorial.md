@@ -1,19 +1,15 @@
-# Beginner Tutorial
+## Beginner Tutorial
 
 Welcome to the wonderful world of Selenium testing!
 
 In this guide, we'll walk you through how to run your first-ever Selenium test on Spoonium.
-Starting a New Hub
 
-## Starting a Hub
 Let's start by firing up a new Hub. In Selenium, the hub receives test requests and commands, and distributes them to the appropriate browser.
 
 To start the Spoonium hub, click the **START GRID** button on the [Selenium](http://spoonium.net/selenium) page. This will begin the streaming and provisioning process for the Spoonium hub.
 When the hub is ready to begin receiving tests, you will see a few lines of output appear in the Selenium Hub window.
 
 Once you see this, you're ready to test!
-
-## Running a Test
 
 Now that your hub is ready, you will need a test to run. We've provided ready-to-run sample tests in some example IDEs, available at [http://spoonium.net/ides](http://spoonium.net/ides).
 
@@ -25,7 +21,7 @@ In a few seconds, a new browser window will appear on your screen. Don't touch i
 
 If you happen to touch the browser or select an element on the page, you may interfere with the running test - potentially causing the test to fail. If you would like to interact with the browser in the middle of the test, we suggest you put a breakpoint in your test script to do some interactive debugging.
 
-## Next Steps
+#### Next Steps
 
 Now that you've seen the basic workflow for Spoonium,  as well as for general Selenium testing, we recommend you jump right into the code.
 

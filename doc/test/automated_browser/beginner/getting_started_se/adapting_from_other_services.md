@@ -1,8 +1,8 @@
-# Adapting Tests from Other Services
+## Adapting Tests from Other Services
 
 If you've used another cloud-based Selenium service in the past, switching over to Spoonium is as easy as switching a couple of lines of code. 
 
-## BrowserStack
+#### BrowserStack
 
 When switching from BrowserStack, you'll need to make 2 changes to your existing code: 
 
@@ -11,7 +11,7 @@ When switching from BrowserStack, you'll need to make 2 changes to your existing
 
 See below for language-specific instructions. 
 
-#### Java
+**Java**
 
 Find the section of your test where the test's `DesiredCapabilities` are created. It should look, roughly, like this: 
 
@@ -29,7 +29,7 @@ To adapt your script for Spoonium, delete the BrowserStack-specific capabilities
 
 If you were using a username-specific hub URL(i.e. `http://username:key@hub.browserstack.com/wd/hub`) instead of `DesiredCapabilities`, you only need to change the hub URL in your tests to `http://localhost:4444/wd/hub`. 
 
-#### C# 
+**C#**
 
 Find the section of your test where the tests `DesiredCapabilities` are created. It should look, roughly, like this: 
 
@@ -47,7 +47,7 @@ To adapt your script for Spoonium, delete the BrowserStack-specific capabilities
 
 If you were using a username-specific hub URL(i.e. `http://username:key@hub.browserstack.com/wd/hub`) instead of `DesiredCapabilities`, you only need to change the hub URL in your tests to `http://localhost:4444/wd/hub`. 
 
-#### Python
+**Python**
 
 Find the section of your test where the tests `desired_capabilities` are created. If probably looks something like this: 
 
@@ -61,7 +61,7 @@ To switch to Spoonium, change the `command_executor` to `http://localhost:4444/w
 
 	self.driver = webdriver.Remote(desired_capabilities=capabilities, command_executor="http://localhost:4444/wd/hub")
 
-## Sauce Labs
+**Sauce Labs**
 
 Sauce Labs provides 2 means of authentication when sending tests to their cloud server. If you are passing in your username and access key as `DesiredCapabilities`, you'll need to delete those capabilities and change the hub URL to `http://localhost:4444/wd/hub`. 
 
@@ -69,7 +69,7 @@ If you are using the user-specific hub URL (`http://USERNAME:ACCESSKEY@ondemand.
 
 For language-specific instructions, see below: 
 
-#### Java
+**Java**
 
 Find the section of your test where the test's `DesiredCapabilities` are specified and the `RemoteWebDriver` is started. It probably looks something like this: 
 
@@ -91,7 +91,7 @@ To adapt your script to Spoonium, change this section so that there aren't any S
 
 	RemoteWebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), caps); 
 
-#### C# 
+**C#** 
 
 Find the section of your test where the test's `DesiredCapabilities` are specified and the `RemoteWebDriver` is started. It probably looks something like this: 
 
@@ -113,7 +113,7 @@ To adapt your script to Spoonium, change this section so that there aren't any S
 
 	IWebDriver driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), caps); 
 
-#### Python
+**Python**
 
 Find the section of your test where the `desired_capabilities` are specified and the `webdriver.Remote` is started. It should look similar to this: 
 
@@ -127,7 +127,7 @@ To switch to Spoonium, change the `command_executor` to `http://localhost:4444/w
 
 	self.driver = webdriver.Remote(desired_capabilities=capabilities, command_executor="http://localhost:4444/wd/hub")
 
-## Testing Bot
+**Testing Bot**
 
 Similar to other cloud-based Selenium services, Testing Bot uses Selenium's `DesiredCapabilities` object as a means of authentication. When switching to Spoonium, you'll need to delete the `api_key` and `api_secret` capabilities from all of your tests - they are not necessary in Spoonium.
 
@@ -139,7 +139,7 @@ In addition to deleting Testing Bot-specific capabilities, you must also change 
 
 For language-specific instructions on adapting your Testing Bot tests for Spoonium, see below.
 
-#### Java
+**Java**
 
 Find the section of your code where you create the `DesiredCapabilities` and start the `RemoteWebDriver`. It probably looks something like this: 
 
@@ -153,7 +153,7 @@ To adapt your script to Spoonium, change this section so that there aren't any T
 
 You should also remove any methods that interact with the Testing Bot API. 
 
-#### C# 
+**C#** 
 
 Find the section of your code where the test's `DesiredCapabilities` are created and the `RemoteWebDriver` is started. It probably looks something like this: 
 

@@ -1,4 +1,4 @@
-# Getting Started: Karma
+## Getting Started: Karma
 
 Karma runs on Node.js and is available as an NPM package. It can be installed through the Node Package Manager (npm) by running: 
 
@@ -8,7 +8,7 @@ If you are already using Karma in your project, skip to **Configuring Karma for 
 
 If you do not already have Karma installed in your project, see **Installing Karma**.
 
-## Installing Karma
+#### Installing Karma
 
 This section will outline the recommended Karma installation for Spoonium. The instructions here closely mimic those recommended by the Karma project for general installations. 
 
@@ -28,10 +28,8 @@ We highly recommend also installing the **karma-cli** package. Without it, you m
 
 **Note**: If you are using any testing frameworks, such as Jasmine or QUnit, these should also be installed at this time. 
 
-## Configuring Karma for Spoonium
-
-#### Install the karma-webdriver-launcher Package
-
+#### Configuring Karma for Spoonium
+ 
 After Karma is installed, it must be configured to use Spoonium for browser launches. 
 
 First, install the **karma-webdriver-launcher** package through npm: 
@@ -46,8 +44,6 @@ or by adding the **karma-webdriver-launcher** to your project's **package.json**
 			"karma-webdriver-launcher": ">=0.2.0"
 		}
 	}
-
-#### Modify the karma.conf.js 
 
 In your project's root directory, open the **karma.conf.js** file. If it doesn't already exist, run the command `karma init karma.conf.js` in your project's root directory. Karma will ask a couple of questions about your particular configuration and generate a new config file based on your answers. 
 
@@ -126,6 +122,6 @@ Note that each launcher object has a similar structure:
 
 When adding additional launchers to your test, follow this pattern -- always specifying `base` and `config` as `WebDriver` and `webDriverConfig`, respectively. 
 
-## Run Your Karma Tests
+#### Run Your Karma Tests
 
 When you are ready to test, run the command `karma start karma.conf.js` from your project's root directory. 

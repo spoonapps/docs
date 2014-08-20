@@ -1,6 +1,4 @@
-# Common Issues and Troubleshooting
-
-## Connectivity Issues
+## Common Issues and Troubleshooting
 
 #### Cannot connect to the Spoonium Hub
 
@@ -9,8 +7,6 @@ Before proceeding, make sure the Spoonium hub is running on your local computer.
 **Solution 1: Check your Firewall**: This issue may occur if your computer has a restrictive firewall that blocks incoming and outgoing connections to/from your computer. 
 
 If possible, check your firewall and make sure port 4444 is not blocked. This is the port the Spoonium hub listens for commands on. If this port is blocked, it must be unblocked before using Spoonium.  
-
-## Application Issues
 
 #### Cannot Launch the Spoonium Hub
 
@@ -24,7 +20,7 @@ This issue occurs when the Spoon Plugin is not activate or installed. If you hav
 
 If the Spoon Plugin is installed and you continue to see this issue, verify that your browser is not blocking the Spoon Plugin from running on Spoonium. 
 
-###### Mozilla Firefox
+**Mozilla Firefox**
 
 1. Navigate to [http://start.spoon.net/install](http://start.spoon.net/install).
 2. To the left of the browser's address bar, a "building block" icon should appear (it looks like a small LEGO). 
@@ -32,15 +28,15 @@ If the Spoon Plugin is installed and you continue to see this issue, verify that
 4. Select **Allow and Remember** 
 5. Refresh the page and click **Start Grid**. 
 
-###### Google Chrome
+**Google Chrome**
 
 1. In the address bar, type `chrome://plugins`. 
 2. Locate **Spoon Plugin** and check the **Always allowed** box. 
 3. Restart Google Chrome to apply this new setting. 
 
-## Selenium Errors
+#### Selenium Errors
 
-#### Internet Explorer does not launch with Error "IELaunchURL() returned HRESULT 80070012"
+**Internet Explorer does not launch with Error "IELaunchURL() returned HRESULT 80070012"**
 
 This error occurs due to a bug in the `IEDriverServer`. For more information, see this issue report: [https://code.google.com/p/selenium/issues/detail?id=7045](https://code.google.com/p/selenium/issues/detail?id=7045). 
 

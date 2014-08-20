@@ -33,7 +33,7 @@
             <div class="tab-content">
                 {% for topic in doc_template.get_ordered_topics() %}
                 {% for section in topic.get_ordered_sections() %}
-                {% if section.id == "cmdTabContentAboutSpoonium" %}
+                {% if section.id == "cmdTabContentTutorial" %}
                 <ol class="tab-pane active" id="{{ section.id }}">
                 {% else %}
                 <ol class="tab-pane" id="{{ section.id }}">

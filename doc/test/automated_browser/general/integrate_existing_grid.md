@@ -1,4 +1,4 @@
-# Integrating Spoonium with an Existing Grid
+## Integrating Spoonium with an Existing Grid
 
 If you or your development team already have an in-house Selenium Grid, you can use Spoonium to "fill in the gaps" in your Grid to support browsers that you may not have the capacity or hardware to host internally.
 
@@ -6,7 +6,7 @@ For example, if your in-house Grid is only large enough to host and support the 
 
 After initial configuration and setup, the Spoonium hub will automatically provision and run tests on any browser that is not in your internal Grid.
 
-## Setup Guide
+#### Setup Guide
 
 The Spoonium hub has the same external API as the standard Selenium hub. You can connect external nodes to the Spoonium hub just like you would a normal Selenium hub.
 
