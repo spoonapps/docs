@@ -1,3 +1,3 @@
 ---
-section: Spoonium Hub
+section: Hub
 ---

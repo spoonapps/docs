@@ -96,7 +96,7 @@ sections:
 - display_name: With IDE
   ordering: 1
   pages: []
-- display_name: Hub
+- display_name: To Hub
   ordering: 2
   pages: []
 - display_name: Spoon Server
