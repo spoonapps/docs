@@ -76,7 +76,7 @@ sections:
 - display_name: Automated Browser Testing
   ordering: 1
   pages: []
-- display_name: Nightly Builds
+- display_name: Nightly Builds (coming soon)
   ordering: 3
   pages: []
 ---

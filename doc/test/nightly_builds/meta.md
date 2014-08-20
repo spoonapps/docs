@@ -1,3 +1,3 @@
 ---
-section: nightly builds
+section: Nightly Builds (coming soon)
 ---
