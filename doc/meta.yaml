@@ -113,7 +113,7 @@ sections:
 - display_name: NodeJS
   ordering: 2
   pages: []
-- display_name: MSNet
+- display_name: .NET
   ordering: 3
   pages: []
 - display_name: Python

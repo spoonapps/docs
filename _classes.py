@@ -1,3 +1,5 @@
+import re
+
 #====================
 #BUILD SCRIPT CLASSES
 #====================
@@ -54,7 +56,7 @@ class DocSection(object):
     def __init__(self, name, ordering, pages):
         self.display_name = name
         self.ordering = ordering
-        self.id = "cmdTabContent" + self.display_name.replace(' ', '')
+        self.id = "cmdTabContent" + self.display_name.replace('.', '').replace(' ', '')
         self.pages = pages
 
     def add_page(self, page):
