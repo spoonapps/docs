@@ -127,3 +127,6 @@ sections:
 - display_name: XAPPL
   ordering: 4
   pages: []
+- display_name: VM Settings
+  ordering: 5
+  pages: []
