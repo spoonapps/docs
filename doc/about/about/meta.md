@@ -1,3 +1,3 @@
 ---
-section: about spoonium
+section: tutorial
 ---

@@ -16,6 +16,8 @@ Python dependencies are listed in the py-reqs.txt file in the root directory of 
 To install these dependencies, run: 
 	`pip install -r py-reqs.txt` 
 
+If you're new to Python, we also recommend installing virtualenv and putting all the dependencies into their own virtualenv. A good tutorial on installing all this stuff (on Windows) can be found [here](http://www.tylerbutler.com/2012/05/how-to-install-python-pip-and-virtualenv-on-windows-with-powershell/). 
+
 ### Building
 
 Execute: `python build.py` from the root directory of the repo. 
@@ -30,10 +32,10 @@ The build folder will also contain a new "docs.html" file in the root of the /bu
 
 When contributing to the docs on Spoonium, please take the following style guidelines into consideration. 
 
-1. Only 1 `h1` should be specified in each `.md` file. This `h1` is used to populate the sidenav bar.
-2. When mocking the command prompt, start the "input" line with a >. See example, below
+1. Only 1 `h2` should be specified in each `.md` file. This is used to populate the sidenav bar.
+2. When mocking the command prompt, start the "input" line with a > and a space before the command. See example, below
 
-Input: `>spoon build -n="my image" /path/to/spoon.me`
+Input: `> spoon build -n="my image" /path/to/spoon.me`
 
 Output: `building "my image" from /path/to/spoon.me`
 

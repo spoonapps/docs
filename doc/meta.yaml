@@ -59,10 +59,10 @@ display_name: Build
 link: cmdTabContentCreatingContainers
 ordering: 5
 sections:
-- display_name: Containers
+- display_name: Building Containers
   ordering: 1
   pages: []
-- display_name: Images
+- display_name: Building Images
   ordering: 2
   pages: []
 - display_name: Snapshotting with IDE

@@ -8,7 +8,6 @@ from _classes import DocTemplate, DocTopic, DocSection
 #=======================
 #BUILD SCRIPT FUNCTIONS
 #=======================
-
 def mutate_path_for_web(file_path, _dir):
     """Mutates the file path provided and turns it into a
     suitable path for incorporation into the spoonium docs page
@@ -39,11 +38,14 @@ def process_html_for_spoonium(html):
     soup = BeautifulSoup(html)
     for h1 in soup.findAll('h1'):
         h1['id'] = h1.string.replace(' ', '_')
-    #switch <blockquote><p> --> <pre><code>
+    #switch <blockquote><p> --> <pre><code> (for cmd blocks within ul/ols)
     for blockquote in soup.findAll('blockquote'):
         blockquote.name = 'pre'
         for p in blockquote.findAll('p'):
             p.name = 'code'
+    #find any tables and add class="doc-table"
+    for table in soup.findAll('table'):
+        table['class'] = 'doc-table'
     return '<div class="wiki-content">\n' + str(soup) + '\n</div>'
 
 

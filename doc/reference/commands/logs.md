@@ -1,10 +1,8 @@
-# logs
+## logs
 
 The `logs` command is most useful for **debugging**. If something goes (unexpectedly) wrong inside a running container, you can inspect any logs that Spoon recorded for that container with the `logs` command. 
 
 By default, only the standard streams for a container are recorded and logged. To enable more comprehensive logging, specify the `--diagnostic` flag for the `run` command. 
-
-## Command Line Flags
 
 To show the timestamps for any recorded logs, specify the `-t` flag. 
 
