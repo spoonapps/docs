@@ -1,12 +1,5 @@
-# register
+## register
 
-The `register` command register an image to the local desktop. 
+The `register` command registers an image to the local desktop. 
 
-Desktop registration will create: 
-
-- desktop shortcut icons
-- Start Menu shortcuts
-- file associations
-
-for the image specified in the command. 
-
+Desktop registration will create desktop and Start Menu shortcuts and file associations for the specified image. 

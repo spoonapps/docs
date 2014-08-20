@@ -1,4 +1,4 @@
-# images
+## images
 
 The `images` command lists all of the images present in the current user's local registry. 
 
@@ -10,13 +10,9 @@ The **ID** column shows the ID of the image. The **ID** is a SHA256 hash of the 
 
 The **CREATED** column shows the date the image was first created. The date is displayed in the format *MM/DD/YYYY HH:MM:SS AM/PM*. 
 
-## Command Line Flags
-
-###### Tab-separate table columns
+#### Formatting Results
 
 The `--csv` flag can be specified to return the output of the `spoon image` command as a tab-separated table. 
-
-####### Don't truncate output
 
 By default, the results of `spoon images` are truncated so that they are most readable in the command prompt. This is most noticeable in the **ID** column, where the 32-character ID is truncated to 12 characters. To prevent the Spoon IDE from truncating data, specify the `--no-trunc` flag. 
 

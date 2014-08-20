@@ -1,10 +1,8 @@
-# rmi
+## rmi
 
 The `rmi` command removes an image, or images, from the local registry. 
 
 If you want to save an image but don't want to have it in your local registry, use the `spoon export` command to export the `.svm` file to your local file system. 
-
-## Removing Images
 
 To remove a single image from the local registry, specify the image name or ID as an argument to the `spoon rmi` command. 
 
@@ -17,5 +15,3 @@ If an image `rmi` command is passed an image ID, the image is deleted and all re
 To remove all the images in your registry, specify the `-a` flag as the argument to the `spoon rmi` command. 
 
 	spoon rmi -a
-
-This command *will* delete all the images in your registry. 
