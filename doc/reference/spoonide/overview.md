@@ -87,6 +87,209 @@ To reduce executable size, Spoon IDE can compress virtual filesystem contents. T
 
 **Note**: Disabling payload compression may significantly increase the size of the virtual application binary.
 
+## Virtual Registry ##
+Spoon IDE enables you to embed a virtual registry into your executable. Embedded registry keys are accessible by your Spoon-processed application as if they were present in the actual registry. Unlike data present on the host device, virtual registry keys and values are not visible from and do not require changes to the host device. The use of a virtual registry does not require security privileges on the host device, even if the virtual registry entries are in a privileged section of the registry. Because virtual registry entries are embedded in the application executable, other applications are unable to disrupt application execution by inadvertent modification of registry entries.
+
+The **Classes** root, **Current User** root, **Local Machine** root, and **Users** root folders correspond to the **HKEY\_CLASSES\_ROOT**, **HKEY\_CURRENT\_USER**, **HKEY\_LOCAL\_MACHINE**, and **HKEY\_USERS** keys on the host machine. 
+
+Registry string values can include well-known variables such as **@WINDIR@**, **@SYSWOW64@**, **@PROGRAMFILESX86@** and **@PROGRAMFILES@**.
+
+#### Isolation Modes ####
+
+In the event of a conflict between a key or value in the virtual filesystem and data present on the host device registry, information in the virtual registry takes precedence. Keys may be virtualized in **Full**, **Merge**, **Write Copy**, or **Hide** mode.
+
+- **Full**: In Full mode, values only in the virtual registry are visible to the application, even if a corresponding key exists on the host device, and writes are redirected to the user registry area.
+- **Merge**: In Merge mode, values present in a virtual key are merged with values in the corresponding key on the host machine (if such a key exists). Writes to host keys are passed through to the host registry and writes to virtual keys are redirected to the user registry area.
+- **Write Copy**: Write Copy mode is used when a virtual application must be read from registry keys already present on the host device, but isolation of the host device is still desired. Keys and values present on the host device are visible to the virtual environment, but any modifications to keys or values are redirected to the sandbox data area. 
+- **Hide**: Keys and values in the virtual registry or the corresponding host registry will not be found by the application at runtime.
+
+**Tip**: To apply selected isolation modes to all subkeys, right-click on the key, choose **Isolation**, select the checkbox for **Apply to Subkeys**, then **OK**.
+
+#### No Sync ####
+
+This feature only applies to virtual applications that are delivered and managed by Spoon Virtual Desktop Server, or Spoon.net. By default, Spoon IDE enables registry keys in the virtual registry to be synchronized to a user's Spoon account. This enables the application state to be maintained across different devices that are Spoon enabled. If there are keys in the virtual registry that should not be synchronized, but should remain only on the local device, enable the **No Sync** flag to prevent that key and any values within the key from being synchronized. This setting is managed on a registry key level and applies to all values within that key.
+
+#### Importing Registry Hive Files ####
+
+Spoon IDE can import registry hive (.reg) files into the virtual registry. To import a .reg file, select the **Import** button in the **Registry** panel, then choose the registry hive file to import.
+
+## Virtual Application Settings ##
+
+<table>
+	<tr>
+		<th>Setting</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td><b>Startup File</b></td>
+		<td>The executable or viewable file that opens when the user starts the virtual application. Multiple files can be selected by clicking the <b>Multiple</b> button.</td>
+	</tr>
+	<tr>
+		<td><b>Output File</b></td>
+		<td>The name of the output file from the IDE build process.</td>
+	</tr>
+	<tr>
+		<td nowrap><b>Project Type</b></td>
+		<td><b>Application</b>: A virtual application project produces an executable file output (.exe file) that can be run directly from the operating system. Application output mode is appropriate for most users and is the default selection.<br/><br/><b>Component</b>:  A component project produces an SVM (.svm file). SVM is a Spoon file format which encode all virtual application configuration and content into a single binary file. SVMs cannot be executed directly from the operating system. SVMs are used to exchange virtual application and component data between multiple virtual applications.<br/><br/>Note: In order to create SVMs for use in streaming applications on Spoon Server, the project type must be set to Component.</td>
+	</tr>
+	<tr>
+		<td><b>Executable Metadata</b></td>
+		<td><b>Standard metadata</b> includes information such as product title, publisher, description, icon, web site URL, and version. By default, Spoon IDE applies metadata inherited from the virtual application startup file to the output virtual application executable. To override the default meta data, uncheck the <b>Inherit Properties</b> box.<br/><br/><b>Custom metadata</b> can be used by specialized external executable viewer applications, inventory scanners, and other asset and licensing management systems. For information on custom executable metadata, consult the Microsoft Windows Software Development Kit.</td>
+	</tr>
+	<tr>
+		<td><b>Startup Image</b></td>
+		<td>A startup "splash" image to display during application startup. Startup images improve application branding and are useful when the application requires several seconds to initialize.<br/><br/>Transparency keying enables the startup image to contain transparent regions. Transparencies improve the visual effectiveness of your startup image.</td>
+	</tr>
+	<tr>
+		<td><b>Startup Shim</b></td>
+		<td>Startup shims are used to perform customized licensing checks and other initialization tasks. The shim must conform to the Spoon IDE interface in order to validate.<br/><br/>The startup shim must compile with an **OnInitialize** method.<br/><br/>**C-style startup shim signature**<br/><br/>typedef BOOL (__stdcall *FnOnInititialize) (LPCWSTR pwcsInitilizationToken);<br/><br/>The return value indicates whether virtual machine execution proceeds.<br/><br/>Methods are acquired via **::LoadLibrary** followed by **::GetProcAddress** calls. <br/><br/>**Example**<br/><br/>LPCWSTR pwcsInitToken = "VendorSpecificToken";<br/>HMODULE hShim = ::LoadLibrary("Shim.dll");<br/>FnOnInititialize fnOnInit = (FnOnInititialize)::GetProcAddress(hShim, "OnInitialize");<br/>BOOL fResult = fnOnInit(pwcsInitToken);</td>
+	</tr>
+	<tr>
+		<td><b>Directory Binding</b></td>
+		<td>Spoon IDE enables you to limit where an application will run, based on queries to an Active Directory Domain Controller.
+
+- Required: **domain**
+
+	Choose the DNS Domain name that a computer must be a member of to run the application.
+
+- Required: **group**
+
+	Choose the Active Directory security group that a user must be a member of to run the application.
+
+**Note**: Enabling this feature adds an Active Directory shim to the virtual application, which will run after user specified shims. Errors communicating with Active Directory are logged to debug output.</td>
+	</tr>
+	<tr>
+		<td><b>Command Line Arguments</b></td>
+		<td>Command line arguments specified by the user are passed to the virtual application startup executable by default. You can override and specify a fixed set of command line arguments to pass to the startup executable. For example, you can specify Java virtual machine behavior.</td>
+	</tr>
+	<tr>
+		<td><b>Sandbox Location</b></td>
+		<td>By default, the sandbox is placed in the **@APPDATALOCAL@\Spoon\Sandbox\@TITLE@\@VERSION@** folder, where **@APPDATALOCAL@** represents the **local Application Data** folder, and **@TITLE@** and **@VERSION@** represent the application title and version. In addition to the standard root folder variables, the sandbox location can contain the following variables:
+
+**@TITLE@**: Product title 
+**@PUBLISHER@**:  Product publisher
+**@VERSION@**:  Full version string, in dotted quad format
+**@WEBSITE@**:  Publisher website 
+**@BUILDTIME@**: Virtual application build time, in a format similar to **2008.02.01T08.00**.
+
+With the exception of the **@BUILDTIME@** variable (set automatically), these variables are based on the values specified in the **Properties** section of **Settings**.</td>
+	</tr>
+	<tr>
+		<td><b>Working Directory</b></td>
+		<td>**Working Directory** determines the active directory at the time of process launch.
+
+Use **Startup File Directory** sets the working directory to the directory of the virtual application startup file. In the case of a jukeboxed application, the working directory is set to the directory of the startup file specified on the jukebox command line.
+
+Use **Current Directory** sets the working directory to the directory from which the virtual application is launched.
+
+Use **Specified Path** enables you to specify a working directory. This specification can include environment and well-known root folder variables. 
+
+The working directory is set to the directory of the startup file by default.</td>
+	</tr>
+	<tr>
+		<td><b>Application Type</b></td>
+		<td>If you select an executable startup file, Spoon IDE automatically configures the virtual application to run in the same subsystem as the startup file. If you select a non-executable startup file, you must manually override the application type. Most applications execute in the GUI subsystem.
+To override the application type, select the mode from the Application Type menu in the Process Configuration section of the Settings panel. The Inherit mode sets the application type based on the type of the startup file.</td>
+	</tr>
+	<tr>
+		<td><b>Target Architecture</b></td>
+		<td>**x86**:  Use this option for applications that were packaged using the snapshot process on x86 systems. This option maps the **Program Files** directory to **C:\Program Files** on x86 systems or to **C:\Program Files (x86)** on x64 systems. .NET applications compiled to target any CPU architecture always run as 32-bit applications.
+
+**x64**:  Use this option for applications that were packaged using the snapshot process on x64 systems. This option maps the **Program Files** directory to **C:\Program Files** on x64 systems. The **Program Files (x86)** directory is mapped to **C:\Program Files** on x86 systems and **C:\Program Files (x86)** on x64 systems. .NET applications compiled to target any CPU architecture run as 32-bit applications on x86 systems and 64-bit applications on x64 systems.
+
+**Any CPU**:  This option maps the **Program Files** directory to **C:\Program Files** on x86 systems and **C:\Program Files** on x64 systems. .NET applications compiled to target any CPU architecture run as 32-bit applications on x86 systems and 64-bit applications on x64 systems.  Use this option to place a .NET application that is compiled to target any CPU architecture in the **Program Files** folder.
+
+**Target Architecture** is automatically captured during the snapshot process and generally should not be altered for applications packaged through the snapshot process.</td>
+	</tr>
+	<tr>
+		<td><b>Environment Variables</b></td>
+		<td>Most virtual environment variables overwrite any environment variables defined in the host environment. However, **PATH** and **PATHEXT** environment variables always merge with the corresponding host environment variables.
+
+Environment variables are automatically captured and merged during the snapshot delta process.</td>
+	</tr>
+	<tr>
+		<td><b>Virtual Services</b></td>
+		<td>Windows services are specialized applications that run in the background. They are typically responsible for providing system services such as database services, network traffic handling, web request processing, and other server functionality. Many applications install and require specific services in order to function properly. Spoon IDE fully supports virtualization of certain Windows services. <br/> <br/> Service installation and settings are captured automatically during the snapshot process. The primary exception occurs with virtualized applications intended to run as background worker services (for example, virtualized web servers); in this case, it is often required to enable the **Keep Alive** option.</td>
+	</tr>
+	<tr>
+		<td><b>SVMs</b></td>
+		<td>You can specify additional SVM layers for applications, in the case of updates or patches.</td>
+	</tr>
+	<tr>
+		<td><b>Child Process Exceptions</b></td>
+		<td>Some applications create new child processes while they run. Depending on the virtual application context, you can create such child processes within the virtual application, or in the host operating system.
+
+Child processes include processes created to service COM local server requests.
+
+**Note**: Child processes created outside of the virtual application cannot access virtualized filesystem or registry contents. These processes can access or modify host operating system contents, even if otherwise forbidden by the virtual application configuration.
+
+Child processes are created within the virtual application by default. To manually create child processes outside of the virtual application, uncheck the **Spawn child process within virtualized environment** option.
+
+COM servers are created outside the virtual environment by default to allow COM communication between native applications and virtual applications. To create COM servers within the virtual environment, check the **Spawn COM servers within virtualized environment** option.
+
+You can determine exceptions to the child process virtualization behavior using the **Child Process Exception List...** Process names listed in the child process exception list behave *opposite* to the master child process virtualization setting. To edit the child process exception list, select the **Child Process Exception List... **button. Process names will match without including the filename extension.</td>
+	</tr>
+	<tr>
+		<td><b>Read-only Virtual Environments </b></td>
+		<td>Prevent modifications to the virtual environment.</td>
+	</tr>
+	<tr>
+		<td><b>Automatic Sandbox Reset</b></td>
+		<td>Any changes made to an application's virtual environment are reverted when the application closes.</td>
+	</tr>
+	<tr>
+		<td><b>Shutdown Process Tree On Root Process Exit</b></td>
+		<td>enables the shutdown of all child processes when the root process exits.
+
+**Note**: The startup file is the root process by default. If a virtual service is specified in the application configuration file and is set to auto-start when the application is launched, the virtual service acts as the root process in the process tree.</td>
+	</tr>
+	<tr>
+		<td><b>Compress Payload</b></td>
+		<td>Enables compression of the output file. Note: Both the application profiling and streaming processes require that packages be built uncompressed. To build applications without compression, leave the **Compress payload** option unchecked.</td>
+	</tr>
+	<tr>
+		<td><b>Startup Executable Optimization</b></td>
+		<td>Launches the startup executable within the initial virtual machine process. This prevents the creation of a separate application process and can be incompatible with some applications.</td>
+	</tr>
+	<tr>
+		<td><b>Spoon Command-line Arguments</b></td>
+		<td>Spoon supports command-line arguments of the /X[arg] form, which modify virtual application behavior at run-time. In rare instances, these arguments may conflict with command-line arguments designed for use by the virtualized application. To disable processing of these arguments, uncheck the Enable Spoon command-line arguments box.</td>
+	</tr>
+	<tr>
+		<td><b>Window Class Isolation</b></td>
+		<td>prevents viewing window classes that are registered by external processes. You can use this to prevent interaction between virtualized and non-virtualized versions of the same program when the application checks for existing class registrations.
+</td>
+	</tr>
+	<tr>
+		<td><b>Enhanced DEP Compatibility for Legacy Applications</b></td>
+		<td>enables compatibility for systems with Data Execution Protection (DEP) enabled. Use this configuration for virtual applications running on Windows 2003.</td>
+	</tr>
+	<tr>
+		<td><b>Enhanced DRM Compatibility</b></td>
+		<td>enables additional compatibility with common DRM systems, such as Armadillo.</td>
+	</tr>
+	<tr>
+		<td><b>Trace Process Starts in Debug Output</b></td>
+		<td>sends a notification to **OutputDebugString** whenever a new process is started within the virtual environment. This notification is in XML format and comes as a basic information description. It can be monitored with any debugging tool. You can also monitor the notification by a parent process within the virtual environment if a child process is being debugged.</td>
+	</tr>
+	<tr>
+		<td><b>Force Read-share Files</b></td>
+		<td>forces any file opened within the virtual environment to open with the **READ_SHARE** flag. Use this option to  resolve compatibility issues caused by sharing violations.</td>
+	</tr>
+	<tr>
+		<td><b>Always Launch Child Processes as Current User</b></td>
+		<td>provide child processes with the same level of privileges as the virtual machine root process. Child processes launched by the virtual machine have reduced privileges by default.</td>
+	</tr>
+	<tr>
+		<td><b>Emulate Elevated Security Privileges</b></td>
+		<td>forces an application to run as if it has elevated security privileges, even if the application does not. Enabling this option eliminates UAC security prompts for elevation and subsequent application crashes.</td>
+	</tr>
+</table>
+
+
+## Runtimes and Components ##
+
+
 ## Building from the Command-line ##
 
 
