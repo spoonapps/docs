@@ -1,4 +1,4 @@
-## startup
+## STARTUP
 
 	`STARTUP` <param1> <param2> <param3> ...
 
