@@ -14,17 +14,8 @@ sections:
 - display_name: Virtual Machine
   ordering: 1
   pages: []
-- display_name: Containers
+- display_name: Components
   ordering: 2
-  pages: []
-- display_name: Images
-  ordering: 3
-  pages: []
-- display_name: Hub
-  ordering: 4
-  pages: []
-- display_name: Spoon Server
-  ordering: 5
   pages: []
 ---
 display_name: Installation
