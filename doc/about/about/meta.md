@@ -1,3 +1,3 @@
 ---
-section: tutorial
+section: about
 ---
