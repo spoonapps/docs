@@ -1,12 +1,10 @@
-## Automatic Reporting
+## Test Reports
 
 Any test run on Spoonium is automatically logged and saved to your Spoonium user account.
 
 This feature can be enabled or disabled by checking, or unchecking, the **Save test reports** check box in the top-right corner of [http://spoonium.net/selenium](http://spoonium.net/selenium).
 
 When checked, command and screenshot logs will still appear in the Spoonium web app at runtime, but they will not be saved after your session is ended.
-
-## Sharing and Deleting Tests
 
 #### Sharing Tests
 
@@ -23,7 +21,7 @@ If you're running low on storage space, or you'd just like to clear up your acco
 
 To delete a test, go to the Test Reports table and click the X icon corresponding to the test you would like to delete. 
 
-## Test Reports
+#### Test Reports
 
 Each test report contains a step-by-step breakdown of all the commands run for a given test.
 
@@ -34,4 +32,3 @@ For each command, the following information is recorded:
 A screenshot of the webpage during the command.
 
 In the report, commands are grouped by their associated screenshot. When you see a sequence of commands associated with a single screenshot, this means that the page did not change, visually, throughout this sequence of commands. 
-

@@ -20,6 +20,7 @@ class DocTemplate(object):
     def get_ordered_topics(self):
         return sorted(self.topics, key=lambda t: t.ordering, reverse=False)
 
+
 class DocTopic(object):
     """Represents a topic with a display name, link, and a list of sections
     """

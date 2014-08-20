@@ -1,6 +1,6 @@
-# Getting Started: Mocha/Mochify
+## Getting Started: Mocha/Mochify
 
-## Already Using Mochify? 
+#### Already Using Mochify? 
 
 If you are already using Mochify with Selenium WebDriver, make sure the following settings are configured in your `.min-wd` file: 
 
@@ -11,7 +11,7 @@ Then, start the Spoonium hub and, from your project's root directory, run:
 
 	mochify --wd
 
-## New to Mochify? 
+#### New to Mochify? 
 
 If you are new to Mochify and have never used it before, follow the instructions, below, to install Mocha and Mochify and configure them for use on Spoonium. 
 
@@ -29,8 +29,6 @@ Mochify also has a dependency for `browserify`, which can also be installed thro
 
 	npm install browserify
 
-###### Using packages.json
-
 If you are using a **packages.json** file to manage your project's dependencies, add `mocha` and `mochify` to the `devDependencies` section of the file. 
 
 	"devDependencies": {
@@ -38,8 +36,6 @@ If you are using a **packages.json** file to manage your project's dependencies,
 		"mochify": "*",
 		"browserify": "*"
 	}
-
-#### Configure Mochify
 
 Create a new `.min-wd` file in your project's root directory. Start by copying the JSON, below into this file: 
 

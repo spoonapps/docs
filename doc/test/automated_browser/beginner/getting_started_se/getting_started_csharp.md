@@ -1,13 +1,13 @@
-# Getting Started: C# 
+## Getting Started: C# 
 
-## What You'll Need
+#### What You'll Need
 
 - An IDE or text editor, such as Visual Studio or MonoDevelop.
 - An existing Selenium script or project. If you do not have an existing script, you can use the example script provided in the **SharpDevelop** IDE on the [Selenium IDEs](http://spoonium.net/ides). 
 - A web browser open to [http://spoonium.net/selenium](http://spoonium.net/selenium).
 - The Spoon browser plugin. 
 
-## Starting the Spoonium Hub
+#### Starting the Spoonium Hub
 
 In your web browser, click the **Start Grid** button in the top-left corner of the page. A buffering dialog will appear on your desktop. When the buffering dialog completes, check the **Hub** window on the page. When the Spoonium hub is ready, this output will appear in the window: 
 
@@ -17,7 +17,7 @@ In your web browser, click the **Start Grid** button in the top-left corner of t
 	2014-06-26 15:21:24.088:INFO:osjsh.ContextHandler:started o.s.j.s.ServletContextHandler{/,null}
 	2014-06-26 15:21:24.094:INFO:osjs.AbstractConnector:Started SocketConnector@0.0.0.0:4444
 
-## Adapting Your Test
+#### Adapting Your Test
 
 Open your test in your favorite IDE or text editor. 
 
@@ -40,7 +40,7 @@ Instead of using a browser-specific driver, you'll need to use the `RemoteWebDri
 
 That's it! Your test is now ready to run on Spoonium!
 
-## Configuring Capabilities
+#### Configuring Capabilities
 
 When using Selenium Grid, all of your tests are sent to a central **hub**, which then distributes them to the proper **node** (browser) for that test. 
 
@@ -57,8 +57,6 @@ Then, create the `DesiredCapabilities` instance and use the `SetCapability` meth
 For command capabilities, such as the browser and version to test against, Selenium provides a `CapabilityType` class.  For less-common, or browser-specific, capabilities, capabilities can be specified as strings. For example, we can specify a capability `name` with value `test name` by using: 
 
 	capabilities.SetCapability("name", "test name");
-
-#### Spoonium-specific Capabilities
 
 Spoonium supports some capabilities outside of the standard Selenium capabilities. 
 

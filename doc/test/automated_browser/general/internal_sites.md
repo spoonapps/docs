@@ -1,4 +1,4 @@
-# Testing Internal Sites
+## Testing Internal Sites
 
 Testing internal websites with Spoonium is just as easy as testing public websites.
 
@@ -8,23 +8,19 @@ The security benefit of this is that no browser data or network traffic passes t
 
 Below is some example code demonstrating how you would run your test against an internal site running at `http://my-internal-server:8080`.
 
-###### Java
+**Java**
 
 	`driver.navigate().to("http://my-internal-server:8080");
 
-###### C# 
+**C#** 
 
 	'driver.Navigate().GoToUrl("http://my-internal-server:8080");
 
-###### Python
+**Python**
 
 	'driver.get("http://my-internal-server:8080")
 
-###### Ruby
-
-	'driver.navigate.to "http://my-internal-server:8080"`
-
-##  On-Premise Solution
+####  On-Premise Solution
 
 For organizations that prefer to manage everything on their own servers, we offer an on-premise version of Spoonium with all the same tools and functionality of the hosted version.
 

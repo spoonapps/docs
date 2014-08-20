@@ -1,6 +1,6 @@
-# Testing Internet Explorer
+## Testing Internet Explorer
 
-## Testing Multiple IE Instances in Parallel
+#### Testing Multiple IE Instances in Parallel
 
 When testing parallel instances of Internet Explorer on Spoonium, we recommend setting the following options in your test. 
 
@@ -11,11 +11,11 @@ Using these settings helps prevent cookies and other session-specific items from
 
 If you are not testing multiple instances of Internet Explorer in parallel, we recommend setting the `Ensure Clean Session` capability to `True`. 
 
-## Configuring Internet Explorer Options
+#### Configuring Internet Explorer Options
 
 See below for language-specific instructions for how to properly configure your Internet Explorer tests for Spoonium. 
 
-#### Java
+**Java**
 
 Before beginning, import the `org.openqa.selenium.ie` package, if you have not already. 
 
@@ -31,7 +31,7 @@ When setting `DesiredCapabilities` for your test, use the static `FORCE_CREATE_P
 
 	capabilities.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
 
-#### C# 
+**C#**
 
 Before beginning, add a `using` directive for the `OpenQA.Selenium.IE`, if it is not already in your test. 
 
@@ -56,7 +56,7 @@ When instantiating your test's `RemoteWebDriver`, pass the `InternetExplorerOpti
 
 	IWebDriver driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), ieOptions.ToCapabilities());
 
-#### Python
+**Python**
 
 Internet Explorer-specific capabilities can be specified as key-value pairs through the capabilities object. 
 

@@ -1,4 +1,4 @@
-# Getting Started: Selenium
+## Getting Started: Selenium
 
 Running your tests on Spoonium is almost exactly like running them on a local Selenium Grid. What does this mean for you?
 
@@ -23,7 +23,7 @@ Don't see your preferred language? Let us know and we'll help you get started.
 
 If you're already using Grid to run your tests, configuring your tests for Spoonium is a one-line change. Substitute the URL of your current Grid with `http://localhost:4444/wd/hub` and you're ready to go!
 
-## Supported Browsers
+#### Supported Browsers
 
 - Chrome 27+ 
 - Firefox 3+

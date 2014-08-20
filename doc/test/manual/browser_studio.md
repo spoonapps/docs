@@ -1,4 +1,4 @@
-# Browser Studio
+## Browser Studio
 
 [http://browserstudio.com](http://browserstudio.com)
 
