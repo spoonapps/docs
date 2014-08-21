@@ -3,15 +3,16 @@
     {% include "head.html" %}
     <body>
         <% include ../components/universalHeader.html %>
-        <h1><a href="/docs" style="color:#808080; text-decoration:none;"></a>Documentation</h1>
         <div id="container">
-            <div class="fixedWidthBody">
-            {% block sidenav %}
-            {% endblock sidenav %}
-            </div>
-            <div class="fixedWidthBody" data-spy="scroll" data-target=".navbar-spy">
-            {% block docscontent %}
-            {% endblock docscontent %}
+            <div id="wrap">
+                <div class="navigation">
+                {% block sidenav %}
+                {% endblock sidenav %}
+                </div>
+                <div class="content" data-spy="scroll" data-target=".navbar-spy">
+                {% block docscontent %}
+                {% endblock docscontent %}
+                </div>
             </div>
         </div>
         {% include "footer.html" %}

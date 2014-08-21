@@ -1,6 +1,5 @@
 ---
 display_name: Quick Start
-link: cmdTabContentTutorial
 ordering: 1
 sections:
 - display_name: Tutorial
@@ -8,7 +7,6 @@ sections:
   pages: []
 ---
 display_name: About
-link: cmdTabContentVirtualMachine
 ordering: 2
 sections:
 - display_name: Components
@@ -28,7 +26,6 @@ sections:
   pages: []
 ---
 display_name: Installation
-link: cmdTabContentWindows
 ordering: 3
 sections:
 - display_name: Windows
@@ -42,7 +39,6 @@ sections:
   pages: []
 ---
 display_name: Hub
-link: cmdTabContentBasics
 ordering: 4
 sections:
 - display_name: Basics
@@ -56,7 +52,6 @@ sections:
   pages: []
 ---
 display_name: Build
-link: cmdTabContentCreatingContainers
 ordering: 5
 sections:
 - display_name: Building Containers
@@ -76,7 +71,6 @@ sections:
   pages: []
 ---
 display_name: Test
-link: cmdTabContentAutomatedBrowserTesting
 ordering: 6
 sections:
 - display_name: Manual Browser Testing
@@ -90,7 +84,6 @@ sections:
   pages: []
 ---
 display_name: Deploy
-link: cmdTabContentWithIDE
 ordering: 7
 sections:
 - display_name: With IDE
@@ -104,7 +97,6 @@ sections:
   pages: []
 ---
 display_name: Samples
-link: cmdTabContentJava
 ordering: 8
 sections:
 - display_name: Java
@@ -121,7 +113,6 @@ sections:
   pages: []
 ---
 display_name: Reference
-link: cmdTabContentCommandLine
 ordering: 9
 sections:
 - display_name: Command Line

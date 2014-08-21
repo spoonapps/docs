@@ -58,7 +58,7 @@ def create_doc_from_yaml(yaml_file):
         topics = yaml.load_all(f)
         for topic in topics:
             #create a new DocTopic
-            _topic = DocTopic(topic['display_name'], topic['ordering'], topic['link'])
+            _topic = DocTopic(topic['display_name'], topic['ordering'])
             for section in topic['sections']:
                 #create a new topic
                 _section = DocSection(section['display_name'], section['ordering'], section['pages'])
@@ -136,7 +136,7 @@ def write_docspages(doc_template, build_dir):
     template = env.get_template("docs_temp.html")
     for topic in doc_template.get_ordered_topics():
         html = template.render(doc_template=doc_template, intopic=topic)
-        write_to_file(os.path.join(os.path.join(build_dir, "docs"), topic.get_safe_name() + ".html"), html)
+        write_to_file(os.path.join(os.path.join(build_dir, "docs"), topic.get_link_name() + ".html"), html)
 
 
 def write_to_file(file_path, text):

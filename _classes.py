@@ -27,16 +27,15 @@ class DocTopic(object):
     """Represents a topic with a display name, link, and a list of sections
     """
 
-    def __init__(self, name, ordering, link):
+    def __init__(self, name, ordering):
         self.display_name = name
         self.ordering = ordering
-        self.link = link
         self.sections = []
 
     def add_section(self, section):
         self.sections.append(section)
 
-    def get_safe_name(self):
+    def get_link_name(self):
         return self.display_name.replace(' ', '').replace('.','')
 
     def get_section_names(self):
@@ -59,7 +58,7 @@ class DocSection(object):
     def __init__(self, name, ordering, pages):
         self.display_name = name
         self.ordering = ordering
-        self.id = "cmdTabContent" + self.display_name.replace('.', '').replace(' ', '')
+        self.id = self.display_name.replace('.', '').replace(' ', '')
         self.pages = pages
 
     def add_page(self, page):
