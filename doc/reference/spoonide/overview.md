@@ -142,21 +142,11 @@ Spoon IDE can import registry hive (.reg) files into the virtual registry. To im
 	</tr>
 	<tr>
 		<td><b>Startup Shim</b></td>
-		<td>Startup shims are used to perform customized licensing checks and other initialization tasks. The shim must conform to the Spoon IDE interface in order to validate.<br/><br/>The startup shim must compile with an **OnInitialize** method.<br/><br/>**C-style startup shim signature**<br/><br/>typedef BOOL (__stdcall *FnOnInititialize) (LPCWSTR pwcsInitilizationToken);<br/><br/>The return value indicates whether virtual machine execution proceeds.<br/><br/>Methods are acquired via **::LoadLibrary** followed by **::GetProcAddress** calls. <br/><br/>**Example**<br/><br/>LPCWSTR pwcsInitToken = "VendorSpecificToken";<br/>HMODULE hShim = ::LoadLibrary("Shim.dll");<br/>FnOnInititialize fnOnInit = (FnOnInititialize)::GetProcAddress(hShim, "OnInitialize");<br/>BOOL fResult = fnOnInit(pwcsInitToken);</td>
+		<td>Startup shims are used to perform customized licensing checks and other initialization tasks. The shim must conform to the Spoon IDE interface in order to validate.<br/><br/>The startup shim must compile with an <b>OnInitialize</b> method.<br/><br/><b>C-style startup shim signature</b><br/><br/>typedef BOOL (__stdcall *FnOnInititialize) (LPCWSTR pwcsInitilizationToken);<br/><br/>The return value indicates whether virtual machine execution proceeds.<br/><br/>Methods are acquired via <b>::LoadLibrary</b> followed by <b>::GetProcAddress</b> calls. <br/><br/><b>Example</b><pre>LPCWSTR pwcsInitToken = "VendorSpecificToken";<br/>HMODULE hShim = ::LoadLibrary("Shim.dll");<br/>FnOnInititialize fnOnInit = (FnOnInititialize)::GetProcAddress(hShim, "OnInitialize");<br/>BOOL fResult = fnOnInit(pwcsInitToken);</pre></td>
 	</tr>
 	<tr>
 		<td><b>Directory Binding</b></td>
-		<td>Spoon IDE enables you to limit where an application will run, based on queries to an Active Directory Domain Controller.
-
-- Required: **domain**
-
-	Choose the DNS Domain name that a computer must be a member of to run the application.
-
-- Required: **group**
-
-	Choose the Active Directory security group that a user must be a member of to run the application.
-
-**Note**: Enabling this feature adds an Active Directory shim to the virtual application, which will run after user specified shims. Errors communicating with Active Directory are logged to debug output.</td>
+		<td>Spoon IDE enables you to limit where an application will run, based on queries to an Active Directory Domain Controller.</td>
 	</tr>
 	<tr>
 		<td><b>Command Line Arguments</b></td>
@@ -164,52 +154,27 @@ Spoon IDE can import registry hive (.reg) files into the virtual registry. To im
 	</tr>
 	<tr>
 		<td><b>Sandbox Location</b></td>
-		<td>By default, the sandbox is placed in the **@APPDATALOCAL@\Spoon\Sandbox\@TITLE@\@VERSION@** folder, where **@APPDATALOCAL@** represents the **local Application Data** folder, and **@TITLE@** and **@VERSION@** represent the application title and version. In addition to the standard root folder variables, the sandbox location can contain the following variables:
-
-**@TITLE@**: Product title 
-**@PUBLISHER@**:  Product publisher
-**@VERSION@**:  Full version string, in dotted quad format
-**@WEBSITE@**:  Publisher website 
-**@BUILDTIME@**: Virtual application build time, in a format similar to **2008.02.01T08.00**.
-
-With the exception of the **@BUILDTIME@** variable (set automatically), these variables are based on the values specified in the **Properties** section of **Settings**.</td>
+		<td>By default, the sandbox is placed in the <b>@APPDATALOCAL@\Spoon\Sandbox\@TITLE@\@VERSION@</b> folder, where <b>@APPDATALOCAL@</b> represents the <b>local Application Data</b> folder, and <b>@TITLE@</b> and <b>@VERSION@</b> represent the application title and version. In addition to the standard root folder variables, the sandbox location can contain the following variables:<br/><br/><b>@TITLE@</b>: Product title<br/><b>@PUBLISHER@</b>:  Product publisher<br/><b>@VERSION@</b>:  Full version string, in dotted quad format<br/><b>@WEBSITE@</b>:  Publisher website<br/><b>@BUILDTIME@</b>: Virtual application build time, in a format similar to <b>2008.02.01T08.00</b>.<br/><br/>With the exception of the <b>@BUILDTIME@</b> variable (set automatically), these variables are based on the values specified in the <b>Properties</b> section of <b>Settings</b>.</td>
 	</tr>
 	<tr>
 		<td><b>Working Directory</b></td>
-		<td>**Working Directory** determines the active directory at the time of process launch.
-
-Use **Startup File Directory** sets the working directory to the directory of the virtual application startup file. In the case of a jukeboxed application, the working directory is set to the directory of the startup file specified on the jukebox command line.
-
-Use **Current Directory** sets the working directory to the directory from which the virtual application is launched.
-
-Use **Specified Path** enables you to specify a working directory. This specification can include environment and well-known root folder variables. 
-
-The working directory is set to the directory of the startup file by default.</td>
+		<td><b>Working Directory</b> determines the active directory at the time of process launch. <br/><br/>Use <b>Startup File Directory</b> sets the working directory to the directory of the virtual application startup file. In the case of a jukeboxed application, the working directory is set to the directory of the startup file specified on the jukebox command line. <br/><br/>Use <b>Current Directory</b> sets the working directory to the directory from which the virtual application is launched. <br/><br/>Use <b>Specified Path</b> enables you to specify a working directory. This specification can include environment and well-known root folder variables. <br/><br/>The working directory is set to the directory of the startup file by default.</td>
 	</tr>
 	<tr>
 		<td><b>Application Type</b></td>
-		<td>If you select an executable startup file, Spoon IDE automatically configures the virtual application to run in the same subsystem as the startup file. If you select a non-executable startup file, you must manually override the application type. Most applications execute in the GUI subsystem.
-To override the application type, select the mode from the Application Type menu in the Process Configuration section of the Settings panel. The Inherit mode sets the application type based on the type of the startup file.</td>
+		<td>If you select an executable startup file, Spoon IDE automatically configures the virtual application to run in the same subsystem as the startup file. If you select a non-executable startup file, you must manually override the application type. Most applications execute in the GUI subsystem. To override the application type, select the mode from the Application Type menu in the Process Configuration section of the Settings panel. The Inherit mode sets the application type based on the type of the startup file.</td>
 	</tr>
 	<tr>
 		<td><b>Target Architecture</b></td>
-		<td>**x86**:  Use this option for applications that were packaged using the snapshot process on x86 systems. This option maps the **Program Files** directory to **C:\Program Files** on x86 systems or to **C:\Program Files (x86)** on x64 systems. .NET applications compiled to target any CPU architecture always run as 32-bit applications.
-
-**x64**:  Use this option for applications that were packaged using the snapshot process on x64 systems. This option maps the **Program Files** directory to **C:\Program Files** on x64 systems. The **Program Files (x86)** directory is mapped to **C:\Program Files** on x86 systems and **C:\Program Files (x86)** on x64 systems. .NET applications compiled to target any CPU architecture run as 32-bit applications on x86 systems and 64-bit applications on x64 systems.
-
-**Any CPU**:  This option maps the **Program Files** directory to **C:\Program Files** on x86 systems and **C:\Program Files** on x64 systems. .NET applications compiled to target any CPU architecture run as 32-bit applications on x86 systems and 64-bit applications on x64 systems.  Use this option to place a .NET application that is compiled to target any CPU architecture in the **Program Files** folder.
-
-**Target Architecture** is automatically captured during the snapshot process and generally should not be altered for applications packaged through the snapshot process.</td>
+		<td><b>Target Architecture</b> is automatically captured during the snapshot process and generally should not be altered for applications packaged through the snapshot process.<ul><li><b>x86</b>:  Use this option for applications that were packaged using the snapshot process on x86 systems. This option maps the <b>Program Files</b> directory to <b>C:\Program Files</b> on x86 systems or to <b>C:\Program Files (x86)</b> on x64 systems. .NET applications compiled to target any CPU architecture always run as 32-bit applications. </li><li><b>x64</b>:  Use this option for applications that were packaged using the snapshot process on x64 systems. This option maps the <b>Program Files</b> directory to <b>C:\Program Files</b> on x64 systems. The <b>Program Files (x86)</b> directory is mapped to <b>C:\Program Files</b> on x86 systems and <b>C:\Program Files (x86)</b> on x64 systems. .NET applications compiled to target any CPU architecture run as 32-bit applications on x86 systems and 64-bit applications on x64 systems.</li><li><b>Any CPU</b>:  This option maps the <b>Program Files</b> directory to <b>C:\Program Files</b> on x86 systems and <b>C:\Program Files</b> on x64 systems. .NET applications compiled to target any CPU architecture run as 32-bit applications on x86 systems and 64-bit applications on x64 systems.  Use this option to place a .NET application that is compiled to target any CPU architecture in the <b>Program Files</b> folder.</li></ul></td>
 	</tr>
 	<tr>
 		<td><b>Environment Variables</b></td>
-		<td>Most virtual environment variables overwrite any environment variables defined in the host environment. However, **PATH** and **PATHEXT** environment variables always merge with the corresponding host environment variables.
-
-Environment variables are automatically captured and merged during the snapshot delta process.</td>
+		<td>Most virtual environment variables overwrite any environment variables defined in the host environment. However, <b>PATH</b> and <b>PATHEXT</b> environment variables always merge with the corresponding host environment variables.<br/><br/>Environment variables are automatically captured and merged during the snapshot delta process.</td>
 	</tr>
 	<tr>
 		<td><b>Virtual Services</b></td>
-		<td>Windows services are specialized applications that run in the background. They are typically responsible for providing system services such as database services, network traffic handling, web request processing, and other server functionality. Many applications install and require specific services in order to function properly. Spoon IDE fully supports virtualization of certain Windows services. <br/> <br/> Service installation and settings are captured automatically during the snapshot process. The primary exception occurs with virtualized applications intended to run as background worker services (for example, virtualized web servers); in this case, it is often required to enable the **Keep Alive** option.</td>
+		<td>Windows services are specialized applications that run in the background. They are typically responsible for providing system services such as database services, network traffic handling, web request processing, and other server functionality. Many applications install and require specific services in order to function properly. Spoon IDE fully supports virtualization of certain Windows services. <br/> <br/> Service installation and settings are captured automatically during the snapshot process. The primary exception occurs with virtualized applications intended to run as background worker services (for example, virtualized web servers); in this case, it is often required to enable the <b>Keep Alive</b> option.</td>
 	</tr>
 	<tr>
 		<td><b>SVMs</b></td>
@@ -217,17 +182,7 @@ Environment variables are automatically captured and merged during the snapshot 
 	</tr>
 	<tr>
 		<td><b>Child Process Exceptions</b></td>
-		<td>Some applications create new child processes while they run. Depending on the virtual application context, you can create such child processes within the virtual application, or in the host operating system.
-
-Child processes include processes created to service COM local server requests.
-
-**Note**: Child processes created outside of the virtual application cannot access virtualized filesystem or registry contents. These processes can access or modify host operating system contents, even if otherwise forbidden by the virtual application configuration.
-
-Child processes are created within the virtual application by default. To manually create child processes outside of the virtual application, uncheck the **Spawn child process within virtualized environment** option.
-
-COM servers are created outside the virtual environment by default to allow COM communication between native applications and virtual applications. To create COM servers within the virtual environment, check the **Spawn COM servers within virtualized environment** option.
-
-You can determine exceptions to the child process virtualization behavior using the **Child Process Exception List...** Process names listed in the child process exception list behave *opposite* to the master child process virtualization setting. To edit the child process exception list, select the **Child Process Exception List... **button. Process names will match without including the filename extension.</td>
+		<td>Some applications create new child processes while they run. Depending on the virtual application context, you can create such child processes within the virtual application, or in the host operating system.<br/><br/>Child processes include processes created to service COM local server requests.<br/><br/><b>Note</b>: Child processes created outside of the virtual application cannot access virtualized filesystem or registry contents. These processes can access or modify host operating system contents, even if otherwise forbidden by the virtual application configuration.<br/><br/>Child processes are created within the virtual application by default. To manually create child processes outside of the virtual application, uncheck the <b>Spawn child process within virtualized environment</b> option.<br/><br/>COM servers are created outside the virtual environment by default to allow COM communication between native applications and virtual applications. To create COM servers within the virtual environment, check the <b>Spawn COM servers within virtualized environment</b> option.<br/><br/>You can determine exceptions to the child process virtualization behavior using the <b>Child Process Exception List...</b> Process names listed in the child process exception list behave <em>opposite</em> to the master child process virtualization setting. To edit the child process exception list, select the <b>Child Process Exception List... </b> button. Process names will match without including the filename extension.</td>
 	</tr>
 	<tr>
 		<td><b>Read-only Virtual Environments </b></td>
@@ -286,9 +241,40 @@ You can determine exceptions to the child process virtualization behavior using 
 	</tr>
 </table>
 
-
 ## Runtimes and Components ##
 
+
+## MSI Settings ##
+<table>
+	<tr>
+		<th>Setting</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td><b>Output location</b></td>
+		<td>Name and location of the MSI file output.</td>
+	</tr>
+	<tr>
+		<td><b>Product Info</b></td>
+		<td>Meta data that will go into Add/Remove Programs when the application is installed.<ul><li>Product Name</li><li>Product Version</li><li>Company Name</li></ul></td>
+	</tr>
+	<tr>
+		<td><b>Installation Parameters</b></td>
+		<td>Specifies where to install the application and if it will be installed for all users or in the current user profile.</td>
+	</tr>
+	<tr>
+		<td><b>Shortcuts</b></td>
+		<td>List of Start Menu and Desktop shortcuts that are created when the MSI is installed.</td>
+	</tr>
+	<tr>
+		<td><b>ProgIds</b></td>
+		<td>List of ProgIds that are created on the host system when the MSI is installed.</td>
+	</tr>
+	<tr>
+		<td><b>Extensions</b></td>
+		<td>List of file extensions that are configured on the host system when the MSI is installed.</td>
+	</tr>
+</table>
 
 ## Building from the Command-line ##
 
