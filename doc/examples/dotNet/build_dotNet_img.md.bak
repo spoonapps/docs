@@ -1,12 +1,12 @@
 # Build the Image
 
-To build the image, we'll construct a basic `Spoon Script` script. The script should take the compiled Server executable, along with any DLLs, copy them into a new container, and build an image from this container. 
+To build the image, we'll construct a basic `spoon.me` script. The script should take the compiled Server executable, along with any DLLs, copy them into a new container, and build an image from this container. 
 
 In this example, we'll also set the startup file for the image to the Server executable. 
 
-#### Create the Spoon Script Script
+#### Create the Spoon.me Script
 
-Begin by creating an empty text file named **Spoon Script** in the project's root directory. 
+Begin by creating an empty text file named **spoon.me** in the project's root directory. 
 
 All valid build scripts must start with the base image to be used. In this case, we'll use the `spoonbrew/dotNet:4.0` image. 
 
@@ -40,11 +40,11 @@ See the bottom of this tutorial for a copy of the above-created script.
 
 The image can now be built with the `spoon build` command. 
 
-	spoon build <project root>\Spoon Script
+	spoon build <project root>\spoon.me
 
 The `build` command has a `-n` or `--name` flag that can be specified to name the build. Let's name this build `SimpleOwinServer`. 
 
-	spoon build -n=SimpleOwinServer <project root>\Spoon Script
+	spoon build -n=SimpleOwinServer <project root>\spoon.me
 
 #### Integrate with MSBuild
 
@@ -52,12 +52,12 @@ The Spoon CLI is accessible from any command prompt on the installed system and 
 
 In this section, we'll show you how you can set up Spoon to automatically rebuild a project's image each time your project is rebuilt. In this tutorial, we'll be using Visual Studio/MSBuild, though similar principles could be applied to any other IDE or build system. 
 
-Before integrating with MSBuild, you should have a `Spoon Script` script that will automate image builds. This script will have to: 
+Before integrating with MSBuild, you should have a `spoon.me` script that will automate image builds. This script will have to: 
 
 1. Copy your project from output folder into the container
 2. Run any additional configuration required by your project
 
-**Example Spoon Script Script**
+**Example Spoon.me Script**
 
 	FROM spoonbrew/dotNet:4.0
 	CMD mkdir C:\project
@@ -70,7 +70,7 @@ To add a Post-build event, right-click on your project in Visual Studio and sele
 
 **Note**: If you are building multiple projects in the same solution, only add a post build event to the *last* project in the build chain. 
 
-## Spoon Script File
+## Spoon.me File
 
 	FROM spoonbrew/dotNet:4.0
 	CMD mkdir C:\server

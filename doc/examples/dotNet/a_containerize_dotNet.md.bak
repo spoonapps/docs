@@ -8,8 +8,8 @@ All source code for this example is available on [Github](https://github.com/mat
 
 #### Topics Covered
 
-- Automated image creation with Spoon Script scripts
-- Integrating Spoon Script into MSBuild
+- Automated image creation with Spoon.me scripts
+- Integrating Spoon.me into MSBuild
 - Managing containerized processes
 
 ## Pull Dependencies

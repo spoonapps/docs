@@ -109,9 +109,9 @@ Other Spoonium users will now be able to pull and run your image in its saved st
 
 Visit the [hub](http://spoonium.net/hub) to see the details of the image you just pushed.
 
-## Automate aIRChat container creation with Spoon Script file
+## Automate aIRChat container creation with spoon.me file
 
-The above container creation and configuration can also be automated using a Spoon Script file.
+The above container creation and configuration can also be automated using a spoon.me file.
 
 Create a new text file and copy/paste this text:
 
@@ -120,9 +120,9 @@ Create a new text file and copy/paste this text:
     cmd git clone https://github.com/redwire/airchat C:\projects\airchat
     cmd cd C:\projects\airchat\content & npm install
 
-Click [here]() for more on Spoon Script file syntax.    
+Click [here]() for more on spoon.me file syntax.    
 
-Save the file as Spoon Script in `C:\spoon\aIRChat`.
+Save the file as spoon.me in `C:\spoon\aIRChat`.
 
     # Now build the script to create a new image called aIRChat
     > spoon build -n=aIRChat C:\spoon\aIRChat
