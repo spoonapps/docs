@@ -2,34 +2,31 @@
 
 Spoonium is a containerization platform for developers and sysadmins to quickly and reliably build, test, and deploy Windows applications. "Spooned" applications run exactly the same way on any computer – no conflicts, no dependencies, no matter the underlying infrastructure.
 
-### Made for developers
-
-Application Deployment without Breaks
-
-Deploy any application to any machine without installers, incompatibilities, or breaks. With Spoonium, developers can deploy their applications *with their development stacks*, ensuring the application runs as intended wherever it goes. End users can pull and run any Spooned application straight from their command prompt, or directly from the web via the [Spoonium Hub](http://spoonium.net/hub).
+### Made for Developers
 
 Spoonium is a fast and easy way to make your applications unbreakable.
 
-### Made for testers
-A new way to QA
+Deploy any application to any machine without installers, incompatibilities, or breaks. With Spoonium, developers can deploy their applications *with their development stacks*, ensuring the application runs as intended wherever it goes. End users can pull and run any Spooned application straight from their command prompt, or directly from the web via the [Spoonium Hub](http://spoonium.net/hub).
+
+### Made for QA
+Spoonium gives testers a unique and efficient way to test software and accurately report bugs.
 
 Any unit or code-level integration tests can be executed within a container, ensuring the environment used in production is properly tested against. Manual testers can pull a container down to their local machine and test against a local copy of the application; they can even run the Spooned application side-by-side against an old version. This ensures that testers see the same environment as the developer who will need to reproduce and patch any reported issues.
 
 For web applications, Spoonium also includes unlimited manual and automated browser testing with every Spoonium plan. Read more about our [Browser Sandbox](http://spoonium.net/docs#wikiBrowserSandbox) (manual), our [online Selenium Grid](http://spoonium.net/docs#wikiBeginnerTutorial), and our easy integration with [any CI environment](http://spoonium.net/docs#wikiContinuousIntegration).
 
-### Made for IT
-Effectively Leverage Hardware
+### Made for DevOps
 
-Containers can be spun up or down instantly through the Spoon CLI. Multiple server-database instances can run in parallel on the same computer. Spoon's port remapping will allow multiple server-datbase applications to bind to the same port on the same computer, allowing for load distribution across multiple servers without the need for multiple physical machines.
+Spoonium standardizes, simplifies, and speeds up software distribution.
+
+Containers revolutionize the shipping process. By packaging applications and their dependencies into a container, sysadmins can take away the inconsistencies between staging and production environments, allowing their teams to quickly and routinely ship to production.
 
 ### Made for open source
-Totally free for public projects
-
-Projects stored in public repos can make use of unlimited containers, tests, and deployments.
+Spoonium is 100% free for public projects. [Contact us](http://support.spoonium.net) to verify your open-source project.
 
 ## Installation
 
-1. Install and run the [Spoonium Plugin](http://start.spoon.net/install). This will allow you to create, save, and stream application containers.
+1. Install and run the [Spoonium Plugin](http://start.spoon.net/install). This will allow you to create, save, and ship application containers.
 2. Create an account or log in.
 3. Open a new command prompt, type `spoon`, and hit Enter. The `Spoon IDE` help dialog should appear. Don't see the dialog? [Get help](support.spoonium.net).
 4. Log into the Spoonium Hub from the command prompt using your Spoonium username and password:
@@ -41,7 +38,7 @@ Projects stored in public repos can make use of unlimited containers, tests, and
 
 ## Try it
 
-# Run Your First Container
+### Run Your First Container
 
 Now that you're logged into Spoonium, you're ready to run your first container! We'll begin by pulling (downloading) an image from the Spoonium Hub. 
 
@@ -176,9 +173,9 @@ Public repositories are great for sharing work with others or for providing a qu
 
 Now that you've completed the beginner tutorial, what next?
 
-To learn more about Spoonium, check out the **Building** section. This section goes into some more depth on the commands shown in this tutorial, as well as some of the more *advanced* commands available in Spoon. 
+To learn more about Spoonium, check out the [**Building**](http://spoonium.net/docs#wikiCreatingContainers) section. This section goes into some more depth on the commands shown in this tutorial, as well as some of the more *advanced* commands available in Spoon. 
 
-For some practical examples, go to the **Examples** section of the docs. This section containers a plethora of tutorials and walkthroughs detailing many of the popular use-cases for Spoonium. 
+For some practical examples, go to the [**Examples**](http://spoonium.net/docs#wikiPullRequiredDependencies) section of the docs. This section containers a plethora of tutorials and walkthroughs detailing many of the popular use-cases for Spoonium. 
 
 We also encourage you to jump right in and try containerizing your own personal projects! 
 
