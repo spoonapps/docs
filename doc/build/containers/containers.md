@@ -28,7 +28,14 @@ For example, to create a new container using the `spoonbrew/scratch` image and t
 
 This command will create a new container with a command prompt running *within* that container. Thus, any operations done in the commmand prompt will be applied to the container environment, not the host system. 
 
-The container will continue to run for as long as the command prompt stays open. 
+The container will continue to run for as long as the command prompt stays open.
+
+Sometimes one of `<executable>` `<**args>` may be same as `spoon` argument. To prevent `spoon` from treating this argument as its own prefix `<**args>` with a `--` mark. For example:
+
+    spoon run spoonbrew/scratch cmd.exe /d
+    spoon run spoonbrew/scratch cmd.exe -- /d 
+
+First command passes `/d` to `spoon` and executes container in detached mode. Second one passes `/d` to `cmd.exe` so it does not execute `AutoRun` command from registry. Good practice is to always use `--` mark before arguments.
 
 ## Container Lifecycle
 
@@ -36,7 +43,7 @@ The lifecycle of a container is controlled by the processes within that containe
 
 Take, for example, this command for starting a new container:
 
-	C:\>spoon run -a cmd.exe /c echo hello world
+	C:\>spoon run -a spoonbrew/scratch cmd.exe -- /c echo hello world
 	hello world
 	641bad5a7f904442a399a32f301ba8ed
 	C:\>
@@ -45,7 +52,7 @@ In this case, we started a new command prompt, executed the command `echo hello 
 
 Now, compare this behavior to if the `/k` flag was specified for `cmd.exe`: 
 
-	C:\>spoon run -a cmd.exe /k echo hello world
+	C:\>spoon run -a spoonbrew/scratch cmd.exe -- /k echo hello world
 	hello world
 	(641bad5a) C:\>
 
@@ -65,7 +72,7 @@ A container with running processes can be forcefully stopped with the `spoon sto
 
 Alternatively, stopped containers can also be restarted with the `spoon start` command. Like the `stop` command, the `start` command accepts a single parameter -- a container ID. When a container is restarted with `start`, it uses the same startup command as specified when the container was originally created with `spoon run`. 
 
-Take, for example, a container with ID `55djk3x1` created with the command: `spoon run spoonbrew/scratch cmd.exe /c echo hello world`. This container will start, execute `echo hello world` in a new command prompt, and then shut down. 
+Take, for example, a container with ID `55djk3x1` created with the command: `spoon run spoonbrew/scratch cmd.exe -- /c echo hello world`. This container will start, execute `echo hello world` in a new command prompt, and then shut down. 
 
 If this container were to then be restarted with the command: `spoon start 55djk3x1`, a new command prompt would be spawned, the command `echo hello world` would execute, and the container would shut down. 
 
