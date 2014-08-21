@@ -121,7 +121,7 @@ sections:
 - display_name: IDE
   ordering: 2
   pages: []
-- display_name: me Scripts
+- display_name: Spoon Scripts
   ordering: 3
   pages: []
 - display_name: XAPPL
