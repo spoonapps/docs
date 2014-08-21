@@ -11,11 +11,8 @@ display_name: About
 link: cmdTabContentVirtualMachine
 ordering: 2
 sections:
-- display_name: Virtual Machine
-  ordering: 1
-  pages: []
 - display_name: Components
-  ordering: 2
+  ordering: 1
   pages: []
 ---
 display_name: Installation

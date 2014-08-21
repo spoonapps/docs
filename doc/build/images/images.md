@@ -1,5 +1,3 @@
-## Working with Images
-
 Images serve as read-only foundations for containers to run "on top of" -- providing a base filesystem and registry that the container can access. They also serve to memorialize the state of an application at a certain point in time. 
 
 Whereas a container is dynamic and can host running processes, an image is static. An image is, essentially, a snapshot of of a container at a specific point in time. 
