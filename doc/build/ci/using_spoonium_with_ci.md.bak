@@ -8,11 +8,11 @@ With Spoonium no installed dependencies are required on the CI server.  Instead 
 
 ## How ##
 
-The basic steps for integrating Spoonium into a CI server are to create a Spoon Script script, integrate it into an automated build on a CI server, and finally run/test the container.
+The basic steps for integrating Spoonium into a CI server are to create a Spoon.me script, integrate it into an automated build on a CI server, and finally run/test the container.
 
-### Create Spoon Script script ###
+### Create Spoon.me script ###
 
-The Spoon Script script contains all the steps necessary to build the container.  Here is an example:
+The Spoon.me script contains all the steps necessary to build the container.  Here is an example:
 
     from spoonbrew/node spoonbrew/git
     cmd mkdir c:\root
@@ -23,22 +23,22 @@ The `FROM` instruction creates a new container from the specified images.  In th
 
 The `CMD` instructions execute the specified commands inside the container.  In this example the directory `c:\root` is being created, a Github repository is being cloned to `c:\root`, and `npm install` is being run to install the node app.
 
-See the [Syntax](#Syntax_for_.me_Scripts) page for more information on Spoon Script script instructions.
+See the [Syntax](#Syntax_for_.me_Scripts) page for more information on Spoon.me script instructions.
 
 ### Integrate into the CI server ###
 
-Once the Spoon Script script is created the next step is to configure an automated build on the CI server that will execute the Spoon Script script and create the container.  This step includes configuring the necessary triggers, schedules, notifications, etc. and will vary between CI servers.
+Once the Spoon.me script is created the next step is to configure an automated build on the CI server that will execute the Spoon.me script and create the container.  This step includes configuring the necessary triggers, schedules, notifications, etc. and will vary between CI servers.
 
 Next a build step needs to be created in the automated build that will execute the following commands:
 
     spn login <spoonium account> <spoonium password>
-    spn build -n <container name> Spoon Script
+    spn build -n <container name> Spoon.me
     spn export <container name> c:\root\image.svm
     spn rmi <container name>
 
 The `login` command is necessary if images from a Spoonium repository are specified.  If only local images are specified then this step can be skipped.
 
-The `build` command executes the Spoon Script script and builds a new container.
+The `build` command executes the Spoon.me script and builds a new container.
 
 The `export` command exports the container as an image and copies it to a file location.
 

@@ -1,12 +1,12 @@
 # Introduction
 
-In this tutorial, we'll walk you through how to create and containerize a basic web application. We'll also show you how to automate the creation of new images of your web application using **Spoon Script** scripts and walk you through some of the basics of the Spoonium containerization network stack. 
+In this tutorial, we'll walk you through how to create and containerize a basic web application. We'll also show you how to automate the creation of new images of your web application using **Spoon.me** scripts and walk you through some of the basics of the Spoonium containerization network stack. 
 
 #### Topics Covered
 
 - The basic container/image creation path
 - Copying local files into a container
-- Automating image creation with Spoon Script scripts
+- Automating image creation with Spoon.me scripts
 - The Spoonium network stack
 
 ## Create the App

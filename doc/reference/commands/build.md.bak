@@ -41,17 +41,17 @@ For example, if the build script
 
 is used with the command line
 
-	C:\>spoon build -e=VAR=1 C:\Spoon Script
+	C:\>spoon build -e=VAR=1 C:\spoon.me
 
 the resulting image will contain an environment variable, `VAR` with value **2** (*not* 1). 
 
 To create multiple environment variables in the container, use multiple `-e` or `--env` flags. For example, the following command would add 2 environment variables, VAR1 with value 1 and VAR2 with value 2, to the built image. 
 
-	C:\>spoon build -e=VAR1=1 -eVAR2=2 C:\Spoon Script
+	C:\>spoon build -e=VAR1=1 -eVAR2=2 C:\spoon.me
 
 Alternatively, use the `--env-file` flag and specify all of the environment variables you wish to add to the image in a line-delimited text file. For example, the previous command could be replicated using the following command: 
 
-	C:\>spoon build --env-file=C:\env-vars.txt C:\Spoon Script
+	C:\>spoon build --env-file=C:\env-vars.txt C:\spoon.me
 
 where **env-vars.txt** has the contents: 
 
@@ -71,11 +71,11 @@ Builds can be named with the `-n` or `--name` flag. A tag can be optionally incl
 
 **Example usage**
 
-	spoon build -n=my-new-image C:\Spoon Script
+	spoon build -n=my-new-image C:\spoon.me
 
 Creates an image with name and tag `my-new-image:master`. 
 
-	spoon build -n=my-new-image:1.0 C:\Spoon Script
+	spoon build -n=my-new-image:1.0 C:\spoon.me
 
 Creates an image with name and tag 'my-new-image:`1.0`.
 
@@ -85,7 +85,7 @@ By default, the `build` command will create the intermediate container and outpu
 
 For example, the following command builds an image using version 11.6.205 of the Spoon VM. 
 
-	spoon build --xvm=11.6.205 C:\Spoon Script 
+	spoon build --xvm=11.6.205 C:\spoon.me 
 
 ##### Working Directory
 
