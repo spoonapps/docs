@@ -11,7 +11,7 @@ to html
 
 import sys, os
 from _classes import DocTemplate, DocTopic, DocSection, NoMetaFileError
-from _funcs import create_doc_from_yaml, process_dir, write_docshtml
+from _funcs import create_doc_from_yaml, process_dir, write_docshtml, write_docspages
 
 
 def main(doc_dir, build_dir):
@@ -37,7 +37,7 @@ def main(doc_dir, build_dir):
             doc_template = tmp_template
     #should now have a completed build dir and a doc template
     print("building docs.html...")
-    write_docshtml(doc_template, build_dir)
+    write_docspages(doc_template, build_dir)
 
 
 if __name__ == "__main__":
@@ -48,8 +48,10 @@ if __name__ == "__main__":
         #default to 
         script_dir = os.path.dirname(os.path.realpath(__file__))
         build_dir = os.path.join(script_dir, "build")
-        if not os.path.exists(build_dir):
+        if not os.path.exists(build_dir):  #root build dir
             os.makedirs(build_dir)
+        if not os.path.exists(os.path.join(build_dir, "docs")):  #subdir to dump main doc html files to
+            os.makedirs(os.path.join(build_dir, "docs"))
         main(os.path.join(script_dir, "doc"), build_dir)
         print("Success!!")
         sys.exit(0)

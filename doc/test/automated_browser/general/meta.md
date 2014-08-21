@@ -1,3 +1,0 @@
----
-section: automated browser testing
----

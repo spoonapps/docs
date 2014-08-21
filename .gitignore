@@ -11,3 +11,5 @@ Python files
 #====
 *.pyc
 *.pyproj
+
+deploy.bat

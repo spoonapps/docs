@@ -1,0 +1,7 @@
+{% for s in intopic.sections %}
+    <div id="{{s.id}}" class="wiki-content">
+    {% for p in s.pages %}
+    <% include {{ p }} %>
+    {% endfor %}
+    </div>
+{% endfor %}

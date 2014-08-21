@@ -1,7 +1,5 @@
 ## Testing Internet Explorer
 
-#### Testing Multiple IE Instances in Parallel
-
 When testing parallel instances of Internet Explorer on Spoonium, we recommend setting the following options in your test. 
 
 1. Force Internet Explorer to use the `Create Process` API.
@@ -72,8 +70,6 @@ Next, add two capabilities to force Internet Explorer to use Windows' Create Pro
 Finally, pass these capabilities as the `desired_capabilities` for the remote WebDriver. 
 
 	driver = webdriver.Remote(command_executor="http://localhost:4444/wd/hub", desired_capabilities=capabilities)
-
-## Configuration and Internet Explorer "Gotchas"
 
 #### Internet Explorer Container Configuration
 

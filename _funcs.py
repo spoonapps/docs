@@ -12,7 +12,7 @@ def mutate_path_for_web(file_path, _dir):
     """Mutates the file path provided and turns it into a
     suitable path for incorporation into the spoonium docs page
     """
-    return file_path.replace(_dir, "components/docs").replace("\\", "/")
+    return file_path.replace(_dir, "../components/docs").replace("\\", "/")
 
 
 def process_metafile(meta_file):
@@ -34,11 +34,8 @@ def process_markdown_file(markdown_file):
 
 
 def process_html_for_spoonium(html):
-    #roll our own IDs at h1s
-    soup = BeautifulSoup(html)
-    for h1 in soup.findAll('h1'):
-        h1['id'] = h1.string.replace(' ', '_')
     #switch <blockquote><p> --> <pre><code> (for cmd blocks within ul/ols)
+    soup  = BeautifulSoup(html)
     for blockquote in soup.findAll('blockquote'):
         blockquote.name = 'pre'
         for p in blockquote.findAll('p'):
@@ -46,7 +43,7 @@ def process_html_for_spoonium(html):
     #find any tables and add class="doc-table"
     for table in soup.findAll('table'):
         table['class'] = 'doc-table'
-    return '<div class="wiki-content">\n' + str(soup) + '\n</div>'
+    return str(soup)
 
 
 def create_doc_from_yaml(yaml_file):
@@ -58,7 +55,7 @@ def create_doc_from_yaml(yaml_file):
         topics = yaml.load_all(f)
         for topic in topics:
             #create a new DocTopic
-            _topic = DocTopic(topic['display_name'], topic['ordering'], topic['link'])
+            _topic = DocTopic(topic['display_name'], topic['ordering'])
             for section in topic['sections']:
                 #create a new topic
                 _section = DocSection(section['display_name'], section['ordering'], section['pages'])
@@ -112,6 +109,7 @@ def process_dir_meta(meta_file):
     return meta.metadata['section']
 
 
+#DEPRECTATED
 def write_docshtml(doc_template, build_dir):
     """renders a jinja2 template for the docs
     and writes it to an html file
@@ -123,6 +121,19 @@ def write_docshtml(doc_template, build_dir):
     docs_html = template.render(doc_template=doc_template)
     #write to a file
     write_to_file(os.path.join(build_dir, "docs.html"), docs_html)
+
+
+def write_docspages(doc_template, build_dir):
+    """renders a jinja2 template for each docs
+    page and writes it to an html file
+    """
+    root_dir = os.path.abspath(os.path.join(build_dir, os.pardir))
+    print(root_dir)
+    env = Environment(loader=FileSystemLoader(os.path.join(root_dir, "templates")))
+    template = env.get_template("docs_temp.html")
+    for topic in doc_template.get_ordered_topics():
+        html = template.render(doc_template=doc_template, intopic=topic)
+        write_to_file(os.path.join(os.path.join(build_dir, "docs"), topic.get_link_name() + ".html"), html)
 
 
 def write_to_file(file_path, text):

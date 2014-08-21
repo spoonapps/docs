@@ -1,51 +1,7 @@
-{% extends "base.html"%}
-
-{% block docsheader %}
-<div class="docsHeader">
-    <div class="fixedWidthBody">
-        <ul class="nav nav-tabs">
-            {% for topic in doc_template.get_ordered_topics() %}
-            {% if topic.display_name == "Basics" %}
-            <li class="doc-nav active">
-            {% else %}
-            <li class="doc-nav">
-            {% endif %}
-                <a href="{{ "#" + topic.link }}" data-toggle="tab">{{ topic.display_name }}</a>
-                <ul class="doc-sub-nav">
-                    {% for section in topic.get_ordered_sections() %}
-                    <li><a href="{{ "#" + section.id }}" data-toggle="tab">{{ section.display_name }}</a></li>
-                    {% endfor %}
-                </ul>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-</div>
-{% endblock docsheader %}
+{% extends "base.html" %}
+{% block sidenav %}
+    {% include "sidenav.html" %}
+{% endblock sidenav %}
 {% block docscontent %}
-<div id="container">
-    <div class="fixedWidthBody">
-        <div class="nav-title"></div>
-        <nav class="bs-sidebar clearfix">
-            <ul id="sidebar" class="nav"></ul>
-        </nav>
-        <div class="container-float-with-aside">
-            <div class="tab-content">
-                {% for topic in doc_template.get_ordered_topics() %}
-                {% for section in topic.get_ordered_sections() %}
-                {% if section.id == "cmdTabContentTutorial" %}
-                <ol class="tab-pane active" id="{{ section.id }}">
-                {% else %}
-                <ol class="tab-pane" id="{{ section.id }}">
-                {% endif %}
-                    {% for page in section.pages %}
-                    <% include {{ page }} %>
-                    {% endfor %}
-                </ol>
-                {% endfor %}
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</div>
+    {% include "content.html" %}
 {% endblock docscontent %}
