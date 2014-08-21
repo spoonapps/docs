@@ -1,0 +1,5 @@
+{% for s in intopic.sections %}
+    {% for p in s.pages %}
+    <% include {{ p }} %>
+    {% endfor %}
+{% endfor %}

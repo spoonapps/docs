@@ -12,7 +12,7 @@ def mutate_path_for_web(file_path, _dir):
     """Mutates the file path provided and turns it into a
     suitable path for incorporation into the spoonium docs page
     """
-    return file_path.replace(_dir, "components/docs").replace("\\", "/")
+    return file_path.replace(_dir, "../components/docs").replace("\\", "/")
 
 
 def process_metafile(meta_file):
@@ -112,6 +112,7 @@ def process_dir_meta(meta_file):
     return meta.metadata['section']
 
 
+#DEPRECTATED
 def write_docshtml(doc_template, build_dir):
     """renders a jinja2 template for the docs
     and writes it to an html file
@@ -123,6 +124,19 @@ def write_docshtml(doc_template, build_dir):
     docs_html = template.render(doc_template=doc_template)
     #write to a file
     write_to_file(os.path.join(build_dir, "docs.html"), docs_html)
+
+
+def write_docspages(doc_template, build_dir):
+    """renders a jinja2 template for each docs
+    page and writes it to an html file
+    """
+    root_dir = os.path.abspath(os.path.join(build_dir, os.pardir))
+    print(root_dir)
+    env = Environment(loader=FileSystemLoader(os.path.join(root_dir, "templates")))
+    template = env.get_template("docs_temp.html")
+    for topic in doc_template.get_ordered_topics():
+        html = template.render(doc_template=doc_template, intopic=topic)
+        write_to_file(os.path.join(os.path.join(build_dir, "docs"), topic.get_safe_name() + ".html"), html)
 
 
 def write_to_file(file_path, text):

@@ -36,6 +36,9 @@ class DocTopic(object):
     def add_section(self, section):
         self.sections.append(section)
 
+    def get_safe_name(self):
+        return self.display_name.replace(' ', '').replace('.','')
+
     def get_section_names(self):
         return [sec.display_name for sec in self.sections]
 

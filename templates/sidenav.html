@@ -1,0 +1,16 @@
+<div class="navigation">
+    <ul>
+    {% for t in doc_template.topics %}
+        <li><a href="{{ t.link }}"></a>{{ t.display_name }}</li>
+        {% if t.display_name == intopic.display_name %}
+        <div class="navbar-spy">
+            <ul class="nav" role="tablist">
+                {% for s in t.sections %}
+                <li><a href="{{ s.id }}">{{ s.display_name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    {% endfor %}
+    </ul>
+</div>

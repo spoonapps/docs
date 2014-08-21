@@ -2,11 +2,18 @@
 <html>
     {% include "head.html" %}
     <body>
-        <% include components/universalHeader.html %>
-        {% block docsheader %}
-        {% endblock docsheader %}
-        {% block docscontent %}
-        {% endblock docscontent %}
+        <% include ../components/universalHeader.html %>
+        <h1><a href="/docs" style="color:#808080; text-decoration:none;"></a>Documentation</h1>
+        <div id="container">
+            <div class="fixedWidthBody">
+            {% block sidenav %}
+            {% endblock sidenav %}
+            </div>
+            <div class="fixedWidthBody" data-spy="scroll" data-target=".navbar-spy">
+            {% block docscontent %}
+            {% endblock docscontent %}
+            </div>
+        </div>
         {% include "footer.html" %}
     </body>
 </html>

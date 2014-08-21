@@ -14,6 +14,18 @@ sections:
 - display_name: Components
   ordering: 1
   pages: []
+- display_name: Containers
+  ordering: 2
+  pages: []
+- display_name: Images
+  ordering: 3
+  pages: []
+- display_name: Hub
+  ordering: 4
+  pages: []
+- display_name: Spoon Server
+  ordering: 5
+  pages: []
 ---
 display_name: Installation
 link: cmdTabContentWindows
