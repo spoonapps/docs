@@ -1,5 +1,3 @@
-# Using Spoonium with CI  #
-
 ## Why ##
 
 Create automated, clean, and consistent test environments with Spoonium while keeping the Continuous Integration (CI) server free from conflict causing dependencies.

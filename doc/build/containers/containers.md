@@ -1,5 +1,3 @@
-# Working with Containers
-
 Containers form the backbone of the Spoonium ecosystem. In this section, we'll walk you through the many ways to work with and manage containers once they've been created with the `spoon run` command. 
 
 The easiest way to tell if you are inside a container is to check your prompt. When a command prompt exists within a container, the prompt is prepended by the first 8 characters of the container's ID.

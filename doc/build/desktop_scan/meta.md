@@ -1,3 +1,3 @@
 ---
-section: snapshotting with ide
+section: desktop scan with ide
 ---
