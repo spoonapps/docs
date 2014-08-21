@@ -6,7 +6,7 @@
     <div class="navbar-spy">
         <ul class="nav" role="tablist">
             {% for s in t.sections %}
-            <li><a href="{{ s.id }}">{{ s.display_name }}</a></li>
+            <li><a href="#{{ s.id }}">{{ s.display_name }}</a></li>
             {% endfor %}
         </ul>
     </div>

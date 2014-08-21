@@ -1,5 +1,7 @@
 {% for s in intopic.sections %}
+    <div id="{{s.id}}">
     {% for p in s.pages %}
     <% include {{ p }} %>
     {% endfor %}
+    </div>
 {% endfor %}
