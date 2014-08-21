@@ -9,7 +9,7 @@ sections:
 display_name: About
 ordering: 2
 sections:
-- display_name: Components
+- display_name: Virtualization
   ordering: 1
   pages: []
 - display_name: Containers
@@ -73,14 +73,23 @@ sections:
 display_name: Test
 ordering: 6
 sections:
-- display_name: Manual Browser Testing
-  ordering: 2
-  pages: []
-- display_name: Automated Browser Testing
+- display_name: Selenium Testing
   ordering: 1
   pages: []
-- display_name: Nightly Builds (coming soon)
+- display_name: JS Unit Testing
+  ordering: 2
+  pages: []
+- display_name: Manual Browser Testing
   ordering: 3
+  pages: []
+- display_name: Test Reports
+  ordering: 4
+  pages: []
+- display_name: Testing with CI
+  ordering: 5
+  pages: []
+- display_name: Nightly Builds (coming soon)
+  ordering: 6
   pages: []
 ---
 display_name: Deploy
