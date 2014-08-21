@@ -36,7 +36,7 @@ class DocTopic(object):
         self.sections.append(section)
 
     def get_link_name(self):
-        return self.display_name.replace(' ', '').replace('.','')
+        return self.display_name.replace(' ', '').replace('.','').lower()
 
     def get_section_names(self):
         return [sec.display_name for sec in self.sections]
