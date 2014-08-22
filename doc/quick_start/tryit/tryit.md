@@ -1,44 +1,4 @@
-## What is Spoonium?
-
-Spoonium is a containerization platform for developers and sysadmins to quickly and reliably build, test, and deploy Windows applications. "Spooned" applications run exactly the same way on any computer – no conflicts, no dependencies, no matter the underlying infrastructure.
-
-### Made for Developers
-
-Spoonium is a fast and easy way to build and ship unbreakable applications.
-
-With Spoonium, developers can deploy any application to any machine without installers, incompatibilities, or breaks. Packaging applications into containers with their dependencies ensures that applications run as intended wherever they go.
-
-### Made for QA
-Spoonium gives testers a unique way to efficiently test software and report bugs.
-
-Any unit or code-level integration tests can be executed within a container, ensuring the environment used in production is properly tested against. Manual testers can pull a container down to their local machine and test against a local copy of the application; they can even run the Spooned application side-by-side against an old version. This ensures that testers see the same environment as the developer who will need to reproduce and patch any reported issues.
-
-For web applications, Spoonium also offers unlimited manual and automated browser testing. Read more about our [Browser Sandbox](http://spoonium.net/docs#wikiBrowserSandbox) (manual), our [online Selenium Grid](http://spoonium.net/docs#wikiBeginnerTutorial), and our easy integration with [any CI environment](http://spoonium.net/docs#wikiContinuousIntegration).
-
-### Made for DevOps
-
-Spoonium standardizes, simplifies, and speeds up software distribution.
-
-Containers revolutionize the shipping process. By packaging applications and their dependencies into a container, sysadmins take away the inconsistencies between staging and production environments, allowing their teams to quickly and routinely ship to production.
-
-Additionally, using Spoonium as a deployment standard massively simplifies getting software to end users. Instead of cumbersome traditional app packaging and installation with multiple points of failure, end users can launch any Spooned application straight from their command prompt, or directly from the web in one click via the [Spoonium Hub](http://spoonium.net/hub).
-
-### Made for open source
-Spoonium is 100% free for public projects. [Contact us](http://support.spoonium.net) to verify your open-source project.
-
-## Installation
-
-1. Install and run the [Spoonium Plugin](http://start.spoon.net/install). This will allow you to create, save, and ship application containers.
-2. Create an account or log in.
-3. Open a new command prompt, type `spoon`, and hit Enter. The `Spoon IDE` help dialog should appear. Don't see the dialog? [Get help](support.spoonium.net).
-4. Log into the Spoonium Hub from the command prompt using your Spoonium username and password:
-
-    	>spoon login username password
-    	Logged in as `username`
-
-5. You're ready to go! [Click here](http://spoonium.net/docs/containers#wikiTryIt) to move to our beginner's tutorial, where you'll pull an image, create a container, commit changes, and push to the Spoonium Hub.
-
-## Try it
+## Try It
 
 ### Run Your First Container
 
@@ -117,7 +77,7 @@ Finally, we'll close the command prompt, shutting down the container.
 	(87ddvf54) C:\spoonroot>exit
 	87ddvf5455lp09xbenn71944c5dzzem5
 
-### Commit Changes and Push
+#### Commit Changes and Push
 
 Now it's time to memorialize your changes by creating a new image from the container.
 
@@ -141,8 +101,6 @@ You can view the newly created image by running the `spoon images` command. This
 	NAME                      SIZE   CREATED
 	local/helloworld:master   0.1MB  7/31/2014 9:29:27 AM
 	spoonbrew/scratch:master  0.0MB  7/31/2014 9:20:26 AM
-
-### Push
 
 We'll finish this tutorial by uploading the newly created image to the [Spoonium Hub](http://spoonium.net/hub). The Spoonium Hub functions similarly to a remote repository in Git – allowing your work to be accessed from any computer with access to the remote. All Spoonium accounts come with an unlimited number of public repositories. 
 
@@ -171,13 +129,13 @@ The repository page on Spoonium serves as a complete version history of an image
 
 Public repositories are great for sharing work with others or for providing a quick and easy access point for colleagues, collaborators, or even end-users to download and access and run your project from. 
 
-## Next Steps
+#### Next Steps
 
 Now that you've completed the beginner tutorial, what next?
 
-To learn more about Spoonium, check out the [**Building**](http://spoonium.net/docs#wikiCreatingContainers) section. This section goes into some more depth on the commands shown in this tutorial, as well as some of the more *advanced* commands available in Spoon. 
+To learn more about Spoonium, check out the [Building](http://spoonium.net/docs#wikiCreatingContainers) section. This section goes into some more depth on the commands shown in this tutorial, as well as some of the more *advanced* commands available in Spoon. 
 
-For some practical examples, go to the [**Examples**](http://spoonium.net/docs#wikiPullRequiredDependencies) section of the docs. This section containers a plethora of tutorials and walkthroughs detailing many of the popular use-cases for Spoonium. 
+For some practical examples, go to the [Examples](http://spoonium.net/docs#wikiPullRequiredDependencies) section of the docs. This section containers a plethora of tutorials and walkthroughs detailing many of the popular use-cases for Spoonium. 
 
 We also encourage you to jump right in and try containerizing your own personal projects! 
 

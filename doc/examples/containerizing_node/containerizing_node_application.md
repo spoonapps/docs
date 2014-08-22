@@ -1,3 +1,5 @@
+## Containerizing a NodeJS Application
+
 In this example we'll containerize aIRChat, an open source IRC client built on Node.js.
 
 #### Topics Covered

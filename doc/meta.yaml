@@ -2,8 +2,14 @@
 display_name: Quick Start
 ordering: 1
 sections:
-- display_name: Tutorial
+- display_name: What is Spoonium?
   ordering: 1
+  pages: []
+- display_name: Installation
+  ordering: 2
+  pages: []
+- display_name: Try It
+  ordering: 3
   pages: []
 ---
 display_name: About
