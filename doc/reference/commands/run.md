@@ -56,12 +56,12 @@ When the `--diagnostic` flag is included, the container will generate diagnostic
 
 These diagnostic logs can later be viewed using the `spoon logs` command. 
 
-Sometimes an argument specified after `<command>` may be same as `spoon` argument. To prevent `spoon` from treating this argument as its own, prefix the argument with a `--` mark.
+When passing arguments to a startupfile or command, we recommend separatign these arguments from the rest of the command with a `--`. Arguments specified after a `--` mark are passed directly to the startup file/command.
+
+If a `--` mark is not used, any argument matching a `spoon run` flag will be passed to `spoon`, which may lead to unexpected behavior. 
 
     # spoon will interpret the /d flag and execute a container in detached mode
-    > spoon run spoonbrew/scratch cmd.exe /d
+    > spoon run spoonbrew/scratch /d
     
-    # This makes it explicit that the /d flag is for cmd.exe so it does not execute `AutoRun` command from registry
-    > spoon run spoonbrew/scratch cmd.exe -- /d 
-
-A good practice is to use `--` before all `<command>` arguments.
+    # /d flag is passed to cmd.exe, disabling execution of AutoRun commands from the registry
+    > spoon run spoonbrew/scratch -- /d 
