@@ -1,4 +1,4 @@
-## Try It
+## Try It!
 
 ### Run Your First Container
 
