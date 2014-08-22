@@ -1,5 +1,5 @@
-## DISABLE
+## disable
 
-	DISABLE <vm setting>
+	disable <vm setting>
 
-The `DISABLE` instruction disables the specified `<vm setting>` inside the container. 
+The `disable` instruction disables the specified `<vm setting>` inside the container. 
