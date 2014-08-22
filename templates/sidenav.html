@@ -1,15 +1,19 @@
 <h1><a href="/docs" style="color:#808080; text-decoration:none;"></a>Documentation</h1>
 <ul>
 {% for t in doc_template.topics %}
-    <li><a href="/docs/{{ t.get_link_name().lower() }}">{{ t.display_name }}</a></li>
-    {% if t.display_name == intopic.display_name %}
+  {% if t.display_name == intopic.display_name %}
+  <li class="active">
+    <a href="/docs/{{ t.get_link_name().lower() }}">{{ t.display_name }}</a>
     <div class="navbar-spy">
-        <ul class="nav" role="tablist">
-            {% for s in t.sections %}
-            <li><a href="#{{ s.id }}">{{ s.display_name }}</a></li>
-            {% endfor %}
-        </ul>
+      <ul class="nav" role="tablist">
+        {% for s in t.sections %}
+        <li><a href="#{{ s.id }}">{{ s.display_name }}</a></li>
+        {% endfor %}
+      </ul>
     </div>
-    {% endif %}
+  </li>
+  {% else %}
+  <li><a href="/docs/{{ t.get_link_name().lower() }}">{{ t.display_name }}</a></li>
+  {% endif %}
 {% endfor %}
 </ul>
