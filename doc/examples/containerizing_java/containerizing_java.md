@@ -2,13 +2,13 @@
 
 In this tutorial, we'll cover how to containerize a Java project and how to effectively use and configure Java within a Spoon container. 
 
-#### Topics Covered
+**Topics Covered:**
 
 - The basic image creation workflow
 - Configuring environment variables within a container
 - Using git within a container
 
-## Pull Required Dependencies
+#### Pull Required Dependencies
 
 Before beginning, we'll get all of the dependencies we'll need to run and containerize the Java project. In this case, that means we'll need both `Java` and `Git` inside our container. Luckily, both of these images can be found in the `spoonbrew` account on the Spoonium hub. 
 
@@ -26,7 +26,7 @@ When both of these commands have completed, you can verify that they are indeed 
 	spoonbrew/jdk7	43.2MB 		8/10/2014 10:00:32 AM
 
 
-## Start a Container
+#### Start a Container
 
 Since we'll be pulling the sources into our container using `git`, let's start the container and do all of our work in there. 
 
@@ -40,7 +40,7 @@ To start the container, issue a `spoon run` command with both the `spoonbrew/jav
 
 A new command prompt should appear on your screen. This command prompt is running inside our new container, and can be used to manipulate the container's environment. 
 
-## Clone the Project
+#### Clone the Project
 
 For this example, we'll clone a small, standalone web server from this Github repository: [https://github.com/rafaelsteil/simple-webserver](https://github.com/rafaelsteil/simple-webserver). 
 
@@ -61,7 +61,7 @@ The server can now be run from within the container.
 
 The server is now running on port 80 of your local machine. To confirm the server is running, open a web browser and visit **http://localhost** -- you should see a listing of all the files in the `C:\java` folder of the container. 
 
-## Create an Image
+#### Create an Image
 
 Let's say you want to use this new container as a basis for other projects -- perhaps expanding on the functionality of this simple webserver. 
 
@@ -79,13 +79,13 @@ By default, this will create a new images that *includes* the base `spoonbrew/gi
 
 	> spoon commit --no-base 08dd45e3 simple-java-webserver
 
-#### Optional: Tag the Image
+**Optional**: Tag the Image
 
 A given image has two pieces of publicly available metadata attached to it: it's **name** and it's **tag**. A tag is similar to a version, and can be used to keep track of the different iterations on a single image. 
 
 To illustrate this idea, we'll tag our newly created image as **1.0**.
 
-**Note**: If an image is not explicitly tagged, it is automatically given the tag **master**. 
+Note: If an image is not explicitly tagged, it is automatically given the tag **master**. 
 
 To tag an image, use the `spoon tag` command, with the image and the new tag as parameters. 
 
@@ -99,7 +99,7 @@ When `spoon images` is executed, you should now see a new entry for `simple-java
 	spoonbrew/git	32.1MB 		8/08/2014 5:09:11 PM
 	spoonbrew/jdk7	43.2MB 		8/10/2014 10:00:32 AM
     
-## Push to the Spoonium Hub
+#### Push to the Spoonium Hub
 
 We'll finish this tutorial by explaining how the newly created `simple-java-webserver` can be uploaded to the [Spoonium Hub](http://spoonium.net/hub), where it can be made publicly available or shared with other collaborators. 
 

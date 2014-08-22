@@ -2,14 +2,14 @@
 
 In this example we'll containerize aIRChat, an open source IRC client built on Node.js.
 
-#### Topics Covered
+**Topics Covered:**
 
 - Grab dependencies and start a new container
 - Set up a Node.js web application
 - Create and push an image to Spoonium Hub
 - Optional: Automate creation of a Node.js container
 
-## Pull dependencies and start a container
+#### Pull dependencies and start a container
 
 aIRChat has a few prerequisites. We'll need the Node.js image and the Git image, which are available from spoonbrew.
 
@@ -28,7 +28,7 @@ Now start a new container using the `spoon run` command, specifying the Node.js 
 
     > spoon run git;node cmd
 
-## Configure aIRChat
+#### Configure aIRChat
 
 In the container, first create a folder where we can clone the aIRChat project from GitHub.
 
@@ -70,7 +70,7 @@ aIRChat is now running on port 3000.  Click [here](http://localhost:3000) to con
 
 Once you've verified that aIRChat is running, stop the Node.js server by entering `Ctrl+C`.
 
-## Save the container
+#### Save the container
 
 Enter `exit` to shut down the container. This will save the container and assign it a hash.
 
@@ -99,28 +99,41 @@ When you're finished configuring the container, committing it will create a new 
     > spoon images
 
     NAME  				SIZE 			CREATED
-    local/airchat 		120.8MB  		7/16/2014 4:05:12 PM
+    aIRChat 		    120.8MB  		7/16/2014 4:05:12 PM
     spoonbrew/git 		32.1MB   		7/16/2014 3:44:27 PM
     spoonbrew/node		10.2MB   		7/16/2014 3:45:10 PM
 
 
     # Push your container up to the Spoonium Hub
-    > spoon push local/airchat
+    > spoon push aIRChat
 
 Other Spoonium users will now be able to pull and run your image in its saved state.
 
 Visit the [hub](http://spoonium.net/hub) to see the details of the image you just pushed.
 
-## Automate aIRChat container creation with Spoon Script file
+#### Automated Image Creation
 
 The above container creation and configuration can also be automated using a Spoon Script file.
 
 Create a new text file and copy/paste this text:
 
+    # specify project dependencies
     from spoonbrew/git spoonbrew/node
+
+    # create a new directory for the project
     cmd mkdir C:\projects\airchat
+
+    # clone the Github repo
     cmd git clone https://github.com/redwire/airchat C:\projects\airchat
-    cmd cd C:\projects\airchat\content & npm install
+    
+    # set new working directory
+    workdir C:\projects\airchat\content
+
+    # install dependencies with node package manager
+    cmd npm install
+    
+    #set startup file for the container
+    boot file node app.js
 
 Click [here]() for more on Spoon Script file syntax.    
 
@@ -129,7 +142,7 @@ Save the file as Spoon Script in `C:\spoon\aIRChat`.
     # Now build the script to create a new image called aIRChat
     > spoon build -n=aIRChat C:\spoon\aIRChat
 
-    # Run the image and specify the Node.js command to begin serving aIRChat
-    > spoon run local/aIRChat node C:\projects\aIRChat\content\app.js
+    # Run the image
+    > spoon run aIRChat 
 
 aIRChat is now running on port 3000. This automated method allows you to forego manual entry of commands to create a container.

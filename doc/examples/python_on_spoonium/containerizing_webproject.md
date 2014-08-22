@@ -65,4 +65,4 @@ Finally, start the server by executing the `hello.py` file
 
 To confirm that the server is running, open a browser and navigate to **http://localhost:5000**. You should see "Hello World!" appear in the browser. 
 
-When you want to stop the container, go back to your native command prompt and run 
+When you want to stop the container, go back to your native command prompt and run `spoon stop <container id>`. 

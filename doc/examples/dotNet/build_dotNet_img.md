@@ -1,36 +1,24 @@
 #### Build the Image
 
-To build the image, we'll construct a Spoon script. The script should take the compiled Server executable, along with any DLLs, copy them into a new container, and build an image from this container. 
+For this project, we'll need .NET 4.0. The Spoonium team has published a suite of .NET images in the **spoonbrew** user account. To pull the .NET 4 image, run the following command: 
 
-Begin by creating an empty text file named **spoon.me** in the project's root directory. 
+	C:\Users\SpoonUser>spoon pull spoonbrew/dotNet:4.0
 
-All valid build scripts must start with the base image to be used. In this case, we'll use the `spoonbrew/dotNet:4.0` image. 
+To build the image, we'll construct a Spoon script. The script should take the compiled Server executable, along with any DLLs, copy them into a new container, and build an image from this container. Below is the **spoon.me** file for the example project used in this tutorial. 
 
-	from spoonbrew/dotNet:4.0
+Begin by creating an empty text file named **spoon.me** in the project's root directory.
 
-We're going to create a new folder in the container for the server's files. We'll put this in a new **C:\server** folder. 
+	#should use the relevant version of .NET
+	FROM spoonbrew/dotNet:4.0.3
 
+	#make a new directory in the container for build outputs
 	cmd mkdir C:\server
 
-Now for a little Spoon trickery! In the near-future, we'll copy files into this newly-created folder. Environment variables are expanded within the VM so we'll capture a reference to the project's root directory before we change the working directory. 
+	#copy files from build output 
+	cmd robocopy %CD%\bin\Release C:\server
 
-	env projectroot %CD%
-
-Before copying the files to the **C:\server** directory, we'll change the working directory in the container. 
-
-	workdir C:\server
-
-Now, copy the files from the **bin\Release** folder of the solution into the container. To copy the contents of one directory to another, we'll use Windows' `robocopy` utility. 
-
-	cmd robocopy %projectroot%\OwinHelloWorld\bin\Release %CD%
-
-Lastly, set the startup file for the image to the Server executable. For this project, that is OwinHelloWorld.exe 
-
+	#set the startup file for the image to the executable
 	boot file %CD%\OwinHelloWorld.exe
-
-That's it! You should now have a functioning build script in the root directory of the project. 
-
-See the bottom of this tutorial for a copy of the above-created script.
 
 #### Integrate with MSBuild
 
@@ -38,19 +26,12 @@ The Spoon CLI is accessible from any command prompt on the installed system and 
 
 In this section, we'll show you how you can set up Spoon to automatically rebuild a project's image each time your project is rebuilt. In this tutorial, we'll be using Visual Studio/MSBuild, though similar principles could be applied to any other IDE or build system. 
 
-Before integrating with MSBuild, you should have a `Spoon Script` script that will automate image builds. This script will have to
-
 The easiest way to integrate with Visual Studio/MSBuild is to add a **Post-build event** to your build. 
 
 To add a Post-build event, right-click on your project in Visual Studio and select **Build Events** from the left-hand menu. 
 
-**Note**: If you are building multiple projects in the same solution, only add a post build event to the *last* project in the build chain. 
+In the **Post-build event command line** box, add the line: 
 
-## Spoon Script File
+	spoon build -n=$(SolutionName) $(SolutionDir)\spoon.me
 
-	FROM spoonbrew/dotNet:4.0
-	CMD mkdir C:\server
-	ENV projectroot %CD%
-	WORKDIR C:\server
-	CMD robocopy %projectroot%\OwinHelloWorld\bin\Release %CD%
-	STARTUP %CD%\OwinHelloWorld.exe
+**Note**: For solutions with multiple projects, we recommend only triggering a post-build event for the last project in the build chain. This may require customizing your Spoon script to also pull in the build outputs from these other projects. 
