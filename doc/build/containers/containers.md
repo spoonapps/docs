@@ -7,9 +7,9 @@ The `spoon run` command creates new containers. It has 2 required parameters:
 1. A base `<image>` to provide the virtual filesystem and registry for the container. If no files or registry keys are necessary, use this [empty image](http://spoonium.net/hub/spoonbrew/scratch).
 
 2. A `<command>`, which is an executable to launch inside the container. This can be any executable in the **base image**, the command window `cmd.exe`, or any other valid Windows utility.
-
+    
+    # Launch a command window in a new container with scratch as the base image
 	> spoon run spoonbrew/scratch cmd.exe
-	# Launches a command window in a new container with scratch as the base image
 
 Operations executed in the new command window are applied to the container, not the host system.
 
