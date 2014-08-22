@@ -57,10 +57,10 @@ sections:
 display_name: Build
 ordering: 5
 sections:
-- display_name: Building Containers
+- display_name: Working with Containers
   ordering: 1
   pages: []
-- display_name: Building Images
+- display_name: Working with Images
   ordering: 2
   pages: []
 - display_name: Snapshotting with IDE

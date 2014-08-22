@@ -1,5 +1,3 @@
-In this section, you'll learn to work with and manage containers.
-
 ## Creating Containers
 
 The `spoon run` command creates new containers. It has 2 required parameters:
@@ -17,14 +15,14 @@ Operations executed in the new command window are applied to the container, not 
 To avoid confusion, the prompt is prepended by the first 8 characters of the container ID when a command window is running in a container.
 
     # Host command window
-	> spoon run spoonbrew/scratch cmd.exe
+	> spoon run spoonbrew/scratch
 	
     # Container command window
-	(8dpp9eb5) C:\>
+	(8dpp9eb5) >
 
 Edit and modify the container's virtual filesystem and registry using the same command-line interfaces available in Windows Command Prompt.
 
-## Processes and Stopping Containers
+#### Processes and Stopping Containers
 
 The life cycle of a container is controlled by the processes within that container. When a process within a container exits or completes, the container exits as well.
 
@@ -40,7 +38,7 @@ Restart a closed container with the `spoon start` command and specify the contai
 
 The container is restarted and launches the same startup command specified in the original `spoon run` command.
 
-## Managing Containers
+#### Managing Containers
 
 Containers can be tracked and managed through the `spoon containers` command.
 
@@ -84,7 +82,7 @@ This command also returns logs of all the standard streams (`STDIN`, `STDOUT`, `
 
 Changes to a container's filesystem and registry can be viewed with the `spoon diff` command. 
 
-## Building Images from Containers
+#### Building Images from Containers
 
 To create a new image from a container, save it using `spoon commit`.
 

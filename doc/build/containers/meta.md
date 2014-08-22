@@ -1,3 +1,3 @@
 ---
-section: building containers
+section: working with containers
 ---

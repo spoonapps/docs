@@ -1,4 +1,7 @@
-Create automated, clean, and consistent test environments with Spoonium while keeping the Continuous Integration (CI) server free from conflict causing dependencies.
+## Continuous Integration
+
+Create automated, clean, and consistent test environments with Spoonium while keeping the Continuous Integration (CI) 
+server free from conflict causing dependencies.
 
 Existing CI servers may have many varying libraries, runtimes, custom settings, and applications, possibly in different languages and versions, that are required for the various automated builds.  Sometimes these dependencies collide to create inconsistent test environments and headaches when configuring automated builds. 
 
@@ -6,7 +9,7 @@ With Spoonium no installed dependencies are required on the CI server. All depen
 
 The basic steps for integrating Spoonium into a CI server are to create a Spoon Script, integrate it into an automated build on a CI server, and finally run and test the container.
 
-## Create Spoon Script
+#### Create Spoon Script
 
 The Spoon Script contains all the steps necessary to build the container.
 
@@ -22,7 +25,7 @@ The Spoon Script contains all the steps necessary to build the container.
 
 Save your script as a `.me` file. See the [Syntax](#Syntax_for_.me_Scripts) page for more information on Spoon Script script instructions.
 
-## Integrate into the CI server
+#### Integrate into the CI server
 
 The next step is to configure an automated build on the CI server that will execute the Spoon Script and create an image.  You'll need to configure the necessary triggers, schedules, notifications, etc., which will vary between CI servers.
 
@@ -39,9 +42,9 @@ Now add the follow commands to your automated CI build script:
     
 Rather than exporting the image to the host system, you can also `spoon push` the image to the hub where other users could pull it down and test.
 
-See the [Command Line Interface](#command_line_interface) page for more information on `spoon` commands.
+See the [Command Line Interface](#) page for more information on `spoon` commands.
 
-## Run the container
+#### Run the container
 
     # First import the image to your local registry
     > spoon import -n=<name> C:\root\image.svm

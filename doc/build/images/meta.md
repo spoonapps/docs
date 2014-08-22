@@ -1,3 +1,3 @@
 ---
-section: building images
+section: working with images
 ---
