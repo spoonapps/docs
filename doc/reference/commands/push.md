@@ -1,4 +1,4 @@
-# push
+## push
 
 The `push` command copies an image from your local registry to the remote registry that you are logged into. 
 

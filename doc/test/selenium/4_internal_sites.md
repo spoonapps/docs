@@ -10,18 +10,12 @@ Below is some example code demonstrating how you would run your test against an 
 
 **Java**
 
-	`driver.navigate().to("http://my-internal-server:8080");
+	driver.navigate().to("http://my-internal-server:8080");
 
 **C#** 
 
-	'driver.Navigate().GoToUrl("http://my-internal-server:8080");
+	driver.Navigate().GoToUrl("http://my-internal-server:8080");
 
 **Python**
 
-	'driver.get("http://my-internal-server:8080")
-
-####  On-Premise Solution
-
-For organizations that prefer to manage everything on their own servers, we offer an on-premise version of Spoonium with all the same tools and functionality of the hosted version.
-
-For more information on this, contact our Sales team at [sales@spoon.net](mailto:sales@spoon.net).
+	driver.get("http://my-internal-server:8080")

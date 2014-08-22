@@ -110,7 +110,7 @@ sections:
 - display_name: To Hub
   ordering: 2
   pages: []
-- display_name: Spoon Server
+- display_name: Spoon Server (coming soon)
   ordering: 3
   pages: []
 ---

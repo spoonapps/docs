@@ -275,8 +275,3 @@ Spoon IDE can import registry hive (.reg) files into the virtual registry. To im
 		<td>List of file extensions that are configured on the host system when the MSI is installed.</td>
 	</tr>
 </table>
-
-## Building from the Command-line ##
-
-
-## Modify Application Behavior from the Command-line ##
