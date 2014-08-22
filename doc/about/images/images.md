@@ -1,9 +1,9 @@
-An image is a read-only filesystem and registry. Images typically contain a single application or dependency. For example, the Java runtime would be packaged into a single image. Similarly, a custom application could be packaged and built into another image. Required dependencies can then be *merged* at runtime to create a single filesystem and registry that contains an application and its dependencies. 
+## Images
 
-Images are entirely stateless. That is, once created an image cannot be modified. To effectively modify an image, one must create a new container from the image, make any required modifications, and `commit` the container as a new image. 
+An image is a read-only filesystem and registry. A container is dynamic and can host running processes, but an image is static. Think of it as a snapshot of a container at a certain time.
 
-Images as saved containers
+Images serve as building blocks for new containers by providing a base filesystem and registry. If a project needs MongoDB, then specify that image when starting a new container.
 
-Images as building blocks for containers
+Containers can also be saved as images. Building block images like MongoDB merge with the altered container state and are saved as a new image.
 
-More information on [working with images]().
+More information on [working with images](http://spoonium.net/docs/containers#buildingimages).

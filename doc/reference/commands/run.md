@@ -6,39 +6,38 @@ The `run` command requires an `<image>` be specified -- this will be the base im
 
 The **base image** must be a valid Spoon image (`.svm` file extension) and must also exist in your local registry. If the image does not exist in your local registry, the Spoon IDE will try and find a matching one on the Spoonium Hub and download it before starting the container. 
 
-For example, to start a new command prompt in the container, execute: 
+Containers are started with the startup file specified in the base image. If a startup file is not set in the base image, a default of `%COMSPEC%` is applied. 
 
-	> spoon run <image> cmd.exe
+For example, to print "Hello World" to the command prompt in the new container with the command: 
 
-Similarly, I could print "Hello World" to the command prompt in the new container with the command: 
-
-	> spoon run <image> cmd.exe echo Hello World
+	> spoon run --startupFile=cmd.exe <image> -- /c echo Hello World
 
 **Note**: The container created with this command will shut down after the `echo` command finishes. To keep the container "alive", the `cmd.exe` process must continue running. In this case, we can accomplish this by passing the `/k` flag to `cmd.exe`. 
 
-	> spoon run <image> cmd.exe /k echo Hello World
+	> spoon run  --startupFile=cmd.exe <image> -- /k echo Hello World
 
 A container's standard streams (`STDIN`, `STDOUT`, `STDERR`) can be redirected to either the current command prompt or the background using the `attach` and `detach` flags. 
 
 To redirect all standard streams to the current command prompt, add the `-a` or `--attach` flag to the run command. 
 
-	> spoon run -a <image> cmd.exe
+	> spoon run -a <image>
 
-To prevent the execution of the new container from blocking the native command prompt, specify the `-d` flag.
+To "detach" the new container from the native command prompt, specify the `-d` or `--detach` flag. This will create a new container without blocking futher work in the native prompt. 
 
 The initial working directory for the container can be set with the `-w` or `--working-dir` flag. If the `-w` flag is not specified, the initial working directory of the container is inherited from the native command prompt. 
 
-	C:\Users>spoon run spoonbrew/git cmd.exe
+	C:\Users>spoon run spoonbrew/git
 	
+	# Default to the current directory of the native prompt
 	(08fx44zq) C:\Users>
 
 Environment variables can be added to a container with the `-e`, `--env`, or `--env-file` flags. 
 
-For example, to add the environment variable `foo` with value `bar` to a new container, the flag `-e=foo=bar` would be added to the `spoon run` command. 
+For example, to add the environment variable `foo` with value `bar` to a new container, add the flag `-e=foo=bar`. 
 
 Multiple `-e` or `--env` flags can be added to a single `run` command to add multiple environment variables. 
 
-	> spoon run -e=foo=bar -e=x=2 <image> cmd.exe 
+	> spoon run -e=foo=bar -e=x=2 <image>
 
 If your container requires several environment variables, we recommend creating an `env-file` for the container. An `env-file` is a line-delimited text file that lists environment variable key-value pairs on each line. The example file, below, lists 3 environment variables: 
 
