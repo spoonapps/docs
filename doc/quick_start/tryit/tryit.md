@@ -8,7 +8,7 @@ We'll begin by pulling (downloading) an image from the Spoonium Hub.
 
 Images are the building blocks for everything in Spoonium. They serve as a base (read-only) filesystem and registry that your application will use while running in a container. 
 
-Since you don't have any images on your local machine yet, you'll need to pull one down from the remote registry at [http://spoonium.net/hub](http://spoonium.net/hub). We'll do this using the `spoon pull` command. 
+Because you don't have any images on your local machine yet, you'll need to pull one down from the remote registry at [http://spoonium.net/hub](http://spoonium.net/hub). We'll do this using the `spoon pull` command. 
 
 The `pull` command takes a single parameter: the name of the image you want to pull from the remote registry. "Pull" is really just a fancy word for "copy." When an image is "pulled" from a remote registry, a copy of that image is downloaded to your local machine. 
 
