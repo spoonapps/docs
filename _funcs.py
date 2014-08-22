@@ -207,9 +207,6 @@ def section_migration(doc_dir, current_name, to_name):
                     found = True
                     print(    'matched!')
                     #migrate the link id for the topic, if necessary
-                    link = "cmdTabContent{0}"
-                    if topic['link'] == link.format(current_name.replace(' ', '')):
-                        topic['link'] = link.format(to_name.replace(' ', ''))
                     migrate_meta_files(doc_dir, current_name, to_name)  #migrate the meta files
                     section['display_name'] = to_name  #assign the new name
                 else:
