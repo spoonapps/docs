@@ -1,6 +1,6 @@
 ## What is Spoonium?
 
-Spoonium is a containerization platform for developers and sysadmins to quickly and reliably build, test, and deploy Windows applications. "Spooned" applications run exactly the same way on any computer – no conflicts, no dependencies, no matter the underlying infrastructure.
+Spoonium is a Windows containerization platform for developers and sysadmins to quickly and reliably build, test, and deploy applications. "Spooned" applications run exactly the same way on any computer – no conflicts, no dependencies, no matter the underlying infrastructure.
 
 ### Made for Developers
 
@@ -11,7 +11,7 @@ With Spoonium, developers can deploy any application to any machine without inst
 ### Made for QA
 Spoonium gives testers a unique way to efficiently test software and report bugs.
 
-Any unit or code-level integration tests can be executed within a container, ensuring the environment used in production is properly tested against. Manual testers can pull a container down to their local machine and test against a local copy of the application; they can even run the Spooned application side-by-side against an old version. This ensures that testers see the same environment as the developer who will need to reproduce and patch any reported issues.
+By standardizing development and QA environments, containers make reproducing issues and patching bugs a cinch. Any unit or code-level integration tests can be executed within a container, ensuring the environment used in production is properly tested against. Manual testers can pull a container down to their local machine and test against a local copy of the application; they can even run the Spooned application side-by-side against an old version.
 
 For web applications, Spoonium also offers unlimited manual and automated browser testing. Read more about our [Browser Sandbox](http://spoonium.net/docs#wikiBrowserSandbox) (manual), our [online Selenium Grid](http://spoonium.net/docs#wikiBeginnerTutorial), and our easy integration with [any CI environment](http://spoonium.net/docs#wikiContinuousIntegration).
 
@@ -21,7 +21,7 @@ Spoonium standardizes, simplifies, and speeds up software distribution.
 
 Containers revolutionize the shipping process. By packaging applications and their dependencies into a container, sysadmins take away the inconsistencies between staging and production environments, allowing their teams to quickly and routinely ship to production.
 
-Additionally, using Spoonium as a deployment standard massively simplifies getting software to end users. Instead of cumbersome traditional app packaging and installation with multiple points of failure, end users can launch any Spooned application straight from their command prompt, or directly from the web in one click via the [Spoonium Hub](http://spoonium.net/hub).
+Additionally, using Spoonium as a deployment standard massively simplifies getting software to end users. Instead of traditional installation with multiple points of failure, end users can run any Spooned application straight from their command prompt, or directly from the web in one click via the [Spoonium Hub](http://spoonium.net/hub) – even if they don't have the required dependencies.
 
 ### Made for open source
 Spoonium is 100% free for public projects. [Contact us](http://support.spoonium.net) to verify your open-source project.
