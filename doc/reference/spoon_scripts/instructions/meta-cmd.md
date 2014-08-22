@@ -1,8 +1,8 @@
-## META
+## meta
 
-	META <name>=<value>
+	meta <name> <value>
 
-The `META` instruction sets container metadata value. Standard metadata properties are listed below:
+The `meta` instruction sets container metadata value. Standard metadata properties are listed below:
 
 * Title
 * Description
@@ -10,4 +10,4 @@ The `META` instruction sets container metadata value. Standard metadata properti
 * Website
 * Version
 
-Any other name can be used for custom metadata.
+Custom metadata can be specified using other name, value pairs.  
