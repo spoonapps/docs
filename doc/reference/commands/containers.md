@@ -12,7 +12,7 @@ If the `containers` command is run without flags, it will return only the contai
 
 To only list the most recently created container, specify the `-l` or `--latest` flag. 
 
-	>spoon containers -l
+	> spoon containers -l
 
 Both running and stopped containers may be returned by the `-l` flag. 
 
@@ -26,8 +26,8 @@ If the value specified for `-n` is greater than the number of containers present
 
 By default, the table that is returned by the `containers` command is space-formatted. If you wish to return the table with tabs (`\t`) between each column, add the `--csv` flag to the `ps` command. 
 
-	C:\>spoon containers --csv
+	> spoon containers --csv
 
 Data in the table returned by the `containers` command is, by default, truncated so that it prints nicely and is easily readable in a command prompt. If you wish to view the untruncated data in each column, specify the `--no-trunc` flag. 
 
-	C:\>spoon containers --no-trunc
+	> spoon containers --no-trunc

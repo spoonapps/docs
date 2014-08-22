@@ -16,6 +16,16 @@ For example, to print "Hello World" to the command prompt in the new container w
 
 	> spoon run  --startupFile=cmd.exe <image> -- /k echo Hello World
 
+When passing arguments to a startupfile or command, we recommend separatign these arguments from the rest of the command with a `--`. Arguments specified after a `--` mark are passed directly to the startup file/command.
+
+If a `--` mark is not used, any argument matching a `spoon run` flag will be passed to `spoon`, which may lead to unexpected behavior. 
+
+    # spoon will interpret the /d flag and execute a container in detached mode
+    > spoon run spoonbrew/scratch /d
+    
+    # /d flag is passed to cmd.exe, disabling execution of AutoRun commands from the registry
+    > spoon run spoonbrew/scratch -- /d 
+
 A container's standard streams (`STDIN`, `STDOUT`, `STDERR`) can be redirected to either the current command prompt or the background using the `attach` and `detach` flags. 
 
 To redirect all standard streams to the current command prompt, add the `-a` or `--attach` flag to the run command. 
@@ -30,6 +40,8 @@ The initial working directory for the container can be set with the `-w` or `--w
 	
 	# Default to the current directory of the native prompt
 	(08fx44zq) C:\Users>
+
+#### Adding Environment Variables
 
 Environment variables can be added to a container with the `-e`, `--env`, or `--env-file` flags. 
 
@@ -55,12 +67,6 @@ When the `--diagnostic` flag is included, the container will generate diagnostic
 
 These diagnostic logs can later be viewed using the `spoon logs` command. 
 
-When passing arguments to a startupfile or command, we recommend separatign these arguments from the rest of the command with a `--`. Arguments specified after a `--` mark are passed directly to the startup file/command.
+#### Container Networking
 
-If a `--` mark is not used, any argument matching a `spoon run` flag will be passed to `spoon`, which may lead to unexpected behavior. 
-
-    # spoon will interpret the /d flag and execute a container in detached mode
-    > spoon run spoonbrew/scratch /d
-    
-    # /d flag is passed to cmd.exe, disabling execution of AutoRun commands from the registry
-    > spoon run spoonbrew/scratch -- /d 
+Ports for the newly created container can be mapped to ports on the local 

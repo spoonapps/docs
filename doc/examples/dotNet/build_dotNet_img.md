@@ -2,7 +2,7 @@
 
 For this project, we'll need .NET 4.0. The Spoonium team has published a suite of .NET images in the **spoonbrew** user account. To pull the .NET 4 image, run the following command: 
 
-	C:\Users\SpoonUser>spoon pull spoonbrew/dotNet:4.0
+	> spoon pull spoonbrew/dotNet:4.0
 
 To build the image, we'll construct a Spoon script. The script should take the compiled Server executable, along with any DLLs, copy them into a new container, and build an image from this container. Below is the **spoon.me** file for the example project used in this tutorial. 
 
