@@ -1,4 +1,4 @@
-IDE can scan the host machine and build images from installed applications and settings.
+IDE can build images from locally installed applications.
 
 ## Running the Desktop Scan
 
@@ -15,13 +15,23 @@ IDE can scan the host machine and build images from installed applications and s
 
 6. Choose the Location where the packaged applications will be placed.
 
-7. Choose the Output format of the application packages then click Next.
+7. Choose the Output format of the application packages then click Next. For compatibility with CLI and the hub, choose Component.
 
 8. A progress window displays while the selected applications are packaged. This process can take several minutes depending on the size and number of applications selected.
 
 9. Once the process is finished, a window displays showing the results. If multiple applications are selected to be packaged, the status of each will be displayed. If one application fails to be packaged, it is possible for the other selected applications to build successfully.
 
-Applications packaged with this method may retain users settings that were in place at the time of the scan.
+Applications packaged with this method retain users settings that were in place at the time of the scan.
+
+#### Optional: Import to local registry using CLI
+
+Images built with IDE can also be used with CLI and the hub.
+
+    # Import the image to your local registry
+    > spoon import -n=desktopapp svm C:\path\to\app.svm
+    
+    # Push it to the hub
+    > spoon push desktopapp
 
 ## Best Practices
 

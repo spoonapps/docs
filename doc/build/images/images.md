@@ -1,108 +1,145 @@
-Images serve as read-only foundations for containers to run "on top of" -- providing a base filesystem and registry that the container can access. They also serve to memorialize the state of an application at a certain point in time. 
+In this section, you'll learn to work with and manage images.
 
-Whereas a container is dynamic and can host running processes, an image is static. An image is, essentially, a snapshot of of a container at a specific point in time. 
+## Local Registry
 
-The local registry is the cache of images on the local machine. When you first download and install the Spoon Plugin, the registry only contains a single image. Images can only be added to the registry through the `pull` or `import` commands. 
+The local registry is the cache of images on the local machine. Images must be in the local registry before being run in a container. The `pull` command copies images to the local registry down from the [hub](http://spoonium.net/hub).
 
-To get a list of all the images in the local registry, execute the `spoon images` command. This command generates a table listing all of the images in the user's local registry. 
+    # Initiate an image download from a hub repository
+    > spoon pull spoonbrew/node:0.10.29
+
+    # List all images in the local registry
+    > spoon images
+
+    NAME            TAG      ID            CREATED               SIZE
+    spoonbrew/node  0.10.29  73dfe6973074  8/18/2014 1:00:24 PM  12.9MB
+
+    # Images can also be removed from the local registry using rmi
+    > spoon rmi spoonbrew/node:0.10.29
+
+You can alternately specify an image ID.
+
+#### Forking, Renaming, and Tagging
+
+Images can be forked using the `spoon fork` command. This creates a link to the specified image with a new name and tag. It does not affect the original image.
+
+    # Pull an image
+    > spoon pull account/image:head
+    
+    # Check the image
+    > spoon images
+    
+    NAME            TAG  ID            CREATED               SIZE
+    account/image   head 14wed2165141  8/18/2014 1:55:23 PM  1.9MB
+    
+    # Fork to a new image name and tag
+    > spoon fork account/image:head tester/test1:1.0
+    
+    # New image is added
+    > spoon images
+    
+    NAME            TAG  ID            CREATED               SIZE
+    account/image   head 14wed2165141  8/18/2014 1:55:23 PM  1.9MB
+    tester/test1    1.0  14wed2165141  8/18/2014 1:55:23 PM  1.9MB
+
+The `spoon tag` command can also retag images.
+
+    # Specify the image you want to tag and the new tag
+	> spoon tag tester/test1:1.0 2.0
+    
+    # Check the tag
+    > spoon images
+    
+    NAME            TAG  ID            CREATED               SIZE
+    account/image   head 14wed2165141  8/18/2014 1:55:23 PM  1.9MB
+    tester/test1    2.0  14wed2165141  8/18/2014 1:55:23 PM  1.9MB
 
 ## Creating Images
 
 There are four ways to create an image:
 
-1. By manually committing a container, with the spoon commit command.
-2. Using the `spoon build` command to automatically create images from a build script.
-3. Using the `spoon import` command to build images from Spoon XAPPL configuration files. 
-4. By using the `spoon import` command to convert other file types to Spoon images.
+1. Commit a container
+2. Automatically create with a build script
+3. Build images from XAPPL configuration files created with IDE
+4. Import and convert various file types to images
 
 #### Commit a Container
 
-**Associated Command**: `spoon commit`
+If you have an existing container that you would like to create an image from, use the `spoon commit` command. Before committing a container check that it is stopped with `spoon containers`.
 
-If you have an existing container that you would like to create an image from, use the spoon commit command. Before committing a container, make sure that it is not running.
+See a more detailed example [here](http://spoonium.net/docs#containers).
 
-#### Automate Images Builds
+#### Automatic Builds
 
-**Associated Command**: `spoon build`
+Images can be automatically built using a Spoon Script, which is a set of instructions that recreate the steps of configuring a container. See more information on [Spoon Script]() verbage and syntax.
 
-Images can be automatically built using Spoon's scripting build language. This language consists of a set of instructions that recreate the steps of configuring a container to build from.
+    # Example script to automatically build a 7-Zip image
 
-The build command can be broken down into 3 steps:
+    # Pull dependency images
+    FROM spoonbrew/wget
 
-1. Create an empty container.
-2. Follow the instructions in the build script to configure the container.
-3. Commit the container.
+    # Prepare environmnet
+    CMD mkdir c:\7zip
 
-After the container is committed, it is automatically removed from your machine.
+    # Download installation media
+    WORKDIR C:\7zip
+    CMD %spn_wget% http://downloads.sourceforge.net/sevenzip/7z920.exe
+
+    # Install 7-Zip
+    CMD 7z920.exe /S /D=C:\7zip
+
+Save the script as a .me file and then use `spoon build` command:
+
+    # Build the script and specify a name for the new image
+    > spoon build -n=7-zip:9.20 C:\path\to\build.me
+    
+    # New image is now saved in the local registry
+    > spoon images
+    
+    NAME   TAG   ID            CREATED               SIZE
+    7-zip  9.20  95sdf1245239  8/18/2014 2:21:32 PM  25.4MB
+
 
 #### Building from a XAPPL File
 
-**Associate Command**: `spoon build` 
+XAPPL files are static configuration files originally created using IDE that specify the files, registry keys, and virtual machine settings for an image. The CLI can also build images based on XAPPL configuration files using `spoon build` command.
 
-XAPPL files are static configuration files that specify all of the files, registry keys/values, and virtual machine settings to use when building a new image. The Spoon IDE can build images based on XAPPL configuration files using `spoon build` command. 
-
-**Note**: This command is equivalent to building as a Component in the Spoon IDE GUI. 
-
-#### Converting From Other File Types
-
-**Associated Command**: `spoon import`
-
-The import command currently supports building from 2 external file types: 
-
-1. Microsoft Software Installer (`MSI`)
-2. ThinApp Configuration (`package.ini`)
-
-To import these filetypes, the appropriate flag must be set indicating the type of file to import. 
-
-To import an `MSI`, use the command `spoon import -msi <path to msi>`. 
-
-To import a Thinapp configuration, use the command `spoon import -thinapp <path to msi>`. 
-
-
-The `pull` command is used to copy an image from a remote registry (the **Spoonium Hub**, for example) the user's local registry. The user must be logged in to a remote registry to use the `pull` command. 
-
-The `pull` command takes a single parameter: the image to pull. When specifying the image to pull, one may optionally specify a repository and tag to pull. If these options are not specified, the following defaults will be applied: 
-
-1. The tag `master` will be applied to the specified image
-1. Spoon will look in the logged-in user's account on the remote registry for a matching image
-2. If an image is not found, Spoon will look in the `spoonbrew` account for a matching image
-
-If no matching image is found, the `pull` will fail. 
-
+    # Build an image and specify a name
+    > spoon build -n=firefox:30 C:\path\to\firefox30.xappl
 
 #### Import
 
-If you have an existing image on your local machine (such as from **Spoon IDE** or from a legacy version of **Spoon Studio**), you can `import` it to your local registry. 
+If you have an existing image (file type `.svm`) on your local machine or a network drive (perhaps built with IDE or a legacy version of Spoon Studio), you can import it to your local registry.
 
-The `import` command requires a single parameter: the path to the image to be imported. You can optionally specify a name for the image using the `-n` or `--name` flag. If the image is not named, its ID will be used as a default name. 
+    # Specify the new name, file type, and path to the image
+    > spoon import -n=newimage svm C:\path\to\image.svm
 
-Images can be removed from the local registry with the `spoon rmi` command. The `rmi` command can reference the name or the ID of an image. 
+If the image is not explicitly named, its ID will be used as a default.
 
-If the name of an image is specified, the image will only be truly *deleted* if it is the last remaining image on your machine with that ID. For example, if a local registry contains two identical images with the same ID (hash) but different names, the image binary, itself, will not be deleted until `spoon rmi` has been run against both names. In this case, the first `rmi` command will only remove the specified name-ID association.
+The `import` command also supports building from 2 external file types:
 
-#### Naming and Tagging Images
+1. Microsoft Software Installer (`.msi`)
+2. ThinApp Configuration (`package.ini`)
 
-Images can be named using the `spoon fork` command. The `fork` will create a new link to the specified image with a new, given name.    
+Use the appropriate file type parameter:
 
-Images can be tagged with the `spoon tag` command. A tag in Spoon is roughly equivalent to a tag in Git -- that is, a tag refers to a specific point in the revision history of an image. It is most commonly used to denote major points (such as releases) in an image's lifetime. 
+    # MSI
+    > spoon import msi <path to .msi>
 
-Images are tagged by specifying the image to tag, followed by the tag to be applied. For example, to tag the image `my-new-image` with the tag `1.0`, execute the command
+    # ThinApp configuration
+    > spoon import thinapp <path to package.ini> 
 
-	>spoon tag my-new-image 1.0 
+## Push to a Remote Repository
 
-#### Pushing Images to a Remote Registry
+Images in a local registry can be copied to a remote repository on the [hub](http://spoonium.net/hub) with the `spoon push` command to make your images available to your team members, end-users, or the public.
 
-Images in a local registry can be copied to a remote registry with the `push` command. 
+    # Specify the image you want to push
+    > spoon push sample
 
-Similar to `pull`, the `push` command takes a single parameter: the image to push. The image parameter may be fully-qualified with a username, name, and tag or partially-qualified -- the only required qualification is the image name. 
+    # Or push to a specific namespace and tag
+    > spoon push spoontest/sample:latest
 
-The form of a fully-qualified image is `username/name:tag`. 
+If unspecified, the image will be pushed to the logged-in user's namespace with the tag head.
 
-If the image is not fully-qualified, Spoon will apply the following defaults for the image repository and tag.
+For basic users, pushed images will be public by default. For paid users, pushed images will be private by default until the private repository limit is reached. Visit [the hub](http://spoonium.net/hub) to change these defaults.
 
-1. The tag `head` will be applied to the image. 
-2. The image will be pushed to the currently-logged in user's remote registry.
-
-For example, if the user `spoonuser` executes the command `spoon push my-new-image`, the image will be pushed as `spoonuser/my-new-image:head`. 
-
-If a repository `my-new-image` does not exist in the remote registry, a new one will be created. This repository will be **public** by default, unless the user pushing the image has private repositories available. 
+See more information on [using the hub](http://spoonium.net/docs#hub).

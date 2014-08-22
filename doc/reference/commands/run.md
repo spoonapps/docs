@@ -55,3 +55,13 @@ Spoon VM settings can be enabled or disabled with the `--enable` and `--disable`
 When the `--diagnostic` flag is included, the container will generate diagnostic logs that detail all of the operations that occur within the container. These are especially useful when debugging 
 
 These diagnostic logs can later be viewed using the `spoon logs` command. 
+
+Sometimes an argument specified after `<command>` may be same as `spoon` argument. To prevent `spoon` from treating this argument as its own, prefix the argument with a `--` mark.
+
+    # spoon will interpret the /d flag and execute a container in detached mode
+    > spoon run spoonbrew/scratch cmd.exe /d
+    
+    # This makes it explicit that the /d flag is for cmd.exe so it does not execute `AutoRun` command from registry
+    > spoon run spoonbrew/scratch cmd.exe -- /d 
+
+A good practice is to use `--` before all `<command>` arguments.
