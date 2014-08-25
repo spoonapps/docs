@@ -129,13 +129,13 @@ The repository page on Spoonium serves as a complete version history of an image
 
 Public repositories are great for sharing work with others or for providing a quick and easy access point for colleagues, collaborators, or even end-users to download and access and run your project from. 
 
-#### Next Steps
+## Next Steps
 
 Now that you've completed the beginner tutorial, what next?
 
-To learn more about Spoonium, check out the [Building](http://spoonium.net/docs#wikiCreatingContainers) section. This section goes into some more depth on the commands shown in this tutorial, as well as some of the more *advanced* commands available in Spoon. 
+To learn more about creating Spoonium containers, check out the [Building](http://spoonium.net/docs/build) section. This section goes into some more depth on the commands shown in this tutorial, as well as some of the more advanced commands available in Spoon. 
 
-For some practical examples, go to the [Examples](http://spoonium.net/docs#wikiPullRequiredDependencies) section of the docs. This section containers a plethora of tutorials and walkthroughs detailing many of the popular use-cases for Spoonium. 
+For some practical examples, such as containerizing a Java or .NET project, go to the [Examples](http://spoonium.net/docs/samples) section of the docs. This section has tutorials and walkthroughs detailing many common use-cases for Spoonium. 
 
 We also encourage you to jump right in and try containerizing your own personal projects! 
 
