@@ -1,4 +1,4 @@
-import re
+from urllib import quote_plus
 
 #====================
 #BUILD SCRIPT CLASSES
@@ -22,6 +22,14 @@ class DocTemplate(object):
     def get_ordered_topics(self):
         return sorted(self.topics, key=lambda t: t.ordering, reverse=False)
 
+    def get_topic_named(self, name):  #TODO: refactor
+        for topic in self.topics:
+            if topic.display_name.lower() == name.lower():
+                return topic
+            else:
+                continue
+        raise NoSuchTopicError(name)
+
 
 class DocTopic(object):
     """Represents a topic with a display name, link, and a list of sections
@@ -36,7 +44,7 @@ class DocTopic(object):
         self.sections.append(section)
 
     def get_link_name(self):
-        return self.display_name.replace(' ', '').replace('.','').lower()
+        return generate_link(self.display_name)
 
     def get_section_names(self):
         return [sec.display_name for sec in self.sections]
@@ -58,7 +66,7 @@ class DocSection(object):
     def __init__(self, name, ordering, pages):
         self.display_name = name
         self.ordering = ordering
-        self.id = self.display_name.replace('.', '').replace(' ', '')
+        self.id = generate_link(self.display_name)
         self.pages = pages
 
     def add_page(self, page):
@@ -75,6 +83,7 @@ class NoMetaFileError(Exception):
     def __str__(self):
         return repr(self.value)
 
+
 class NoSuchSectionError(Exception):
     """Raised when a meta.md file specifies a section that is not specified
     in the doc template
@@ -86,10 +95,19 @@ class NoSuchSectionError(Exception):
     def __str__(self):
         return repr(self.value)
 
+class NoSuchTopicError(Exception):
+    """Raised when a topic doesn't exist
+    """
+
+    def __init__(self, value):
+        self.value = value
+
+    def __str__(self):
+        return repr(self.value)
+
 #========================
 #MIGRATION SCRIPT CLASSES
 #========================
-
 class CommandLineArgs(object):
     """dummy class for holding parsed command line arguments
     """
@@ -104,3 +122,8 @@ class MissingArgError(Exception):
 
     def __str__(self):
         return repr(self.value)
+
+def generate_link(name):
+    """Generates the text to use a link for the given name
+    """
+    return quote_plus(name.lower().replace('?', ''))

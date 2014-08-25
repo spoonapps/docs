@@ -45,7 +45,6 @@ Save the script as a .me file and then use `spoon build` command:
     NAME   TAG   ID            CREATED               SIZE
     7-zip  9.20  95sdf1245239  8/18/2014 2:21:32 PM  25.4MB
 
-
 **Building from a XAPPL File**
 
 XAPPL files are static configuration files originally created using IDE that specify the files, registry keys, and virtual machine settings for an image. The CLI can also build images based on XAPPL configuration files using `spoon build` command.

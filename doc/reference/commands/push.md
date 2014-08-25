@@ -25,4 +25,3 @@ If an image is pushed to the remote registry and a corresponding repository does
 If you have previously tagged an image and would now like to push it to the `head` tag of the remote repository, the image must be re-tagged before it is pushed. 
 
 To do this, use the `spoon tag` command to re-tag the image with the new `head` tag. Then, push the newly-tagged image to the remote repository. 
-

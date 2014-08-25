@@ -11,11 +11,11 @@ to html
 
 import sys, os
 from _classes import DocTemplate, DocTopic, DocSection, NoMetaFileError
-from _funcs import create_doc_from_yaml, process_dir, write_docshtml, write_docspages
+from _funcs import create_doc_from_yaml, process_directory, write_docshtml, write_docspages
 
 
 def main(doc_dir, build_dir):
-    """Walk the doc directory and create a build folder and json resource
+    """Walk the doc directory and create a build folder
     """
     #create the initial doc template
     doc_template = create_doc_from_yaml(os.path.join(doc_dir, "meta.yaml"))
@@ -31,7 +31,7 @@ def main(doc_dir, build_dir):
             #process the directory, adding all the pages found to the 
             #appropriate section of doc_template
             print("Processing directory %s" % dirpath)
-            tmp_template = process_dir(dirpath, files, build_dir, doc_template)
+            tmp_template = process_directory(dirpath, files, build_dir, doc_template)
             if tmp_template is None:  #hack to prevent null assignment on final walk
                 continue
             doc_template = tmp_template

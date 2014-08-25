@@ -3,7 +3,7 @@
 {% for t in doc_template.topics %}
   {% if t.display_name == intopic.display_name %}
   <li class="active">
-    <a href="/docs/{{ t.get_link_name().lower() }}">{{ t.display_name }}</a>
+    <a href="/docs/{{ t.get_link_name() }}">{{ t.display_name }}</a>
     <div class="navbar-spy">
       <ul class="nav" role="tablist">
         {% for s in t.sections %}
@@ -13,7 +13,7 @@
     </div>
   </li>
   {% else %}
-  <li><a href="/docs/{{ t.get_link_name().lower() }}">{{ t.display_name }}</a></li>
+  <li><a href="/docs/{{ t.get_link_name() }}">{{ t.display_name }}</a></li>
   {% endif %}
 {% endfor %}
 </ul>

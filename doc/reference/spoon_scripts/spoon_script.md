@@ -6,9 +6,9 @@ A `.me` script is a text file containing a set of **instructions** that the Spoo
 
 The syntax of a Spoon build script generally follows the pattern: 
 
-	INSTRUCTION <arg 1> <arg 2> ...
-	INSTRUCTION <arg 1> <arg 2> ...
-	INSTRUCTION <arg 1> <arg 2> ...
+	instruction <arg 1> <arg 2> ...
+	instruction <arg 1> <arg 2> ...
+	instruction <arg 1> <arg 2> ...
 	
 The script is read and executed top-to-bottom. 
 
@@ -18,8 +18,8 @@ All scripts have an implicit `commit` at the end of the script. After the last i
 
 #### Syntax Rules
 
-1. `.me` scripts are line-delimited and must only contain 1 instruction per line. Line continuation is not supported. 
-2. All lines must follow the general structure: `INSTRUCTION <**args>`
+1. Spoon scripts are line-delimited and must only contain 1 instruction per line. Line continuation is not supported. 
+2. All lines must follow the general structure: `instruction <args>`
 3. Inline comments are not supported. Comments must be applied at the beginning of a line and are applied to the entire line. 
 
 #### Comments
@@ -32,4 +32,4 @@ Comments cannot be made inline with a command. Comments must be specified at the
 
 	#this is a valid comment
 
-	FROM spoonbrew/node  #this is not a valid comment
+	from spoonbrew/node  #this is not a valid comment

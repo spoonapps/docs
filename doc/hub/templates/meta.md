@@ -1,3 +1,4 @@
 ---
+topic: Hub
 section: templates
 ---

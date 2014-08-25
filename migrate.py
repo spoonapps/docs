@@ -1,7 +1,7 @@
 """A script for dealing with name changes to topics and/or 
 sections of the docs
 
-USAGE: python migrate.py --type [section/topic] --current [current name] --to [new name]
+USAGE: python migrate.py --topic [topic name] --section [section name] --to [new name]
 """
 import sys, os
 from _classes import CommandLineArgs, MissingArgError
@@ -14,18 +14,16 @@ def main():
 	parser = make_parser()
 	args = CommandLineArgs()
 	parser.parse_args(namespace=args)
-	#check that all were specified
-	if args.type is None:
-		raise MissingArgError("type")
-	if args.current is None:
-		raise MissingArgError("current")
+	#dispatch based on what was specified
+	if args.topic is None:
+		raise MissingArgError("topic must be specified!")
 	if args.to is None:
-		raise MissingArgError("to")
-	#split off based on type of migration
-	if args.type == "topic":
-		topic_migration(doc_dir, args.current, args.to)
+		raise MissingArgError("must specify a name to migrate to (--to)")
+	if args.section is None:
+		#need to migrate topics
+		topic_migration(doc_dir, args.topic, args.to)
 	else:
-		section_migration(doc_dir, args.current, args.to)
-	
+		section_migration(doc_dir, args.topic, args.section, args.to)
+
 if __name__ == "__main__":
 	main()
