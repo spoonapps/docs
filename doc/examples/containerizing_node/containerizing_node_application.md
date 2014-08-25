@@ -135,7 +135,7 @@ Create a new text file and copy/paste this text:
     #set startup file for the container
     boot file node app.js
 
-Click [here]() for more on Spoon Script file syntax.    
+See [Spoon script reference](/docs/reference#spoon+scripts) for more information on Spoon script syntax.
 
 Save the file as Spoon Script in `C:\spoon\aIRChat`.
 

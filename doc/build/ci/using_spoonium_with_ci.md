@@ -23,7 +23,7 @@ The Spoon Script contains all the steps necessary to build the container.
     #  Install Node.js depencies 
     CMD cd c:\root\server & npm install
 
-Save your script as a `.me` file. See the [Syntax](#Syntax_for_.me_Scripts) page for more information on Spoon Script script instructions.
+Save your script as a `.me` file. See the [Spoon Script reference](/docs/reference#SpoonScripts) for more information on Spoon Script script instructions.
 
 #### Integrate into the CI server
 
@@ -42,7 +42,7 @@ Now add the follow commands to your automated CI build script:
     
 Rather than exporting the image to the host system, you can also `spoon push` the image to the hub where other users could pull it down and test.
 
-See the [Command Line Interface](#) page for more information on `spoon` commands.
+See the [Command Line Interface](/docs/reference#CommandLine) page for more information on `spoon` commands.
 
 #### Run the container
 

@@ -8,4 +8,4 @@
     	>spoon login username password
     	Logged in as `username`
 
-5. You're ready to go! [Click here](/docs/quick+start#TryIt) to move to our beginner's tutorial, where you'll pull an image, create a container, commit changes, and push to the [Spoonium Hub](http://spoonium.net/hub).
+5. You're ready to go! [Click here](/docs/quick+start#try+it) to move to our beginner's tutorial, where you'll pull an image, create a container, commit changes, and push to the [Spoonium Hub](http://spoonium.net/hub).

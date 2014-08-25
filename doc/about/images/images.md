@@ -6,4 +6,4 @@ Images serve as building blocks for new containers by providing a base filesyste
 
 Containers can also be saved as images. Building block images like MongoDB merge with the altered container state and are saved as a new image.
 
-More information on [working with images](http://spoonium.net/docs/containers#buildingimages).
+More information on [working with images](/docs/build#WorkingWithImages).

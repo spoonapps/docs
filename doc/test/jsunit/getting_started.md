@@ -22,13 +22,9 @@ In the **Supported Test Runners** section, below, you'll find a list of test run
 
 **Karma** ([on Github](http://github.com/karma-runner/karma))
 
-To learn how to configure Karma for Spoonium see [Getting Started: Karma](TODO: add link). 
-
 - For a list of frameworks Karma supports, see: [http://npmjs.org/browse/keyword/karma-plugin](http://npmjs.org/browse/keyword/karma-plugin). 
 - If you want to learn a little more about Karma, check out the [Karma homepage](http://karma-runner.github.io/0.12/index.html). 
 
 **Mocha/Mochify** ([on Github](http://github.com/mantoni/mochify.js))
-
-To learn how to configure Mocha/Mochify for Spoonium, see [Getting Started: Mocha](TODO: add link). 
 
 - Mochify only supports the [Mocha](http://visionmedia.github.io/mocha/) framework. 

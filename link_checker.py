@@ -13,8 +13,11 @@ def check_links(directory):
             for match in re.finditer(link_regex, text):
                 #form a url to make a request to
                 if is_internal(match.group(2)):
-                    link_text = "http://spoonium.net" + match.group(2)
+                    link_text = "http://dev-stage.spoonium.net" + match.group(2)
                 elif is_mailto(match.group(2)):
+                    continue  #skip mail links
+                elif is_emptylink(match.group(2)):
+                    print('  link "{0}" was an empty link (#)'.format(match.group(1)))
                     continue
                 else:
                     link_text = match.group(2)
@@ -38,6 +41,12 @@ def is_internal(link):
 
 def is_mailto(link):
     if link[:6] == "mailto":
+        return True
+    else:
+        return False
+
+def is_emptylink(link):
+    if link == "#":
         return True
     else:
         return False

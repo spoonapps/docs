@@ -1,6 +1,8 @@
+## Spoon IDE
+
 Spoon IDE enables you to convert your Windows, .NET, Java, AIR, Flash, Shockwave, or other Windows-compatible applications into self-contained virtual applications. These applications can be delivered as standalone executables, MSIs or streamed from the web and run instantly on end-user devices. Unlike traditional deployment methods, virtual applications do not require reboots, administrative privileges, or separate setup steps for external components and runtimes. Virtual applications are isolated from other system applications, preventing DLL conflicts and other deployment nightmares.
 
-## Supported Platforms ##
+#### Supported Platforms
 Spoon IDE supports the following platforms for virtual application build, snapshotting, and execution:
 
 - Microsoft Windows 8.1
@@ -21,22 +23,23 @@ Spoon IDE supports these operating systems running within VMware and Microsoft h
 
 **Note:** Spoon IDE does not support creation of 16-bit executables. To run 16-bit DOS applications, virtualize an appropriate emulator with the application and launch the application through the emulator.
 
-## User Interface ##
+#### User Interface
 
 Using the Spoon IDE user interface enables you to configure the filesystem and registry of a virtual application, embed external runtimes and components, take application snapshots, and create Spoon Virtual Machine (SVM) or executable files. The primary interface consists of a ribbon bar along the top and several panes accessed by buttons on the left.
 
-#### Items Located Above the Ribbon Bar ####
+**Items Located Above the Ribbon Bar**
 
 - The Start Menu button, or the circle at the top left of the window, enables virtual application configurations to be created, opened, saved, imported, applied, and closed.
 - The Options bar provides Spoon IDE interface customization options, as well as the ability to set proxy settings and install certificates.
 - The Help bar provides access to Spoon IDE documentation.
 
-### Spoon IDE Ribbon Bar ###
+**Spoon IDE Ribbon Bar**
+
 - The Virtual Application tab provides access to the snapshot and build features, as well as output configuration options such as the startup file, output directory, and diagnostic-mode selection.
 - The Runtimes tab provides a selection of auto-configurable runtime engines which can be embedded into your application with a single click. These include .NET Framework, Java, Flash, Shockwave, Acrobat Reader, and SQL Server 2005 Express runtimes.
 - The Advanced tab provides advanced Spoon IDE functions such as Platform Merge and Streaming.
 
-#### Left-side button panes ####
+**Left-side Button Panes**
 
 - The **Filesystem** pane displays the application virtual filesystem, and enables you to add and remove virtual files and directories.
 - The **Registry** pane displays the application virtual registry, and enables you to add and remove virtual registry keys and data values.
@@ -47,12 +50,13 @@ Using the Spoon IDE user interface enables you to configure the filesystem and r
 
 **Note:** Spoon IDE users are responsible for any third-party licensing compliance for redistributable components included using virtualization.
 
-## Virtual Filesystem ##
+#### Virtual Filesystem
+
 Spoon IDE enables you to embed a *virtual filesystem* into your executable. Embedded files are accessible by your Spoon-processed application as if they were present in the actual filesystem. Virtual files, unlike files on the host device, are not visible from and do not require changes to the host device. Virtual files do not require security privileges on the host device, regardless of whether the virtual files reside in a privileged directory. Because virtual files are embedded in the application executable, shared DLLs do not interfere with or are overwritten by other applications on the host device.
 
 **Note:** When running a virtual application on Windows 7, the **All Users Directory\Application Data** and **All Users Directory** root folders will map to the same folder at runtime. To prevent one setting from overriding another, verify that the isolation settings for these folders are the same.
 
-#### Isolation Modes ####
+**Isolation Modes**
 
 In the event of a conflict between a file in the virtual filesystem and a file present on the host device, the file in the virtual filesystem takes precedence.
 
@@ -65,7 +69,7 @@ Folders may be virtualized in **Full**, **Merge**, **Write Copy**, or **Hide** m
 
 **Tip**: To apply selected isolation modes to all subfolders, right-click on the folder, choose Isolation, select the checkbox for **Apply to Subfolders**, then select **OK**.
 
-#### File Attributes ####
+**File Attributes**
 
 Files and folders can be hidden from shell browse dialogs and other applications. This is used to prevent internal components and data files from being displayed to the user. To hide a file or folder, select the checkbox in the **Hidden** column adjacent to the desired file or folder.
 
@@ -73,28 +77,29 @@ Files and folders can be hidden from shell browse dialogs and other applications
 
 Flagging files and folders as read-only prevents the application from modifying the file or folder contents. To make a file or folder read-only, select the checkbox in the **Read Only** column next to the desired file or folder.
 
-#### No Upgrade ####
+**No Upgrade**
 
-By default, Spoon IDE enables files in the virtual filesystem to be upgraded with patches (refer Updating Registration Settings in the [Register Virtual Applications in the Windows Shell](register-virtual-applications-in-the-windows-shell) section for more information). If there are files in the virtual filesystem that should not be upgraded, such as user data files, select the **No Upgrade** flag to prevent these files from being upgraded.
+By default, Spoon IDE enables files in the virtual filesystem to be upgraded with patches (refer to "Updating Registration Settings" in the [Register Virtual Applications in the Windows Shell](#) section for more information). If there are files in the virtual filesystem that should not be upgraded, such as user data files, select the **No Upgrade** flag to prevent these files from being upgraded.
 
-#### No Sync ####
+**No Sync**
 
 This feature only applies to virtual applications that are delivered and managed by Spoon Virtual Desktop Server, or Spoon.net. By default, Spoon IDE enables files in the virtual filesystem to be synchronized to a user's Spoon account. This enables the application state to be maintained across different devices that are Spoon enabled. If there are folders in the virtual filesystem that should not be synchronized, but should remain only on the local device, enable the **No Sync** flag to prevent files within the folder from being synchronized. This setting is managed on a folder level and applies to all files within that folder.
 
-### Filesystem Compression ###
+**Filesystem Compression**
 
 To reduce executable size, Spoon IDE can compress virtual filesystem contents. This reduces virtual application size by approximately 50%, but also prevents profiling and streaming of the application. By default, the **Compress Payload** option in the **Process Configuration** area of the **Settings** panel is unchecked. Leave this box unchecked during the build process if the application will be optimized for streaming from Spoon Server.
 
 **Note**: Disabling payload compression may significantly increase the size of the virtual application binary.
 
-## Virtual Registry ##
+#### Virtual Registry
+
 Spoon IDE enables you to embed a virtual registry into your executable. Embedded registry keys are accessible by your Spoon-processed application as if they were present in the actual registry. Unlike data present on the host device, virtual registry keys and values are not visible from and do not require changes to the host device. The use of a virtual registry does not require security privileges on the host device, even if the virtual registry entries are in a privileged section of the registry. Because virtual registry entries are embedded in the application executable, other applications are unable to disrupt application execution by inadvertent modification of registry entries.
 
 The **Classes** root, **Current User** root, **Local Machine** root, and **Users** root folders correspond to the **HKEY\_CLASSES\_ROOT**, **HKEY\_CURRENT\_USER**, **HKEY\_LOCAL\_MACHINE**, and **HKEY\_USERS** keys on the host machine. 
 
 Registry string values can include well-known variables such as **@WINDIR@**, **@SYSWOW64@**, **@PROGRAMFILESX86@** and **@PROGRAMFILES@**.
 
-#### Isolation Modes ####
+**Isolation Modes**
 
 In the event of a conflict between a key or value in the virtual filesystem and data present on the host device registry, information in the virtual registry takes precedence. Keys may be virtualized in **Full**, **Merge**, **Write Copy**, or **Hide** mode.
 
@@ -105,11 +110,11 @@ In the event of a conflict between a key or value in the virtual filesystem and 
 
 **Tip**: To apply selected isolation modes to all subkeys, right-click on the key, choose **Isolation**, select the checkbox for **Apply to Subkeys**, then **OK**.
 
-#### No Sync ####
+**No Sync**
 
 This feature only applies to virtual applications that are delivered and managed by Spoon Virtual Desktop Server, or Spoon.net. By default, Spoon IDE enables registry keys in the virtual registry to be synchronized to a user's Spoon account. This enables the application state to be maintained across different devices that are Spoon enabled. If there are keys in the virtual registry that should not be synchronized, but should remain only on the local device, enable the **No Sync** flag to prevent that key and any values within the key from being synchronized. This setting is managed on a registry key level and applies to all values within that key.
 
-#### Importing Registry Hive Files ####
+**Importing Registry Hive Files**
 
 Spoon IDE can import registry hive (.reg) files into the virtual registry. To import a .reg file, select the **Import** button in the **Registry** panel, then choose the registry hive file to import.
 
@@ -243,6 +248,7 @@ Spoon IDE can import registry hive (.reg) files into the virtual registry. To im
 
 ## Runtimes and Components ##
 
+(Coming soon)
 
 ## MSI Settings ##
 <table>
