@@ -10,11 +10,11 @@ The `pull` command takes a single parameter: the name of the image you want to p
 
 Let's start simple by pulling the **spoonbrew/scratch** image. This image is completely empty: this is roughly equivalent to a freshly-installed, or "clean" computer. 
 
-	>spoon pull spoonbrew/scratch
+	> spoon pull spoonbrew/scratch
 
 When the image has finished downloading, you will see `Pull complete` appear in the command prompt. 
 
-	>spoon pull spoonbrew/scratch
+	> spoon pull spoonbrew/scratch
 	Pulling scratch:master from spoonbrew
 	Pull complete
 
@@ -26,7 +26,7 @@ To create a new container, use the `spoon run` command. The `run` command will b
 
 For **spoonbrew/scratch**, the default startup file is **cmd.exe** (AKA "the command prompt"). We'll start our new container with a classic "Hello World!"
 
-	>spoon run -a spoonbrew/scratch echo Hello World!
+	> spoon run -a spoonbrew/scratch echo Hello World!
 
 You should see the following output: 
 
@@ -47,7 +47,7 @@ In this example, we'll run a container and create a new file within that contain
 
 To begin, create a new container with the run command. This time, we just want to start a command prompt without executing a command.
 
-	>spoon run spoonbrew/scratch
+	> spoon run spoonbrew/scratch
 
 You should see a new command prompt appear. This prompt is running in the container. 
 
@@ -65,12 +65,12 @@ Now, let's create a new directory in our container with the `mkdir` command. Thi
 
 Now, navigate to that directory. To create a simple text file, pipe the output of an `echo` command to a file name (the file will be created for you, if it doesn't already exist). 
 
-	(87ddvf54) C:\>cd C:\spoonroot
-	(87ddvf54) C:\spoonroot>echo Hello World! > hello.txt
+	(87ddvf54) C:\> cd C:\spoonroot
+	(87ddvf54) C:\spoonroot> echo Hello World! > hello.txt
 
 Finally, we'll close the command prompt, shutting down the container. 
 
-	(87ddvf54) C:\spoonroot>exit
+	(87ddvf54) C:\spoonroot> exit
 	87ddvf5455lp09xbenn71944c5dzzem5
 
 #### Commit Changes and Push
@@ -81,22 +81,22 @@ To do create an image from an existing container, use the `spoon commit` command
 
 First, let's remind ourselves of the ID of the last container we ran. We can do this with the `spoon ps -l` command, which will return the metadata for the last container created on the local machine.
 
-	>spoon ps -l
+	> spoon containers
 	ID            IMAGES                    COMMAND  CREATED
 	87ddvf5455lp  spoonbrew/scratch:master  cmd      7/31/2014 9:20:18 AM
 
 We can create a new image by from a container using the `spoon commit` command. The `commit` command takes two parameters: the ID of the container to commit, and the name for the new image you'd like to create. For this tutorial, we'll name the image hello-world.
 
-	>spoon commit 87ddv helloworld
+	> spoon commit 87ddv helloworld
 	Commiting container 87ddvf5455lp to helloworld:HEAD
 	Commit complete
 
 You can view the newly created image by running the `spoon images` command. This command returns a table listing all of the images present on the local machine.
 
-	>spoon images
+	> spoon images
 	NAME                      SIZE   CREATED
-	local/helloworld:master   0.1MB  7/31/2014 9:29:27 AM
-	spoonbrew/scratch:master  0.0MB  7/31/2014 9:20:26 AM
+	helloworld:head 		  0.1MB  7/31/2014 9:29:27 AM
+	spoonbrew/scratch:head 	  0.0MB  7/31/2014 9:20:26 AM
 
 We'll finish this tutorial by uploading the newly created image to the [Spoonium Hub](http://spoonium.net/hub). The Spoonium Hub functions similarly to a remote repository in Git – allowing your work to be accessed from any computer with access to the remote. All Spoonium accounts come with an unlimited number of public repositories. 
 
@@ -104,35 +104,23 @@ We'll finish this tutorial by uploading the newly created image to the [Spoonium
 
 To upload the **helloworld** image, use the `spoon push` command. 
 
-	>spoon push helloworld:head
+	> spoon push helloworld:head
 
 By default, images will be pushed to the user account of the logged-in user. 
 
-	>spoon push helloworld:head
+	> spoon push helloworld:head
 	Pushing image helloworld:head to spoonuser/helloworld
 
 When the image has finished uploading, `Push complete` will appear in the command prompt. 
 
-	>spoon push helloworld:head
+	> spoon push helloworld:head
 	Pushing image helloworld:head to spoonuser/helloworld
 	Push complete
 
-Once the `Push complete` message appears in your command prompt, the image is on the Spoonium Hub. You can view the image by going to http://spoonium.net/hub/<your username>/helloworld. 
+Once the `Push complete` message appears in your command prompt, the image is on the Spoonium Hub. You can view the image by going to http://spoonium.net/hub/[your username]/helloworld. 
 
 If your account did not already have an existing repository named `helloworld`, Spoonium automatically created one and added the image to it.
 
-The repository page on Spoonium serves as a complete version history of an image. If you're familiar with a `Git` remote repository, Spoonium is *very* similar. 
+The repository page on Spoonium serves as a complete version history of an image. If you're familiar with remote repositories in Git, Spoonium is *very* similar. 
 
 Public repositories are great for sharing work with others or for providing a quick and easy access point for colleagues, collaborators, or even end-users to download and access and run your project from. 
-
-## Next Steps 
-
-Now that you've completed the beginner tutorial, what next?
-
-To learn more about creating Spoonium containers, check out the [Building](http://spoonium.net/docs/build) section. This section goes into some more depth on the commands shown in this tutorial, as well as some of the more advanced commands available in Spoon. 
-
-For some practical examples, such as containerizing a Java or .NET project, go to the [Examples](http://spoonium.net/docs/samples) section of the docs. This section has tutorials and walkthroughs detailing many common use-cases for Spoonium. 
-
-We also encourage you to jump right in and try containerizing your own personal projects! 
-
-Enjoy!

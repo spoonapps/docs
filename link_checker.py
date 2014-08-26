@@ -1,7 +1,9 @@
 import sys, os, re
+from argparse import ArgumentParser
+from _classes import CommandLineArgs, MissingArgError
 from urllib2 import urlopen, HTTPError, URLError
 
-def check_links(directory):
+def check_links(directory, domain):
     link_regex = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")  #setup the regex
     for dirpath, sub_dirs, files in os.walk(directory):
         for _file in files:
@@ -13,7 +15,7 @@ def check_links(directory):
             for match in re.finditer(link_regex, text):
                 #form a url to make a request to
                 if is_internal(match.group(2)):
-                    link_text = "http://dev-stage.spoonium.net" + match.group(2)
+                    link_text = domain + match.group(2)
                 elif is_mailto(match.group(2)):
                     continue  #skip mail links
                 elif is_emptylink(match.group(2)):
@@ -53,7 +55,22 @@ def is_emptylink(link):
     else:
         return False
 
+def make_parser():
+    """creates an argument parser for the migration SCRIPT
+    """
+    parser = ArgumentParser()
+    parser.add_argument("--topic", action="store", default=None,
+                        help="the topic to link to")
+    return parser
+
 if __name__ == "__main__":
+    #setup directories
     script_dir = os.path.dirname(os.path.realpath(__file__))
     doc_dir = os.path.join(script_dir, "doc")
-    check_links(doc_dir)
+    #parse command line args
+    parser = ArgumentParser()
+    parser.add_argument("--domain", action="store", default="http://spoonium.net",
+                        help="the root domain to check relative links against")
+    args = CommandLineArgs()
+    parser.parse_args(namespace=args)
+    check_links(doc_dir, args.domain)

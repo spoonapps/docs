@@ -11,6 +11,9 @@ sections:
 - display_name: Try It
   ordering: 3
   pages: []
+- display_name: Next Steps
+  ordering: 4
+  pages: []
 ---
 display_name: About
 ordering: 2
