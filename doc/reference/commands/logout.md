@@ -1,4 +1,4 @@
-## logout
+### logout
 
 Logs the currently logged-in user out of the remote registry. 
 

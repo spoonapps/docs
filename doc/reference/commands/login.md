@@ -1,4 +1,4 @@
-## login
+### login
 
 The `login` command logs a user into a remote Spoon server. 
 

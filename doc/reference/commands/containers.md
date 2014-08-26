@@ -1,4 +1,4 @@
-## containers
+### containers
 
 The `containers` command lists all containers on the local machine.  
 

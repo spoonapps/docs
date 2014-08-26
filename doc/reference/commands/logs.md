@@ -1,4 +1,4 @@
-## logs
+### logs
 
 The `logs` command is most useful for **debugging**. If something goes (unexpectedly) wrong inside a running container, you can inspect any logs that Spoon recorded for that container with the `logs` command. 
 

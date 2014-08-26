@@ -1,4 +1,4 @@
-## import
+### import
 
 The `import` command is used to add Spoon images or non-Spoon file types from an arbitrary location on your local machine (or network) to your local registry.
 

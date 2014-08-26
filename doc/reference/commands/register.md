@@ -1,4 +1,4 @@
-## register
+### register
 
 The `register` command registers an image to the local desktop. 
 

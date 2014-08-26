@@ -1,4 +1,4 @@
-## search
+### search
 
 Search the remote server for images
 

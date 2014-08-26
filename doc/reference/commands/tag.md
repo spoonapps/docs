@@ -1,4 +1,4 @@
-## tag
+### tag
 
 The `tag` command applies a new tag to an image, or returns all the available tags for that image. 
 
