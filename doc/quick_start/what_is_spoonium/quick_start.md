@@ -6,12 +6,14 @@ Spoonium is a Windows containerization platform for developers and sysadmins to 
 
 Spoonium is a fast and easy way to build and ship unbreakable applications.
 
-With Spoonium, developers can deploy any application to any machine without installers, incompatibilities, or breaks. Packaging applications into containers with their dependencies ensures that applications run as intended wherever they go.
+With Spoonium, developers can deploy any application to any machine without installers, incompatibilities, or breaks. Packaging applications into containers with their dependencies ensures that applicati ons run as intended wherever they go.
 
 #### Made for QA
 Spoonium gives testers a unique way to efficiently test software and report bugs.
 
 By standardizing development and QA environments, containers make reproducing issues and patching bugs a cinch. Any unit or code-level integration tests can be executed within a container, ensuring the environment used in production is properly tested against. Manual testers can pull a container down to their local machine and test against a local copy of the application; they can even run the Spooned application side-by-side against an old version.
+
+Beyond that, Spoonium commands have a variety of uses for QA. For example, `Spoon revert` "turns back time" by reverting your container to a fresh image whenever you want to run a new test; you can even change the state of the app back to a specific point in time.
 
 For web applications, Spoonium also offers unlimited manual and automated browser testing. Read more about our [Browser Sandbox](http://spoonium.net/docs/test#ManualBrowserTesting), our [online Selenium Grid](http://spoonium.net/docs/test#SeleniumTesting), and our easy integration with [any CI environment](http://spoonium.net/docs/build#ContinuousIntegration).
 

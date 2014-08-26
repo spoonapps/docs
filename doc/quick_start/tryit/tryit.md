@@ -1,14 +1,10 @@
 ## Try It!
 
-### Run Your First Container
-
-We'll begin by pulling (downloading) an image from the Spoonium Hub.
-
 ### Pull an  Image
 
-Images are the building blocks for everything in Spoonium. They serve as a base (read-only) filesystem and registry that your application will use while running in a container. 
+We'll begin by pulling (downloading) an image from the Spoonium Hub. Images are the building blocks for everything in Spoonium. They serve as a base (read-only) filesystem and registry that your application will use while running in a container. 
 
-Because you don't have any images on your local machine yet, you'll need to pull one down from the remote registry at [http://spoonium.net/hub](http://spoonium.net/hub). We'll do this using the `spoon pull` command. 
+Because you don't have any images on your local machine yet, you'll need to pull one from the remote registry at [http://spoonium.net/hub](http://spoonium.net/hub). We'll do this using the `spoon pull` command. 
 
 The `pull` command takes a single parameter: the name of the image you want to pull from the remote registry. "Pull" is really just a fancy word for "copy." When an image is "pulled" from a remote registry, a copy of that image is downloaded to your local machine. 
 
@@ -129,7 +125,7 @@ The repository page on Spoonium serves as a complete version history of an image
 
 Public repositories are great for sharing work with others or for providing a quick and easy access point for colleagues, collaborators, or even end-users to download and access and run your project from. 
 
-## Next Steps
+## Next Steps 
 
 Now that you've completed the beginner tutorial, what next?
 

@@ -1,6 +1,6 @@
 ## Installation
 
-1. Install and run the [Spoonium Plugin](http://start.spoon.net/install). This will allow you to create, save, and ship application containers.
+1. Install and run the [Spoonium Plugin](http://start.spoon.net/install). This will allow you to create, save, use, and ship application containers.
 2. Create an account or log in.
 3. Open a new command prompt, type `spoon`, and hit Enter. The `Spoon IDE` help dialog should appear. Don't see the dialog? [Get help](http://support.spoonium.net).
 4. Log into the Spoonium Hub from the command prompt using your Spoonium username and password:
