@@ -52,10 +52,13 @@ For this example, we'll clone a small, standalone web server from this Github re
 In the containerized command prompt, `cd` to the root `C:\` folder and create a new `java` folder, if one does not already exist. 
 ```
 (08dd45e3) C:\Users\SpoonUser> cd C:\
+```
+
+```
 (08dd45e3) C:\> mkdir java
 ```
 
-Clone the project into the **C:\java** folder. 
+Clone the project into the **C:\\java** folder. 
 
 ```
 (08dd45e3) C:\> git clone https://github.com/rafaelsteil/simple-webserver C:\java
