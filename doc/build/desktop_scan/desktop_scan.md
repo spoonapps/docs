@@ -53,7 +53,7 @@ Images built with IDE can also be used with CLI and the hub.
 
 To enable logging for the desktop scan add the following registry key:
 
-  [HKEY_CURRENT_USER\Software\Code Systems\Spoon]
+  [HKEY\_CURRENT_USER\Software\Code Systems\Spoon]
   "TraceLevel"="Debug"
 
 Open [DebugView](http://technet.microsoft.com/en-us/sysinternals/bb896647.aspx) while running the Desktop Scan to view logging information.
