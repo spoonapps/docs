@@ -1,8 +1,8 @@
-## Building Images with the Snapshot Method
+## Snapshotting with IDE
 
 Many applications require combinations of filesystem and registry entries. To facilitate containerization of these applications, Spoon IDE can snapshot application installations and automatically configure them based on modifications made to the host system during setup.
 
-#### Process
+### Process
 
 Snapshots use before and after images of the host machine to determine configuration:
 
@@ -24,7 +24,7 @@ Complete the following steps to use the Snapshot feature:
 
 6. Review the filesystem and registry entries: also remove any files or settings which are not required for proper execution of your virtual application. Removing unused entries will reduce image size. Avoid accidental removal of required resources, as it will cause your image to no longer function properly.
 
-#### Capture Application Updates via Snapshot
+### Capture Application Updates via Snapshot
 
 Virtual application updates can be captured within IDE via snapshots.
 
@@ -44,7 +44,7 @@ This process only captures changes between the original executable and installed
 
 For more information on updating virtual applications using SVMs, refer to Create and Use Shared Virtual Components and Specify Additional SVMs for a Virtual Application.
 
-#### Best Practices
+### Best Practices
 
 - Performing the snapshot on a clean machine ensures that all dependencies are installed by the application setup. Installing on a machine with existing components can inadvertently include dependencies in the before snapshot and exclude them from the final output.
 

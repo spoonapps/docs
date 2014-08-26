@@ -1,6 +1,6 @@
 ## Working with Images
 
-#### Creating Images
+### Creating Images
 
 There are four ways to create an image:
 
@@ -9,13 +9,13 @@ There are four ways to create an image:
 3. Build images from XAPPL configuration files created with IDE
 4. Import and convert various file types to images
 
-**Commit a Container**
+#### Commit a Container
 
 If you have an existing container that you would like to create an image from, use the `spoon commit` command. Before committing a container check that it is stopped with `spoon containers`.
 
 See a more detailed example [here](http://spoonium.net/docs#containers).
 
-**Automatic Builds**
+#### Automatic Builds
 
 Images can be automatically built using a Spoon Script, which is a set of instructions that recreate the steps of configuring a container. See more information on [Spoon Script]() verbage and syntax.
 
@@ -49,7 +49,7 @@ NAME   TAG   ID            CREATED               SIZE
 7-zip  9.20  95sdf1245239  8/18/2014 2:21:32 PM  25.4MB
 ```
 
-**Building from a XAPPL File**
+#### Building from a XAPPL File
 
 XAPPL files are static configuration files originally created using IDE that specify the files, registry keys, and virtual machine settings for an image. The CLI can also build images based on XAPPL configuration files using `spoon build` command.
 
@@ -58,7 +58,7 @@ XAPPL files are static configuration files originally created using IDE that spe
 > spoon build -n=firefox:30 C:\path\to\firefox30.xappl
 ```
 
-**Import**
+#### Import
 
 If you have an existing image (file type `.svm`) on your local machine or a network drive (perhaps built with IDE or a legacy version of Spoon Studio), you can import it to your local registry.
 
@@ -84,7 +84,7 @@ Use the appropriate file type parameter:
 > spoon import thinapp <path to package.ini> 
 ```
 
-#### Forking, Renaming, and Tagging
+### Forking, Renaming, and Tagging
 
 Images can be forked using the `spoon fork` command. This creates a link to the specified image with a new name and tag. It does not affect the original image.
 
@@ -123,7 +123,7 @@ account/image   head 14wed2165141  8/18/2014 1:55:23 PM  1.9MB
 tester/test1    2.0  14wed2165141  8/18/2014 1:55:23 PM  1.9MB
 ```
 
-#### Push to a Remote Repository
+### Push to a Remote Repository
 
 Images in a local registry can be copied to a remote repository on the [hub](http://spoonium.net/hub) with the `spoon push` command to make your images available to your team members, end-users, or the public.
 

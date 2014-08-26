@@ -9,7 +9,7 @@ With Spoonium no installed dependencies are required on the CI server. All depen
 
 The basic steps for integrating Spoonium into a CI server are to create a Spoon Script, integrate it into an automated build on a CI server, and finally run and test the container.
 
-#### Create Spoon Script
+### Create Spoon Script
 
 The Spoon Script contains all the steps necessary to build the container.
 
@@ -27,7 +27,7 @@ CMD cd c:\root\server & npm install
 
 Save your script as a `.me` file. See the [Spoon Script reference](/docs/reference#SpoonScripts) for more information on Spoon Script script instructions.
 
-#### Integrate into the CI server
+### Integrate into the CI server
 
 The next step is to configure an automated build on the CI server that will execute the Spoon Script and create an image.  You'll need to configure the necessary triggers, schedules, notifications, etc., which will vary between CI servers.
 
@@ -48,7 +48,7 @@ Rather than exporting the image to the host system, you can also `spoon push` th
 
 See the [Command Line Interface](/docs/reference#command+line) page for more information on `spoon` commands.
 
-#### Run the container
+### Run the container
 
 ```
 # First import the image to your local registry

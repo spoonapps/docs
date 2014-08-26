@@ -1,8 +1,6 @@
-## Building Images with Desktop Scan
+## Desktop Scan with IDE
 
-IDE can build images from locally installed applications.
-
-#### Running the Desktop Scan
+### Running a Desktop Scan
 
 1. Open the Configuration Wizard from the **Virtual Application** tab.
 
@@ -35,7 +33,7 @@ Images built with IDE can also be used with CLI and the hub.
     # Push it to the hub
     > spoon push desktopapp
 
-#### Best Practices
+### Best Practices
 
 - Users should run the desktop scan on the oldest operating system version available. For example, if users use both Windows XP and Windows 7, it is advised to run the desktop scan on the Windows XP machine.
 
@@ -49,7 +47,7 @@ Images built with IDE can also be used with CLI and the hub.
 
 - When using the desktop scan with browsers, ensure that any plugins that are installed outside the browser, such as Windows Media Player, are already installed when the scan is run. This is important because some plugins are installed using the msiexec.exe process and won't be recognized within the virtualized browser. Plugins that are installed from within the browser, such as Adobe Flash, do not have this problem.
 
-#### Troubleshooting
+### Troubleshooting
 
 To enable logging for the desktop scan add the following registry key:
 

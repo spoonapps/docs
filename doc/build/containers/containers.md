@@ -1,4 +1,6 @@
-## Creating Containers
+## Working with Containers
+
+### Creating Containers
 
 The `spoon run` command creates new containers. It has 2 required parameters:
 
