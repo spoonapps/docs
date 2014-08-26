@@ -1,4 +1,4 @@
-## disable
+### disable
 
 	disable <vm setting>
 

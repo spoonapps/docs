@@ -1,4 +1,4 @@
-## cmd
+### cmd
 
 The `cmd` instruction can be used either: 
 

@@ -68,7 +68,7 @@ The server can now be run from within the container.
 (08dd45e3) > java -jar C:\java\SimpleWebServer.jar
 ```
 
-The server is now running on port 80 of your local machine. To confirm the server is running, open a web browser and visit **http://localhost** -- you should see a listing of all the files in the **C:\java** folder of the container. 
+The server is now running on port 80 of your local machine. To confirm the server is running, open a web browser and visit **http://localhost** -- you should see a listing of all the files in the **C:\\java** folder of the container. 
 
 #### Create an Image
 

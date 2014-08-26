@@ -22,7 +22,7 @@ A **.xappl** file is an XML file that contains all of the filesystem and registr
 
 Any command line flags that correspond to a Spoonscript instruction (such as the `-e` flag and the `ENV` instruction), will be overriden by their corresponding instruction, if they conflict. 
 
-##### Environment Variables
+**Environment Variables**
 
 Environment variables can be added to the container through the `-e`, `--env`, or `--env-file` flags. These environment variables are initialized at container creation, and thus may be overridden by variables created with the `ENV` instruction in the build script. 
 
@@ -57,11 +57,9 @@ where **env-vars.txt** has the contents:
 
 If these flags conflict with one another, the "last one" wins. That is, whichever flag was processed last by the Spoon IDE will override any previously set values for that variable. 
 
-##### Naming and Tagging Builds
+**Naming and Tagging Builds**
 
 Builds can be named with the `-n` or `--name` flag. A tag can be optionally included in the value for this flag. If a tag is not provided, the default tag of `master` will be applied. 
-
-**Example usage**
 
 	> spoon build -n=my-new-image C:\spoon.me
 
@@ -71,15 +69,11 @@ Creates an image with name and tag `my-new-image:master`.
 
 Creates an image with name and tag 'my-new-image:`1.0`.
 
-##### Using a Legacy Spoon VM
-
 By default, the `build` command will create the intermediate container and output image using the latest version of the **Spoon VM**. To use a legacy version, specify the version number you wish to use with the `--xvm` flag. 
 
 For example, the following command builds an image using version 11.6.205 of the Spoon VM. 
 
 	> spoon build --xvm=11.6.205 C:\spoon.me 
-
-##### Working Directory
 
 The working directory inside the container can be specified with the `-w` or `--working-dir` flags. This flag may be overridden by any `WORKDIR` instructions in the container. 
 
