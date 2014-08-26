@@ -27,11 +27,13 @@ If you're already using Grid to run your tests, configuring your tests for Spoon
 
 In your web browser, click the **Start Grid** button in the top-left corner of the page. A buffering dialog will appear on your desktop. When the buffering dialog completes, check the **Hub** window on the page. When the Spoonium hub is ready, this output will appear in the window: 
 
-	Jun 26, 2014 3:21:23 PM org.openqa.grid.selenium.GridLauncher main
-	INFO: Launching a selenium grid server
-	2014-06-26 15:21:24.064:INFO:osjs.Server:jetty-7.x.y-SNAPSHOT
-	2014-06-26 15:21:24.088:INFO:osjsh.ContextHandler:started o.s.j.s.ServletContextHandler{/,null}
-	2014-06-26 15:21:24.094:INFO:osjs.AbstractConnector:Started SocketConnector@0.0.0.0:4444
+```
+Jun 26, 2014 3:21:23 PM org.openqa.grid.selenium.GridLauncher main
+INFO: Launching a selenium grid server
+2014-06-26 15:21:24.064:INFO:osjs.Server:jetty-7.x.y-SNAPSHOT
+2014-06-26 15:21:24.088:INFO:osjsh.ContextHandler:started o.s.j.s.ServletContextHandler{/,null}
+2014-06-26 15:21:24.094:INFO:osjs.AbstractConnector:Started SocketConnector@0.0.0.0:4444
+```
 
 #### Adapting Your Test
 
@@ -45,81 +47,105 @@ Below, we've included approximate comparisons of the driver setup for a test usi
 
 Using FirefoxDriver:
 
-	import org.openqa.selenium.firefox.FirefoxDriver;
+```java
+import org.openqa.selenium.firefox.FirefoxDriver;
 
-	WebDriver driver = new FirefoxDriver();
+WebDriver driver = new FirefoxDriver();
+```
 
 Adapted for Spoonium:
 
-	import org.openqa.selenium.remote.DesiredCapabilities;
-	import org.openqa.selenium.remote.RemoteWebDriver
+```java
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver
 
-	DesiredCapabilities caps = DesiredCapabilities.firefox();
-	WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), caps);
+DesiredCapabilities caps = DesiredCapabilities.firefox();
+WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), caps);
+```
 
 **C#**
 
 Using FirefoxDriver:
 
-	using OpenQA.Selenium.Firefox;
+```csharp
+using OpenQA.Selenium.Firefox;
 
-	IWebDriver driver = new FirefoxDriver();
+IWebDriver driver = new FirefoxDriver();
+```
 
 Adapted for Spoonium:
 
-	using OpenQA.Selenium.Remote;
+```csharp
+using OpenQA.Selenium.Remote;
 
-	ICapabilities caps = DesiredCapabilities.Firefox();
-	IWebDriver driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), caps);
+ICapabilities caps = DesiredCapabilities.Firefox();
+IWebDriver driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), caps);
+```
 
 **Python**
 
 Using FirefoxDriver
 
-	from selenium import webdriver
+```python
+from selenium import webdriver
 
-	driver = webdriver.Firefox()
+driver = webdriver.Firefox()
+```
 
 Adapted for Spoonium: 
 
-	from selenium import webdriver
-	from selenium import webdriver.common
+```python
+from selenium import webdriver
+from selenium import webdriver.common
 
-	caps = desired_capabilities.FIREFOX
-	driver = webdriver.Remote(command_executor="http://localhost:4444/wd/hub", desired_capabilities=caps)
+caps = desired_capabilities.FIREFOX
+driver = webdriver.Remote(command_executor="http://localhost:4444/wd/hub", desired_capabilities=caps)
+```
 
 #### Choosing a Browser to Test
 
 The Spoonium Hub determines which browser you would like to test against using the `DesiredCapabilities` of the `RemoteWebDriver` that your test uses. 
 
 All of the major language bindings have a `DesiredCapabilities` (or `desired_capabilities` in the case of Python) class that have attributes for each browser. Change this attribute to change the browser the test will run against.
-	
-	#JAVA
-	DesiredCapabilities.firefox(); 				#Java
-	DesiredCapabilities.chrome();				#Google Chrome
-	DesiredCapabilities.ie();					#Internet Explorer
-	 
-	# C-SHARP
-	DesiredCapabilities.Firefox();  
-	DesiredCapabilities.Chrome();
-	DesiredCapabilities.InternetExplorer();
 
-	# PYTHON
-	desired_capabilities.FIREFOX
-	desired_capabilities.CHROME
-	desired_capabilities.INTERNETEXPLORER
-	
+```java	
+//Java
+DesiredCapabilities.firefox(); 				//Mozilla Firefox
+DesiredCapabilities.chrome();				//Google Chrome
+DesiredCapabilities.ie();					//Internet Explorer
+```
+
+```csharp
+//C#
+DesiredCapabilities.Firefox();  
+DesiredCapabilities.Chrome();
+DesiredCapabilities.InternetExplorer();
+```
+
+```python
+# Python
+desired_capabilities.FIREFOX
+desired_capabilities.CHROME
+desired_capabilities.INTERNETEXPLORER
+```
+
 To specify a version to test against, pass a `version` capability into the `DesiredCapabilities` object using a property setter or a `setCapability`/`SetCapability` instance method. 
 
-	#JAVA
-	capabilities.setCapability("version", "30");		#test against version 30
+```java
+//Java
+capabilities.setCapability("version", "30");		//test against version 30
+```
 
-	#C-SHARP
-	capabilities.SetCapability("version", "30");
+```csharp
+//C#
+capabilities.SetCapability("version", "30");
+```
 
 In Python, you can modify the `desired_capabilities` just like a dictionary: 
 
-	capabilities['version'] = '30'
+```python
+capabilities['version'] = '30'
+```
 
 #### Adapting Tests from Other Services
 

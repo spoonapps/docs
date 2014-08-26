@@ -2,23 +2,27 @@
 
 For this project, we'll need .NET 4.0. The Spoonium team has published a suite of .NET images in the **spoonbrew** user account. To pull the .NET 4 image, run the following command: 
 
-	> spoon pull spoonbrew/dotNet:4.0
+```
+> spoon pull spoonbrew/dotNet:4.0
+```
 
 To build the image, we'll construct a Spoon script. The script should take the compiled Server executable, along with any DLLs, copy them into a new container, and build an image from this container. Below is the **spoon.me** file for the example project used in this tutorial. 
 
 Begin by creating an empty text file named **spoon.me** in the project's root directory.
 
-	#should use the relevant version of .NET
-	FROM spoonbrew/dotNet:4.0.3
+```
+#should use the relevant version of .NET
+FROM spoonbrew/dotNet:4.0.3
 
-	#make a new directory in the container for build outputs
-	cmd mkdir C:\server
+#make a new directory in the container for build outputs
+cmd mkdir C:\server
 
-	#copy files from build output 
-	cmd robocopy %CD%\bin\Release C:\server
+#copy files from build output 
+cmd robocopy %CD%\bin\Release C:\server
 
-	#set the startup file for the image to the executable
-	boot file %CD%\OwinHelloWorld.exe
+#set the startup file for the image to the executable
+boot file %CD%\OwinHelloWorld.exe
+```
 
 #### Integrate with MSBuild
 
@@ -32,6 +36,8 @@ To add a Post-build event, right-click on your project in Visual Studio and sele
 
 In the **Post-build event command line** box, add the line: 
 
-	spoon build -n=$(SolutionName) $(SolutionDir)\spoon.me
+```
+spoon build -n=$(SolutionName) $(SolutionDir)\spoon.me
+```
 
 **Note**: For solutions with multiple projects, we recommend only triggering a post-build event for the last project in the build chain. This may require customizing your Spoon script to also pull in the build outputs from these other projects. 

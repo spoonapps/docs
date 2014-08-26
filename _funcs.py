@@ -23,7 +23,7 @@ def process_markdown_file(markdown_file):
     #convert to html
     with open(markdown_file, 'r') as f:
         text = f.read()
-    return markdown(text, extras=['wiki-tables'])
+    return markdown(text, extras=['wiki-tables', 'fenced-code-blocks'])
 
 
 def process_html_for_spoonium(html):

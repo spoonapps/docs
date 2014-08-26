@@ -5,7 +5,9 @@
 3. Open a new command prompt, type `spoon`, and hit Enter. The help dialog should appear. Don't see the dialog? [Get help](http://support.spoonium.net).
 4. Log into the Spoonium Hub from the command prompt using your Spoonium username and password:
 
-    	> spoon login username password
-    	Logged in as username
+```Batchfile
+> spoon login username password
+Logged in as username	
+```
 
 5. You're ready to go! [Click here](/docs/quick+start#try+it) to move to our beginner's tutorial, where you'll pull an image, create a container, commit changes, and push to the [Spoonium Hub](http://spoonium.net/hub).

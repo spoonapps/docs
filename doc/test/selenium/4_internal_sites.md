@@ -10,12 +10,15 @@ Below is some example code demonstrating how you would run your test against an 
 
 **Java**
 
-	driver.navigate().to("http://my-internal-server:8080");
+```java
+//Java
+driver.navigate().to("http://my-internal-server:8080");
+```
 
-**C#** 
+```csharp
+driver.Navigate().GoToUrl("http://my-internal-server:8080");
+```
 
-	driver.Navigate().GoToUrl("http://my-internal-server:8080");
-
-**Python**
-
-	driver.get("http://my-internal-server:8080")
+```python
+driver.get("http://my-internal-server:8080")
+```

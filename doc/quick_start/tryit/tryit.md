@@ -14,9 +14,11 @@ Let's start simple by pulling the **spoonbrew/scratch** image. This image is com
 
 When the image has finished downloading, you will see `Pull complete` appear in the command prompt. 
 
-	> spoon pull spoonbrew/scratch
-	Pulling scratch:master from spoonbrew
-	Pull complete
+```Batchfile
+> spoon pull spoonbrew/scratch
+Pulling scratch:master from spoonbrew
+Pull complete
+```
 
 **Note**: The **spoonbrew** user account is maintained by the staff at Spoon. It provides a number of pre-configured images for popular runtimes, frameworks, and tools such as .NET, Java, and NodeJS. 
 

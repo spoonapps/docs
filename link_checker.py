@@ -55,14 +55,6 @@ def is_emptylink(link):
     else:
         return False
 
-def make_parser():
-    """creates an argument parser for the migration SCRIPT
-    """
-    parser = ArgumentParser()
-    parser.add_argument("--topic", action="store", default=None,
-                        help="the topic to link to")
-    return parser
-
 if __name__ == "__main__":
     #setup directories
     script_dir = os.path.dirname(os.path.realpath(__file__))

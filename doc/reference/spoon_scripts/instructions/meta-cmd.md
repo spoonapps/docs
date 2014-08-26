@@ -1,6 +1,8 @@
 ## meta
 
-	meta <name> <value>
+```
+meta <name> <value>
+```
 
 The `meta` instruction sets container metadata value. Standard metadata properties are listed below:
 

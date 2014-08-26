@@ -8,17 +8,21 @@ The `spoon run` command creates new containers. It has 2 required parameters:
 
 Launch a command window in a new container with scratch as the base image:
 
-    > spoon run spoonbrew/scratch cmd.exe
+```
+> spoon run spoonbrew/scratch cmd.exe
+```
 
 Operations executed in the new command window are applied to the container, not the host system.
 
 To avoid confusion, the prompt is prepended by the first 8 characters of the container ID when a command window is running in a container.
 
-    # Host command window
-	> spoon run spoonbrew/scratch
-	
-    # Container command window
-	(8dpp9eb5) >
+```
+# Host command window
+> spoon run spoonbrew/scratch
+
+# Container command window
+(8dpp9eb5) >
+```
 
 Edit and modify the container's virtual filesystem and registry using the same command-line interfaces available in Windows Command Prompt.
 
@@ -34,7 +38,9 @@ You can also explicitly shut down a container from a command window running in t
 
 Restart a closed container with the `spoon start` command and specify the container ID.
 
-    > spoon start 8dpp9eb5
+```
+> spoon start 8dpp9eb5
+```
 
 The container is restarted and launches the same startup command specified in the original `spoon run` command.
 
@@ -42,11 +48,13 @@ The container is restarted and launches the same startup command specified in th
 
 Containers can be tracked and managed through the `spoon containers` command.
 
-	> spoon containers
+```
+> spoon containers
 
-	ID           IMAGES              COMMAND       CREATED          STATUS
-	03bddd8bef   spoonbrew/scratch   cmd           8/14/2014 1:03   Running
-	52hd888xa3   local/server-app    startup.bat   8/14/2014 1:00   Stopped
+ID           IMAGES              COMMAND       CREATED          STATUS
+03bddd8bef   spoonbrew/scratch   cmd           8/14/2014 1:03   Running
+52hd888xa3   local/server-app    startup.bat   8/14/2014 1:00   Stopped
+```
 
 This produces a tabular output listing the container IDs, creation dates, base images, and commands.
 
@@ -58,8 +66,10 @@ To view the running processes in a given container, execute `spoon top <id of th
 
 Remove a container with the `spoon rm` command:
 
-    # Specify a container ID
-    > spoon rm 03bddd8bef
+```
+# Specify a container ID
+> spoon rm 03bddd8bef
+```
 
 Since CLI uses prefix-matching to find the container, you only need to specify the first 4-5 characters of the container ID.
 
@@ -69,12 +79,16 @@ Specifying the `-a` flag removes all containers from the local registry with the
 
 If your container unexpectedly crashes, specify the `--diagnostic` flag to enable **diagnostic mode** for a container.
 
-	> spoon run --diagnostic <image> <command>
+```
+> spoon run --diagnostic <image> <command>
+```
 
 Diagnostic mode containers will produce *debugging logs*.
 
-    # Fetch the logs
-    > spoon logs
+```
+# Fetch the logs
+> spoon logs
+```
 
 This command also returns logs of all the standard streams (`STDIN`, `STDOUT`, `STDERR`) for the specified container.
 
@@ -86,8 +100,10 @@ Changes to a container's filesystem and registry can be viewed with the `spoon d
 
 To create a new image from a container, save it using `spoon commit`.
 
-    # Specify the container ID and a name for the new image
-    > spoon commit 52hd888xa3 test
+```
+# Specify the container ID and a name for the new image
+> spoon commit 52hd888xa3 test
+```
 
 By default, the `commit` command merges sandbox changes with the base images and builds a new image from these merged layers. Specifying the "--no-base" option builds a new image of the sandbox changes without merging the base images.
 

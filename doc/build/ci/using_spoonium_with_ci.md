@@ -13,15 +13,17 @@ The basic steps for integrating Spoonium into a CI server are to create a Spoon 
 
 The Spoon Script contains all the steps necessary to build the container.
 
-    # Creates a new container from the specified images
-    FROM spoonbrew/node spoonbrew/git
-    
-    # Clone a project in the container
-    CMD mkdir c:\root
-    CMD git clone https://github.com/project/repo c:\root
-    
-    #  Install Node.js depencies 
-    CMD cd c:\root\server & npm install
+```
+# Creates a new container from the specified images
+FROM spoonbrew/node spoonbrew/git
+
+# Clone a project in the container
+CMD mkdir c:\root
+CMD git clone https://github.com/project/repo c:\root
+
+#  Install Node.js depencies 
+CMD cd c:\root\server & npm install
+```
 
 Save your script as a `.me` file. See the [Spoon Script reference](/docs/reference#SpoonScripts) for more information on Spoon Script script instructions.
 
@@ -31,28 +33,34 @@ The next step is to configure an automated build on the CI server that will exec
 
 Now add the follow commands to your automated CI build script:
 
-    # Log in if images from a hub repository are specified
-    spoon login <username> <password>
-    
-    # Execute the Spoon Script and build a new image
-    spoon build -n=<name> C:\path\to\spoon.me
-    
-    # Export the image to a location on the host system
-    spoon export <name> c:\root\image.svm
-    
+```
+# Log in if images from a hub repository are specified
+spoon login <username> <password>
+
+# Execute the Spoon Script and build a new image
+spoon build -n=<name> C:\path\to\spoon.me
+
+# Export the image to a location on the host system
+spoon export <name> c:\root\image.svm
+```
+
 Rather than exporting the image to the host system, you can also `spoon push` the image to the hub where other users could pull it down and test.
 
-See the [Command Line Interface](/docs/reference#CommandLine) page for more information on `spoon` commands.
+See the [Command Line Interface](/docs/reference#command+line) page for more information on `spoon` commands.
 
 #### Run the container
 
-    # First import the image to your local registry
-    > spoon import -n=<name> C:\root\image.svm
-    
-    # Run the image
-    > spoon run <name> <command>
+```
+# First import the image to your local registry
+> spoon import -n=<name> C:\root\image.svm
+
+# Run the image
+> spoon run <name> <command>
+```
 
 If you alternately pushed to the hub then use these commands to pull and run:
 
-    > spoon pull <account name>/<name>
-    > spoon run <account name>/<name> <command>
+```
+> spoon pull <account name>/<name>
+> spoon run <account name>/<name> <command>
+```

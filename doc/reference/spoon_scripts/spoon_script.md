@@ -30,6 +30,8 @@ Comments are denoted by the `#` character.
 
 Comments cannot be made inline with a command. Comments must be specified at the beginning of a line. 
 
-	#this is a valid comment
+```
+#this is a valid comment
 
-	from spoonbrew/node  #this is not a valid comment
+from spoonbrew/node  #this is not a valid comment
+```

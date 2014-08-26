@@ -31,50 +31,56 @@ Mochify also has a dependency for `browserify`, which can also be installed thro
 
 If you are using a **packages.json** file to manage your project's dependencies, add `mocha` and `mochify` to the `devDependencies` section of the file. 
 
-	"devDependencies": {
-		"mocha": "*",
-		"mochify": "*",
-		"browserify": "*"
-	}
+```json
+"devDependencies": {
+	"mocha": "*",
+	"mochify": "*",
+	"browserify": "*"
+}
+```
 
 Create a new `.min-wd` file in your project's root directory. Start by copying the JSON, below into this file: 
 
-	{
-	  "hostname"  : "localhost",
-	  "port"      : 4444,
-	  "browsers"  : [{
-	    "name"    : "internet explorer",
-	    "version" : "9"
-	  }, {
-	    "name"    : "chrome"
-	  }, {
-	    "name"    : "firefox"
-	  }]
-	}
+```json
+{
+  "hostname"  : "localhost",
+  "port"      : 4444,
+  "browsers"  : [{
+    "name"    : "internet explorer",
+    "version" : "9"
+  }, {
+    "name"    : "chrome"
+  }, {
+    "name"    : "firefox"
+  }]
+}
+```
 
 You can configure which browsers to test in the `browsers` node. If a version is not specified, Spoonium will by default use the most recent version of that browser.
 
 To add additional browsers, add another entry to the `browsers` array. For example, in the below example file we've added Firefox 26 and Chrome 34 as additional browsers to test on. 
 
-	{
-	  "hostname"  : "localhost",
-	  "port"      : 4444,
-	  "browsers"  : [{
-	    "name"    : "internet explorer",
-	    "version" : "9"
-	  }, {
-	    "name"    : "chrome"
-	  }, {
-	    "name"    : "firefox"
-	  }, {
-	    "name"      : "firefox",
-	    "version" : "26"
-	  },
-	     {
-	    "name"      : "chrome",
-	    "version" : "34"
-	  }]
-	}
+```json
+{
+  "hostname"  : "localhost",
+  "port"      : 4444,
+  "browsers"  : [{
+    "name"    : "internet explorer",
+    "version" : "9"
+  }, {
+    "name"    : "chrome"
+  }, {
+    "name"    : "firefox"
+  }, {
+    "name"      : "firefox",
+    "version" : "26"
+  },
+     {
+    "name"      : "chrome",
+    "version" : "34"
+  }]
+}
+```
 
 #### Run Tests
 
