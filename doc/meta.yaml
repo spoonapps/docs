@@ -72,14 +72,17 @@ sections:
 - display_name: Working with Images
   ordering: 2
   pages: []
-- display_name: Snapshotting with IDE
+- display_name: Working with IDE
   ordering: 3
   pages: []
 - display_name: Desktop Scan with IDE
   ordering: 4
   pages: []
-- display_name: Continuous Integration
+- display_name: Snapshotting with IDE
   ordering: 5
+  pages: []
+- display_name: Continuous Integration
+  ordering: 6
   pages: []
 ---
 display_name: Test
