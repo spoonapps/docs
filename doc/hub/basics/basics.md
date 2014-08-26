@@ -1,8 +1,6 @@
 ## Account Basics
 
-You can sign up for a Spoonium account with any valid email address [here](https://spoon.net/sso/spoonium.net/register). 
-
-[Spoon.net](http://spoon.net) users can use their existing account on the Spoonium Hub. 
+[Sign up](http://spoon.net/sso/spoonium.net/register) for a Spoonium account, or log in with your existing [Spoon.net](http://spoon.net) account information.
 
 If you can't access your account, you can reset your password from the [password reset form](http://spoon.net/password-reset). 
 
