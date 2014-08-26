@@ -1,4 +1,4 @@
-## Settings
+## VM Settings
 
 The behaviour of containers and images can be modified by changing **Spoon VM** settings.
 

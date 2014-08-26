@@ -151,6 +151,12 @@ sections:
 - display_name: XAPPL
   ordering: 4
   pages: []
-- display_name: VM Settings
+- display_name: Virtual Application Settings
   ordering: 5
+  pages: []
+- display_name: MSI Settings
+  ordering: 6
+  pages: []
+- display_name: VM Settings
+  ordering: 7
   pages: []
