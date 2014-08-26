@@ -1,3 +1,5 @@
+## Command Line
+
 ### help
 
 To list available commands, either run `spoon` without parameters
