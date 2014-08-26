@@ -32,12 +32,13 @@ The build folder will also contain a new "docs.html" file in the root of the /bu
 
 When contributing to the docs on Spoonium, please take the following style guidelines into consideration. 
 
-1. Only 1 `h2` should be specified in each `.md` file. This is used to populate the sidenav bar.
-2. When mocking the command prompt, start the "input" line with a > and a space before the command. See example, below
+1. When mocking the command prompt, start the "input" line with a > and a space before the command. See example, below
 
-Input: `> spoon build -n="my image" /path/to/spoon.me`
+	**Input**: `> spoon build -n="my image" /path/to/spoon.me`
 
-Output: `building "my image" from /path/to/spoon.me`
+	**Output**: `building "my image" from /path/to/spoon.me`
+
+2. 
 
 ### Contributing 
 
@@ -72,12 +73,11 @@ Each document in the yaml file specifies a topic that will appear in the top nav
 
 1. A `display_name`. This is the actual wording that will appear in the top nav bar
 2. An `ordering`. This is the order, left-to-right, that the topic will appear in the nav bar, relative to all other topics. 
-3. A `link`. This is the initial section that will be shown when a user clicks on a topic, without selecting a section from the dropdown. 
 4. A list of `sections`. This list is used to populate the topic's dropdown. 
 
 Each topic has an attribute for a list of containing `sections`. Each section must have the following attributes: 
 
-1. A `display_name`. This will be the text that appears for that section in the containing topic's dropdown. The `display_name` is also used as the basis for forming that section's `id` on **docs.html**. The `id` for a section is the `display_name` with whitespace removed appended to the text "cmdTabContent".
+1. A `display_name`. This will be the text that appears for that section in the containing topic's dropdown. The `display_name` is also used as the basis for forming that section's `id` on **docs.html**. The `id` for a section is the `display_name` with spaces translated to '+' and with all special characters (except '?', which is trimmed out) encoded. 
 2. An `ordering`. This is the ordering, relative to the other sections in the containing topic, that this section will appear, top-to-bottom, in the topic dropdown. 
 3. A list of `pages`. Should always be an empty list in the **meta.yaml** file. 
 
@@ -86,26 +86,27 @@ Each topic has an attribute for a list of containing `sections`. Each section mu
 Each subdirectory of the /doc folder must be populated with a `meta.md` file. This file tells the build script which section to add any pages in that folder to (appended to the `pages` list attribute of a `section`). The `meta.md` does **not** apply to subdirectories. A **meta.md** file must have the following structure: 
 
 	---
+	topic: <display_name of topic>
 	section: <display_name of section>
 	---
 
 Take, for example, the **/doc/basics/about/meta.md** file. This file tells the build script to place any files in this directory in the *Basics > About Spoonium* section of the docs.  
 
-If a **meta.md** file specifies a `section` that is not listed in the **meta.yaml** file, the script will raise a `NoSuchSectionError`. 
+If a **meta.md** file specifies a `section` that is not listed in topic specified, the script will raise a `NoSuchSectionError`. 
 
 If the folder has doc in it and there is no **meta.md** file, a `NoMetaFileError` will be raised. 
 
-## The docs.html Page
+## Generating Root Pages
 
-This page is built from a `Jinja2` template - **docs_temp.html** located in the /templates folder. 
+Each `topic` gets its own, top-level page (i.e. /docs/[topic])
 
 This template only controls the creation of the navbar and populates the page's list of all the docs pages. To modify the header or footer of the page, edit **/templates/head.html** or **/templates/footer.html**, respectively. 
 
-You may notice that there's some `EJS` templating sprinkled into the page. 
+You may notice that there's some `EJS` templating sprinkled into the page. The Spoonium website runs on `NodeJS` and uses `EJS` templating to abstract out some resources. These resources are not held in this repository. 
 
-The Spoonium website runs on `NodeJS` and uses `EJS` templating to abstract out some resources. These resources are not held in this repository. 
+## Tools
 
-## The Migration Tool
+#### Migration Tool -- migrate.py
 
 If you want to change the `display_name` of a topic or section, use the migration tool -- migrate.py. This will take care of all the internal dependencies for you. 
 
@@ -115,14 +116,19 @@ The script takes 3 parameters:
 2. The current display_name of the topic/section
 3. The name to change the topic/section to
 
-USAGE: `python migrate.py --type topic --current <current name> --to <new name>`
+USAGE: `python migrate.py --topic <topic> --section <section> --to <new name>`
 
-A topic migration will really just change the name in the **meta.yaml** file. 
+If a `section` is not specified, a topic migration will be performed, only changing the name (and internal references) for the topic. 
+If a `topic` and a `section` are specified, a section migration will be performed. The name of the topic will not change, but the name of the section, along with all internal references to that section, will be changed. 
 
-A section migration will: 
+#### Link Generator -- get_link.py
 
-1. Change the section display_name in **meta.yaml**
-2. Traverse the /docs dir and find any **meta.md** files with the old display_name, and change them appropriately
-3. Change the topic link, if it was for the migrated section
+Creates an internal link for use in the documentation. If you want to link to another topic/section, use this tool to generate a link for you to use.
 
+USAGE: `python get_link.py --topic <topic> --section <section>`
 
+#### Link Checker -- link_checker.py
+
+Goes through all the docs in the /doc folder and checks all the links to make sure they are valid. 
+
+USAGE: `python link_checker.py`

@@ -25,8 +25,10 @@ def check_links(directory):
                 try:
                     url_return = urlopen(link_text)
                     status_code = url_return.getcode()
-                except (HTTPError, URLError, ValueError):
+                except HTTPError:
                     status_code = 404
+                except (URLError, ValueError):
+                    status_code = 690
                 #record errors
                 if status_code == 200:
                     continue  #don't cause alarm
