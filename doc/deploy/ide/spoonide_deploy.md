@@ -14,11 +14,11 @@ SVMs can be deployed directly to Spoon.net or a Spoon Server using the **Publish
 
 #### EXE Output
 
-Standalone executables are portable containers that can be deployed to any desktop. This is a popular deployment option for organizations that have an existing endpoint management solution like LANDesk Management Suite &reg;, Microsoft System Center Configuration Manager, or Novell ZENworks. 
+Standalone executables are portable containers that can be deployed to any desktop. This is a popular deployment option for organizations that have an existing endpoint management solution like LANDesk Management Suite &reg;, Microsoft System Center, or Novell ZENworks. 
 
 Executables can be deployed directly to the users device or to a network share. To output an executable, set the **Project Type** to **Application** in the IDE.  
 
 #### MSI Output
 
-MSI outputs simply wrap the portable container into an MSI package to add support for shell integrations such as file associations, Start Menu shortcuts and ProgIds. MSIs are a common deployment option for organizations that are using Admin Studio or for integrating with existing desktop management solutions. To build and MSI, go to the **Setup** section, enter the MSI details and click **Build MSI**.
+MSI outputs simply wrap the portable container into an MSI package to add support for shell integrations such as file associations, Start Menu shortcuts and ProgIds. MSIs are a common deployment option for organizations that are using Admin Studio or for integrating with existing desktop management solutions. To build an MSI, go to the **Setup** section of the IDE, enter the MSI details and click **Build MSI**.
  
