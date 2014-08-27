@@ -1,14 +1,13 @@
 ## Command Line
+
+The Spoon command line tool is accessible from the Windows command prompt using the `spoon` or `spn` command. 
+
 ### help
 
-To list available commands, either run `spoon` without parameters
+To list the available commands in Spoon, execute spoon without parameters. 
 
-	spoon
+	> spoon
 
-or run `spoon help`
+To view help for a specific instruction, execute `spoon help <command>`. 
 
-	spoon help
-
-The Spoon command line interface is also aliased as `spn`. When using Spoon's command line interface you may prefix commands with `spoon` or `spn`. 
-
-Please see below for a list of all of the commands available through Spoon's command line interface.  
+See below for a list of all of the commands available through Spoon's command line interface.  

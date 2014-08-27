@@ -1,17 +1,31 @@
 ### rmi
 
-The `rmi` command removes an image, or images, from the local registry. 
+The rmi command removes an image, or images, from the local registry. 
 
-If you want to save an image but don't want to have it in your local registry, use the `spoon export` command to export the `.svm` file to your local file system. 
+	# remove an image by specifying it by name
+	> spoon rmi my-image
+	Image my-image:head was removed
 
-To remove a single image from the local registry, specify the image name or ID as an argument to the `spoon rmi` command. 
-
-	> spoon rmi <image>
-
-The `rmi` command will only truly *delete* an image if the image specified in the command is the last image in the local registry with that ID. Otherwise, the reference with the specified name is removed. For example, if and image with ID `fd4safew4r56` is named `spoonuser/my-image:head` and `my-image:head` and the command `spoon rmi my-image:head` is executed, the reference `my-image:head` will no longer refer to image `fd4safew4r56`, but the image itself is *not deleted*. 
-
-If an image `rmi` command is passed an image ID, the image is deleted and all references (names, tags, etc.) are removed from the local registry. 
-
-To remove all the images in your registry, specify the `-a` flag as the argument to the `spoon rmi` command. 
-
+	# remove all images with the -a flag
 	> spoon rmi -a
+	All images have been removed
+
+If the same image is forked or tagged multiple times, the rmi command will only untag the specified name, not remove the image itself. 
+
+	> spoon images
+	ID 			  Name  				Tag	 Created 				Size
+	-- 			  ----  				---  -------    			----
+	7a85fe8f7ad1  spoonbrew/chocolatey       8/22/2014 11:34:19 AM  3.6 MB
+	7a85fe8f7ad1  chocolatey-forked		1.0  8/22/2014 12:00:01 PM  3.6 MB
+
+	> spoon rmi spoonbrew/chocolatey
+	Image spoonbrew/chocolatey:head was untagged
+
+	> spoon images
+	ID 			  Name  				Tag	 Created 				Size
+	-- 			  ----  				---  -------    			----
+	7a85fe8f7ad1  chocolatey-forked		1.0  8/22/2014 12:00:01 PM  3.6 MB
+
+	> spoon rmi chocolatey-forked:1.0
+	Image chocolatey-forked:1.0 was removed
+

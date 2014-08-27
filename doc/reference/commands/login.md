@@ -1,7 +1,10 @@
 ### login
 
-The `login` command logs a user into a remote Spoon server. 
+The login command logs a user into a remote Spoon server. 
 
-When run without parameters, the `login` command will return the logged-in user's username and time of log in or the message **You are not currently logged in**, if a user is not logged in. 
+	# log in by specifying username and password
+	> spoon login spoonuser password-here
 
-If a user is already logged in, the `login` command will automatically log that user out and log the new user in. 
+	# without parameters, returns state of logged-in user
+	> spoon login
+	spoonuser logged in at 8/25/2014 at 5:40:45 PM

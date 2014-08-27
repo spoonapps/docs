@@ -1,11 +1,16 @@
 ### logs
 
-The `logs` command is most useful for **debugging**. If something goes (unexpectedly) wrong inside a running container, you can inspect any logs that Spoon recorded for that container with the `logs` command. 
+The logs command fetches the logs for a container, if they exist. This is especially useful for debugging or inspecting containers. 
 
-By default, only the standard streams for a container are recorded and logged. To enable more comprehensive logging, specify the `--diagnostic` flag for the `run` command. 
+By default, only the standard streams for a container are recorded and logged. To enable more comprehensive logging, use the **--diagnostic** flag of the **run** command when the container is initially created. 
 
-To show the timestamps for any recorded logs, specify the `-t` flag. 
+	# can only show stdout or stderr logs
+	> spoon logs --stdout 2de7fda8
 
-To show only the logs of `stdout` or `stderr`, specify the `--stdout` or `--stderr` flags, respectively. 
+	> spoon logs --stderr 2de7fda8
 
-The `log` command also has a `--tail=VALUE` flag. Similar to the `tail` on *nix machines, the `--tail=VALUE` flag will only show the last `VALUE` lines of the logs. 
+	# show timestamps for log entries
+	> spoon logs -t 2de7fda8
+
+	# similar to Unix 'tail', only show last 5 lines
+	> spoon logs --tail=5 2de7fda8

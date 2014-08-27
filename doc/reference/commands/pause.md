@@ -1,3 +1,3 @@
 ### pause
 
-Pauses a running container. This will pause all processes and threads within the specified container. 
+Pause a running container. This will pause all processes and threads within the specified container. 

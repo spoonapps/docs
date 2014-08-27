@@ -1,12 +1,10 @@
 ### run
 
-The `run` command creates new containers.
-
-The `run` command requires an `<image>` be specified -- this will be the base image(s) for the new container.  
+The run command creates new containers.
 
 The **base image** must be a valid Spoon image (`.svm` file extension) and must also exist in your local registry. If the image does not exist in your local registry, the Spoon IDE will try and find a matching one on the Spoonium Hub and download it before starting the container. 
 
-Containers are started with the startup file specified in the base image. If a startup file is not set in the base image, a default of `%COMSPEC%` is applied. 
+Containers are started with the startup file specified in the base image. If a startup file is not set in the base image, the default of `%COMSPEC%` is applied. 
 
 For example, to print "Hello World" to the command prompt in the new container with the command: 
 
@@ -43,15 +41,15 @@ The initial working directory for the container can be set with the `-w` or `--w
 
 #### Adding Environment Variables
 
-Environment variables can be added to a container with the `-e`, `--env`, or `--env-file` flags. 
+Environment variables can be added to a container with the **-e** or **--env-file** flags. 
 
-For example, to add the environment variable `foo` with value `bar` to a new container, add the flag `-e=foo=bar`. 
+	# add environment variable 'foo' with value 'bar'
+	> spoon run -e=foo=bar <image>
 
-Multiple `-e` or `--env` flags can be added to a single `run` command to add multiple environment variables. 
-
+	# specify multiple env vars with multiple flags
 	> spoon run -e=foo=bar -e=x=2 <image>
 
-If your container requires several environment variables, we recommend creating an `env-file` for the container. An `env-file` is a line-delimited text file that lists environment variable key-value pairs on each line. The example file, below, lists 3 environment variables: 
+If your container requires several environment variables, we recommend creating an **env-file**, a line-delimited text file that lists all the environment variables to add to the container. The example file, below, lists 3 environment variables: 
 
 	foo=bar
 	utensil=spoon
@@ -59,14 +57,16 @@ If your container requires several environment variables, we recommend creating 
 
 Environment variables are always expanded on the host system before they are added to the container. 
 
-For example, when adding new paths to the `PATH` variable, adding the flag `-e=%PATH%;<new path>` to the `spoon run` command will create a `PATH` variable in the container that consists of the `<new path>` appended to the native system `PATH`. 
+	> echo %PATH%
+	C:\Windows\system32;C:\Windows;
+
+	> spoon run -e=%PATH%;C:\Users <image>
+
+	(2fedfja3) > echo %PATH%
+	C:\Windows\system32;C:\Windows;C:\Users	
 
 Spoon VM settings can be enabled or disabled with the `--enable` and `--disable` flags, respectively. 
 
-When the `--diagnostic` flag is included, the container will generate diagnostic logs that detail all of the operations that occur within the container. These are especially useful when debugging 
+When the `--diagnostic` flag is included, the container will generate diagnostic logs that detail all of the operations that occur within the container. 
 
 These diagnostic logs can later be viewed using the `spoon logs` command. 
-
-#### Container Networking
-
-Ports for the newly created container can be mapped to ports on the local 

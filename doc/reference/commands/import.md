@@ -1,11 +1,6 @@
 ### import
 
-The `import` command is used to add Spoon images or non-Spoon file types from an arbitrary location on your local machine (or network) to your local registry.
-
-The `import` command currently supports the conversion of the following file types: 
-
-1. Microsoft Software Package (**MSI**)
-2. Thinapp Configuration (**package.ini**)
+The import command is used to add Spoon images or non-Spoon file types from your local machine to your local registry.
 
 When importing external files into the Spoon registry, the filetype must be specified as an input to the command. 
 
@@ -13,8 +8,12 @@ When importing external files into the Spoon registry, the filetype must be spec
 	msi						Microsoft Software Installer
 	thinapp					Thinapp Configuration
 
-For example, the command to import an SVM would be: 
+You can optionally specify a name to give the newly-imported image. 
 
-	spoon import svm /path/to/svm
+	# import a thinapp config
+	spoon import -n=old-thinapp-image thinapp C:\s\package.ini
 
-**Spoon Virtual Application Studio** users, can use this command to `import` existing `.svm` files into their local registry. 
+	# import a spoon image
+	spoon import svm C:\s\old-image.svm
+
+**Spoon Virtual Application Studio** users, can use this command to import their existing components. 

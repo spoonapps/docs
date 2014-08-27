@@ -1,11 +1,11 @@
 ### rm
 
-The `rm` command removes containers from the local machine. 
+The rm command removes containers from the local machine. 
 
-To remove a single container, use the command `spoon rm <container ID>`. 
+	# remove a single container by specifying the ID
+	> spoon rm f1ea9fe
+	Container f1ea9fefjdkaslfh324fdadfshjkl3cndkj3 has been removed
 
-To remove all of the containers in your local registry, specify the `-a` flag in lieu of the `<container ID>`. 
-
-	spoon rm -a
-
-**Note**: Spoon uses prefix-matching when searching for container IDs.  The first 4-6 characters of the ID will usually suffice. 
+	# remove all containers on the local machine with the -a flag
+	> spoon rm -a
+	All containers have been removed

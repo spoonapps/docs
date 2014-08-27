@@ -1,17 +1,19 @@
 ### ps
 
-The `ps` command returns a list of all the containerized processes running on the local machine. 
+The ps command returns a list of all the containerized processes running on the local machine. 
 
-By default, only the **PID**, **NAME**, **CONTAINER** and **USER** are returned for each process. 
+	# view all processes running in containers
+	> spoon ps
+	PID   Name     Container  	 User
+	---   ----	   --------- 	 ----
+	2252  cmd.exe  f1ea9fe59eeb  Administrator
 
-To view the **UTIME** (user time), **KTIME** (kernel time), and **COMMAND** for each process, specify the `-l` flag. 
-
+	# view the "long-format" results for additional information
 	> spoon ps -l
+	PID   Name     Container  	 User	  		UTime	  KTime		Command
+	---   ----	   --------- 	 ---- 			----- 	  -----		-------
+	2252  cmd.exe  f1ea9fe59eeb  Administrator  00:01:05  00:01:10	"C:\Windows\system32\cmd.exe"
 
-To return the table with tab-separated columns, specify the `--csv` flag. 
+The **UTime** is the amount of CPU time the process spent in user-mode code. 
 
-	> spoon ps --csv
-
-By default, Spoon will truncate data in each column to a set width. To return untruncated data, use the `--no-trunc` flag. 
-
-	> spoon ps --no-trunc
+The **KTime** is the amount of time spent in system calls within the kernel. 

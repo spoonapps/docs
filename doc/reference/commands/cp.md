@@ -1,7 +1,16 @@
 ### cp
 
-The `cp` command copies a file or directory from one container to another. It can also copy a file or directory from a container to the native filesystem. 
+The cp command copies a file or directory from one container to another. It can also copy a file or directory from a container to the native filesystem. 
 
-The path of the file or directory to copy must be *absolute*, or the `cp` command will fail. 
+	# copy a file from a container to the native system
+	> spoon cp 2de7:C:\project\file.txt C:\Users\Spoonuser
 
-The path of the local destination (if copying to the native filesystem) for the copied file/directory may be a relative path. Paths are relative to the current directory in the local command prompt. 
+	# copy a file from a container to another container
+	> spoon cp 2de7:C:\project\file.txt 3vj3:C:\other-project
+
+	# container paths must be absolute
+	> spoon cp 2de7:file.txt C:\Users\Spoonuser
+	ERROR
+
+	# native paths are relative to the current prompt
+	C:\Users> spoon cp 2de7:C:\project\file.txt \Spoonuser
