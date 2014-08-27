@@ -11,13 +11,19 @@ There are four ways to create an image:
 
 #### Commit a Container
 
-If you have an existing container that you would like to create an image from, use the `spoon commit` command. Before committing a container check that it is stopped with `spoon containers`.
+```
+# Before committing a container check that it is stopped
+> spoon containers
 
-See a more detailed example [here](http://spoonium.net/docs#containers).
+# Then create a new image from the container
+> spoon commit <container-id> <image-name>
+```
+
+See a more detailed example [here](http://spoonium.net/docs/build#working-with-containers).
 
 #### Automatic Builds
 
-Images can be automatically built using a Spoon Script, which is a set of instructions that recreate the steps of configuring a container. See more information on [Spoon Script]() verbage and syntax.
+You can automatically build images using a Spoon Script, which is a set of instructions that recreate the steps of configuring a container. See more information on [Spoon Script](/docs/reference#spoon-scripts) verbage and syntax.
 
 ```
 # Example script to automatically build a 7-Zip image
