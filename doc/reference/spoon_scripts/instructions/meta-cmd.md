@@ -12,4 +12,12 @@ The `meta` instruction sets container metadata value. Standard metadata properti
 * Website
 * Version
 
-Custom metadata can be specified using other name, value pairs.  
+Custom metadata can be specified using other name, value pairs. 
+
+```
+# add a title
+meta title application-name
+
+# add custom metadata
+meta internal-name new-name
+```
