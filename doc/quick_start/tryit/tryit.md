@@ -1,5 +1,13 @@
 ## Try It!
 
+### Get going
+1. Open a new command prompt, type `spoon`, and hit Enter. The help dialog should appear. Don't see the dialog? [Get help](http://support.spoonium.net).
+2. Log into the Spoonium Hub from the command prompt using your Spoonium username and password:
+
+    `> spoon login username password`
+    
+    `Logged in as username`
+
 ### Pull an  Image
 
 We'll begin by pulling (downloading) an image from the Spoonium Hub. Images are the building blocks for everything in Spoonium. They serve as a base (read-only) filesystem and registry that your application will use while running in a container. 
@@ -126,3 +134,13 @@ If your account did not already have an existing repository named `helloworld`, 
 The repository page on Spoonium serves as a complete version history of an image. If you're familiar with remote repositories in Git, Spoonium is *very* similar. 
 
 Public repositories are great for sharing work with others or for providing a quick and easy access point for colleagues, collaborators, or even end-users to download and access and run your project from. 
+
+### Next Steps 
+
+Learn more about:
+
+- [Building containers and advanced Spoonium commands](/docs/build).
+
+- [Practical examples and use cases](/docs/samples), such as containerizing Java, Node, Python, and .NET projects. 
+
+Enjoy!
