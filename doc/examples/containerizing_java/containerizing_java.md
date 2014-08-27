@@ -1,6 +1,6 @@
-## Building a Java Webserver
+## Java
 
-In this tutorial, we'll cover how to containerize a Java project and how to effectively use and configure Java within a Spoon container. 
+In this tutorial, we'll containerize a Java web server project. You'll learn to effectively configure and use Java in a container.
 
 **Topics Covered:**
 
@@ -8,7 +8,7 @@ In this tutorial, we'll cover how to containerize a Java project and how to effe
 - Configuring environment variables within a container
 - Using git within a container
 
-#### Pull Required Dependencies
+### Pull Required Dependencies
 
 Before beginning, we'll get all of the dependencies we'll need to run and containerize the Java project. In this case, that means we'll need both `Java` and `Git` inside our container. Luckily, both of these images can be found in the `spoonbrew` account on the Spoonium hub. 
 
@@ -29,7 +29,7 @@ spoonbrew/git	32.1MB 		8/08/2014 5:09:11 PM
 spoonbrew/jdk7	43.2MB 		8/10/2014 10:00:32 AM
 ```
 
-#### Start a Container
+### Start a Container
 
 Since we'll be pulling the sources into our container using `git`, let's start the container and do all of our work in there. 
 
@@ -50,6 +50,16 @@ A new command prompt should appear on your screen. This command prompt is runnin
 For this example, we'll clone a small, standalone web server from this Github repository: [https://github.com/rafaelsteil/simple-webserver](https://github.com/rafaelsteil/simple-webserver). 
 
 In the containerized command prompt, `cd` to the root `C:\` folder and create a new `java` folder, if one does not already exist. 
+<<<<<<< HEAD
+
+```
+(08dd45e3) C:\Users\SpoonUser> cd C:\
+
+(08dd45e3) C:\> mkdir java
+
+# Clone the project into the **C:\\java** folder
+
+=======
 
 ```
 # cd to the container's root directory
@@ -59,18 +69,17 @@ In the containerized command prompt, `cd` to the root `C:\` folder and create a 
 (08dd45e3) C:\> mkdir java 
 
 # clone project into the new folder
+>>>>>>> 238207b27d99e980a14ddadac76de32e3ff99195
 (08dd45e3) C:\> git clone https://github.com/rafaelsteil/simple-webserver C:\java
-```
 
-The server can now be run from within the container.
+# The server can now be run from within the container
 
-```
 (08dd45e3) > java -jar C:\java\SimpleWebServer.jar
 ```
 
 The server is now running on port 80 of your local machine. To confirm the server is running, open a web browser and visit **http://localhost** -- you should see a listing of all the files in the **C:\\java** folder of the container. 
 
-#### Create an Image
+### Create an Image
 
 Let's say you want to use this new container as a basis for other projects -- perhaps expanding on the functionality of this simple webserver. 
 
@@ -116,7 +125,7 @@ spoonbrew/git	32.1MB 		8/08/2014 5:09:11 PM
 spoonbrew/jdk7	43.2MB 		8/10/2014 10:00:32 AM
 ```
 
-#### Push to the Spoonium Hub
+### Push to the Spoonium Hub
 
 We'll finish this tutorial by explaining how the newly created `simple-java-webserver` can be uploaded to the [Spoonium Hub](http://spoonium.net/hub), where it can be made publicly available or shared with other collaborators. 
 
@@ -130,4 +139,4 @@ In this case, we'll push to a repository named **java-webserver**.
 > spoon push java-webserver simple-java-webserver:master
 ```
 
-**Note**: If you tagged your image in the previous section, use the command: `spoon push java-webserver simple-java-webserver:1.0`. 
+Note that if you tagged your image in the previous section, use the command: `spoon push java-webserver simple-java-webserver:1.0`. 

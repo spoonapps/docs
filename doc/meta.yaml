@@ -126,7 +126,7 @@ sections:
 - display_name: Java
   ordering: 1
   pages: []
-- display_name: NodeJS
+- display_name: Node.js
   ordering: 2
   pages: []
 - display_name: .NET

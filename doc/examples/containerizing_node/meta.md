@@ -1,4 +1,4 @@
 ---
 topic: Samples
-section: NodeJS
+section: Node.js
 ---

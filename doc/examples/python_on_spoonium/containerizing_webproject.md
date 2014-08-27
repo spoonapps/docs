@@ -1,6 +1,6 @@
-## Containerizing Python Web Apps
+## Python
 
-In this tutorial, we'll walk you through how to create and containerize a basic web application. We'll also show you how to automate the creation of new images of your web application using **Spoon Script** scripts and walk you through some of the basics of the Spoonium containerization network stack. 
+In this tutorial, we'll walk you through how to create and containerize a basic Python web application. We'll also show you how to automate the creation of new images of your web application using **Spoon Script** scripts and walk you through some of the basics of the Spoonium containerization network stack. 
 
 **Topics Covered**
 
@@ -9,7 +9,7 @@ In this tutorial, we'll walk you through how to create and containerize a basic 
 - Automating image creation with Spoon Script scripts
 - The Spoonium network stack
 
-#### Create the App
+### Create the App
 
 For this tutorial, we'll use Python 2.7 and the [Flask](http://flask.pocoo.org/) microframework. 
 
@@ -35,7 +35,7 @@ if __name__ == "__main__":
 
 If you have Python installed locally, you can test out your app by running: `python hello.py`. (Note: you must install `Flask` first -- `pip install Flask`).
 
-#### Create a Container
+### Create a Container
 
 Next, we'll containerize our application. 
 

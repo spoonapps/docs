@@ -79,7 +79,7 @@ Flagging files and folders as read-only prevents the application from modifying 
 
 **No Upgrade**
 
-By default, Spoon IDE enables files in the virtual filesystem to be upgraded with patches (refer to "Updating Registration Settings" in the [Register Virtual Applications in the Windows Shell](#) section for more information). If there are files in the virtual filesystem that should not be upgraded, such as user data files, select the **No Upgrade** flag to prevent these files from being upgraded.
+By default, Spoon IDE enables files in the virtual filesystem to be upgraded with patches (refer to "Updating Registration Settings" in the **Register Virtual Applications in the Windows Shell** section for more information). If there are files in the virtual filesystem that should not be upgraded, such as user data files, select the **No Upgrade** flag to prevent these files from being upgraded.
 
 **No Sync**
 
