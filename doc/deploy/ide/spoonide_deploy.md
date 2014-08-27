@@ -20,5 +20,4 @@ Executables can be deployed directly to the users device or to a network share. 
 
 #### MSI Output
 
-MSI outputs simply wrap the portable container into an MSI package to add support for shell integrations such as file associations, Start Menu shortcuts and ProgIds. MSIs are a common deployment option for organizations that are using Admin Studio or for integrating with existing desktop management solutions. To build an MSI, go to the **Setup** section of the IDE, enter the MSI details and click **Build MSI**.
- 
+MSI outputs simply wrap the portable container into an MSI package to add support for shell integrations such as file associations, Start Menu shortcuts and ProgIds. MSIs are a common deployment option for organizations that are using AdminStudio or for integrating with existing desktop management solutions. To build an MSI, go to the **Setup** section of the IDE, enter the MSI details and click **Build MSI**.
