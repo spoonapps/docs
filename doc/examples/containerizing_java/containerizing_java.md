@@ -35,7 +35,7 @@ Since we'll be pulling the sources into our container using `git`, let's start t
 
 In this case, however, a little foresight goes a long way. We'll want to add our project's directory to the Java classpath -- this should make developing new features on top of this server much simpler. To do this, we can use the `--env` flag of the `spoon run` command. 
 
-We're going to clone the project into a `C:\java` folder in the container, so we'll add this path to the `classpath` variable upon initial container creation. 
+We're going to clone the project into a **C:\\java** folder in the container, so we'll add this path to the `classpath` variable upon initial container creation. 
 
 To start the container, issue a `spoon run` command with both the `spoonbrew/java` and `spoonbrew/git` images specified as base images. We'll also add a `--env` flag for the Java classpath variable. 
 

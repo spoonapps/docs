@@ -154,7 +154,7 @@ boot file node app.js
 
 See [Spoon script reference](/docs/reference#spoon+scripts) for more information on Spoon script syntax.
 
-Save the file as Spoon Script in `C:\spoon\aIRChat`.
+Save the file as Spoon Script in **C:\\spoon\aIRChat**.
 
 ```
 # Now build the script to create a new image called aIRChat
