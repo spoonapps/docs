@@ -2,12 +2,12 @@
 
 When testing parallel instances of Internet Explorer on Spoonium, we recommend setting the following options in your test. 
 
-1. Force Internet Explorer to use the `Create Process` API.
-2. Launch Internet Explorer with the `-private` (for **Internet Explorer 8+** only)
+1. Force Internet Explorer to use the Create Process API
+2. Launch Internet Explorer with the -private flag (for **Internet Explorer 8+** only)
 
 Using these settings helps prevent cookies and other session-specific items from being shared between different instances of Internet Explorer. 
 
-If you are not testing multiple instances of Internet Explorer in parallel, we recommend setting the `Ensure Clean Session` capability to `True`. 
+If you are not testing multiple instances of Internet Explorer in parallel, we recommend setting the **Ensure Clean Session** capability to **True**. 
 
 #### Configuring Internet Explorer Options
 
@@ -15,81 +15,51 @@ See below for language-specific instructions for how to properly configure your 
 
 **Java**
 
-Before beginning, import the `org.openqa.selenium.ie` package, if you have not already. 
-
 ```java
+//import the ie package
 import org.openqa.selenium.ie;
-```
 
-When setting `DesiredCapabilities` for your test, use the static `FORCE_CREATE_PROCESS` and `IE_SWITCHES` fields of the `InternetExplorerDriver` to create capabilities that will force IE to use Windows' Create Process API and to set the browser to **private** mode.
-
-```java
+//create DesiredCapabilities for ie
 DesiredCapabilities capabilities = DesiredCapabilities.ie();
+//force Windows to launch IE through Create Process API and in "private" browsing mode
 capabilities.setCapability(InternetExplorerDriver.FORCE_CREATE_PROCESS, true);
 capabilities.setCapability(InternetExplorerdriver.IE_SWITCHES, "-private");
-```
 
-**Note**: If testing serial instances of Internet Explorer (only 1 IE window open at a time), also add the `IE_ENSURE_CLEAN_SESSION` parameter to your capabilities. 
-
-```java
+//if testing serial instances of IE, add IE_ENSURE_CLEAN_SESSION
 capabilities.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
+
+WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
 ```
 
 **C#**
 
-Before beginning, add a `using` directive for the `OpenQA.Selenium.IE`, if it is not already in your test. 
-
 ```csharp
+//add using directive for IE namespace
 using OpenQA.Selenium.IE;
-```
 
-The C# bindings contain an `InternetExplorerOptions` class that can be used to set and manipulate Internet Explorer-specific settings. 
-
-In lieu of `DesiredCapabilities`, create a new instance of the `InternetExplorerOptions` class. 
-
-```csharp
+//use this class in leiu of DesiredCapabilities
 InternetExplorerOptions ieOptions = new InternetExplorerOptions();
-```
 
-This object has properties for all of the relevant settings we want to switch. 
-
-```csharp
+//force Windows to launch IE through Create Process API and in "private" browsing mode
 ieOptions.ForceCreateProcessApi = true
 ieOptions.BrowserCommandLineArguments = "-private";
-```
-
-If you want to specify a version of Internet Explorer to test against, use the `AddAdditionalCapability` method. 
-
-```csharp
 ieOptions.AddAdditionalCapability("version", "10");
-```
 
-When instantiating your test's `RemoteWebDriver`, pass the `InternetExplorerOptions` as the tests capabilities using the `InternetExplorerOptions.ToCapabilities()` method. 
-
-```csharp
+//convert ieOptions to an ICapabilities object and instantiate driver
 IWebDriver driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), ieOptions.ToCapabilities());
 ```
 
 **Python**
 
-Internet Explorer-specific capabilities can be specified as key-value pairs through the capabilities object. 
-
-Start by creating a capabilities object for Internet Explorer. 
-
 ```python
+#create desired_capabilities
 capabilities = webdriver.DesiredCapabilities.INTERNETEXPLORER
-```
 
-Next, add two capabilities to force Internet Explorer to use Windows' Create Process API and to set the browser mode to **private**. 
-
-```python
+#force Windows to launch IE through Create Process API and in "private" browsing mode
 capabilities['ie.forceCreateProcessApi'] = True
 capabilities['ie.browserCommandLineArguments'] = '-private'
-```
 
-Finally, pass these capabilities as the `desired_capabilities` for the remote WebDriver. 
-
-```python
+#instantiate the driver
 driver = webdriver.Remote(command_executor="http://localhost:4444/wd/hub", desired_capabilities=capabilities)
 ```
 
@@ -102,9 +72,7 @@ Spoonium's Internet Explorer containers are packaged and pre-configured to work 
 
 For Internet Explorer 10 and 11, Enhanced Protected Mode is Disabled.
 
-For Internet Explorer 11, the following registry key has been added to the container:
-
-- HKLM\Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BFCACHE with DWORD iexplore.exe and value 0.
+For Internet Explorer 11, the registry key **HKLM\Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BFCACHE** was added to the container with DWORD iexplore.exe and value 0.
 
 For more information on these changes, as they relate to the InternetExplorerDriver, see [the Selenium documentation](https://code.google.com/p/selenium/wiki/InternetExplorerDriver).
 

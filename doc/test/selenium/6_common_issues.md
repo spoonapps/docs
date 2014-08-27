@@ -22,7 +22,7 @@ If the Spoon Plugin is installed and you continue to see this issue, verify that
 
 **Mozilla Firefox**
 
-1. Navigate to [http://start.spoon.net/install](http://start.spoon.net/install).
+1. Navigate to [http://spoonium.net/selenium](http://spoonium.net/selenium).
 2. To the left of the browser's address bar, a "building block" icon should appear (it looks like a small LEGO). 
 3. Click this icon and a small box will appear beneath it with the dialog "Allow *spoonium.net* to run Spoon?" 
 4. Select **Allow and Remember** 
@@ -30,7 +30,7 @@ If the Spoon Plugin is installed and you continue to see this issue, verify that
 
 **Google Chrome**
 
-1. In the address bar, type `chrome://plugins`. 
+1. In the address bar, type **chrome://plugins**. 
 2. Locate **Spoon Plugin** and check the **Always allowed** box. 
 3. Restart Google Chrome to apply this new setting. 
 
@@ -38,6 +38,6 @@ If the Spoon Plugin is installed and you continue to see this issue, verify that
 
 **Internet Explorer does not launch with Error "IELaunchURL() returned HRESULT 80070012"**
 
-This error occurs due to a bug in the `IEDriverServer`. For more information, see this issue report: [https://code.google.com/p/selenium/issues/detail?id=7045](https://code.google.com/p/selenium/issues/detail?id=7045). 
+This error occurs due to a bug in Selenium's IEDriverServer. For more information, see this issue report: [https://code.google.com/p/selenium/issues/detail?id=7045](https://code.google.com/p/selenium/issues/detail?id=7045). 
 
-To avoid this error, set the `ForceCreateProcessApi` switch in your test capabilities to `true`. For detailed, language-specific instructions, see 
+To avoid this error, enable **ForceCreateProcessApi** in your test capabilities. For language-specific instructions, see **Testing Internet Explorer**.

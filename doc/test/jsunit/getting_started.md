@@ -6,7 +6,7 @@ Any browser available in the Spoonium Grid can be used for JS unit testing. You 
 
 #### How it Works
 
-JS unit testing on Spoonium leverages the same infrastructure as our Selenium testing. Thus, your test runner must support launching browsers via Selenium WebDriver. If your runner has a plugin that can interact with a Selenium Grid, it should work on Spoonium. The only adaptation you should need to make is to set the Selenium `host` or `hostname` to `localhost` and the port to `4444`.
+JS unit testing on Spoonium leverages the same infrastructure as our Selenium testing. Thus, your test runner must support launching browsers via Selenium WebDriver. If your runner has a plugin that can interact with a Selenium Grid, it should work on Spoonium. The only adaptation you should need to make is to set the Selenium host/hostname to **localhost** and the port to **4444**.
 
 In the **Supported Test Runners** section, below, you'll find a list of test runners that we have tested and confirmed work with Spoonium. If you are using a different test runner and are having problems configuring it for Spoonium, email our support team and we'll be happy to help out.
 

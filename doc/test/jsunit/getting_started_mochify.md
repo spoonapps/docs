@@ -4,8 +4,8 @@
 
 If you are already using Mochify with Selenium WebDriver, make sure the following settings are configured in your `.min-wd` file: 
 
-- `"hostname": "localhost"`
-- `"port": "4444"`
+- "hostname": "localhost"
+- "port": "4444"
 
 Then, start the Spoonium hub and, from your project's root directory, run: 
 
@@ -29,7 +29,7 @@ Mochify also has a dependency for `browserify`, which can also be installed thro
 
 	npm install browserify
 
-If you are using a **packages.json** file to manage your project's dependencies, add `mocha` and `mochify` to the `devDependencies` section of the file. 
+If you are using a **packages.json** file to manage your project's dependencies, add "mocha" and "mochify" to the **devDependencies** section of the file. 
 
 ```json
 "devDependencies": {
@@ -39,7 +39,7 @@ If you are using a **packages.json** file to manage your project's dependencies,
 }
 ```
 
-Create a new `.min-wd` file in your project's root directory. Start by copying the JSON, below into this file: 
+Create a new **.min-wd** file in your project's root directory. Start by copying the JSON, below into this file: 
 
 ```json
 {
@@ -56,9 +56,9 @@ Create a new `.min-wd` file in your project's root directory. Start by copying t
 }
 ```
 
-You can configure which browsers to test in the `browsers` node. If a version is not specified, Spoonium will by default use the most recent version of that browser.
+You can configure which browsers to test in the **browsers** node. If a version is not specified, Spoonium will by default use the most recent version of that browser.
 
-To add additional browsers, add another entry to the `browsers` array. For example, in the below example file we've added Firefox 26 and Chrome 34 as additional browsers to test on. 
+To add additional browsers, add another entry to the **browsers** array. For example, in the below example file we've added Firefox 26 and Chrome 34 as additional browsers to test on. 
 
 ```json
 {

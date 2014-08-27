@@ -51,7 +51,7 @@ or by adding the **karma-webdriver-launcher** to your project's **package.json**
 
 In your project's root directory, open the **karma.conf.js** file. If it doesn't already exist, run the command `karma init karma.conf.js` in your project's root directory. Karma will ask a couple of questions about your particular configuration and generate a new config file based on your answers. 
 
-In your **karma.conf.js** file, add a `webDriverConfig` variable within the `module.exports` scope. This variable will specify the hostname and port of the Spoonium hub. 
+In your karma.conf.js file, add a **webDriverConfig** variable within the **module.exports** scope. This variable will specify the hostname and port of the Spoonium hub. 
 
 ```javascript
 module.exports = function(karma) {
@@ -62,7 +62,7 @@ module.exports = function(karma) {
 }
 ```
 
-In your configuration object, add a new option: `customLaunchers`. Beneath this option, add variables for each browser you want to test with. 
+In your configuration object, add a new option: **customLaunchers**. Beneath this option, add variables for each browser you want to test with. 
 
 ```javascript
 module.exports = function(karma) {
@@ -90,7 +90,7 @@ module.exports = function(karma) {
 }
 ```
 
-Finally, add each of these browsers to the `browsers` option in your configuration object. 
+Finally, add each of these browsers to the **browsers** option in your configuration object. 
 
 ```javascript
 module.exports = function(karma) {
@@ -132,7 +132,7 @@ Note that each launcher object has a similar structure:
 }
 ```
 
-When adding additional launchers to your test, follow this pattern -- always specifying `base` and `config` as `WebDriver` and `webDriverConfig`, respectively. 
+When adding additional launchers to your test, follow this pattern -- always specifying "base" and "config" as **WebDriver** and **webDriverConfig**, respectively. 
 
 #### Run Your Karma Tests
 
