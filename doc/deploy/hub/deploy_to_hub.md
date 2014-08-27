@@ -22,7 +22,7 @@ Once the push is complete you can verify that the image is available on the Hub 
 
 #### Containers
 
-Here is an example of how you would push a container to the Hub.
+Before pushing a container to the Hub, it needs to be committed to the local registry and converted into an image. Here is an example of the process of creating a container and publishing it to the Hub.
 
 ```
 #Create a container with Java, Node and Git support
