@@ -14,6 +14,7 @@ Live version of the docs can be found at http://spoonium.net/docs
 Python dependencies are listed in the py-reqs.txt file in the root directory of this repo. 
 
 To install these dependencies, run: 
+
 	`pip install -r py-reqs.txt` 
 
 If you're new to Python, we also recommend installing virtualenv and putting all the dependencies into their own virtualenv. A good tutorial on installing all this stuff (on Windows) can be found [here](http://www.tylerbutler.com/2012/05/how-to-install-python-pip-and-virtualenv-on-windows-with-powershell/). 
@@ -32,6 +33,8 @@ The build folder will also contain a new "docs.html" file in the root of the /bu
 
 When contributing to the docs on Spoonium, please take the following style guidelines into consideration. 
 
+**Code Styling**
+
 1. When mocking the command prompt, start the "input" line with a > and a space before the command. See example, below
 
 	**Input**: `> spoon build -n="my image" /path/to/spoon.me`
@@ -40,8 +43,19 @@ When contributing to the docs on Spoonium, please take the following style guide
 
 2. Always use `spoon` not `spn` in the command line documentation.
 3. All code blocks should be 'fenced' with 3 backticks (a la [GFM](http://github.com/github-flavored-markdown)). Inline code styles (i.e. this is a sample command: `spoon run`) only use 1 backtick. The syntax highlighting to use can be specified after the top 3 backticks (not available for inline code). 
-4. Inline paths should be **bolded**. --> Example: navigate to **C:\Users** 
 5. Use inline code styles sparingly. 
+6. Use the **#** character to denote comments. Always put a space between the **#** and you comment
+
+	# this is formatted properly :)
+	#this is not :( 
+
+**Other Styling**
+
+1. Inline paths should be **bolded**. --> Example: navigate to **C:\Users** 
+2. Internal links to other sections of the doc should be relative paths
+	* Other doc links: /docs/[topic]#[section]
+	* To the hub: /hub
+	* To contact page: /contact
 
 ### Contributing 
 

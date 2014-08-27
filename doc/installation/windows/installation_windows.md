@@ -4,10 +4,14 @@ The lightweight **Spoon Plugin** contains all tools required for using Spoonium.
 
 To download the installer, click [here](http://start.spoon.net/install). Run the executable to install.
 
-Verify the installation by running `spoon version` in a command window.
+Verify the installation by running `spoon version` in a command prompt. 
 
-See the [quick start guide]() for information on creating an account and getting started.
+	# if successful, will return the installed version
+	> spoon version
+	Version: 1.2.317.0 
 
-### System Requirements
+See the [quick start guide](/docs/quick+start) for information on creating an account and getting started.
+
+#### System Requirements
 
 Spoonium is compatible with all Windows desktop operating systems.
