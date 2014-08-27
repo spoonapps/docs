@@ -1,13 +1,14 @@
 ## Installing Spoonium on Windows
 
-The lightweight **Spoon Plugin** contains all tools required for using Spoonium. It allows users to use and manage containers.
+The **Spoon Plugin** contains all the tools required for using Spoonium. 
 
-To download the installer, click [here](http://start.spoon.net/install). Run the executable to install.
+Click [here](http://start.spoon.net/install) to download and run the installer. All modern browsers and Windows platforms are supported. 
 
-Verify the installation by running `spoon version` in a command window.
+To make sure everything is running correctly, open a command window and follow the example below. If you have any issues at all, please contact our [support team](http://support.spoonium.net/).
 
-See the [quick start guide]() for information on creating an account and getting started.
+```
+#Check the spoon version
+> spoon version
+````
 
-### System Requirements
-
-Spoonium is compatible with all Windows desktop operating systems.
+If that works, go to the [quick start guide](/docs/quick+start).
