@@ -2,21 +2,23 @@
 
 The run command creates new containers.
 
-The **base image** must be a valid Spoon image (`.svm` file extension) and must also exist in your local registry. If the image does not exist in your local registry, the Spoon IDE will try and find a matching one on the Spoonium Hub and download it before starting the container. 
+	# create a container using the spoonbrew/apache image
+	> spoon run spoonbrew/apache
 
-Containers are started with the startup file specified in the base image. If a startup file is not set in the base image, the default of `%COMSPEC%` is applied. 
+	# create a container with apache and mysql
+	> spoon run spoonbrew/apache;spoonbrew/mysql
 
-For example, to print "Hello World" to the command prompt in the new container with the command: 
+Containers are started with the startup file specified in the base image. If a startup file is not set in the base image, the default of `%COMSPEC% /k` is applied. 
+	
+	# default startup file is used to start container
+	> spoon run spoonbrew/jdk
 
-	> spoon run --startupFile=cmd.exe <image> -- /c echo Hello World
+	# override the startup file to use the command prompt
+	> spoon --startupFile=cmd.exe run spoonbrew/jdk
 
-**Note**: The container created with this command will shut down after the `echo` command finishes. To keep the container "alive", the `cmd.exe` process must continue running. In this case, we can accomplish this by passing the `/k` flag to `cmd.exe`. 
+When passing arguments to a startupfile or command, we recommend separating these arguments from the rest of the command with a **--**. Arguments specified after a **--** mark are passed directly to the startup file/command.
 
-	> spoon run  --startupFile=cmd.exe <image> -- /k echo Hello World
-
-When passing arguments to a startupfile or command, we recommend separatign these arguments from the rest of the command with a `--`. Arguments specified after a `--` mark are passed directly to the startup file/command.
-
-If a `--` mark is not used, any argument matching a `spoon run` flag will be passed to `spoon`, which may lead to unexpected behavior. 
+If a **--** mark is not used, any argument matching a run command flag will be interpreted by Spoon, which may lead to unexpected behavior. 
 
     # spoon will interpret the /d flag and execute a container in detached mode
     > spoon run spoonbrew/scratch /d
@@ -24,20 +26,27 @@ If a `--` mark is not used, any argument matching a `spoon run` flag will be pas
     # /d flag is passed to cmd.exe, disabling execution of AutoRun commands from the registry
     > spoon run spoonbrew/scratch -- /d 
 
-A container's standard streams (`STDIN`, `STDOUT`, `STDERR`) can be redirected to either the current command prompt or the background using the `attach` and `detach` flags. 
+A container's standard streams (stdin/out/err) can be redirected to either the current command prompt or the background using the **--attach** and **--detach** flags. 
 
-To redirect all standard streams to the current command prompt, add the `-a` or `--attach` flag to the run command. 
-
+	# redict standard streams to current command prompt
 	> spoon run -a <image>
 
-To "detach" the new container from the native command prompt, specify the `-d` or `--detach` flag. This will create a new container without blocking futher work in the native prompt. 
+	# detach the container from the native prompt
+	> spoon run -d <image>
 
-The initial working directory for the container can be set with the `-w` or `--working-dir` flag. If the `-w` flag is not specified, the initial working directory of the container is inherited from the native command prompt. 
+Detaching from a container will allow further work to be done in the native prompt while the container is running.  
 
+The initial working directory for the container can be set with **-w** flag. 
+
+	# Set working directory to root of C: drive
+	C:\Users> spoon run -w="C:\" spoonbrew/git
+
+	(0x3842xd) C:\> 
+
+	# By default, container working directory matches native
 	C:\Users>spoon run spoonbrew/git
 	
-	# Default to the current directory of the native prompt
-	(08fx44zq) C:\Users>
+	(0x3842xd) C:\Users>
 
 #### Adding Environment Variables
 
@@ -70,3 +79,16 @@ Spoon VM settings can be enabled or disabled with the `--enable` and `--disable`
 When the `--diagnostic` flag is included, the container will generate diagnostic logs that detail all of the operations that occur within the container. 
 
 These diagnostic logs can later be viewed using the `spoon logs` command. 
+
+#### Port Mapping
+
+By default, all network operations (opening/closing ports, for example) are passed through to the local machine. To remap container ports to other ports on the local machine, use the **-p** or **-P** flags. Specific protocols (tcp or udp) can be mapped by specifying a **/[protocol]** after the mapping. 
+
+	# map container port 8080 to local port 80
+	> spoon run -p=80:8080 <image>
+
+	# map udp traffic on container port 8080 to local port 80
+	> spoon run -p=80:8080/udp <image>
+
+	# map all container ports to random ports on the local machine
+	> spoon run -P <image>
