@@ -1,13 +1,11 @@
+Spoonium is a platform for building, testing and deploying Windows applications and services in isolated containers. Once an application or service is put into a container, that image can be distributed to testers, Beta users or any Spoonium user by pushing the image to the Hub. This sections describes some of the building blocks of the Spoonium platform starting with the virtual machine.
+
 ## Virtual Machine
 
-The backbone of Spoonium is the **Spoon Virtual Machine**, a lightweight implementation of core operating system APIs, including the filesystem, registry, process, and threading subsystems. Applications executing within the Spoon VM interact with a virtualized filesystem, registry, and process environment, rather than the host machine.
+The runtime environment of Spoonium containers is supplied by the **Spoon Virtual Machine** or SVM, a lightweight implementation of core operating system APIs, including the filesystem, registry, process, and threading subsystems. Applications executing within the container interact with a virtualized filesystem, registry, and process environment supplied by the SVM, rather than the host machine.
 
-The virtualization engine handles requests within the VM internally or routes requests to the host device filesystem and registry if appropriate. It performs these actions according to the virtual application configuration.
+The virtualization engine handles requests within the container internally or routes requests to the host device filesystem and registry if appropriate. It performs these actions according to the application configuration defined when creating the container, see the [Building](/docs/building) section.
 
-The Spoon VM supports merge, override, write-copy, and hide isolation modes between the virtual and host filesystem and registry. These settings are available for directories as well as individual files.
+In addition to the virtual filesystem and registry, the SVM supports virtualization of system services such as web servers and local database engines, component object model (COM) servers, and network services such as DNS. The SVM also supports advanced operating system features including kernel object namespace isolation and side-by-side (SxS) manifests.
 
-The virtualization engine dynamically remaps shell folder paths so that proper application behaviour is preserved across various client operating systems. Similarly, registry key values containing explicit path names or prefixes are dynamically remapped to the appropriate values for each host device. A generalized multi-platform virtualization layer dynamically adapts virtual machine behavior based on the endpoint platform.
-
-In addition to desktop applications, the VM supports virtualization of system services such as web servers and local database engines, component object model (COM) servers, and network services such as DNS. The VM also supports advanced operating system features including kernel object namespace isolation and side-by-side (SxS) manifests.
-
-The Spoon virtual microkernel has been optimized to produce negligible storage and runtime performance overhead. Spoon's local caching feature can be adjusted from zero to full local caching, even allowing large numbers of applications to be used from storage-constrained thin client devices.
+The Spoon virtual microkernel, which is the engine of the SVM, has been optimized to produce negligible storage and runtime performance overhead. Applications running within a container will run with about the same performance characteristics as if it were running on the host system.
