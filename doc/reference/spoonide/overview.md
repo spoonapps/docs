@@ -1,30 +1,5 @@
 ## Spoon IDE
 
-Spoon IDE enables you to convert your Windows, .NET, Java, AIR, Flash, Shockwave, or other Windows-compatible applications into self-contained virtual applications. These applications can be delivered as standalone executables, MSIs or streamed from the web and run instantly on end-user devices. Unlike traditional deployment methods, virtual applications do not require reboots, administrative privileges, or separate setup steps for external components and runtimes. Virtual applications are isolated from other system applications, preventing DLL conflicts and other deployment nightmares.
-
-#### Supported Platforms
-Spoon IDE supports the following platforms for virtual application build, snapshotting, and execution:
-
-- Microsoft Windows 8.1
-- Microsoft Windows 8
-- Microsoft Windows Server 2012
-- Microsoft Windows 7
-- Microsoft Windows Server 2008, all editions
-- Microsoft Windows Server 2003, all editions
-- Microsoft Windows Vista, all editions
-- Microsoft Windows XP Professional
-- Microsoft Windows Embedded XP
-- Microsoft Windows 2000 Professional
-- Microsoft Windows 2000 Server
-
-Spoon IDE supports both 32- and 64-bit applications. Both 32-bit (under 32-bit mode) and 64-bit executables can be run on x64-based platforms.
-
-Spoon IDE supports these operating systems running within VMware and Microsoft hardware virtualization and hypervisor environments. Spoon IDE has limited support for the Windows Preinstallation Environment (WinPE), though certain applications (depending on operating system features unavailable in WinPE) may not function properly.
-
-**Note:** Spoon IDE does not support creation of 16-bit executables. To run 16-bit DOS applications, virtualize an appropriate emulator with the application and launch the application through the emulator.
-
-#### User Interface
-
 Using the Spoon IDE user interface enables you to configure the filesystem and registry of a virtual application, embed external runtimes and components, take application snapshots, and create Spoon Virtual Machine (SVM) or executable files. The primary interface consists of a ribbon bar along the top and several panes accessed by buttons on the left.
 
 **Items Located Above the Ribbon Bar**

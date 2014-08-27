@@ -38,7 +38,10 @@ When contributing to the docs on Spoonium, please take the following style guide
 
 	**Output**: `building "my image" from /path/to/spoon.me`
 
-2. 
+2. Always use `spoon` not `spn` in the command line documentation.
+3. All code blocks should be 'fenced' with 3 backticks (a la [GFM](http://github.com/github-flavored-markdown)). Inline code styles (i.e. this is a sample command: `spoon run`) only use 1 backtick. The syntax highlighting to use can be specified after the top 3 backticks (not available for inline code). 
+4. Inline paths should be **bolded**. --> Example: navigate to **C:\Users** 
+5. Use inline code styles sparingly. 
 
 ### Contributing 
 
