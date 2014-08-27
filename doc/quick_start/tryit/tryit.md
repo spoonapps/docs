@@ -7,12 +7,16 @@
 
 ### Get going
 
-1. Open a new command prompt, type `spoon`, and hit Enter. The help dialog should appear. Don't see the dialog? [Get help](http://support.spoonium.net).
-2. Log into the Spoonium Hub from the command prompt using your Spoonium username and password:
+Open a new command prompt and follow the example below.
 
-    `> spoon login username password`
-    
-    `Logged in as username`
+```
+#Check the help documentation
+> spoon
+
+#Log in to your Spoonium account
+> spoon login myusername mypassword
+
+```
 
 ### Pull an  Image
 
