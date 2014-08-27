@@ -49,35 +49,21 @@ A new command prompt should appear on your screen. This command prompt is runnin
 
 For this example, we'll clone a small, standalone web server from this Github repository: [https://github.com/rafaelsteil/simple-webserver](https://github.com/rafaelsteil/simple-webserver). 
 
-In the containerized command prompt, `cd` to the root `C:\` folder and create a new `java` folder, if one does not already exist. 
-<<<<<<< HEAD
-
 ```
-(08dd45e3) C:\Users\SpoonUser> cd C:\
+# Create and navigate to **C:\\java**
+(08dd45e3) C:\> mkdir java & cd java
 
-(08dd45e3) C:\> mkdir java
+# Clone the project
+(08dd45e3) C:\java> git clone https://github.com/rafaelsteil/simple-webserver.git
 
-# Clone the project into the **C:\\java** folder
+# Change directory to the base project directory
+(08dd45e3) C:\java> cd simple-webserver
 
-=======
-
-```
-# cd to the container's root directory
-(08dd45e3) C:\Users\SpoonUser> cd C:\
-
-# make a new folder for the project
-(08dd45e3) C:\> mkdir java 
-
-# clone project into the new folder
->>>>>>> 238207b27d99e980a14ddadac76de32e3ff99195
-(08dd45e3) C:\> git clone https://github.com/rafaelsteil/simple-webserver C:\java
-
-# The server can now be run from within the container
-
-(08dd45e3) > java -jar C:\java\SimpleWebServer.jar
+# Run the server from within the container
+(08dd45e3) C:\java\simple-webserver> java -jar SimpleWebServer.jar
 ```
 
-The server is now running on port 80 of your local machine. To confirm the server is running, open a web browser and visit **http://localhost** -- you should see a listing of all the files in the **C:\\java** folder of the container. 
+The server is now running on port 80 of your local machine. To confirm the server is running, open a web browser and visit **http://localhost/** -- you should see a listing of all the files in the **C:\\java** folder of the container. 
 
 ### Create an Image
 
