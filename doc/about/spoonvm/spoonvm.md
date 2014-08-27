@@ -1,6 +1,6 @@
 ## Virtual Machine
 
-The backbone of Spoonium is the **Spoon Virtual Machine**. It's a lightweight implementation of core operating system APIs, including the filesystem, registry, process, and threading subsystems, within the Windows user-mode space. Applications executing within the Spoon VM interact with a virtualized filesystem, registry, and process environment, rather than the host machine.
+The backbone of Spoonium is the **Spoon Virtual Machine**, a lightweight implementation of core operating system APIs, including the filesystem, registry, process, and threading subsystems. Applications executing within the Spoon VM interact with a virtualized filesystem, registry, and process environment, rather than the host machine.
 
 The virtualization engine handles requests within the VM internally or routes requests to the host device filesystem and registry if appropriate. It performs these actions according to the virtual application configuration.
 
