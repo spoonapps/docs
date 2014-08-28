@@ -157,7 +157,7 @@ When the image has finished uploading, `Push complete` will appear in the comman
 	Pushing image helloworld:head to spoonuser/helloworld
 	Push complete
 
-Once the `Push complete` message appears in your command prompt, the image is on the Spoonium Hub. You can view the image by going to http://spoonium.net/hub/[your username]/helloworld. 
+Once the `Push complete` message appears in your command prompt, the image is on the Spoonium Hub. You can view the image by going to http://spoonium.net/hub/[username]/helloworld. 
 
 If your account did not already have an existing repository named `helloworld`, Spoonium automatically created one and added the image to it.
 
