@@ -9,12 +9,13 @@
 
 Open a new command prompt and follow the example below.
 
+	#Check the help documentation
 <code>
-#Check the help documentation
-<span class="input">> spoon</span>
-
-#Log in to your Spoonium account
-<span class="input">> spoon login myusername mypassword</span>
+	<span class="input">> spoon</span>
+</code>
+<code>
+	#Log in to your Spoonium account
+	<span class="input">> spoon login myusername mypassword</span>
 </code>
 
 ### Pull an  Image
