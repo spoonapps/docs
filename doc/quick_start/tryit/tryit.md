@@ -87,29 +87,25 @@ Moving on...
 
 
 ```
-
-	# Create a new directory in our container with the `mkdir` command ("make directory").
-	# This directory will only be created *inside the container* and *not* on your local system. 
-	(87ddvf54) C:\>mkdir C:\spoonroot
-
+# Create a new directory in our container with the `mkdir` command ("make directory").
+# This directory will only be created *inside the container* and *not* on your local system. 
+(87ddvf54) C:\>mkdir C:\spoonroot
 ```
 
 ```
+# Navigate to that directory. 
+(87ddvf54) C:\> cd C:\spoonroot
 
-	# Navigate to that directory. 
-	(87ddvf54) C:\> cd C:\spoonroot
-
-	# To create a simple text file, pipe the output of an `echo` command to a file name.
-	(87ddvf54) C:\spoonroot> echo Hello World! > hello.txt
-
+# To create a simple text file, pipe the output of an `echo` command to a file name.
+(87ddvf54) C:\spoonroot> echo Hello World! > hello.txt
 ```
 
 
 ```
-
-	# Finally, close the command prompt, shutting down the container. 
-	(87ddvf54) C:\spoonroot> exit
-	87ddvf5455lp09xbenn71944c5dzzem5
+# Finally, close the command prompt, shutting down the container. 
+(87ddvf54) C:\spoonroot> exit
+87ddvf5455lp09xbenn71944c5dzzem5
+```
 
 #### Commit Changes and Push
 
