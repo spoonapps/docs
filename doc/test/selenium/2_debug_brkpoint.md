@@ -1,4 +1,4 @@
-## Debugging Tests
+### Debugging Tests
 
 Unlike other cloud-based testing services, Spoonium makes live debugging of your tests as easy as setting a breakpoint in your IDE. 
 

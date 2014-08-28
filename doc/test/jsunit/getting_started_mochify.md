@@ -1,4 +1,4 @@
-## Getting Started: Mocha/Mochify
+### Getting Started: Mocha/Mochify
 
 #### Already Using Mochify? 
 

@@ -88,13 +88,13 @@ sections:
 - display_name: JS Unit Testing
   ordering: 2
   pages: []
-- display_name: Manual Browser Testing
+- display_name: Test Reports
   ordering: 3
   pages: []
-- display_name: Test Reports
+- display_name: Testing with CI
   ordering: 4
   pages: []
-- display_name: Testing with CI
+- display_name: Manual Browser Testing
   ordering: 5
   pages: []
 - display_name: Nightly Builds (coming soon)

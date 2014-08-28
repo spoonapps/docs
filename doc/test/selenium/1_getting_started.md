@@ -1,4 +1,4 @@
-## Getting Started: Selenium
+## Selenium Testing
 
 Running your tests on Spoonium is almost exactly like running them on a local Selenium Grid. What does this mean for you?
 

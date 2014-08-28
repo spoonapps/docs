@@ -1,4 +1,4 @@
-## Integrating Spoonium with an Existing Grid
+### Integrating Spoonium with an Existing Grid
 
 If you or your development team already have an in-house Selenium Grid, you can use Spoonium to "fill in the gaps" in your Grid to support browsers that you may not have the capacity or hardware to host internally.
 

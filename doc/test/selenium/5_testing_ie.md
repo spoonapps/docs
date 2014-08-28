@@ -1,4 +1,4 @@
-## Testing Internet Explorer
+### Testing Internet Explorer
 
 When testing parallel instances of Internet Explorer on Spoonium, we recommend setting the following options in your test. 
 

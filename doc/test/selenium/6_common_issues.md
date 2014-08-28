@@ -1,4 +1,4 @@
-## Common Issues and Troubleshooting
+### Common Issues and Troubleshooting
 
 #### Cannot connect to the Spoonium Hub
 

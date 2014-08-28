@@ -1,4 +1,4 @@
-## Testing Internal Sites
+### Testing Internal Sites
 
 Testing internal websites with Spoonium is just as easy as testing public websites.
 

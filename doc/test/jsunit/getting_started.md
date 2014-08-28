@@ -1,4 +1,4 @@
-## Getting Started: JavaScript Unit Testing
+## JavaScript Unit Testing
 
 In addition to Selenium testing, Spoonium also offers cross-browser JavaScript unit testing. 
 

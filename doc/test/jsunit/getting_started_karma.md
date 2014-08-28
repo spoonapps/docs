@@ -1,4 +1,4 @@
-## Getting Started: Karma
+### Getting Started: Karma
 
 Karma runs on Node.js and is available as an NPM package. It can be installed through the Node Package Manager (npm) by running: 
 
