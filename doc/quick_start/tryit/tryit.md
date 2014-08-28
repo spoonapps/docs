@@ -9,54 +9,62 @@
 
 Open a new command prompt and follow the example below.
 
-	#Check the help documentation
+	# Check the help documentation
 	> spoon
 	
-	#Log in to your Spoonium account
+	# Log in to your Spoonium account
 	> spoon login myusername mypassword
 
 ### Pull an  Image
 
-We'll begin by pulling (downloading) an image from the Spoonium Hub. Images are the building blocks for everything in Spoonium. They serve as a base (read-only) filesystem and registry that your application will use while running in a container. 
+Images are the building blocks for everything in Spoonium. They serve as a base (read-only) filesystem and registry that your application will use while running in a container.
 
-Because you don't have any images on your local machine yet, you'll need to pull one from the remote registry at [http://spoonium.net/hub](http://spoonium.net/hub). We'll do this using the `spoon pull` command. 
+We'll begin by pulling (downloading) an image from our remote registry, the [Spoonium Hub](http://spoonium.net/hub).
 
-The `pull` command takes a single parameter: the name of the image you want to pull from the remote registry. "Pull" is really just a fancy word for "copy." When an image is "pulled" from a remote registry, a copy of that image is downloaded to your local machine. 
+Let's start by pulling the **spoonbrew/scratch** image (named after the repository owner, **spoonbrew**, and the image name, **scratch**). The **scratch** image is completely empty and roughly equivalent to a freshly-installed, clean computer. 
 
-Let's start simple by pulling the **spoonbrew/scratch** image. This image is completely empty: this is roughly equivalent to a freshly-installed, or "clean" computer. 
-
-	> spoon pull spoonbrew/scratch
-
-When the image has finished downloading, you will see `Pull complete` appear in the command prompt. 
-
-```Batchfile
-> spoon pull spoonbrew/scratch
-Pulling scratch:master from spoonbrew
-Pull complete
 ```
 
-**Note**: The **spoonbrew** user account is maintained by the staff at Spoon. It provides a number of pre-configured images for popular runtimes, frameworks, and tools such as .NET, Java, and NodeJS. 
+	# The `pull` command takes just a single parameter: the owner and name of the image.
+	> spoon pull spoonbrew/scratch
+
+	# When the image has finished downloading, you will see `Pull complete`.
+	> spoon pull spoonbrew/scratch
+	Pulling scratch:master from spoonbrew
+	Pull complete
+
+```
+
+**Note**: The **[spoonbrew](http://spoonium.net/hub/spoonbrew)** user account is maintained by the Spoon team. We provide a number of pre-configured images for popular runtimes, frameworks, and tools such as .NET, Java, and NodeJS. 
 
 ### Create a Container
 
-To create a new container, use the `spoon run` command. The `run` command will bootstrap a new container from the specified image. Any parameters specified after the `<image>` will be passed to the startup file. 
+A [container](http://spoonium.net/docs/about#Containers) is an isolated virtual environment consisting of an [image](http://spoonium.net/docs/about#Images) and the [Spoon VM](http://spoonium.net/docs/about#virtual+machine).
 
-For **spoonbrew/scratch**, the default startup file is **cmd.exe** (AKA "the command prompt"). We'll start our new container with a classic "Hello World!"
+Let's create a new container using the `spoon run` command, which will bootstrap a new container from any specified image. Any parameters specified after the `<image>` will be passed to the startup file. 
 
+For **spoonbrew/scratch**, the default startup file is **cmd.exe** (the command prompt). 
+
+```
+
+	# Start your new container with a classic "Hello World!"
 	> spoon run -a spoonbrew/scratch echo Hello World!
 
-You should see the following output: 
-
+	# You should see the following output: 
 	Hello World! 
 	25fdso8823fdsa734fdhasjd6588p098
 
-**Congratulations!** You just ran your first container! 
+```
+
+Congratulations! You just ran your first container! 
 
 Before we go any further, let's backtrack and go over what just happened.
 
-When the `run` command was executed, a new container was created and a new, containerized command prompt executed the command `echo Hello World!`. The command prompt process then dies and the container stops. When the container stops, it's 32-character ID is printed to the command prompt.
+1. When the `run` command was executed, a new container was created and a new, *containerized* command prompt executed the command `echo Hello World!`.
+2. The command prompt process then died and the container stopped.
+3. When the container stopped, its 32-character ID was printed to the new command prompt.
 
-In this case, we also specified the `-a` flag. This will `attach` the native command prompt to the virtual container's `STDIN`, `STDOUT`, and `STDERR` streams, redirecting them back to the native prompt. If you didn't `attach`, you'd see a new command prompt briefly appear on your screen. 
+In this case, we also specified the **`-a` flag**. This will `attach` the native command prompt to the virtual container's `STDIN`, `STDOUT`, and `STDERR` streams, redirecting them back to the native prompt. If you didn't `attach`, you would have seen a new command prompt briefly appear on your screen.
 
 ### Creating files within a container
 
