@@ -51,7 +51,7 @@ Save the script as a .me file and then use `spoon build` command:
 # New image is now saved in the local registry
 > spoon images
 
-NAME   TAG   ID            CREATED               SIZE
+NAME   Tag   ID            Created               Size
 7-zip  9.20  95sdf1245239  8/18/2014 2:21:32 PM  25.4MB
 ```
 
