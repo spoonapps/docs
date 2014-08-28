@@ -30,6 +30,7 @@ Let's start by pulling the **spoonbrew/scratch** image (named after the reposito
 
 	# When the image has finished downloading, you will see `Pull complete`.
 	> spoon pull spoonbrew/scratch
+
 	Pulling scratch:master from spoonbrew
 	Pull complete
 
@@ -107,19 +108,22 @@ To do create an image from an existing container, use the `spoon commit` command
 First, let's remind ourselves of the ID of the last container we ran. We can do this with the `spoon ps -l` command, which will return the metadata for the last container created on the local machine.
 
 	> spoon containers
-	ID            IMAGES                    COMMAND  CREATED
+	
+	ID            Images                    Command  Created
 	87ddvf5455lp  spoonbrew/scratch:master  cmd      7/31/2014 9:20:18 AM
 
 We can create a new image by from a container using the `spoon commit` command. The `commit` command takes two parameters: the ID of the container to commit, and the name for the new image you'd like to create. For this tutorial, we'll name the image hello-world.
 
 	> spoon commit 87ddv helloworld
+	
 	Commiting container 87ddvf5455lp to helloworld:HEAD
 	Commit complete
 
 You can view the newly created image by running the `spoon images` command. This command returns a table listing all of the images present on the local machine.
 
 	> spoon images
-	NAME                      SIZE   CREATED
+	
+	Name                      Size   Created
 	helloworld:head 		  0.1MB  7/31/2014 9:29:27 AM
 	spoonbrew/scratch:head 	  0.0MB  7/31/2014 9:20:26 AM
 
@@ -134,15 +138,17 @@ To upload the **helloworld** image, use the `spoon push` command.
 By default, images will be pushed to the user account of the logged-in user. 
 
 	> spoon push helloworld:head
+	
 	Pushing image helloworld:head to spoonuser/helloworld
 
 When the image has finished uploading, `Push complete` will appear in the command prompt. 
 
 	> spoon push helloworld:head
+	
 	Pushing image helloworld:head to spoonuser/helloworld
 	Push complete
 
-Once the `Push complete` message appears in your command prompt, the image is on the Spoonium Hub. You can view the image by going to http://spoonium.net/hub/[your username]/helloworld. 
+Once the `Push complete` message appears in your command prompt, the image is on the Spoonium Hub. You can view the image by going to http://spoonium.net/hub/[username]/helloworld. 
 
 If your account did not already have an existing repository named `helloworld`, Spoonium automatically created one and added the image to it.
 
