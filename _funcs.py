@@ -36,6 +36,12 @@ def process_html_for_spoonium(html):
     #find any tables and add class="doc-table"
     for table in soup.findAll('table'):
         table['class'] = 'doc-table'
+    #find all <pre><code> blocks without code highlighting and format for cmdline
+    code_blocks = [code.text
+                   for code in soup.findAll('code')
+                   if code.parent.name == 'pre']  # this logic is good
+    #TODO: parse the text for '#' and '>' and style lines appropriately
+    #trying to split the text into an array and process --> lose the assignment.. may need regex
     return str(soup)
 
 
