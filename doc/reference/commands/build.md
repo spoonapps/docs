@@ -46,12 +46,14 @@ where **env-vars.txt** has the contents:
 Builds can be given names with the **-n** flag. 
 
 	> spoon build -n=my-new-image C:\spoon.me
+
 	...
 	...
 	Output Image: my-new-image
 
 	# tags can be optionally added to the -n flag
 	> spoon build -n=my-new-image:1.0 C:\spoon.me
+	
 	...
 	...
 	Output Image: my-new-image:1.0

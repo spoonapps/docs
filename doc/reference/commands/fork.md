@@ -6,6 +6,7 @@ If the repository specified in the command does not already exist, a new one is 
 
 	# copy spoonbrew/node to a new repository
 	> spoon fork spoonbrew/node my-node
+	
 	Output image: my-node:head
 
 	# fork the image to the existing repository with a new tag

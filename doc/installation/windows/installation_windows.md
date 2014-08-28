@@ -7,7 +7,7 @@ Click [here](http://start.spoon.net/install) to download and run the installer. 
 To make sure everything is running correctly, open a command window and follow the example below. If you have any issues at all, please contact our [support team](http://support.spoonium.net/).
 
 ```
-#Check the spoon version
+# Check the spoon version
 > spoon version
 ```
 

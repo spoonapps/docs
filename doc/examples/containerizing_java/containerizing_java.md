@@ -24,7 +24,7 @@ Before beginning, we'll get all of the dependencies we'll need to run and contai
 Since we'll be pulling the sources into our container using Git, let's start the container and do all of our work in there. 
 
 ```
-#start the container
+# start the container
 > spoon run -w="C:\" -d --startupFile=cmd.exe spoonbrew/git;spoonbrew/jdk7
 
 # Create and navigate to C:\java

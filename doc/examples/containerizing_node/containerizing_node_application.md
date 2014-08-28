@@ -21,7 +21,7 @@ aIRChat has a few prerequisites. We'll need the Node.js image and the Git image,
 # Use the next command to verify the downloads
 > spoon images
 
-NAME  				SIZE 		CREATED
+Name  				Size 		Created
 spoonbrew/git 		32.1MB   	7/16/2014 3:44:27 PM
 spoonbrew/node		10.2MB   	7/16/2014 3:45:10 PM
 ```
@@ -89,7 +89,7 @@ To verify the container information, us the `containers` command.
 ```
 > spoon containers
 
-ID  								IMAGES 							COMMAND   						CREATED
+ID  								Images							Command   						Created
 1be755fcfafc4cf0b8e1c0667f6d13f0	spoonbrew/git,spoonbrew/node   	C:\Windows\System32\cmd.exe   	7/16/2014 3:54:59 PM
 ```
 
@@ -113,7 +113,7 @@ commit complete
 # Verify that your container was saved as a new image
 > spoon images
 
-NAME  				SIZE 			CREATED
+Name  				Size 			Created
 aIRChat 		    120.8MB  		7/16/2014 4:05:12 PM
 spoonbrew/git 		32.1MB   		7/16/2014 3:44:27 PM
 spoonbrew/node		10.2MB   		7/16/2014 3:45:10 PM
@@ -148,7 +148,7 @@ workdir C:\projects\airchat\content
 # install dependencies with node package manager
 cmd npm install
 
-#set startup file for the container
+# set startup file for the container
 boot file node app.js
 ```
 

@@ -10,6 +10,7 @@ The cp command copies a file or directory from one container to another. It can 
 
 	# container paths must be absolute
 	> spoon cp 2de7:file.txt C:\Users\Spoonuser
+	
 	ERROR
 
 	# native paths are relative to the current prompt

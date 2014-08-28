@@ -109,14 +109,14 @@ The Spoonium Hub determines which browser you would like to test against using t
 All of the major language bindings have a **DesiredCapabilities** (or **desired_capabilities** in the case of Python) class that have attributes for each browser. Change this attribute to change the browser the test will run against.
 
 ```java	
-//Java
+// Java
 DesiredCapabilities.firefox(); 				//Mozilla Firefox
 DesiredCapabilities.chrome();				//Google Chrome
 DesiredCapabilities.ie();					//Internet Explorer
 ```
 
 ```csharp
-//C#
+// C#
 DesiredCapabilities.Firefox();  
 DesiredCapabilities.Chrome();
 DesiredCapabilities.InternetExplorer();
@@ -132,12 +132,12 @@ desired_capabilities.INTERNETEXPLORER
 To specify a version to test against, add a **version** capability into your existing test capabilities using a property setter or a `setCapability`/`SetCapability` instance method. 
 
 ```java
-//Java
+// Java
 capabilities.setCapability("version", "30");		//test against version 30
 ```
 
 ```csharp
-//C#
+// C#
 capabilities.SetCapability("version", "30");
 ```
 

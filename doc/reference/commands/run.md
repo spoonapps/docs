@@ -67,6 +67,7 @@ If your container requires several environment variables, we recommend creating 
 Environment variables are always expanded on the host system before they are added to the container. 
 
 	> echo %PATH%
+	
 	C:\Windows\system32;C:\Windows;
 
 	> spoon run -e=%PATH%;C:\Users <image>

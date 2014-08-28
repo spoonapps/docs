@@ -34,6 +34,7 @@ If a file is changed, the diff results will show the a change in the folder, alo
 For example, if one added a file to a container at **C:\Users\Spoonuser\file.txt**: 
 
 	> spoon diff --subsystems=files <container id>
+
 	File system changes:
 	C C:\Users\Spoonuser
 	A C:\Users\Spoonuser\file.txt
