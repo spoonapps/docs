@@ -24,15 +24,13 @@ We'll begin by pulling (downloading) an image from our remote registry, the [Spo
 Let's start by pulling the **spoonbrew/scratch** image (named after the repository owner, **spoonbrew**, and the image name, **scratch**). The **scratch** image is completely empty and roughly equivalent to a freshly-installed, clean computer. 
 
 ```
+# The `pull` command takes just a single parameter: the owner and name of the image.
+> spoon pull spoonbrew/scratch
 
-	# The `pull` command takes just a single parameter: the owner and name of the image.
-	> spoon pull spoonbrew/scratch
-
-	# When the image has finished downloading, you will see `Pull complete`.
-	> spoon pull spoonbrew/scratch
-	Pulling scratch:master from spoonbrew
-	Pull complete
-
+# When the image has finished downloading, you will see `Pull complete`.
+> spoon pull spoonbrew/scratch
+Pulling scratch:master from spoonbrew
+Pull complete
 ```
 
 **Note**: The **[spoonbrew](http://spoonium.net/hub/spoonbrew)** user account is maintained by the Spoon team. We provide a number of pre-configured images for popular runtimes, frameworks, and tools such as .NET, Java, and NodeJS. 
@@ -46,14 +44,12 @@ Let's create a new container using the `spoon run` command, which will bootstrap
 For **spoonbrew/scratch**, the default startup file is **cmd.exe** (the command prompt). 
 
 ```
+# Start your new container with a classic "Hello World!"
+> spoon run -a spoonbrew/scratch echo Hello World!
 
-	# Start your new container with a classic "Hello World!"
-	> spoon run -a spoonbrew/scratch echo Hello World!
-
-	# You should see the following output: 
-	Hello World! 
-	25fdso8823fdsa734fdhasjd6588p098
-
+# You should see the following output: 
+Hello World! 
+25fdso8823fdsa734fdhasjd6588p098
 ```
 
 Congratulations! You just ran your first container! 
@@ -68,33 +64,50 @@ In this case, we also specified the **`-a` flag**. This will `attach` the native
 
 ### Creating files within a container
 
-In this example, we'll run a container and create a new file within that container. 
+In this example, we'll run a container and create a new text file within that container. 
 
-To begin, create a new container with the run command. This time, we just want to start a command prompt without executing a command.
-
-	> spoon run spoonbrew/scratch
+```
+# To begin, create a new containerized command prompt with the `run` command.
+> spoon run spoonbrew/scratch
+```
 
 You should see a new command prompt appear. This prompt is running in the container. 
 
-**Note**: An easy way to tell if a command prompt is containerized or not is by looking at the prompt. Spoon will prepend the first 8 characters of the container ID to the prompt whenever the command prompt is running inside a Spoon container. Whereas your native command prompt will look something like this:
+**Tip**: An easy way to tell if a command prompt is containerized is to look at the prompt. When the command prompt is running inside a Spoon container, Spoon will prepend the first 8 characters of the container ID to the prompt.
+
+So, your native command prompt will look like this:
 
 	C:\>
 
-a containerized command prompt will look like this: 
+But a containerized command prompt will look something like this: 
 
 	(87ddvf54) C:\>
 
-Now, let's create a new directory in our container with the `mkdir` command. This directory will only be created *inside the container* and not on your local system. 
+Moving on...
 
+
+```
+
+	# Create a new directory in our container with the `mkdir` command ("make directory").
+	# This directory will only be created *inside the container* and *not* on your local system. 
 	(87ddvf54) C:\>mkdir C:\spoonroot
 
-Now, navigate to that directory. To create a simple text file, pipe the output of an `echo` command to a file name (the file will be created for you, if it doesn't already exist). 
+```
 
+```
+
+	# Navigate to that directory. 
 	(87ddvf54) C:\> cd C:\spoonroot
+
+	# To create a simple text file, pipe the output of an `echo` command to a file name.
 	(87ddvf54) C:\spoonroot> echo Hello World! > hello.txt
 
-Finally, we'll close the command prompt, shutting down the container. 
+```
 
+
+```
+
+	# Finally, close the command prompt, shutting down the container. 
 	(87ddvf54) C:\spoonroot> exit
 	87ddvf5455lp09xbenn71944c5dzzem5
 
