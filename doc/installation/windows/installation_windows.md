@@ -1,4 +1,4 @@
-## Installing Spoonium on Windows
+## Windows
 
 The **Spoon Plugin** contains all the tools required for using Spoonium. 
 
