@@ -11,4 +11,4 @@ To make sure everything is running correctly, open a command window and follow t
 > spoon version
 ```
 
-If that works, go to the [quick start guide](/docs/quick+start).
+If that works, go to the [quick start guide](/docs/quick+start#try+it).

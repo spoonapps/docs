@@ -1,4 +1,4 @@
 ---
 topic: Deploy
-section: To Hub
+section: To the Hub
 ---

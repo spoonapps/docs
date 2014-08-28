@@ -1,4 +1,4 @@
 ---
 topic: Deploy
-section: Spoon Server (coming soon)
+section: To a Spoon Server
 ---

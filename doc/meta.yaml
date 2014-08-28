@@ -104,14 +104,23 @@ sections:
 display_name: Deploy
 ordering: 7
 sections:
-- display_name: With IDE
+- display_name: To the Hub
   ordering: 1
   pages: []
-- display_name: To Hub
+- display_name: To your Spoon.net account
   ordering: 2
   pages: []
-- display_name: Spoon Server (coming soon)
+- display_name: To a Spoon Server
   ordering: 3
+  pages: []
+- display_name: Portable Exe
+  ordering: 4
+  pages: []
+- display_name: MSI
+  ordering: 5
+  pages: []
+- display_name: Register to the shell
+  ordering: 6
   pages: []
 ---
 display_name: Samples

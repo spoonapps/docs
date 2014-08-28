@@ -1,4 +1,4 @@
 ---
 topic: Deploy
-section: With IDE
+section: MSI
 ---
