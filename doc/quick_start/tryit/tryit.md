@@ -8,15 +8,12 @@
 ### Get going
 
 Open a new command prompt and follow the example below.
+
 ````
 #Check the help documentation
-<code>
 <span class="input">> spoon</span>
-</code>
 #Log in to your Spoonium account
-<code>
 <span class="input">> spoon login myusername mypassword</span>
-</code>
 ````
 
 ### Pull an  Image
