@@ -11,6 +11,7 @@ Open a new command prompt and follow the example below.
 
 	#Check the help documentation
 	> spoon
+	
 	#Log in to your Spoonium account
 	> spoon login myusername mypassword
 
