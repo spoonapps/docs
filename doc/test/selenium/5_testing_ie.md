@@ -21,7 +21,7 @@ import org.openqa.selenium.ie;
 
 // Create DesiredCapabilities for ie
 DesiredCapabilities capabilities = DesiredCapabilities.ie();
-// force Windows to launch IE through Create Process API and in "private" browsing mode
+// Force Windows to launch IE through Create Process API and in "private" browsing mode
 capabilities.setCapability(InternetExplorerDriver.FORCE_CREATE_PROCESS, true);
 capabilities.setCapability(InternetExplorerdriver.IE_SWITCHES, "-private");
 
