@@ -2,12 +2,12 @@
 
 The rmi command removes an image, or images, from the local registry. 
 
-	# remove an image by specifying it by name
+	# Remove an image by specifying it by name
 	> spoon rmi my-image
 	
 	Image my-image:head was removed
 
-	# remove all images with the -a flag
+	# Remove all images with the -a flag
 	> spoon rmi -a
 	
 	All images have been removed

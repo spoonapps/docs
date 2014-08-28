@@ -4,14 +4,14 @@ The containers command lists all containers on the local machine.
 
 Command line flags for the `containers` flag serve to modify or filter the command's results. 
 
-	# only show most recently created container
+	# Only show most recently created container
 	> spoon containers -l
 
 	ID				Images				Command   	Created 			Status
 	--				------				-------		-------- 			------
 	2de7fdf613dd	spoonbrew/scratch	cmd.exe 	8/25/2014 5:47:36	Stopped
 
-	# show last 'n' created containers
+	# Show last 'n' created containers
 	> spoon containers -n=3
 
 	ID				Images				Command   	Created 			Status

@@ -2,7 +2,7 @@
 
 The images command lists all of the images present in the current user's local registry. 
 
-	# list all images in local registry
+	# List all images in local registry
 	> spoon images
 	
 	ID 			  Name  				Tag	 Created 				Size

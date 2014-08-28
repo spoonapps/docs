@@ -133,22 +133,22 @@ The above container creation and configuration can also be automated using a Spo
 Create a new text file and copy/paste this text:
 
 ```
-# specify project dependencies
+# Specify project dependencies
 from spoonbrew/git spoonbrew/node
 
-# create a new directory for the project
+# Create a new directory for the project
 cmd mkdir C:\projects\airchat
 
-# clone the Github repo
+# Clone the Github repo
 cmd git clone https://github.com/redwire/airchat C:\projects\airchat
 
-# set new working directory
+# Set new working directory
 workdir C:\projects\airchat\content
 
-# install dependencies with node package manager
+# Install dependencies with node package manager
 cmd npm install
 
-# set startup file for the container
+# Set startup file for the container
 boot file node app.js
 ```
 

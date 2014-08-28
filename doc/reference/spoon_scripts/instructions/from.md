@@ -11,7 +11,7 @@ Multiple images can be specified in a single from instruction by putting a space
 ```
 from <image 1> <image 2>
 
-# start container with git and node
+# Start container with git and node
 from spoonbrew/git spoonbrew/node
 ```
 

@@ -10,10 +10,10 @@ When importing external files into the Spoon registry, the filetype must be spec
 
 You can optionally specify a name to give the newly-imported image. 
 
-	# import a thinapp config
+	# Import a thinapp config
 	spoon import -n=old-thinapp-image thinapp C:\s\package.ini
 
-	# import a spoon image
+	# Import a spoon image
 	spoon import svm C:\s\old-image.svm
 
 **Spoon Virtual Application Studio** users, can use this command to import their existing components. 
