@@ -9,11 +9,12 @@
 
 Open a new command prompt and follow the example below.
 
-```#Check the help documentation```
-<span class="input">```> spoon```</span>
-```#Log in to your Spoonium account```
-<span class="input">```> spoon login myusername mypassword```</span>
-
+```
+#Check the help documentation
+<span class="input">> spoon</span>
+#Log in to your Spoonium account
+<span class="input">> spoon login myusername mypassword</span>
+```
 ### Pull an  Image
 
 We'll begin by pulling (downloading) an image from the Spoonium Hub. Images are the building blocks for everything in Spoonium. They serve as a base (read-only) filesystem and registry that your application will use while running in a container. 
