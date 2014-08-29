@@ -1,3 +1,3 @@
 ## Testing with CI
 
-<!-- TO DO -->
+Support for CI testing coming soon!
