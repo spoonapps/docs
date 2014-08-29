@@ -35,9 +35,7 @@ C:\>spoon run wget,7zip,node
 # When it's all done, `exit` the container.
 (c99f354f) C:\ghost>exit
 
-
 # Your native command prompt will show something like:
-
 C:\>spoon run wget,7zip,node
 
 c99f354fdf7847fe9be2261f8a475e15
