@@ -162,13 +162,3 @@ Once the `Push complete` message appears in your command prompt, the image is on
 Repository pages on Spoonium serve as complete version histories of different images, just like remote repositories in Git, and every Spoonium user has an unlimited number of public repositories.
 
 Public repositories are great for sharing work with others. They're a quick and easy access point for colleagues, collaborators, or end users to access, download, and run your project. Read more about repositories [here](http://spoonium.net/docs/hub#repositories).
-
-### Next Steps 
-
-Learn more about:
-
-- [Building containers and advanced Spoonium commands](/docs/build).
-- [Practical examples and use cases](/docs/samples), such as containerizing Java, Node, Python, and .NET projects. 
-
-
-Enjoy!
