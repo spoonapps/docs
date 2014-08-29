@@ -87,9 +87,9 @@ Back to the tutorial!
 
 ```
 # Make a new directory in our container with the `mkdir` command.
-
-# This directory will only be created *inside the container* and *not* on your local system. 
 (87ddvf54) C:\>mkdir C:\spoonroot
+
+# This directory will only be created *inside the container* and *not* on your local system.
 ```
 
 ```
@@ -118,11 +118,10 @@ Now it's time to memorialize and share your changes by creating a new image from
 # Bring up your full list of containers with `spoon containers`. Note your ID.
 > spoon containers
 	
-ID            IMAGES                    COMMAND  CREATED
+ID            Images                    Command  Created
 87ddvf5455lp  spoonbrew/scratch:master  cmd      7/31/2014 9:20:18 AM
 ```
-```
-# Create a new image from your container with `spoon commit` and two parameters:
+```# Create a new image from your container with `spoon commit` and two parameters:
 # 1) At least two digits of the container ID
 # 2) The name for your image ("helloworld")
 > spoon commit 87ddv helloworld
@@ -136,9 +135,9 @@ Commit complete
 # This returns a list of all images present on the local machine.
 > spoon images
 	
-NAME                      SIZE   CREATED
-helloworld:head 		  0.1MB  7/31/2014 9:29:27 AM
-spoonbrew/scratch:head 	  0.0MB  7/31/2014 9:20:26 AM
+Name                    Created					Size
+helloworld:head 		7/31/2014 9:29:27 AM	0.1MB
+spoonbrew/scratch:head  7/31/2014 9:20:26 AM	0.0MB
 ```
 
 ```
