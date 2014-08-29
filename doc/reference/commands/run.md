@@ -83,13 +83,59 @@ These diagnostic logs can later be viewed using the `spoon logs` command.
 
 #### Port Mapping
 
-By default, all network operations (opening/closing ports, for example) are passed through to the local machine. To remap container ports to other ports on the local machine, use the **-p** or **-P** flags. Specific protocols (tcp or udp) can be mapped by specifying a **/[protocol]** after the mapping. 
+By default, all network operations (opening/closing ports, for example) are passed through to the local machine. To remap container ports to other ports on the local machine, use the **--route-add** flag. Specific protocols (tcp or udp) can be mapped by specifying a **/[protocol]** after the mapping. If no protocol is specified, tcp is assumed.
 
-	# Map container port 8080 to local port 80
-	> spoon run -p=80:8080 <image>
+	# Map container tcp port 8080 to local port 80
+	> spoon run --route-add=80:8080 <image>
 
 	# Map udp traffic on container port 8080 to local port 80
-	> spoon run -p=80:8080/udp <image>
+	> spoon run --route-add=80:8080/udp <image>
 
-	# Map all container ports to random ports on the local machine
-	> spoon run -P <image>
+	# Map container tcp port 80 to random port on local machine
+	# The random port can be later queried using the netstat command
+	> spoon run --route-add=:80 <image>
+
+The default policy of allowing containers to bind to any ports on the local machine can be changed with the **--route-block** flag. It isolates all services bound to container ports on specified protocols (tcp or udp). They can only be opened using the **--route-add** flag.
+
+    # Isolate all tcp services of a container
+    > spoon run --route-block=tcp <image>
+    
+    # Isolate all tcp and udp services, but allow container tcp port 3486
+    # be bound to port 80 on local machine
+    > spoon run --route-block=tcp,udp --route-add=80:3486 <image>
+
+#### Adding Custom Name Resolution Entries
+
+All containers use name resolution provided by the host operating system. You can add specific name resolution overrides using the **--hosts** flag, in a manner similar to the `hosts` file of the operating system.
+
+    # Make name my-test-service resolve to whatever the name
+    # test-service-43 resolves
+    > spoon run --hosts=my-test-service:test-service-43 <image>
+    
+    # Make name mysite.net resolve to IPv4 address 127.0.0.1 and
+    # name ipv6.mysite.net resolve to IPv6 address ::1
+    > spoon run --hosts=127.0.0.1:mysite.net --hosts=::1:ipv6.mysite.net <image>
+
+#### Linking Containers Together
+
+If you decided to not expose any services running in a container to the public by specifying the **--route-block** flag and not **--route-add** flags, you may still want to be able to connect to the services in your container from the outside. This is where container linking is useful.
+
+When creating a container with the `spoon run` command, you can use the **--link** flag to link it to any existing containers and the new container will be able to connect to any services exposed by the linked containers. Such connection creates a parent-child relationship where the newly created container is the parent.
+
+With each link, an alias name must be specified. Name resolution overrides are added to the parent container so it can refer to its children by these names.
+
+
+##### Example
+
+First create two containers, each exposing web sites on private port 80, but with no services exposed outside the containers. Run them in detached mode.
+
+    > spoon run --route-block tcp,udp -d <image>
+    05bf1aa429204d1586487f4015e1428c
+    > spoon run --route-block tcp,udp -d <image>
+    94a38820b45443c9ac74792215e33a00
+
+Then create a web browser container linked to the previously created containers.
+
+    > spoon run --link 05bf:web1 --link 94a3:web2 myself/webbrowser http://web1 http://web2
+
+You will be able to browse websites served by the linked containers, even though they are hidden to the rest of the world.
