@@ -39,7 +39,7 @@ boot file %CD%\OwinHelloWorld.exe
 
 ### Integrate with MSBuild
 
-The Spoon CLI is accessible from any command prompt on the installed system and can be integrated into MSBuild or any other build system just like a native Windows utility. 
+The Spoon command-line interface is accessible from any command prompt on the installed system and can be integrated into MSBuild or any other build system just like a native Windows utility. 
 
 In this section, we'll show you how you can set up Spoon to automatically rebuild a project's image each time your project is rebuilt. In this tutorial, we'll be using Visual Studio/MSBuild, though similar principles could be applied to any other IDE or build system. 
 

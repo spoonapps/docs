@@ -15,7 +15,7 @@
 
 6. Choose the Location where the packaged applications will be placed.
 
-7. Choose the Output format of the application packages then click Next. For compatibility with CLI and the hub, choose Component.
+7. Choose the Output format of the application packages then click Next. For compatibility with the command-line interface and the hub, choose Component.
 
 8. A progress window displays while the selected applications are packaged. This process can take several minutes depending on the size and number of applications selected.
 
@@ -23,9 +23,9 @@
 
 Applications packaged with this method retain users settings that were in place at the time of the scan.
 
-**Optional**: Import to local registry using CLI
+**Optional**: Import to local registry using the command-line interface
 
-Images built with IDE can also be used with CLI and the hub.
+Images built with IDE can also be used with the command-line interface and the hub.
 
     # Import the image to your local registry
     > spoon import -n=desktopapp svm C:\path\to\app.svm

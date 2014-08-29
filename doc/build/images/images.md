@@ -57,7 +57,7 @@ Name   Tag   ID            Created               Size
 
 #### Building from a XAPPL File
 
-XAPPL files are static configuration files originally created using IDE that specify the files, registry keys, and virtual machine settings for an image. The CLI can also build images based on XAPPL configuration files using `spoon build` command.
+XAPPL files are static configuration files originally created using IDE that specify the files, registry keys, and virtual machine settings for an image. The command-line interface can also build images based on XAPPL configuration files using `spoon build` command.
 
 ```
 # Build an image and specify a name
