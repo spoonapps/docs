@@ -1,4 +1,4 @@
 ---
 topic: Deploy
-section: Portable Exe
+section: Portable EXE
 ---

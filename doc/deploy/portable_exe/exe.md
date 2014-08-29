@@ -1,4 +1,4 @@
-## Portable Exe
+## Portable EXE
 
 A popular option for organizations that have an existing endpoint management solution like LANDesk Management Suite &reg;, Microsoft System Center, or Novell ZENworks is to deploy containerized applications as standalone executables. These executables are built on the SVM architecture and work just like a container. 
 

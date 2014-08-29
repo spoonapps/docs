@@ -1,4 +1,4 @@
 ---
 topic: Build
-section: desktop scan with ide
+section: desktop scan
 ---

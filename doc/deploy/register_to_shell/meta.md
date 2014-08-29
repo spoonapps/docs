@@ -1,4 +1,4 @@
 ---
 topic: Deploy
-section: Register to the shell
+section: Shell Registration
 ---

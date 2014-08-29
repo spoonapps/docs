@@ -72,13 +72,13 @@ sections:
 - display_name: Working with Images
   ordering: 2
   pages: []
-- display_name: Working with IDE
+- display_name: Working with the IDE
   ordering: 3
   pages: []
-- display_name: Desktop Scan with IDE
+- display_name: Desktop Scan
   ordering: 4
   pages: []
-- display_name: Snapshotting with IDE
+- display_name: Snapshotting
   ordering: 5
   pages: []
 - display_name: Continuous Integration
@@ -88,19 +88,19 @@ sections:
 display_name: Test
 ordering: 6
 sections:
-- display_name: Selenium Testing
+- display_name: Manual Browser Testing
   ordering: 1
   pages: []
-- display_name: JS Unit Testing
+- display_name: Selenium Testing
   ordering: 2
   pages: []
-- display_name: Test Reports
+- display_name: JS Unit Testing
   ordering: 3
   pages: []
-- display_name: Testing with CI
+- display_name: Test Reports
   ordering: 4
   pages: []
-- display_name: Manual Browser Testing
+- display_name: Testing with CI
   ordering: 5
   pages: []
 - display_name: Nightly Builds (coming soon)
@@ -113,19 +113,19 @@ sections:
 - display_name: To the Hub
   ordering: 1
   pages: []
-- display_name: To your Spoon.net account
+- display_name: To Spoon.net
   ordering: 2
   pages: []
 - display_name: To a Spoon Server
   ordering: 3
   pages: []
-- display_name: Portable Exe
+- display_name: Portable EXE
   ordering: 4
   pages: []
 - display_name: MSI
   ordering: 5
   pages: []
-- display_name: Register to the shell
+- display_name: Shell Registration
   ordering: 6
   pages: []
 ---

@@ -1,4 +1,4 @@
 ---
 topic: Build
-section: working with ide
+section: working with the ide
 ---

@@ -1,4 +1,4 @@
-## Snapshotting with IDE
+## Snapshotting
 
 Many applications require combinations of filesystem and registry entries. To facilitate containerization of these applications, Spoon IDE can snapshot application installations and automatically configure them based on modifications made to the host system during setup.
 

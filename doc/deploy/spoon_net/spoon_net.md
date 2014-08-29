@@ -1,4 +1,4 @@
-## To your Spoon.net account
+## To Spoon.net
 
 The IDE provides a feature to deploy applications directly to your Spoon.net account. After completing the build process, see the [Build](/docs/build#working+with+ide) section for details, click on the **Publish to Spoon.net** option on the ribbon menu. 
 

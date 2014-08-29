@@ -1,4 +1,4 @@
-## Desktop Scan with IDE
+## Desktop Scan
 
 ### Running a Desktop Scan
 
