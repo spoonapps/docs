@@ -71,7 +71,7 @@ In this example, we'll run a container and create a new text file within that co
 
 You should see a new command prompt appear. This prompt is running in the container. 
 
-**Tip**: "Is my command prompt containerized, or not?" When the command prompt is running inside a Spoon container, you'll see the first 8 characters of the container ID in the prompt.
+**Tip**: "*Is my command prompt containerized, or not?*" When the command prompt is running inside a Spoon container, you'll see the first 8 characters of the container ID in the prompt.
 
 So, your native command prompt will look like this:
 
