@@ -9,6 +9,7 @@ In this walkthrough, we will go over how to manipulate containers for the specif
 3. Map ports between a container and the host
 
 ### Create a Ghost Image
+
 ```
 # Open a new command prompt
 	
@@ -125,28 +126,19 @@ C:\>spoon start eacc951825fb4892ae4663e7caf11d33
 Instead of dealing with a different config for your web application and having to figure out which one to use between production and test, you can use the port mapping feature to run multiple instances or without changing your config.
 
 ```
-spn run --route-add=8080:2368 ghost:0.5.1
-spn run --route-add=8081:2368 ghost:0.5.1
-spn run --route-add=8082:2368 ghost:0.5.1
+spoon run --route-add=8080:2368 ghost:0.5.1
+spoon run --route-add=8081:2368 ghost:0.5.1
+spoon run --route-add=8082:2368 ghost:0.5.1
 ```
 
 Using this set of commands, you will not have three instances of the ghost application. Each instance will be accessible at port 808x on the host system, but all three instances of the application will think they are accessed at port 2368 internally. This is also useful when you do not want to keep a different config, for let's say production and development if they have different ports.
-
-### DNS Virtualization -> for later with linking
-
-This is also useful when you do not want to keep a different config, for let's say production and development if they have different ports.
-
-```
-spn run --hosts=127.0.0.1:myghostblog.com ghost:0.5.1
-spn run --link=[ghost]:server firefox:31
-```
 
 ### Pulling it all together
 
 Combining these features together allows you to do powerful things, such as running multiple versions of web applications with the same database snapshot image.
 
 ```
-spn run --route-add=8080:2368 ghost:0.5.0,ghost-db
-spn run --route-add=8081:2368 ghost:0.5.1,ghost-db
-spn run --route-add=8082:2368 ghost:0.5.2,ghost-db
+spoon run --route-add=8080:2368 ghost:0.5.0,ghost-db
+spoon run --route-add=8081:2368 ghost:0.5.1,ghost-db
+spoon run --route-add=8082:2368 ghost:0.5.2,ghost-db
 ```
