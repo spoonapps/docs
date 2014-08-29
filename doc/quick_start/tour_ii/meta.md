@@ -1,4 +1,4 @@
 ---
 topic: quick start
-section: try it
+section: tour ii
 ---

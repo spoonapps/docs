@@ -5,8 +5,14 @@ sections:
 - display_name: What is Spoonium?
   ordering: 1
   pages: []
-- display_name: Try It
+- display_name: Tour I
+  ordering: 2
+  pages: []
+- display_name: Tour II
   ordering: 3
+  pages: []
+- display_name: Tour III
+  ordering: 4
   pages: []
 ---
 display_name: About
