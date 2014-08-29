@@ -1,4 +1,4 @@
-## Try It!
+## Tour I - Hello World!
 
 ### Installation
 
