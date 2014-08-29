@@ -2,7 +2,7 @@
 
 ### Installation
 
-1. Install and run the [Spoonium Plugin](http://start.spoon.net/install) to create, save, run, and ship application containers.
+1. To create, save, run, and ship containers, you'll need to install and run the [Spoonium Plugin](http://start.spoon.net/install) on any Windows machine or VM.
 2. [Create an account or log in](http://spoon.net/sso/spoonium.net/login).
 
 ### Get going
@@ -13,7 +13,7 @@ Open a new command prompt and follow the example below.
 	> spoon
 	
 	# Log in to your Spoonium account
-	> spoon login myusername mypassword
+	> spoon login username password
 
 ### Pull an  Image
 
@@ -29,6 +29,7 @@ Let's start by pulling the **spoonbrew/scratch** image (named after the reposito
 
 # When the image has finished downloading, you will see `Pull complete`.
 > spoon pull spoonbrew/scratch
+
 Pulling scratch:master from spoonbrew
 Pull complete
 ```
@@ -47,20 +48,17 @@ For **spoonbrew/scratch**, the default startup file is **cmd.exe** (the command 
 # Start your new container with a classic "Hello World!"
 > spoon run -a spoonbrew/scratch echo Hello World!
 
-# You should see the following output: 
 Hello World! 
+
+# Close that containerized command prompt.
+(25fdso88) C:\spoonroot> exit
+
+# Your container ID will appear in your remaining command prompt window. We'll talk more about that later.
+
 25fdso8823fdsa734fdhasjd6588p098
 ```
 
-Congratulations! You just ran your first container! 
-
-Before we go any further, let's backtrack and go over what just happened.
-
-1. When the `run` command was executed, a new container was created and a new, *containerized* command prompt executed the command `echo Hello World!`.
-2. The command prompt process then died and the container stopped.
-3. When the container stopped, its 32-character ID was printed to the new command prompt.
-
-In this case, we also specified the **`-a` flag**. This will `attach` the native command prompt to the virtual container's `STDIN`, `STDOUT`, and `STDERR` streams, redirecting them back to the native prompt. If you didn't `attach`, you would have seen a new command prompt briefly appear on your screen.
+Congratulations! You just ran your first container.
 
 ### Creating files within a container
 
@@ -87,7 +85,8 @@ Moving on...
 
 
 ```
-# Create a new directory in our container with the `mkdir` command ("make directory").
+# Make a new directory in our container with the `mkdir` command.
+
 # This directory will only be created *inside the container* and *not* on your local system. 
 (87ddvf54) C:\>mkdir C:\spoonroot
 ```
@@ -104,67 +103,64 @@ Moving on...
 ```
 # Finally, close the command prompt, shutting down the container. 
 (87ddvf54) C:\spoonroot> exit
+
+# Your container ID will appear in your remaining command prompt.
+
 87ddvf5455lp09xbenn71944c5dzzem5
 ```
 
 #### Commit Changes and Push
 
-Now it's time to memorialize your changes by creating a new image from the container.
+Now it's time to save and push your changes by creating a new image from the container.
 
-To do create an image from an existing container, use the `spoon commit` command. 
-
-First, let's remind ourselves of the ID of the last container we ran. We can do this with the `spoon ps -l` command, which will return the metadata for the last container created on the local machine.
-
+```
+# Identify your last container ID with the `ps -l` command, or bring up your full list of containers with `spoon containers`.
 	> spoon containers
+	
 	ID            IMAGES                    COMMAND  CREATED
 	87ddvf5455lp  spoonbrew/scratch:master  cmd      7/31/2014 9:20:18 AM
-
-We can create a new image by from a container using the `spoon commit` command. The `commit` command takes two parameters: the ID of the container to commit, and the name for the new image you'd like to create. For this tutorial, we'll name the image hello-world.
-
+```
+```
+# Create a new image from your container using the `spoon commit` command. The `commit` command takes two parameters: 1) at least two digits of the container ID you'd like to commit, and 2) the name for the new image you'd like to create ("helloworld" here). 
 	> spoon commit 87ddv helloworld
+	
 	Commiting container 87ddvf5455lp to helloworld:HEAD
 	Commit complete
+```
 
-You can view the newly created image by running the `spoon images` command. This command returns a table listing all of the images present on the local machine.
-
+```
+# View the newly created image with the `spoon images` command, which returns a list of all images present on the local machine.
 	> spoon images
+	
 	NAME                      SIZE   CREATED
 	helloworld:head 		  0.1MB  7/31/2014 9:29:27 AM
 	spoonbrew/scratch:head 	  0.0MB  7/31/2014 9:20:26 AM
+```
 
-We'll finish this tutorial by uploading the newly created image to the [Spoonium Hub](http://spoonium.net/hub). The Spoonium Hub functions similarly to a remote repository in Git – allowing your work to be accessed from any computer with access to the remote. All Spoonium accounts come with an unlimited number of public repositories. 
+```
+# Upload the **helloworld** image to the [Spoonium Hub](http://spoonium.net/hub) with the `spoon push` command. By default, pushed images will be added to the user account of the logged-in user. 
+	> spoon push helloworld
 
-**Note**: Private repositories can also be hosted on the Spoonium Hub. For more information, see [pricing](http://spoonium.net/pricing). 
-
-To upload the **helloworld** image, use the `spoon push` command. 
-
-	> spoon push helloworld:head
-
-By default, images will be pushed to the user account of the logged-in user. 
-
-	> spoon push helloworld:head
 	Pushing image helloworld:head to spoonuser/helloworld
 
-When the image has finished uploading, `Push complete` will appear in the command prompt. 
-
-	> spoon push helloworld:head
+# When the image has finished uploading, `Push complete` will appear in the command prompt. 
+	> spoon push helloworld
+	
 	Pushing image helloworld:head to spoonuser/helloworld
 	Push complete
+```
 
-Once the `Push complete` message appears in your command prompt, the image is on the Spoonium Hub. You can view the image by going to http://spoonium.net/hub/[your username]/helloworld. 
+Once the `Push complete` message appears in your command prompt, the image is on the [Spoonium Hub](http://spoonium.net/hub), which functions similarly to a remote repository in Git – it allows your work to be accessed from any computer with access to the remote. Every Spoonium user has an unlimited number of public repositories. You can view your new image by going to **http://spoonium.net/hub/[username]/helloworld**.
 
-If your account did not already have an existing repository named `helloworld`, Spoonium automatically created one and added the image to it.
+Repository pages on Spoonium serve as complete version histories of different images, just like remote repositories in Git.
 
-The repository page on Spoonium serves as a complete version history of an image. If you're familiar with remote repositories in Git, Spoonium is *very* similar. 
-
-Public repositories are great for sharing work with others or for providing a quick and easy access point for colleagues, collaborators, or even end-users to download and access and run your project from. 
+Public repositories are great for sharing work with others. They're a quick and easy access point for colleagues, collaborators, or end users to access, download, and run your project. Read more about repositories [here](http://spoonium.net/docs/hub#repositories).
 
 ### Next Steps 
 
 Learn more about:
 
 - [Building containers and advanced Spoonium commands](/docs/build).
-
 - [Practical examples and use cases](/docs/samples), such as containerizing Java, Node, Python, and .NET projects. 
 
 Enjoy!
