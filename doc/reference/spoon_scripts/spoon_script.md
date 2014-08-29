@@ -26,12 +26,12 @@ All scripts have an implicit `commit` at the end of the script. After the last i
 
 Comments are denoted by the `#` character. 
 
-	#this is a comment
+	# This is a comment
 
 Comments cannot be made inline with a command. Comments must be specified at the beginning of a line. 
 
 ```
-#this is a valid comment
+# This is a valid comment
 
-from spoonbrew/node  #this is not a valid comment
+from spoonbrew/node  # This is not a valid comment
 ```

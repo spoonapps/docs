@@ -12,11 +12,11 @@ Using this syntax, each command is executed in its own command prompt -- a new c
 For example, to read a file in the **C:\Spoon** directory: 
 
 ```
-# does not work
+# Does not work
 cmd cd C:\spoon
 cmd more text-file.txt
 
-# work!
+# Work!
 cmd cd C:\spoon & more text-file.txt
 ```
 

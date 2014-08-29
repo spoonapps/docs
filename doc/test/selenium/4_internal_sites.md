@@ -9,16 +9,16 @@ The security benefit of this is that no browser data or network traffic passes t
 Below is some example code demonstrating how you would run your test against an internal site running at **http://my-internal-server:8080**.
 
 ```java
-//Java
+// Java
 driver.navigate().to("http://my-internal-server:8080");
 ```
 
 ```csharp
-//C#
+// C#
 driver.Navigate().GoToUrl("http://my-internal-server:8080");
 ```
 
 ```python
-#Python
+# Python
 driver.get("http://my-internal-server:8080")
 ```

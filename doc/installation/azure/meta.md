@@ -1,4 +1,4 @@
 ---
 topic: Installation
-section: EC2 (coming soon)
+section: Azure (coming soon)
 ---

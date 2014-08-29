@@ -2,14 +2,16 @@
 
 The ps command returns a list of all the containerized processes running on the local machine. 
 
-	# view all processes running in containers
+	# View all processes running in containers
 	> spoon ps
+	
 	PID   Name     Container  	 User
 	---   ----	   --------- 	 ----
 	2252  cmd.exe  f1ea9fe59eeb  Administrator
 
-	# view the "long-format" results for additional information
+	# View the "long-format" results for additional information
 	> spoon ps -l
+	
 	PID   Name     Container  	 User	  		UTime	  KTime		Command
 	---   ----	   --------- 	 ---- 			----- 	  -----		-------
 	2252  cmd.exe  f1ea9fe59eeb  Administrator  00:01:05  00:01:10	"C:\Windows\system32\cmd.exe"
