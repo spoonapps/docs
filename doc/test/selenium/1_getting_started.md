@@ -1,5 +1,3 @@
-Spoonium leverages containerization to offer solutions for testing browsers, applications, and servers.
-
 ## Selenium Testing
 
 Spoonium offers a solution for automated browser testing by running [Selenium](http://seleniumhq.org) tests on a variety of browsers all on your local machine with minimal setup.
