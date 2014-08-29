@@ -2,7 +2,7 @@
 The checkout command restores any image from the history. 
 
 	# Checkout a old image by its id
-    >spoon checkout 73dfe6973074 restored-image
+    > spoon checkout 73dfe6973074 restored-image
     
     Restored the restored-image:head image
     
