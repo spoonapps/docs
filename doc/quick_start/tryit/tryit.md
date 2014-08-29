@@ -53,7 +53,8 @@ Hello World!
 # Close that containerized command prompt.
 (25fdso88) C:\spoonroot> exit
 
-# Your container ID will appear in your remaining command prompt window. We'll talk more about that later.
+# Your container ID will appear in your remaining command prompt window.
+# We'll talk more about that later.
 
 25fdso8823fdsa734fdhasjd6588p098
 ```
@@ -121,7 +122,9 @@ ID            IMAGES                    COMMAND  CREATED
 87ddvf5455lp  spoonbrew/scratch:master  cmd      7/31/2014 9:20:18 AM
 ```
 ```
-# Create a new image from your container with `spoon commit` and two parameters: at least two digits of the container ID, and the name for your image ("helloworld").
+# Create a new image from your container with `spoon commit` and two parameters:
+# 1) At least two digits of the container ID
+# 2) The name for your image ("helloworld")
 > spoon commit 87ddv helloworld
 	
 Commiting container 87ddvf5455lp to helloworld:HEAD
@@ -129,7 +132,8 @@ Commit complete
 ```
 
 ```
-# View the newly created image with the `spoon images` command, which returns a list of all images present on the local machine.
+# View the newly created image with the `spoon images` command.
+# This returns a list of all images present on the local machine.
 > spoon images
 	
 NAME                      SIZE   CREATED
@@ -138,7 +142,7 @@ spoonbrew/scratch:head 	  0.0MB  7/31/2014 9:20:26 AM
 ```
 
 ```
-# Upload the **helloworld** image to the Spoonium Hub with the `spoon push` command. By default, pushed images will be added to the user account of the logged-in user. 
+# Upload the **helloworld** image to the Spoonium Hub with the `spoon push` command.
 > spoon push helloworld
 
 Pushing image helloworld:head to spoonuser/helloworld
@@ -148,9 +152,11 @@ Pushing image helloworld:head to spoonuser/helloworld
 	
 Pushing image helloworld:head to spoonuser/helloworld
 Push complete
+
+# By default, pushed images will be added to the user account of the logged-in user.
 ```
 
-Once the `Push complete` message appears in your command prompt, the image is on the [Spoonium Hub](http://spoonium.net/hub), which functions similarly to a remote repository in Git - it allows your work to be accessed from any computer with access to the remote. You can view your new image by going to **http://spoonium.net/hub/[username]/helloworld**.
+Once the `Push complete` message appears in your command prompt, the image is on the [Spoonium Hub](http://spoonium.net/hub), which functions similarly to a remote repository in Git - it allows your work to be accessed from any computer with access to the remote. You can view your new image by going to https://spoonium.net/hub/[*username*]/helloworld.
 
 Repository pages on Spoonium serve as complete version histories of different images, just like remote repositories in Git, and every Spoonium user has an unlimited number of public repositories.
 
