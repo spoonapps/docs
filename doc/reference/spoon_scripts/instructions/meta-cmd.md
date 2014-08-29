@@ -15,9 +15,9 @@ The `meta` instruction sets container metadata value. Standard metadata properti
 Custom metadata can be specified using other name, value pairs. 
 
 ```
-# Add a title
+# add a title
 meta title application-name
 
-# Add custom metadata
+# add custom metadata
 meta internal-name new-name
 ```

@@ -1,5 +1,3 @@
-In this section you'll learn a variety of methods for managing and building containers and images with CLI and IDE. You'll also learn how to integrate containerization with your continuous integration server.
-
 ## Working with Containers
 
 ### Creating Containers

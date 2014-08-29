@@ -51,7 +51,7 @@ Save the script as a .me file and then use `spoon build` command:
 # New image is now saved in the local registry
 > spoon images
 
-Name   Tag   ID            Created               Size
+NAME   TAG   ID            CREATED               SIZE
 7-zip  9.20  95sdf1245239  8/18/2014 2:21:32 PM  25.4MB
 ```
 
@@ -101,7 +101,7 @@ Images can be forked using the `spoon fork` command. This creates a link to the 
 # Check the image
 > spoon images
 
-Name            Tag  ID            Created               Size
+NAME            TAG  ID            CREATED               SIZE
 account/image   head 14wed2165141  8/18/2014 1:55:23 PM  1.9MB
 
 # Fork to a new image name and tag
@@ -110,7 +110,7 @@ account/image   head 14wed2165141  8/18/2014 1:55:23 PM  1.9MB
 # New image is added
 > spoon images
 
-Name            Tag  ID            Created               Size
+NAME            TAG  ID            CREATED               SIZE
 account/image   head 14wed2165141  8/18/2014 1:55:23 PM  1.9MB
 tester/test1    1.0  14wed2165141  8/18/2014 1:55:23 PM  1.9MB
 ```
@@ -124,7 +124,7 @@ The `spoon tag` command can also retag images.
 # Check the tag
 > spoon images
 
-Name            Tag  ID            Created               Size
+NAME            TAG  ID            CREATED               SIZE
 account/image   head 14wed2165141  8/18/2014 1:55:23 PM  1.9MB
 tester/test1    2.0  14wed2165141  8/18/2014 1:55:23 PM  1.9MB
 ```

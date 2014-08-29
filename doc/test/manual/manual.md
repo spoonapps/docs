@@ -1,6 +1,6 @@
 ## Manual Browser Testing
 
-In addition to automated and unit testing, Spoonium offers 2 tools for manual browser testing.
+Spoonium offers 2 tools for manual browser testing. 
 
 <!--TODO: revise all this when the new templating goes into place for these tools -->
 

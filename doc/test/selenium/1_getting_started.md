@@ -1,10 +1,6 @@
-Spoonium leverages containerization to offer solutions for testing browsers, applications, and servers.
-
 ## Selenium Testing
 
-Spoonium offers a solution for automated browser testing by running [Selenium](http://seleniumhq.org) tests on a variety of browsers all on your local machine with minimal setup.
-
-Running your Selenium tests on Spoonium is almost exactly like running them on a local Selenium Grid. What does this mean for you?
+Running your tests on Spoonium is almost exactly like running them on a local Selenium Grid. What does this mean for you?
 
 1. Porting your tests to run on Spoonium requires very few changes.
 2. You can use native Selenium APIs - no extra dependencies or libraries to import. 
@@ -113,14 +109,14 @@ The Spoonium Hub determines which browser you would like to test against using t
 All of the major language bindings have a **DesiredCapabilities** (or **desired_capabilities** in the case of Python) class that have attributes for each browser. Change this attribute to change the browser the test will run against.
 
 ```java	
-// Java
+//Java
 DesiredCapabilities.firefox(); 				//Mozilla Firefox
 DesiredCapabilities.chrome();				//Google Chrome
 DesiredCapabilities.ie();					//Internet Explorer
 ```
 
 ```csharp
-// C#
+//C#
 DesiredCapabilities.Firefox();  
 DesiredCapabilities.Chrome();
 DesiredCapabilities.InternetExplorer();
@@ -136,12 +132,12 @@ desired_capabilities.INTERNETEXPLORER
 To specify a version to test against, add a **version** capability into your existing test capabilities using a property setter or a `setCapability`/`SetCapability` instance method. 
 
 ```java
-// Java
+//Java
 capabilities.setCapability("version", "30");		//test against version 30
 ```
 
 ```csharp
-// C#
+//C#
 capabilities.SetCapability("version", "30");
 ```
 

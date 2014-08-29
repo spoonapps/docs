@@ -8,8 +8,8 @@ The hosts instruction modifies host name resolution within a container. The synt
 
 This setting will then be persisted to the constructed image so that any containers created from that image will have these DNS settings applied. 
 
-	# Make the loopback ip resolve to mydomain.net
+	# make the loopback ip resolve to mydomain.net
 	hosts 127.0.0.1 mydomain.net
 
-	# Redirect requests google.com to localhost
+	# redirect requests google.com to localhost
 	hosts google.com localhost

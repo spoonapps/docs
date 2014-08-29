@@ -24,16 +24,16 @@ To build the image, we'll construct a Spoon script. The script should take the c
 Begin by creating an empty text file named **spoon.me** in the project's root directory.
 
 ```
-# Should use the relevant version of .NET
+#should use the relevant version of .NET
 FROM spoonbrew/dotNet:4.0.3
 
-# Make a new directory in the container for build outputs
+#make a new directory in the container for build outputs
 cmd mkdir C:\server
 
-# Copy files from build output 
+#copy files from build output 
 cmd robocopy %CD%\bin\Release C:\server
 
-# Set the startup file for the image to the executable
+#set the startup file for the image to the executable
 boot file %CD%\OwinHelloWorld.exe
 ```
 

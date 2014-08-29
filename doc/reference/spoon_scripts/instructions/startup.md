@@ -14,7 +14,7 @@ The startup file instruction will accept parameters as a space-delimited list or
 If parameters are specified as a space-delimited list, the first parameter is the startup command and all subsequent parameters are parameters that will be passed to the startup command. When specified in this manner, commands are interpreted by the Windows shell. 
 
 ```
-# Hello world is passed to the 'echo' command
+# hello world is passed to the 'echo' command
 startup file echo hello world
 ```
 

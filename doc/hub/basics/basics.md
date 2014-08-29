@@ -8,8 +8,8 @@ All Spoonium accounts come with unlimited public repositories on the Spoonium Hu
 
 Organization accounts are available as a [free upgrade](/pricing) for groups of collaborators working together on any number of projects.
 
-Organization homepages are located at **http://spoonium.net/orgs/[org name]** and list all of the organization's members and repositories. 
+Organization homepages are located at **http://spoonium.net/orgs/[your org name]** and list all of the organization's members and repositories. 
 
-Whichever account creates the organization is the **owner**. Owners can add or remove other users and manage the organization's subscription. These actions can be done from the organization's setting page, located at **http://spoonium.net/orgs/[org name]/settings**. 
+Whichever account creates the organization is the **owner**. Owners can add or remove other users and manage the organization's subscription. These actions can be done from the organization's setting page, located at **http://spoonium.net/orgs/[your org name]/settings**. 
 
 Similar to individual accounts, organizations may host unlimited public repositories on the Spoonium Hub. Private repositories are available for organizations with [paid plans](/pricing). 

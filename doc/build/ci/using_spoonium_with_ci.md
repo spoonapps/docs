@@ -21,7 +21,7 @@ FROM spoonbrew/node spoonbrew/git
 CMD mkdir c:\root
 CMD git clone https://github.com/project/repo c:\root
 
-# Install Node.js depencies 
+#  Install Node.js depencies 
 CMD cd c:\root\server & npm install
 ```
 

@@ -2,25 +2,25 @@
 
 The run command creates new containers.
 
-	# Create a container using the spoonbrew/apache image
+	# create a container using the spoonbrew/apache image
 	> spoon run spoonbrew/apache
 
-	# Create a container with apache and mysql
+	# create a container with apache and mysql
 	> spoon run spoonbrew/apache;spoonbrew/mysql
 
 Containers are started with the startup file specified in the base image. If a startup file is not set in the base image, the default of `%COMSPEC% /k` is applied. 
 	
-	# Default startup file is used to start container
+	# default startup file is used to start container
 	> spoon run spoonbrew/jdk
 
-	# Override the startup file to use the command prompt
+	# override the startup file to use the command prompt
 	> spoon --startupFile=cmd.exe run spoonbrew/jdk
 
 When passing arguments to a startupfile or command, we recommend separating these arguments from the rest of the command with a **--**. Arguments specified after a **--** mark are passed directly to the startup file/command.
 
 If a **--** mark is not used, any argument matching a run command flag will be interpreted by Spoon, which may lead to unexpected behavior. 
 
-    # Spoon will interpret the /d flag and execute a container in detached mode
+    # spoon will interpret the /d flag and execute a container in detached mode
     > spoon run spoonbrew/scratch /d
     
     # /d flag is passed to cmd.exe, disabling execution of AutoRun commands from the registry
@@ -28,10 +28,10 @@ If a **--** mark is not used, any argument matching a run command flag will be i
 
 A container's standard streams (stdin/out/err) can be redirected to either the current command prompt or the background using the **--attach** and **--detach** flags. 
 
-	# Redict standard streams to current command prompt
+	# redict standard streams to current command prompt
 	> spoon run -a <image>
 
-	# Detach the container from the native prompt
+	# detach the container from the native prompt
 	> spoon run -d <image>
 
 Detaching from a container will allow further work to be done in the native prompt while the container is running.  
@@ -52,10 +52,10 @@ The initial working directory for the container can be set with **-w** flag.
 
 Environment variables can be added to a container with the **-e** or **--env-file** flags. 
 
-	# Add environment variable 'foo' with value 'bar'
+	# add environment variable 'foo' with value 'bar'
 	> spoon run -e=foo=bar <image>
 
-	# Specify multiple env vars with multiple flags
+	# specify multiple env vars with multiple flags
 	> spoon run -e=foo=bar -e=x=2 <image>
 
 If your container requires several environment variables, we recommend creating an **env-file**, a line-delimited text file that lists all the environment variables to add to the container. The example file, below, lists 3 environment variables: 
@@ -67,7 +67,6 @@ If your container requires several environment variables, we recommend creating 
 Environment variables are always expanded on the host system before they are added to the container. 
 
 	> echo %PATH%
-	
 	C:\Windows\system32;C:\Windows;
 
 	> spoon run -e=%PATH%;C:\Users <image>
@@ -85,11 +84,11 @@ These diagnostic logs can later be viewed using the `spoon logs` command.
 
 By default, all network operations (opening/closing ports, for example) are passed through to the local machine. To remap container ports to other ports on the local machine, use the **-p** or **-P** flags. Specific protocols (tcp or udp) can be mapped by specifying a **/[protocol]** after the mapping. 
 
-	# Map container port 8080 to local port 80
+	# map container port 8080 to local port 80
 	> spoon run -p=80:8080 <image>
 
-	# Map udp traffic on container port 8080 to local port 80
+	# map udp traffic on container port 8080 to local port 80
 	> spoon run -p=80:8080/udp <image>
 
-	# Map all container ports to random ports on the local machine
+	# map all container ports to random ports on the local machine
 	> spoon run -P <image>
