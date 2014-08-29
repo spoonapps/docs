@@ -8,7 +8,7 @@ sections:
 - display_name: Tour I - Hello World
   ordering: 2
   pages: []
-- display_name: Tour II - Web Applications
+- display_name: Tour II - A Web Application
   ordering: 3
   pages: []
 - display_name: Tour III - Automated Testing

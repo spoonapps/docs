@@ -1,4 +1,4 @@
 ---
 topic: quick start
-section: tour ii - web applications
+section: tour ii - a web application
 ---
