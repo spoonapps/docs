@@ -32,3 +32,12 @@ By default, the table that is returned by the containers command is space-format
 Data in the table returned by the containers command is, by default, truncated so that it prints nicely and is easily readable in a command prompt. If you wish to view the untruncated data in each column, specify the `--no-trunc` flag. 
 
 	> spoon containers --no-trunc
+
+The `--no-trunc` flag includes additional columns in the output. Namely, **Ports** and **Settings** columns, as seen below.
+
+	ID                                Images       Command  Created               Status   Ports      Settings
+	--                                ------       -------  -------               ------   -----      --------
+	df6ac93f8b6147b986d4c7849c3dcef0  ghost:0.5.1           8/26/2014 3:27:17 PM  Running  8080:2368  SpawnVm
+	d6e44ae706c44ed1bd75a0830bed3239  ghost:0.5.1           8/26/2014 3:22:14 PM  Stopped             SpawnVm
+
+The **Ports** column contains active port mappings, like the `spoon netstat` command.
