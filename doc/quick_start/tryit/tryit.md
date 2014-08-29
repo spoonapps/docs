@@ -71,7 +71,7 @@ In this example, we'll run a container and create a new text file within that co
 
 You should see a new command prompt appear. This prompt is running in the container. 
 
-**Tip**: An easy way to tell if a command prompt is containerized is to look at the prompt. When the command prompt is running inside a Spoon container, Spoon will prepend the first 8 characters of the container ID to the prompt.
+**Tip**: "Is my command prompt containerized, or not?" When the command prompt is running inside a Spoon container, you'll see the first 8 characters of the container ID in the prompt.
 
 So, your native command prompt will look like this:
 
@@ -81,7 +81,7 @@ But a containerized command prompt will look something like this:
 
 	(87ddvf54) C:\>
 
-Moving on...
+Back to the tutorial :)
 
 
 ```
@@ -111,17 +111,17 @@ Moving on...
 
 #### Commit Changes and Push
 
-Now it's time to save and push your changes by creating a new image from the container.
+Now it's time to memorialize your changes by creating a new image from the container.
 
 ```
-# Identify your last container ID with the `ps -l` command, or bring up your full list of containers with `spoon containers`.
+# Bring up your full list of containers with `spoon containers`. Note your ID.
 	> spoon containers
 	
 	ID            IMAGES                    COMMAND  CREATED
 	87ddvf5455lp  spoonbrew/scratch:master  cmd      7/31/2014 9:20:18 AM
 ```
 ```
-# Create a new image from your container using the `spoon commit` command. The `commit` command takes two parameters: 1) at least two digits of the container ID you'd like to commit, and 2) the name for the new image you'd like to create ("helloworld" here). 
+# Create a new image from your container with `spoon commit` and two parameters: at least two digits of the container ID, and the name for your image ("helloworld").
 	> spoon commit 87ddv helloworld
 	
 	Commiting container 87ddvf5455lp to helloworld:HEAD
@@ -138,7 +138,7 @@ Now it's time to save and push your changes by creating a new image from the con
 ```
 
 ```
-# Upload the **helloworld** image to the [Spoonium Hub](http://spoonium.net/hub) with the `spoon push` command. By default, pushed images will be added to the user account of the logged-in user. 
+# Upload the **helloworld** image to the Spoonium Hub with the `spoon push` command. By default, pushed images will be added to the user account of the logged-in user. 
 	> spoon push helloworld
 
 	Pushing image helloworld:head to spoonuser/helloworld
@@ -150,9 +150,9 @@ Now it's time to save and push your changes by creating a new image from the con
 	Push complete
 ```
 
-Once the `Push complete` message appears in your command prompt, the image is on the [Spoonium Hub](http://spoonium.net/hub), which functions similarly to a remote repository in Git – it allows your work to be accessed from any computer with access to the remote. Every Spoonium user has an unlimited number of public repositories. You can view your new image by going to **http://spoonium.net/hub/[username]/helloworld**.
+Once the `Push complete` message appears in your command prompt, the image is on the [Spoonium Hub](http://spoonium.net/hub), which functions similarly to a remote repository in Git - it allows your work to be accessed from any computer with access to the remote. You can view your new image by going to **http://spoonium.net/hub/[username]/helloworld**.
 
-Repository pages on Spoonium serve as complete version histories of different images, just like remote repositories in Git.
+Repository pages on Spoonium serve as complete version histories of different images, just like remote repositories in Git, and every Spoonium user has an unlimited number of public repositories.
 
 Public repositories are great for sharing work with others. They're a quick and easy access point for colleagues, collaborators, or end users to access, download, and run your project. Read more about repositories [here](http://spoonium.net/docs/hub#repositories).
 
