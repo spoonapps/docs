@@ -5,13 +5,13 @@ sections:
 - display_name: What is Spoonium?
   ordering: 1
   pages: []
-- display_name: Tour I
+- display_name: Tour I - Hello World
   ordering: 2
   pages: []
-- display_name: Tour II
+- display_name: Tour II - Web Applications
   ordering: 3
   pages: []
-- display_name: Tour III
+- display_name: Tour III - Automated Testing
   ordering: 4
   pages: []
 ---

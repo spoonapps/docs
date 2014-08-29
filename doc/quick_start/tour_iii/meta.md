@@ -1,4 +1,4 @@
 ---
 topic: quick start
-section: tour iii
+section: tour iii - automated testing
 ---
