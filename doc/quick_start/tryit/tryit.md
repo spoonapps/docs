@@ -121,7 +121,8 @@ Now it's time to memorialize and share your changes by creating a new image from
 ID            Images                    Command  Created
 87ddvf5455lp  spoonbrew/scratch:master  cmd      7/31/2014 9:20:18 AM
 ```
-```# Create a new image from your container with `spoon commit` and two parameters:
+```
+# Create a new image from your container with `spoon commit` and two parameters:
 # 1) At least two digits of the container ID
 # 2) The name for your image ("helloworld")
 > spoon commit 87ddv helloworld
