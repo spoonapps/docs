@@ -33,26 +33,41 @@ The build folder will also contain a new "docs.html" file in the root of the /bu
 
 When contributing to the docs on Spoonium, please take the following style guidelines into consideration. 
 
-**Code Styling**
+**Code and Command-line Styling**
 
-1. When mocking the command prompt, start the "input" line with a > and a space before the command. See example, below
+- Command-line comment: All comments should have a # followed by a space and the first word should be capitalized.
 
-	**Input**: `> spoon build -n="my image" /path/to/spoon.me`
+```
+# this is formatted properly :)
 
-	**Output**: `building "my image" from /path/to/spoon.me`
+#this is not :( 
+```
 
-2. Always use `spoon` not `spn` in the command line documentation.
-3. All code blocks should be 'fenced' with 3 backticks (a la [GFM](http://github.com/github-flavored-markdown)). Inline code styles (i.e. this is a sample command: `spoon run`) only use 1 backtick. The syntax highlighting to use can be specified after the top 3 backticks (not available for inline code). 
-5. Use inline code styles sparingly. 
-6. Use the **#** character to denote comments. Always put a space between the **#** and you comment
+- Command-line input
 
-	# this is formatted properly :)
-	#this is not :( 
+```
+> spoon build -n="my image" /path/to/spoon.me
+```
+
+- Command-line output
+
+
+- Command-line spacing
+
+
+
+```
+building "my image" from /path/to/spoon.me
+```
+
+- Always use `spoon` not `spn` in the command line documentation.
+- All code blocks should be 'fenced' with 3 backticks (a la [GFM](http://github.com/github-flavored-markdown)). Inline code styles (i.e. this is a sample command: `spoon run`) only use 1 backtick. The syntax highlighting to use can be specified after the top 3 backticks (not available for inline code). 
+- Use inline code styles sparingly. 
 
 **Other Styling**
 
-1. Inline paths should be **bolded**. --> Example: navigate to **C:\Users** 
-2. Internal links to other sections of the doc should be relative paths
+- Inline paths should be **bolded**. --> Example: navigate to **C:\Users** 
+- Internal links to other sections of the doc should be relative paths
 	* Other doc links: /docs/[topic]#[section]
 	* To the hub: /hub
 	* To contact page: /contact
