@@ -6,7 +6,7 @@ The run command creates new containers.
 	> spoon run spoonbrew/apache
 
 	# Create a container with apache and mysql
-	> spoon run spoonbrew/apache;spoonbrew/mysql
+	> spoon run spoonbrew/apache,spoonbrew/mysql
 
 Containers are started with the startup file specified in the base image. If a startup file is not set in the base image, the default of `%COMSPEC% /k` is applied. 
 	

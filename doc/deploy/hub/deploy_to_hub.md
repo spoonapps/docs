@@ -12,7 +12,7 @@ Before pushing a container to the Hub, it needs to be committed to the local reg
 
 ```
 # Create a container with Java, Node and Git support
-> spoon run spoonbrew/jdk;spoonbrew/node;spoonbrew/git
+> spoon run spoonbrew/jdk,spoonbrew/node,spoonbrew/git
 
 # Shut down the container by typing exit into the new command window
 > exit

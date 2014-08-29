@@ -29,7 +29,7 @@ spoonbrew/node		10.2MB   	7/16/2014 3:45:10 PM
 Now start a new container using the `spoon run` command, specifying the Node.js and Gt images and the start-up file `cmd` to launch the container in a new command window.
 
 ```
-> spoon run git;node cmd
+> spoon run git,node cmd
 ```
 
 ### Configure aIRChat
