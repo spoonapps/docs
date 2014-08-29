@@ -1,6 +1,10 @@
+Spoonium leverages containerization to offer solutions for testing browsers, applications, and servers.
+
 ## Selenium Testing
 
-Running your tests on Spoonium is almost exactly like running them on a local Selenium Grid. What does this mean for you?
+Spoonium offers a solution for automated browser testing by running [Selenium](http://seleniumhq.org) tests on a variety of browsers all on your local machine with minimal setup.
+
+Running your Selenium tests on Spoonium is almost exactly like running them on a local Selenium Grid. What does this mean for you?
 
 1. Porting your tests to run on Spoonium requires very few changes.
 2. You can use native Selenium APIs - no extra dependencies or libraries to import. 
