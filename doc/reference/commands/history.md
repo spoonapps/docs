@@ -1,8 +1,9 @@
 ### history
 The history command lists all images used in the past. The most used recent images are listed first.
 
-    # list the recently used images
-    spoon history
+    # List the recently used images
+    > spoon history
+    
     ID            Last used             Name            Tag
     --            ---------             ----            ---
     73dfe6973074  8/29/2014 4:51:08 PM  spoonbrew/node  head
