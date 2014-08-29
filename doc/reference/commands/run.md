@@ -130,8 +130,11 @@ With each link, an alias name must be specified. Name resolution overrides are a
 First create two containers, each exposing web sites on private port 80, but with no services exposed outside the containers. Run them in detached mode.
 
     > spoon run --route-block tcp,udp -d <image>
+    
     05bf1aa429204d1586487f4015e1428c
+
     > spoon run --route-block tcp,udp -d <image>
+    
     94a38820b45443c9ac74792215e33a00
 
 Then create a web browser container linked to the previously created containers.
