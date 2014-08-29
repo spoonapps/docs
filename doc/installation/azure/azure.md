@@ -1,1 +1,3 @@
-## Azure (coming soon)
+## Azure
+
+Azure support is coming soon!
