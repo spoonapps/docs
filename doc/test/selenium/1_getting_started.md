@@ -114,9 +114,9 @@ All of the major language bindings have a **DesiredCapabilities** (or **desired_
 
 ```java	
 // Java
-DesiredCapabilities.firefox(); 				//Mozilla Firefox
-DesiredCapabilities.chrome();				//Google Chrome
-DesiredCapabilities.ie();					//Internet Explorer
+DesiredCapabilities.firefox(); 				// Mozilla Firefox
+DesiredCapabilities.chrome();				// Google Chrome
+DesiredCapabilities.ie();					// Internet Explorer
 ```
 
 ```csharp
@@ -137,7 +137,7 @@ To specify a version to test against, add a **version** capability into your exi
 
 ```java
 // Java
-capabilities.setCapability("version", "30");		//test against version 30
+capabilities.setCapability("version", "30");		// Test against version 30
 ```
 
 ```csharp
