@@ -58,13 +58,13 @@ A new command prompt should appear with a modified prompt. Any commands to confi
 Next, we'll configure the container by installing `pip` and `Flask` and adding the `hello.py` file. From the containerized command prompt: 
 
 ```
-# install pip
+# Install pip
 > python \path\to\get-pip.py
 
-# install Flask
+# Install Flask
 > pip install Flask
 
-# copy hello.py into the container
+# Copy hello.py into the container
 > mkdir C:\container-flask
 > copy C:\flaskapp\hello.py C:\container-flask
 ```

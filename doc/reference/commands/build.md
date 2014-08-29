@@ -46,12 +46,14 @@ where **env-vars.txt** has the contents:
 Builds can be given names with the **-n** flag. 
 
 	> spoon build -n=my-new-image C:\spoon.me
+
 	...
 	...
 	Output Image: my-new-image
 
-	# tags can be optionally added to the -n flag
+	# Tags can be optionally added to the -n flag
 	> spoon build -n=my-new-image:1.0 C:\spoon.me
+	
 	...
 	...
 	Output Image: my-new-image:1.0
@@ -59,7 +61,7 @@ Builds can be given names with the **-n** flag.
 
 By default, the build command will create the intermediate container and output image using the latest version of the **Spoon VM**. To use a legacy version, specify the version number you wish to use with the `--xvm` flag. 
 
-	# build the image using version 11.6.205 of the Spoon VM
+	# Build the image using version 11.6.205 of the Spoon VM
 	> spoon build --xvm=11.6.205 C:\spoon.me 
 
 The working directory inside the container can be specified with the **-w** flag. This flag may be overridden by a **workdir**  instructions in a Spoonscript.
