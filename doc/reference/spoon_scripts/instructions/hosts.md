@@ -11,5 +11,5 @@ This setting will then be persisted to the constructed image so that any contain
 	# Make the loopback ip resolve to mydomain.net
 	hosts 127.0.0.1 mydomain.net
 
-	# Redirect requests google.com to localhost
-	hosts google.com localhost
+	# Redirect requests to google.com to localhost
+	hosts localhost google.com
