@@ -1,6 +1,6 @@
 ## What is Spoonium?
 
-Spoonium is a Windows containerization platform for developers and sysadmins to build, test, and deploy applications. Containerized ("Spooned") applications run exactly the same way no matter the underlying infrastructure - eliminating installs, conflicts, breaks, and dependencies.
+Spoonium is a platform for developers and sysadmins to build, test, and deploy Windows applications in portable containers. Containerized ("Spooned") applications run exactly the same way no matter the underlying infrastructure - eliminating installs, conflicts, breaks, and dependencies.
 
 #### Made for Developers
 

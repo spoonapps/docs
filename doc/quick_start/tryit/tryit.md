@@ -3,7 +3,7 @@
 ### Installation
 
 1. To create, save, run, and ship containers, you'll need to install and run the [Spoonium Plugin](http://start.spoon.net/install) on any Windows machine or VM.
-2. [Create an account or log in](http://spoon.net/sso/spoonium.net/login).
+2. [Create an account or log in](http://spoon.net/sso/spoonium.net/login?return_to=https://spoonium.net/docs#try-it).
 
 ### Get going
 
@@ -19,12 +19,12 @@ Open a new command prompt and follow the example below.
 
 Images are the building blocks for everything in Spoonium. They serve as a base (read-only) filesystem and registry that your application will use while running in a container.
 
-We'll begin by pulling (downloading) an image from our remote registry, the [Spoonium Hub](http://spoonium.net/hub).
+We'll begin by pulling (downloading) an image from our remote registry, the Spoonium Hub.
 
 Let's start by pulling the **spoonbrew/scratch** image (named after the repository owner, **spoonbrew**, and the image name, **scratch**). The **scratch** image is completely empty and roughly equivalent to a freshly-installed, clean computer. 
 
 ```
-# The `pull` command takes just a single parameter: the owner and name of the image.
+# The `pull` command takes just a single parameter: the owner/name of the image.
 > spoon pull spoonbrew/scratch
 
 # When the image has finished downloading, you will see `Pull complete`.
@@ -46,15 +46,16 @@ For **spoonbrew/scratch**, the default startup file is **cmd.exe** (the command 
 
 ```
 # Start your new container with a classic "Hello World!"
-> spoon run -a spoonbrew/scratch echo Hello World!
+# A new, containerized command prompt will appear with your output.
+> spoon run spoonbrew/scratch echo Hello World!
 
 Hello World! 
 
-# Close that containerized command prompt.
+# Exit the new containerized command prompt.
 (25fdso88) C:\spoonroot> exit
 
 # Your container ID will appear in your remaining command prompt window.
-# We'll talk more about that later.
+# We'll talk more about container ID's later.
 
 25fdso8823fdsa734fdhasjd6588p098
 ```
@@ -87,7 +88,7 @@ Back to the tutorial!
 
 ```
 # Make a new directory in our container with the `mkdir` command.
-(87ddvf54) C:\>mkdir C:\spoonroot
+(87ddvf54) C:\> mkdir C:\spoonroot
 
 # This directory will only be created *inside the container* and *not* on your local system.
 ```
@@ -127,7 +128,7 @@ ID            Images                    Command  Created
 # 2) The name for your image ("helloworld")
 > spoon commit 87ddv helloworld
 	
-Commiting container 87ddvf5455lp to helloworld:HEAD
+Committing container 87ddvf5455lp to image helloworld
 Commit complete
 ```
 
@@ -137,20 +138,20 @@ Commit complete
 > spoon images
 	
 Name                    Created					Size
-helloworld:head 		7/31/2014 9:29:27 AM	0.1MB
-spoonbrew/scratch:head  7/31/2014 9:20:26 AM	0.0MB
+helloworld		 		7/31/2014 9:29:27 AM	0.1MB
+spoonbrew/scratch	 	7/31/2014 9:20:26 AM	0.0MB
 ```
 
 ```
 # Upload the **helloworld** image to the Spoonium Hub with the `spoon push` command.
 > spoon push helloworld
 
-Pushing image helloworld:head to spoonuser/helloworld
+Pushing image helloworld to spoonuser/helloworld:head
 
 # When the image has finished uploading, `Push complete` will appear in the command prompt. 
 > spoon push helloworld
 	
-Pushing image helloworld:head to spoonuser/helloworld
+Pushing image helloworld to spoonuser/helloworld:head
 Push complete
 
 # By default, pushed images will be added to the user account of the logged-in user.
@@ -168,5 +169,6 @@ Learn more about:
 
 - [Building containers and advanced Spoonium commands](/docs/build).
 - [Practical examples and use cases](/docs/samples), such as containerizing Java, Node, Python, and .NET projects. 
+
 
 Enjoy!
