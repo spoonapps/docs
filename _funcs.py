@@ -1,5 +1,5 @@
 from __future__ import print_function
-import fileinput, os, yaml
+import fileinput, os, yaml, shutil
 from urllib import quote_plus
 from BeautifulSoup import BeautifulSoup
 from argparse import ArgumentParser
@@ -83,7 +83,7 @@ def process_directory(dirpath, files, root_build_dir, doc_template):
     for f in files:
         if f == "meta.md":
             continue  #don't process it!
-        else:
+        elif f.endswith(".md"):
             #generate html and add to build dir
             html = process_markdown_file(os.path.join(dirpath, f))
             html = process_html_for_spoonium(html)
@@ -92,6 +92,9 @@ def process_directory(dirpath, files, root_build_dir, doc_template):
             #add to doc template
             mutated_path = mutate_path_for_web(output_file_path, root_build_dir)
             section.add_page(mutated_path)
+        else:
+            #this is a resource file and should be copied over
+            shutil.copyfile(dirpath+"\\"+f, output_dir+"\\"+f)
     return doc_template
 
 
