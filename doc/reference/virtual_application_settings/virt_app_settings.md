@@ -1,5 +1,7 @@
 ## Virtual Application Settings
 
+The following is a table of the definitions and uses of features available in the IDE. These features allow you to edit and customize the settings for an image or virtual application configuration.
+
 <table>
 	<tr>
 		<th>Setting</th>
@@ -79,13 +81,13 @@
 	</tr>
 	<tr>
 		<td><b>Shutdown Process Tree On Root Process Exit</b></td>
-		<td>enables the shutdown of all child processes when the root process exits.
+		<td>Enables the shutdown of all child processes when the root process exits.
 
-**Note**: The startup file is the root process by default. If a virtual service is specified in the application configuration file and is set to auto-start when the application is launched, the virtual service acts as the root process in the process tree.</td>
+<b>Note</b>: The startup file is the root process by default. If a virtual service is specified in the application configuration file and is set to auto-start when the application is launched, the virtual service acts as the root process in the process tree.</td>
 	</tr>
 	<tr>
 		<td><b>Compress Payload</b></td>
-		<td>Enables compression of the output file. Note: Both the application profiling and streaming processes require that packages be built uncompressed. To build applications without compression, leave the **Compress payload** option unchecked.</td>
+		<td>Enables compression of the output file. Note: Both the application profiling and streaming processes require that packages be built uncompressed. To build applications without compression, leave the <b>Compress payload</b> option unchecked.</td>
 	</tr>
 	<tr>
 		<td><b>Startup Executable Optimization</b></td>
@@ -97,31 +99,31 @@
 	</tr>
 	<tr>
 		<td><b>Window Class Isolation</b></td>
-		<td>prevents viewing window classes that are registered by external processes. You can use this to prevent interaction between virtualized and non-virtualized versions of the same program when the application checks for existing class registrations.
+		<td>Prevents viewing window classes that are registered by external processes. You can use this to prevent interaction between virtualized and non-virtualized versions of the same program when the application checks for existing class registrations.
 </td>
 	</tr>
 	<tr>
 		<td><b>Enhanced DEP Compatibility for Legacy Applications</b></td>
-		<td>enables compatibility for systems with Data Execution Protection (DEP) enabled. Use this configuration for virtual applications running on Windows 2003.</td>
+		<td>Enables compatibility for systems with Data Execution Protection (DEP) enabled. Use this configuration for virtual applications running on Windows 2003.</td>
 	</tr>
 	<tr>
 		<td><b>Enhanced DRM Compatibility</b></td>
-		<td>enables additional compatibility with common DRM systems, such as Armadillo.</td>
+		<td>Enables additional compatibility with common DRM systems, such as Armadillo.</td>
 	</tr>
 	<tr>
 		<td><b>Trace Process Starts in Debug Output</b></td>
-		<td>sends a notification to **OutputDebugString** whenever a new process is started within the virtual environment. This notification is in XML format and comes as a basic information description. It can be monitored with any debugging tool. You can also monitor the notification by a parent process within the virtual environment if a child process is being debugged.</td>
+		<td>Sends a notification to <b>OutputDebugString</b> whenever a new process is started within the virtual environment. This notification is in XML format and comes as a basic information description. It can be monitored with any debugging tool. You can also monitor the notification by a parent process within the virtual environment if a child process is being debugged.</td>
 	</tr>
 	<tr>
 		<td><b>Force Read-share Files</b></td>
-		<td>forces any file opened within the virtual environment to open with the **READ_SHARE** flag. Use this option to  resolve compatibility issues caused by sharing violations.</td>
+		<td>Forces any file opened within the virtual environment to open with the <b>READ_SHARE</b> flag. Use this option to  resolve compatibility issues caused by sharing violations.</td>
 	</tr>
 	<tr>
 		<td><b>Always Launch Child Processes as Current User</b></td>
-		<td>provide child processes with the same level of privileges as the virtual machine root process. Child processes launched by the virtual machine have reduced privileges by default.</td>
+		<td>Provide child processes with the same level of privileges as the virtual machine root process. Child processes launched by the virtual machine have reduced privileges by default.</td>
 	</tr>
 	<tr>
 		<td><b>Emulate Elevated Security Privileges</b></td>
-		<td>forces an application to run as if it has elevated security privileges, even if the application does not. Enabling this option eliminates UAC security prompts for elevation and subsequent application crashes.</td>
+		<td>Forces an application to run as if it has elevated security privileges, even if the application does not. Enabling this option eliminates UAC security prompts for elevation and subsequent application crashes.</td>
 	</tr>
 </table>

@@ -1,4 +1,7 @@
 ## MSI Settings
+
+The following is a table of descriptions of the settings that you can use for MSI outputs from the IDE.
+
 <table>
 	<tr>
 		<th>Setting</th>
