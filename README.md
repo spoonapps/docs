@@ -72,10 +72,11 @@ building "my image" from /path/to/spoon.me
 	* To the hub: /hub
 	* To contact page: /contact
 
-#### Adding images
+### Adding images
 
 - Put the image in the same folder as the md file
 - Prepend /contents/ to the path to the image file.  For example, to add an image to a file called tour_ii.md in the folder /docs/quick_start/tour_ii, use the following syntax.
+
 `
 ![](/components/docs/quick_start/tour_ii/image.png)
 `
