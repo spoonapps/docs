@@ -1,7 +1,11 @@
 ### enable
 
+The **enable** instruction enables the specified VM setting inside the container. 
+
 ```
 enable <vm setting>
 ```
 
-The enable instruction enables the specified VM setting. Only 1 VM setting can be enabled per instruction. To enable multiple VM settings, use multiple `enable` instructions. 
+Only one setting can be enabled per instruction. To enable multiple VM settings, use multiple **enable** instructions. 
+
+See **VM Settings** section for details on available options.

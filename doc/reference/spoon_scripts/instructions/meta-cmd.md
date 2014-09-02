@@ -1,10 +1,12 @@
 ### meta
 
+The **meta** instruction sets the metadata value for the output image. 
+
 ```
-meta <name> <value>
+meta <name>=<value>
 ```
 
-The `meta` instruction sets container metadata value. Standard metadata properties are listed below:
+Standard metadata properties are listed below:
 
 * Title
 * Description
@@ -12,12 +14,12 @@ The `meta` instruction sets container metadata value. Standard metadata properti
 * Website
 * Version
 
-Custom metadata can be specified using other name, value pairs. 
+Custom metadata can be specified using other name-value pairs. 
 
 ```
 # Add a title
-meta title application-name
+meta title="application name"
 
 # Add custom metadata
-meta internal-name new-name
+meta internal-name=new-name
 ```
