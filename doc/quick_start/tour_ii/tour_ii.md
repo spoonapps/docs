@@ -28,8 +28,8 @@ C:\>spoon run wget,7zip,node
 # Once in the container, create a directory with `mkdir` for the Ghost web application and install it.
 (c99f354f) C:\>mkdir ghost
 (c99f354f) C:\>cd ghost
-(c99f354f) C:\ghost>%spoon_wget% http://ghost.org/zip/ghost-0.5.1.zip --no-check-certificate
-(c99f354f) C:\ghost>%spoon_7z% x ghost-0.5.1.zip
+(c99f354f) C:\ghost>C:\wget\wget.exe http://ghost.org/zip/ghost-0.5.1.zip --no-check-certificate
+(c99f354f) C:\ghost>C:\7zip\7z.exe x ghost-0.5.1.zip
 (c99f354f) C:\ghost>npm install --production
 
 # When it's all done, `exit` the container.
