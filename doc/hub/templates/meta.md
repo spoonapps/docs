@@ -1,4 +1,4 @@
 ---
 topic: Hub
-section: templates
+section: Templates
 ---

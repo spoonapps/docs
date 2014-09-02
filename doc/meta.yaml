@@ -53,7 +53,7 @@ sections:
 display_name: Hub
 ordering: 4
 sections:
-- display_name: Basics
+- display_name: Accounts
   ordering: 1
   pages: []
 - display_name: Repositories
