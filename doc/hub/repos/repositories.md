@@ -1,23 +1,61 @@
 ## Repositories
 
-A repository contains the image and version histories of a project, and it may be private or public.
+Repositories are the units that make up the hub remote registry. A repository contains the image and version histories of a project, and it may be public or private.
 
 If a repository is public, it will appear in search results, and any Spoonium user can pull or run it. Only the repository owner (or members of the owning organization) can push to the repository. 
 
 Private repositories are not searchable, and they can only be accessed, pulled, or changed by their named owner(s).
 
-The homepage for a repository is located at **http://spoonium.net/hub/[repo owner]/[repo name]**. The homepage contains 3 sections: 
+The homepage for a repository is located at **http://spoonium.net/hub/[profile]/[repo]**, where **profile** is the username of the repository owner and **repo** is the name of the repository. The homepage contains 3 sections:
 
 1. **About** - Provides an overview of the repository. 
 2. **Releases** - Lists all tagged versions of the image.
 3. **History** - Lists the full version history of the image.
 
-### Interacting with Repositories
+On your repository's **About** page, you can edit the description, Readme, icon, URL, and steps for getting started with your project.
 
-Repositories can be forked to your Spoonium account by clicking the **Fork** button on a repository's homepage. This will create a copy of the repository under your user account. 
+Other users viewing the repository details page can stream the project directly from the browser in a variety of ways. They can **Run** your image in a new container. This is equivalent to this command executed through the command-line interface:
 
-Repositories can be run straight from the web by clicking the **Run** button on the repository's homepage. This will stream the project from your browser, and it is equivalent to executing `spoon run <project name>` from the command prompt. 
+```
+# Run the image in a container
+> spoon run [profile]/[repo]
+```
 
-You can also favorite a repository by clicking the **Star** button on the repository's homepage.
+They can **Pull** the image to their local registry. This button will execute this command as if entered via the command-line interface:
 
-To investigate the contents of a repository, click the **Open Console** button. This is the equivalent to executing `spoon run --startup=cmd.exe <project name>` from the command prompt.
+```
+# Pull an image down from the hub
+> spoon pull [profile]/[repo]
+```
+
+
+They can **Open** a console window in a fresh container with your image as the base. These same actions can also be completed from the command-line interface:
+
+```
+# Open a console window with your image as base
+> spoon run [profile]/[repo] cmd
+```
+
+Repositories can also be forked to your profile by clicking the **Fork** button on a repository's homepage. Forking creates a copy of the repository under your profile. Similarly, from the command-line interface:
+
+```
+# Fork a repository
+> spoon fork [repo] [profile]/[repo]
+```
+
+You can also create a new repository from the command-line interface by pushing it to the hub from your local registry:
+
+```
+# First run a container
+> spoon run scratch
+
+# Then commit the container to an image
+> spoon commit 125ee2932 <image>
+
+# Push an image to the hub
+> spoon push <image>
+
+# The image is now pushed to the logged-in profile
+```
+
+Now go to the repository details page on the hub and favorite your project with the **Star** button.
