@@ -53,14 +53,17 @@ sections:
 display_name: Hub
 ordering: 4
 sections:
-- display_name: Accounts
+- display_name: Creating a Profile
   ordering: 1
   pages: []
-- display_name: Repositories
+- display_name: Registries
   ordering: 2
   pages: []
-- display_name: Templates
+- display_name: Repositories
   ordering: 3
+  pages: []
+- display_name: Templates
+  ordering: 4
   pages: []
 ---
 display_name: Build

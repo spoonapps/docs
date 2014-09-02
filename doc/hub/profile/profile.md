@@ -1,6 +1,6 @@
-The distribution component of Spoonium is the [hub](http://spoonium.net/hub). The public hub serves as the remote registry where you can upload and share your images and projects.
+The distribution component of Spoonium is the [hub](http://spoonium.net/hub).
 
-## Accounts
+## Creating a Profile
 
 To begin using the hub, [sign up](http://spoon.net/sso/spoonium.net/register) for a Spoonium account or log in with your existing [Spoon.net](http://spoon.net) account information.
 
