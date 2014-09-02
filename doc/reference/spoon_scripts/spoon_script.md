@@ -1,8 +1,8 @@
 ## Spoon Scripts
 
-Spoon can act as an automated builder, reading instructions from a `.me` file to create a container and then build a new image from that container.
+Spoon can act as an automated builder by reading instructions from a `.me` file to create a new image. 
 
-A `.me` script is a text file containing a set of **instructions** that the Spoon IDE follows to create a container. At the end of the script, a new image is created from the container and the container is deleted. 
+A `.me` script is a text file containing a set of **instructions** that the Spoon command-line interface follows to create a container. At the end of the script, a new image is created from the container and the container is deleted. 
 
 The syntax of a Spoon build script generally follows the pattern: 
 
@@ -12,9 +12,9 @@ The syntax of a Spoon build script generally follows the pattern:
 	
 The script is read and executed top-to-bottom. 
 
-Spoon Script files are not case-sensitive. However, we recommend making all instructions UPPERCASE and all arguments lowercase, to more easily delineate the two. 
+Spoon Script files are not case-sensitive. However, we recommend making all instructions UPPERCASE and all arguments lowercase to more easily delineate the two. 
 
-All scripts have an implicit `commit` at the end of the script. After the last instruction in the script, it executes `spoon commit` on the container. If a name was not provided to the `build` command (via the `-n` or `--name` flag), the new image will be created with its ID as its name. 
+All scripts have an implicit `commit` at the end of the script. After the last instruction in the script, it executes `spoon commit` on the container. If a name was not provided to the `build` command (via the `-n` or `--name` flag) then the new image will be created with its ID as its name. 
 
 ### Syntax Rules
 
@@ -35,3 +35,5 @@ Comments cannot be made inline with a command. Comments must be specified at the
 
 from spoonbrew/node  # This is not a valid comment
 ```
+
+### Command Reference

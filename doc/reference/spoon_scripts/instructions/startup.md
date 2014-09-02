@@ -1,26 +1,36 @@
 ### startup file
 
+The **startup file** instruction is used to specify the startup file or script to run when a new container is created from this image (using `spoon run`).
+
+The instruction has four forms: 
+
+1. `startup file ("executable", "param1", "param2")` (executes the application directly)
+2. `startup file [("executable1", "param1", "param2"), ("executable2", "param1", "param2"), ...]` (executes the list of applications directly)
+3. `startup file <command> <param1> <param2>` (command is interpreted by cmd.exe, defaults to using "cmd.exe /k")
+4. `startup file <param1> <param2>` (parameters are sent to the base image's startup file)
+
+This instruction is only applied to the output image and does not affect the intermediate container. 
+
+#### As an Executable
+
+If you wish to launch a process from an executable and optionally supply parameters to that executable, you must express the desired *executable* as a tuple of strings and give the full path to the executable (unless it is on the local system or container's `PATH`). Using this syntax, parameters are passed directly to the executable. 
+
 ```
-startup file <command> <params...>
-startup file [<exec>, <params...>]
+# "clone" and "https://github.com/spoonium/docs" are passed to git.exe
+startup file ["git.exe", "clone", "https://github.com/spoonium/docs"]
 ```
 
-The startup file instruction is used to specify the startup file or script to run when a new container is created from this image (using `spoon run`). 
+#### As a Shell Command
 
-This instruction is only applied to the output image -- it does not affect the intermediate container. 
+Using this syntax, each command is executed in its own command prompt -- a new command prompt being spawned for each instruction. Thus, any stateful commands (`cd`, for example), must be chained to other commands with an ampersand to have their desired effect. 
 
-The startup file instruction will accept parameters as a space-delimited list or as a JSON-array of strings. 
-
-If parameters are specified as a space-delimited list, the first parameter is the startup command and all subsequent parameters are parameters that will be passed to the startup command. When specified in this manner, commands are interpreted by the Windows shell. 
+For example, to read a file in the **C:\Spoon** directory: 
 
 ```
 # Hello world is passed to the 'echo' command
 startup file echo hello world
 ```
 
-If parameters are specified as a JSON-array of strings, the first item in the array is the startup executable and all subsequent items are passed as parameters to the startup executable.  When specified in this manner, parameters are passed directly to the startup executable. 
+#### As Parameters
 
-```
-# "clone" and "https://github.com/spoonium/docs" are passed to git.exe
-startup file ["git.exe", "clone", "https://github.com/spoonium/docs"]
-```
+Using this syntax, the parameters are sent to the default startup file in the base image. If multiple base images are specified, the startup file from the last specified image will be used.
