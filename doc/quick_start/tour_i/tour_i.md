@@ -9,11 +9,18 @@
 
 Open a new command prompt and follow the example below.
 
-	# Check the help documentation
+	# Check the help documentation.
 	> spoon
+
+	Available commands are:
+	build
+	checkout
+	commit
 	
-	# Log in to your Spoonium account
+	# Log in to your Spoonium account.
 	> spoon login username password
+
+	Logged in as username
 
 ### Pull an  Image
 

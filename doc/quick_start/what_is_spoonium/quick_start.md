@@ -36,3 +36,32 @@ With Spoonium, sysadmins can:
 #### Open source
 
 Spoonium is 100% free for public projects. [Contact us](http://spoonium.net/contact) to get set up.
+
+## How does it work?
+
+Without going too deeply into specifics, Spoonium containers are built on the **Spoon Virtual Machine** (SVM), a lightweight implementation of core operating system APIs, including the filesystem, registry, process, and threading subsystems. Applications executing within a container interact with a virtualized filesystem, registry, and process environment supplied by the SVM, rather than directly with the host machine.
+
+#### Images - Build component
+
+Spoonium images serve as a read-only filesystem and registry that your application will use while running in a container. They contain all of the information on a certain type of container.
+
+Verified images (like jdk, node, mongo)  are available for download from the [Spoonium Hub](http://spoonium.net/docs/about#hub), or a custom image can be created from any container with the `spoon commit` command. Thus, you can layer multiple dependency images together, rather than having to build one on top of another.
+
+When instructed to run a container with the `spoon run` command, Spoonium will automatically download necessary images. Read more about [working with images](http://spoonium.net/docs/build#working-with-images).
+
+#### Repositories - Distribution component
+
+To share your public images and containers with others, we have the [Spoonium Hub](http://spoonium.net/hub), which is filled with public repositories from both Spoonium users and the [spoonbrew team](http://spoonium.net/hub/spoonbrew).
+
+Free Spoonium accounts come with one free private repository and unlimited public repositories. You can also host your own on-premises repositories (instructions found [here](http://spoonium.net/docs/about#spoon-server)).
+
+Once an image is on the Hub, you can run it from another location. Read more about the [Hub](http://spoonium.net/docs/about#hub).
+
+#### Containers - Run component
+
+Containers are created from an image or from multiple images. They hold everything needed for applications to run, and they can be run/started/stopped/removed, and more.
+
+You can turn a container into a custom image template using the `spoon run` command.
+
+[Read more](http://spoonium.net/docs/about) about how Spoonium works.
+
