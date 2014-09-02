@@ -61,7 +61,7 @@ Once an image is on the Hub, you can run it from another location. Read more abo
 
 Containers are created from an image or from multiple images. They hold everything needed for applications to run, and they can be run/started/stopped/removed, and more.
 
-You can turn a container into a custom image template using the `spoon run` command.
+You can turn a container into a custom image template using the `spoon commit` command.
 
 [Read more](http://spoonium.net/docs/about) about how Spoonium works.
 
