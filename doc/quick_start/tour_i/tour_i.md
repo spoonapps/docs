@@ -35,7 +35,7 @@ Let's analyze this command:
 
 ```
 spoon pull			# The pull command adds an image to your Spoonium account.
-spoonbrew/scratch	# Specify the repository owner, "spoonbrew," and the repository/image name, "scratch."
+spoonbrew/scratch	# Specify the repository owner, "spoonbrew," and the image name, "scratch."
 ```
 
 There you go! If it worked as expected, you just pulled the **scratch** image into your account; the scratch image is completely empty and roughly equivalent to a freshly-installed, clean OS. You're ready to create your first container!
@@ -51,14 +51,16 @@ For **spoonbrew/scratch**, the default startup file is **cmd.exe** (the command 
 ```
 > spoon run spoonbrew/scratch echo Hello World!
 
-# A new, containerized command prompt will appear with your output.
+# A new, containerized command prompt will appear with your output:
 
 Hello World! 
 ```
+
 ```
 # Exit the new containerized command prompt.
 (25fdso88) C:\spoonroot> exit
 ```
+
 ```
 # Your container ID will appear in your remaining command prompt window.
 
@@ -72,7 +74,7 @@ spoon run			# Here we tell Spoonium to kick off a new container with a specified
 spoonbrew/scratch	# Our desired repo owner, "spoonbrew," and the repo/image name, "scratch."
 echo Hello World!	# Command your container to start up with "Hello World!"
 exit				# This closes your container and generates your container ID.
-25fdso88...			# This output identifies a specific container. We'll discuss container ID's soon.
+25fdso88...			# This output identifies the specific container you just ran.
 ```
 
 Congratulations! You just ran your first container.
@@ -88,7 +90,8 @@ In this example, we'll run a container and create a new text file within that co
 
 You should see a new command prompt appear. This prompt is running in the container. 
 
-"Is my command prompt containerized, or not?"
+**"Is my command prompt containerized, or not?"**
+
 When the command prompt is running inside a Spoon container, you'll see the first 8 characters of the container ID in the prompt.
 
 So, your **native** command prompt will look like this:
@@ -170,7 +173,7 @@ Let's analyze what just happened:
 
 ```
 spoon commit	# `commit` creates a new image from a specified container.
-87ddv			# Specify which container you'd like to use with at least 2 digits of the container ID.
+87ddv			# Specify the container with at least 2 digits of the container ID.
 helloworld		# The name you'd like for your new image.
 ```
 
