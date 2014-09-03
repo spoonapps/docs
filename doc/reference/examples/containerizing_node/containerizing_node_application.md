@@ -152,7 +152,7 @@ cmd npm install
 boot file node app.js
 ```
 
-See the [SpoonScript reference](/docs/reference#spoonscripts) for more information on SpoonScript syntax.
+See the [SpoonScript reference](/docs/reference#spoonscript) for more information on SpoonScript syntax.
 
 Save the file as SpoonScript in **C:\\spoon\aIRChat**.
 

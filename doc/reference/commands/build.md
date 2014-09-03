@@ -4,7 +4,7 @@ The `build` command is used to automate the creation of images. The `build` comm
 
 To build from an existing container, use the `commit` command.
 
-#### Using SpoonScripts
+#### Using SpoonScript
 
 A SpoonScript is a list of instructions that Spoon will follow to create a container. After the last instruction in a script, Spoon will automatically run `spoon commit` on the recently created container, creating a new image. 
 

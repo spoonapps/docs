@@ -1,4 +1,4 @@
-## SpoonScripts
+## SpoonScript
 
 Spoon can act as an automated builder by reading instructions from a `.me` file to create a new image. 
 
@@ -16,7 +16,7 @@ All scripts have an implicit `commit` at the end of the script. After the last i
 
 ### Syntax Rules
 
-1. SpoonScripts are line-delimited and must only contain 1 instruction per line. Line continuation is not supported. 
+1. SpoonScript are line-delimited and must only contain 1 instruction per line. Line continuation is not supported. 
 2. All lines must follow the general structure: `instruction <args>`
 3. Inline comments are not supported. Comments must be applied at the beginning of a line and are applied to the entire line. 
 

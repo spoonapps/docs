@@ -6,7 +6,7 @@ In this tutorial, we'll walk you through how to create and containerize a basic 
 
 - The basic container/image creation path
 - Copying local files into a container
-- Automating image creation with SpoonScripts
+- Automating image creation with SpoonScript
 - The Spoonium network stack
 
 #### Create the App
