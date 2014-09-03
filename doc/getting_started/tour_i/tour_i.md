@@ -127,7 +127,7 @@ Directory of C:\
 <DIR>          spoonroot
 ```
 
-Navigate to your new directory with the `cd` command.
+Change to your new directory with the `cd` command.
 
 ```
 (87ddvf54) C:\> cd C:\spoonroot
