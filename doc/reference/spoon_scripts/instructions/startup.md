@@ -1,6 +1,6 @@
 ### startup file
 
-The **startup file** instruction is used to specify the startup file or script to run when a new container is created from this image (using `spoon run`).
+The `startup file` instruction is used to specify the startup file or script to run when a new container is created from this image (using `spoon run`).
 
 The instruction has four forms: 
 

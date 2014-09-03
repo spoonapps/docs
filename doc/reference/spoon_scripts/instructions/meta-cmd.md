@@ -1,6 +1,6 @@
 ### meta
 
-The **meta** instruction sets the metadata value for the output image. 
+The `meta` instruction sets the metadata value for the output image. 
 
 ```
 meta <name>=<value>

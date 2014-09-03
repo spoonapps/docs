@@ -1,6 +1,6 @@
 ### hosts
 
-The **hosts** instruction modifies host name resolution within a container. 
+The `hosts` instruction modifies host name resolution within a container. 
 
 ```
 hosts <ip address|local host name> <host name>

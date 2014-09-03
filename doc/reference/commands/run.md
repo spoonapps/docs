@@ -16,9 +16,9 @@ Containers are started with the startup file specified in the base image. If a s
 	# Override the startup file to use the command prompt
 	> spoon --startupFile=cmd.exe run spoonbrew/jdk
 
-When passing arguments to a startupfile or command, we recommend separating these arguments from the rest of the command with a **--**. Arguments specified after a **--** mark are passed directly to the startup file/command.
+When passing arguments to a startupfile or command, we recommend separating these arguments from the rest of the command with a `--`. Arguments specified after a `--` mark are passed directly to the startup file/command.
 
-If a **--** mark is not used, any argument matching a `run` command flag will be interpreted by Spoon, which may lead to unexpected behavior. 
+If a `--` mark is not used, any argument matching a `run` command flag will be interpreted by Spoon, which may lead to unexpected behavior. 
 
     # Spoon will interpret the /d flag and execute a container in detached mode
     > spoon run spoonbrew/scratch /d
@@ -26,7 +26,7 @@ If a **--** mark is not used, any argument matching a `run` command flag will be
     # /d flag is passed to cmd.exe, disabling execution of AutoRun commands from the registry
     > spoon run spoonbrew/scratch -- /d 
 
-A container's standard streams (stdin/out/err) can be redirected to either the current command prompt or the background using the **--attach** and **--detach** flags. 
+A container's standard streams (stdin/out/err) can be redirected to either the current command prompt or the background using the `--attach` and `--detach` flags. 
 
 	# Redict standard streams to current command prompt
 	> spoon run -a <image>
@@ -36,7 +36,7 @@ A container's standard streams (stdin/out/err) can be redirected to either the c
 
 Detaching from a container will allow further work to be done in the native prompt while the container is running.  
 
-The initial working directory for the container can be set with **-w** flag. 
+The initial working directory for the container can be set with `-w` flag. 
 
 	# Set working directory to root of C: drive
 	C:\Users> spoon run -w="C:\" spoonbrew/git
@@ -50,7 +50,7 @@ The initial working directory for the container can be set with **-w** flag.
 
 #### Adding Environment Variables
 
-Environment variables can be added to a container with the **-e** or **--env-file** flags. 
+Environment variables can be added to a container with the `-e` or `--env-file` flags. 
 
 	# Add environment variable 'foo' with value 'bar'
 	> spoon run -e=foo=bar <image>
@@ -58,7 +58,7 @@ Environment variables can be added to a container with the **-e** or **--env-fil
 	# Specify multiple env vars with multiple flags
 	> spoon run -e=foo=bar -e=x=2 <image>
 
-If your container requires several environment variables, we recommend creating an **env-file**, a line-delimited text file that lists all the environment variables to add to the container. The example file, below, lists 3 environment variables: 
+If your container requires several environment variables, we recommend creating an `env-file`, a line-delimited text file that lists all the environment variables to add to the container. The example file, below, lists 3 environment variables: 
 
 	foo=bar
 	utensil=spoon
@@ -83,7 +83,7 @@ These diagnostic logs can later be viewed using the `spoon logs` command.
 
 #### Port Mapping
 
-By default, all network operations (opening/closing ports, for example) are passed through to the local machine. To remap container ports to other ports on the local machine, use the **--route-add** flag. Specific protocols (tcp or udp) can be mapped by specifying a **/[protocol]** after the mapping. If no protocol is specified, tcp is assumed.
+By default, all network operations (opening/closing ports, for example) are passed through to the local machine. To remap container ports to other ports on the local machine, use the `--route-add` flag. Specific protocols (tcp or udp) can be mapped by specifying a `/[protocol]` after the mapping. If no protocol is specified, tcp is assumed.
 
 	# Map container tcp port 8080 to local port 80
 	> spoon run --route-add=80:8080 <image>
@@ -95,7 +95,7 @@ By default, all network operations (opening/closing ports, for example) are pass
 	# The random port can be later queried using the netstat command
 	> spoon run --route-add=:80 <image>
 
-The default policy of allowing containers to bind to any ports on the local machine can be changed with the **--route-block** flag. It isolates all services bound to container ports on specified protocols (tcp or udp). They can only be opened using the **--route-add** flag.
+The default policy of allowing containers to bind to any ports on the local machine can be changed with the `--route-block` flag. It isolates all services bound to container ports on specified protocols (tcp or udp). They can only be opened using the `--route-add` flag.
 
     # Isolate all tcp services of a container
     > spoon run --route-block=tcp <image>
@@ -106,7 +106,7 @@ The default policy of allowing containers to bind to any ports on the local mach
 
 #### Adding Custom Name Resolution Entries
 
-All containers use name resolution provided by the host operating system. You can add specific name resolution overrides using the **--hosts** flag, in a manner similar to the `hosts` file of the operating system.
+All containers use name resolution provided by the host operating system. You can add specific name resolution overrides using the `--hosts` flag, in a manner similar to the `hosts` file of the operating system.
 
     # Make name my-test-service resolve to whatever the name
     # test-service-43 resolves
@@ -118,9 +118,9 @@ All containers use name resolution provided by the host operating system. You ca
 
 #### Linking Containers Together
 
-If you decided to not expose any services running in a container to the public by specifying the **--route-block** flag and not **--route-add** flags, you may still want to be able to connect to the services in your container from the outside. This is where container linking is useful.
+If you decided to not expose any services running in a container to the public by specifying the `--route-block` flag and not `--route-add` flags, you may still want to be able to connect to the services in your container from the outside. This is where container linking is useful.
 
-When creating a container with the `spoon run` command, you can use the **--link** flag to link it to any existing containers and the new container will be able to connect to any services exposed by the linked containers. Such connection creates a parent-child relationship where the newly created container is the parent.
+When creating a container with the `spoon run` command, you can use the `--link` flag to link it to any existing containers and the new container will be able to connect to any services exposed by the linked containers. Such connection creates a parent-child relationship where the newly created container is the parent.
 
 With each link, an alias name must be specified. Name resolution overrides are added to the parent container so it can refer to its children by these names.
 

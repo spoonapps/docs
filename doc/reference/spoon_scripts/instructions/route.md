@@ -8,14 +8,14 @@ route <action> <protocol> <local port>:<container port>
 
 By default, container ports are passed through to the local machine. To block all ports in the container from accessing local network interfaces, add the instruction `route block tcp,udp *` to your SpoonScript. 
 
-The **route** instruction requires three inputs: the **action** to take (add/block), the **protocol** to use (tcp/udp), and the **ports** to map. The ports to map can be specified with the wildcard `*` character. 
+The `route` instruction requires three inputs: the `action` to take (add/block), the `protocol` to use (tcp/udp), and the `ports` to map. The ports to map can be specified with the wildcard `*` character. 
 
 ```
 # Block all tcp ports
 route block tcp * 
 ```
 
-The **add/block** input will either **block** a container port from accessing the local network interface at the specified port (or at all ports) or **add** a mapping from a container port to a local port. If a local port is not specified, the container port is mapped to a random port on the local system. 
+The `add/block` input will either `block` a container port from accessing the local network interface at the specified port (or at all ports) or `add` a mapping from a container port to a local port. If a local port is not specified, the container port is mapped to a random port on the local system. 
 
 ```
 # Map container port 80 to local port 8080
