@@ -1,12 +1,21 @@
 ### commit
 
-The `commit` command builds an image from a container. The container is built from its most recent state. 
+The `commit` command builds an image from a container. The image is built from the container's most recent state. 
+
+```
+Usage: spoon commit <options> <container> <image>
+
+<options> available:
+      --no-base              Do not merge the base image(s) into the new image
+      --overwrite            Overwrite image if it already exists
+      --wait-after-error     Leave program open after error
+```
 
 A container must be stopped before it can be committed to an image. 
 
 #### Merging Images
 
-By default, the `commit` command will merge all base images the container runs on top of
+The `commit` command will merge all the base images used in the container. This behavior can be overridden with the `--no-base` flag. 
 
 For example, if a container were created with the command `spoon run spoonbrew/git,spoonbrew/nuget` and later committed with the command `spoon commit <container id> my-new-image`, the new image would contain: 
 

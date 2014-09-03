@@ -2,8 +2,19 @@
 
 The `export` command copies an image from the local registry to a specified path on your local machine or network. 
 
-	# Copy an image to the local machine
-	> spoon export my-new-image C:\
+```
+export - Export an image from the local registry to the specified path
 
-	# Copy an image to a network share
-	> spoon export my-new-image \\server\folder
+Usage: spoon export <options> <image> <path>
+
+<options> available:
+      --wait-after-error     Leave program open after error
+```
+
+```
+# Copy an image to the local machine
+> spoon export my-new-image C:\
+
+# Copy an image to a network share
+> spoon export my-new-image \\server\folder
+```
