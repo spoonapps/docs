@@ -2,7 +2,7 @@
 
 ### Installation
 
-1. To create, save, run, and ship containers, you'll need to install and run the [Spoonium Plugin](http://start.spoon.net/install) on any Windows machine or VM.
+1. To create, save, run, and ship containers, you'll need to install and run the [Spoon plugin](http://start.spoon.net/install) on any Windows machine or VM.
 2. [Create an account or log in](http://spoon.net/sso/spoonium.net/login?return_to=https://spoonium.net/docs#try-it).
 
 ### Get going

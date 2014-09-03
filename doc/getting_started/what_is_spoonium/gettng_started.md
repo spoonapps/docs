@@ -12,7 +12,7 @@ With Spoonium, developers can:
 - Deploy any application to any machine without installers, incompatibilities, or breaks.
 - Send containers back and forth in specific testing stages, eliminating friction between development and QA cycles and speeding up the overall development life cycle.
 
-**Example:** An application built on the latest version of .NET may break if a tester or end user has a different .NET version installed. To avoid this issue, use Spoonium to package your application *with* the right .NET version into a container that will run instantly on any device with the Spoonium plugin.
+**Example:** An application built on the latest version of .NET may break if a tester or end user has a different .NET version installed. To avoid this issue, use Spoonium to package your application *with* the right .NET version into a container that will run instantly on any device with the Spoon plugin.
 
 #### QA
 
