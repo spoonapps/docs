@@ -1,4 +1,0 @@
----
-topic: Hub
-section: registries
----
