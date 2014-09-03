@@ -1,6 +1,8 @@
 ## Repositories
 
-Repositories are the units that make up the hub remote registry. A repository contains the image and version histories of a project, and it may be public or private.
+Repositories are the units that make up the Hub. A repository contains the image and version histories of a project, and it may be public or private.
+
+The Hub is where you can browse and search for repositories for popular applications and components, upload your own projects, and run them online with a single click.
 
 If a repository is public, it will appear in search results, and any Spoonium user can pull or run it. Only the repository owner (or members of the owning organization) can push to the repository. 
 
@@ -24,7 +26,7 @@ Other users viewing the repository details page can stream the project directly 
 They can **Pull** the image to their local registry. This button will execute this command as if entered via the command-line interface:
 
 ```
-# Pull an image down from the hub
+# Pull an image down from the Hub
 > spoon pull [profile]/[repo]
 ```
 
@@ -43,7 +45,7 @@ Repositories can also be forked to your profile by clicking the **Fork** button 
 > spoon fork [repo] [profile]/[repo]
 ```
 
-You can also create a new repository from the command-line interface by pushing it to the hub from your local registry:
+You can also create a new repository from the command-line interface by pushing it to the Hub from your local registry:
 
 ```
 # First run a container
@@ -52,10 +54,10 @@ You can also create a new repository from the command-line interface by pushing 
 # Then commit the container to an image
 > spoon commit 125ee2932 <image>
 
-# Push an image to the hub
+# Push an image to the Hub
 > spoon push <image>
 
 # The image is now pushed to the logged-in profile
 ```
 
-Now go to the repository details page on the hub and favorite your project with the **Star** button.
+Now go to the repository details page on the Hub and favorite your project with the **Star** button.
