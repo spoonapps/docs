@@ -1,5 +1,3 @@
-Spoonium is a platform for building, testing and deploying Windows applications and services in isolated containers. Once an application or service is put into a container, that image can be distributed to testers, Beta users or any Spoonium user by pushing the image to the Hub. This sections describes some of the building blocks of the Spoonium platform starting with the virtual machine.
-
 ## Virtual Machine
 
 The runtime environment of Spoonium containers is supplied by the **Spoon Virtual Machine** or SVM, a lightweight implementation of core operating system APIs, including the filesystem, registry, process, and threading subsystems. Applications executing within a container interact with a virtualized filesystem, registry, and process environment supplied by the SVM, rather than directly with the host machine.

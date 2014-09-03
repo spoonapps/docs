@@ -1,4 +1,4 @@
 ---
 topic: getting started
-section: about
+section: installation
 ---
