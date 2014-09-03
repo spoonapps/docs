@@ -76,13 +76,14 @@ building "my image" from /path/to/spoon.me
 
 - Put the image in the same folder as the md file
 - Modify the path in the link based on the example below
+- If you need to specify image dimensions, use HTML
 
 ```
 # GitHub location
-https://github.com/spoonium/docs/tree/master/doc/quick_start/tour_ii/image.png
+https://github.com/spoonium/docs/tree/master/doc/getting_started/tour_ii/image.png
 
 # Markdown would be
-![](/components/docs/quick_start/tour_ii/image.png)
+![](/components/docs/getting_started/tour_ii/image.png)
 ```
 
 ### Contributing 
