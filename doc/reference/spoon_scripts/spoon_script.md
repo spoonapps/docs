@@ -10,9 +10,7 @@ The syntax of a Spoon build script generally follows the pattern:
 	instruction <arg 1> <arg 2> ...
 	instruction <arg 1> <arg 2> ...
 	
-The script is read and executed top-to-bottom. 
-
-Spoon Script files are not case-sensitive. However, we recommend making all instructions UPPERCASE and all arguments lowercase to more easily delineate the two. 
+The script is read and executed top-to-bottom and a is not case-sensitive. 
 
 All scripts have an implicit `commit` at the end of the script. After the last instruction in the script, it executes `spoon commit` on the container. If a name was not provided to the `build` command (via the `-n` or `--name` flag) then the new image will be created with its ID as its name. 
 
