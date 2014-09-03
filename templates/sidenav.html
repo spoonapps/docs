@@ -5,10 +5,10 @@
             {% if s.subsections|length > 0 %}
             <i class="fa fa-chevron-right"></i>
             {% endif %}
-            <a href="#{{ s.id }}">{{ s.display_name }}</a>
+            <a href="#" data-section-id="{{ s.id }}">{{ s.display_name }}</a>
             <ul class="nav">
                 {% for ss in s.subsections %}
-                <li><a href="#{{ ss.id }}">{{ ss.display_name }}</a></li>
+                <li><a href="#" data-section-id="{{ s.id }}" data-subsection-id="{{ ss.id }}">{{ ss.display_name }}</a></li>
                 {% endfor %}
             </ul>
         </li>

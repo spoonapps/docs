@@ -20,7 +20,7 @@ Open a new command prompt and follow the example below.
 
 	Logged in as username
 
-### Pull an  Image
+### Pull an Image
 
 We'll begin by pulling (downloading) a blank image from our remote registry, the Spoonium Hub.
 

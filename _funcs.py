@@ -1,5 +1,5 @@
 from __future__ import print_function
-import fileinput, os, yaml, shutil
+import fileinput, os, yaml, shutil, re
 from urllib import quote_plus
 from BeautifulSoup import BeautifulSoup
 from argparse import ArgumentParser
@@ -149,7 +149,7 @@ def write_to_file(file_path, text):
 def generate_link(name):
     """Generates the text to use a link for the given name
     """
-    return quote_plus(name.lower().replace('?', ''))
+    return quote_plus(re.sub(r'[^_a-zA-Z0-9 -]*', '', name.lower()))
 
 #==========================
 #MIGRATION SCRIPT FUNCTIONS

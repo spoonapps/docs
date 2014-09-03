@@ -1,4 +1,5 @@
 from urllib import quote_plus
+import re
 
 #====================
 #BUILD SCRIPT CLASSES
@@ -130,4 +131,4 @@ class MissingArgError(Exception):
 def generate_link(name):
     """Generates the text to use a link for the given name
     """
-    return quote_plus(name.lower().replace('?', ''))
+    return quote_plus(re.sub(r'[^_a-zA-Z0-9 -]*', '', name.lower()))
