@@ -1,6 +1,6 @@
 ### login
 
-The login command logs a user into a remote Spoon server. 
+The `login` command logs a user into a remote Spoon server. 
 
 	# Log in by specifying username and password
 	> spoon login spoonuser password-here

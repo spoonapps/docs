@@ -1,6 +1,6 @@
 ### cp
 
-The cp command copies a file or directory from one container to another. It can also copy a file or directory from a container to the native filesystem. 
+The `cp` command copies a file or directory from one container to another. It can also copy a file or directory from a container to the native filesystem. 
 
 	# Copy a file from a container to the native system
 	> spoon cp 2de7:C:\project\file.txt C:\Users\Spoonuser

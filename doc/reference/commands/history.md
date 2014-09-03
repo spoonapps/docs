@@ -1,5 +1,5 @@
 ### history
-The history command lists all images used in the past. The most used recent images are listed first.
+The `history` command lists all images used in the past. The most used recent images are listed first.
 
     # List the recently used images
     > spoon history

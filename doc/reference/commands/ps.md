@@ -1,6 +1,6 @@
 ### ps
 
-The ps command returns a list of all the containerized processes running on the local machine. 
+The `ps` command returns a list of all the containerized processes running on the local machine. 
 
 	# View all processes running in containers
 	> spoon ps

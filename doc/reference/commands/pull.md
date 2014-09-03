@@ -1,6 +1,6 @@
 ### pull
 
-The pull command copies an image from a remote registry to your local registry. 
+The `pull` command copies an image from a remote registry to your local registry. 
 
 This command requires a single parameter: the image to pull. 
 

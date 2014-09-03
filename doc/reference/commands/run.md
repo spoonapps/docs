@@ -1,6 +1,6 @@
 ### run
 
-The run command creates new containers.
+The `run` command creates new containers.
 
 	# Create a container using the spoonbrew/apache image
 	> spoon run spoonbrew/apache
@@ -18,7 +18,7 @@ Containers are started with the startup file specified in the base image. If a s
 
 When passing arguments to a startupfile or command, we recommend separating these arguments from the rest of the command with a **--**. Arguments specified after a **--** mark are passed directly to the startup file/command.
 
-If a **--** mark is not used, any argument matching a run command flag will be interpreted by Spoon, which may lead to unexpected behavior. 
+If a **--** mark is not used, any argument matching a `run` command flag will be interpreted by Spoon, which may lead to unexpected behavior. 
 
     # Spoon will interpret the /d flag and execute a container in detached mode
     > spoon run spoonbrew/scratch /d

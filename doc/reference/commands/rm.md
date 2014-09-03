@@ -1,6 +1,6 @@
 ### rm
 
-The rm command removes containers from the local machine. 
+The `rm` command removes containers from the local machine. 
 
 	# Remove a single container by specifying the ID
 	> spoon rm f1ea9fe

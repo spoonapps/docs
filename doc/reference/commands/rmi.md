@@ -1,6 +1,6 @@
 ### rmi
 
-The rmi command removes an image, or images, from the local registry. 
+The `rmi` command removes an image, or images, from the local registry. 
 
 	# Remove an image by specifying it by name
 	> spoon rmi my-image
@@ -12,7 +12,7 @@ The rmi command removes an image, or images, from the local registry.
 	
 	All images have been removed
 
-If the same image is forked or tagged multiple times, the rmi command will only untag the specified name, not remove the image itself. 
+If the same image is forked or tagged multiple times, the `rmi` command will only untag the specified name, not remove the image itself. 
 
 	> spoon images
 	

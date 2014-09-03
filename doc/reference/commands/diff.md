@@ -1,6 +1,6 @@
 ### diff
 
-The diff command shows changes made in a container's filesystem. Changes are shown relative to the base image that the container was created from. 
+The `diff` command shows changes made in a container's filesystem. Changes are shown relative to the base image that the container was created from. 
 
 	# Show all changes made in a container
 	> spoon diff <container id>

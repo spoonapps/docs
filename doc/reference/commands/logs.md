@@ -1,6 +1,6 @@
 ### logs
 
-The logs command fetches the logs for a container, if they exist. This is especially useful for debugging or inspecting containers. 
+The `logs` command fetches the logs for a container, if they exist. This is especially useful for debugging or inspecting containers. 
 
 By default, only the standard streams for a container are recorded and logged. To enable more comprehensive logging, use the **--diagnostic** flag of the **run** command when the container is initially created. 
 

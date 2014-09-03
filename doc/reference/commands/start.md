@@ -1,8 +1,8 @@
 ### start
 
-The start command restarts a stopped container. 
+The `start` command restarts a stopped container. 
 
-If the start command is run against an already-running container, no action is taken. 
+If the `start` command is run against an already-running container, no action is taken. 
 
 To enable diagnostic logging for the container, specify the `--diagnostic` flag. 
 

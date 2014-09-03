@@ -1,6 +1,6 @@
 ### fork
 
-The fork command copies an image to another repository on your local machine. This is roughly equivalent to copying and renaming the image. 
+The `fork` command copies an image to another repository on your local machine. This is roughly equivalent to copying and renaming the image. 
 
 If the repository specified in the command does not already exist, a new one is automatically created.  
 

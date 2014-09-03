@@ -1,6 +1,6 @@
 ### config
 
-The config command displays and allows modification of the current configuration settings.
+The `config` command displays and allows modification of the current configuration settings.
 
 If `spoon config` is executed without command line parameters, the current settings are returned. 
 
