@@ -2,7 +2,7 @@
 
 In this tutorial, we'll cover how to containerize a .NET application so that it can run on any Windows computer, regardless of the natively-installed version of .NET. We'll then walk through how to integrate Spoonium into MSBuild to create an image as part of a standard build process. 
 
-We'll be containerizing a simple [OWIN](http://owin.org/) server using a Spoonscript. 
+We'll be containerizing a simple [OWIN](http://owin.org/) server using a SpoonScript. 
 
 All source code for this example is available on [Github](https://github.com/matt-black2/SimpleOwinServer). 
 
@@ -19,7 +19,7 @@ For this project, we'll need .NET 4.0. The Spoonium team has published a suite o
 > spoon pull spoonbrew/dotNet:4.0
 ```
 
-To build the image, we'll construct a Spoon script. The script should take the compiled Server executable, along with any DLLs, copy them into a new container, and build an image from this container. Below is the **spoon.me** file for the example project used in this tutorial. 
+To build the image, we'll construct a SpoonScript. The script should take the compiled Server executable, along with any DLLs, copy them into a new container, and build an image from this container. Below is the **spoon.me** file for the example project used in this tutorial. 
 
 Begin by creating an empty text file named **spoon.me** in the project's root directory.
 
@@ -53,4 +53,4 @@ In the **Post-build event command line** box, add the line:
 spoon build -n=$(SolutionName) $(SolutionDir)\spoon.me
 ```
 
-**Note**: For solutions with multiple projects, we recommend only triggering a post-build event for the last project in the build chain. This may require customizing your Spoon script to also pull in the build outputs from these other projects. 
+**Note**: For solutions with multiple projects, we recommend only triggering a post-build event for the last project in the build chain. This may require customizing your SpoonScript to also pull in the build outputs from these other projects. 

@@ -1,4 +1,4 @@
 ---
 topic: Reference
-section: Spoon Scripts
+section: SpoonScripts
 ---
