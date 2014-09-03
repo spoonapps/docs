@@ -226,44 +226,42 @@ sections:
     ordering: 15
   - display_name: logs
     ordering: 16
-  - display_name: logs
-    ordering: 17
   - display_name: netstat
-    ordering: 18
+    ordering: 17
   - display_name: pause
-    ordering: 19
+    ordering: 18
   - display_name: ps
-    ordering: 20
+    ordering: 19
   - display_name: pull
-    ordering: 21
+    ordering: 20
   - display_name: push
-    ordering: 22
+    ordering: 21
   - display_name: register
-    ordering: 23
+    ordering: 22
   - display_name: resume
-    ordering: 24
+    ordering: 23
   - display_name: revert
-    ordering: 25
+    ordering: 24
   - display_name: rm
-    ordering: 26
+    ordering: 25
   - display_name: rmi
-    ordering: 27
+    ordering: 26
   - display_name: run
-    ordering: 28
+    ordering: 27
   - display_name: search
-    ordering: 29
+    ordering: 28
   - display_name: start
-    ordering: 30
+    ordering: 29
   - display_name: tag
-    ordering: 31
+    ordering: 30
   - display_name: unregister
-    ordering: 32
+    ordering: 31
   - display_name: version
-    ordering: 33
+    ordering: 32
   - display_name: vm
-    ordering: 34
+    ordering: 33
   - display_name: vms
-    ordering: 35
+    ordering: 34
 - display_name: IDE
   ordering: 2
   pages: []
