@@ -1,14 +1,24 @@
 ### images
 
-The `images` command lists all of the images present in the current user's local registry. 
+The `images` command lists all of the images present in the local registry. 
 
-	# List all images in local registry
-	> spoon images
-	
-	ID 			  Name  				Tag	 Created 				Size
-	-- 			  ----  				---  -------    			----
-	7a85fe8f7ad1  spoonbrew/chocolatey       8/22/2014 11:34:19 AM  3.6 MB
+```
+Usage: spoon images <options>
 
-By default, the results of `spoon images` are truncated so that they are most readable in the command prompt. To prevent the Spoon IDE from truncating data, specify the `--no-trunc` flag. 
+<options> available:
+      --csv                  Print output with tab-separated columns
+      --no-trunc             Don't truncate output
+```
 
-The `--csv` flag can be specified to return the output of the `spoon image` command as a tab-separated table. 
+```
+# List all images in local registry
+> spoon images
+
+ID 			  Name  				Tag	 Created 				Size
+-- 			  ----  				---  -------    			----
+7a85fe8f7ad1  spoonbrew/chocolatey       8/22/2014 11:34:19 AM  3.6 MB
+```
+
+The results are truncated so that they are most readable in the command prompt. To prevent Spoon from truncating data, specify the `--no-trunc` flag. 
+
+The `--csv` flag can be specified to return the output as a tab-separated table. 
