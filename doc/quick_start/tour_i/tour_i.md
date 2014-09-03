@@ -135,8 +135,9 @@ Navigate to your new directory with the `cd` command.
 (87ddvf54) C:\spoonroot>
 ```
 
-```
 Create a simple text file by piping the `echo` command to the file name "hello.txt"
+
+```
 (87ddvf54) C:\spoonroot> echo Hello World! > hello.txt
 ```
 
