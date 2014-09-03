@@ -209,7 +209,27 @@ sections:
 - display_name: SpoonScript
   ordering: 3
   pages: []
-  subsections: []
+  subsections:
+  - display_name: cmd
+    ordering: 1
+  - display_name: disable
+    ordering: 2
+  - display_name: enable
+    ordering: 3
+  - display_name: env
+    ordering: 4
+  - display_name: from
+    ordering: 5
+  - display_name: hosts
+    ordering: 6
+  - display_name: meta
+    ordering: 7
+  - display_name: route
+    ordering: 8
+  - display_name: startup file
+    ordering: 9
+  - display_name: workdir
+    ordering: 10
 - display_name: XAPPL
   ordering: 4
   pages: []
