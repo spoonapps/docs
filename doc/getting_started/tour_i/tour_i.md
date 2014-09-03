@@ -108,7 +108,7 @@ In our container, let's make a new directory called "spoonroot" with the `mkdir`
 (87ddvf54) C:\> mkdir C:\spoonroot
 ```
 
-This directory will only be created *inside the container* and *not* on your local system, illustrated by viewing our containerized vs. native directories:
+This directory will only be created *inside the container* and *not* on your local system, illustrated by viewing our containerized vs. native directories after executing the `mkdir` command:
 
 ```
 # In the native command prompt:
@@ -162,7 +162,7 @@ ID            Images                    Command  		Created
 87ddvf5455lp  spoonbrew/scratch:head	echo Hello Wor  7/31/2014 9:20:18 AM
 ```
 
-Create a new image from your container with `spoon commit`.
+Turn your container into a new image with `spoon commit`.
 
 ```
 > spoon commit 87ddv helloworld
@@ -174,7 +174,7 @@ Commit complete
 Let's analyze what just happened:
 
 ```
-spoon commit	# `commit` creates a new image from a specified container.
+spoon commit	# The `commit` command creates a new image from a specified container.
 87ddv			# Specify the container with at least 2 digits of the container ID.
 helloworld		# The name you'd like for your new image.
 ```
@@ -199,7 +199,7 @@ Push complete
 Image is public
 ```
 
-What just happened?
+Congrats on your first push! What just happened?
 
 ```
 spoon push		# The push command commits any image to the Spoonium Hub.
