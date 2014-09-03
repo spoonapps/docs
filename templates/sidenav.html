@@ -1,12 +1,17 @@
-<ul>
-    {% for s in topic.sections %}
-    <li>
-        <a href="#{{ s.id }}">{{ s.display_name }}</a>
-        <ul>
-            {% for ss in s.subsections %}
-            <li><a href="#{{ ss.id }}">{{ ss.display_name }}</a></li>
-            {% endfor %}
-        </ul>
-    </li>
-    {% endfor %}
-</ul>
+<div class="navbar-spy">
+    <ul class="nav top-nav">
+        {% for s in topic.sections %}
+        <li>
+            {% if s.subsections|length > 0 %}
+            <i class="fa fa-chevron-right"></i>
+            {% endif %}
+            <a href="#{{ s.id }}">{{ s.display_name }}</a>
+            <ul class="nav">
+                {% for ss in s.subsections %}
+                <li><a href="#{{ ss.id }}">{{ ss.display_name }}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
