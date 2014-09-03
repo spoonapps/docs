@@ -1,7 +1,11 @@
 ### vms
 
-The `vms` command lists all versions of the Spoon VM available to the current user. 
+The `vms` command lists all the available versions of the Spoon VM. 
 
-If a user is logged in to the Spoon IDE, all versions available both locally and on the remote registry are displayed. 
+```
+Usage: spoon vms
+```
 
-If no user is logged in to the Spoon IDE, only locally-stored versions of the Spoon VM are displayed. 
+If a user is logged in to a remote registry then all versions which are available both locally and remotely will be displayed. 
+
+If no user is logged in then only local versions of the Spoon VM are displayed. 

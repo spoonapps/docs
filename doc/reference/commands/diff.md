@@ -1,27 +1,24 @@
 ### diff
 
-The `diff` command shows changes made in a container's filesystem. Changes are shown relative to the base image that the container was created from. 
+The `diff` command shows changes made in a container's filesystem. 
 
-	# Show all changes made in a container
-	> spoon diff <container id>
+```
+Usage: spoon diff <options> <container>
 
-By default, the diff command will show changes in the virtual filesystem and registry. 
+<options> available:
+      --path=VALUE           Only show changes in subdirectories of the specified path
+      --registry-path=VALUE  Only show changes in subkeys of the specified registry path
+      --subsystems=VALUE     Show only diff for selected subsystems: files, registry
+```
 
-	# Only show changes to the registry
-	> spoon diff --subsystems=registry <container id>
+Changes are shown relative to the base images that the container was created from. 
 
-	# Only show changse to the filesystem
-	> spoon diff --subsystems=files <container id>
+```
+# Show all changes made in a container
+> spoon diff <container id>
+```
 
-To only show changes beneath a certain node in the filesystem or registry directory tree, use the **--path** or **--registry-path** flags. 
-
-	# Only show changes in HKCU
-	> spoon diff --registry-path=@HKCU@ <container id>
-
-	# Only show changes in system32
-	> spoon diff --path=C:\Windows\system32
-
-#### Interpreting diff Results
+#### Interpreting Results
 
 The leading character of each line denotes the type of change made at that path. 
 
@@ -30,11 +27,35 @@ The leading character of each line denotes the type of change made at that path.
 || C || Changed ||
 || D || Deleted ||
 
-If a file is changed, the diff results will show the a change in the folder, along with the change to the file.  
+If a file is changed, the diff results will show the a change in the folder along with the change to the file.  
 For example, if one added a file to a container at **C:\Users\Spoonuser\file.txt**: 
 
-	> spoon diff --subsystems=files <container id>
+```
+> spoon diff --subsystems=files <container id>
 
-	File system changes:
-	C C:\Users\Spoonuser
-	A C:\Users\Spoonuser\file.txt
+File system changes:
+C C:\Users\Spoonuser
+A C:\Users\Spoonuser\file.txt
+```
+
+#### Filtering Results
+
+The diff command will show changes in the virtual filesystem and registry. To change this behavior use the `--subsystems` flag.
+
+```
+# Only show changes to the registry
+> spoon diff --subsystems=registry <container id>
+
+# Only show changse to the filesystem
+> spoon diff --subsystems=files <container id>
+```
+
+To only show changes beneath a certain node in the filesystem or registry directory tree, use the `--path` or `--registry-path` flags. 
+
+```
+# Only show changes in HKCU
+> spoon diff --registry-path=@HKCU@ <container id>
+
+# Only show changes in system32
+> spoon diff --path=C:\Windows\system32
+```

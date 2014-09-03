@@ -1,7 +1,24 @@
 ### tag
 
-The `tag` command applies a new tag to an image, or returns all the available tags for that image. 
+The `tag` command applies a new tag to an image or returns all the available tags for that image. 
 
-If a tag is specified, e.g. `spoon tag my-image 1.0`, a new tag of **1.0** is applied to **my-image:head**. 
+```
+Usage: spoon tag <image> [<tag>]
+```
 
-If no tag is specified, e.g. `spoon tag my-image`, all the available tags are returned 
+If a tag is specified then a new tag is applied to the image head. 
+
+```
+> spoon tag my-image 1.0
+Output image: my-image:1.0
+```
+
+If no tag is specified then all the available tags are displayed.
+
+```
+> spoon tag my-image
+All available tags of my-image:
+head (local)
+1.0 (local)
+0.1.29
+```

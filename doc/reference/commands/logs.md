@@ -1,37 +1,51 @@
 ### logs
 
-The `logs` command fetches the logs for a container, if they exist. This is especially useful for debugging or inspecting containers. 
+The `logs` command fetches the logs for a container. This is especially useful for debugging or inspecting containers. 
 
-By default, only the standard streams for a container are recorded and logged. To enable more comprehensive logging, use the `--diagnostic` flag of the `run` command when the container is initially created or started by `start`. 
+```
+Usage: spoon logs <options> <container>
 
-Logs are kept till the next start of given container instance. They can be previewed at any moment and `--list` shows available logs. When container is started, currently available logs of the proccesses in run instance are displayed. When container is stopped, logs from recently run instance are presented.
+<options> available:
+      --diagnostic           Show diagnostic logs
+  -f                         Follow log output
+      --list                 List available logs
+      --pid=VALUE            Show logs for specified process (default: 0=main process of container)
+  -s                         Show stream prefixes of log entries
+      --stderr               Only show the stderr logs
+      --stdout               Only show the stdout logs
+  -t                         Show timestamps of log entries
+      --tail=VALUE           Only show the last VALUE lines of each log file
+      --wait-after-error     Leave program open after error
+```
 
-	# Can only show stdout or stderr logs
-	> spoon logs --stdout 2de7fda8
+Only the standard streams for a container are recorded and logged. To enable more comprehensive logging, use the `--diagnostic` flag of the `run` command when the container is created or of the `start` command when the container is restarted. 
 
-	> spoon logs --stderr 2de7fda8
+Logs are kept until the next start of given container instance. Logs can be viewed at any time. To see available logs, use the `--list` flag. 
 
-	# Show timestamps for log entries
-	> spoon logs -t 2de7fda8
+```
+# Can only show stdout or stderr logs
+> spoon logs --stdout 2de7fda8
 
-	# Show stream prefixes of log entries
-	> spoon logs -s 2de7fda8
+> spoon logs --stderr 2de7fda8
 
-	# Follow log output in real-time
-	> spoon logs -f 2de7fda8
+# Show timestamps for log entries
+> spoon logs -t 2de7fda8
 
-	# Similar to Unix 'tail', only show last 5 lines
-	> spoon logs --tail=5 2de7fda8
+# Show stream prefixes of log entries
+> spoon logs -s 2de7fda8
 
-	# Show diagnostic logs instead of stdandards streams
-	> spoon logs --diagnostic 2de7fda8
+# Follow log output in real-time
+> spoon logs -f 2de7fda8
 
-	# Show logs for specified process
-	> spoon logs --pid=666 2de7fda8
+# Similar to Unix 'tail', only show last 5 lines
+> spoon logs --tail=5 2de7fda8
 
-	# List available logs
-	> spoon logs --list 2de7fda8
+# Show diagnostic logs instead of stdandards streams
+> spoon logs --diagnostic 2de7fda8
 
-Stream prefix for **stdout** is `out` and `err` for **stderr**.
+# Show logs for specified process
+> spoon logs --pid=666 2de7fda8
 
-Timestamp is Windows timestamp format, a 64-bit value representing the number of 100-nanosecond intervals since January 1, 1601 (UTC).
+# List available logs
+> spoon logs --list 2de7fda8
+```
