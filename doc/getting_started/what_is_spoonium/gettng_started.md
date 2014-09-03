@@ -64,4 +64,3 @@ Containers are created from an image or from multiple images. They hold everythi
 You can turn any container into a custom image template using the `spoon commit` command.
 
 Read more about [working with containers](http://spoonium.net/docs/building#working-with-containers) and about [how Spoonium works](http://spoonium.net/docs/getting+started#about), or jump right in with our "Hello World!" tutorial below.
-
