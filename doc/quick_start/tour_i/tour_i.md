@@ -34,11 +34,11 @@ Pull complete
 Let's analyze this command:
 
 ```
-spoon pull			# Here we tell Spoonium to execute the pull command, which adds an image to your repository.
-spoonbrew/scratch	# Here we specify the repository owner, spoonbrew, and the repository/image name, scratch. The **scratch** image is completely empty and roughly equivalent to a freshly-installed, clean computer. 
+spoon pull			# The pull command adds an image to your Spoonium account.
+spoonbrew/scratch	# Specify the repository owner, "spoonbrew," and the repository/image name, "scratch."
 ```
 
-There you go! If it worked as expected, you just pulled the **scratch** image into your account. You're ready to create your first container!
+There you go! If it worked as expected, you just pulled the **scratch** image into your account; the scratch image is completely empty and roughly equivalent to a freshly-installed, clean OS. You're ready to create your first container!
 
 **Note**: The **[spoonbrew](http://spoonium.net/hub/spoonbrew)** user account is maintained by the Spoon team. We provide a number of preconfigured images for popular runtimes, frameworks, and tools such as .NET, Java, and NodeJS. 
 
@@ -54,10 +54,12 @@ For **spoonbrew/scratch**, the default startup file is **cmd.exe** (the command 
 # A new, containerized command prompt will appear with your output.
 
 Hello World! 
-
+```
+```
 # Exit the new containerized command prompt.
 (25fdso88) C:\spoonroot> exit
-
+```
+```
 # Your container ID will appear in your remaining command prompt window.
 
 25fdso8823fdsa734fdhasjd6588p098
@@ -66,11 +68,11 @@ Hello World!
 Let's break down what just happened:
 
 ```
-spoon run			# Here we tell Spoonium to execute the run command and kick off a new container.
-spoonbrew/scratch	# The repo owner, spoonbrew, and the repo/image name, scratch.
+spoon run			# Here we tell Spoonium to kick off a new container with a specified image.
+spoonbrew/scratch	# Our desired repo owner, "spoonbrew," and the repo/image name, "scratch."
 echo Hello World!	# Command your container to start up with "Hello World!"
 exit				# This closes your container and generates your container ID.
-25fdso88...			# How you'll identify a specific container. We'll talk more about container ID's later.
+25fdso88...			# This output identifies a specific container. We'll discuss container ID's soon.
 ```
 
 Congratulations! You just ran your first container.
@@ -86,7 +88,8 @@ In this example, we'll run a container and create a new text file within that co
 
 You should see a new command prompt appear. This prompt is running in the container. 
 
-**Tip**: *"Is my command prompt containerized, or not?"* When the command prompt is running inside a Spoon container, you'll see the first 8 characters of the container ID in the prompt.
+"Is my command prompt containerized, or not?"
+When the command prompt is running inside a Spoon container, you'll see the first 8 characters of the container ID in the prompt.
 
 So, your **native** command prompt will look like this:
 
@@ -96,27 +99,46 @@ But a **containerized** command prompt will look something like this:
 
 	(87ddvf54) C:\>
 
-Back to the tutorial!
-
+Let's get back to the tutorial:
 
 ```
 # Make a new directory called "spoonroot" in our container with the `mkdir` command.
 (87ddvf54) C:\> mkdir C:\spoonroot
-
-# This directory will only be created *inside the container* and *not* on your local system.
 ```
 
+This directory will only be created *inside the container* and *not* on your local system, illustrated by viewing our containerized vs. native directories:
+
 ```
-# Navigate to that directory. 
+# In the native command prompt:
+C:\> dir
+
+Directory of C:\Users\username
+<DIR>          Desktop
+<DIR>          Documents
+<DIR>          Downloads
+
+# In the container:
+(87ddvf54) C:\> dir
+
+Directory of C:\
+<DIR>          Windows
+<DIR>          spoonroot
+```
+
+Navigate to your new directory with the `cd` command.
+
+```
 (87ddvf54) C:\> cd C:\spoonroot
 
-# To create a simple text file, pipe the output of an `echo` command to the file name "hello.txt"
+(87ddvf54) C:\spoonroot>
+
+# Create a simple text file by piping the `echo` command to the file name "hello.txt"
 (87ddvf54) C:\spoonroot> echo Hello World! > hello.txt
 ```
 
+Finally, `exit` the command prompt, shutting down the container. 
 
 ```
-# Finally, close the command prompt, shutting down the container. 
 (87ddvf54) C:\spoonroot> exit
 
 # Your container ID will appear in your remaining command prompt.
@@ -126,17 +148,18 @@ Back to the tutorial!
 
 #### Commit Changes and Push
 
-Now it's time to memorialize and share your changes by creating a new image from the container.
+Now it's time to memorialize and share your changes by creating a new image from the container. Bring up your full list of containers with `spoon containers`. Note your ID.
 
 ```
-# Bring up your full list of containers with `spoon containers`. Note your ID.
 > spoon containers
 	
 ID            Images                    Command  		Created
 87ddvf5455lp  spoonbrew/scratch:head	echo Hello Wor  7/31/2014 9:20:18 AM
 ```
+
+Create a new image from your container with `spoon commit`.
+
 ```
-# Create a new image from your container with `spoon commit`.
 > spoon commit 87ddv helloworld
 	
 Committing container 87ddvf5455lp to image helloworld
@@ -151,20 +174,20 @@ spoon commit	# `commit` creates a new image from a specified container.
 helloworld		# The name you'd like for your new image.
 ```
 
+View the newly created image with the `spoon images` command.
+
 ```
-# View the newly created image with the `spoon images` command.
+# `spoon images` returns a list of all images present on the local machine.
 > spoon images
 	
 Name                    Created					Size
 helloworld		 		7/31/2014 9:29:27 AM	0.1MB
 spoonbrew/scratch	 	7/31/2014 9:20:26 AM	0.0MB
-
-
-# `spoon images` returns a list of all images present on the local machine.
 ```
 
+Upload the **helloworld** image to the Spoonium Hub with the `spoon push` command.
+
 ```
-# Upload the **helloworld** image to the Spoonium Hub with the `spoon push` command.
 > spoon push helloworld
 
 Pushing image helloworld to spoonuser/helloworld:head
@@ -177,7 +200,7 @@ What just happened?
 ```
 spoon push		# The push command commits any image to the Spoonium Hub.
 Push complete	# Signals the image has uploaded.
-Image is public	# By default, pushed images will be publicly added to the user account of the logged-in user.
+Image is public	# Pushed images are publicly added to the account of the logged-in user.
 ```
 
 Once the `Push complete` message appears in your command prompt, the image is on the [Spoonium Hub](http://spoonium.net/hub), which functions similarly to a remote repository in Git - it allows your work to be accessed from any computer with access to the remote. You can view your new image by going to https://spoonium.net/hub/[*username*]/helloworld.
