@@ -1,6 +1,6 @@
 ### cmd
 
-The cmd instruction is used to run a command in the container. 
+The `cmd` instruction is used to run a command in the container. 
 
 The instruction has three forms: 
 
