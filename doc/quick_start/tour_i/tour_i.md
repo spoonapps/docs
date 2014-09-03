@@ -102,10 +102,9 @@ But a **containerized** command prompt will look something like this:
 
 	(87ddvf54) C:\>
 
-Let's get back to the tutorial:
+In our container, let's make a new directory called "spoonroot" with the `mkdir` command.
 
 ```
-# Make a new directory called "spoonroot" in our container with the `mkdir` command.
 (87ddvf54) C:\> mkdir C:\spoonroot
 ```
 
@@ -134,8 +133,10 @@ Navigate to your new directory with the `cd` command.
 (87ddvf54) C:\> cd C:\spoonroot
 
 (87ddvf54) C:\spoonroot>
+```
 
-# Create a simple text file by piping the `echo` command to the file name "hello.txt"
+```
+Create a simple text file by piping the `echo` command to the file name "hello.txt"
 (87ddvf54) C:\spoonroot> echo Hello World! > hello.txt
 ```
 
@@ -177,10 +178,9 @@ spoon commit	# `commit` creates a new image from a specified container.
 helloworld		# The name you'd like for your new image.
 ```
 
-View the newly created image with the `spoon images` command.
+View the newly created image with the `spoon images` command, which returns a list of all images present on the local machine.
 
 ```
-# `spoon images` returns a list of all images present on the local machine.
 > spoon images
 	
 Name                    Created					Size
