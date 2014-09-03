@@ -24,7 +24,7 @@ With Spoonium, testers can:
 
 For web applications and sites, Spoonium also offers unlimited manual and automated browser testing. Read more about our [Browser Sandbox](/docs/test#manual+browser+testing), our [online Selenium Grid](/docs/test#selenium+testing), and our easy integration with [any CI environment](/docs/build#continuous+integration).
 
-**Example:** Instead of installing, uninstalling, and reinstalling various dependencies onto a test machine, simply pull and run your team's application container, with all dependencies included, from a Spoonium repository.
+**Example:** Instead of installing, uninstalling, and reinstalling various dependencies onto a test machine, you can pull and run your team's application container, with all dependencies included, from a Spoonium repository.
 
 #### Sysadmins
 
@@ -39,7 +39,7 @@ Spoonium is 100% free for public projects. [Contact us](http://spoonium.net/cont
 
 ## How does it work?
 
-Without going too deeply into specifics, Spoonium containers are built on the **Spoon Virtual Machine** (SVM), a lightweight implementation of core operating system APIs, including the filesystem, registry, process, and threading subsystems. Applications executing within a container interact with a virtualized filesystem, registry, and process environment supplied by the SVM, rather than directly with the host machine.
+Spoonium containers are built on the **Spoon Virtual Machine** (SVM), a lightweight implementation of core operating system APIs, including the filesystem, registry, process, and threading subsystems. Applications executing within a container interact with a virtualized filesystem, registry, and process environment supplied by the SVM, rather than directly with the host machine. There are three main components to Spoonium:
 
 #### Images - Build component
 

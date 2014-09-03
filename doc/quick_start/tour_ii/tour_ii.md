@@ -1,6 +1,6 @@
 ## Tour II - A Web Application
 
-In this walkthrough, we will go over how to manipulate containers for the specific task of web applications, specifically Ghost on a Node JS server. We will learn how to revert a container's state, share data between containers, and map ports to help out with any testing task.
+In this walkthrough, we will go over how to manipulate containers for the specific task of web applications, specifically **[Ghost](http://ghost.org/)** on a Node JS server. We will learn how to revert a container's state, share data between containers, and map ports to help out with any testing task.
 
 ### Topics Covered
 
