@@ -199,7 +199,7 @@ Start the NodeJS server and verify that the blog has the database.
 (9a82febf) C:\> cd ghost & npm start
 ```
 
-![](/components/docs/quick_start/tour_ii/ghost-first-post.png)
+![](/components/docs/quick_start/tour_ii/ghost-first-post-2.png)
 
 ### Revert Container to Original State
 
