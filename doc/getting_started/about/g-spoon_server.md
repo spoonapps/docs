@@ -1,4 +1,4 @@
-## Spoon Server
+### Spoon Server
 
 Spoonium supports deployment to both [public](http://spoonium.net/hub) and private hub servers.
 

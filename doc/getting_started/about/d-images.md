@@ -1,4 +1,4 @@
-## Images
+### Images
 
 An image is a read-only filesystem and registry. A container is dynamic and can host running processes, but an image is static. Think of it as a snapshot of a container at a certain time.
 

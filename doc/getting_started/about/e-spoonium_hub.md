@@ -1,4 +1,4 @@
-## Hub
+### Hub
 
 The [Spoonium Hub](http://spoonium.net/hub) is a public, SaaS platform for hosting and distributing Spoon images. 
 

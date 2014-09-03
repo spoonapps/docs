@@ -1,4 +1,4 @@
-## Virtual Machine
+### Virtual Machine
 
 The runtime environment of Spoonium containers is supplied by the **Spoon Virtual Machine** or SVM, a lightweight implementation of core operating system APIs, including the filesystem, registry, process, and threading subsystems. Applications executing within a container interact with a virtualized filesystem, registry, and process environment supplied by the SVM, rather than directly with the host machine.
 

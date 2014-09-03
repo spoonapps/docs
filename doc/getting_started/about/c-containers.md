@@ -1,4 +1,4 @@
-## Containers
+### Containers
 
 A container is an isolated virtual environment consisting of a filesystem, registry, and the Spoon VM.
 
