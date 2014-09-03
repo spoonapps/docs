@@ -45,7 +45,7 @@ Spoonium containers are built on the **Spoon Virtual Machine** (SVM), a lightwei
 
 Spoonium images serve as a read-only filesystem and registry that your application will use while running in a container. They contain all of the information on a certain type of container.
 
-Verified images (like jdk, node, mongo)  are available for download from the [Spoonium Hub](http://spoonium.net/hub), or a custom image can be created from any container with the `spoon commit` command. Thus, you can layer multiple dependency ima ges together in a single container, rather than having to build one on top of another.
+Verified images (like jdk, node, mongo)  are available for download from the [Spoonium Hub](http://spoonium.net/hub), or a custom image can be created from any container with the `spoon commit` command. Thus, you can layer multiple dependency images together in a single container, rather than having to build one on top of another.
 
 When instructed to run a container with the `spoon run` command, Spoonium will automatically search for and download necessary images. Read more about [working with images](http://spoonium.net/docs/building#working-with-images).
 
@@ -63,5 +63,5 @@ Containers are created from an image or from multiple images. They hold everythi
 
 You can turn any container into a custom image template using the `spoon commit` command.
 
-Read more about [working with containers](http://spoonium.net/docs/building#working-with-containers) and about [how Spoonium works](http://spoonium.net/docs/getting+started#about).
+Read more about [working with containers](http://spoonium.net/docs/building#working-with-containers) and about [how Spoonium works](http://spoonium.net/docs/getting+started#about), or jump right in with our "Hello World!" tutorial below.
 
