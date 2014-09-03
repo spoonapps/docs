@@ -1,5 +1,5 @@
 ### checkout
-The checkout command restores any image from the history. 
+The `checkout` command restores any image from the history. 
 
 	# Checkout a old image by its id
     > spoon checkout 73dfe6973074 restored-image

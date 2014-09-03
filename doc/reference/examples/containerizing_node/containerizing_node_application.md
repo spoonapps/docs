@@ -128,7 +128,7 @@ Visit the [hub](http://spoonium.net/hub) to see the details of the image you jus
 
 #### Optional: Automated Image Creation
 
-The above container creation and configuration can also be automated using a Spoon Script file.
+The above container creation and configuration can also be automated using a SpoonScript file.
 
 Create a new text file and copy/paste this text:
 
@@ -152,9 +152,9 @@ cmd npm install
 boot file node app.js
 ```
 
-See [Spoon script reference](/docs/reference#spoon+scripts) for more information on Spoon script syntax.
+See the [SpoonScript reference](/docs/reference#spoonscripts) for more information on SpoonScript syntax.
 
-Save the file as Spoon Script in **C:\\spoon\aIRChat**.
+Save the file as SpoonScript in **C:\\spoon\aIRChat**.
 
 ```
 # Now build the script to create a new image called aIRChat

@@ -1,12 +1,12 @@
 ### build
 
-The build command is used to automate the creation of images. The build command can build images from a Spoonscript or a **.xappl** configuration file. 
+The `build` command is used to automate the creation of images. The `build` command can build images from a SpoonScript or a **.xappl** configuration file. 
 
 To build from an existing container, use the `commit` command.
 
-#### Using Spoonscripts
+#### Using SpoonScripts
 
-A Spoonscript is a list of instructions that Spoon will follow to create a container. After the last instruction in a script, Spoon will automatically run `spoon commit` on the recently created container, creating a new image. 
+A SpoonScript is a list of instructions that Spoon will follow to create a container. After the last instruction in a script, Spoon will automatically run `spoon commit` on the recently created container, creating a new image. 
 
 When building from a **.me** script, the Spoon IDE will take the following steps: 
 
@@ -16,7 +16,7 @@ When building from a **.me** script, the Spoon IDE will take the following steps
 4. Commit the stopped container
 5. Remove the container from the local machine
 
-Any command line flags that correspond to a Spoonscript instruction will be overriden by their corresponding instruction, if they conflict. 
+Any command line flags that correspond to a SpoonScript instruction will be overriden by their corresponding instruction, if they conflict. 
 
 #### Using .xappl Files
 
@@ -28,7 +28,7 @@ Environment variables can be added to the container through the **-e** or **--en
 
 To create multiple environment variables in the container, use multiple **-e** flags. For example, the following command would add 2 environment variables, VAR1 with value 1 and VAR2 with value 2, to the built image. 
 
-	> spoon build -e=VAR1=1 -eVAR2=2 C:\Spoon Script
+	> spoon build -e=VAR1=1 -eVAR2=2 C:\SpoonScript
 
 Alternatively, use the **--env-file** flag and specify all of the environment variables you wish to add to the image in a line-delimited text file. For example, the previous command could be replicated using the following command: 
 
@@ -64,7 +64,7 @@ By default, the build command will create the intermediate container and output 
 	# Build the image using version 11.6.205 of the Spoon VM
 	> spoon build --xvm=11.6.205 C:\spoon.me 
 
-The working directory inside the container can be specified with the **-w** flag. This flag may be overridden by a **workdir**  instructions in a Spoonscript.
+The working directory inside the container can be specified with the **-w** flag. This flag may be overridden by a **workdir**  instructions in a SpoonScript.
 
 Note that this flag sets the woring directory within the intermediate container used to build the output image. It does *not* set the initial working directory of the image. 
 
