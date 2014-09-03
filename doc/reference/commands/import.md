@@ -1,6 +1,6 @@
 ### import
 
-The import command is used to add Spoon images or non-Spoon file types from your local machine to your local registry.
+The `import` command is used to add Spoon images or non-Spoon file types from your local machine to your local registry.
 
 When importing external files into the Spoon registry, the filetype must be specified as an input to the command. 
 
