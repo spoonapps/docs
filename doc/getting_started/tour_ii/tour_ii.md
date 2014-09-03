@@ -113,7 +113,7 @@ Go ahead and make your first post! :)
 
 The Ghost web application can then be used via any browser at **http://localhost:2368**.
 
-![](/components/docs/quick_start/tour_ii/ghost-first-post.png)
+![](/components/docs/quick_start/tour_ii/ghost-first-post.png =659x)
 
 When you are done, press **Ctrl+C** to stop the server, then terminate batch file and exit the container.
 
@@ -155,7 +155,7 @@ Then use the commands to start the Ghost web application in each container, to m
 
 Using this set of commands, we create three containers using the same image. The application operates on the 2368 port internally, but is accessible via the 808x port that is assigned to it on the host.
 
-![](/components/docs/quick_start/tour_ii/multiple.png)
+![](/components/docs/quick_start/tour_ii/multiple.png =659x)
 
 ### Saving a Database to a Layer
 
@@ -199,7 +199,7 @@ Start the NodeJS server and verify that the blog has the database.
 (9a82febf) C:\> cd ghost & npm start
 ```
 
-![](/components/docs/quick_start/tour_ii/ghost-first-post.png)
+![](/components/docs/quick_start/tour_ii/ghost-first-post.png =659x)
 
 ### Revert Container to Original State
 
@@ -222,7 +222,7 @@ When you start the server and visit the website, the Ghost web application shoul
 (bc53e584) C:\> cd ghost & npm start
 ```
 
-![](/components/docs/quick_start/tour_ii/ghost-revert.png)
+![](/components/docs/quick_start/tour_ii/ghost-revert.png =659x)
 
 This command is especially useful if your database was somehow corrupted or an unrecoverable error made your web application unusable. Instead of trying to figure out where the problem is and attempting to clean your environment, which can take hours to do, you can simply `revert` the container to its original state with the spoon revert command.
 
