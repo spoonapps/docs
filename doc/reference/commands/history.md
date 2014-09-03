@@ -27,6 +27,6 @@ To show the history of a certain image, use `spoon history image-name`.
 
 By default 50 entries are shown. Specify `-n` flag to show more entries. 
 
-The results of `spoon history` are truncated so that they are most readable in the command prompt. To prevent the Spoon from truncating data, specify the `--no-trunc` flag. 
+The results of `spoon history` are truncated so that they are most readable in the command prompt. To prevent Spoon from truncating data, specify the `--no-trunc` flag. 
 
 The `--csv` flag can be specified to return the output as a tab-separated table. 
