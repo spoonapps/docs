@@ -1,4 +1,0 @@
----
-topic: Deploy
-section: MSI
----

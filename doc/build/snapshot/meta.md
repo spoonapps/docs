@@ -1,4 +1,0 @@
----
-topic: Build
-section: snapshotting
----

@@ -1,5 +1,5 @@
 ---
-display_name: Quick Start
+display_name: Getting Started
 ordering: 1
 sections:
 - display_name: What is Spoonium?
@@ -18,53 +18,17 @@ sections:
   ordering: 4
   pages: []
   subsections: []
----
-display_name: About
-ordering: 2
-sections:
-- display_name: Virtual Machine
-  ordering: 1
-  pages: []
-  subsections: []
-- display_name: Containers
-  ordering: 2
-  pages: []
-  subsections: []
-- display_name: Images
-  ordering: 3
-  pages: []
-  subsections: []
-- display_name: IDE and Command Line
-  ordering: 4
-  pages: []
-  subsections: []
-- display_name: Hub
+- display_name: Installation
   ordering: 5
   pages: []
   subsections: []
-- display_name: Spoon Server
+- display_name: About
   ordering: 6
   pages: []
   subsections: []
 ---
-display_name: Installation
-ordering: 3
-sections:
-- display_name: Windows
-  ordering: 1
-  pages: []
-  subsections: []
-- display_name: EC2 (coming soon)
-  ordering: 2
-  pages: []
-  subsections: []
-- display_name: Azure (coming soon)
-  ordering: 3
-  pages: []
-  subsections: []
----
 display_name: Hub
-ordering: 4
+ordering: 2
 sections:
 - display_name: Creating a Profile
   ordering: 1
@@ -79,8 +43,8 @@ sections:
   pages: []
   subsections: []
 ---
-display_name: Build
-ordering: 5
+display_name: Building
+ordering: 3
 sections:
 - display_name: Working with Containers
   ordering: 1
@@ -107,8 +71,8 @@ sections:
   pages: []
   subsections: []
 ---
-display_name: Test
-ordering: 6
+display_name: Testing
+ordering: 4
 sections:
 - display_name: Manual Browser Testing
   ordering: 1
@@ -135,8 +99,8 @@ sections:
   pages: []
   subsections: []
 ---
-display_name: Deploy
-ordering: 7
+display_name: Deploying
+ordering: 5
 sections:
 - display_name: To the Hub
   ordering: 1
@@ -163,28 +127,8 @@ sections:
   pages: []
   subsections: []
 ---
-display_name: Samples
-ordering: 8
-sections:
-- display_name: Java
-  ordering: 1
-  pages: []
-  subsections: []
-- display_name: Node.js
-  ordering: 2
-  pages: []
-  subsections: []
-- display_name: .NET
-  ordering: 3
-  pages: []
-  subsections: []
-- display_name: Python
-  ordering: 4
-  pages: []
-  subsections: []
----
 display_name: Reference
-ordering: 9
+ordering: 6
 sections:
 - display_name: Command Line
   ordering: 1
@@ -280,5 +224,9 @@ sections:
   subsections: []
 - display_name: VM Settings
   ordering: 7
+  pages: []
+  subsections: []
+- display_name: Samples
+  ordering: 8
   pages: []
   subsections: []

@@ -1,4 +1,0 @@
----
-topic: Installation
-section: Windows
----

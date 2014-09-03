@@ -1,4 +1,0 @@
----
-topic: Samples
-section: Java
----
