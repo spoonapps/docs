@@ -1,3 +1,9 @@
 ### resume
 
-Resumes a paused container. If the container specified is not paused, no action is taken.
+The `resume` command resumes a paused container. 
+
+```
+Usage: spoon resume <container>
+```
+
+If the container specified is not paused then no action will be taken.

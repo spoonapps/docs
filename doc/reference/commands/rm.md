@@ -2,12 +2,21 @@
 
 The `rm` command removes containers from the local machine. 
 
-	# Remove a single container by specifying the ID
-	> spoon rm f1ea9fe
-	
-	Container f1ea9fefjdkaslfh324fdadfshjkl3cndkj3 has been removed
+```
+Usage: spoon rm <options> <container>
 
-	# Remove all containers on the local machine with the -a flag
-	> spoon rm -a
-	
-	All containers have been removed
+<options> available:
+  -a, --all                  Remove all containers on the local machine
+```
+
+```
+# Remove a single container by specifying the ID
+> spoon rm f1ea9fe
+
+Container f1ea9fefjdkaslfh324fdadfshjkl3cndkj3 has been removed
+
+# Remove all containers on the local machine with the -a flag
+> spoon rm -a
+
+All containers have been removed
+```
