@@ -63,11 +63,15 @@ class DocSection(object):
     """Represents a section with a display name and a list of subpages
     """
 
-    def __init__(self, name, ordering, pages):
+    def __init__(self, name, ordering, pages, subsections):
         self.display_name = name
         self.ordering = ordering
         self.id = generate_link(self.display_name)
         self.pages = pages
+        if (len(subsections)>0):
+            self.subsections = map(lambda ss: DocSection(ss['display_name'], ss['ordering'], [], []), subsections)
+        else:
+            self.subsections = []
 
     def add_page(self, page):
         self.pages.append(page)

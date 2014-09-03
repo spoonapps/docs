@@ -57,7 +57,7 @@ def create_doc_from_yaml(yaml_file):
             _topic = DocTopic(topic['display_name'], topic['ordering'])
             for section in topic['sections']:
                 #create a new topic
-                _section = DocSection(section['display_name'], section['ordering'], section['pages'])
+                _section = DocSection(section['display_name'], section['ordering'], section['pages'], section['subsections'])
                 #add it to the _topic
                 _topic.add_section(_section)
             #add the topic to the doc
@@ -79,6 +79,7 @@ def process_directory(dirpath, files, root_build_dir, doc_template):
     directory_meta = process_dir_meta(dirpath)
     topic = doc_template.get_topic_named(directory_meta['topic'])
     section = topic.get_section_named(directory_meta['section'])
+    
     #if we get here, then the section must exist
     for f in files:
         if f == "meta.md":
@@ -128,10 +129,14 @@ def write_docspages(doc_template, build_dir):
     print(root_dir)
     env = Environment(loader=FileSystemLoader(os.path.join(root_dir, "templates")))
     template = env.get_template("docs_temp.html")
+    sidenav_template = env.get_template("sidenav.html")
     for topic in doc_template.get_ordered_topics():
         html = template.render(doc_template=doc_template, intopic=topic)
         write_to_file(os.path.join(os.path.join(build_dir, "docs"), topic.get_link_name() + ".html"), html)
-
+        #write sidenav component for topic
+        sidenav_html = sidenav_template.render(topic=topic)
+        write_to_file(os.path.join(os.path.join(build_dir, "sidenav"), topic.get_link_name() + ".html"), sidenav_html)
+        
 
 def write_to_file(file_path, text):
     """Write the contents of the input text to a file

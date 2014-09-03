@@ -5,15 +5,19 @@ sections:
 - display_name: What is Spoonium?
   ordering: 1
   pages: []
+  subsections: []
 - display_name: Tour I - Hello World
   ordering: 2
   pages: []
+  subsections: []
 - display_name: Tour II - A Web Application
   ordering: 3
   pages: []
+  subsections: []
 - display_name: Tour III - Automated Testing
   ordering: 4
   pages: []
+  subsections: []
 ---
 display_name: About
 ordering: 2
@@ -21,21 +25,27 @@ sections:
 - display_name: Virtual Machine
   ordering: 1
   pages: []
+  subsections: []
 - display_name: Containers
   ordering: 2
   pages: []
+  subsections: []
 - display_name: Images
   ordering: 3
   pages: []
+  subsections: []
 - display_name: IDE and Command Line
   ordering: 4
   pages: []
+  subsections: []
 - display_name: Hub
   ordering: 5
   pages: []
+  subsections: []
 - display_name: Spoon Server
   ordering: 6
   pages: []
+  subsections: []
 ---
 display_name: Installation
 ordering: 3
@@ -43,12 +53,15 @@ sections:
 - display_name: Windows
   ordering: 1
   pages: []
+  subsections: []
 - display_name: EC2 (coming soon)
   ordering: 2
   pages: []
+  subsections: []
 - display_name: Azure (coming soon)
   ordering: 3
   pages: []
+  subsections: []
 ---
 display_name: Hub
 ordering: 4
@@ -56,15 +69,19 @@ sections:
 - display_name: Creating a Profile
   ordering: 1
   pages: []
+  subsections: []
 - display_name: Registries
   ordering: 2
   pages: []
+  subsections: []
 - display_name: Repositories
   ordering: 3
   pages: []
+  subsections: []
 - display_name: Templates
   ordering: 4
   pages: []
+  subsections: []
 ---
 display_name: Build
 ordering: 5
@@ -72,21 +89,27 @@ sections:
 - display_name: Working with Containers
   ordering: 1
   pages: []
+  subsections: []
 - display_name: Working with Images
   ordering: 2
   pages: []
+  subsections: []
 - display_name: Working with the IDE
   ordering: 3
   pages: []
+  subsections: []
 - display_name: Desktop Scan
   ordering: 4
   pages: []
+  subsections: []
 - display_name: Snapshotting
   ordering: 5
   pages: []
+  subsections: []
 - display_name: Continuous Integration
   ordering: 6
   pages: []
+  subsections: []
 ---
 display_name: Test
 ordering: 6
@@ -94,21 +117,27 @@ sections:
 - display_name: Manual Browser Testing
   ordering: 1
   pages: []
+  subsections: []
 - display_name: Selenium Testing
   ordering: 2
   pages: []
+  subsections: []
 - display_name: JS Unit Testing
   ordering: 3
   pages: []
+  subsections: []
 - display_name: Test Reports
   ordering: 4
   pages: []
+  subsections: []
 - display_name: Testing with CI
   ordering: 5
   pages: []
+  subsections: []
 - display_name: Nightly Builds (coming soon)
   ordering: 6
   pages: []
+  subsections: []
 ---
 display_name: Deploy
 ordering: 7
@@ -116,21 +145,27 @@ sections:
 - display_name: To the Hub
   ordering: 1
   pages: []
+  subsections: []
 - display_name: To Spoon.net
   ordering: 2
   pages: []
+  subsections: []
 - display_name: To a Spoon Server
   ordering: 3
   pages: []
+  subsections: []
 - display_name: Portable EXE
   ordering: 4
   pages: []
+  subsections: []
 - display_name: MSI
   ordering: 5
   pages: []
+  subsections: []
 - display_name: Shell Registration
   ordering: 6
   pages: []
+  subsections: []
 ---
 display_name: Samples
 ordering: 8
@@ -138,15 +173,19 @@ sections:
 - display_name: Java
   ordering: 1
   pages: []
+  subsections: []
 - display_name: Node.js
   ordering: 2
   pages: []
+  subsections: []
 - display_name: .NET
   ordering: 3
   pages: []
+  subsections: []
 - display_name: Python
   ordering: 4
   pages: []
+  subsections: []
 ---
 display_name: Reference
 ordering: 9
@@ -154,21 +193,98 @@ sections:
 - display_name: Command Line
   ordering: 1
   pages: []
+  subsections:
+  - display_name: help
+    ordering: 1
+  - display_name: build
+    ordering: 2
+  - display_name: checkout
+    ordering: 3
+  - display_name: commit
+    ordering: 4
+  - display_name: config
+    ordering: 5
+  - display_name: containers
+    ordering: 6
+  - display_name: cp
+    ordering: 7
+  - display_name: diff
+    ordering: 8
+  - display_name: export
+    ordering: 9
+  - display_name: fork
+    ordering: 10
+  - display_name: history
+    ordering: 11
+  - display_name: images
+    ordering: 12
+  - display_name: import
+    ordering: 13
+  - display_name: login
+    ordering: 14
+  - display_name: logout
+    ordering: 15
+  - display_name: logs
+    ordering: 16
+  - display_name: logs
+    ordering: 17
+  - display_name: netstat
+    ordering: 18
+  - display_name: pause
+    ordering: 19
+  - display_name: ps
+    ordering: 20
+  - display_name: pull
+    ordering: 21
+  - display_name: push
+    ordering: 22
+  - display_name: register
+    ordering: 23
+  - display_name: resume
+    ordering: 24
+  - display_name: revert
+    ordering: 25
+  - display_name: rm
+    ordering: 26
+  - display_name: rmi
+    ordering: 27
+  - display_name: run
+    ordering: 28
+  - display_name: search
+    ordering: 29
+  - display_name: start
+    ordering: 30
+  - display_name: tag
+    ordering: 31
+  - display_name: unregister
+    ordering: 32
+  - display_name: version
+    ordering: 33
+  - display_name: vm
+    ordering: 34
+  - display_name: vms
+    ordering: 35
 - display_name: IDE
   ordering: 2
   pages: []
+  subsections: []
 - display_name: Spoon Scripts
   ordering: 3
   pages: []
+  subsections: []
 - display_name: XAPPL
   ordering: 4
   pages: []
+  subsections: []
 - display_name: Virtual Application Settings
   ordering: 5
   pages: []
+  subsections: []
 - display_name: MSI Settings
   ordering: 6
   pages: []
+  subsections: []
 - display_name: VM Settings
   ordering: 7
   pages: []
+  subsections: []

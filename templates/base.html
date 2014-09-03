@@ -3,11 +3,11 @@
     {% include "head.html" %}
     <body>
         <% include ../components/universalHeader.html %>
+        <% include ../components/docs/docsHeader.html %>
         <div id="container">
             <div id="wrap">
                 <div class="navigation">
-                {% block sidenav %}
-                {% endblock sidenav %}
+                <% include ../components/docs/sidenav/{{ intopic.get_link_name() }}.html %>
                 </div>
                 <div class="content">
                 {% block docscontent %}

@@ -52,6 +52,8 @@ if __name__ == "__main__":
             os.makedirs(build_dir)
         if not os.path.exists(os.path.join(build_dir, "docs")):  #subdir to dump main doc html files to
             os.makedirs(os.path.join(build_dir, "docs"))
+        if not os.path.exists(os.path.join(build_dir, "sidenav")):
+            os.makedirs(os.path.join(build_dir, "sidenav"))
         main(os.path.join(script_dir, "doc"), build_dir)
         print("Success!!")
         sys.exit(0)
