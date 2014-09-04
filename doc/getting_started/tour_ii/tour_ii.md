@@ -42,11 +42,13 @@ Let's analyze this command:
 ```
 spoon run
 
-# Unlike Tour I, we skipped `spoon pull`. For cases where you want to run images, and not just pull, `spoon run` will simultaneously download and run images in a new container.
+# Unlike Tour I, we skipped the `spoon pull` command. Why?
+# `spoon run` will simultaneously download and run images in a new container.
 
 wget,7zip,node
 
-# Unlike Tour I, we have omitted the "owner/" namespace from image names. Omitting the namespace causes the Spoon IDE to first search for the named images on your local machine's image repository. If it doesn't find a match locally, the IDE then automatically searches for the images in the spoonbrew account on the Spoonium Hub, as it did in this example.
+# Unlike Tour I, we have omitted the "owner/" namespace from image names. Omitting the namespace causes the Spoon IDE to first search for the named images on your local machine's image repository.
+# If it doesn't find a match locally, the IDE then automatically searches for the images in the spoonbrew account on the Spoonium Hub, as it did in this example.
 ```
 
 In your container, make a directory for the Ghost web application.
