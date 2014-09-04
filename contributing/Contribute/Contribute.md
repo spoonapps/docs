@@ -1,6 +1,6 @@
-## Contribute to the Docs
+## Contribute to Spoonium
 
-Our docs are totally open-source, so please contribute!
+Our docs and build scripts are totally open-source, so please contribute!
 
 Any accepted contributions will be sent a Spoon swag kit that includes the [coolest shirt you'll ever own](https://twitter.com/iamkeir/status/492338567122010112/photo/1).
 
