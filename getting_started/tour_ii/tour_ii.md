@@ -108,7 +108,7 @@ Commit complete
 Once we have created our Ghost image, we can `run` it.
 
 ```
-C:\>spoon run ghost:0.5.1
+C:\> spoon run ghost:0.5.1
 
 # This will initialize a fresh container using our newly created Ghost image.
 ```
@@ -158,24 +158,31 @@ Imagine that you needed to run or test multiple instances of the same applicatio
 However, with the help of port mapping, we can run multiple instances of the Ghost web application image without having to do any of that. Simply map a host port to your application's internal port and you are ready to go. No mess, no fuss.
 
 ```
-# Create a container that maps port 8080 on the host to port 2368 on the container
-spoon run --route-add=8080:2368 ghost:0.5.1
+# Create a container that maps port 8080 on the host to port 2368 on the container.
+C:\> spoon run -d --route-add=8080:2368 ghost:0.5.1
+8bc1c8a0774e452391d6be6255d9d13e
 
-# Create a container that maps port 8081 on the host to port 2368 on the container
-spoon run --route-add=8081:2368 ghost:0.5.1
+# Create a container that maps port 8081 on the host to port 2368 on the container.
+C:\> spoon run -d --route-add=8081:2368 ghost:0.5.1
+8a524a9fd6a047778bc88f3169a90780
 
-# Create a container that maps port 8082 on the host to port 2368 on the container
-spoon run --route-add=8082:2368 ghost:0.5.1
+# Create a container that maps port 8082 on the host to port 2368 on the container.
+C:\> spoon run -d --route-add=8082:2368 ghost:0.5.1
+cee869387b74474b89bafccb5b590884
 ```
 
-Then use the commands to start the Ghost web application in each container, to make all three instances accessible.
+Note that we used the -d (--detach) flag this time to start a container, get the container ID, and continue using our native command prompt. If we do not use this flag, the native command prompt will block execution of commands until the container is stopped.
+
+In each of the three Ghost containers, start the NodeJS server to make all three instances accessible.
 
 ```
-# Change the current directory to where Ghost is installed and start the server
-(cont808x) C:\> cd C:\Ghost & npm start
+# Change the current directory to where Ghost is installed and start the server for each container.
+(8bc1c8a0) C:\> cd C:\Ghost & npm start
+(8a524a9f) C:\> cd C:\Ghost & npm start
+(cee86938) C:\> cd C:\Ghost & npm start
 ```
 
-Using this set of commands, we create three containers using the same image. The application operates on the 2368 port internally, but is accessible via the 808x port that is assigned to it on the host.
+At this point, you should have three containers using the same image. Each Ghost instance operates on the 2368 port internally, but is accessible via the 808x port that is assigned to it on the host.
 
 ![](/components/docs/quick_start/tour_ii/multiple.png)
 
@@ -260,11 +267,11 @@ Imagine that you have a live environment with a production, testing, and develop
 
 ```
 # Create a Ghost 0.5.0 instance using the same database and config on port 9090
-spoon run --route-add=9090:2368 ghost:0.5.0,ghost-db,ghost-config
+C:\> spoon run -d --route-add=9090:2368 ghost:0.5.0,ghost-db,ghost-config
 
 # Create a Ghost 0.5.1 instance using the same database and config on port 9091
-spoon run --route-add=9091:2368 ghost:0.5.1,ghost-db,ghost-config
+C:\> spoon run -d --route-add=9091:2368 ghost:0.5.1,ghost-db,ghost-config
 
 # Create a Ghost 0.5.2 instance using the same database and config on port 9092
-spoon run --route-add=9092:2368 ghost:0.5.2,ghost-db,ghost-config
+C:\> spoon run -d --route-add=9092:2368 ghost:0.5.2,ghost-db,ghost-config
 ```
