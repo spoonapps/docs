@@ -326,8 +326,10 @@ sections:
     ordering: 8
   - display_name: startup file
     ordering: 9
-  - display_name: workdir
+  - display_name: using
     ordering: 10
+  - display_name: workdir
+    ordering: 11
 - display_name: XAPPL
   ordering: 4
   pages: []
