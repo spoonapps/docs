@@ -1,15 +1,17 @@
 ## Tour II - A Web Application
 
-Any successful enterprise relies on atleast one web application, and they need the tools to run them in production environments as well as test them before a release. In this example, we will use the popular **[Ghost](http://ghost.org/)** web blog application to showcase the features of the Spoonium system that make it particularly useful for this purpose.
+Spoonium gives users the tools to easily test and deploy web applications. In this example, we will use the popular **[Ghost](http://ghost.org/)** web blogging application to showcase the features of the Spoonium system that make it particularly useful for this purpose.
 
 ### Topics Covered
 
-1. Creating a new image using base images
-2. Running an image
-3. Mapping ports between the host and a container
-4. Reverting a container to its original state
-5. Copying data from one container to another
-6. Layering images
+```
+1. Creating a new web application image by combining base images
+2. Running a web application image
+3. Running multiple instances of a web application with the help of port mapping
+4. Copying data from one container to another
+5. Layering images (adding multiple images to a container)
+6. Reverting a container to its original state
+```
 
 ### Create a Ghost Image
 

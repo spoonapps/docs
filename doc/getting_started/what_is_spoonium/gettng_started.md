@@ -1,41 +1,41 @@
 ## What is Spoonium?
 
-Spoonium is a tool that can package an application and its dependencies in a virtual container. Containerized ("Spooned") applications can then be run on any Windows machine that has Spoonium installed, no matter the underlying infrastructure. This eliminates installs, conflicts, breaks, and missing dependencies.
+Spoonium allows you to package applications and their dependencies into a lightweight, isolated virtual environment called a "container." Containerized ("Spooned") applications can then be run on any Windows machine that has Spoonium installed, no matter the underlying infrastructure. This eliminates installs, conflicts, breaks, and missing dependencies.
 
-This has benefits for several groups of people:
-
-#### Developers
+#### For Developers
 
 With Spoonium, developers can:
 
-- Develop and test Windows applications in containers that can be distributed to other developers, as well as to staging/production. The common issue of "Well, it worked on my machine" can be avoided.
-- Deploy any application to any machine without installers, incompatibilities, or breaks.
-- Send containers back and forth in specific testing stages, eliminating friction between development and QA cycles and speeding up the overall development life cycle.
+- Develop and package applications in isolated containers that contain all dependencies, including runtimes such as .NET and Java, and databases such as SQL Server and MongoDB
+- Automate testing and share test environments with QA, developers, and beta users with the [Spoonium Hub](http://spoonium.net/hub)
+- Simplify development and eliminate bugs by deploying applications in a "known good" configuration with a fixed set of components and dependencies
+- Containers obviate the need for installers and prevent conflicts with natively installed software
 
-**Example:** An application built on the latest version of .NET may break if a tester or end user has a different .NET version installed. To avoid this issue, use Spoonium to package your application *with* the right .NET version into a container that will run instantly on any device with the Spoon plugin.
-
-#### QA
+#### For QA
 
 With Spoonium, testers can:
 
-- Execute any unit or code-level integration tests within a container, ensuring the environment used in production is properly tested against.
-- Pull a container down to their local machine and test against a local copy of the application; they can even run the Spooned application side-by-side against an older or beta version.
-- Speed up test cycles by removing the wait time usually needed to install operating systems and application dependencies.
+- Run development code in a pre-packaged, isolated environment with software-configurable networking
+- Rapidly rollback changes and execute tests across a span of application versions and test environments
+- Test in multiple client, server, and browser environments concurrently on a single physical device
+- Accelerate test cycles by eliminating the need to install application dependencies and modify configuration
 
-For web applications and sites, Spoonium also offers unlimited [manual](http://spoonium.net/docs/testing#manual-browser-testing) and [automated](http://spoonium.net/docs/testing#selenium-testing) browser testing.
+In addition to container functionality, Spoonium offers a number of premium test services, such as manual and automated browser testing, Selenium testing, and CI integration. For more information, see [Testing](http://spoonium.net/docs/testing).
 
-**Example:** Instead of installing, uninstalling, and reinstalling various dependencies onto a test machine, you can pull and run your team's application containers, with all dependencies included, from Spoonium repositories.
+#### For IT Managers
 
-#### Sysadmins
+With Spoonium, system administrators can:
 
-With Spoonium, sysadmins can:
+- Remove errors due to inconsistencies between staging, production, and end-user environments
+- Allow users to test out new or beta versions of applications without interfering with existing versions
+- Simplify deployment of desktop applications by eliminating dependencies (.NET, Java, Flash) and conflicts
+- Improve security by locking down desktop and server environments while preserving application access
 
-- Take away the inconsistencies between staging and production environments, allowing their teams to quickly and routinely ship to production.
-- Deploy and run any app on any Windows infrastructure quickly and reliably, even if users don't have the traditionally required dependencies or environment.
+And Spoonium works seamlessly with [Spoon.net](http://spoon.net), an application hosting service that provides an application portal, desktop console, data synchronization, cloud storage, and more.
 
-#### Open source
+#### Open Source
 
-Spoonium is 100% free for public projects. [Contact us](http://spoonium.net/contact) to get set up.
+Spoonium is 100% free for open source projects. Set up a free organization at Spoonium.net and [contact us](http://spoonium.net/contact) if you need help or access to premium features.
 
 ## How does it work?
 
