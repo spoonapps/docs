@@ -358,3 +358,11 @@ sections:
     ordering: 3
   - display_name: Python
     ordering: 4
+---
+display_name: Contributing
+ordering: 7
+sections:
+- display_name: Placeholder
+  ordering: 1
+  pages: []
+  subsections: []
