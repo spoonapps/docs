@@ -1,4 +1,4 @@
 ---
 topic: Contributing
-section: Placeholder
+section: Contribute to Spoonium
 ---
