@@ -183,6 +183,8 @@ Using this set of commands, we create three containers using the same image. The
 
 Now that we have a Ghost database created and filled with some data, let's **copy** it to a new container using the `spoon cp` command. We can convert this container later to an image and use it as a backup, or to layer existing data on top of a clean ghost image.
 
+Saving a database to a layer can help you test different application versions against the same database, back up databases in case an app breaks something, test against new/old database versions, and change a database during development without messing with a "master" database.
+
 First, we will need to create a blank container that will hold the database.
 
 ```
