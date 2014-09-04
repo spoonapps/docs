@@ -6,6 +6,8 @@ The 'logout' command is used to log the current user out of the remote registry.
 Usage: spoon logout
 ```
 
+#### Examples:
+
 ```
 # Log out the current user
 > spoon logout

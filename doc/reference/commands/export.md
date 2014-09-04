@@ -11,6 +11,8 @@ Usage: spoon export <options> <image> <path>
       --wait-after-error     Leave program open after error
 ```
 
+#### Examples:
+
 ```
 # Copy an image to the local machine
 > spoon export my-new-image C:\

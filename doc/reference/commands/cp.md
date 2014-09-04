@@ -1,13 +1,12 @@
 ### cp
 
-The `cp` command copies a files from one container to another between a container and the native filesystem. 
+The `cp` command copies a files from one container to another or between a container and the native filesystem. 
 
 ```
-Usage: spoon cp <options> [<source-container>:]<path-from> [<target-container>:]<path-to>
-
-<options> available:
-      --wait-after-error     Leave program open after error
+Usage: spoon cp [<source-container>:]<path-from> [<target-container>:]<path-to>
 ```
+
+#### Examples:
 
 ```
 # Copy a file from a container to the native system

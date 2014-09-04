@@ -9,6 +9,8 @@ Usage: spoon rm <options> <container>
   -a, --all                  Remove all containers on the local machine
 ```
 
+Use the `-a` flag to remove all containers at one time. Note that this operation cannot be undone.
+
 ```
 # Remove a single container by specifying the ID
 > spoon rm f1ea9fe
