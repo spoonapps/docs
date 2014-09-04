@@ -159,7 +159,7 @@ Using this set of commands, we create three containers using the same image. The
 
 ![](/components/docs/quick_start/tour_ii/multiple.png)
 
-### Saving the Database to a Layer
+### Saving a Database to a Layer
 
 Now that we have a Ghost database created and filled with some data, let's **copy** it to a new container using the `spoon cp` command. We can convert this container later to an image and use it as a back up or to layer existing data on top of a clean ghost image.
 
