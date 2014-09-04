@@ -12,13 +12,13 @@ sections:
   subsections:
   - display_name: Installation
     ordering: 1
-  - display_name: Get going
+  - display_name: Get Going
     ordering: 2
-  - display_name: Pull an image
+  - display_name: Pull an Image
     ordering: 3
   - display_name: Create a Container
     ordering: 4
-  - display_name: Creating files within a container
+  - display_name: Creating Files within a Container
     ordering: 5
 - display_name: Tour II - A Web Application
   ordering: 3
@@ -30,13 +30,13 @@ sections:
     ordering: 2
   - display_name: Running the Ghost Web Application
     ordering: 3
-  - display_name: Running Multiple Instances of the Ghost Web Application
+  - display_name: Running Multiple Instances
     ordering: 4
   - display_name: Saving a Database to a Layer
     ordering: 5
-  - display_name: Revert Container to Original State
+  - display_name: Reverting the Container
     ordering: 6
-  - display_name: Pulling it all together
+  - display_name: Pulling It All Together
     ordering: 7
 - display_name: Tour III - Automated Testing
   ordering: 4
@@ -77,9 +77,7 @@ sections:
 - display_name: Creating a Profile
   ordering: 1
   pages: []
-  subsections:
-  - display_name: Are you working with a team?
-    ordering: 1
+  subsections: []
 - display_name: Repositories
   ordering: 2
   pages: []

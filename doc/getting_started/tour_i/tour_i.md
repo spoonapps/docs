@@ -5,7 +5,7 @@
 1. To create, save, run, and ship containers, you'll need to install and run the [Spoon plugin](http://start.spoon.net/install) on any Windows machine or VM.
 2. [Create an account or log in](http://spoon.net/sso/spoonium.net/login?return_to=https://spoonium.net/docs#try-it).
 
-### Get going
+### Get Going
 
 Open a new command prompt and follow the example below.
 
@@ -79,7 +79,7 @@ exit				# This closes your container and generates your container ID.
 
 Congratulations! You just ran your first container.
 
-### Creating files within a container
+### Creating Files within a Container
 
 In this example, we'll run a container and create a new text file within that container. 
 

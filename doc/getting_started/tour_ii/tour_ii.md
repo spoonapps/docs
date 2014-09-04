@@ -130,7 +130,7 @@ bc53e584fbf943098e7d0bf6109737eb
 Process returned exit code 0xC000013A
 ```
 
-### Running Multiple Instances of the Ghost Web Application
+### Running Multiple Instances
 
 Imagine that you needed to run multiple instances of the same application, for example each department in an organization wanted its own Ghost web application. In a typical scenario, you would have to create modified images that have individual configurations and would have to maintain these configurations after each update.
 
@@ -159,7 +159,7 @@ Using this set of commands, we create three containers using the same image. The
 
 ![](/components/docs/quick_start/tour_ii/multiple.png)
 
-### Saving a Database to a Layer
+### Saving the Database to a Layer
 
 Now that we have a Ghost database created and filled with some data, let's **copy** it to a new container using the `spoon cp` command. We can convert this container later to an image and use it as a back up or to layer existing data on top of a clean ghost image.
 
@@ -203,7 +203,7 @@ Start the NodeJS server and verify that the blog has the database.
 
 ![](/components/docs/quick_start/tour_ii/ghost-first-post-2.png)
 
-### Revert Container to Original State
+### Reverting the Container
 
 We can use the spoon 'revert' command to restore a container to its original state.
 
@@ -228,7 +228,7 @@ When you start the server and visit the website, the Ghost web application shoul
 
 This command is especially useful if your database was somehow corrupted or an unrecoverable error made your web application unusable. Instead of trying to figure out where the problem is and attempting to clean your environment, which can take hours to do, you can simply `revert` the container to its original state with the spoon revert command.
 
-### Pulling it all together
+### Pulling it All Together
 
 Imagine that you have a live environment with a production, testing, and a developing instance of the Ghost web application. You can use the port mapping and layering technique to run all three environments using the same database and the same config on the same machine. This eliminates the need for extra server machines, the risk when deploying due to config mismanagement, and you can easily spin up more instances and tear down unneeded ones.
 
