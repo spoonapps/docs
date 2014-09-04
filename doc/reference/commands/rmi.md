@@ -11,6 +11,8 @@ Usage: spoon rmi <options> <image>
 
 ```
 
+Use the `-a` flag to remove all images at one time. Note that this operation cannot be undone.
+
 ```
 # Remove an image by specifying it by name
 > spoon rmi my-image

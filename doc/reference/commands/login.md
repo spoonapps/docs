@@ -6,6 +6,8 @@ The `login` command is used to log a user into the current remote registry.
 Usage: spoon login [<username> <password>]
 ```
 
+#### Examples:
+
 ```
 # Log in by specifying username and password
 > spoon login spoonuser password-here

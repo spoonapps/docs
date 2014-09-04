@@ -6,6 +6,8 @@ The `netstat` command displays active port mappings, name resolution information
 Usage: spoon netstat <container>
 ```
 
+#### Examples:
+
 ```
 > spoon run --route-add=:80 --route-add=:8081 --hosts=localhost:lhost --link=0218:service -d <image> 63621076457c4b4fb7fff3fcbfda06b1
 > spoon netstat 6362

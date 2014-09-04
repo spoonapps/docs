@@ -24,6 +24,8 @@ Usage: spoon run <options> <image> [<parameters>...]
       --wait-after-error     Leave program open after error
 ```
 
+Specify multiple base images by separating with a comma.
+
 ```
 # Create a container using the spoonbrew/apache image
 > spoon run spoonbrew/apache
