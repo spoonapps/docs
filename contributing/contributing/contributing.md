@@ -14,6 +14,8 @@ Things we love to see:
 - New build scripts, recipes, and walkthroughs for cool applications.
 - New projects built with Spoonium's Windows containers in mind!
 
-If you have an idea for an improvement but lack the time to make a pull request, hit up our [Google group](https://groups.google.com/forum/#!forum/spoonium-user), tweet [@spoonapps](http://twitter.com/spoonapps), or email us at support@spoonium.net!
+If you have an idea for an improvement but lack the time to make a pull request, hit up our [Google group](https://groups.google.com/forum/#!forum/spoonium-user), tweet [@spoonapps](http://twitter.com/spoonapps), or email us at support@spoonium.net.
+
+If you want to join the Spoon team, check out our [careers page](http://spoon.net/careers)! We're hiring ;)
 
 Thanks for your contributions!
