@@ -228,7 +228,7 @@ When you start the server and visit the website, the Ghost web application shoul
 
 This command is especially useful if your database was somehow corrupted or an unrecoverable error made your web application unusable. Instead of trying to figure out where the problem is and attempting to clean your environment, which can take hours to do, you can simply `revert` the container to its original state with the spoon revert command.
 
-### Pulling it All Together
+### Pulling It All Together
 
 Imagine that you have a live environment with a production, testing, and a developing instance of the Ghost web application. You can use the port mapping and layering technique to run all three environments using the same database and the same config on the same machine. This eliminates the need for extra server machines, the risk when deploying due to config mismanagement, and you can easily spin up more instances and tear down unneeded ones.
 
