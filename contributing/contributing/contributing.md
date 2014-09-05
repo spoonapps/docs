@@ -2,7 +2,7 @@
 
 Our docs and build scripts are totally open-source, so please contribute!
 
-Any accepted contributions will be sent a Spoon swag kit that includes the [coolest shirt you'll ever own](https://twitter.com/iamkeir/status/492338567122010112/photo/1).
+Those who submit accepted pull requests will be sent a Spoon swag kit that includes the [coolest shirt you'll ever own](https://twitter.com/iamkeir/status/492338567122010112/photo/1).
 
 You can edit **Spoonium docs** at [https://github.com/spoonium/docs](https://github.com/spoonium/docs).
 
