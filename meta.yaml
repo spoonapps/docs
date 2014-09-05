@@ -362,7 +362,7 @@ sections:
 display_name: Contributing
 ordering: 7
 sections:
-- display_name: Placeholder
+- display_name: Contribute to Spoonium
   ordering: 1
   pages: []
   subsections: []
