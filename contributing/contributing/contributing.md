@@ -18,4 +18,4 @@ If you have an idea for an improvement but lack the time to make a pull request,
 
 If you want to join the Spoon team, check out our [careers page](http://spoon.net/careers)! We're hiring ;)
 
-Thanks for your contributions!
+Thanks for your contributions! 
