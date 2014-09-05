@@ -1,189 +1,119 @@
 ---
 display_name: Getting Started
-ordering: 1
 sections:
 - display_name: What is Spoonium?
-  ordering: 1
   pages: []
   subsections: []
 - display_name: Tour I - Hello World
-  ordering: 2
   pages: []
   subsections:
   - display_name: Installation
-    ordering: 1
   - display_name: Get Going
-    ordering: 2
   - display_name: Pull an Image
-    ordering: 3
   - display_name: Create a Container
-    ordering: 4
   - display_name: Creating Files within a Container
-    ordering: 5
 - display_name: Tour II - A Web Application
-  ordering: 3
   pages: []
   subsections:
   - display_name: Topics Covered
-    ordering: 1
   - display_name: Create a Ghost Image
-    ordering: 2
   - display_name: Running the Ghost Web Application
-    ordering: 3
   - display_name: Running Multiple Instances
-    ordering: 4
   - display_name: Saving a Database to a Layer
-    ordering: 5
   - display_name: Reverting the Container
-    ordering: 6
   - display_name: Pulling It All Together
-    ordering: 7
 - display_name: Tour III - Automated Testing
-  ordering: 4
   pages: []
   subsections:
   - display_name: Next Steps
-    ordering: 1
 - display_name: Installation
-  ordering: 5
   pages: []
   subsections:
   - display_name: Windows
-    ordering: 1
   - display_name: Azure
-    ordering: 2
   - display_name: EC2
-    ordering: 3
 - display_name: About
-  ordering: 6
   pages: []
   subsections:
   - display_name: Virtual Machine
-    ordering: 1
   - display_name: Containers
-    ordering: 2
   - display_name: Images
-    ordering: 3
   - display_name: Hub
-    ordering: 4
   - display_name: IDE and Command Line
-    ordering: 5
   - display_name: Spoon Server
-    ordering: 6
 ---
 display_name: Hub
-ordering: 2
 sections:
 - display_name: Creating a Profile
-  ordering: 1
   pages: []
   subsections: []
 - display_name: Repositories
-  ordering: 2
   pages: []
   subsections: []
 - display_name: Templates
-  ordering: 3
   pages: []
   subsections: []
 ---
 display_name: Building
-ordering: 3
 sections:
 - display_name: Working with Containers
-  ordering: 1
   pages: []
   subsections:
   - display_name: Creating Containers
-    ordering: 1
   - display_name: Managing Containers
-    ordering: 2
   - display_name: Processes and Stopping Containers
-    ordering: 3
   - display_name: Debugging
-    ordering: 4
   - display_name: Building Images from Containers
-    ordering: 5
 - display_name: Working with Images
-  ordering: 2
   pages: []
   subsections:
   - display_name: Creating Images
-    ordering: 1
   - display_name: Forking, Renaming, and Tagging
-    ordering: 2
   - display_name: Push to a Remote Repository
-    ordering: 3
 - display_name: Working with the IDE
-  ordering: 3
   pages: []
   subsections: []
 - display_name: Desktop Scan
-  ordering: 4
   pages: []
   subsections:
   - display_name: Running a Desktop Scan
-    ordering: 1
   - display_name: Best Practices
-    ordering: 2
   - display_name: Troubleshooting
-    ordering: 3
 - display_name: Snapshotting
-  ordering: 5
   pages: []
   subsections:
   - display_name: Process
-    ordering: 1
   - display_name: Capture Application Updates via Snapshot
-    ordering: 2
   - display_name: Best Practices
-    ordering: 3
 - display_name: Continuous Integration
-  ordering: 6
   pages: []
   subsections:
   - display_name: Create SpoonScript
-    ordering: 1
   - display_name: Integrate into the CI Server
-    ordering: 2
   - display_name: Run the container
-    ordering: 3
 ---
 display_name: Testing
-ordering: 4
 sections:
 - display_name: Manual Browser Testing
-  ordering: 1
   pages: []
   subsections: []
 - display_name: Selenium Testing
-  ordering: 2
   pages: []
   subsections:
   - display_name: Debugging Tests
-    ordering: 1
   - display_name: Integrating Spoonium with an Existing Grid
-    ordering: 2
   - display_name: Testing Internal Sites
-    ordering: 3
   - display_name: Testing Internet Explorer
-    ordering: 4
   - display_name: Common Issues and Troubleshooting
-    ordering: 5
 - display_name: JS Unit Testing
-  ordering: 3
   pages: []
   subsections:
   - display_name: Getting Started - Karma
-    ordering: 1
   - display_name: Getting Started - Mocha/Mochify
-    ordering: 2
 - display_name: Test Reports
-  ordering: 4
   pages: []
   subsections: []
 - display_name: Testing with CI
-  ordering: 5
   pages: []
   subsections: []
 - display_name: Nightly Builds (coming soon)
@@ -192,181 +122,110 @@ sections:
   subsections: []
 ---
 display_name: Deploying
-ordering: 5
 sections:
 - display_name: To the Hub
-  ordering: 1
   pages: []
   subsections: []
 - display_name: To Spoon.net
-  ordering: 2
   pages: []
   subsections: []
 - display_name: To a Spoon Server
-  ordering: 3
   pages: []
   subsections: []
 - display_name: Portable EXE
-  ordering: 4
   pages: []
   subsections: []
 - display_name: MSI
-  ordering: 5
   pages: []
   subsections: []
 - display_name: Shell Registration
-  ordering: 6
   pages: []
   subsections: []
 ---
 display_name: Reference
-ordering: 6
 sections:
 - display_name: Command Line
-  ordering: 1
   pages: []
   subsections:
   - display_name: help
-    ordering: 1
   - display_name: build
-    ordering: 2
   - display_name: checkout
-    ordering: 3
   - display_name: commit
-    ordering: 4
   - display_name: config
-    ordering: 5
   - display_name: containers
-    ordering: 6
   - display_name: cp
-    ordering: 7
   - display_name: diff
-    ordering: 8
   - display_name: export
-    ordering: 9
   - display_name: fork
-    ordering: 10
   - display_name: history
-    ordering: 11
   - display_name: images
-    ordering: 12
   - display_name: import
-    ordering: 13
   - display_name: login
-    ordering: 14
   - display_name: logout
-    ordering: 15
   - display_name: logs
-    ordering: 16
   - display_name: netstat
-    ordering: 17
   - display_name: pause
-    ordering: 18
   - display_name: ps
-    ordering: 19
   - display_name: pull
-    ordering: 20
   - display_name: push
-    ordering: 21
   - display_name: register
-    ordering: 22
   - display_name: resume
-    ordering: 23
   - display_name: revert
-    ordering: 24
   - display_name: rm
-    ordering: 25
   - display_name: rmi
-    ordering: 26
   - display_name: run
-    ordering: 27
   - display_name: search
-    ordering: 28
   - display_name: start
-    ordering: 29
   - display_name: tag
-    ordering: 30
   - display_name: unregister
-    ordering: 31
   - display_name: version
-    ordering: 32
   - display_name: vm
-    ordering: 33
   - display_name: vms
-    ordering: 34
 - display_name: IDE
-  ordering: 2
   pages: []
   subsections:
   - display_name: Virtual Filesystem
-    ordering: 1
   - display_name: Virtual Registry
-    ordering: 2
   - display_name: Runtimes and Components
-    ordering: 3
 - display_name: SpoonScript
-  ordering: 3
   pages: []
   subsections:
   - display_name: cmd
-    ordering: 1
   - display_name: disable
-    ordering: 2
   - display_name: enable
-    ordering: 3
   - display_name: env
-    ordering: 4
   - display_name: from
-    ordering: 5
   - display_name: hosts
-    ordering: 6
   - display_name: meta
-    ordering: 7
   - display_name: route
-    ordering: 8
   - display_name: startup file
-    ordering: 9
   - display_name: using
-    ordering: 10
   - display_name: workdir
-    ordering: 11
 - display_name: XAPPL
-  ordering: 4
   pages: []
   subsections: []
 - display_name: Virtual Application Settings
-  ordering: 5
   pages: []
   subsections: []
 - display_name: MSI Settings
-  ordering: 6
   pages: []
   subsections: []
 - display_name: VM Settings
-  ordering: 7
   pages: []
   subsections: []
 - display_name: Samples
-  ordering: 8
   pages: []
   subsections:
   - display_name: Java
-    ordering: 1
   - display_name: Node.js
-    ordering: 2
   - display_name: .NET
-    ordering: 3
   - display_name: Python
-    ordering: 4
 ---
 display_name: Contributing
-ordering: 7
 sections:
 - display_name: Contribute to Spoonium
-  ordering: 1
   pages: []
   subsections: []
 - display_name: Style Guide
-  ordering: 2
   pages: []
   subsections: []

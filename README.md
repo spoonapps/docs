@@ -95,14 +95,12 @@ The overall structure of the page is dicated by the **meta.yaml** file, located 
 Each document in the yaml file specifies a topic that will appear in the top navbar of the docs page. A topic **must** have the following four properties: 
 
 1. A `display_name`. This is the actual wording that will appear in the top nav bar
-2. An `ordering`. This is the order, left-to-right, that the topic will appear in the nav bar, relative to all other topics. 
-4. A list of `sections`. This list is used to populate the topic's dropdown. 
+2. A list of `sections`. This list is used to populate the topic's dropdown.
 
 Each topic has an attribute for a list of containing `sections`. Each section must have the following attributes: 
 
-1. A `display_name`. This will be the text that appears for that section in the containing topic's dropdown. The `display_name` is also used as the basis for forming that section's `id` on **docs.html**. The `id` for a section is the `display_name` with spaces translated to '+' and with all special characters (except '?', which is trimmed out) encoded. 
-2. An `ordering`. This is the ordering, relative to the other sections in the containing topic, that this section will appear, top-to-bottom, in the topic dropdown. 
-3. A list of `pages`. Should always be an empty list in the **meta.yaml** file. 
+1. A `display_name`. This will be the text that appears for that section in the containing topic's dropdown. The `display_name` is also used as the basis for forming that section's `id` on **docs.html**. The `id` for a section is the `display_name` with spaces translated to '+' and with all special characters (except '?', which is trimmed out) encoded.
+2. A list of `pages`. Should always be an empty list in the **meta.yaml** file.
 
 ### Meta.md
 
