@@ -4,14 +4,12 @@ Spoonium gives users the tools to easily test and deploy web applications. In th
 
 ### Topics Covered
 
-```
 1. Creating a new web application image by combining base images
 2. Running a web application image
 3. Running multiple instances of a web application with the help of port mapping
 4. Copying data from one container to another
-5. Layering images (adding multiple images to a container)
+5. Layering images (creating a container with multiple images)
 6. Reverting a container to its original state
-```
 
 ### Create a Ghost Image
 
@@ -42,11 +40,13 @@ Let's analyze this command:
 ```
 spoon run
 
-# Unlike Tour I, we skipped `spoon pull`. For cases where you want to run images, and not just pull, `spoon run` will simultaneously download and run images in a new container.
+# Unlike Tour I, we skipped the `spoon pull` command. Why?
+# `spoon run` will simultaneously download and run images in a new container.
 
 wget,7zip,node
 
-# Unlike Tour I, we have omitted the "owner/" namespace from image names. Omitting the namespace causes the Spoon IDE to first search for the named images on your local machine's image repository. If it doesn't find a match locally, the IDE then automatically searches for the images in the spoonbrew account on the Spoonium Hub, as it did in this example.
+# Unlike Tour I, we have omitted the "owner/" namespace from image names. Omitting the namespace causes the Spoon IDE to first search for the named images on your local machine's image repository.
+# If it doesn't find a match locally, the IDE automatically searches images in the spoonbrew account on the Spoonium Hub, as it did in this example.
 ```
 
 In your container, make a directory for the Ghost web application.
@@ -106,7 +106,7 @@ Commit complete
 Once we have created our Ghost image, we can `run` it.
 
 ```
-C:\>spoon run ghost:0.5.1
+C:\> spoon run ghost:0.5.1
 
 # This will initialize a fresh container using our newly created Ghost image.
 ```
@@ -131,7 +131,7 @@ Go ahead and make your first post! :) Don't forget to save and publish it.
 
 Your Ghost web application can then be used via any browser at **http://localhost:2368**.
 
-![](/components/docs/quick_start/tour_ii/ghost-first-post.png)
+![](/components/docs/getting_started/tour_ii/ghost-first-post.png)
 
 When you are done, press **Ctrl+C** to stop the server, then `exit` the container.
 
@@ -156,30 +156,39 @@ Imagine that you needed to run or test multiple instances of the same applicatio
 However, with the help of port mapping, we can run multiple instances of the Ghost web application image without having to do any of that. Simply map a host port to your application's internal port and you are ready to go. No mess, no fuss.
 
 ```
-# Create a container that maps port 8080 on the host to port 2368 on the container
-spoon run --route-add=8080:2368 ghost:0.5.1
+# Create a container that maps port 8080 on the host to port 2368 on the container.
+C:\> spoon run -d --route-add=8080:2368 ghost:0.5.1
+8bc1c8a0774e452391d6be6255d9d13e
 
-# Create a container that maps port 8081 on the host to port 2368 on the container
-spoon run --route-add=8081:2368 ghost:0.5.1
+# Create a container that maps port 8081 on the host to port 2368 on the container.
+C:\> spoon run -d --route-add=8081:2368 ghost:0.5.1
+8a524a9fd6a047778bc88f3169a90780
 
-# Create a container that maps port 8082 on the host to port 2368 on the container
-spoon run --route-add=8082:2368 ghost:0.5.1
+# Create a container that maps port 8082 on the host to port 2368 on the container.
+C:\> spoon run -d --route-add=8082:2368 ghost:0.5.1
+cee869387b74474b89bafccb5b590884
 ```
 
-Then use the commands to start the Ghost web application in each container, to make all three instances accessible.
+Note that we used the -d (--detach) flag this time to start a container, get the container ID, and continue using our native command prompt. If we do not use this flag, the native command prompt will block execution of commands until the container is stopped.
+
+In each of the three Ghost containers, start the NodeJS server to make all three instances accessible.
 
 ```
-# Change the current directory to where Ghost is installed and start the server
-(cont808x) C:\> cd C:\Ghost & npm start
+# Change the current directory to where Ghost is installed and start the server for each container.
+(8bc1c8a0) C:\> cd C:\Ghost & npm start
+(8a524a9f) C:\> cd C:\Ghost & npm start
+(cee86938) C:\> cd C:\Ghost & npm start
 ```
 
-Using this set of commands, we create three containers using the same image. The application operates on the 2368 port internally, but is accessible via the 808x port that is assigned to it on the host.
+At this point, you should have three containers using the same image. Each Ghost instance operates on the 2368 port internally, but is accessible via the 808x port that is assigned to it on the host.
 
-![](/components/docs/quick_start/tour_ii/multiple.png)
+![](/components/docs/getting_started/tour_ii/multiple.png)
 
 ### Saving a Database to a Layer
 
 Now that we have a Ghost database created and filled with some data, let's **copy** it to a new container using the `spoon cp` command. We can convert this container later to an image and use it as a backup, or to layer existing data on top of a clean ghost image.
+
+Saving a database to a layer can help you test different application versions against the same database, back up databases in case an app breaks something, test against new/old database versions, and change a database during development without messing with a "master" database.
 
 First, we will need to create a blank container that will hold the database.
 
@@ -220,7 +229,7 @@ Start the NodeJS server and verify that the blog has the database.
 (9a82febf) C:\> cd ghost & npm start
 ```
 
-![](/components/docs/quick_start/tour_ii/ghost-first-post-2.png)
+![](/components/docs/getting_started/tour_ii/ghost-first-post-2.png)
 
 ### Reverting the Container
 
@@ -246,7 +255,7 @@ Change directory to Ghost and start the server.
 # When you visit the website, the Ghost web application should be reverted to its original state.
 ```
 
-![](/components/docs/quick_start/tour_ii/ghost-revert.png)
+![](/components/docs/getting_started/tour_ii/ghost-revert.png)
 
 This command is especially useful if your database was somehow corrupted or an unrecoverable error made your web application unusable. Instead of trying to figure out where the problem is and attempting to clean your environment, which can take hours to do, you can simply `revert` the container to its original state with the `spoon revert` command.
 
@@ -256,11 +265,11 @@ Imagine that you have a live environment with a production, testing, and develop
 
 ```
 # Create a Ghost 0.5.0 instance using the same database and config on port 9090
-spoon run --route-add=9090:2368 ghost:0.5.0,ghost-db,ghost-config
+C:\> spoon run -d --route-add=9090:2368 ghost:0.5.0,ghost-db,ghost-config
 
 # Create a Ghost 0.5.1 instance using the same database and config on port 9091
-spoon run --route-add=9091:2368 ghost:0.5.1,ghost-db,ghost-config
+C:\> spoon run -d --route-add=9091:2368 ghost:0.5.1,ghost-db,ghost-config
 
 # Create a Ghost 0.5.2 instance using the same database and config on port 9092
-spoon run --route-add=9092:2368 ghost:0.5.2,ghost-db,ghost-config
+C:\> spoon run -d --route-add=9092:2368 ghost:0.5.2,ghost-db,ghost-config
 ```

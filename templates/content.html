@@ -1,7 +1,0 @@
-{% for s in intopic.sections %}
-    <div data-section-id="{{s.id}}" class="wiki-content">
-    {% for p in s.pages %}
-    <% include {{ p }} %>
-    {% endfor %}
-    </div>
-{% endfor %}

@@ -1,15 +1,2 @@
-#=====
-# OS Files
-#=====
 .DS_Store
 
-# build folder
-/build
-
-#====
-Python files
-#====
-*.pyc
-*.pyproj
-
-deploy.bat
