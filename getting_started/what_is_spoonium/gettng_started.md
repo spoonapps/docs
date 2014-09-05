@@ -53,7 +53,7 @@ When instructed to run a container with the `spoon run` command, Spoonium will a
 
 To share your public images and containers with others, we have the [Spoonium Hub](http://spoonium.net/hub), which is filled with public repositories from both Spoonium users and the [spoonbrew team](http://spoonium.net/hub/spoonbrew).
 
-Free Spoonium accounts come with one free private repository and unlimited public repositories. You can also host your own on-premises repositories (instructions found [here](http://spoonium.net/docs/deploying#to-a-spoon-server)).
+Free Spoonium accounts come with unlimited public repositories. You can also upgrade to a [paid plan](http://spoonium.net/pricing) with private repositories, or host your own on-premises repositories (instructions found [here](http://spoonium.net/docs/deploying#to-a-spoon-server)).
 
 Once an image is on the Hub, you can run it from another location. Read more about [repositories](http://spoonium.net/docs/hub#repositories).
 
