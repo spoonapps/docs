@@ -4,14 +4,12 @@ Spoonium gives users the tools to easily test and deploy web applications. In th
 
 ### Topics Covered
 
-```
 1. Creating a new web application image by combining base images
 2. Running a web application image
 3. Running multiple instances of a web application with the help of port mapping
 4. Copying data from one container to another
-5. Layering images (adding multiple images to a container)
+5. Layering images (creating a container with multiple images)
 6. Reverting a container to its original state
-```
 
 ### Create a Ghost Image
 
