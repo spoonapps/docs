@@ -190,3 +190,23 @@ Then create a web browser container linked to the previously created containers.
 ```
 
 You will be able to browse websites served by the linked containers even though they are not publically available.
+
+
+#### Using Startup Triggers
+
+Images can be created with SpoonScript that have multiple startup files. Collections of startup files can be linked together by a trigger name and executed together.
+
+```
+# in spoon.me file to create "test-trigger" image...
+startup file ["c:\windows\system32\notepad.exe", "c:\windows\regedit.exe"]
+startup file doc=[("c:\windows\system32\notepad.exe", "c:\doc\welcome.txt"), ("c:\windows\system32\notepad.exe", "c:\doc\howto.txt")]
+
+
+# from command-prompt...
+
+# launch both notepad and regedit are launched
+> spoon run test-trigger
+
+# launch welcome.txt and howto.txt in notepad
+> spoon run test-trigger --trigger=doc
+```
