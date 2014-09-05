@@ -2,10 +2,8 @@
 display_name: Getting Started
 sections:
 - display_name: What is Spoonium?
-  pages: []
   subsections: []
 - display_name: Tour I - Hello World
-  pages: []
   subsections:
   - display_name: Installation
   - display_name: Get Going
@@ -13,7 +11,6 @@ sections:
   - display_name: Create a Container
   - display_name: Creating Files within a Container
 - display_name: Tour II - A Web Application
-  pages: []
   subsections:
   - display_name: Topics Covered
   - display_name: Create a Ghost Image
@@ -23,17 +20,14 @@ sections:
   - display_name: Reverting the Container
   - display_name: Pulling It All Together
 - display_name: Tour III - Automated Testing
-  pages: []
   subsections:
   - display_name: Next Steps
 - display_name: Installation
-  pages: []
   subsections:
   - display_name: Windows
   - display_name: Azure
   - display_name: EC2
 - display_name: About
-  pages: []
   subsections:
   - display_name: Virtual Machine
   - display_name: Containers
@@ -45,19 +39,15 @@ sections:
 display_name: Hub
 sections:
 - display_name: Creating a Profile
-  pages: []
   subsections: []
 - display_name: Repositories
-  pages: []
   subsections: []
 - display_name: Templates
-  pages: []
   subsections: []
 ---
 display_name: Building
 sections:
 - display_name: Working with Containers
-  pages: []
   subsections:
   - display_name: Creating Containers
   - display_name: Managing Containers
@@ -65,28 +55,23 @@ sections:
   - display_name: Debugging
   - display_name: Building Images from Containers
 - display_name: Working with Images
-  pages: []
   subsections:
   - display_name: Creating Images
   - display_name: Forking, Renaming, and Tagging
   - display_name: Push to a Remote Repository
 - display_name: Working with the IDE
-  pages: []
   subsections: []
 - display_name: Desktop Scan
-  pages: []
   subsections:
   - display_name: Running a Desktop Scan
   - display_name: Best Practices
   - display_name: Troubleshooting
 - display_name: Snapshotting
-  pages: []
   subsections:
   - display_name: Process
   - display_name: Capture Application Updates via Snapshot
   - display_name: Best Practices
 - display_name: Continuous Integration
-  pages: []
   subsections:
   - display_name: Create SpoonScript
   - display_name: Integrate into the CI Server
@@ -95,10 +80,8 @@ sections:
 display_name: Testing
 sections:
 - display_name: Manual Browser Testing
-  pages: []
   subsections: []
 - display_name: Selenium Testing
-  pages: []
   subsections:
   - display_name: Debugging Tests
   - display_name: Integrating Spoonium with an Existing Grid
@@ -106,46 +89,34 @@ sections:
   - display_name: Testing Internet Explorer
   - display_name: Common Issues and Troubleshooting
 - display_name: JS Unit Testing
-  pages: []
   subsections:
   - display_name: Getting Started - Karma
   - display_name: Getting Started - Mocha/Mochify
 - display_name: Test Reports
-  pages: []
   subsections: []
 - display_name: Testing with CI
-  pages: []
   subsections: []
 - display_name: Nightly Builds (coming soon)
-  ordering: 6
-  pages: []
   subsections: []
 ---
 display_name: Deploying
 sections:
 - display_name: To the Hub
-  pages: []
   subsections: []
 - display_name: To Spoon.net
-  pages: []
   subsections: []
 - display_name: To a Spoon Server
-  pages: []
   subsections: []
 - display_name: Portable EXE
-  pages: []
   subsections: []
 - display_name: MSI
-  pages: []
   subsections: []
 - display_name: Shell Registration
-  pages: []
   subsections: []
 ---
 display_name: Reference
 sections:
 - display_name: Command Line
-  pages: []
   subsections:
   - display_name: help
   - display_name: build
@@ -182,13 +153,11 @@ sections:
   - display_name: vm
   - display_name: vms
 - display_name: IDE
-  pages: []
   subsections:
   - display_name: Virtual Filesystem
   - display_name: Virtual Registry
   - display_name: Runtimes and Components
 - display_name: SpoonScript
-  pages: []
   subsections:
   - display_name: cmd
   - display_name: disable
@@ -202,19 +171,14 @@ sections:
   - display_name: using
   - display_name: workdir
 - display_name: XAPPL
-  pages: []
   subsections: []
 - display_name: Virtual Application Settings
-  pages: []
   subsections: []
 - display_name: MSI Settings
-  pages: []
   subsections: []
 - display_name: VM Settings
-  pages: []
   subsections: []
 - display_name: Samples
-  pages: []
   subsections:
   - display_name: Java
   - display_name: Node.js
@@ -224,8 +188,6 @@ sections:
 display_name: Contributing
 sections:
 - display_name: Contribute to Spoonium
-  pages: []
   subsections: []
 - display_name: Style Guide
-  pages: []
   subsections: []

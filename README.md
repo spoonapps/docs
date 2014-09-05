@@ -100,7 +100,6 @@ Each document in the yaml file specifies a topic that will appear in the top nav
 Each topic has an attribute for a list of containing `sections`. Each section must have the following attributes: 
 
 1. A `display_name`. This will be the text that appears for that section in the containing topic's dropdown. The `display_name` is also used as the basis for forming that section's `id` on **docs.html**. The `id` for a section is the `display_name` with spaces translated to '+' and with all special characters (except '?', which is trimmed out) encoded.
-2. A list of `pages`. Should always be an empty list in the **meta.yaml** file.
 
 ### Meta.md
 
