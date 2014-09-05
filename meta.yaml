@@ -366,3 +366,7 @@ sections:
   ordering: 1
   pages: []
   subsections: []
+- display_name: Style Guide
+  ordering: 2
+  pages: []
+  subsections: []
