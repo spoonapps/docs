@@ -67,32 +67,33 @@ https://github.com/spoonium/docs/tree/master/doc/getting_started/tour_ii/image.p
 
 #### How to Contribute
 
-If you are not a member of the **spoonium** org (AKA you don't work at Spoon), fork this repo, make changes, commit, and submit a pull request. 
+If you are not a member of the **spoonium** org (AKA you don't work at Spoon), fork this repo, make changes, commit, and submit a pull request.
 
-#### Editing an Existing Page
+Some basic terminology:
+- Topic: The horizontal items in the top nav items.
+- Document: An item on the left nav, a topic contains a list of documents
+- Section: A document consists of 1 or more sections. If you define sections in docs.yaml the left nav will become expandable.
 
-Edit the existing markdown file, save it, and rebuild to make sure you didn't accidentally break anything. Do *not* edit any of the **meta** files. 
-
-#### Adding a Page
-
-If adding a page to an *existing section*, find the (a) corresponding folder in the /doc folder and add your new **.md** file to it. Check the **meta.md** file in that directory and make sure it matches the section you want to add the page to. 
-
-If adding a page and creating a new section, create a new folder under the appropriate topic. Add your new **.md** file and create a new **meta.md** file that will specify the name of the section to add. Then, add the new section you are creating to the **meta.yaml** file, rearranging the ordering of the other sections as you see fit. 
+The path to store your document is the /<topic>/<title>. 
+Since the topic and title of the document can contain illegal file system characters, it must be normalized.
+This is done by lower casing the path, replacing spaces with '_', and deleting illegal windows file system characters.
+For example, the "What is Spoonium?" document under the topic "Getting Started" is stored in the directory "/getting_started/what_is_spoonium". The md file names inside of the directory can be *.md
 
 #### Creating a New Topic
 
-To add a new topic to the top navbar, first create a new folder in the /doc directory corresponding to your topic. Then, edit the **meta.yaml** file, adding your new topic and rearranging the topic `ordering` as you see fit. Follow existing patterns when editing this file. 
+To add a new topic to the top navbar, first create a new folder in the directory corresponding to your topic. Then, edit the **docs.yaml** file, adding your new topic and rearranging the topic `ordering` as you see fit. Follow existing patterns when editing this file. 
 
-Populate your new directory in the /doc folder with subdirectories and new markdown files. Make sure that any subdirectory containing documentation has a **meta.md** file. 
+#### Adding a document
 
-## Structure
+If adding a document to an *existing topic*, find the (a) corresponding folder in the /<topic>/<title> folder and add your new **.md** file to it. 
 
-This section outlines the structure of the Spoonium doc repo and how it is assembled.
+You are allowed to divide a single document into multiple .md files. They will be assembled to a single document in the order they appear on the file system.
 
 ### docs.yaml
 
-The overall structure of the page is dicated by the **docs.yaml** file, located at /docs/docs.yaml.
+The overall structure of the page is dicated by the **docs.yaml** file, located at /docs.yaml.
 Each document in the yaml file specifies a topic that will appear in the top navbar of the docs page. A topic has the following properties:
 
 1. A `topic`. This is the actual wording that will appear in the top nav bar
 2. A list of `documents`. This list is used to populate the topic's documents.
+3. A list of 'sections'. This list is used to navigate within a document.
