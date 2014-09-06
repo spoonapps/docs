@@ -70,12 +70,12 @@ https://github.com/spoonium/docs/tree/master/doc/getting_started/tour_ii/image.p
 If you are not a member of the **spoonium** org (AKA you don't work at Spoon), fork this repo, make changes, commit, and submit a pull request.
 
 Some basic terminology:
-- Topic: The horizontal items in the top nav items.
-- Document: An item on the left nav, a topic contains a list of documents
+- Topic: The horizontal items in the top nav.
+- Document: Items on the left nav, a topic contains a list of documents
 - Section: A document consists of 1 or more sections. If you define sections in docs.yaml the left nav will become expandable.
 
-The path to store your document is the /<topic>/<title>. 
-Since the topic and title of the document can contain illegal file system characters, it must be normalized.
+The directory to store your document should be /[topic]/[document title]. 
+If the topic and title of the document contains illegal file system characters, it must be normalized.
 This is done by lower casing the path, replacing spaces with '_', and deleting illegal windows file system characters.
 For example, the "What is Spoonium?" document under the topic "Getting Started" is stored in the directory "/getting_started/what_is_spoonium". The md file names inside of the directory can be *.md
 
@@ -85,9 +85,11 @@ To add a new topic to the top navbar, first create a new folder in the directory
 
 #### Adding a document
 
-If adding a document to an *existing topic*, find the (a) corresponding folder in the /<topic>/<title> folder and add your new **.md** file to it. 
+If adding a document to an *existing topic*, create the corresponding directory /[topic]/[title] and add your new **.md** file to it. 
 
 You are allowed to divide a single document into multiple .md files. They will be assembled to a single document in the order they appear on the file system.
+
+Edit the **docs.yaml** file following existing patterns.
 
 ### docs.yaml
 
