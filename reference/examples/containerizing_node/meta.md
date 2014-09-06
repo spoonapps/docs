@@ -1,4 +1,0 @@
----
-topic: reference
-section: samples
----

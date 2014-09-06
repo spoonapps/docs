@@ -89,29 +89,10 @@ Populate your new directory in the /doc folder with subdirectories and new markd
 
 This section outlines the structure of the Spoonium doc repo and how it is assembled.
 
-### Meta.yaml
+### docs.yaml
 
-The overall structure of the page is dicated by the **meta.yaml** file, located at /doc/meta.yaml.
-Each document in the yaml file specifies a topic that will appear in the top navbar of the docs page. A topic **must** have the following four properties: 
+The overall structure of the page is dicated by the **docs.yaml** file, located at /docs/docs.yaml.
+Each document in the yaml file specifies a topic that will appear in the top navbar of the docs page. A topic has the following properties:
 
-1. A `display_name`. This is the actual wording that will appear in the top nav bar
-2. A list of `sections`. This list is used to populate the topic's dropdown.
-
-Each topic has an attribute for a list of containing `sections`. Each section must have the following attributes: 
-
-1. A `display_name`. This will be the text that appears for that section in the containing topic's dropdown. The `display_name` is also used as the basis for forming that section's `id` on **docs.html**. The `id` for a section is the `display_name` with spaces translated to '+' and with all special characters (except '?', which is trimmed out) encoded.
-
-### Meta.md
-
-Each subdirectory of the /doc folder must be populated with a `meta.md` file. This file tells the build script which section to add any pages in that folder to (appended to the `pages` list attribute of a `section`). The `meta.md` does **not** apply to subdirectories. A **meta.md** file must have the following structure: 
-
-	---
-	topic: <display_name of topic>
-	section: <display_name of section>
-	---
-
-Take, for example, the **/doc/basics/about/meta.md** file. This file tells the build script to place any files in this directory in the *Basics > About Spoonium* section of the docs.  
-
-If a **meta.md** file specifies a `section` that is not listed in topic specified, the script will raise a `NoSuchSectionError`. 
-
-If the folder has doc in it and there is no **meta.md** file, a `NoMetaFileError` will be raised. 
+1. A `topic`. This is the actual wording that will appear in the top nav bar
+2. A list of `documents`. This list is used to populate the topic's documents.
