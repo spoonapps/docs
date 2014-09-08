@@ -98,4 +98,4 @@ Each document in the yaml file specifies a topic that will appear in the top nav
 
 1. A `topic`. This is the actual wording that will appear in the top nav barl.
 2. A list of `documents`. This list is used to populate the topic's documents.
-3. A list of 'sections'. This list is used to navigate within a document.
+3. A list of `sections`. This list is used to navigate within a document.
