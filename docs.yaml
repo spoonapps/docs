@@ -35,6 +35,8 @@ documents:
   - Hub
   - IDE and Command Line
   - Spoon Server
+- title: Transitioning from Docker
+  sections: []
 ---
 topic: Hub
 documents:
