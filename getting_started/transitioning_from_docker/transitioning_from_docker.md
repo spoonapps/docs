@@ -1,6 +1,6 @@
 ## Transitioning from Docker
 
-*Docker* is a new containerization technology built on top of the `LXC` kernel containment sysetm built into Linux. While there are some similarites
+*Docker* is a new containerization technology built on top of the `LXC` kernel containment system built into Linux. While there are some similarities
 and between the Docker and Spoon virtualization platforms, there are also significant differences.
 
 This section summarizes some of the substantial differences for the benefit of users familiar with Docker.
@@ -21,7 +21,7 @@ that allow virtualized applications to interact with the user in the same way as
 Spoon, like Docker, supports the use of local containers and the ability to push and pull containers from a central
 repository.
 
-In addition, Spoon provides the ability to efficiently *stream* containers over the Intenet. The Spoon system includes
+In addition, Spoon provides the ability to efficiently *stream* containers over the Internet. The Spoon system includes
 a *predictive streaming* engine that allows containers to be launched efficiently over wide area networks (WANs) without
 requiring the endpoint to download the entire VM image. This is important since many applications can be multiple gigabytes
 in size, causing a large startup latency for remote end users. Spoon predictive streaming uses statistical techniques to predict
