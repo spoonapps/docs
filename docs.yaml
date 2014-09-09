@@ -27,6 +27,13 @@ documents:
   - Windows
   - Azure
   - EC2
+- title: Transitioning from Docker
+  sections: 
+  - Supported Platforms
+  - Delivery Models
+  - Variable Isolation Modes
+  - Container Isolation Defaults
+  - Default Networking Behavior
 - title: About
   sections:
   - Virtual Machine
@@ -35,8 +42,6 @@ documents:
   - Hub
   - IDE and Command Line
   - Spoon Server
-- title: Transitioning from Docker
-  sections: []
 ---
 topic: Hub
 documents:
