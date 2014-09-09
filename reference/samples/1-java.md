@@ -1,5 +1,3 @@
-Here are a few examples that will show you specific use cases for using Spoonium with some popular project types.
-
 ### Java
 
 In this tutorial, we'll containerize a Java web server project. You'll learn to effectively configure and use Java in a container.
