@@ -12,7 +12,7 @@ Spoonium offers 2 tools for manual browser testing.
 
 #### Browser Sandbox
 
-[http://spoonium.net/manual](http://spoonium.net/manual)
+[http://spoonium.net/manual](/manual)
 
 The Spoonium.net Browser Sandbox makes cross-browser and backwards compatibility testing easy. Just click Run for any browser to launch it instantly.
 

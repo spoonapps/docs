@@ -124,7 +124,7 @@ spoonbrew/node		10.2MB   		7/16/2014 3:45:10 PM
 
 Other Spoonium users will now be able to pull and run your image in its saved state.
 
-Visit the [hub](http://spoonium.net/hub) to see the details of the image you just pushed.
+Visit the [hub](/hub) to see the details of the image you just pushed.
 
 #### Optional: Automated Image Creation
 

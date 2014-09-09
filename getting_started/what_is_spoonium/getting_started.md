@@ -7,7 +7,7 @@ Spoonium allows you to package applications and their dependencies into a lightw
 With Spoonium, developers can:
 
 - Develop and package applications in isolated containers that contain all dependencies, including runtimes such as .NET and Java, and databases such as SQL Server and MongoDB
-- Automate testing and share test environments with QA, developers, and beta users with the [Spoonium Hub](http://spoonium.net/hub)
+- Automate testing and share test environments with QA, developers, and beta users with the [Spoonium Hub](/hub)
 - Simplify development and eliminate bugs by deploying applications in a "known good" configuration with a fixed set of components and dependencies
 - Containers obviate the need for installers and prevent conflicts with natively installed software
 
@@ -20,7 +20,7 @@ With Spoonium, testers can:
 - Test in multiple client, server, and browser environments concurrently on a single physical device
 - Accelerate test cycles by eliminating the need to install application dependencies and modify configuration
 
-In addition to container functionality, Spoonium offers a number of premium test services, such as manual and automated browser testing, Selenium testing, and CI integration. For more information, see [Testing](http://spoonium.net/docs/testing).
+In addition to container functionality, Spoonium offers a number of premium test services, such as manual and automated browser testing, Selenium testing, and CI integration. For more information, see [Testing](/docs/testing).
 
 #### For IT Managers
 
@@ -35,7 +35,7 @@ And Spoonium works seamlessly with [Spoon.net](http://spoon.net), an application
 
 #### Open Source
 
-Spoonium is 100% free for open source projects. Set up a free organization at Spoonium.net and [contact us](http://spoonium.net/contact) if you need help or access to premium features.
+Spoonium is 100% free for open source projects. Set up a free organization at Spoonium.net and [contact us](/contact) if you need help or access to premium features.
 
 ## How does it work?
 
@@ -45,17 +45,17 @@ Spoonium containers are built on the **Spoon Virtual Machine** (SVM), a lightwei
 
 Spoonium images serve as a read-only filesystem and registry that your application will use while running in a container. They contain all of the information on a certain type of container.
 
-Verified images (like jdk, node, mongo)  are available for download from the [Spoonium Hub](http://spoonium.net/hub), or a custom image can be created from any container with the `spoon commit` command. Thus, you can layer multiple dependency images together in a single container, rather than having to build one on top of another.
+Verified images (like jdk, node, mongo)  are available for download from the [Spoonium Hub](/hub), or a custom image can be created from any container with the `spoon commit` command. Thus, you can layer multiple dependency images together in a single container, rather than having to build one on top of another.
 
-When instructed to run a container with the `spoon run` command, Spoonium will automatically search for and download necessary images. Read more about [working with images](http://spoonium.net/docs/building#working-with-images).
+When instructed to run a container with the `spoon run` command, Spoonium will automatically search for and download necessary images. Read more about [working with images](/docs/building#working-with-images).
 
 #### Repositories - Distribution component
 
-To share your public images and containers with others, we have the [Spoonium Hub](http://spoonium.net/hub), which is filled with public repositories from both Spoonium users and the [spoonbrew team](http://spoonium.net/hub/spoonbrew).
+To share your public images and containers with others, we have the [Spoonium Hub](/hub), which is filled with public repositories from both Spoonium users and the [spoonbrew team](/hub/spoonbrew).
 
-Free Spoonium accounts come with unlimited public repositories. You can also upgrade to a [paid plan](http://spoonium.net/pricing) with private repositories, or host your own on-premises repositories (instructions found [here](http://spoonium.net/docs/deploying#to-a-spoon-server)).
+Free Spoonium accounts come with unlimited public repositories. You can also upgrade to a [paid plan](/pricing) with private repositories, or host your own on-premises repositories (instructions found [here](/docs/deploying#to-a-spoon-server)).
 
-Once an image is on the Hub, you can run it from another location. Read more about [repositories](http://spoonium.net/docs/hub#repositories).
+Once an image is on the Hub, you can run it from another location. Read more about [repositories](/docs/hub#repositories).
 
 #### Containers - Run component
 
@@ -63,4 +63,4 @@ Containers are created from an image or from multiple images. They hold everythi
 
 You can turn any container into a custom image template using the `spoon commit` command.
 
-Read more about [working with containers](http://spoonium.net/docs/building#working-with-containers) and about [how Spoonium works](http://spoonium.net/docs/getting+started#about), or jump right in with our "Hello World!" tutorial below.
+Read more about [working with containers](/docs/building#working-with-containers) and about [how Spoonium works](/docs/getting+started#about), or jump right in with our "Hello World!" tutorial below.

@@ -4,7 +4,7 @@ Spoon IDE is a desktop application that allows you to convert any Windows applic
 
 The GUI allows users to easily edit complex configurations for applications that may require complicated settings. Whereas Spoon's command line tool builds images from containers, the IDE uses static XML files (**.xappl**) to build images. More information about the XAPPL file format is available in the [XAPPL reference](/docs/reference#xappl).
 
-Once created with IDE, the command-line interface builds these XAPPL files into images that you can push to the Spoonium Hub. Click [here](/docs/build#working-with-images) for a specific example.
+Once created with IDE, the command-line interface builds these XAPPL files into images that you can push to the Spoonium Hub. Click [here](/docs/building#working-with-images) for a specific example.
 
 IDE also provides two unique methods for creating images and virtual applications:
 
