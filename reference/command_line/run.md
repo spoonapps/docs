@@ -17,7 +17,7 @@ Usage: spoon run <options> <image> [<parameters>...]
       --link=VALUE           Add link to another container (<container>:<alias>)
       --route-add=VALUE      Add a TCP or UDP mapping format: [<hostPort>]:<containerPort>[/tcp|udp]
       --route-block=VALUE    Isolate all ports of specified protocol (TCP or UDP) by default
-      --startupFile=VALUE    Override the default startup file
+      --startup-file=VALUE    Override the default startup file
       --trigger=VALUE        Execute named group of startup files
       --vm=VALUE             The Spoon VM version to run the container with
   -w, --working-dir=VALUE    Set the initial working directory inside the container
