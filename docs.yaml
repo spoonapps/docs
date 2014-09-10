@@ -30,10 +30,11 @@ documents:
 - title: Transitioning from Docker
   sections: 
   - Supported Platforms
-  - Delivery Models
-  - Variable Isolation Modes
-  - Container Isolation Defaults
-  - Default Networking Behavior
+  - Layering
+  - Delivery Modes
+  - Variable Isolation
+  - Networking
+  - Static Configuration
 - title: About
   sections:
   - Virtual Machine
