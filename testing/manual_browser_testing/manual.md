@@ -2,7 +2,7 @@ Spoonium leverages containerization to offer solutions for testing browsers, app
 
 Spoonium is a solution for both manual and automated browser testing. With our manual testing, you can run any version of any browser in a container or build a custom browser container with components like Java and Flash. Our automated testing solution allows you to run tests with [Selenium](http://seleniumhq.org) on our web-based Selenium Grid that utilizes our browser containers on your local machine to minimize your testing environment setup.
 
-For other applications and servers, our containers can make testing your project's latest builds easier by making them more portable and more efficient. As we learned in the [Build](/docs/build) section, images created with the command-line interface or IDE capture the state of a container at a specific time. This allows you to create and push specific builds or versions of your project that your testers can pull and test without any setup. This makes Spoonium a useful tool for continuous integration and nightly beta build testing.
+For other applications and servers, our containers can make testing your project's latest builds easier by making them more portable and more efficient. As we learned in the [Building](/docs/building) section, images created with the command-line interface or IDE capture the state of a container at a specific time. This allows you to create and push specific builds or versions of your project that your testers can pull and test without any setup. This makes Spoonium a useful tool for continuous integration and nightly beta build testing.
 
 ## Manual Browser Testing
 
