@@ -19,7 +19,7 @@ a browser plugin that allows containerized applications to be launched and strea
 
 ### Layering
 
-Spoon containers are designed to operate in a *layered* virtual machine architecture. Layers can be thought of as ``transparent sheets''
+Spoon containers are designed to operate in a *layered* virtual machine architecture. Layers can be thought of as "transparent sheets"
 of virtual environment configuration that can be dynamically stacked on top of one another to build many distinct configurations out of
 discrete components. For example, to build a container for a Java application that uses a MongoDB database, one could combine a
 Java runtime layer with a MongoDB database layer, and stack the application code and content in an application layer on top
@@ -37,8 +37,8 @@ in SpoonScript the following is valid:
 
     from java, mongodb, redis
 
-By contrast, Docker does not support creation of images from multiple base images. In other words, Spoon supports ``multiple
-inheritance'' through source layering, and ``polymorphism'' through post-layering.
+By contrast, Docker does not support creation of images from multiple base images. In other words, Spoon supports "multiple
+inheritance" through source layering, and "polymorphism" through post-layering.
 
 Spoon layering also enables *partial rollback* during container builds via the `using` command. This is especially useful
 when an external tool is required during the build process but is not desired in the ultimate container. For example,
