@@ -176,7 +176,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
          <p>Additional SVM's that will be loaded when the application starts</p>
          <ul>
             <li>The <strong>xlayerSearchPattern</strong> attribute to provide the default search pattern, similar to what would be passed to <strong>/XLayerPath</strong></li>
-            <li>The <strong>RequiredXLayer</strong> sub-element specifies which SVMs are required to be loaded. Otherwise an error is reported. Further details are located in the <a href="/display/spoondoc/Specify+Additional+SVMs+for+a+Virtual+Application">Specify Additional SVMs for a Virtual Application</a> section.</li>
+            <li>The <strong>RequiredXLayer</strong> sub-element specifies which SVMs are required to be loaded. Otherwise an error is reported. Further details are located in the Specify Additional SVMs for a Virtual Application section.</li>
          </ul>
       </td>
    </tr>
@@ -185,7 +185,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
          <p><strong>NamedObjectIsolation</strong></p>
       </td>
       <td>
-         <p>Allows users to isolate select objects in the application from the host machine that may use the same name. Details on how to use this feature can be found in the <a href="/display/spoondoc/Enable+Shared+Object+Isolation">Enable Shared Object Isolation</a> section.</p>
+         <p>Allows users to isolate select objects in the application from the host machine that may use the same name. Details on how to use this feature can be found in the Enable Shared Object Isolation section.</p>
       </td>
    </tr>
    <tr>
@@ -193,7 +193,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
          <p><strong>Dns</strong></p>
       </td>
       <td>
-         <p>Allows users to add explicit DNS mappings which are reflected within the virtual environment. More information on virtualized network configuration can be found in the <a href="/display/spoondoc/Virtualizing+IP+Protocols%2C+DNS+entries%2C+and+proxy+settings">Virtualizing IP Protocols, DNS entries, and proxy settings</a> section. This XAPPL field no longer must be configured manually.</p>
+         <p>Allows users to add explicit DNS mappings which are reflected within the virtual environment. More information on virtualized network configuration can be found in the Virtualizing IP Protocols, DNS entries, and proxy settings section. This XAPPL field no longer must be configured manually.</p>
       </td>
    </tr>
    <tr>
