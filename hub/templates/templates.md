@@ -6,4 +6,4 @@ For example, let's say you've written a JavaScript web application on Node.js an
 
 Once you package your application into that container, you can deploy it to any Windows environment for testing or use without installers, missing dependencies, or breaks.
 
-Start using templates [here](http://spoonium.net/)! 
+Start using templates [here](/)! 

@@ -22,7 +22,7 @@ If the Spoon Plugin is installed and you continue to see this issue, verify that
 
 **Mozilla Firefox**
 
-1. Navigate to [http://spoonium.net/selenium](http://spoonium.net/selenium).
+1. Navigate to [http://spoonium.net/selenium](/selenium).
 2. To the left of the browser's address bar, a "building block" icon should appear (it looks like a small LEGO). 
 3. Click this icon and a small box will appear beneath it with the dialog "Allow *spoonium.net* to run Spoon?" 
 4. Select **Allow and Remember** 

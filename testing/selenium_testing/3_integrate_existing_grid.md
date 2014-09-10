@@ -13,9 +13,9 @@ The Spoonium hub has the same external API as the standard Selenium hub. You can
 1. Start the Spoonium hub
 	1. *If using Spoonium as part of your CI process*: 
 		1. Log on, or RDP in, to your build/test server (must be a Windows machine). 
-		2. Open a web browser and navigate to [http://spoonium.net/selenium](http://spoonium.net/selenium). Log in with your Spoon.net username and password.
+		2. Open a web browser and navigate to [http://spoonium.net/selenium](/selenium). Log in with your Spoon.net username and password.
 		3. Click **Start Grid** to start the Spoonium hub. If the Spoon.net plugin is not already installed, you will have to install it before Spoonium will start. 
-	2. *If using Spoonium from a development machine*: Log in to [http://spoonium.net/selenium](http://spoonium.net/selenium) with your Spoon.net username and password. Click **Start Grid** and the Spoonium hub will start.
+	2. *If using Spoonium from a development machine*: Log in to [http://spoonium.net/selenium](/selenium) with your Spoon.net username and password. Click **Start Grid** and the Spoonium hub will start.
 2. Connect your internal nodes to the Spoonium hub. 
 	1. The hub will launch on port 4444 of the machine Spoonium was accessed from. You can connect to the hub from a remote node by executing the following command (from the remote node): `java -jar selenium-server-standalone-2.xx.y.jar -role node -hub http://hub-machine:4444/grid/register`. For more information on configuring nodes with additional command line parameters, see [the official Selenium Grid Documentation](https://code.google.com/p/selenium/wiki/Grid2). 
 

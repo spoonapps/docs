@@ -19,7 +19,7 @@ There are four ways to create an image:
 > spoon commit <container-id> <image-name>
 ```
 
-See a more detailed example [here](http://spoonium.net/docs/build#working-with-containers).
+See a more detailed example [here](/docs/building#working-with-containers).
 
 #### Automatic Builds
 
@@ -131,7 +131,7 @@ tester/test1    2.0  14wed2165141  8/18/2014 1:55:23 PM  1.9MB
 
 ### Push to a Remote Repository
 
-Images in a local registry can be copied to a remote repository on the [hub](http://spoonium.net/hub) with the `spoon push` command to make your images available to your team members, end-users, or the public.
+Images in a local registry can be copied to a remote repository on the [hub](/hub) with the `spoon push` command to make your images available to your team members, end-users, or the public.
 
 ```
 # Specify the image you want to push
@@ -143,6 +143,6 @@ Images in a local registry can be copied to a remote repository on the [hub](htt
 
 If unspecified, the image will be pushed to the logged-in user's namespace with the tag head.
 
-For basic users, pushed images will be public by default. For paid users, pushed images will be private by default until the private repository limit is reached. Visit [the hub](http://spoonium.net/hub) to change these defaults.
+For basic users, pushed images will be public by default. For paid users, pushed images will be private by default until the private repository limit is reached. Visit [the hub](/hub) to change these defaults.
 
-See more information on [using the hub](http://spoonium.net/docs#hub).
+See more information on [using the hub](/docs/hub).

@@ -1,4 +1,4 @@
-The [Hub](http://spoonium.net/hub) is the distribution component of Spoonium. Using the Hub you can store and share images that you have created. All Spoonium accounts allow for the creation of unlimited public repositories and can be [upgraded](/pricing) to create private repositories on the Hub.
+The [Hub](/hub) is the distribution component of Spoonium. Using the Hub you can store and share images that you have created. All Spoonium accounts allow for the creation of unlimited public repositories and can be [upgraded](/pricing) to create private repositories on the Hub.
 
 ## Creating a Profile
 

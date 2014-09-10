@@ -40,7 +40,7 @@ spoonbrew/scratch	# Specify the repository owner, "spoonbrew," and the image nam
 
 There you go! If it worked as expected, you just pulled the **scratch** image into your account; the scratch image is completely empty and roughly equivalent to a freshly-installed, clean OS. You're ready to create your first container!
 
-**Note**: The **[spoonbrew](http://spoonium.net/hub/spoonbrew)** user account is maintained by the Spoon team. We provide a number of preconfigured images for popular runtimes, frameworks, and tools such as .NET, Java, and NodeJS. 
+**Note**: The **[spoonbrew](/hub/spoonbrew)** user account is maintained by the Spoon team. We provide a number of preconfigured images for popular runtimes, frameworks, and tools such as .NET, Java, and NodeJS. 
 
 ### Create a Container
 
@@ -207,8 +207,8 @@ Push complete	# Signals the image has uploaded.
 Image is public	# Pushed images are publicly added to the account of the logged-in user.
 ```
 
-Once the `Push complete` message appears in your command prompt, the image is on the [Spoonium Hub](http://spoonium.net/hub), which functions similarly to a remote repository in Git - it allows your work to be accessed from any computer with access to the remote. You can view your new image by going to https://spoonium.net/hub/[*username*]/helloworld.
+Once the `Push complete` message appears in your command prompt, the image is on the [Spoonium Hub](/hub), which functions similarly to a remote repository in Git - it allows your work to be accessed from any computer with access to the remote. You can view your new image by going to https://spoonium.net/hub/[*username*]/helloworld.
 
 Repository pages on Spoonium serve as complete version histories of different images, just like remote repositories in Git, and every Spoonium user has an unlimited number of public repositories.
 
-Public repositories are great for sharing work with others. They're a quick and easy access point for colleagues, collaborators, or end users to access, download, and run your project. Read more about repositories [here](http://spoonium.net/docs/hub#repositories).
+Public repositories are great for sharing work with others. They're a quick and easy access point for colleagues, collaborators, or end users to access, download, and run your project. Read more about repositories [here](/docs/hub#repositories).

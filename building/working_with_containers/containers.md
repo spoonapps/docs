@@ -92,7 +92,7 @@ Please note that enabling diagnostic mode will cause your container to run slowe
 
 ### Building Images from Containers
 
-Once you're finished editing a container, it can be saved and distributed in the form of images. For more information on images, read on [here](/docs/build#working-with-images).
+Once you're finished editing a container, it can be saved and distributed in the form of images. For more information on images, read on [here](/docs/building#working-with-images).
 
 ```
 # Create a new image from a container, specify the container ID and a name for the new image
