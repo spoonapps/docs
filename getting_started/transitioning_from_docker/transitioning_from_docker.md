@@ -52,7 +52,7 @@ In this code, the contents of the `git` container will *not* be present in the o
 not distinguish between content that is imported for use only during the build process and content required by the
 application container at runtime.
 
-### Delivery Modes
+### Streaming
 
 Spoon, like Docker, supports the use of local containers and the ability to push and pull containers from a central
 repository.
@@ -72,10 +72,6 @@ home page.
 Spoon.net is also available as an on-premises [Spoon Server](http://spoon.net/server). Spoon Server provides the same
 functionality as Spoon.net in a behind-firewall environment as well as additional enterprise features such as Active
 Directory integration.
-
-Spoon technology is integrated into select third-party enterprise application delivery platforms, including [Novell ZENworks
-Suite](https://www.novell.com/products/zenworks/zenworks-suite/), [Novell ZENworks Application Virtualization](http://novell.com/zav),
-and [LANDesk Management Suite](http://landesk.com).
 
 ### Variable Isolation
 
@@ -109,12 +105,32 @@ However, it is important to note that Docker *isolates* all ports by default. In
 by default on the host device (ports open) and requires a separate command to close or relink the ports, which may be
 desired for example to minimize the network surface area in production environments.
 
-### Static Configuration
+### Toolchain
+
+Like Docker, Spoon provides command-line interfaces (`spoon`) and a scripting language (SpoonScript) for automating
+build processes. Spoon also provides a number of rich UI- and web-based tools and services for building, configuring,
+and managing virtual environments.
+
+The **Spoon IDE** is a graphical integrated development environment that provides a visual design environment and
+easy-to-use wizards for creating images. The IDE also includes a Desktop Scan tool that automatically detects and
+captures settings for applications installed natively on a desktop.
+
+Spoon also maintains an online database of validated application templates and images for thousands of popular
+software applications.
+
+### Configuration
 
 In addition to dynamic configuration via a console or script, Spoon also supports configuration via a static XML-based
-specification that declares the files and other virtual machine state to be presented to the container. This 
+specification that declares the files, registry keys, environment variables, and other virtual machine state to be
+presented to the container. This 
 
 To assist in building static configurations, Spoon inclues a graphical **Spoon IDE** interface and both graphical-
 and command line-based *snapshot*-based configuration.
 
 For more information on the Spoon IDE and snapshot tools, see the appropriate sections in the documentation.
+
+### Partners
+
+Spoon technology is integrated into select third-party enterprise application delivery platforms, including [Novell ZENworks
+Suite](https://www.novell.com/products/zenworks/zenworks-suite/), [Novell ZENworks Application Virtualization](http://novell.com/zav),
+and [LANDesk Management Suite](http://landesk.com).
