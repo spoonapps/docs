@@ -17,14 +17,14 @@ Usage: spoon run <options> <image> [<parameters>...]
       --link=VALUE           Add link to another container (<container>:<alias>)
       --route-add=VALUE      Add a TCP or UDP mapping format: [<hostPort>]:<containerPort>[/tcp|udp]
       --route-block=VALUE    Isolate all ports of specified protocol (TCP or UDP) by default
-      --startupFile=VALUE    Override the default startup file
+      --startup-file=VALUE    Override the default startup file
       --trigger=VALUE        Execute named group of startup files
       --vm=VALUE             The Spoon VM version to run the container with
   -w, --working-dir=VALUE    Set the initial working directory inside the container
       --wait-after-error     Leave program open after error
 ```
 
-Specify multiple base images by separating with a comma.
+Specify multiple base images by separating with a comma. If two images contains the same file - first one is taken. Always ensure that images with new versions of applications/libraries are passed first.
 
 ```
 # Create a container using the spoonbrew/apache image
@@ -32,9 +32,12 @@ Specify multiple base images by separating with a comma.
 
 # Create a container with apache and mysql
 > spoon run spoonbrew/apache,spoonbrew/mysql
+
+# Create a container with .NET 3 and 4
+> spoon run spoonbrew/dotnet:4.0.3,spoonbrew/dotnet:3.5.1
 ```
 
-Containers are started with the startup file specified in the base image. If a startup file is not set in the base image then `cmd.exe /k` is used. 
+Containers are started with the startup file specified in the last passed image. If a startup file is not set in the base image then `cmd.exe /k` is used. 
 	
 ```
 # Default startup file is used to start container
