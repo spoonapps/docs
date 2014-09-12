@@ -31,10 +31,12 @@ documents:
   sections: 
   - Supported Platforms
   - Layering
-  - Delivery Modes
+  - Streaming
   - Variable Isolation
   - Networking
-  - Static Configuration
+  - Toolchain
+  - Configuration
+  - Partners
 - title: About
   sections:
   - Virtual Machine
