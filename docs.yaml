@@ -106,7 +106,7 @@ documents:
   sections: []
 - title: Testing with CI
   sections: []
-- title: Nightly Builds (coming soon)
+- title: Nightly Builds
   sections: []
 ---
 topic: Deploying
