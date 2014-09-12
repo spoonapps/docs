@@ -1,6 +1,6 @@
 ## Transitioning from Docker
 
-Docker is a new containerization technology built on top of the `LXC` kernel containment system built into Linux. While there are some similarities between the Docker and Spoon platforms, there are also significant differences.
+Docker is a new containerization technology built on top of the `LXC` kernel containment system, a component of the Linux OS. While there are some similarities between the Docker and Spoon platforms, there are also significant differences.
 
 This section summarizes some of the substantial differences for those that are familiar with Docker.
 
