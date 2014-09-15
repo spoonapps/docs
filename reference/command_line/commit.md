@@ -23,4 +23,4 @@ For example, if a container were created with the command `spoon run spoonbrew/g
 - The files and registry keys from the **spoonbrew/git** image
 - The files and registry keys from the **spoonbrew/nuget** image
 
-However, if the same container were committed with the command `spoon commit --no-base <container id> my-new-image`, `my-new-image` would only contain the files and registry keys created or modified in the container. 
+However, if the same container were committed with the command `spoon commit --no-base <container id> my-new-image`, `my-new-image` would only contain the files and registry keys created or modified in the container. The `spoonbrew/git` and `spoonbrew/nuget` images are included as a dependency at runtime.

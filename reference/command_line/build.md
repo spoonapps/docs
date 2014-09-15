@@ -9,6 +9,7 @@ Usage: spoon build <options> <path>
       --diagnostic           Enable diagnotic logging
   -e, --env=VALUE            Set environment variables inside the container
       --env-file=VALUE       Read in a line delimited file of ENV variables
+      --no-base              Do not merge the base image(s) into the new image
   -n, --name=VALUE           Name of the image
       --overwrite            Do not merge the base image(s) into the new image
       --vm=VALUE             The Spoon VM version to run the container with
@@ -87,3 +88,9 @@ The working directory inside the container can be specified with the `-w` flag. 
 **Note**: This flag sets the woring directory within the intermediate container used to build the output image. It does *not* set the initial working directory of the image. 
 
 The `--diagnostic` flag enables logging within the intermediate container. This flag does not create diagnostic-mode images.
+
+#### Merging Images
+
+The `build` command will include all images, which are referenced with the `from` statement in the script.  For example, when the script uses `from spoonbrew/git, spoonbrew/nuget`, then these two containers will be merged and stored into the newly built container.
+
+The `--no-base` option will not merge in the script. Instead, the images are included at runtime. 
