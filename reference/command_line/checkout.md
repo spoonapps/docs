@@ -6,7 +6,7 @@ The `checkout` command restores any image from the history.
 Usage: spoon checkout <options> <id> <image>
 
 <options> available:
-      --overwrite            Do not merge the base image(s) into the new image
+      --overwrite            Overwrite existing image
       --wait-after-error     Leave program open after error
 ```
     
