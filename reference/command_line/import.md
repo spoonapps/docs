@@ -7,6 +7,7 @@ Usage: spoon import <options> <type> <path>
 
 <options> available:
   -n, --name=VALUE           Name of the image
+      --overwrite            Overwrite existing image
       --wait-after-error     Leave program open after error
 ```
 
