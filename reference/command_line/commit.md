@@ -7,7 +7,7 @@ Usage: spoon commit <options> <container> <image>
 
 <options> available:
       --no-base              Do not merge the base image(s) into the new image
-      --overwrite            Overwrite image if it already exists
+      --overwrite            Overwrite existing image
       --wait-after-error     Leave program open after error
 ```
 

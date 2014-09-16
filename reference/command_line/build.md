@@ -11,7 +11,7 @@ Usage: spoon build <options> <path>
       --env-file=VALUE       Read in a line delimited file of ENV variables
       --no-base              Do not merge the base image(s) into the new image
   -n, --name=VALUE           Name of the image
-      --overwrite            Do not merge the base image(s) into the new image
+      --overwrite            Overwrite existing image
       --vm=VALUE             The Spoon VM version to run the container with
   -w, --working-dir=VALUE    Set the initial working directory inside the container
       --wait-after-error     Leave program open after error
@@ -63,10 +63,19 @@ VAR2=2
 
 #### Other Command Line Flags
 
-Output images can be given names with the `-n` flag. 
+Output images can be given names with the `-n` flag. Add `--overwrite` to disable checking if image with given name already exists. 
 
 ```
 > spoon build -n=my-new-image C:\spoon.me
+...
+Output Image: my-new-image
+
+# Try to build the same image second time
+> spoon build -n=my-new-image C:\spoon.me
+Error: The image already exists. You can overwrite with the --overwrite flag
+
+# Try third time, with --overwrite flag
+> spoon build -n=my-new-image C:\spoon.me --overwrite
 ...
 Output Image: my-new-image
 
