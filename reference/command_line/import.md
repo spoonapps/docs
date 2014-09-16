@@ -19,7 +19,7 @@ msi           Microsoft Software Installer
 thinapp       Thinapp Configuration
 ```
 
-You can optionally specify a name to give the newly-imported image. 
+You can optionally specify a name for the newly-imported image. Use the `--overwrite` flag to overwrite an existing image.
 
 ```
 # Import a thinapp config

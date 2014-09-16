@@ -9,6 +9,12 @@ Usage: spoon register <options> <image>
       --wait-after-error     Leave program open after error
 ```
 
-Desktop registration integrates the image into the Windows shell creating desktop and Start Menu shortcuts and file associations for the specified image. These changes can be removed by unregistering the image with the `spoon unregister` command, from the uninstall shortcut which is created in the Start Menu, or from the **Program and Features** menu in the Windows Control Panel.
+Desktop registration integrates the image into the Windows shell creating desktop and **Start Menu** shortcuts and file associations for the specified image. 
 
-List of registered images can be checked using `spoon images --no-trunc` command.
+Use the `spoon images --no-trunc` command to see the list of registered images.
+
+There are three options for removing the image from the system:
+
+1. Use the `unregister` spoon command.
+1. Use the uninstall shortcut on the **Start Menu**.
+1. Uninstall from the **Program and Features** menu in the **Windows Control Panel**.

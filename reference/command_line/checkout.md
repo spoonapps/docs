@@ -10,7 +10,7 @@ Usage: spoon checkout <options> <id> <image>
       --wait-after-error     Leave program open after error
 ```
     
-The new name has to be unique on your local machine. The `--overwrite` flags allows to overwrite an existing image name.
+The new image name has to be unique on the local machine or use the `--overwrite` flags to overwrite an existing image.
 
 ```
 # Checkout a old image by its id

@@ -63,7 +63,7 @@ VAR2=2
 
 #### Other Command Line Flags
 
-Output images can be given names with the `-n` flag. Add `--overwrite` to disable checking if image with given name already exists. 
+Name images using the `-n` flag and overwrite existing images with the same name using the `--overwrite` flag. 
 
 ```
 > spoon build -n=my-new-image C:\spoon.me
