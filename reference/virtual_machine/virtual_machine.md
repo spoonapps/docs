@@ -6,7 +6,7 @@ The Spoon VM is capable of running multiple images in a single virtual machine i
 
 This allow's users to create modular components that can be reused by larger projects. 
 
-In this section, the term "layer" is used interchagibly with "image", since a layer within a container is always created by an image file.
+In this section, the term layer is used interchagibly with image, since a layer within a container is always created by an image.
 
 **Layering Scenarios**
 
