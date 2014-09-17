@@ -180,6 +180,8 @@ documents:
   - startup file
   - using
   - workdir
+- title: Dependencies
+  sections: []
 - title: XAPPL
   sections: []
 - title: Virtual Application Settings
