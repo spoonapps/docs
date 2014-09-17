@@ -2,7 +2,7 @@
 
 **Layering**
 
-The Spoon VM is capable of running multiple images in a single virtual machine instance(container) by layering the file system and registry of each image.
+The Spoon VM is capable of running multiple images in a single virtual machine container by layering the file system and registry of each image.
 
 This allow's users to create modular components that can be reused by larger projects. 
 
@@ -18,7 +18,7 @@ In most scenarios, image layers will define unique resources that do not conflic
 
 If multiple layers define different isolation modes for the same path, the first layer that defines the isolation mode will be used. 
 
-For example, if the the "git" image defines a folder c:\git with full isolation, and "node" image includes the c:\git folder with merge isolation. 
+For example, if a container includes a "git" image with c:\git set to full isolation and a "node" image with c:\git set to merge isolation, the conflict between the isolation settings will be resolved by the ordering of the layers.
 
 The following command will create a container with the folder c:\git set to full isolation.
 
