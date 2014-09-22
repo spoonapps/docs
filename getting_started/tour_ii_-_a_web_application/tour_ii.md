@@ -182,7 +182,7 @@ In each of the three Ghost containers, start the NodeJS server to make all three
 
 At this point, you should have three containers using the same image. Each Ghost instance operates on the 2368 port internally, but is accessible via the 808x port that is assigned to it on the host.
 
-![](/components/docs/getting_started/tour_ii/multiple.png)
+![](/components/docs/getting_started/tour_ii_-_a_web_application/multiple.png)
 
 ### Saving a Database to a Layer
 
@@ -229,7 +229,7 @@ Start the NodeJS server and verify that the blog has the database.
 (9a82febf) C:\> cd ghost & npm start
 ```
 
-![](/components/docs/getting_started/tour_ii/ghost-first-post-2.png)
+![](/components/docs/getting_started/tour_ii_-_a_web_application/ghost-first-post-2.png)
 
 ### Reverting the Container
 
@@ -255,7 +255,7 @@ Change directory to Ghost and start the server.
 # When you visit the website, the Ghost web application should be reverted to its original state.
 ```
 
-![](/components/docs/getting_started/tour_ii/ghost-revert.png)
+![](/components/docs/getting_started/tour_ii_-_a_web_application/ghost-revert.png)
 
 This command is especially useful if your database was somehow corrupted or an unrecoverable error made your web application unusable. Instead of trying to figure out where the problem is and attempting to clean your environment, which can take hours to do, you can simply `revert` the container to its original state with the `spoon revert` command.
 
