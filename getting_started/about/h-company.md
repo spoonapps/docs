@@ -1,7 +1,5 @@
 ### Company
 
-#### Combining the best of the desktop and the cloud
-
 Spoon.net is a leading developer of application and desktop virtualization technology. Available as both a web-based service and on-site server, Spoon.net allows software publishers, enterprises, and schools to deploy and manage desktop applications instantly to any user with an Internet connection.
 
 Spoon.net runs applications in isolated sandboxes, allowing applications to run side-by-side without conflicts, dependencies, or modifications to the host desktop. Spoon.net's unique hybrid client/server virtualization technology combines the convenience of web-based delivery with the performance and robustness of local execution.
