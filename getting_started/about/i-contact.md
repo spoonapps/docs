@@ -10,10 +10,7 @@ Fax: 206-388-3110
 
 Address:
 
-Spoon.net
-
-1000 Dexter Ave N,
-
-5th Floor
-
+Spoon.net  
+1000 Dexter Ave N,  
+5th Floor  
 Seattle, WA 98109
