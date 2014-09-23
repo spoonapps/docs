@@ -24,4 +24,4 @@ Spoon IDE supports both 32- and 64-bit applications. Both 32-bit (under 32-bit m
 
 **Note:** Spoon IDE does not support creation of 16-bit executables. To run 16-bit DOS applications, virtualize an appropriate emulator with the application and launch the application through the emulator.
 
-Download a free 30-day trial [here](http://spoon.net/studio) or try the free, [express version](http://spoon.net/studio-express). 
+Download a free 30-day trial [here](/studio) or try the free, [express version](http://spoon.net/studio-express). 
