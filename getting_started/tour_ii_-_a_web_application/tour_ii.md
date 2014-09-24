@@ -131,7 +131,7 @@ Go ahead and make your first post! :) Don't forget to save and publish it.
 
 Your Ghost web application can then be used via any browser at **http://localhost:2368**.
 
-![](/components/docs/getting_started/tour_ii/ghost-first-post.png)
+![](/components/docs/getting_started/tour_ii_-_a_web_application/ghost-first-post.png)
 
 When you are done, press **Ctrl+C** to stop the server, then `exit` the container.
 
