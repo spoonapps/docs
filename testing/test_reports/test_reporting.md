@@ -1,6 +1,6 @@
 ## Test Reports
 
-Any test run on Spoon is automatically logged and saved to your Spoon user account.
+Any test run on Spoon is automatically logged and saved to your Spoon user account. 
 
 This feature can be enabled or disabled by checking, or unchecking, the **Save test reports** check box in the top-right corner of [http://spoon.net/selenium](/selenium).
 
