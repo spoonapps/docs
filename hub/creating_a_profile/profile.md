@@ -2,7 +2,7 @@ The [Hub](/hub) is the distribution component of Spoonium. Using the Hub you can
 
 ## Creating a Profile
 
-To use the Hub, you need a profile! [Sign up](http://spoon.net/sso/spoonium.net/register) for a Spoonium account or log in with your existing Spoon.net account information.
+To use the Hub, you need a profile! [Sign up](http://turbo.net/sso/spoon.net/register) for a Spoonium account or log in with your existing Spoon.net account information.
 
 Once your account is created, go to your [account settings](/account) to add your avatar, Twitter URL and GitHub URL so that your friends will recognize you.
 
