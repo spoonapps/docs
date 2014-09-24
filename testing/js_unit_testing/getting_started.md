@@ -16,7 +16,7 @@ In the **Supported Test Runners** section, below, you'll find a list of test run
 - Firefox 3+
 - Internet Explorer 6+
 
-*Don't see your preferred browser? [Let us know](mailto:support@spoonium.net) and we'll do our best to get it added.*
+*Don't see your preferred browser? [Let us know](mailto:support@spoon.net) and we'll do our best to get it added.*
 
 #### Supported Test Runners
 
