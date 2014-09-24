@@ -1,6 +1,6 @@
 ## Style Guide
 
-When contributing to the docs on Spoonium, please take the following style guidelines into consideration. This style guide is also found on [GitHub](https://github.com/spoonium/docs).
+When contributing to the docs on Spoon, please take the following style guidelines into consideration. This style guide is also found on [GitHub](https://github.com/spoonium/docs).
 
 #### Code and Command-line Styling
 
@@ -49,7 +49,7 @@ https://github.com/spoonium/docs/tree/master/doc/getting_started/tour_ii/image.p
 
 #### How to Contribute
 
-If you are not a member of the **spoonium** org (AKA you don't work at Spoon), fork [this repo](https://github.com/spoonium/docs), make changes, commit, and submit a pull request. **Meta** files specify the section for the markdown file, and they should not be edited unless you are moving content to a different section.
+If you are not a member of the **Spoon** org (AKA you don't work at Spoon), fork [this repo](https://github.com/spoonium/docs), make changes, commit, and submit a pull request. **Meta** files specify the section for the markdown file, and they should not be edited unless you are moving content to a different section.
 
 #### Adding a Page
 
@@ -65,7 +65,7 @@ Populate your new directory in the /doc folder with subdirectories and new markd
 
 ### Structure
 
-This section outlines the structure of the Spoonium doc repo and how it is assembled.
+This section outlines the structure of the Spoon doc repo and how it is assembled.
 
 #### Meta.yaml
 

@@ -1,6 +1,6 @@
 ### Hub
 
-The [Spoonium Hub](/hub) is a public, SaaS platform for hosting and distributing Spoon images. 
+The [Spoon Hub](/hub) is a public, SaaS platform for hosting and distributing Spoon images. 
 
 Hub **repositories** host images for a single project. For example, images for each version of .NET can be found in the [spoonbrew/dotNet](/hub/spoonbrew/dotNET) repository. A repository houses the entire version history of a project.
 

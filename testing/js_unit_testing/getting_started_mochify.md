@@ -7,13 +7,13 @@ If you are already using Mochify with Selenium WebDriver, make sure the followin
 - "hostname": "localhost"
 - "port": "4444"
 
-Then, start the Spoonium hub and, from your project's root directory, run: 
+Then, start the Spoon hub and, from your project's root directory, run: 
 
 	mochify --wd
 
 #### New to Mochify? 
 
-If you are new to Mochify and have never used it before, follow the instructions, below, to install Mocha and Mochify and configure them for use on Spoonium. 
+If you are new to Mochify and have never used it before, follow the instructions, below, to install Mocha and Mochify and configure them for use on Spoon. 
 
 #### Installing Mocha and Mochify
 
@@ -56,7 +56,7 @@ Create a new **.min-wd** file in your project's root directory. Start by copying
 }
 ```
 
-You can configure which browsers to test in the **browsers** node. If a version is not specified, Spoonium will by default use the most recent version of that browser.
+You can configure which browsers to test in the **browsers** node. If a version is not specified, Spoon will by default use the most recent version of that browser.
 
 To add additional browsers, add another entry to the **browsers** array. For example, in the below example file we've added Firefox 26 and Chrome 34 as additional browsers to test on. 
 

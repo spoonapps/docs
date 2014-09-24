@@ -1,8 +1,8 @@
-The [Hub](/hub) is the distribution component of Spoonium. Using the Hub you can store and share images that you have created. All Spoonium accounts allow for the creation of unlimited public repositories and can be [upgraded](/pricing) to create private repositories on the Hub.
+The [Hub](/hub) is the distribution component of Spoon. Using the Hub you can store and share images that you have created. All Spoon accounts allow for the creation of unlimited public repositories and can be [upgraded](/pricing) to create private repositories on the Hub.
 
 ## Creating a Profile
 
-To use the Hub, you need a profile! [Sign up](http://turbo.net/sso/spoon.net/register) for a Spoonium account or log in with your existing Spoon.net account information.
+To use the Hub, you need a profile! [Sign up](http://turbo.net/sso/spoon.net/register) for a Spoon account or log in with your existing Spoon.net account information.
 
 Once your account is created, go to your [account settings](/account) to add your avatar, Twitter URL and GitHub URL so that your friends will recognize you.
 

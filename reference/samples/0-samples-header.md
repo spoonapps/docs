@@ -1,3 +1,3 @@
 ## Samples
-Here are a few examples that will show you specific use cases for using Spoonium with some popular project types.
+Here are a few examples that will show you specific use cases for using Spoon with some popular project types.
 

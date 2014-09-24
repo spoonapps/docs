@@ -4,6 +4,6 @@ A popular option for organizations that have an existing endpoint management sol
 
 Deploying applications within containers is convenient for running different versions of applications like Internet Explorer 8 and 11 side-by-side on the same system. 
 
-To produce an executable output, set the **Project Type** to **Application** in the IDE.   Executables can be deployed directly to the users device or to a network share and do not have any dependency requirements. 
+To produce an executable output, set the **Project Type** to **Application** in Spoon Studio.   Executables can be deployed directly to the users device or to a network share and do not have any dependency requirements. 
 
-An enterprise license for the IDE is required to enable executable outputs. Contact our [sales team](mailto:sales@spoon.net) for more information.
+An enterprise license for Spoon Studio is required to enable executable outputs. Contact our [sales team](mailto:sales@spoon.net) for more information.

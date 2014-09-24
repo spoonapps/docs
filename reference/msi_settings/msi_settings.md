@@ -1,6 +1,6 @@
 ## MSI Settings
 
-The following is a table of descriptions of the settings that you can use for MSI outputs from the IDE.
+The following is a table of descriptions of the settings that you can use for MSI outputs from Spoon Studio.
 
 <table>
 	<tr>

@@ -1,6 +1,6 @@
 ## Tour II - A Web Application
 
-Spoonium gives users the tools to easily test and deploy web applications. In this example, we will use the popular **[Ghost](http://ghost.org/)** web blogging application to showcase the features of the Spoonium system that make it particularly useful for this purpose.
+Spoon gives users the tools to easily test and deploy web applications. In this example, we will use the popular **[Ghost](http://ghost.org/)** web blogging application to showcase the features of the Spoon system that make it particularly useful for this purpose.
 
 ### Topics Covered
 
@@ -13,10 +13,10 @@ Spoonium gives users the tools to easily test and deploy web applications. In th
 
 ### Create a Ghost Image
 
-Let's start by opening a new command prompt and logging in the Spoonium Hub.
+Let's start by opening a new command prompt and logging in the Spoon Hub.
 
 ```	
-# Log in to your Spoonium account
+# Log in to your Spoon account
 C:\> spoon login username password
 
 Logged in as username
@@ -28,9 +28,9 @@ For this Ghost example, we will need to start our container with some basic util
 # Create a new container with basic utilities and the Node JS server.
 C:\> spoon run wget,7zip,node
 
-Downloading wget:head from https://spoonium.net/users/spoonbrew
-Downloading 7zip:head from https://spoonium.net/users/spoonbrew
-Downloading node:head from https://spoonium.net/users/spoonbrew
+Downloading wget:head from https://spoon.net/users/spoonbrew
+Downloading 7zip:head from https://spoon.net/users/spoonbrew
+Downloading node:head from https://spoon.net/users/spoonbrew
 
 # This will pull these images into a new containerized command prompt (as shown in Tour I).
 ```
@@ -45,8 +45,8 @@ spoon run
 
 wget,7zip,node
 
-# Unlike Tour I, we have omitted the "owner/" namespace from image names. Omitting the namespace causes the Spoon IDE to first search for the named images on your local machine's image repository.
-# If it doesn't find a match locally, the IDE automatically searches images in the spoonbrew account on the Spoonium Hub, as it did in this example.
+# Unlike Tour I, we have omitted the "owner/" namespace from image names. Omitting the namespace causes Spoon Studio to first search for the named images on your local machine's image repository.
+# If it doesn't find a match locally, Spoon Studio automatically searches images in the spoonbrew account on the Spoon Hub, as it did in this example.
 ```
 
 In your container, make a directory for the Ghost web application.

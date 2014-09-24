@@ -1,14 +1,14 @@
-Spoonium supports deploying containers as standalone executables, MSIs and Spoon Virtual Machines (SVMs). Read this section to find out more about which deployment option and tools best fit your needs.
+Spoon supports deploying containers as standalone executables, MSIs and Spoon Virtual Machines (SVMs). Read this section to find out more about which deployment option and tools best fit your needs.
 
 ## To the Hub
 
-The Hub is an online registry of Spoon images and provides a central location to archive and distribute applications. Once an application is packaged into a Spoon image using the IDE or the command-line interface, the image can be uploaded to the Hub and made available publicly or privately to a specified set of users. 
+The Hub is an online registry of Spoon images and provides a central location to archive and distribute applications. Once an application is packaged into a Spoon image using Spoon Studio or the command-line interface, the image can be uploaded to the Hub and made available publicly or privately to a specified set of users. 
 
-Images are pushed to the Hub using the command-line interface. The most common scenario is to create a container via the command line, commit the container to your local registry and then push the image to the Hub. However, it's also possible to start with an SVM output from the IDE and push that to the Hub. Read below for details on each scenario.
+Images are pushed to the Hub using the command-line interface. The most common scenario is to create a container via the command line, commit the container to your local registry and then push the image to the Hub. However, it's also possible to start with an SVM output from Spoon Studio and push that to the Hub. Read below for details on each scenario.
 
 #### Containers
 
-Before pushing a container to the Hub, it needs to be committed to the local registry and converted into an image. Here is an example of the process of creating a container and publishing it on the Spoonium Hub.
+Before pushing a container to the Hub, it needs to be committed to the local registry and converted into an image. Here is an example of the process of creating a container and publishing it on the Spoon Hub.
 
 ```
 # Create a container with Java, Node and Git support

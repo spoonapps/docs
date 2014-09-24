@@ -10,7 +10,7 @@ In this tutorial, we'll containerize a Java web server project. You'll learn to 
 
 #### Pull Required Dependencies
 
-Before beginning, we'll get all of the dependencies we'll need to run and containerize the Java project. In this case, that means we'll need both Java and Git inside our container. Luckily, both of these images can be found in the **spoonbrew** account on the Spoonium hub. 
+Before beginning, we'll get all of the dependencies we'll need to run and containerize the Java project. In this case, that means we'll need both Java and Git inside our container. Luckily, both of these images can be found in the **spoonbrew** account on the Spoon hub. 
 
 ```
 # Pull dependencies
@@ -84,15 +84,15 @@ ID            Name                   Tag   Created                Size
 3j24fjdk3kj4  simple-java-webserver  1.0   8/22/2014 11:59:59 AM  20.2 MB
 ```
 
-#### Push to the Spoonium Hub
+#### Push to the Spoon Hub
 
-We'll finish this tutorial by pushing the newly created **simple-java-webserver** image to the [Spoonium Hub](/hub). 
+We'll finish this tutorial by pushing the newly created **simple-java-webserver** image to the [Spoon Hub](/hub). 
 
 ```
 # Push the image
 > spoon push simple-java-webserver
 ```
 
-This will create a new repository in your Spoonium Hub account called **simple-java-webserver**, where the newly-pushed image will be placed. 
+This will create a new repository in your Spoon Hub account called **simple-java-webserver**, where the newly-pushed image will be placed. 
 
 Note that if you tagged your image in the previous section, use the command: `spoon push simple-java-webserver:1.0`. 

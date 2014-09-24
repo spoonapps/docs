@@ -29,4 +29,4 @@ spoon import -n=old-thinapp-image thinapp C:\s\package.ini
 spoon import svm C:\s\old-image.svm
 ```
 
-**Spoon IDE** users can use this command to import their existing components. 
+**Spoon Studio** users can use this command to import their existing components. 

@@ -4,13 +4,13 @@ Karma runs on Node.js and is available as an NPM package. It can be installed th
 
 	npm install karma --save-dev
 
-If you are already using Karma in your project, skip to **Configuring Karma for Spoonium**. 
+If you are already using Karma in your project, skip to **Configuring Karma for Spoon**. 
 
 If you do not already have Karma installed in your project, see **Installing Karma**.
 
 #### Installing Karma
 
-This section will outline the recommended Karma installation for Spoonium. The instructions here closely mimic those recommended by the Karma project for general installations. 
+This section will outline the recommended Karma installation for Spoon. The instructions here closely mimic those recommended by the Karma project for general installations. 
 
 Start by installing Karma locally in your project's root directory: 
 
@@ -30,9 +30,9 @@ We highly recommend also installing the **karma-cli** package. Without it, you m
 
 **Note**: If you are using any testing frameworks, such as Jasmine or QUnit, these should also be installed at this time. 
 
-#### Configuring Karma for Spoonium
+#### Configuring Karma for Spoon
  
-After Karma is installed, it must be configured to use Spoonium for browser launches. 
+After Karma is installed, it must be configured to use Spoon for browser launches. 
 
 First, install the **karma-webdriver-launcher** package through npm: 
 
@@ -51,7 +51,7 @@ or by adding the **karma-webdriver-launcher** to your project's **package.json**
 
 In your project's root directory, open the **karma.conf.js** file. If it doesn't already exist, run the command `karma init karma.conf.js` in your project's root directory. Karma will ask a couple of questions about your particular configuration and generate a new config file based on your answers. 
 
-In your karma.conf.js file, add a **webDriverConfig** variable within the **module.exports** scope. This variable will specify the hostname and port of the Spoonium hub. 
+In your karma.conf.js file, add a **webDriverConfig** variable within the **module.exports** scope. This variable will specify the hostname and port of the Spoon hub. 
 
 ```javascript
 module.exports = function(karma) {

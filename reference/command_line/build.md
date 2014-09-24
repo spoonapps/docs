@@ -34,7 +34,7 @@ If there are any conflicts between a SpoonScript instruction and a command-line 
 
 #### Using .xappl Files
 
-A **.xappl** file is an XML file that contains all of the filesystem, registry, and configuration information for a given image. A **.xappl** file can be built using Spoon IDE.
+A **.xappl** file is an XML file that contains all of the filesystem, registry, and configuration information for a given image. A **.xappl** file can be built using Spoon Studio.
 
 #### Environment Variables
 

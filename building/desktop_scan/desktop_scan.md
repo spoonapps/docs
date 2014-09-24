@@ -25,7 +25,7 @@ Applications packaged with this method retain users settings that were in place 
 
 **Optional**: Import to local registry using the command-line interface
 
-Images built with IDE can also be used with the command-line interface and the hub.
+Images built with Spoon Studio can also be used with the command-line interface and the hub.
 
     # Import the image to your local registry
     > spoon import -n=desktopapp svm C:\path\to\app.svm

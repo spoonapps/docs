@@ -15,14 +15,14 @@ Open a new command prompt and follow the example below.
 	Available commands are:
 	(Command list)
 	
-	# Log in to your Spoonium account.
+	# Log in to your Spoon account.
 	> spoon login username password
 
 	Logged in as username
 
 ### Pull an Image
 
-We'll begin by pulling (downloading) a blank image from our remote registry, the Spoonium Hub.
+We'll begin by pulling (downloading) a blank image from our remote registry, the Spoon Hub.
 
 ```
 > spoon pull spoonbrew/scratch
@@ -34,7 +34,7 @@ Pull complete
 Let's analyze this command:
 
 ```
-spoon pull			# The pull command adds an image to your Spoonium account.
+spoon pull			# The pull command adds an image to your Spoon account.
 spoonbrew/scratch	# Specify the repository owner, "spoonbrew," and the image name, "scratch."
 ```
 
@@ -70,7 +70,7 @@ Hello World!
 Let's break down what just happened:
 
 ```
-spoon run			# Here we tell Spoonium to kick off a new container with a specified image.
+spoon run			# Here we tell Spoon to kick off a new container with a specified image.
 spoonbrew/scratch	# Our desired repo owner, "spoonbrew," and the repo/image name, "scratch."
 echo Hello World!	# Command your container to start up with "Hello World!"
 exit				# This closes your container and generates your container ID.
@@ -189,7 +189,7 @@ helloworld		 		7/31/2014 9:29:27 AM	0.1MB
 spoonbrew/scratch	 	7/31/2014 9:20:26 AM	0.0MB
 ```
 
-Upload the **helloworld** image to the Spoonium Hub with the `spoon push` command.
+Upload the **helloworld** image to the Spoon Hub with the `spoon push` command.
 
 ```
 > spoon push helloworld
@@ -202,13 +202,13 @@ Image is public
 Congrats on your first push! What just happened?
 
 ```
-spoon push		# The push command commits any image to the Spoonium Hub.
+spoon push		# The push command commits any image to the Spoon Hub.
 Push complete	# Signals the image has uploaded.
 Image is public	# Pushed images are publicly added to the account of the logged-in user.
 ```
 
-Once the `Push complete` message appears in your command prompt, the image is on the [Spoonium Hub](/hub), which functions similarly to a remote repository in Git - it allows your work to be accessed from any computer with access to the remote. You can view your new image by going to https://spoonium.net/hub/[*username*]/helloworld.
+Once the `Push complete` message appears in your command prompt, the image is on the [Spoon Hub](/hub), which functions similarly to a remote repository in Git - it allows your work to be accessed from any computer with access to the remote. You can view your new image by going to https://spoon.net/hub/[*username*]/helloworld.
 
-Repository pages on Spoonium serve as complete version histories of different images, just like remote repositories in Git, and every Spoonium user has an unlimited number of public repositories.
+Repository pages on Spoon serve as complete version histories of different images, just like remote repositories in Git, and every Spoon user has an unlimited number of public repositories.
 
 Public repositories are great for sharing work with others. They're a quick and easy access point for colleagues, collaborators, or end users to access, download, and run your project. Read more about repositories [here](/docs/hub#repositories).

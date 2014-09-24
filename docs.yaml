@@ -1,7 +1,7 @@
 ---
 topic: Getting Started
 documents:
-- title: What is Spoonium?
+- title: What is Spoon?
   sections: []
 - title: Tour I - Hello World
   sections:
@@ -43,7 +43,7 @@ documents:
   - Containers
   - Images
   - Hub
-  - IDE and Command Line
+  - Spoon Studio and Command Line
   - Spoon Server
   - Company
   - Contact
@@ -71,7 +71,7 @@ documents:
   - Creating Images
   - Forking, Renaming, and Tagging
   - Push to a Remote Repository
-- title: Working with the IDE
+- title: Working with Spoon Studio
   sections: []
 - title: Desktop Scan
   sections:
@@ -96,7 +96,7 @@ documents:
 - title: Selenium Testing
   sections:
   - Debugging Tests
-  - Integrating Spoonium with an Existing Grid
+  - Integrating Spoon with an Existing Grid
   - Testing Internal Sites
   - Testing Internet Explorer
   - Common Issues and Troubleshooting
@@ -164,7 +164,7 @@ documents:
   - version
   - vm
   - vms
-- title: IDE
+- title: Spoon Studio
   sections:
   - Virtual Filesystem
   - Virtual Registry
@@ -203,7 +203,7 @@ documents:
 ---
 topic: Contributing
 documents:
-- title: Contribute to Spoonium
+- title: Contribute to Spoon
   sections: []
 - title: Style Guide
   sections: []

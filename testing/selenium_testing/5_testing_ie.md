@@ -1,6 +1,6 @@
 ### Testing Internet Explorer
 
-When testing parallel instances of Internet Explorer on Spoonium, we recommend setting the following options in your test. 
+When testing parallel instances of Internet Explorer on Spoon, we recommend setting the following options in your test. 
 
 1. Force Internet Explorer to use the Create Process API
 2. Launch Internet Explorer with the -private flag (for **Internet Explorer 8+** only)
@@ -11,7 +11,7 @@ If you are not testing multiple instances of Internet Explorer in parallel, we r
 
 #### Configuring Internet Explorer Options
 
-See below for language-specific instructions for how to properly configure your Internet Explorer tests for Spoonium. 
+See below for language-specific instructions for how to properly configure your Internet Explorer tests for Spoon. 
 
 **Java**
 
@@ -65,7 +65,7 @@ driver = webdriver.Remote(command_executor="http://localhost:4444/wd/hub", desir
 
 #### Internet Explorer Container Configuration
 
-Spoonium's Internet Explorer containers are packaged and pre-configured to work with Selenium's Remote WebDriver without any end-user configuration. Each container is pre-configured with the following settings:
+Spoon's Internet Explorer containers are packaged and pre-configured to work with Selenium's Remote WebDriver without any end-user configuration. Each container is pre-configured with the following settings:
 
 - Packaged with the latest IEDriverServer installed in the virtual environment's PATH.
 - Protected Mode Enabled in all zones.

@@ -1,13 +1,13 @@
 ### Python
 
-In this tutorial, we'll walk you through how to create and containerize a basic Python web application. We'll also show you how to automate the creation of new images of your web application using **SpoonScripts** and walk you through some of the basics of the Spoonium containerization network stack. 
+In this tutorial, we'll walk you through how to create and containerize a basic Python web application. We'll also show you how to automate the creation of new images of your web application using **SpoonScripts** and walk you through some of the basics of the Spoon containerization network stack. 
 
 **Topics Covered**
 
 - The basic container/image creation path
 - Copying local files into a container
 - Automating image creation with SpoonScript
-- The Spoonium network stack
+- The Spoon network stack
 
 #### Create the App
 

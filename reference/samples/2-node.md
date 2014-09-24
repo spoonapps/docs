@@ -6,7 +6,7 @@ In this example we'll containerize aIRChat, an open source IRC client built on N
 
 - Grab dependencies and start a new container
 - Set up a Node.js web application
-- Create and push an image to Spoonium Hub
+- Create and push an image to Spoon Hub
 - Optional: Automate creation of a Node.js container
 
 #### Pull dependencies and start a container
@@ -118,11 +118,11 @@ aIRChat 		    120.8MB  		7/16/2014 4:05:12 PM
 spoonbrew/git 		32.1MB   		7/16/2014 3:44:27 PM
 spoonbrew/node		10.2MB   		7/16/2014 3:45:10 PM
 
-# Push your container up to the Spoonium Hub
+# Push your container up to the Spoon Hub
 > spoon push aIRChat
 ```
 
-Other Spoonium users will now be able to pull and run your image in its saved state.
+Other Spoon users will now be able to pull and run your image in its saved state.
 
 Visit the [hub](/hub) to see the details of the image you just pushed.
 

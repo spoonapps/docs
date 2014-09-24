@@ -1,14 +1,14 @@
 ## JavaScript Unit Testing
 
-In addition to Selenium testing, Spoonium also offers cross-browser JavaScript unit testing. 
+In addition to Selenium testing, Spoon also offers cross-browser JavaScript unit testing. 
 
-Any browser available in the Spoonium Grid can be used for JS unit testing. You can use any of the most popular JS unit testing frameworks on Spoonium. All you need is a compatible test runner, such as Karma or Mocha. 
+Any browser available in the Spoon Grid can be used for JS unit testing. You can use any of the most popular JS unit testing frameworks on Spoon. All you need is a compatible test runner, such as Karma or Mocha. 
 
 #### How it Works
 
-JS unit testing on Spoonium leverages the same infrastructure as our Selenium testing. Thus, your test runner must support launching browsers via Selenium WebDriver. If your runner has a plugin that can interact with a Selenium Grid, it should work on Spoonium. The only adaptation you should need to make is to set the Selenium host/hostname to **localhost** and the port to **4444**.
+JS unit testing on Spoon leverages the same infrastructure as our Selenium testing. Thus, your test runner must support launching browsers via Selenium WebDriver. If your runner has a plugin that can interact with a Selenium Grid, it should work on Spoon. The only adaptation you should need to make is to set the Selenium host/hostname to **localhost** and the port to **4444**.
 
-In the **Supported Test Runners** section, below, you'll find a list of test runners that we have tested and confirmed work with Spoonium. If you are using a different test runner and are having problems configuring it for Spoonium, email our support team and we'll be happy to help out.
+In the **Supported Test Runners** section, below, you'll find a list of test runners that we have tested and confirmed work with Spoon. If you are using a different test runner and are having problems configuring it for Spoon, email our support team and we'll be happy to help out.
 
 #### Supported Browsers
 

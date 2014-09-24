@@ -4,11 +4,11 @@ Repositories are the units that make up the Hub. A repository contains the image
 
 The Hub is where you can browse and search for repositories for popular applications and components, upload your own projects, and run them online with a single click.
 
-If a repository is public, it will appear in search results, and any Spoonium user can pull or run it. Only the repository owner (or members of the owning organization) can push to the repository. 
+If a repository is public, it will appear in search results, and any Spoon user can pull or run it. Only the repository owner (or members of the owning organization) can push to the repository. 
 
 Private repositories are not searchable, and they can only be accessed, pulled, or changed by their named owner(s).
 
-The homepage for a repository is located at **http://spoonium.net/hub/[profile]/[repo]**, where **profile** is the username of the repository owner and **repo** is the name of the repository. The homepage contains 3 sections:
+The homepage for a repository is located at **http://spoon.net/hub/[profile]/[repo]**, where **profile** is the username of the repository owner and **repo** is the name of the repository. The homepage contains 3 sections:
 
 1. **About** - Provides an overview of the repository. 
 2. **Releases** - Lists all tagged versions of the image.

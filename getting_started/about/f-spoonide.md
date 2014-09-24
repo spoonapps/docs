@@ -1,6 +1,6 @@
-### IDE and Command Line
+### Spoon Studio and Command Line
 
-The IDE, previously known as **Spoon Studio**, allows developers and systems administrators to build Spoon images through a friendly graphical user interface. The IDE is most commonly used for it's "snapshot" method of containerization. Read more about IDE [here](/docs/reference#ide).
+Spoon Studio, allows developers and systems administrators to build Spoon images through a friendly graphical user interface. Spoon Studio is most commonly used for it's "snapshot" method of containerization. Read more about Spoon Studio [here](/docs/reference#ide).
 
 The command-line interface is a command line tool for creating containers and building images in real-time. The command-line interface also provides a suite of tools for managing containers and images.
 

@@ -1,12 +1,12 @@
-## IDE
+## Spoon Studio
 
-Using Spoon IDE enables you to configure the filesystem and registry of a virtual application, embed external runtimes and components, take application snapshots, and create Spoon Virtual Machine (SVM) or executable files. The primary interface consists of a ribbon bar along the top and several panes accessed by buttons on the left.
+Using Spoon Studio enables you to configure the filesystem and registry of a virtual application, embed external runtimes and components, take application snapshots, and create Spoon Virtual Machine (SVM) or executable files. The primary interface consists of a ribbon bar along the top and several panes accessed by buttons on the left.
 
 **Title Bar**
 
 - The Start Menu button, or the circle at the top left of the window, enables virtual application configurations to be created, opened, saved, imported, applied, and closed.
-- The Options bar provides Spoon IDE customization options, the ability to set proxy settings, and install certificates.
-- The Help bar provides access to Spoon IDE documentation.
+- The Options bar provides Spoon Studio customization options, the ability to set proxy settings, and install certificates.
+- The Help bar provides access to Spoon Studio documentation.
 
 **Ribbon Bar**
 
@@ -24,11 +24,11 @@ Using Spoon IDE enables you to configure the filesystem and registry of a virtua
 - The **Setup** pane enables you to configure the MSI setup package, shortcuts, and other shell integration options.
 - The **Expiration** pane enables you to configure application expiration options.
 
-**Note:** Spoon IDE users are responsible for any third-party licensing compliance for redistributable components included using virtualization.
+**Note:** Spoon Studio users are responsible for any third-party licensing compliance for redistributable components included using virtualization.
 
 ### Virtual Filesystem
 
-Spoon IDE enables you to embed a *virtual filesystem* into your executable. Embedded files are accessible by your Spoon-processed application as if they were present in the actual filesystem. Virtual files are isolated from the host device. Virtual files do not require security privileges on the host device regardless of whether the virtual files reside in a privileged directory. Because virtual files are embedded in the application executable, shared DLLs do not interfere with those installed by other applications on the host device. 
+Spoon Studio enables you to embed a *virtual filesystem* into your executable. Embedded files are accessible by your Spoon-processed application as if they were present in the actual filesystem. Virtual files are isolated from the host device. Virtual files do not require security privileges on the host device regardless of whether the virtual files reside in a privileged directory. Because virtual files are embedded in the application executable, shared DLLs do not interfere with those installed by other applications on the host device. 
 
 In the event of a conflict between a file in the virtual filesystem and a file present on the host device, the file in the virtual filesystem takes precedence.
 
@@ -67,13 +67,13 @@ This feature only applies to virtual applications that are delivered and managed
 
 **Filesystem Compression**
 
-To reduce executable size, Spoon IDE can compress virtual filesystem contents. This reduces virtual application size by approximately 50% but also prevents profiling and streaming of the application. By default, the **Compress Payload** option in the **Process Configuration** area of the **Settings** panel is unchecked. Leave this box unchecked during the build process if the application will be optimized for streaming from Spoon Virtual Desktop Server.
+To reduce executable size, Spoon Studio can compress virtual filesystem contents. This reduces virtual application size by approximately 50% but also prevents profiling and streaming of the application. By default, the **Compress Payload** option in the **Process Configuration** area of the **Settings** panel is unchecked. Leave this box unchecked during the build process if the application will be optimized for streaming from Spoon Virtual Desktop Server.
 
 **Note**: Disabling payload compression may significantly increase the size of the virtual application binary.
 
 ### Virtual Registry
 
-Spoon IDE enables you to embed a virtual registry into your executable. Embedded registry keys are accessible by your Spoon-processed application as if they were present in the actual registry. Virtual registry keys are isolated from the host device. Virtual registry keys do not require security privileges on the host device regardless of whether the virtual files reside in a privileged directory. Because virtual registry entries are embedded in the application executable, other applications are unable to disrupt application execution by inadvertent modification of registry entries.
+Spoon Studio enables you to embed a virtual registry into your executable. Embedded registry keys are accessible by your Spoon-processed application as if they were present in the actual registry. Virtual registry keys are isolated from the host device. Virtual registry keys do not require security privileges on the host device regardless of whether the virtual files reside in a privileged directory. Because virtual registry entries are embedded in the application executable, other applications are unable to disrupt application execution by inadvertent modification of registry entries.
 
 The **Classes** root, **Current User** root, **Local Machine** root, and **Users** root folders correspond to the **HKEY\_CLASSES\_ROOT**, **HKEY\_CURRENT\_USER**, **HKEY\_LOCAL\_MACHINE**, and **HKEY\_USERS** keys on the host machine. 
 
@@ -98,7 +98,7 @@ This feature only applies to virtual applications that are delivered and managed
 
 **Importing Registry Hive Files**
 
-Spoon IDE can import registry hive (.reg) files into the virtual registry. To import a .reg file, select the **Import** button in the **Registry** panel, then choose the registry hive file to import.
+Spoon Studio can import registry hive (.reg) files into the virtual registry. To import a .reg file, select the **Import** button in the **Registry** panel, then choose the registry hive file to import.
 
 ### Runtimes and Components
 

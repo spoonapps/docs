@@ -1,13 +1,13 @@
 ## Continuous Integration
 
-Create automated, clean, and consistent test environments with Spoonium while keeping the Continuous Integration (CI) 
+Create automated, clean, and consistent test environments with Spoon while keeping the Continuous Integration (CI) 
 server free from conflict causing dependencies.
 
 Existing CI servers may have many varying libraries, runtimes, custom settings, and applications, possibly in different languages and versions, that are required for the various automated builds.  Sometimes these dependencies collide to create inconsistent test environments and headaches when configuring automated builds. 
 
-With Spoonium no installed dependencies are required on the CI server. All dependencies are built into containers providing consistent environments and a dependency-free CI server.  This eliminates the possibility of dependency collision and makes automated build configuration very simple.
+With Spoon no installed dependencies are required on the CI server. All dependencies are built into containers providing consistent environments and a dependency-free CI server.  This eliminates the possibility of dependency collision and makes automated build configuration very simple.
 
-The basic steps for integrating Spoonium into a CI server are to create a SpoonScript, integrate it into an automated build on a CI server, and finally run and test the container.
+The basic steps for integrating Spoon into a CI server are to create a SpoonScript, integrate it into an automated build on a CI server, and finally run and test the container.
 
 ### Create SpoonScript
 

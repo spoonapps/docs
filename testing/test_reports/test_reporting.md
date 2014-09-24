@@ -1,10 +1,10 @@
 ## Test Reports
 
-Any test run on Spoonium is automatically logged and saved to your Spoonium user account.
+Any test run on Spoon is automatically logged and saved to your Spoon user account.
 
-This feature can be enabled or disabled by checking, or unchecking, the **Save test reports** check box in the top-right corner of [http://spoonium.net/selenium](/selenium).
+This feature can be enabled or disabled by checking, or unchecking, the **Save test reports** check box in the top-right corner of [http://spoon.net/selenium](/selenium).
 
-When checked, command and screenshot logs will still appear in the Spoonium web app at runtime, but they will not be saved after your session is ended.
+When checked, command and screenshot logs will still appear in the Spoon web app at runtime, but they will not be saved after your session is ended.
 
 #### Sharing Tests
 

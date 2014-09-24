@@ -1,14 +1,14 @@
-# Spoonium Documentation
+# Spoon Documentation
 
-This is the official Git repository for Spoonium's public documentation. 
+This is the official Git repository for Spoon's public documentation. 
 
-Live version of the docs can be found at http://spoonium.net/docs
+Live version of the docs can be found at http://spoon.net/docs
 
 ## Writing the Docs
 
 ### Style Guide
 
-When contributing to the docs on Spoonium, please take the following style guidelines into consideration. 
+When contributing to the docs on Spoon, please take the following style guidelines into consideration. 
 
 **Code and Command-line Styling**
 
@@ -67,7 +67,7 @@ https://github.com/spoonium/docs/tree/master/doc/getting_started/tour_ii/image.p
 
 #### How to Contribute
 
-If you are not a member of the **spoonium** org (AKA you don't work at Spoon), fork this repo, make changes, commit, and submit a pull request.
+If you are not a member of the **Spoon** org (AKA you don't work at Spoon), fork this repo, make changes, commit, and submit a pull request.
 
 Some basic terminology:
 - Topic: The horizontal items in the top nav.
@@ -77,7 +77,7 @@ Some basic terminology:
 The directory to store your document should be /[topic]/[document title]. 
 If the topic and title of the document contains illegal file system characters, it must be normalized.
 This is done by lower casing the path, replacing spaces with '_', and deleting illegal windows file system characters.
-For example, the "What is Spoonium?" document under the topic "Getting Started" is stored in the directory "/getting_started/what_is_spoonium". The md file names inside of the directory can be *.md
+For example, the "What is Spoon?" document under the topic "Getting Started" is stored in the directory "/getting_started/what_is_Spoon". The md file names inside of the directory can be *.md
 
 #### Creating a New Topic
 

@@ -16,7 +16,7 @@ Spoon also provides a desktop client with many features (GUI tool to launch appl
 
 Spoon containers are designed to operate in a *layered* virtual machine architecture. Layers can be thought of as "transparent sheets" of virtual environment configuration that can be stacked on top of one another to build many distinct configurations out of discrete components.
 
-For example, to build a container for a Java application that uses a MongoDB database, a Spoonium user could combine a Java runtime layer with a MongoDB database layer, then stack the application code and content in an application layer on top of its dependency layers. Layers make it extremely easy to re-use shared components such as runtimes, databases, and plugins.
+For example, to build a container for a Java application that uses a MongoDB database, a Spoon user could combine a Java runtime layer with a MongoDB database layer, then stack the application code and content in an application layer on top of its dependency layers. Layers make it extremely easy to re-use shared components such as runtimes, databases, and plugins.
 
 Layers can also be used to apply application configuration information. For example, one might have a layer that specifies the default homepage, favorites, and security settings for a browser. This can be applied on top of a base browser layer to impose those settings onto a non-customized browser environment.
 
@@ -73,7 +73,7 @@ Importantly, this contrasts with Docker, which *isolates* all ports by default. 
 
 Like Docker, Spoon provides command-line interfaces (`spoon`) and a scripting language (**SpoonScript**) for automating build processes. Spoon also provides a number of rich GUI- and web-based tools and services for building, configuring, and managing virtual environments.
 
-The **[Spoon IDE](/docs/building#working-with-the-ide)** is a graphical integrated development environment that provides a visual design environment and easy-to-use wizards for creating images. The IDE also includes a "[Desktop Scan](/docs/building#desktop-scan)" tool that automatically detects and captures settings for any applications that are locally installed on a desktop.
+The **[Spoon Studio](/docs/building#working-with-the-ide)** is a graphical integrated development environment that provides a visual design environment and easy-to-use wizards for creating images. Spoon Studio also includes a "[Desktop Scan](/docs/building#desktop-scan)" tool that automatically detects and captures settings for any applications that are locally installed on a desktop.
 
 Spoon also maintains an online database of validated application templates and images for thousands of popular
 software applications.
@@ -82,9 +82,9 @@ software applications.
 
 In addition to dynamic configuration via a console or script, Spoon also supports configuration via a static XML-based specification that declares the files, registry keys, environment variables, and other virtual machine states that will be presented to the container. 
 
-To assist in building static configurations, Spoon offers a graphical **Spoon IDE** interface, as well as both a graphical- and command line-based *snapshot* configuration.
+To assist in building static configurations, Spoon offers a graphical **Spoon Studio** interface, as well as both a graphical- and command line-based *snapshot* configuration.
 
-For more information on the Spoon IDE and snapshot tools, see the [Building](/docs/building) section in this documentation.
+For more information on Spoon Studio and snapshot tools, see the [Building](/docs/building) section in this documentation.
 
 ### Partners
 

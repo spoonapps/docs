@@ -1,14 +1,14 @@
 ### Common Issues and Troubleshooting
 
-#### Cannot connect to the Spoonium Hub
+#### Cannot connect to the Spoon Hub
 
-Before proceeding, make sure the Spoonium hub is running on your local computer. You can check this by opening **Windows Task Manager** and checking the **Processes** tab for *SpooniumComponent.exe*. 
+Before proceeding, make sure the Spoon hub is running on your local computer. You can check this by opening **Windows Task Manager** and checking the **Processes** tab for *SpooniumComponent.exe*. 
 
 **Solution 1: Check your Firewall**: This issue may occur if your computer has a restrictive firewall that blocks incoming and outgoing connections to/from your computer. 
 
-If possible, check your firewall and make sure port 4444 is not blocked. This is the port the Spoonium hub listens for commands on. If this port is blocked, it must be unblocked before using Spoonium.  
+If possible, check your firewall and make sure port 4444 is not blocked. This is the port the Spoon hub listens for commands on. If this port is blocked, it must be unblocked before using Spoon.  
 
-#### Cannot Launch the Spoonium Hub
+#### Cannot Launch the Spoon Hub
 
 Ensure that the Spoon Plugin is installed and running. The Spoon Plugin can be downloaded from [http://start.spoon.net/install](http://start.spoon.net/install). 
 
@@ -18,13 +18,13 @@ To run or restart the Spoon Plugin once installed, go to the **Start Menu** > **
 
 This issue occurs when the Spoon Plugin is not activate or installed. If you have not installed the Spoon Plugin, it can be downloaded from [http://start.spoon.net/install](http://start.spoon.net/install). 
 
-If the Spoon Plugin is installed and you continue to see this issue, verify that your browser is not blocking the Spoon Plugin from running on Spoonium. 
+If the Spoon Plugin is installed and you continue to see this issue, verify that your browser is not blocking the Spoon Plugin from running on Spoon. 
 
 **Mozilla Firefox**
 
-1. Navigate to [http://spoonium.net/selenium](/selenium).
+1. Navigate to [http://spoon.net/selenium](/selenium).
 2. To the left of the browser's address bar, a "building block" icon should appear (it looks like a small LEGO). 
-3. Click this icon and a small box will appear beneath it with the dialog "Allow *spoonium.net* to run Spoon?" 
+3. Click this icon and a small box will appear beneath it with the dialog "Allow *Spoon.net* to run Spoon?" 
 4. Select **Allow and Remember** 
 5. Refresh the page and click **Start Grid**. 
 
