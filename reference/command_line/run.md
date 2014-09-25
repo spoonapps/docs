@@ -44,7 +44,7 @@ Containers are started with the startup file specified in the last passed image.
 > spoon run spoonbrew/jdk
 
 # Override the startup file to use the command prompt
-> spoon --startupFile=cmd.exe run spoonbrew/jdk
+> spoon run --startup-file=cmd.exe spoonbrew/jdk
 ```
 
 When passing arguments to a startupfile or command, we recommend separating these arguments from the rest of the command with a `--`. Arguments specified after the `--` mark are passed directly to the startup file/command.

@@ -25,7 +25,7 @@ Since we'll be pulling the sources into our container using Git, let's start the
 
 ```
 # Start the container
-> spoon run -w="C:\" -d --startupFile=cmd.exe spoonbrew/git,spoonbrew/jdk7
+> spoon run -w="C:\" -d --startup-file=cmd.exe spoonbrew/git,spoonbrew/jdk7
 
 # Create and navigate to C:\java
 (3df234f3) C:\> mkdir java & cd java
