@@ -47,11 +47,11 @@ Data in the table returned by the containers command is truncated so that it pri
 > spoon containers --no-trunc
 ```
 
-The `--no-trunc` flag includes additional columns in the output, **Ports** and **Settings**, as seen below.
+The `--no-trunc` flag includes additional columns in the output, **Ports**, **Settings** and **VM version**, as seen below.
 
-	ID                                Images       Command  Created               Status   Ports      Settings
-	--                                ------       -------  -------               ------   -----      --------
-	df6ac93f8b6147b986d4c7849c3dcef0  ghost:0.5.1           8/26/2014 3:27:17 PM  Running  8080:2368  SpawnVm
-	d6e44ae706c44ed1bd75a0830bed3239  ghost:0.5.1           8/26/2014 3:22:14 PM  Stopped             SpawnVm
+	ID                                Images       Command  Created               Status   Ports      Settings  VM version
+	--                                ------       -------  -------               ------   -----      --------  ----------
+	df6ac93f8b6147b986d4c7849c3dcef0  ghost:0.5.1           8/26/2014 3:27:17 PM  Running  8080:2368  SpawnVm   11.6.270
+	d6e44ae706c44ed1bd75a0830bed3239  ghost:0.5.1           8/26/2014 3:22:14 PM  Stopped             SpawnVm   11.6.270
 
-The **Ports** column contains active port mappings. See the `spoon netstat` command for more information.
+The **Ports** column contains active port mappings. See the `spoon netstat` command for more information. The **VM version** contains version number of VM used to create and run container.
