@@ -3,7 +3,7 @@
 The `stop` command stops containers which are currently running. 
 
 ```
-Usage: spoon stop <options> <container>...
+Usage: spoon stop <options> <container>
 
 <options> available:
   -a, --all                  Stop all running containers
@@ -11,7 +11,7 @@ Usage: spoon stop <options> <container>...
 
 ```
 
-`start` command accepts either list of containers to close or `-a` parameter to close all running containers.
+`start` command accepts either a container to close or `-a` parameter to close all running containers.
 
 If the `stop` command is run against a non-running container then no action will be taken. 
 
