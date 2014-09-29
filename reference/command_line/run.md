@@ -89,7 +89,7 @@ Spoon VM settings can be enabled or disabled with the `--enable` and `--disable`
 
 When the `--diagnostic` flag is used, the container will generate diagnostic logs that detail all of the operations that occur within the container. These diagnostic logs can later be viewed using the `spoon logs` command and be used to troubleshoot errors and configuration issues. 
 
-Please note that it is not possible to run `spoon.exe` in virtualized environment - it will launch on host even if executed from inside of container.
+Please note that `spoon.exe` always runs outside of the container on the host even if executed from within the container.
 
 #### Adding Environment Variables
 
