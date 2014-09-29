@@ -6,7 +6,7 @@ The `using` instruction adds an additional, temporary image(s) for that containe
 using <image>
 ```
 
-Multiple images can be specified in a single `using` instruction by putting a space between subsequent images. 
+Multiple images can be specified in a single `using` instruction by putting a space between subsequent images. If a file can be found both in image added by `using` and by `from` then file from `from` image is used. If a file can be found in two images added by `using` then file from last image is used.
 
 ```
 using <image 1> <image 2>
