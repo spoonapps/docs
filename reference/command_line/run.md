@@ -215,3 +215,8 @@ startup file doc=[("c:\windows\system32\notepad.exe", "c:\doc\welcome.txt"), ("c
 # launch welcome.txt and howto.txt in notepad
 > spoon run test-trigger --trigger=doc
 ```
+
+
+#### Selecting VM version
+
+A specific VM version can be selected by using the `--vm=version` flag. If the selected version is lower than the minimum version that is required by spoon.exe, then the minimum version will be used instead.
