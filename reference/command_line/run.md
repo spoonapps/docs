@@ -24,7 +24,7 @@ Usage: spoon run <options> <image> [<parameters>...]
       --wait-after-error     Leave program open after error
 ```
 
-Specify multiple base images by separating with a comma. If two images contains the same file - first one is taken. Always ensure that images with new versions of applications/libraries are passed first.
+Specify multiple base images by separating with a comma. If two images contains the same file - first one is taken. Always ensure that images with new versions of applications/libraries are passed first. Virtual machine settings are taken from last image in the list.
 
 ```
 # Create a container using the spoonbrew/apache image
