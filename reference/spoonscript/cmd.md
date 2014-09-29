@@ -8,7 +8,7 @@ The instruction has three forms:
 2. `cmd <command> <param1> <param2>` (command is interpreted by cmd.exe, defaults to using "cmd.exe /c")
 3. `cmd <param1> <param2>` (parameters are sent to the base image's startup file)
 
-Please note that it is not possible to run `spoon.exe` in virtualized environment - it will launch on host even if passed as `cmd` parameter.
+Please note that `spoon.exe` always runs outside of the container on the host even if passed as `cmd` parameter.
 
 #### As an Executable
 
