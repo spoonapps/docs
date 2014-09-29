@@ -8,6 +8,8 @@ The instruction has three forms:
 2. `cmd <command> <param1> <param2>` (command is interpreted by cmd.exe, defaults to using "cmd.exe /c")
 3. `cmd <param1> <param2>` (parameters are sent to the base image's startup file)
 
+Please note that it is not possible to run `spoon.exe` in virtualized environment - it will launch on host even if passed as `cmd` parameter.
+
 #### As an Executable
 
 If you wish to launch a process from an executable and optionally supply parameters to that executable, you must express the desired *executable* as a tuple of strings and give the full path to the executable (unless it is on the local system or container's `PATH`). Using this syntax, parameters are passed directly to the executable. 
