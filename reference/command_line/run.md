@@ -217,4 +217,4 @@ startup file doc=[("c:\windows\system32\notepad.exe", "c:\doc\welcome.txt"), ("c
 
 #### Selecting VM version
 
-Specific VM version can be selected using `--vm=version` flag. If selected version is lower than minimal required by spoon command then this flag is ignored.
+A specific VM version can be selected by using the `--vm=version` flag. If the selected version is lower than the minimum version that is required by spoon.exe, then the minimum version will be used instead.
