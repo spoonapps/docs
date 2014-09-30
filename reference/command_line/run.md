@@ -71,18 +71,19 @@ A container's standard streams (stdin/out/err) can be redirected to either the c
 
 Detaching from a container will allow further work to be done in the native prompt while the container is running.  
 
-The initial working directory for the container can be set with `workdir` instruction or `-w` flag. Current directory will be used if no `workdir` instruction was used during building container image or `--startup-file` parameter was provided. 
+The initial working directory for the container can be set with the `workdir` instruction or the `-w` flag. The current directory will be used if `workdir` was not specified and no `--startup-file` parameter was provided when building the image. 
 
 ```
-# Set working directory to root of C: drive
+# By default, a container's working directory matches the host's working directory
+C:\Users>spoon run spoonbrew/git
+
+(0x3842xd) C:\Users>
+
+# This sets the working directory to the root of the C drive
 C:\Users> spoon run -w="C:\" spoonbrew/git
 
 (0x3842xd) C:\> 
 
-# By default, container working directory matches native
-C:\Users>spoon run spoonbrew/git
-
-(0x3842xd) C:\Users>
 ```
 
 Spoon VM settings can be enabled or disabled with the `--enable` and `--disable` flags, respectively. For a list of Spoon VM settings, see **VM Settings** section of the documentation.
