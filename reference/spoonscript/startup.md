@@ -13,7 +13,7 @@ The instruction has multiple forms:
 
 This instruction is only applied to the output image and does not affect the intermediate container. 
 
-If no `startup file` is used then this setting is inherited from last image in `from` command.
+If `startup file` is not specified then the startup file setting is inherited from last image listed in the `from` command.
 
 #### As an Executable
 
