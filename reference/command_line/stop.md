@@ -14,5 +14,3 @@ Usage: spoon stop <options> <container>
 `start` command accepts either a container to close or `-a` parameter to close all running containers.
 
 If the `stop` command is run against a non-running container then no action will be taken. 
-
-To enable diagnostic logging for the container, specify the `--diagnostic` flag. 
