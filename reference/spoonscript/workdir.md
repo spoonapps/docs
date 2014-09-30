@@ -10,4 +10,4 @@ If a `workdir` command is not specified then all commands will be executed from 
 
 Unlike `cmd cd <path>`, the `workdir` instruction will persist the working directory to all subsequent instructions. 
 
-The last `workdir` instruction will also set working directory of the output image. See the `run` command for more details.
+The last `workdir` instruction will also set the working directory of the output image. See the `run` command for more details.
