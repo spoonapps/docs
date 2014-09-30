@@ -13,6 +13,8 @@ The instruction has multiple forms:
 
 This instruction is only applied to the output image and does not affect the intermediate container. 
 
+If no `startup file` is used then this setting is inherited from last image in `from` command.
+
 #### As an Executable
 
 If you wish to launch a process from an executable and optionally supply parameters to that executable, you must express the desired *executable* as a tuple of strings and give the full path to the executable (unless it is on the local system or container's `PATH`). Using this syntax, parameters are passed directly to the executable. 
