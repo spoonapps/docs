@@ -71,7 +71,7 @@ A container's standard streams (stdin/out/err) can be redirected to either the c
 
 Detaching from a container will allow further work to be done in the native prompt while the container is running.  
 
-The initial working directory for the container can be set with `-w` flag. 
+The initial working directory for the container can be set with `workdir` instruction or `-w` flag. Current directory will be used if no `workdir` instruction was used during building container image or `--startup-file` parameter was provided. 
 
 ```
 # Set working directory to root of C: drive
