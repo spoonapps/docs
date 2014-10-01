@@ -22,4 +22,4 @@ By default, Spoon is configured to connect to **https://spoon.net/hub**.
 
 #### Resetting Config Settings
 
-The configuration settings for Spoon can be reset to their default values by issueing the config command with the `--reset` flag.
+The configuration settings for Spoon can be reset to their default values by issuing the config command with the `--reset` flag.
