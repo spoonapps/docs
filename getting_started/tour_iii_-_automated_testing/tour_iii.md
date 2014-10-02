@@ -1,5 +1,7 @@
 ## Tour III - Automated Testing
 
+*Automated testing tutorial coming soon.*
+
 ### Next Steps 
 
 Learn more about:
