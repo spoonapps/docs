@@ -24,7 +24,9 @@ Usage: spoon run <options> <image> [<parameters>...]
       --wait-after-error     Leave program open after error
 ```
 
-Specify multiple base images by separating with a comma. If two images contains the same file, registry entry or environment variable - last one is taken. Always ensure that images with new versions of applications/libraries are passed last. Virtual machine settings are taken from last image in the list.
+Spoon `run` can be used to specify multiple images by separating each image with a comma. If the same file, registry entry, or environment variable exists in multiple images, then the one from whichever image was specified last will win the conflict and be used in the virtual environment. Virtual machine settings are taken from the last image specified in the `from` instruction.
+
+Due to this "layering" approach, it is a good practice to specify images with newer versions of applications or libraries after images with older versions.
 
 ```
 # Create a container using the spoonbrew/apache image

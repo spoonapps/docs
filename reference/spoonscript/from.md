@@ -8,7 +8,9 @@ from <image>
 
 A valid `.me` file must start with a `from` instruction and may only contain one from instruction. 
 
-Multiple images can be specified in a single `from` instruction by putting a space between subsequent images. If two images contains the same file, registry entry or environment variable - last one is taken. Always ensure that images with new versions of applications/libraries are passed last. Virtual machine settings are taken from last image in the list.
+Multiple images can be specified in a single `from` instruction by separating each image with a comma or space. If the same file, registry entry, or environment variable exists in multiple images added via the `from` instruction, then the one from whichever image was specified last will win the conflict and be used in the virtual environment. Virtual machine settings are taken from the last image specified in the `from` instruction.
+
+Due to this "layering" approach, it is a good practice to specify images with newer versions of applications or libraries after images with older versions.
 
 ```
 from <image 1> <image 2>
