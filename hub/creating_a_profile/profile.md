@@ -8,8 +8,8 @@ Once your account is created, go to your [account settings](/account) to add you
 
 ### Are you working with a team?
 
-If you are working with a group of collaborators, [create an organization](/pricing#organization) to simplify the management of the repository.
+If you are working with a group of collaborators, [create an organization](/pricing) to simplify the management of the repository.
 
-The owner of the organization can add or remove users and manage the organization's subscription from the [settings](/hub) page.
+The owner of the organization can add or remove users and manage the organization's subscription from [account settings](/account/organizations).
 
-Similar to individual accounts, organizations may have unlimited public repositories, and can be [upgraded](/pricing#organization) for private repositories.
+Similar to individual accounts, organizations may have unlimited public repositories and can be [upgraded](/pricing) for private repositories.
