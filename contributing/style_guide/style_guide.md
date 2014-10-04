@@ -1,6 +1,6 @@
 ## Style Guide
 
-When contributing to the docs on Spoon, please take the following style guidelines into consideration. This style guide is also found on [GitHub](https://github.com/spoonium/docs).
+When contributing to spoon.net/docs, please take the following style guidelines into consideration. This style guide is also found on [GitHub](https://github.com/spoonapps/docs).
 
 #### Code and Command-line Styling
 
@@ -39,7 +39,7 @@ When contributing to the docs on Spoon, please take the following style guidelin
 
 ```
 # GitHub location
-https://github.com/spoonium/docs/tree/master/doc/getting_started/tour_ii/image.png
+https://github.com/spoonapps/docs/tree/master/doc/getting_started/tour_ii/image.png
 
 # Markdown would be
 ![](/components/docs/getting_started/tour_ii/image.png)
@@ -49,7 +49,7 @@ https://github.com/spoonium/docs/tree/master/doc/getting_started/tour_ii/image.p
 
 #### How to Contribute
 
-If you are not a member of the **Spoon** org (AKA you don't work at Spoon), fork [this repo](https://github.com/spoonium/docs), make changes, commit, and submit a pull request. **Meta** files specify the section for the markdown file, and they should not be edited unless you are moving content to a different section.
+If you are not a member of the **Spoon** org (AKA you don't work at Spoon), fork [this repo](https://github.com/spoonapps/docs), make changes, commit, and submit a pull request. **Meta** files specify the section for the markdown file, and they should not be edited unless you are moving content to a different section.
 
 #### Adding a Page
 
