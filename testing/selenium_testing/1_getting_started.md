@@ -1,6 +1,6 @@
 ## Selenium Testing
 
-Spoon offers a solution for automated browser testing by running [Selenium](http://seleniumhq.org) tests on a variety of browsers all on your local machine with minimal setup.
+Spoon offers a solution for automated browser testing by running [Selenium](/selenium) tests on a variety of browser containers all on your local machine with minimal setup. This lets you avoid the pain and expense of setting up and maintaining a local Selenium Grid.
 
 Running your Selenium tests on Spoon is almost exactly like running them on a local Selenium Grid. What does this mean for you?
 
@@ -21,7 +21,7 @@ If you're already using Grid to run your tests, configuring your tests for Spoon
 - Firefox 3+
 - Internet Explorer 6+
 
-*Don't see your preferred browser? [Let us know](mailto:support@spoon.net) and we'll do our best to get it added.*
+*Don't see your preferred browser? [Let us know](/contact) and we'll do our best to get it added.*
 
 #### Starting the Spoon Hub
 
