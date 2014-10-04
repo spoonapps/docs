@@ -1,10 +1,10 @@
 ## Test Reports
 
-Any test run on Spoon is automatically logged and saved to your Spoon user account. 
+Though all tests execute locally in containers, test reports and screenshots are logged and saved on your Spoon.net account for easy sharing and access.
 
-This feature can be enabled or disabled by checking, or unchecking, the **Save test reports** check box in the top-right corner of [http://spoon.net/selenium](/selenium).
+If you would not like us to save your test reports for you, this feature can be toggled by checking or unchecking the **Save test reports** check box in the top-right corner of [http://spoon.net/selenium](/selenium).
 
-When checked, command and screenshot logs will still appear in the Spoon web app at runtime, but they will not be saved after your session is ended.
+When unchecked, command and screenshot logs will still appear for review after your tests complete, but they will not be saved after your session is ended.
 
 #### Sharing Tests
 
@@ -31,4 +31,4 @@ For each command, the following information is recorded:
 - The corresponding response from the remote server. This details the result(s) of the command.
 A screenshot of the webpage during the command.
 
-In the report, commands are grouped by their associated screenshot. When you see a sequence of commands associated with a single screenshot, this means that the page did not change, visually, throughout this sequence of commands. 
+In the report, commands are grouped by their associated screenshot. When you see a sequence of commands associated with a single screenshot, this means that the page did not visually change throughout this sequence of commands. 
