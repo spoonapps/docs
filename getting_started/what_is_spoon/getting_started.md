@@ -47,15 +47,15 @@ Spoon images serve as a read-only filesystem and registry that your application 
 
 Verified images (like jdk, node, mongo)  are available for download from the [Spoon Hub](/hub), or a custom image can be created from any container with the `spoon commit` command. Thus, you can layer multiple dependency images together in a single container, rather than having to build one on top of another.
 
-When instructed to run a container with the `spoon run` command, Spoon will automatically search for and download necessary images. Read more about [working with images](/docs/building#working-with-images).
+When instructed to run a container with the `spoon run` command, Spoon will automatically search for and download necessary images. Read more about [working with images](/docs/building/working-with-images).
 
 #### Repositories - Distribution component
 
 To share your public images and containers with others, we have the [Spoon Hub](/hub), which is filled with public repositories from both Spoon users and the [spoonbrew team](/hub/spoonbrew).
 
-Free Spoon accounts come with unlimited public repositories. You can also upgrade to a [paid plan](/pricing) with private repositories, or host your own on-premises repositories (instructions found [here](/docs/deploying#to-a-spoon-server)).
+Free Spoon accounts come with unlimited public repositories. You can also upgrade to a [paid plan](/pricing) with private repositories, or host your own on-premises repositories (instructions found [here](/docs/deploying/to-a-spoon-server)).
 
-Once an image is on the Hub, you can run it from another location. Read more about [repositories](/docs/hub#repositories).
+Once an image is on the Hub, you can run it from another location. Read more about [repositories](/docs/hub/repositories).
 
 #### Containers - Run component
 
@@ -63,4 +63,4 @@ Containers are created from an image or from multiple images. They hold everythi
 
 You can turn any container into a custom image template using the `spoon commit` command.
 
-Read more about [working with containers](/docs/building#working-with-containers) and about [how Spoon works](/docs/getting+started#about), or jump right in with our "Hello World!" tutorial below.
+Read more about [working with containers](/docs/building/working-with-containers) and about [how Spoon works](/docs/getting-started/about), or jump right in with our "Hello World!" tutorial below.

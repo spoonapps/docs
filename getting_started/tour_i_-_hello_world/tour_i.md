@@ -211,4 +211,4 @@ Once the `Push complete` message appears in your command prompt, the image is on
 
 Repository pages on Spoon serve as complete version histories of different images, just like remote repositories in Git, and every Spoon user has an unlimited number of public repositories.
 
-Public repositories are great for sharing work with others. They're a quick and easy access point for colleagues, collaborators, or end users to access, download, and run your project. Read more about repositories [here](/docs/hub#repositories).
+Public repositories are great for sharing work with others. They're a quick and easy access point for colleagues, collaborators, or end users to access, download, and run your project. Read more about repositories [here](/docs/hub/repositories).

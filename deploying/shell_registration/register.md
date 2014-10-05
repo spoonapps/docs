@@ -7,4 +7,4 @@ Images can also be integrated with the Windows shell. The `register` command wil
 > spoon register spoonbrew/7zip
 ```
 
-Configuring shortcuts and file associations for an image is done in Spoon Studio. See the [reference](/docs/reference#ide) section for more details.
+Configuring shortcuts and file associations for an image is done in Spoon Studio. See the [reference](/docs/reference/ide) section for more details.

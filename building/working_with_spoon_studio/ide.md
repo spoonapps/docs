@@ -2,9 +2,9 @@
 
 Spoon Studio is a desktop application that allows you to convert any Windows application into a self-contained virtual application. Virtual applications can be delivered as standalone executables, MSIs or Spoon images. 
 
-The GUI allows users to easily edit complex configurations for applications that may require complicated settings. Whereas Spoon's command line tool builds images from containers, Spoon Studio uses static XML files (**.xappl**) to build images. More information about the XAPPL file format is available in the [XAPPL reference](/docs/reference#xappl).
+The GUI allows users to easily edit complex configurations for applications that may require complicated settings. Whereas Spoon's command line tool builds images from containers, Spoon Studio uses static XML files (**.xappl**) to build images. More information about the XAPPL file format is available in the [XAPPL reference](/docs/reference/xappl).
 
-Once created with Spoon Studio, the command-line interface builds these XAPPL files into images that you can push to the Spoon Hub. Click [here](/docs/building#working-with-images) for a specific example.
+Once created with Spoon Studio, the command-line interface builds these XAPPL files into images that you can push to the Spoon Hub. Click [here](/docs/building/working-with-images) for a specific example.
 
 Spoon Studio also provides two unique methods for creating images and virtual applications:
 

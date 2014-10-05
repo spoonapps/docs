@@ -58,9 +58,9 @@ A Spoon **isolation mode** may be specified on a per-object basis. For example, 
 
 When a container is created, by default it is given a read-only view into the host device's file system and registry; however, any changes are isolated and written instead to the container's sandbox. This allows virtual applications to consume host-device data and services while preventing any changes that would alter the system configuration. 
 
-Isolation from the host device only applies to processes that are created within the container. Existing applications or system services will not be isolated, nor will their interactions with processes inside the container. For example, executing an MSI installer package will result in an application being installed to the host device, as the installation is executed by a Windows system service. For this reason, we recommend use of a pre-existing package or the [snapshot](/docs/building#snapshotting) method to install MSIs.
+Isolation from the host device only applies to processes that are created within the container. Existing applications or system services will not be isolated, nor will their interactions with processes inside the container. For example, executing an MSI installer package will result in an application being installed to the host device, as the installation is executed by a Windows system service. For this reason, we recommend use of a pre-existing package or the [snapshot](/docs/building/snapshotting) method to install MSIs.
 
-For more information on isolation modes, please see the [Isolation Modes](/docs/reference#ide-virtual-filesystem) section of this documentation.
+For more information on isolation modes, please see the [Isolation Modes](/docs/reference/spoon-studio) section of this documentation.
 
 ### Networking
 
@@ -73,7 +73,7 @@ Importantly, this contrasts with Docker, which *isolates* all ports by default. 
 
 Like Docker, Spoon provides command-line interfaces (`spoon`) and a scripting language (**SpoonScript**) for automating build processes. Spoon also provides a number of rich GUI- and web-based tools and services for building, configuring, and managing virtual environments.
 
-The **[Spoon Studio](/docs/building#working-with-the-ide)** is a graphical integrated development environment that provides a visual design environment and easy-to-use wizards for creating images. Spoon Studio also includes a "[Desktop Scan](/docs/building#desktop-scan)" tool that automatically detects and captures settings for any applications that are locally installed on a desktop.
+The **[Spoon Studio](/docs/building/working-with-the-ide)** is a graphical integrated development environment that provides a visual design environment and easy-to-use wizards for creating images. Spoon Studio also includes a "[Desktop Scan](/docs/building/desktop-scan)" tool that automatically detects and captures settings for any applications that are locally installed on a desktop.
 
 Spoon also maintains an online database of validated application templates and images for thousands of popular
 software applications.

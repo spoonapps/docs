@@ -25,7 +25,7 @@ CMD git clone https://github.com/project/repo c:\root
 CMD cd c:\root\server & npm install
 ```
 
-Save your script as a `.me` file. See the [SpoonScript reference](/docs/reference#SpoonScript) for more information on SpoonScript script instructions.
+Save your script as a `.me` file. See the [SpoonScript reference](/docs/reference/SpoonScript) for more information on SpoonScript script instructions.
 
 ### Integrate into the CI server
 
@@ -46,7 +46,7 @@ spoon export <name> c:\root\image.svm
 
 Rather than exporting the image to the host system, you can also `spoon push` the image to the hub where other users could pull it down and test.
 
-See the [Command Line Interface](/docs/reference#command+line) page for more information on `spoon` commands.
+See the [Command Line Interface](/docs/reference/command-line) page for more information on `spoon` commands.
 
 ### Run the container
 

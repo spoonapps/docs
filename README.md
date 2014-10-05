@@ -45,7 +45,7 @@ building "my image" from /path/to/spoon.me
 
 - Inline paths should be **bolded**. --> Example: navigate to **C:\Users** 
 - Internal links to other sections of the doc should be relative paths
-	* Other doc links: /docs/[topic]#[section]
+	* Other doc links: /docs/[topic]/[section]
 	* To the hub: /hub
 	* To contact page: /contact
 

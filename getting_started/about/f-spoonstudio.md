@@ -8,4 +8,4 @@ The command-line interface is a command line tool for creating containers and bu
 
 **System administrators** can use the command-line interface to more effectively manage their infrastructure.
 
-Read more about using the command-line interface [here](/docs/reference#CommandLine).
+Read more about using the command-line interface [here](/docs/reference/command-line).

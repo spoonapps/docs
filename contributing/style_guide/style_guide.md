@@ -27,7 +27,7 @@ When contributing to spoon.net/docs, please take the following style guidelines 
 - Syntax highlighting can be specified after the top 3 backticks (not available for inline code). 
 - Use inline code styles sparingly.
 - Internal links to other sections of the doc should be relative paths
-	* Other doc links: /docs/[topic]#[section]
+	* Other doc links: /docs/[topic]/[section]
 	* To the hub: /hub
 	* To contact page: /contact
 

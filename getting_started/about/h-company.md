@@ -6,7 +6,7 @@
 
 [Spoon Studio](/studio) lets you easily convert both your new and existing applications into virtual applications for deployment in standalone EXEs, on intranets with Spoon Server, or on the web with Spoon.net. Studio has graphical and command-line interfaces for packaging application containers. [Read more](/docs/building) about building containers with Spoon Studio.
 
-[Spoon Server](/server) is an on-site version of Spoon.net that includes powerful management and analytical capabilities. Server allows developers and IT departments to host web portals for testers and end users to access their applications on a private cloud. [Read more](/docs/deploying#to-a-spoon-server) about using Spoon Server for deployment.
+[Spoon Server](/server) is an on-site version of Spoon.net that includes powerful management and analytical capabilities. Server allows developers and IT departments to host web portals for testers and end users to access their applications on a private cloud. [Read more](/docs/deploying/to-a-spoon-server) about using Spoon Server for deployment.
 
 #### Partner with Spoon
 

@@ -8,4 +8,4 @@ The hub can aid in end-user deployment as well as internal development. New appl
 
 Internal and pre-release builds can be held in private repositories only accessible by the members of your organization.
 
-More information on [getting started with the hub](/docs/hub) and [working with repositories](/docs/hub#Repositories).
+More information on [getting started with the hub](/docs/hub) and [working with repositories](/docs/hub/Repositories).
