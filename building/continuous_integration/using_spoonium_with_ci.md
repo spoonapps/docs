@@ -64,3 +64,48 @@ If you alternately pushed to the hub then use these commands to pull and run:
 > spoon pull <account name>/<name>
 > spoon run <account name>/<name> <command>
 ```
+
+#### Example use case: running tests inside a container on the CI server
+
+We would like to run the tests of a project inside a spoon container, all within a CI server job.
+
+Let's assume we have an ready-built image, pushed to the hub, containing the project source code and all the development dependencies: jdk,maven,git.
+
+```
+FROM jdk,maven,git
+
+CMD mkdir c:\root
+CMD git clone https://github.com/JodaOrg/joda-time.git C:\root
+```
+
+The CI server job that runs the tests inside a spoon container would look like this:
+
+```
+spoon login %SPOON_USER% %SPOON_PWD%
+
+rem pull latest changes and run the tests
+spoon run spoon/sample -n=ci-example --attach -w="C:\root\joda-time" /c git pull ^&^& mvm clean test
+set TESTS_EXITCODE=%errorlevel%
+
+rem capture the test results from the container, make them available to the CI server
+mkdir surefire-reports
+spoon cp ci-example:C:\root\joda-time\target\surefire-reports surefire-reports
+
+rem discarding container
+spoon rm ci-example
+
+rem exit using the testrun's exit code
+exit /b %TESTS_EXITCODE%
+```
+
+The CI server stores the Spoon credentials as environment variables `SPOON_USER` and `SPOON_PWD`
+
+When running the image, it first pulls latest code changes and then launches the build and runs the tests.
+
+After the tests complete, there are two things that need to be done, before it finally exits:
+
+- test results need to be made available outside of the container, for tasks like test results parsers, which display rich information about test failures.
+
+- the temporary container needs to be discarded.
+
+Once these things completed, the script exits using the original tests run exit code. This to ensure that if the test run failed, the CI server will detect this by the exit code returned.
