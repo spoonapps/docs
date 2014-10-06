@@ -20,8 +20,8 @@ If `startup file` is not specified then the startup file setting is inherited fr
 If you wish to launch a process from an executable and optionally supply parameters to that executable, you must express the desired *executable* as a tuple of strings and give the full path to the executable (unless it is on the local system or container's `PATH`). Using this syntax, parameters are passed directly to the executable. 
 
 ```
-# "clone" and "https://github.com/spoonium/docs" are passed to git.exe
-startup file ["git.exe", "clone", "https://github.com/spoonium/docs"]
+# "clone" and "https://github.com/spoonapps/docs" are passed to git.exe
+startup file ["git.exe", "clone", "https://github.com/spoonapps/docs"]
 ```
 
 #### As a Shell Command
