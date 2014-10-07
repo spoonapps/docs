@@ -6,9 +6,6 @@ The `try` command creates a new, temporary container which is removed once it is
 Usage: spoon try <options> <image> [<parameters>...]
 
 <options> available:
-  -a, --attach               Attach to stdin, stdout, and stderr of the container
-  -d, --detach               Run the container in the background
-      --diagnostic           Enable diagnotic logging
       --disable=VALUE        Disable the specified Spoon VM setting
   -e, --env=VALUE            Set environment variables inside the container
       --enable=VALUE         Enable the specified Spoon VM setting
@@ -17,7 +14,7 @@ Usage: spoon try <options> <image> [<parameters>...]
       --link=VALUE           Add link to another container (<container>:<alias>)
       --route-add=VALUE      Add a TCP or UDP mapping format: [<hostPort>]:<containerPort>[/tcp|udp]
       --route-block=VALUE    Isolate all ports of specified protocol (TCP or UDP) by default
-      --startup-file=VALUE    Override the default startup file
+      --startup-file=VALUE   Override the default startup file
       --trigger=VALUE        Execute named group of startup files
       --vm=VALUE             The Spoon VM version to run the container with
   -w, --working-dir=VALUE    Set the initial working directory inside the container
@@ -49,30 +46,6 @@ Containers are started with the startup file specified in the last passed image.
 > spoon try --startup-file=cmd.exe spoonbrew/jdk
 ```
 
-When passing arguments to a startupfile or command, we recommend separating these arguments from the rest of the command with a `--`. Arguments specified after the `--` mark are passed directly to the startup file/command.
-
-If a `--` mark is not used, any argument matching a `try` command flag will be interpreted by Spoon which may lead to unexpected behavior. 
-
-```
-  # Spoon will interpret the /d flag and execute a container in detached mode
-  > spoon try spoonbrew/scratch /d
-  
-  # /d flag is passed to cmd.exe, disabling execution of AutoRun commands from the registry
-  > spoon try spoonbrew/scratch -- /d 
-```
-
-A container's standard streams (stdin/out/err) can be redirected to either the current command prompt or the background using the `--attach` and `--detach` flags. 
-
-```
-# Redict standard streams to current command prompt
-> spoon try -a <image>
-
-# Detach the container from the native prompt
-> spoon try -d <image>
-```
-
-Detaching from a container will allow further work to be done in the native prompt while the container is running.  
-
 The initial working directory for the container can be set with the `workdir` instruction or the `-w` flag. The current directory will be used if `workdir` was not specified and no `--startup-file` parameter was provided when building the image. 
 
 ```
@@ -89,8 +62,6 @@ C:\Users> spoon try -w="C:\" spoonbrew/git
 ```
 
 Spoon VM settings can be enabled or disabled with the `--enable` and `--disable` flags, respectively. For a list of Spoon VM settings, see **VM Settings** section of the documentation.
-
-When the `--diagnostic` flag is used, the container will generate diagnostic logs that detail all of the operations that occur within the container. These diagnostic logs can later be viewed using the `spoon logs` command and be used to troubleshoot errors and configuration issues. 
 
 Please note that `spoon.exe` always runs outside of the container on the host even if executed from within the container.
 
@@ -175,29 +146,6 @@ If you decided to not expose any services running in a container to the public b
 When creating a container with the `spoon try` command, you can use the `--link` flag to link it to any existing containers and the new container will be able to connect to any services exposed by the linked containers. Such connection creates a parent-child relationship where the newly created container is the parent.
 
 With each link, an alias name must be specified. Name resolution overrides are added to the parent container so it can refer to its children by these names.
-
-
-##### Example
-
-First create two containers, each exposing web sites on private port 80, but with no services exposed outside the containers. Run them in detached mode.
-
-```
-> spoon try --route-block tcp,udp -d <image>
-
-05bf1aa429204d1586487f4015e1428c
-
-> spoon try --route-block tcp,udp -d <image>
-
-94a38820b45443c9ac74792215e33a00
-```
-
-Then create a web browser container linked to the previously created containers.
-
-```
-> spoon try --link 05bf:web1 --link 94a3:web2 myself/webbrowser http://web1 http://web2
-```
-
-You will be able to browse websites served by the linked containers even though they are not publically available.
 
 
 #### Using Startup Triggers
