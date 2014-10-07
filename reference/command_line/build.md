@@ -15,6 +15,7 @@ Usage: spoon build <options> <path>
       --vm=VALUE             The Spoon VM version to run the container with
   -w, --working-dir=VALUE    Set the initial working directory inside the container
       --wait-after-error     Leave program open after error
+      --wait-after-exit      Leave program open after exit
 ```
 
 To build an image from an existing container, use the `commit` command.

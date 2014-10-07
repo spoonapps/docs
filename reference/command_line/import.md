@@ -9,6 +9,7 @@ Usage: spoon import <options> <type> <path>
   -n, --name=VALUE           Name of the image
       --overwrite            Overwrite existing image
       --wait-after-error     Leave program open after error
+      --wait-after-exit      Leave program open after exit
 ```
 
 The filetype must be specified when importing external files into the Spoon registry. 

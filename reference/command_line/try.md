@@ -19,6 +19,7 @@ Usage: spoon try <options> <image> [<parameters>...]
       --vm=VALUE             The Spoon VM version to run the container with
   -w, --working-dir=VALUE    Set the initial working directory inside the container
       --wait-after-error     Leave program open after error
+      --wait-after-exit      Leave program open after exit
 ```
 
 Spoon `try` can be used to specify multiple images by separating each image with a comma. If the same file, registry entry, or environment variable exists in multiple images, then the one from whichever image was specified last will win the conflict and be used in the virtual environment. Virtual machine settings are taken from the last image specified in the `from` instruction.

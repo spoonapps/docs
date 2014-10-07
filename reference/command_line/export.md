@@ -9,6 +9,7 @@ Usage: spoon export <options> <image> <path>
 
 <options> available:
       --wait-after-error     Leave program open after error
+      --wait-after-exit      Leave program open after exit
 ```
 
 #### Examples:
