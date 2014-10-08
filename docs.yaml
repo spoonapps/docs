@@ -171,6 +171,7 @@ documents:
   - Runtimes and Components
 - title: SpoonScript
   sections:
+  - batch
   - cmd
   - disable
   - enable
