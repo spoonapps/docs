@@ -60,10 +60,12 @@ This screenshot shows a fully set up rule key.
 
 #### Additional Information
 
-##### Rule Changes
+**Rule Changes**
+
 If any changes to the registry are made while Internet Explorer is open, IE must be restarted before any of these changes will take effect.
 
-##### Applications on a Network Share
+**Applications on a Network Share**
+
 When a virtual browser is located on a network location or anywhere not on the user's hard drive, the user may be prompted with a security warning before the browser is launched. The user must then manually select "Run" the application before the browser launches.
 
 The warning can be suppressed by setting the environment variable SEE_MASK_NOZONECHECKS to 1.

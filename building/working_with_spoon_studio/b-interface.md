@@ -34,7 +34,7 @@ In the event of a conflict between a file in the virtual filesystem and a file p
 
 **Note:** When running a virtual application on Windows 7, the **All Users Directory\Application Data** and **All Users Directory** root folders will map to the same folder at runtime. To prevent one setting from overriding another, verify that the isolation settings for these folders are the same.
 
-##### Isolation Modes
+**Isolation Modes**
 
 Folders may be virtualized in **Full**, **Merge**, **Write Copy**, or **Hide** mode.
 
@@ -45,27 +45,15 @@ Folders may be virtualized in **Full**, **Merge**, **Write Copy**, or **Hide** m
 
 **Tip**: To apply selected isolation modes to all subfolders, right-click on the folder, choose Isolation, select the checkbox for **Apply to Subfolders**, then select **OK**.
 
-##### File Attributes
+**File Attributes**
 
-**Hidden**
+- **Hidden**: Files and folders can be hidden from shell browse dialogs and other applications. This is used to prevent internal components and data files from being displayed to the user. To hide a file or folder, select the checkbox in the **Hidden** column adjacent to the desired file or folder.
+	**Note**: The **Hidden Flag** is NOT the same as the **Hide** isolation mode. Enabling the **Hidden Flag** prevents a file or folder from displaying in browse dialogs or from directory enumeration APIs; it does not prevent the application (and potentially the end-user) from accessing the folder or file contents by direct binding. To prevent the file or folder from being found by the application, enable **Hide** isolation mode.
+- **Read Only**: Flagging files and folders as read-only prevents the application from modifying the file or folder contents. To make a file or folder read-only, select the checkbox in the **Read Only** column next to the desired file or folder.
+- **No Upgrade**: By default, files in the virtual filesystem can be upgraded with patches (refer to "Updating Registration Settings" in the **Register Virtual Applications in the Windows Shell** section for more information). If there are files in the virtual filesystem that should not be upgraded, such as user data files, select the checkbox in the **No Upgrade** column next to the desired file or folder.
+- **No Sync**: This feature only applies to virtual applications that are delivered and managed by Spoon Virtual Desktop Server. By default, files in the virtual filesystem can be synchronized to a user's Spoon account. This enables the application state to be maintained across different devices that are Spoon enabled. If there are folders in the virtual filesystem that should not be synchronized and remain only on the local device, select the checkbox in the **No Sync** column next to the desired file or folder. This setting is managed on a folder level and applies to all files within that folder.
 
-Files and folders can be hidden from shell browse dialogs and other applications. This is used to prevent internal components and data files from being displayed to the user. To hide a file or folder, select the checkbox in the **Hidden** column adjacent to the desired file or folder.
-
-**Note**: The **Hidden Flag** is NOT the same as the **Hide** isolation mode. Enabling the **Hidden Flag** prevents a file or folder from displaying in browse dialogs or from directory enumeration APIs; it does not prevent the application (and potentially the end-user) from accessing the folder or file contents by direct binding. To prevent the file or folder from being found by the application, enable **Hide** isolation mode.
-
-**Read Only**
-
-Flagging files and folders as read-only prevents the application from modifying the file or folder contents. To make a file or folder read-only, select the checkbox in the **Read Only** column next to the desired file or folder.
-
-**No Upgrade**
-
-By default, files in the virtual filesystem can be upgraded with patches (refer to "Updating Registration Settings" in the **Register Virtual Applications in the Windows Shell** section for more information). If there are files in the virtual filesystem that should not be upgraded, such as user data files, select the checkbox in the **No Upgrade** column next to the desired file or folder.
-
-**No Sync**
-
-This feature only applies to virtual applications that are delivered and managed by Spoon Virtual Desktop Server. By default, files in the virtual filesystem can be synchronized to a user's Spoon account. This enables the application state to be maintained across different devices that are Spoon enabled. If there are folders in the virtual filesystem that should not be synchronized and remain only on the local device, select the checkbox in the **No Sync** column next to the desired file or folder. This setting is managed on a folder level and applies to all files within that folder.
-
-##### Filesystem Compression
+**Filesystem Compression**
 
 To reduce executable size, Spoon Studio can compress virtual filesystem contents. This reduces virtual application size by approximately 50% but also prevents profiling and streaming of the application. By default, the **Compress Payload** option in the **Process Configuration** area of the **Settings** panel is unchecked. Leave this box unchecked during the build process if the application will be optimized for streaming from Spoon Virtual Desktop Server.
 
@@ -81,7 +69,7 @@ Registry string values can include well-known variables such as **@WINDIR@**, **
 
 In the event of a conflict between a key or value in the virtual registry and data present on the host device registry, information in the virtual registry takes precedence. 
 
-##### Isolation Modes
+**Isolation Modes**
 
 Keys may be virtualized in **Full**, **Merge**, **Write Copy**, or **Hide** mode.
 
@@ -90,11 +78,9 @@ Keys may be virtualized in **Full**, **Merge**, **Write Copy**, or **Hide** mode
 - **Write Copy**: Write Copy mode is used when the key is required to have visibility to values on the host device but cannot change them. Values will be visible from both the virtual registry and the host device. Any writes to values are redirected to the sandbox data area. 
 - **Hide**: Hide mode is used when a key on the host device could interfere with the application's ability to run properly. The application will receive a Key Not Found error code whenever an attempt is made to read from or write to values in the key even if the values exist on the host device.  
 
-**Tip**: To apply selected isolation modes to all subkeys, right-click on the key, choose **Isolation**, select the checkbox for **Apply to Subkeys**, then **OK**.
+	**Tip**: To apply selected isolation modes to all subkeys, right-click on the key, choose **Isolation**, select the checkbox for **Apply to Subkeys**, then **OK**.
 
-##### No Sync
-
-This feature only applies to virtual applications that are delivered and managed by Spoon Virtual Desktop Server. By default, keys and values in the virtual registry can be synchronized to a user's Spoon account. This enables the application state to be maintained across different devices that are Spoon enabled. If there are keys in the virtual registry that should not be synchronized and remain only on the local device, select the checkbox in the **No Sync** column next to the desired key. This setting is managed on a key level and applies to all values within that folder.
+- **No Sync**: This feature only applies to virtual applications that are delivered and managed by Spoon Virtual Desktop Server. By default, keys and values in the virtual registry can be synchronized to a user's Spoon account. This enables the application state to be maintained across different devices that are Spoon enabled. If there are keys in the virtual registry that should not be synchronized and remain only on the local device, select the checkbox in the **No Sync** column next to the desired key. This setting is managed on a key level and applies to all values within that folder.
 
 **Importing Registry Hive Files**
 
@@ -116,12 +102,14 @@ To add a runtime or component:
 
 **Note:** You are responsible for compliance with licensing for any third-party redistributable components included in your virtualized application.
 
-##### Using .NET Runtimes
+**Using .NET Runtimes**
+
 To limit conflicts with installed .NET runtimes, the .NET runtime packages are isolated from the native file system. If the application requires access to multiple .NET versions, it is necessary to include all of the required runtimes in the virtual package. For example, including only the .NET 4 runtime will hide visibility to the .NET 3.5 runtime on the native file system. This is fine if the application only requires the .NET 4 components, but would be problematic if it also requires earlier versions of .NET.
 
 An alternative approach would be to use the snapshot feature of Spoon Studio to build a custom .NET component for the application. This approach provides visibility into the files and registry keys that are available and allows for custom isolation settings.
 
-##### Configuring the Java Runtime
+**Configuring the Java Runtime**
+
 Spoon Studio provides specialized support for the Java runtime. If your application is based on Java runtime, select the Sun Java Runtime button on the Runtimes ribbon bar. This displays the Java configuration menu.
 
 Select the appropriate version of the Java runtime from the Java runtime version drop-down menu. If you deploy your application as a set of .class files, select Class from the Startup Type drop-down menu; if you deploy within a .jar file, select Jar. Enter the startup class name or Jar name in the appropriate textbox, along with any additional Java runtime options.
