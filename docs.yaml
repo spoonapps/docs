@@ -125,9 +125,10 @@ documents:
   sections: []
 - title: Shell Registration
   sections: []
-- title: Tools
+- title: Integration Tools
   sections:
   - Browser Redirector
+  - SpoonReg
 ---
 topic: Reference
 documents:
