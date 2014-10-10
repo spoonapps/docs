@@ -125,6 +125,9 @@ documents:
   sections: []
 - title: Shell Registration
   sections: []
+- title: Tools
+  sections:
+  - Browser Redirector
 ---
 topic: Reference
 documents:
