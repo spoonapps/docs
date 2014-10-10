@@ -1,4 +1,4 @@
-## Virtual Application Settings
+### Virtual Application Settings
 
 The following is a table of the definitions and uses of features available in Spoon Studio. These features allow you to edit and customize the settings for an image or virtual application configuration.
 
