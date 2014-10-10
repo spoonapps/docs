@@ -48,9 +48,14 @@ Wildcards (\*) may be used, but must be preceded by a period (.) to indicate "an
 If there is an optional value (for example, http and https versions of a page defined in a single value), the optional string can be enclosed in parentheses and followed by a question mark (?).
 
 These are all well-formed match strings.
-      http(s)?://.*.google.com/
-      spoon.net/.*
-      http://spoon.net
+
+```
+http(s)?://.*.google.com/
+
+spoon.net/.*
+
+http://spoon.net
+```
 
 `Path` defines the absolute location of the virtualized browser executable to open the matched URL. Users will need to have the executable for the target virtualized browser(s) on their machine or on an accessible network share.
  
