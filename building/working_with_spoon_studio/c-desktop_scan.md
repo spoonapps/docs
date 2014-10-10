@@ -27,11 +27,14 @@ Applications packaged with this method retain users settings that were in place 
 
 Images built with Spoon Studio can also be used with the command-line interface and the hub.
 
-    # Import the image to your local registry
-    > spoon import -n=desktopapp svm C:\path\to\app.svm
+```
+# Import the image to your local registry
+> spoon import -n=desktopapp svm C:\path\to\app.svm
     
-    # Push it to the hub
-    > spoon push desktopapp
+# Push it to the hub
+> spoon push desktopapp
+
+```
 
 #### Best Practices
 
@@ -51,7 +54,9 @@ Images built with Spoon Studio can also be used with the command-line interface 
 
 To enable logging for the desktop scan add the following registry key:
 
+```
   [HKEY\_CURRENT_USER\Software\Code Systems\Spoon]
   "TraceLevel"="Debug"
+```
 
 Open [DebugView](http://technet.microsoft.com/en-us/sysinternals/bb896647.aspx) while running the Desktop Scan to view logging information.
