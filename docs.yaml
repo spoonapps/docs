@@ -73,7 +73,10 @@ documents:
   - Push to a Remote Repository
 - title: Working with Spoon Studio
   sections:
-  - Basics
+  - UI Basics
+  - Virtual Filesystem
+  - Virtual Registry
+  - Runtimes and Components
   - Desktop Scan
   - Snapshotting
 - title: Continuous Integration
