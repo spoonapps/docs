@@ -1,4 +1,5 @@
 ### Desktop Scan
+Spoon Studio can scan the machine where it is installed and build virtual application packages using the content and settings from that machine. The Desktop Scan supports applications available in the Spoon library of applications.
 
 #### Running a Desktop Scan
 
