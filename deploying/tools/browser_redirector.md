@@ -1,7 +1,5 @@
 ## Browser Redirector
 
-### What is Browser Redirection?
-
 Browser redirection is a service that automatically opens the page or resource a user is trying to visit in an alternate browser. It uses a browser plugin to check URLs against a list of administrator defined rules that specify which websites or web applications are incompatible with the user's current browser. If the URL matches a rule, the web page will launch in the specified virtual browser instead of their installed browser. 
 
 Browser redirection prevents errors when accessing legacy web resources on newer systems, creating a more seamless and efficient web experience for the end user.
