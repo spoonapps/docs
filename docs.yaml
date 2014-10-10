@@ -163,9 +163,9 @@ documents:
   - vms
 - title: Spoon Studio
   sections:
-  - Virtual Filesystem
-  - Virtual Registry
-  - Runtimes and Components
+  - Virtual Application Settings
+  - MSI Settings
+  - XAPPL
 - title: SpoonScript
   sections:
   - cmd
@@ -181,13 +181,7 @@ documents:
   - workdir
 - title: Dependencies
   sections: []
-- title: XAPPL
-  sections: []
 - title: Virtual Machine
-  sections: []
-- title: Virtual Application Settings
-  sections: []
-- title: MSI Settings
   sections: []
 - title: VM Settings
   sections: []
