@@ -1,4 +1,4 @@
-## Browser Redirector
+### Browser Redirector
 
 Browser redirection is a service that automatically opens the page or resource a user is trying to visit in an alternate browser. It uses a browser plugin to check URLs against a list of administrator defined rules that specify which websites or web applications are incompatible with the user's current browser. If the URL matches a rule, the web page will launch in the specified virtual browser instead of their installed browser. 
 
@@ -6,7 +6,7 @@ Browser redirection prevents errors when accessing legacy web resources on newer
 
 **Browser Redirector is currently only available to use with standalone EXEs and MSIs built with Spoon Studio.**
 
-### Installation
+#### Installation
 
 Browser Redirector is included in the Spoon browser plugin, but requires a command line switch on install to be enabled. Unlike the standard plugin install, the Browser Redirector requires administrator rights during install.  
 
@@ -24,7 +24,7 @@ spoon-plugin.exe /redirect /allusers /hidegui /silent
 
 **Note that the deploying using the `SYSTEM` account is not supported.**
 
-### Setting up Redirection Rules
+#### Setting up Redirection Rules
 
 After completing the plugin install, administrators define a set of rules that will determine which websites should redirect to a specific browser.
 
@@ -58,12 +58,12 @@ This screenshot shows a fully set up rule key.
 
 ![](/components/docs/deploying/tools/redirect_rule.png)
 
-### Additional Information
+#### Additional Information
 
-#### Rule Changes
+##### Rule Changes
 If any changes to the registry are made while Internet Explorer is open, IE must be restarted before any of these changes will take effect.
 
-#### Applications on a Network Share
+##### Applications on a Network Share
 When a virtual browser is located on a network location or anywhere not on the user's hard drive, the user may be prompted with a security warning before the browser is launched. The user must then manually select "Run" the application before the browser launches.
 
 The warning can be suppressed by setting the environment variable SEE_MASK_NOZONECHECKS to 1.
