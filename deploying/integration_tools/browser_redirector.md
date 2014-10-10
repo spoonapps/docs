@@ -34,7 +34,7 @@ Registry-based rules can be located in `HKCU\Software\Code Systems\Spoon` or `HK
 
 The `Redirect` key also must contain a string value that indicates the redirector version number. By default, this will be `1.0`. See the screenshot below for proper setup of the version number value.
 
-![](/components/docs/deploying/tools/redirect_version.png)
+![](/components/docs/deploying/integration-tools/redirect_version.png)
 
 Registry-based rule key values have a specific format that must be followed in order for redirection to function correctly. There are three values within a normal rule key: `Action`, `Match`, and `Path`. All values are string (`REG_SZ`) values.
 
@@ -56,7 +56,7 @@ These are all well-formed match strings.
  
 This screenshot shows a fully set up rule key.
 
-![](/components/docs/deploying/tools/redirect_rule.png)
+![](/components/docs/deploying/integration-tools/redirect_rule.png)
 
 #### Additional Information
 
@@ -68,6 +68,6 @@ If any changes to the registry are made while Internet Explorer is open, IE must
 
 When a virtual browser is located on a network location or anywhere not on the user's hard drive, the user may be prompted with a security warning before the browser is launched. The user must then manually select "Run" the application before the browser launches.
 
-The warning can be suppressed by setting the environment variable SEE_MASK_NOZONECHECKS to 1.
+The warning can be suppressed by setting the environment variable SEE\_MASK\_NOZONECHECKS to 1.
 
-![](/components/docs/deploying/tools/nozonechecks.png)
+![](/components/docs/deploying/integration-tools/nozonechecks.png)
