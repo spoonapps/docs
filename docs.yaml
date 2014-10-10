@@ -72,17 +72,10 @@ documents:
   - Forking, Renaming, and Tagging
   - Push to a Remote Repository
 - title: Working with Spoon Studio
-  sections: []
-- title: Desktop Scan
   sections:
-  - Running a Desktop Scan
-  - Best Practices
-  - Troubleshooting
-- title: Snapshotting
-  sections:
-  - Process
-  - Capture Application Updates via Snapshot
-  - Best Practices
+  - Basics
+  - Desktop Scan
+  - Snapshotting
 - title: Continuous Integration
   sections:
   - Create SpoonScript
