@@ -8,10 +8,7 @@ SpoonReg also enables you to create, reset, and remove application sandboxes: vi
 
 Spoon Server users and administrators can use SpoonReg to register applications to the desktop. For specialized deployment scenarios, contact your Spoon representative to learn how to obtain your own version of the SpoonReg.exe utility.
 
-#### Registering Virtual Applications
-This section describes basic SpoonReg command-line syntax, including steps for registering, updating, and unregistering virtual applications.
-
-**Command-Line Syntax**
+#### Command-Line Syntax
 
 The following table lists the different naming conventions used with SpoonReg:
 <table>
@@ -29,7 +26,7 @@ The following table lists the different naming conventions used with SpoonReg:
 	</tr>
 </table>
 
-**Registering a Virtual Application**
+#### Registering a Virtual Application
 
 To register an application, use the following command:
 
@@ -41,7 +38,7 @@ This command creates all Start Menu items, Desktop shortcuts and file associatio
 
 Note: The sandbox location specified during the virtual application build is ignored when registering applications using the SpoonReg tool.
 
-**Advanced Registration Options**
+#### Advanced Registration Options
 
 Command-line parameters control caching behavior and sandbox where the virtual application should be registered:
 
@@ -68,7 +65,7 @@ SpoonReg.exe [Options] AppSpec[@SandboxSpec]
 	</tr>
 </table>
 
-**Updating Registration Settings**
+#### Updating Registration Settings
 
 Application registration settings can be changed by re-executing the registration command with the desired options:
 
@@ -91,7 +88,7 @@ SpoonReg.exe [Option] AppSpec[@SandboxSpec]
 	</tr>
 </table>
 
-**Un-registering a Virtual Application**
+#### Un-registering a Virtual Application
 
 Un-registering a virtual application reverses the registration process, removing the virtual application, Start Menu icons, shortcuts, and file associations.
 
