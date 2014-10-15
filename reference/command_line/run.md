@@ -7,6 +7,7 @@ Usage: spoon run <options> <image> [<parameters>...]
 
 <options> available:
   -a, --attach               Attach to stdin, stdout, and stderr of the container
+      --admin                Run the container as admin user
   -d, --detach               Run the container in the background
       --diagnostic           Enable diagnotic logging
       --disable=VALUE        Disable the specified Spoon VM setting
@@ -24,6 +25,7 @@ Usage: spoon run <options> <image> [<parameters>...]
   -w, --working-dir=VALUE    Set the initial working directory inside the container
       --wait-after-error     Leave program open after error
       --wait-after-exit      Leave program open after exit
+      --with-root=VALUE      Set the containers root directory
 ```
 
 Spoon `run` can be used to specify multiple images by separating each image with a comma. If the same file, registry entry, or environment variable exists in multiple images, then the one from whichever image was specified last will win the conflict and be used in the virtual environment. Virtual machine settings are taken from the last image specified in the `from` instruction.
