@@ -10,7 +10,7 @@ Usage: spoon start <options> <container>
       --diagnostic           Enable diagnotic logging
       --wait-after-error     Leave program open after error
       --wait-after-exit      Leave program open after exit
-
+      --with-root=VALUE      Set the containers root directory
 ```
 
 If the `start` command is run against an already-running container then no action will be taken. 
