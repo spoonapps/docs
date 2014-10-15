@@ -8,6 +8,7 @@ Usage: spoon stop <options> <container>
 <options> available:
   -a, --all                  Stop all running containers
       --wait-after-error     Leave program open after error
+      --wait-after-exit      Leave program open after exit
 
 ```
 

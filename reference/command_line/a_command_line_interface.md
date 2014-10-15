@@ -1,6 +1,6 @@
 ## Command Line
 
-The Spoon command-line interface is accessible from the Windows command prompt using the `spoon` or `spn` command. 
+The Spoon command-line interface is accessible from the Windows command prompt using the `spoon`, `spn`, or `turbo` command. 
 
 ### help
 

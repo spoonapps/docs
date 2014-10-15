@@ -9,6 +9,7 @@ Usage: spoon commit <options> <container> <image>
       --no-base              Do not merge the base image(s) into the new image
       --overwrite            Overwrite existing image
       --wait-after-error     Leave program open after error
+      --wait-after-exit      Leave program open after exit
 ```
 
 A container must be stopped before it can be committed to an image. 
