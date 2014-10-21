@@ -12,8 +12,6 @@ Usage: spoon commit <options> <container> <image>
       --wait-after-exit      Leave program open after exit
 ```
 
-A container must be stopped before it can be committed to an image. 
-
 #### Merging Images
 
 The `commit` command will merge all the base images used in the container. This behavior can be overridden with the `--no-base` flag. 
