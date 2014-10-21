@@ -3,7 +3,7 @@
 The `run` command creates a new container.
 
 ```
-Usage: spoon run <options> <image> [<parameters>...]
+Usage: spoon run <options> <image>[+skin(color)] [<parameters>...]
 
 <options> available:
   -a, --attach               Attach to stdin, stdout, and stderr of the container
@@ -83,6 +83,13 @@ C:\Users> spoon run -w="C:\" spoonbrew/git
 C:\Users>spoon run spoonbrew/git
 
 (0x3842xd) C:\Users>
+```
+
+Containerized applications can be distinguished from normal apps with skin layering. Passing `+skin(color)` switch after image names pulls skin layer from hub. Skin layer paints colored border around all containerized application windows.
+
+```
+# Opens detached, containerized notepad with blue order around its window
+spoon run --startup-file=notepad -d clean+skin(blue)
 ```
 
 Spoon VM settings can be enabled or disabled with the `--enable` and `--disable` flags, respectively. For a list of Spoon VM settings, see **VM Settings** section of the documentation.
