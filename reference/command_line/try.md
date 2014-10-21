@@ -1,4 +1,4 @@
-### run
+### try
 
 The `try` command creates a new, temporary container which is removed once it is closed.
 

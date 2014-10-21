@@ -160,6 +160,7 @@ documents:
   - search
   - start
   - tag
+  - try
   - unregister
   - version
   - vm
