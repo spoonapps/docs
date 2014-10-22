@@ -1,9 +1,9 @@
-### start
+### continue
 
-The `start` command restarts a container which is not currently running. 
+The `continue` command downloads the last state of a container and then starts it.
 
 ```
-Usage: spoon start <options> <container>
+Usage: spoon continue <options> <container>
 
 <options> available:
   -d, --detach               Run the container in the background
@@ -13,7 +13,7 @@ Usage: spoon start <options> <container>
       --with-root=VALUE      Set the containers root directory
 ```
 
-If the `start` command is run against an already-running container then no action will be taken. 
+If the `continue` command is run against an already-running container then no action will be taken. 
 
 To enable diagnostic logging for the container, specify the `--diagnostic` flag. 
 
