@@ -17,4 +17,4 @@ If the `continue` command is run against an already-running container then no ac
 
 To enable diagnostic logging for the container, specify the `--diagnostic` flag. 
 
-To run the container in the background then specify the `-d` or `--detach` flag. 
+To run the container in the background, specify the `-d` or `--detach` flag. 

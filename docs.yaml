@@ -136,6 +136,7 @@ documents:
   - commit
   - config
   - containers
+  - continue
   - cp
   - diff
   - export
