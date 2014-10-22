@@ -171,6 +171,7 @@ documents:
   - Virtual Application Settings
   - MSI Settings
   - XAPPL
+  - Building from the Command Line
 - title: SpoonScript
   sections:
   - cmd
