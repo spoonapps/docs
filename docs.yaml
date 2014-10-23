@@ -172,6 +172,16 @@ documents:
   - MSI Settings
   - XAPPL
   - Building from the Command Line
+- title: Spoon Server
+  sections:
+  - Getting Started
+  - Administration
+  - Create Applications
+  - Publish Applications
+  - Walkthroughs
+  - Advanced Topics
+  - Spoon Plugin and Spoon Console
+  - Troubleshooting
 - title: SpoonScript
   sections:
   - cmd
