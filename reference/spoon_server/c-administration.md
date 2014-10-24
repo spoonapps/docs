@@ -20,32 +20,40 @@ The Spoon Server Dashboard provides an overview of the Spoon Server over a given
 
 ##### Volume
 
-The **Volume** graph charts the total number of launches for your Spoon Server over a specific date range. These are broken down into one day periods on the horizontal axis. Launches for unpublished application versions are not included.
+The Volume graph charts the total number of launches for your Spoon Server over a specific date range. These are broken down into one day periods on the horizontal axis. Launches for unpublished application versions are not included.
 
 ##### Key Statistics
 
-**Key Statistics** displays the following statistics for a selected date range:
+Key Statistics displays the following statistics for a selected date range:
 
 - **Apps**: The number of unique application versions that were launched.
+
 - **Launches**: The total number of application launches.
+
 - **Users**: The number of unique users to launch an application.
+
 - **Devices**: The number of unique devices used to launch an application.
 
 ##### Usage Breakdown
 
-**Usage Breakdown** provides detailed statistics for the top ten application versions over a selected date range, ranked by total launches, including:
+Usage Breakdown provides detailed statistics for the top ten application versions over a selected date range, ranked by total launches, including:
 
 - **Launches**: Total launches for that application version, followed by the total launches for that application version as a percentage of the total application launches. All launches, including those from the administrative portal, are counted in the number of launches.
+
 - **Users**: Number of unique users who launched that application version, followed by the number of unique users who launched that application version as a percentage of the total unique users.
+
 - **Devices**: Number of unique devices used to launch that application version, followed by the number of unique devices used to launch that application version as a percentage of the total devices used.
 
-Recent Activity
+##### Recent Activity
 
-**Recent Activity** provides a log of the most recent application launches, including the following:
+Recent Activity provides a log of the most recent application launches, including the following:
 
 - **User**: The user who launched the application.
+
 - **Application**: The application that was launched, including the version number.
+
 - **Started**: The date and time the user started using the application.
+
 - **Ended**: The date and time the user closed the application.
 
 #### Manage Applications
@@ -61,20 +69,35 @@ Spoon Server manages Spoon Virtual Machines (**SVMs**) using two entities: **app
 Complete the following steps to add a new application to Spoon Server:
 
 1. Navigate to the **Applications** page of the Administration Site.
+
 2. Select **Add Application**.
+
 3. Enter the following information for the application:
+
     - **Display Name**: Application name visible to users.
+
     - **Summary**: Brief summary of the application.
+
     - **Description**: Detailed description of the application.
+
     - **Icon**: This is a 90 x 90 pixel JPG, GIF or PNG image representing the application displayed to end-users. If this field is left blank a default icon is applied. If an image is not 90 x 90 it is adjusted to fit the required dimensions.
+
     - **Permissions**: The default access level of the application. You can override this setting by user or group access.
+
     - **Licensing**: Restrictions on the number of users or devices that can execute the application. By default, users are only allowed to run an application on one device at a time.
+
     - **Expiration**: Restrictions on the time that users are permitted to execute this application.
+
     - **Categories**: Select the categories in which you would like the application to appear. For more information refer to Managing Categories.
+
     - **Desktop Registration**: Select "Enabled" to give end-user the option to add the application to their Start Menu. Select "Register on Launch" to add the application to the end-users' Start Menu automatically when the application is launched.
+
     - **Shared Sandboxes**: Select "Enabled" to keep existing application settings when new versions of the application are published. This is required for automatic updates to registered (added to Start Menu) applications.
+
 4. Select **Next**. You will be brought to the **Add Application Version** page to create the first version for this application.
+
 5. Follow the steps under the "Adding an Application Version" section below. Test and/or profile your new application version, and press **Save** to commit your changes.
+
 6. You can change the information on an application by selecting the display name of the application you wish to edit on the **Applications** page.
 
 ##### Managing an Application
@@ -94,10 +117,15 @@ Complete the following steps to add an application version to an existing applic
 3. Enter the following information for the application version:
 
     - **Version**: The application version in Major.Minor.Build.Revision format. Only Major.Minor is required.
+
     - **Summary**: Brief summary of the application version; this defaults to the parent application summary if left blank.
+
     - **Description**: Detailed description of the application version; this defaults to the parent application description if left blank.
+
     - **Icon**: This is a 90 x 90 pixel JPG, GIF or PNG image representing the application version displayed to users. If this field is left blank, it defaults to the swatch for the parent application.
+
     - **Spoon VM File**: Upload the Spoon Virtual Machine file (SVM) for this application version. For information about how to create SVMs, refer to  Creating Applications.
+
     - **Sandbox Sync**: This feature automatically synchronizes application settings and state across client computers. This option is only for authenticated users.
 
 4. Select **Next**. If you chose an SVM file for the application version, this starts the upload process.
@@ -114,15 +142,23 @@ Application versions are managed by selecting the application version link locat
 
 This page also contains the following sections:
 
-	- **Entry Points**: This is where you specify the entry points of the virtual application you want to expose. The entry points are defined in the **SVM** file uploaded for the application version. Refer to **Managing an Entry Point** for details on customizing the appearance of an entry point.
-	- **Sandbox Sync**: This feature automatically synchronizes application settings and state across client computers. This option is only for authenticated users.
-	- **Published**: This controls whether the application version is visible to users on the Portal Site. You can have multiple versions of the same application simultaneously visible on the Portal Site; unpublish unwanted application versions.
-	- **Test Launch**: Selecting the **Test** link opens a new window which displays a link named **Run** for each entry point within the application, or a single link to launch the application version if no entry points exist. Selecting this link launches the application version. Use this feature to test application versions before publishing.
-	- **Adaptive Delivery**: This feature enables you to optimize delivery of an application version by configuring streaming. For detailed instructions on how to optimize an application version, refer to **Optimizing an Application Version**. Spoon recommends optimizing all application versions over ten megabytes. An optimized application version typically launches five to twenty times faster than a non-optimized application version.
-	- **Embed**: When this HTML code is embedded on an external webpage, it creates a Spoon Feed button to launch the application version. For more information on customizing the Spoon Feed refer to Spoon JavaScript API.
-	**Note:** The "Spoon_Id" JavaScript variable is composed from the following, *<Application Slug>-<Major Version Number>-<Minor Version Number>*.
-	**Note:** The embed code may not be backwards compatible between versions of Spoon Server. Please update and test the embed code for existing applications that are embedded on other sites when upgrading Spoon Server.
-	- **Recent Activity**: Provides a log of recent activity associated with the application version.
+- **Entry Points**: This is where you specify the entry points of the virtual application you want to expose. The entry points are defined in the **SVM** file uploaded for the application version. Refer to **Managing an Entry Point** for details on customizing the appearance of an entry point.
+
+- **Sandbox Sync**: This feature automatically synchronizes application settings and state across client computers. This option is only for authenticated users.
+
+- **Published**: This controls whether the application version is visible to users on the Portal Site. You can have multiple versions of the same application simultaneously visible on the Portal Site; unpublish unwanted application versions.
+
+- **Test Launch**: Selecting the **Test** link opens a new window which displays a link named **Run** for each entry point within the application, or a single link to launch the application version if no entry points exist. Selecting this link launches the application version. Use this feature to test application versions before publishing.
+
+- **Adaptive Delivery**: This feature enables you to optimize delivery of an application version by configuring streaming. For detailed instructions on how to optimize an application version, refer to **Optimizing an Application Version**. Spoon recommends optimizing all application versions over ten megabytes. An optimized application version typically launches five to twenty times faster than a non-optimized application version.
+
+- **Embed**: When this HTML code is embedded on an external webpage, it creates a Spoon Feed button to launch the application version. For more information on customizing the Spoon Feed refer to Spoon JavaScript API.
+
+**Note:** The "Spoon_Id" JavaScript variable is composed from the following, *<Application Slug>-<Major Version Number>-<Minor Version Number>*.
+
+**Note:** The embed code may not be backwards compatible between versions of Spoon Server. Please update and test the embed code for existing applications that are embedded on other sites when upgrading Spoon Server.
+
+- **Recent Activity**: Provides a log of recent activity associated with the application version.
 
 To delete an application version, select the red **X** located to the right of the application version in the details page of the parent application. You can also delete the application by selecting **Delete** at the bottom of the details page for the application version.
 
@@ -273,6 +309,7 @@ Permissions for users and groups prioritize blocks over permits. If a user is bl
 User Licenses record how many unique users are using your applications. Licenses are only used for applications that have their **Licensing** set to a number of Unique Users. In the **User Detail** page, you can see a list of licenses that the User obtained. You can delete these licenses so other users can take a license and be one of the unique users allowed to use the application. Complete the following steps to delete a user license:
 
 1. Select the red **X** adjacent to the license on the User **Detail** page.
+
 2. Select **Save**.
 
 To delete all user licenses for an application, navigate to the application page, then update the licensing settings to no longer use a unique number of users.
@@ -360,7 +397,7 @@ Using Spoon Server you can add an external directory service, such as Active Dir
       </tr>
 </table>
 
-###### Choosing Your Connection Settings
+**Choosing Your Connection Settings**
 
 Complete the following steps to choose your connection settings:
 

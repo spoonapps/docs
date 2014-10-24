@@ -68,16 +68,16 @@ Complete the following steps to manually configure Spoon Server:
          </th>
       </tr>
       <tr>
-         <td>
-            <p>/dblibrary "Integrated Security=true;Data Source=[SERVER];Initial Catalog=Library;"</p>
+         <td style="white-space: nowrap">
+            <p><code>/dblibrary "Integrated Security=true;Data Source=[SERVER];Initial Catalog=Library;"</code></p>
          </td>
          <td>
             <p>Configures the connection string for the library database.</p>
          </td>
       </tr>
       <tr>
-         <td>
-            <p>/dbmanager "Integrated Security=true;Data Source=[SERVER];Initial Catalog=Manager;"</p>
+         <td style="white-space: nowrap">
+            <p><code>/dbmanager "Integrated Security=true;Data Source=[SERVER];Initial Catalog=Manager;"</code></p>
          </td>
          <td>
             <p>Configures the connection string for the manager database.</p>
@@ -85,7 +85,7 @@ Complete the following steps to manually configure Spoon Server:
       </tr>
       <tr>
          <td>
-            <p>/wwwsite <span class="nolink">http://www.[MYSITE].com:[PORT]</span></p>
+            <p><code>/wwwsite <span class="nolink">http://www.[MYSITE].com:[PORT]</span></code></p>
          </td>
          <td>
             <p>Assigns the port and fully qualified domain name for the portal site.</p>
@@ -93,14 +93,14 @@ Complete the following steps to manually configure Spoon Server:
       </tr>
       <tr>
          <td>
-            <p>/adminsite <span class="nolink">http://www.[MYSITE].com:[PORT]</span></p>
+            <p><code>/adminsite <span class="nolink">http://www.[MYSITE].com:[PORT]</span></code></p>
          </td>
          <td>
             <p>Assigns the port and fully qualified domain name for administration site.</p>
          </td>
       </tr>
 </table>
-
+<br>
 The following is a sample command to set all four settings:
 	
 	server.exe /provision admin@acme.com /dblibrary "Integrated Security=true;Data Source=acme;Initial Catalog=Library;" /dbmanager "Integrated Security=true;Data Source=acme;Initial Catalog=Manager;" /wwwsite http://www.acme.com /adminsite http://www.acme.com:81
@@ -157,7 +157,7 @@ Complete the following steps to enable Microsoft Windows Firewall with Advanced 
 
 #### Manage Spoon Server from the Command Line
 
-Server.exe, located in the installation directory of Spoon Server (usually C:\Program Files\Spoon Server), can be used as a command-line tool by specifying the admin option. This tool enables you to add and update applications to the Spoon Server library from the command line, and add large applications (over 2GB) to the Spoon Server. The Spoon Server administrator portal does not support uploading SVM files over 2GB.
+`Server.exe`, located in the installation directory of Spoon Server (usually C:\Program Files\Spoon Server), can be used as a command-line tool by specifying the admin option. This tool enables you to add and update applications to the Spoon Server library from the command line, and add large applications (over 2GB) to the Spoon Server. The Spoon Server administrator portal does not support uploading SVM files over 2GB.
 
 ##### Requirements for Using Server.exe
 
@@ -175,7 +175,7 @@ Server.exe, located in the installation directory of Spoon Server (usually C:\Pr
 
 ##### Server.exe Command Format
 
-Server.exe can be used with the following arguments to manage provisioning, uninstall, upgrade, and service recycling:
+`Server.exe` can be used with the following arguments to manage provisioning, uninstall, upgrade, and service recycling:
 
 <table>
       <tr>
@@ -223,7 +223,7 @@ Server.exe can be used with the following arguments to manage provisioning, unin
          </td>
       </tr>
 </table>
-
+<br>
 ##### Server.exe admin Command Format
 
 Server.exe can also be used to create and update applications, as well as to manage other server settings. This is done by specifying any of the given topics after the Server.exe admin command.
@@ -252,7 +252,7 @@ Server.exe can also be used to create and update applications, as well as to man
          </td>
       </tr>
 </table>
-
+<br>
 Examples:
 
 - **Create a new application (must do this before creating an application version)**:
@@ -292,10 +292,12 @@ Examples:
          </td>
       </tr>
 </table>
-
+<br>
 Examples:
 
-- **Update an application version**: Server.exe admin /update /a "My Application" /v 1.0.0.0 /f "D:\Installation Files\myapplication.svm" /lang "en-us" /sku "Premier Edition" /arch "x86"
+- **Update an application version**:
+	
+	Server.exe admin /update /a "My Application" /v 1.0.0.0 /f "D:\Installation Files\myapplication.svm" /lang "en-us" /sku "Premier Edition" /arch "x86"
 
 
 **Server.exe admin /license**
@@ -338,12 +340,16 @@ Examples:
          </td>
       </tr>
 </table>
-
+<br>
 Examples:
 
-- **Print the current license**: Server.exe admin /license print
+- **Print the current license**:
 
-- **Set the current license**: Server.exe admin /license set ss-license.txt
+	Server.exe admin /license print
+
+- **Set the current license**:
+
+	Server.exe admin /license set ss-license.txt
 
 
 **Server.exe admin /directory-services**
@@ -394,14 +400,20 @@ Examples:
          </td>
       </tr>
 </table>
-
+<br>
 Examples:
 
-- **Print the current directory services**: Server.exe admin /directory-services
+- **Print the current directory services**:
 
-- **Create a new directory service with prefix "loc"**: Server.exe admin /directory-services new loc
+	Server.exe admin /directory-services
 
-- **Delete the "loc" directory service**: Server.exe admin /directory-services delete loc
+- **Create a new directory service with prefix "loc"**:
+
+	Server.exe admin /directory-services new loc
+
+- **Delete the "loc" directory service**:
+
+	Server.exe admin /directory-services delete loc
 
 
 **Server.exe admin /directory-service**
@@ -428,7 +440,7 @@ Examples:
          </td>
       </tr>
 </table>
-
+<br>
 **Server.exe admin /directory-service <login prefix>**
 
 <table>
@@ -549,7 +561,7 @@ Examples:
          </td>
       </tr>
 </table>
-
+<br>
 An external directory service may have particular configurations which a directory service must accommodate. In addition to standard settings like name and description, there are the following important categories of options:
 
 - Connection settings: host, port, binding type, username, password
@@ -560,21 +572,35 @@ An external directory service may have particular configurations which a directo
 
 The following examples describe a typical set of steps to set up a directory service for the local Active Directory.
 
-- **Print the settings of directory service "ad"**: Server.exe admin /directory-service ad
+- **Print the settings of directory service "ad"**:
 
-- **Change the name of directory service "ad"**: Server.exe admin /directory-service ad name "Local Active Directory"
+	Server.exe admin /directory-service ad
 
-- **Dump the settings of directory service "ad" to a file**: Server.exe admin /directory-service ad print > ad-settings.txt
+- **Change the name of directory service "ad"**:
 
-- **Discover the schema of directory service "ad"**: Server.exe admin /directory-service ad discover
+	Server.exe admin /directory-service ad name "Local Active Directory"
+
+- **Dump the settings of directory service "ad" to a file**:
+
+	Server.exe admin /directory-service ad print > ad-settings.txt
+
+- **Discover the schema of directory service "ad"**:
+
+	Server.exe admin /directory-service ad discover
 
 - Copy/paste the recommended schema from the console to the ad-settings.txt file.
 
-- **Print all the groups found in "ad"**: Server.exe admin /directory-service ad groups
+- **Print all the groups found in "ad"**:
 
-- **Specify a user group to be synchronized**: Server.exe admin /directory-service ad items add Group "cn=All,dc=acme,dc=com"
+	Server.exe admin /directory-service ad groups
 
-- **Set all the settings of "ad" from a file**: Server.exe admin /directory-service ad set ad-settings.txt
+- **Specify a user group to be synchronized**:
+
+	Server.exe admin /directory-service ad items add Group "cn=All,dc=acme,dc=com"
+
+- **Set all the settings of "ad" from a file**:
+
+	Server.exe admin /directory-service ad set ad-settings.txt
 
 
 **Server.exe admin /users**
@@ -625,12 +651,16 @@ The following examples describe a typical set of steps to set up a directory ser
          </td>
       </tr>
 </table>
-
+<br>
 Examples:
 
-- **Print information about current users and groups**: Server.exe admin /users
+- **Print information about current users and groups**:
 
-- **Change the authentication type to "Forms"**: Server.exe admin /users authentication-type Forms
+	Server.exe admin /users
+
+- **Change the authentication type to "Forms"**:
+
+	Server.exe admin /users authentication-type Forms
 
 
 **Server.exe admin /server**
@@ -681,16 +711,24 @@ Examples:
          </td>
       </tr>
 </table>
-
+<br>
 Examples:
 
-- **Print the current primary server settings**: Server.exe admin /server
+- **Print the current primary server settings**:
 
-- **Print the current primary server IP address**: Server.exe admin /server ip-address
+	Server.exe admin /server
 
-- **Set the current primary server web address**: Server.exe admin /server web-address https://acme/spoon
+- **Print the current primary server IP address**:
 
-- **Set the SSL certificate file path**: Server.exe admin /server ssl-certificate-file c:\programdata\acme\cert.txt
+	Server.exe admin /server ip-address
+
+- **Set the current primary server web address**:
+
+	Server.exe admin /server web-address https://acme/spoon
+
+- **Set the SSL certificate file path**:
+
+	Server.exe admin /server ssl-certificate-file c:\programdata\acme\cert.txt
 
 
 **Server.exe admin /sync**
@@ -741,20 +779,26 @@ Examples:
          </td>
       </tr>
 </table>
-
+<br>
 There are 2 properties associated with the **/sync** command:
 
-1. **storage-path**: This is the physical path to the location where sync data will be stored. For example, \\myhost\sync\
+1. **storage-path**: This is the physical path to the location where sync data will be stored. For example, `\\myhost\sync\`
 
 2. **quota-megabytes**: The default maximum amount of sync data which can be stored, per user, in megabytes.
 
 Examples:
 
-- **Print the sync settings**: Server.exe admin /sync
+- **Print the sync settings**:
 
-- **Print the value of property "storage-path"**: Server.exe admin /sync storage-path
+	Server.exe admin /sync
 
-- **Set the user quota to 2 GB**: Server.exe admin /sync quota-megabytes 2000
+- **Print the value of property "storage-path"**:
+
+	Server.exe admin /sync storage-path
+
+- **Set the user quota to 2 GB**:
+
+	Server.exe admin /sync quota-megabytes 2000
 
 
 **Server.exe admin /user-groups**
@@ -805,14 +849,20 @@ Examples:
          </td>
       </tr>
 </table>
-
+<br>
 Examples:
 
-- **Print the current groups**: Server.exe admin /user-groups
+- **Print the current groups**:
 
-- **Create a new group with name "Power Users"**: Server.exe admin /user-groups new "Power Users"
+	Server.exe admin /user-groups
 
-- **Delete group 2**: Server.exe admin /user-groups delete 2
+- **Create a new group with name "Power Users"**:
+
+	Server.exe admin /user-groups new "Power Users"
+
+- **Delete group 2**:
+
+	Server.exe admin /user-groups delete 2
 
 
 **Server.exe admin /user-group <id>**
@@ -879,14 +929,20 @@ Examples:
          </td>
       </tr>
 </table>
-
+<br>
 Examples:
 
-- **Print the settings of group 2**: Server.exe admin /user-group 2
+- **Print the settings of group 2**:
 
-- **Print the properties and members of group 2**: Server.exe admin /user-group 2 print
+	Server.exe admin /user-group 2
 
-- **Remove all members from group 2**: Server.exe admin /user-group 2 clear
+- **Print the properties and members of group 2**:
+
+	Server.exe admin /user-group 2 print
+
+- **Remove all members from group 2**:
+
+	Server.exe admin /user-group 2 clear
 
 
 **Server.exe admin /client**
@@ -932,14 +988,20 @@ Examples:
          <td colspan="1">Prints help information</td>
       </tr>
 </table>
-
+<br>
 Examples:
 
-- **Print the current console settings**: Server.exe admin /client hide
+- **Print the current console settings**:
 
-- **Hide the console on user computers**: Server.exe admin /client hide
+	Server.exe admin /client hide
 
-- **Show the console on user computers**: Server.exe admin /client show
+- **Hide the console on user computers**:
+
+	Server.exe admin /client hide
+
+- **Show the console on user computers**:
+
+	Server.exe admin /client show
 
 #### Spoon JavaScript API
 
@@ -1003,7 +1065,7 @@ When publishing applications to external sites, Spoon provides a JavaScript API 
          </td>
       </tr>
 </table>
-
+<br>
 Use the following code to reference the Spoon JavaScript API:
 
 	<script language="javascript" src="http://[SERVER]/Plugin/Api/" type="text/javascript"></script>
@@ -1114,7 +1176,7 @@ The Spoon Feed provides a separate JavaScript API to embed a button within a web
          </td>
       </tr>
 </table>
-
+<br>
 To embed a Spoon Feed, you must first initialize the Spoon Variables above to the correct values with javascript:
 
 	<script type="text/javascript">
@@ -1232,7 +1294,7 @@ When integrating with existing permissions systems, Spoon provides a web service
          </td>
       </tr>
 </table>
-
+<br>
 **Note**: [CATEGORY] refers to the Slug field in the "Category Details" page on the Spoon Server administrator portal. [APPLICATION] refers to the Slug field on "Application Details" page on the Spoon Server administrator portal.
 
 #### Migrating Sync Data When Changing the Storage Path
@@ -1271,13 +1333,13 @@ Follow these steps to test Spoon Server with SSL enabled using a self-signed cer
 
 	d. In the "Administration Site Address" section, change http:// to http**s**://
 
-		i. The "Certificate file" and "Certificate key file" fields in the "SSL Certificate" section should now be editable
+		- The "Certificate file" and "Certificate key file" fields in the "SSL Certificate" section should now be editable
 
 	e. In the "SSL Certificate" section:
 
-		i. Set the "Certificate file" field to the path of the certificate, .crt, file
+		- Set the "Certificate file" field to the path of the certificate, .crt, file
 
-		ii. Set the "Certificate key file" field to the path of the certificate key, .key, file
+		- Set the "Certificate key file" field to the path of the certificate key, .key, file
 
 2. On the client machine, double-click on your certificate.crt file to install it in the "Trusted Root Certification Authorities for Windows"
 
@@ -1287,7 +1349,7 @@ Follow these steps to test Spoon Server with SSL enabled using a self-signed cer
 
 	a. To do this, open a new Command Prompt and enter the following command (substituting your own information, where applicable)
 	
-	[path-to-java]\bin\keytool.exe -import -alias [ALIAS] -file [PATH-TO-CRT-FILE] -keystore [PATH-TO-CACERTS] -storepass changeit
+		[path-to-java]\bin\keytool.exe -import -alias [ALIAS] -file [PATH-TO-CRT-FILE] -keystore [PATH-TO-CACERTS] -storepass changeit
 
 	b. After entering this command, a prompt will appear: **Trust this certificate [no]?**
 

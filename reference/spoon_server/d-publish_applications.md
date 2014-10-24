@@ -1,3 +1,19 @@
+### Manage Applications
+
+In this section you'll learn how to manage virtual applications and deploy them with Spoon Server.
+
+### Create Applications
+
+In this section you will learn how to create Spoon applications that can deploy from Spoon Server. Spoon applications are created from existing applications by converting them into **SVM** file format. For more information about adding an existing **SVM** file to Spoon Server, refer to Managing Applications.
+
+#### Virtualize Application with Spoon Studio
+
+To be hosted on Spoon Server applications must be converted into Spoon Virtual Applications (**SVM** files) using the Spoon Studio. The Spoon Studio monitors the installation of your application, analyzes the installation, and constructs a virtual package which you can upload to Spoon Server. Experienced users can convert most applications for Spoon in minutes.
+
+To create an **SVM** using Spoon Studio, Project Type must be set to **Component**. Virtual applications with compressed payloads **cannot** be optimized for streaming using Spoon Server. To build a streaming virtual application, **Compress Payload** in Settings must remain unchecked during the build process.
+
+Refer to the Spoon Studio help documentation for detailed instructions on how to create a Spoon application.
+
 ### Publish Applications
 
 In this section you will learn about deploying applications to users with Spoon Server.
@@ -14,7 +30,7 @@ Spoon Server supports delivery from custom external websites with additional lic
 
 When adding a portal site hosted on another server, you must add that server on the Servers page of the Administration Site. The role of the new server must be set to Portal. When sending users the link to an external site, verify that the link matches the web address entered. For more information about adding a new server refer to Managing Servers.
 
-##### Utilizing Embed Code
+**Utilizing Embed Code**
 
 After creating an application version, you will find HTML code located on the application version page in the Embed section. A Spoon Feed can be set up for any Spoon Server running in anonymous mode (see Configuration and Customization) with a valid license and published apps. Like the spoon.net live feed, the Server feed can be added to any website by adding a few lines of HTML. An example use of the feed is below.
 
@@ -112,7 +128,7 @@ This section outlines the possible parameters for the Spoon Feed.
          </td>
       </tr>
 </table>
-
+<br>
 **Feed Sizing**
 
 Feeds have only certain valid values for the FeedWidth and FeedHeight. Currently, those values are as follows:
@@ -123,7 +139,7 @@ Feeds have only certain valid values for the FeedWidth and FeedHeight. Currently
 	Minimum Width (smallest Spoon_FeedWidth allowed): 120px 
 	Minimum Height (smallest Spoon_FeedHeight allowed): 42px
 
-A Spoon Button has no limit on the maximum width and height
+A Spoon Button has no limit on the maximum width and height.
 
 #### Publish Using Third-Party Software
 

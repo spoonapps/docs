@@ -32,7 +32,7 @@ The following table lists common issues/questions and their solutions:
             <p>I am unable to access the Administration Site or Portal Site from another machine.</p>
          </td>
          <td>
-            <p>Microsoft Windows security settings might be restricting external connections to the ports assigned to the Administration and/or Portal sites. For information about configuring Spoon Server security settings, refer to&nbsp;<span style="text-decoration: underline;"><a href="/display/spoondoc/Configure+Spoon+Server+Security"><span style="text-decoration: underline;">Configuring Spoon Server Security</span></a></span>.</p>
+            <p>Microsoft Windows security settings might be restricting external connections to the ports assigned to the Administration and/or Portal sites. For information about configuring Spoon Server security settings, refer to&nbsp;Configuring Spoon Server Security.</p>
          </td>
       </tr>
       <tr>
@@ -40,7 +40,7 @@ The following table lists common issues/questions and their solutions:
             <p>My application does not appear on the Portal Site.</p>
          </td>
          <td>
-            <p>Verify that the application has a published application version. Application versions are not published by default. For more information about publishing application versions, refer to&nbsp;<a href="/display/spoondoc/Manage+Applications">Managing Applications</a>. Check the application details page to ensure that the application is not blocked to users.</p>
+            <p>Verify that the application has a published application version. Application versions are not published by default. For more information about publishing application versions, refer to&nbsp;Managing Applications. Check the application details page to ensure that the application is not blocked to users.</p>
          </td>
       </tr>
       <tr>
@@ -48,7 +48,7 @@ The following table lists common issues/questions and their solutions:
             <p>My application will not launch from my external portal site.</p>
          </td>
          <td>
-            <p>You may see the following warning message: <em>The application is not available from this web site.</em> If this site is hosted on external server, verify that the server is added to the&nbsp;<strong>Servers</strong>&nbsp;page on the Administration Site. For more information about adding servers refer to <a href="/display/spoondoc/Manage+Servers">Managing Servers</a>. After adding a new server verify that you are accessing the site with the specified server web address. If the application still does not launch Spoon Server might be unable to resolve the host name for the external server. To make the host name fully resolvable, add an entry to the <strong>hosts</strong> file on the machine hosting Spoon Server. The host file can be found at C:\Windows\System32\drivers\etc\hosts, and should be in the format: [external server IP address] [external server host name] somename.somecompany.com If the application still does not launch, verify that the security settings for Spoon Server are correctly configured. Improper security settings can restrict access to the Spoon JavaScript API. For more information about how to configure security settings, refer to <span style="text-decoration: underline;"><a href="/display/spoondoc/Configure+Spoon+Server+Security"><span style="text-decoration: underline;">Configuring Spoon Server Security</span></a></span>.</p>
+            <p>You may see the following warning message: <em>The application is not available from this web site.</em> If this site is hosted on external server, verify that the server is added to the&nbsp;<strong>Servers</strong>&nbsp;page on the Administration Site. For more information about adding servers refer to Managing Servers. After adding a new server verify that you are accessing the site with the specified server web address. If the application still does not launch Spoon Server might be unable to resolve the host name for the external server. To make the host name fully resolvable, add an entry to the <strong>hosts</strong> file on the machine hosting Spoon Server. The host file can be found at C:\Windows\System32\drivers\etc\hosts, and should be in the format: [external server IP address] [external server host name] somename.somecompany.com If the application still does not launch, verify that the security settings for Spoon Server are correctly configured. Improper security settings can restrict access to the Spoon JavaScript API. For more information about how to configure security settings, refer to <span style="text-decoration: underline;"><a href="/display/spoondoc/Configure+Spoon+Server+Security"><span style="text-decoration: underline;">Configuring Spoon Server Security</span></a></span>.</p>
          </td>
       </tr>
       <tr>
@@ -77,7 +77,7 @@ The following table lists common issues/questions and their solutions:
       </tr>
       <tr>
          <td colspan="1">Spoon Server is no longer accessible after making a Network Configuration change</td>
-         <td colspan="1">Spoon Server may need to be restarted after making a network configuration change. This can be done through the command line tool, Server.exe, as described <a href="/display/spoondoc/Manage+Spoon+Server+from+the+Command+Line">here</a>.</td>
+         <td colspan="1">Spoon Server may need to be restarted after making a network configuration change. This can be done through the command line tool, Server.exe, as described here.</td>
       </tr>
       <tr>
          <td colspan="1">I am unable to add an application to the Start Menu.</td>
@@ -89,7 +89,7 @@ The following table lists common issues/questions and their solutions:
       <tr>
          <td colspan="1">The portal site fails to load.</td>
          <td colspan="1">
-            <p>This may be due to an out of memory error in the Java runtime. <br>To verify this, look for the following error in the Jetty logs (see <a href="https://team.spoon.net/display/spoondoc/Locating+Log+Files" rel="nofollow">Locating Log Files</a>):</p>
+            <p>This may be due to an out of memory error in the Java runtime. <br>To verify this, look for the following error in the Jetty logs (see Locating Log Files):</p>
             <div class="code panel pdl" style="border-width: 1px;">
                <div class="codeContent panelContent pdl">
                   <div>
@@ -99,9 +99,7 @@ The following table lists common issues/questions and their solutions:
                            <tbody>
                               <tr>
                                  <td class="code">
-                                    <div class="container" title="Hint: double-click to select code">
-                                       <div class="line number1 index0 alt2"><code class="java plain">java.lang.OutOfMemoryError: Java heap space</code></div>
-                                    </div>
+                                       <div><code>java.lang.OutOfMemoryError: Java heap space</code></div>
                                  </td>
                               </tr>
                            </tbody>
@@ -123,12 +121,8 @@ The following table lists common issues/questions and their solutions:
                                     <div class="container" title="Hint: double-click to select code">
                                        <div class="line number1 index0 alt2"><code class="java plain">&lt;Settings&gt;</code></div>
                                        <div class="line number2 index1 alt1">&nbsp;</div>
-                                       <div class="line number3 index2 alt2"><code class="java plain">…</code></div>
-                                       <div class="line number4 index3 alt1">&nbsp;</div>
                                        <div class="line number5 index4 alt2"><code class="java plain">&lt;PortalJavaParams&gt;-Xmx1200M&lt;/PortalJavaParams&gt;</code></div>
                                        <div class="line number6 index5 alt1">&nbsp;</div>
-                                       <div class="line number7 index6 alt2"><code class="java plain">…</code></div>
-                                       <div class="line number8 index7 alt1">&nbsp;</div>
                                        <div class="line number9 index8 alt2"><code class="java plain">&lt;/Settings&gt;</code></div>
                                     </div>
                                  </td>
@@ -192,24 +186,24 @@ There are several types of logs available for Spoon Server, including logs for t
 
 **Spoon Server Installation Logs**
 
-- _<Install Directory>\logs\Setup.log_
+- __Install Directory_\logs\Setup.log_
 
 **Spoon Server Runtime Logs**
 
-- _<Install Directory>\logs\*.log*_
-- _<Install Directory>\Sandbox\MODIFIED\@PROGRAMFILESX86@\Spoon Server\Web\logs\*.log_
+- __Install Directory_\logs\*.log*_
+- __Install Directory_\Sandbox\MODIFIED\@PROGRAMFILESX86@\Spoon Server\Web\logs\*.log_
 
 **Spoon Server Jetty Logs**
 
-- _<Install Directory>\Sandbox\roaming\modified\@PROGRAMFILESX86@\Spoon Server\jetty\logs_
+- __Install Directory_\Sandbox\roaming\modified\@PROGRAMFILESX86@\Spoon Server\jetty\logs_
 
 **SQL Server Logs (Embedded SQL Server Express)**
 
-- _<Install Directory>\Sandbox\MODIFIED\@PROGRAMFILESX86@\Microsoft SQL Server\MSSQL.1\MSSQL\LOG_
+- __Install Directory_\Sandbox\MODIFIED\@PROGRAMFILESX86@\Microsoft SQL Server\MSSQL.1\MSSQL\LOG_
 
 **Apache Logs**
 
-- _<Install Directory>\Sandbox\MODIFIED\@PROGRAMFILESX86@\Apache Software Foundation\Apache2.2\logs\error.log_
+- __Install Directory_\Sandbox\MODIFIED\@PROGRAMFILESX86@\Apache Software Foundation\Apache2.2\logs\error.log_
 
 #### Starting and Stopping the Spoon Server Service
 
@@ -219,7 +213,7 @@ There are currently two ways of doing this, through either the Control Panel or 
 
 1. Through the **Control Panel**
 
-	a. Navigate to *Control Panel > Administrative Tools > Services or Control Panel > System and Security > Administrative Tools > Services*
+	a. Navigate to *Control Panel > Administrative Tools > Services* or *Control Panel > System and Security > Administrative Tools > Services*
 
 	b. Restart the **Spoon Server** service
 

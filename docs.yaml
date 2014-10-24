@@ -114,7 +114,8 @@ documents:
 - title: To Spoon.net
   sections: []
 - title: To a Spoon Server
-  sections: []
+  sections:
+  - Add an Application to Spoon Server
 - title: Portable EXE
   sections: []
 - title: MSI
@@ -176,11 +177,9 @@ documents:
   sections:
   - Getting Started
   - Administration
-  - Create Applications
-  - Publish Applications
-  - Walkthroughs
+  - Manage Applications
   - Advanced Topics
-  - Spoon Plugin and Spoon Console
+  - Spoon Plugin and Console
   - Troubleshooting
 - title: SpoonScript
   sections:

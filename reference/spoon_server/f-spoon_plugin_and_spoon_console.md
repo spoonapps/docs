@@ -1,4 +1,4 @@
-### Spoon Plugin and Spoon Console
+### Spoon Plugin and Console
 
 In the following pages you will learn about how to use Spoon Plugin and the Spoon Console.
 
@@ -133,7 +133,7 @@ The bottom section of the Spoon Console contains the **Sign In**, **Log Out** an
 
 - **Shut down**: Stops the Spoon Console process, preventing further folder synchronization until it is restarted.
 
-#### Advanced topics
+#### Advanced Plugin Topics
 
 ##### Install location
 
@@ -158,15 +158,15 @@ The Spoon Plugin installs an application called Spoon Sandbox Manager that runs 
 <table>
       <tr>
          <td>
-            <p><strong><span style="text-decoration: underline;">Parameter</span></strong></p>
+            <p>Parameter</p>
          </td>
          <td>
-            <p><strong><span style="text-decoration: underline;">Behavior</span></strong></p>
+            <p>Behavior</p>
          </td>
       </tr>
       <tr>
          <td>
-            <p><strong>/uninstall</strong></p>
+            <p>/uninstall</p>
          </td>
          <td>
             <p>Uninstalls the Spoon Plugin. Close all web browsers before uninstalling.</p>
@@ -180,8 +180,8 @@ XLaunch is an internal application used to execute virtual applications that hav
 
 **Install location**
 
-- Location when installed by SpoonReg: @APPDATALOCAL@\Spoon\XLaunch\<version>\XLaunch.exe 
-- Location when installed by Spoon plugin: @APPDATALOCAL@\Spoon\Client\Components\<version>\XLaunch.exe
+- Location when installed by SpoonReg: @APPDATALOCAL@\Spoon\XLaunch\_version_\XLaunch.exe 
+- Location when installed by Spoon plugin: @APPDATALOCAL@\Spoon\Client\Components\_version_\XLaunch.exe
 
 **Command line reference**
 
@@ -202,7 +202,7 @@ XLaunch is an internal application used to execute virtual applications that hav
       </tr>
       <tr>
          <td>
-            <p> <strong>Path to default.xclient</strong> </p>
+            <p>Path to default.xclient</p>
          </td>
          <td>
             <p> This is the path to the xclient file where the app was registered. </p>
@@ -210,7 +210,7 @@ XLaunch is an internal application used to execute virtual applications that hav
       </tr>
       <tr>
          <td>
-            <p> <strong>RegistrationId</strong> </p>
+            <p>RegistrationId</p>
          </td>
          <td>
             <p> This is the uniquely identifying guid of the virtual application specified on the SpoonReg.exe command line using the /id parameter. </p>
@@ -218,20 +218,20 @@ XLaunch is an internal application used to execute virtual applications that hav
       </tr>
       <tr>
          <td>
-            <p> <strong>Shell Execute Info:</strong><br class="atl-forced-newline">
-               <strong>&lt;verb&gt; &lt;path&gt; [&lt;additional parameters&gt;]</strong> 
+            <p>Shell Execute Info:<br class="atl-forced-newline">
+               &lt;verb&gt; &lt;path&gt; [&lt;additional parameters&gt;]
             </p>
          </td>
          <td>
-            <p> <strong>verb</strong>: the verb used to shell execute the application or document, e.g. <em>open, edit, print</em><br class="atl-forced-newline">
-               <strong>path</strong>: the path to the application or document to execute, may be use path variables (like <code>@PROGRAMFILES@</code>) or not.<br class="atl-forced-newline">
-               <strong>additional parameters</strong>: any additional parameters to pass to the application being executed. 
+            <p>verb: the verb used to shell execute the application or document, e.g. <em>open, edit, print</em><br class="atl-forced-newline">
+               path: the path to the application or document to execute, may be use path variables (like <code>@PROGRAMFILES@</code>) or not.<br class="atl-forced-newline">
+               additional parameters: any additional parameters to pass to the application being executed. 
             </p>
          </td>
       </tr>
       <tr>
          <td>
-            <p> <strong>/XUninstall</strong> </p>
+            <p>/XUninstall</p>
          </td>
          <td>
             <p> Uninstalls the application and informs the user when the uninstall is complete </p>
@@ -239,7 +239,7 @@ XLaunch is an internal application used to execute virtual applications that hav
       </tr>
       <tr>
          <td>
-            <p> <strong>/XUninstallQuiet</strong> </p>
+            <p>/XUninstallQuiet</p>
          </td>
          <td>
             <p> Uninstalls the application with no user feedback </p>
@@ -255,7 +255,7 @@ The XClient file is an XML file that provides information about applications tha
 
 - Applications registered with SpoonReg: @APPDATALOCAL@\Spoon\Client\5\Default.xclient
 
-- Applications registered from standalone streaming server: @APPDATALOCAL@\Spoon\Servers\<server>\Users\[<username>|Anonymous]\Desktops\Default\Client\Default.xclient
+- Applications registered from standalone streaming server: @APPDATALOCAL@\Spoon\Servers\<server>\Users\[_username_|Anonymous]\Desktops\Default\Client\Default.xclient
 
 **XML file format**
 

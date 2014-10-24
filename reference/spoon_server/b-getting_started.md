@@ -48,9 +48,9 @@ Complete the following steps to set up Spoon Server:
 
     b. **Port assignments**:
 
-    	i. **Administration site**: The port used to access the Administration Site.  For more information, refer to the Administration Site topic.
+    **Administration site**: The port used to access the Administration Site.  For more information, refer to the Administration Site topic.
 
-	    ii. **Portal site**: The port used to access the Portal Site.  For more information, refer to the Portal Site topic. If Microsoft IIS is already on the machine port 80 is already in use. Verify that the ports assigned to the Administration and Portal sites are not already in use.
+	**Portal site**: The port used to access the Portal Site.  For more information, refer to the Portal Site topic. If Microsoft IIS is already on the machine port 80 is already in use. Verify that the ports assigned to the Administration and Portal sites are not already in use.
 		
     c. Click the **Advanced** button to specify connection information to an external SQL Server Database. When using an external SQL Server Database, be sure that the "Log On" user for the Spoon Server Windows Service has the appropriate access to the database. It may be necessary to modify the Log On user for the service by editing the service details after installing Spoon Server.
     
