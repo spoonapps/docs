@@ -23,3 +23,5 @@ In container these variables with have following values:
 foo=bar
 path=c:\path to executables;C:\WINDOWS\system32;C:\WINDOWS
 ```
+
+Environment variable can be overriden in image or container when an application (e.g. installer or `setx`) stores new value in registry.
