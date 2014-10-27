@@ -115,7 +115,10 @@ documents:
   sections: []
 - title: To a Spoon Server
   sections:
-  - Add an Application to Spoon Server
+  - Create a Virtual Application
+  - Add the Application to Spoon Server
+  - Optimize the Application Version (Optional)
+  - Publish the Application
 - title: Portable EXE
   sections: []
 - title: MSI

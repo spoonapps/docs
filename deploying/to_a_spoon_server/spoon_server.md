@@ -4,11 +4,7 @@ Spoon Server is an on-premise application delivery solution. See the walkthrough
 
 To read more about this process and Spoon Server, please refer to the [full Spoon Server documentation](/docs/reference/spoon-server).
 
-### Add an Application to Spoon Server
-
-In this section you will learn how to add your organization's software to Spoon Server and make it instantly available to users within your enterprise.
-
-#### Create a Virtual Application
+### Create a Virtual Application
 
 Adding an Application to Spoon Server requires you to create a virtual version of the Application using the Desktop Scan from Spoon Server or using the Spoon IDE packaging tool.
 
@@ -24,7 +20,7 @@ To create a Spoon Virtual Machine (SVM) for your Application using the Spoon IDE
 
 The evaluation version of the Spoon IDE creates time trial virtual Applications. To create Applications that do not expire, obtain a retail license for the Spoon IDE.
 
-#### Add the Application to Spoon Server
+### Add the Application to Spoon Server
 
 After the **SVM** is created add the Application to Spoon Server. For more information on managing Applications and Application versions in Spoon Server, refer to Managing Applications. Complete the following steps to add a new Application to Spoon Server:
 
@@ -74,7 +70,7 @@ After the Application is added to Spoon Server, create a specific Application ve
 
 4. Select **Save**. The **SVM** file will upload to Spoon Server. Depending on the size of the Application this can take several minutes.
 
-#### Optimize the Application Version (Optional)
+### Optimize the Application Version (Optional)
 
 Optimizing an Application version typically results in a five to twenty times faster launch. Optimization determines the best order for bytes to be transferred. Spoon recommends optimizing all Application versions over ten megabytes.
 
@@ -102,7 +98,7 @@ Complete the following steps to optimize an Application version:
 
 To add additional profiles to the model, simply navigate back to the **Optimize** page, and click the **Profile Application** link. Any new profiles that are taken will show up in the **Profiles** section as *Unused*. Clicking the **Update Model** link will apply these profiles to the model.
 
-#### Publish the Application
+### Publish the Application
 
 Spoon Server enables administrators to test Application versions prior to publishing. Complete the following to test the Application version:
 
