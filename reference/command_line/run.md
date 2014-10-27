@@ -230,6 +230,9 @@ startup file doc=[("c:\windows\system32\notepad.exe", "c:\doc\welcome.txt"), ("c
 > spoon run test-trigger --trigger=doc
 ```
 
+#### Exit code
+
+After running container exit code of startup file is displayed in decimal form.
 
 #### Selecting VM version
 
