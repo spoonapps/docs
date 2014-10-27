@@ -17,4 +17,6 @@ If the `start` command is run against an already-running container then no actio
 
 To enable diagnostic logging for the container, specify the `--diagnostic` flag. 
 
-To run the container in the background then specify the `-d` or `--detach` flag. 
+To run the container in the background then specify the `-d` or `--detach` flag.
+
+After running container exit code of startup file is displayed in decimal form.
