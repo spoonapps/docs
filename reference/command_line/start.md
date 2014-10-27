@@ -19,4 +19,4 @@ To enable diagnostic logging for the container, specify the `--diagnostic` flag.
 
 To run the container in the background then specify the `-d` or `--detach` flag.
 
-After running container exit code of startup file is displayed in decimal form.
+When the container stops, the exit code of startup file is displayed in decimal form.

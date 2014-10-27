@@ -10,7 +10,7 @@ This environment variable will be persisted to the output image from the `build`
 
 Only one environment variable can be added per `env` instruction. To add multiple environment variables to the working container, use multiple `env` instructions.
 
-When multiple environment variables with the same name are defined in set of images used to run a container then the value from last image is used. For two environment variables: PATH and PATHEXT special behavior is defined. All defininions are concatenated with themselves and with host value using semicolon as joinining character. Host value appears last and value from last image appears in front.
+When multiple environment variables with the same name are defined in set of images used to run a container, the value from last image is used. For two environment variables, PATH and PATHEXT, special behavior is defined. All values are concatenated together using the semicolon as the joining character. The value from the last image appears first and the host value is at the end.
 
 ```
 env foo=bar
@@ -24,4 +24,4 @@ foo=bar
 path=c:\path to executables;C:\WINDOWS\system32;C:\WINDOWS
 ```
 
-Environment variable can be overriden in image or container when an application (e.g. installer or `setx`) stores new value in registry.
+Environment variables can be overriden in a container by explicitly setting the variable to a new value or when an application or installer sets a new value.

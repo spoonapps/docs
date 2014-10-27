@@ -232,7 +232,7 @@ startup file doc=[("c:\windows\system32\notepad.exe", "c:\doc\welcome.txt"), ("c
 
 #### Exit code
 
-After running container exit code of startup file is displayed in decimal form.
+When the container stops, the exit code of startup file is displayed in decimal form.
 
 #### Selecting VM version
 
