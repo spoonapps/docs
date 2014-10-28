@@ -8,7 +8,7 @@ env <name>=<value>
 
 This environment variable will be persisted to the output image from the `build` command. 
 
-Only one environment variable can be added per `env` instruction. To add multiple environment variables to the working container, use multiple `env` instructions. If environment variable value contains well-known path as `C:\WINDOWS\system32` or similar it will be replaced with a placeholder. This placeholder will be replaced with proper (system-dependent) path when image is executed.
+Only one environment variable can be added per `env` instruction. To add multiple environment variables to the working container, use multiple `env` instructions. Well known system paths like `C:\Windows\System32` will be replaced by a variable that will be converted at runtime to the appropriate path for the execution environment.
 
 When multiple environment variables with the same name are defined in set of images used to run a container, the value from last image is used. For two environment variables, PATH and PATHEXT, special behavior is defined. All values are concatenated together using the semicolon as the joining character. The value from the last image appears first and the host value is at the end.
 

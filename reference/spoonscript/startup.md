@@ -13,7 +13,7 @@ The instruction has multiple forms:
 
 This instruction is only applied to the output image and does not affect the intermediate container. 
 
-If `startup file` is not specified then the startup file setting is inherited from last image listed in the `from` command. If startup file value contains well-known path as `C:\WINDOWS\system32` or similar it will be replaced with a placeholder. This placeholder will be replaced with proper (system-dependent) path when image is executed.
+If `startup file` is not specified then the startup file setting is inherited from last image listed in the `from` command.  Well known system paths like `C:\Windows\System32` will be replaced by a variable that will be converted at runtime to the appropriate path for the execution environment.
 
 #### As an Executable
 
