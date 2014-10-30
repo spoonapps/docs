@@ -2,9 +2,11 @@
 
 Though all tests execute locally in containers, test reports and screenshots are logged and saved on your Spoon.net account for easy sharing and access.
 
-If you would not like us to save your test reports for you, this feature can be toggled by checking or unchecking the **Save test reports** check box in the top-right corner of [http://spoon.net/selenium](/selenium).
+If you would not like us to save your test reports for you, this feature can be toggled by checking or unchecking the **Save test reports** check box in the top-right corner of [/selenium](/selenium).
 
-When unchecked, command and screenshot logs will still appear for review after your tests complete, but they will not be saved after your session is ended.
+When unchecked, command and screenshot logs will still appear for review after your tests complete, but they will not be saved after your session is ended. 
+
+Reports can also be disabled for the organization as a whole by modifying the privacy settings for the organization. This can be done by the organization owner and overrides the settings for the users within the organization.
 
 #### Sharing Tests
 
