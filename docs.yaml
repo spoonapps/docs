@@ -186,6 +186,7 @@ documents:
   - Troubleshooting
 - title: SpoonScript
   sections:
+  - batch
   - cmd
   - disable
   - enable
