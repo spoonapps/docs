@@ -1,6 +1,6 @@
 ## Why Use Spoon?
 
-Spoon containerization has some use cases that we think are pretty mind-blowing. Here's a few of them.
+Spoon containerization has some use cases that we think are pretty mind-blowing. Here are a few of them:
 
 ### Browser Testing
 
