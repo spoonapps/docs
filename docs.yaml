@@ -3,6 +3,8 @@ topic: Getting Started
 documents:
 - title: What is Spoon?
   sections: []
+- title: Mind-Blowing Things You Can Do with Spoon
+  sections: []
 - title: Tour I - Hello World
   sections:
   - Installation
