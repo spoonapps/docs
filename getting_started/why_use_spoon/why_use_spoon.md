@@ -1,11 +1,11 @@
-## Mind-Blowing Things You Can Do with Spoon
+## Why Use Spoon?
 
 Spoon containerization has some use cases that we think are pretty mind-blowing. Here's a few of them.
 
-### Test multiple browsers and server configurations on a single box.
+### Browser Testing
 
 Run multiple browser versions side-by-side without conflicts on a single device. Dynamically add browser plugins and runtimes such as Java, .NET, and Flash.
- 
+
 <div style="width: 605px; height: 230px; margin: 0 8px; min-height: 190px; background-color: #292929; color: #949799; padding: 15px; border-top: 15px solid #696969; border-radius: 4px; margin-bottom: 28px;">
    <p style="font-size: 13px; margin-bottom: 0; color: #00FF00; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"># Run a server application on Java 7 and 8</p>
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run jre:7.51,server</p>
@@ -19,7 +19,7 @@ Run multiple browser versions side-by-side without conflicts on a single device.
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run jre:6.45,firefox</p>
 </div>
 
-### Containerize and share existing desktop development environments.
+### Containerized Dev Environments
 
 Create pre-configured developer images including compilers, build tools, development frameworks, and other build dependencies. Share ready-to-use build environments with project collaborators.
 
@@ -35,7 +35,7 @@ Create pre-configured developer images including compilers, build tools, develop
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon push dev-image</p>
 </div>
 
-### Connect multiple containers with virtual networking.
+### Virtual Networking
 
 Develop and test client/server applications on a single developer box. Containerize multi-server applications and execute in virtualized production network environments. No more "localhost".
 
@@ -48,7 +48,7 @@ Develop and test client/server applications on a single developer box. Container
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run --link=web:awesome.com firefox http://awesome.com:8080</p>
 </div>
 
-### Inherit multiple base images in a single container.
+### Multiple Base Images
 
 Easily synthesize complex container environments by combining pre-configured base images for popular build, source control, and test tools.
 
@@ -64,7 +64,7 @@ Easily synthesize complex container environments by combining pre-configured bas
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon push async</p>
 </div>
 
-### Automate container creation with SpoonScript.
+### SpoonScript Automation
 
 Powerful SpoonScript primitives allow automated configuration of containers and integration into continuous integration processes. Higher-order operators such as using allow transient consumption of containers within scripted build environments.
 
@@ -79,7 +79,7 @@ Powerful SpoonScript primitives allow automated configuration of containers and 
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">push async</p>
 </div>
 
-### Install MSI packages within a container.
+### Install MSI Packages
 
 Utilize legacy MSI installation packages within containerized environments by simply running traditional install processes within containers.
  

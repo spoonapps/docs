@@ -3,8 +3,14 @@ topic: Getting Started
 documents:
 - title: What is Spoon?
   sections: []
-- title: Mind-Blowing Things You Can Do with Spoon
-  sections: []
+- title: Why Use Spoon?
+  sections:
+  - Browser Testing
+  - Containerized Dev Environments
+  - Virtual Networking
+  - Multiple Base Images
+  - SpoonScript Automation
+  - Install MSI Packages
 - title: Tour I - Hello World
   sections:
   - Installation
