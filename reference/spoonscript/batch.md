@@ -1,6 +1,6 @@
 ### batch
 
-The `batch` instruction is used for joining many command of the same type SpoonScript.
+The `batch` instruction is used for joining multiple commands of the same type in SpoonScript.
 
 ```
 batch <command>
@@ -19,7 +19,7 @@ You can use the batch instruction to execute a series of commands that share the
 
 ```
 # Create a new directory with a text file inside of it.
-batch
+batch cmd
   mkdir c:\new_folder
   cd c:\new_folder
   echo text content > text_file.txt
