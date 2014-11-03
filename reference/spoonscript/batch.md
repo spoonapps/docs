@@ -1,15 +1,17 @@
 ### batch
 
-The `batch` instruction is used for embedding batch files in the SpoonScript.
+The `batch` instruction is used for joining many command of the same type SpoonScript.
 
 ```
-batch
+batch <command>
 	<line 1>
 	<line 2>
 	<...>
 ```
 
-Each indented line after the batch line is part of a single batch file. The first non-indented line terminates the batch section and resumes normal command processing.
+If `<command>` is `cmd` or empty then all following indented lines will be put into a single batch file. Otherwise, these lines will be turned into separate commands.
+
+The first non-indented line terminates the batch section and resumes normal command processing.
 
 #### Example
 
@@ -21,4 +23,12 @@ batch
   mkdir c:\new_folder
   cd c:\new_folder
   echo text content > text_file.txt
+```
+
+```
+# Set several environment variables
+batch env
+  var1=value 1
+  var2=value 2
+  var3=value 3
 ```
