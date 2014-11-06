@@ -96,22 +96,22 @@ Images can be forked using the `spoon fork` command. This creates a link to the 
 
 ```
 # Pull an image
-> spoon pull account/image:head
+> spoon pull account/image
 
 # Check the image
 > spoon images
 
 Name            Tag  ID            Created               Size
-account/image   head 14wed2165141  8/18/2014 1:55:23 PM  1.9MB
+account/image        14wed2165141  8/18/2014 1:55:23 PM  1.9MB
 
 # Fork to a new image name and tag
-> spoon fork account/image:head tester/test1:1.0
+> spoon fork account/image tester/test1:1.0
 
 # New image is added
 > spoon images
 
 Name            Tag  ID            Created               Size
-account/image   head 14wed2165141  8/18/2014 1:55:23 PM  1.9MB
+account/image        14wed2165141  8/18/2014 1:55:23 PM  1.9MB
 tester/test1    1.0  14wed2165141  8/18/2014 1:55:23 PM  1.9MB
 ```
 
@@ -125,7 +125,7 @@ The `spoon tag` command can also retag images.
 > spoon images
 
 Name            Tag  ID            Created               Size
-account/image   head 14wed2165141  8/18/2014 1:55:23 PM  1.9MB
+account/image        14wed2165141  8/18/2014 1:55:23 PM  1.9MB
 tester/test1    2.0  14wed2165141  8/18/2014 1:55:23 PM  1.9MB
 ```
 

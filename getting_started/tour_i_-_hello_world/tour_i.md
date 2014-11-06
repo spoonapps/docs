@@ -158,8 +158,8 @@ Now it's time to memorialize and share your changes by creating a new image from
 ```
 > spoon containers
 	
-ID            Images                    Command  		Created
-87ddvf5455lp  spoonbrew/scratch:head	echo Hello Wor  7/31/2014 9:20:18 AM
+ID            Images                    Command  		    Created
+87ddvf5455lp  spoonbrew/scratch         echo Hello Wor  7/31/2014 9:20:18 AM
 ```
 
 Turn your container into a new image with `spoon commit`.
@@ -194,7 +194,7 @@ Upload the **helloworld** image to the Spoon Hub with the `spoon push` command.
 ```
 > spoon push helloworld
 
-Pushing image helloworld to spoonuser/helloworld:head
+Pushing image helloworld to spoonuser/helloworld
 Push complete
 Image is public
 ```

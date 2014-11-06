@@ -28,9 +28,9 @@ For this Ghost example, we will need to start our container with some basic util
 # Create a new container with basic utilities and the Node JS server.
 C:\> spoon run wget,7zip,node
 
-Downloading wget:head from https://spoon.net/users/spoonbrew
-Downloading 7zip:head from https://spoon.net/users/spoonbrew
-Downloading node:head from https://spoon.net/users/spoonbrew
+Downloading wget from https://spoon.net/users/spoonbrew
+Downloading 7zip from https://spoon.net/users/spoonbrew
+Downloading node from https://spoon.net/users/spoonbrew
 
 # This will pull these images into a new containerized command prompt (as shown in Tour I).
 ```

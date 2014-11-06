@@ -17,7 +17,7 @@ Use the `-a` flag to remove all images at one time. Note that this operation can
 # Remove an image by specifying it by name
 > spoon rmi my-image
 
-Image my-image:head was removed
+Image my-image was removed
 
 # Remove all images with the -a flag
 > spoon rmi -a
@@ -37,7 +37,7 @@ ID 			  Name  				Tag	 Created 				Size
 
 > spoon rmi spoonbrew/chocolatey
 
-Image spoonbrew/chocolatey:head was untagged
+Image spoonbrew/chocolatey was untagged
 
 > spoon images
 

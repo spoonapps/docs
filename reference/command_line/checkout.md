@@ -17,5 +17,5 @@ The new image name has to be unique on the local machine or use the `--overwrite
 # Checkout a old image by its id
 > spoon checkout 73dfe6973074 restored-image
 
-Restored the restored-image:head image
+Restored the restored-image image
 ```
