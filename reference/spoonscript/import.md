@@ -7,6 +7,6 @@ import <import type> <path to file>
 ```
 
 Supported import types:
-* svm         spoon image file
-* msi         msi file
-* thinapp     thinapp configuration file
+* svm - spoon image file
+* msi - msi file
+* thinapp - thinapp configuration file
