@@ -3,14 +3,16 @@ topic: Getting Started
 documents:
 - title: What is Spoon?
   sections: []
-- title: Why Use Spoon?
+- title: Spoon Tour
   sections:
-  - Browser Testing
-  - Containerized Dev Environments
-  - Virtual Networking
-  - Multiple Base Images
+  - Always Have a Clean Machine
+  - Instant Environment Configuration
+  - Install Existing MSI PackagesPackages
+  - Run Multiple Browser Versions Simultaneously
+  - Container Skinning
+  - Share Development Environments
+  - Network Virtualization
   - SpoonScript Automation
-  - Install MSI Packages
 - title: Tour I - Hello World
   sections:
   - Installation
