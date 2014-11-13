@@ -1,6 +1,6 @@
 ### logs
 
-The `logs` command fetches the logs for a container. This is especially useful for debugging or inspecting containers. 
+The `logs` command displays the logs for a container. This is especially useful for debugging or inspecting containers. 
 
 ```
 Usage: spoon logs <options> <container>
@@ -21,10 +21,10 @@ Usage: spoon logs <options> <container>
 
 Only the standard streams for a container are recorded and logged. To enable more comprehensive logging, use the `--diagnostic` flag of the `run` command when the container is created or of the `start` command when the container is restarted. 
 
-Logs are kept until the next start of given container instance. Logs can be viewed at any time. To see available logs, use the `--list` flag. 
+Previous logs are kept until the next start of a given container instance. Logs can be viewed at any time. To see available logs, use the `--list` flag. 
 
 ```
-# Can only show stdout or stderr logs
+# Show only stdout or stderr logs
 > spoon logs --stdout 2de7fda8
 
 > spoon logs --stderr 2de7fda8
@@ -41,7 +41,7 @@ Logs are kept until the next start of given container instance. Logs can be view
 # Similar to Unix 'tail', only show last 5 lines
 > spoon logs --tail=5 2de7fda8
 
-# Show diagnostic logs instead of stdandards streams
+# Show diagnostic logs instead of standard streams
 > spoon logs --diagnostic 2de7fda8
 
 # Show logs for specified process
