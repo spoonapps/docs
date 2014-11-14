@@ -7,8 +7,8 @@ documents:
   sections:
   - Always Have a Clean Machine
   - Instant Environment Configuration
-  - Install Existing MSI PackagesPackages
-  - Run Multiple Browser Versions Simultaneously
+  - Install Existing MSI Packages
+  - Run Multiple Browser Versions
   - Container Skinning
   - Share Development Environments
   - Network Virtualization

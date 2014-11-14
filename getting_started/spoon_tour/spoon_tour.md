@@ -1,6 +1,6 @@
 ## Spoon Tour
 
-Spoon will completely transform the way you build, test, and deploy your software:
+Spoon containerization dramatically simplifies the way developers and IT managers build, test, and deploy software. Here are a few of the amazing things you can do with Spoon:
 
 ### Always Have a Clean Machine
 
@@ -123,7 +123,7 @@ Powerful SpoonScript primitives allow automated configuration of containers and 
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&nbsp;&nbsp;cd async &amp;&amp; sbt clean test</p>
    <br>
    <p style="font-size: 13px; margin-bottom: 0; color: #00FF00; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"># git and sbt are no longer present in the image</p>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">commit 27661f14 async</p>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">commit async</p>
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">push async</p>
 </div>
 
