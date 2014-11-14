@@ -25,9 +25,9 @@ Open a new command prompt and follow the example below.
 We'll begin by pulling (downloading) a blank image from our remote registry, the Spoon Hub.
 
 ```
-> spoon pull spoonbrew/scratch
+> spoon pull spoonbrew/clean
 
-Pulling scratch
+Pulling clean
 Pull complete
 ```
 
@@ -35,10 +35,10 @@ Let's analyze this command:
 
 ```
 spoon pull			# The pull command adds an image to your Spoon account.
-spoonbrew/scratch	# Specify the repository owner, "spoonbrew," and the image name, "scratch."
+spoonbrew/clean	# Specify the repository owner, "spoonbrew," and the image name, "clean."
 ```
 
-There you go! If it worked as expected, you just pulled the **scratch** image into your account; the scratch image is completely empty and roughly equivalent to a freshly-installed, clean OS. You're ready to create your first container!
+There you go! If it worked as expected, you just pulled the **clean** image into your account; the clean image is completely empty and roughly equivalent to a freshly-installed, clean OS. You're ready to create your first container!
 
 **Note**: The **[spoonbrew](/hub/spoonbrew)** user account is maintained by the Spoon team. We provide a number of preconfigured images for popular runtimes, frameworks, and tools such as .NET, Java, and NodeJS. 
 
@@ -46,10 +46,10 @@ There you go! If it worked as expected, you just pulled the **scratch** image in
 
 Let's create a new container using the `spoon run` command, which will bootstrap a new container from any specified image. Any parameters specified after the `<image>` will be passed to the startup file. 
 
-For **spoonbrew/scratch**, the default startup file is **cmd.exe** (the command prompt). 
+For **spoonbrew/clean**, the default startup file is **cmd.exe** (the command prompt). 
 
 ```
-> spoon run spoonbrew/scratch echo Hello World!
+> spoon run spoonbrew/clean echo Hello World!
 
 # A new, containerized command prompt will appear with your output:
 
@@ -71,7 +71,7 @@ Let's break down what just happened:
 
 ```
 spoon run			# Here we tell Spoon to kick off a new container with a specified image.
-spoonbrew/scratch	# Our desired repo owner, "spoonbrew," and the repo/image name, "scratch."
+spoonbrew/clean	# Our desired repo owner, "spoonbrew," and the repo/image name, "clean."
 echo Hello World!	# Command your container to start up with "Hello World!"
 exit				# This closes your container and generates your container ID.
 25fdso88...			# This output identifies the specific container you just ran.
@@ -85,7 +85,7 @@ In this example, we'll run a container and create a new text file within that co
 
 ```
 # To begin, create a new containerized command prompt with the `run` command.
-> spoon run spoonbrew/scratch
+> spoon run spoonbrew/clean
 ```
 
 You should see a new command prompt appear. This prompt is running in the container. 
@@ -159,7 +159,7 @@ Now it's time to memorialize and share your changes by creating a new image from
 > spoon containers
 	
 ID            Images                    Command  		    Created
-87ddvf5455lp  spoonbrew/scratch         echo Hello Wor  7/31/2014 9:20:18 AM
+87ddvf5455lp  spoonbrew/clean         echo Hello Wor  7/31/2014 9:20:18 AM
 ```
 
 Turn your container into a new image with `spoon commit`.
@@ -186,7 +186,7 @@ View the newly created image with the `spoon images` command, which returns a li
 	
 Name                    Created					Size
 helloworld		 		7/31/2014 9:29:27 AM	0.1MB
-spoonbrew/scratch	 	7/31/2014 9:20:26 AM	0.0MB
+spoonbrew/clean	 	7/31/2014 9:20:26 AM	0.0MB
 ```
 
 Upload the **helloworld** image to the Spoon Hub with the `spoon push` command.

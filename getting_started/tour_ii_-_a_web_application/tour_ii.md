@@ -193,8 +193,8 @@ Saving a database to a layer can help you test different application versions ag
 First, we will need to create a blank container that will hold the database.
 
 ```
-# Create a container from scratch
-C:\> spoon run spoonbrew/scratch
+# Create a container from clean
+C:\> spoon run spoonbrew/clean
 
 # Exit the container to get your blank container ID.
 (d65260ad) C:\> exit
