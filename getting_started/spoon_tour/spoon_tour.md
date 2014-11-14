@@ -6,16 +6,25 @@ Spoon will completely transform the way you build, test, and deploy your softwar
 
 Need a clean machine to install or test something? Create one in seconds with a single command.
 
-<div style="width: 605px; height: 230px; margin: 0 8px; min-height: 190px; background-color: #292929; color: #949799; padding: 15px; border-radius: 4px; margin-bottom: 28px;">
+<div style="width: 605px; height: 370px; margin: 0 8px; min-height: 190px; background-color: #292929; color: #949799; padding: 15px; border-radius: 4px; margin-bottom: 28px;">
    <p style="font-size: 13px; margin-bottom: 0; color: #00FF00; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"># Launch a clean virtual machine</p>
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run clean</p>
    <br>
    <p style="font-size: 13px; margin-bottom: 0; color: #00FF00; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"># Command prompt for a clean virtual machine with id 4aa232b1</p>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">(4aa232b1)&gt; dir</p>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"></p>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">11/14/2014  09:35 AM    <DIR>          .</p>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">11/14/2014  09:35 AM    <DIR>          ..</p>
-   <br>   
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">(4aa232b1)&gt; dir C:\</p>
+   <br>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"> Volume in drive C has no label.</p>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"> Volume Serial Number is 7C90-F8ED</p>
+   <br>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"> Directory of C:\</p>
+   <br>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">06/10/2009  01:42 PM                24 autoexec.bat</p>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">06/10/2009  01:42 PM                10 config.sys</p>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">04/11/2011  06:24 PM    &lt;DIR&gt;          Program Files</p>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">11/14/2014  09:34 AM    &lt;DIR&gt;          Users</p>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">11/25/2013  03:40 PM    &lt;DIR&gt;          Windows</p>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">...</p>
+   <br>
 </div>
 
 ### Instant Environment Configuration
