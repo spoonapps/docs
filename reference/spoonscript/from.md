@@ -19,8 +19,8 @@ from <image 1> <image 2>
 from spoonbrew/git spoonbrew/node
 ```
 
-**Note**: To initialize an empty container, use the `spoonbrew/scratch` image
+**Note**: To initialize an empty container, use the `spoonbrew/clean` image
 
 ```
-from spoonbrew/scratch
+from spoonbrew/clean
 ```

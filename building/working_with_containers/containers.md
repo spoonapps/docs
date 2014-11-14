@@ -4,11 +4,11 @@ In this section you'll learn a variety of methods for managing and building cont
 
 ### Creating Containers
 
-The `spoon run` command starts new containers. You must specify a base image to provide the virtual filesystem and registry for the container. If no files or registry keys are necessary, use the empty scratch image.
+The `spoon run` command starts new containers. You must specify a base image to provide the virtual filesystem and registry for the container. If no files or registry keys are necessary, use the empty clean image.
 
 ```
-# Launch a command window in a new container with scratch as the base image
-> spoon run spoonbrew/scratch
+# Launch a command window in a new container with clean as the base image
+> spoon run spoonbrew/clean
 ```
 
 Operations executed in the new command window are applied to the container, not the host system.
@@ -17,7 +17,7 @@ To avoid confusion, the prompt is prepended by the first 8 characters of the con
 
 ```
 # Host command window
-> spoon run spoonbrew/scratch
+> spoon run spoonbrew/clean
 
 # Container command window
 (8dpp9eb5) >
@@ -34,7 +34,7 @@ Once created, track and manage containers with these commands.
 > spoon containers
 
 ID           Images              Command       Created          Status
-03bddd8bef   spoonbrew/scratch   cmd           8/14/2014 1:03   Stopped
+03bddd8bef   spoonbrew/clean   cmd           8/14/2014 1:03   Stopped
 52hd888xa3   local/server-app    startup.bat   8/14/2014 1:00   Running
 
 # Remove a specific container from the host system

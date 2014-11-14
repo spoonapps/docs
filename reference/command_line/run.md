@@ -59,10 +59,10 @@ If a `--` mark is not used, any argument matching a `run` command flag will be i
 
 ```
   # Spoon will interpret the /d flag and execute a container in detached mode
-  > spoon run spoonbrew/scratch /d
+  > spoon run spoonbrew/clean /d
   
   # /d flag is passed to cmd.exe, disabling execution of AutoRun commands from the registry
-  > spoon run spoonbrew/scratch -- /d 
+  > spoon run spoonbrew/clean -- /d 
 ```
 
 A container's standard streams (stdin/out/err) can be redirected to either the current command prompt or the background using the `--attach` and `--detach` flags. 
