@@ -15,7 +15,7 @@ Usage: spoon run <options> <image>[+skin(color)] [<parameters>...]
   -e, --env=VALUE            Set environment variables inside the container
       --enable=VALUE         Enable the specified Spoon VM setting
       --env-file=VALUE       Read in a line delimited file of ENV variables
-      --hosts=VALUE          Add an en to the virtual /etc/hosts file (<redirect>:<name>)
+      --hosts=VALUE          Add an entry to the virtual /etc/hosts file (<redirect>:<name>)
       --link=VALUE           Add link to another container (<container>:<alias>)
   -n, --name=VALUE           Name of created container
       --private              Synchronize this container privately, visible only to me

@@ -177,6 +177,7 @@ documents:
   - tag
   - try
   - unregister
+  - upgrade
   - version
   - vm
   - vms
