@@ -10,6 +10,6 @@ The available plans include:
 
 - `build` - Unlimited public and private repositories, automated builds and access to the browser sandbox.
 
-- `build-test` - All of the features of the `build` subscription and includes unlimited selenium testing.
+- `build-test` - All of the features of the `build` subscription plus unlimited selenium testing.
 
-- `build-test-deploy` - All the features of the `build-test` subscription and includes on-premise capabilities with Spoon Server.
+- `build-test-deploy` - All the features of the `build-test` subscription plus on-premise capabilities with Spoon Server.
