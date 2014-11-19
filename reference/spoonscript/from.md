@@ -6,7 +6,7 @@ The `from` instruction creates a new container and sets the base image(s) for th
 from <image>
 ```
 
-A valid `.me` file must start with a `from` instruction and may only contain one from instruction. 
+The `from` instruction must be placed at the beginning of a `.me` file or omitted if a clean base image is desired.
 
 Multiple images can be specified in a single `from` instruction by separating each image with a comma or space. If the same file, registry entry, or environment variable exists in multiple images added via the `from` instruction, then the one from whichever image was specified last will win the conflict and be used in the virtual environment. Virtual machine settings are taken from the last image specified in the `from` instruction.
 
