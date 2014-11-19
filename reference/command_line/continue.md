@@ -6,11 +6,14 @@ The `continue` command downloads the last state of a container and then starts i
 Usage: spoon continue <options> <container>
 
 <options> available:
-  -d, --detach               Run the container in the background
-      --diagnostic           Enable diagnostic logging
-      --wait-after-error     Leave program open after error
-      --wait-after-exit      Leave program open after exit
-      --with-root=VALUE      Set the containers root directory
+ -d, --detach               Run the container in the background
+     --diagnostic           Enable diagnotic logging
+     --disable-sync         Automatic container pushes are disabled
+     --private              Synchronize this container privately, visible only to me
+     --public               Synchronize this container publicly, visible to everyone
+     --wait-after-error     Leave program open after error
+     --wait-after-exit      Leave program open after it exits
+     --with-root=VALUE      Set the containers root directory
 ```
 
 If the `continue` command is run against an already-running container then no action will be taken. 

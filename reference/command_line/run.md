@@ -11,20 +11,25 @@ Usage: spoon run <options> <image>[+skin(color)] [<parameters>...]
   -d, --detach               Run the container in the background
       --diagnostic           Enable diagnotic logging
       --disable=VALUE        Disable the specified Spoon VM setting
+      --disable-sync         Automatic container pushes are disabled
   -e, --env=VALUE            Set environment variables inside the container
       --enable=VALUE         Enable the specified Spoon VM setting
       --env-file=VALUE       Read in a line delimited file of ENV variables
-      --hosts=VALUE          Add an entry to the virtual /etc/hosts file (<redirect>:<name>)
+      --hosts=VALUE          Add an en to the virtual /etc/hosts file (<redirect>:<name>)
       --link=VALUE           Add link to another container (<container>:<alias>)
   -n, --name=VALUE           Name of created container
-      --route-add=VALUE      Add a TCP or UDP mapping format: [<hostPort>]:<containerPort>[/tcp|udp]
+      --private              Synchronize this container privately, visible only to me
+      --public               Synchronize this container publicly, visible to everyone
+      --route-add=VALUE      Add a TCP or UDP mapping, format: [<hostPort>]:<containerPort>[/tcp|udp]
       --route-block=VALUE    Isolate all ports of specified protocol (TCP or UDP) by default
       --startup-file=VALUE   Override the default startup file
+      --startup-file-commit=VALUE
+                             Override the default startup file and save it to the committed image
       --trigger=VALUE        Execute named group of startup files
       --vm=VALUE             The Spoon VM version to run the container with
   -w, --working-dir=VALUE    Set the initial working directory inside the container
       --wait-after-error     Leave program open after error
-      --wait-after-exit      Leave program open after exit
+      --wait-after-exit      Leave program open after it exits
       --with-root=VALUE      Set the containers root directory
 ```
 
@@ -53,7 +58,7 @@ Containers are started with the startup file specified in the last passed image.
 > spoon run --startup-file=cmd.exe spoonbrew/jdk
 ```
 
-When passing arguments to a startupfile or command, we recommend separating these arguments from the rest of the command with a `--`. Arguments specified after the `--` mark are passed directly to the startup file/command.
+When passing arguments to a startup file or command, we recommend separating these arguments from the rest of the command with a `--`. Arguments specified after the `--` mark are passed directly to the startup file/command.
 
 If a `--` mark is not used, any argument matching a `run` command flag will be interpreted by Spoon which may lead to unexpected behavior. 
 

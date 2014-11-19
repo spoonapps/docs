@@ -7,9 +7,12 @@ Usage: spoon start <options> <container>
 
 <options> available:
   -d, --detach               Run the container in the background
-      --diagnostic           Enable diagnostic logging
+      --diagnostic           Enable diagnotic logging
+      --disable-sync         Automatic container pushes are disabled
+      --private              Synchronize this container privately, visible only to me
+      --public               Synchronize this container publicly, visible to everyone
       --wait-after-error     Leave program open after error
-      --wait-after-exit      Leave program open after exit
+      --wait-after-exit      Leave program open after it exits
       --with-root=VALUE      Set the containers root directory
 ```
 
