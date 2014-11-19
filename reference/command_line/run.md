@@ -20,6 +20,8 @@ Usage: spoon run <options> <image>[+skin(color)] [<parameters>...]
       --route-add=VALUE      Add a TCP or UDP mapping format: [<hostPort>]:<containerPort>[/tcp|udp]
       --route-block=VALUE    Isolate all ports of specified protocol (TCP or UDP) by default
       --startup-file=VALUE   Override the default startup file
+      --startup-file-commit=VALUE
+                             Override the default startup file and save it to the committed image
       --trigger=VALUE        Execute named group of startup files
       --vm=VALUE             The Spoon VM version to run the container with
   -w, --working-dir=VALUE    Set the initial working directory inside the container
@@ -53,7 +55,7 @@ Containers are started with the startup file specified in the last passed image.
 > spoon run --startup-file=cmd.exe spoonbrew/jdk
 ```
 
-When passing arguments to a startupfile or command, we recommend separating these arguments from the rest of the command with a `--`. Arguments specified after the `--` mark are passed directly to the startup file/command.
+When passing arguments to a startup file or command, we recommend separating these arguments from the rest of the command with a `--`. Arguments specified after the `--` mark are passed directly to the startup file/command.
 
 If a `--` mark is not used, any argument matching a `run` command flag will be interpreted by Spoon which may lead to unexpected behavior. 
 
