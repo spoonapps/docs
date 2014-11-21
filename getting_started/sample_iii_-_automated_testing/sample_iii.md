@@ -1,4 +1,4 @@
-## Tour III - Automated Testing
+## Sample - Automated Testing
 
 *Automated testing tutorial coming soon.*
 

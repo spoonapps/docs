@@ -1,4 +1,4 @@
-## Tour II - A Web Application
+## Sample - A Web Application
 
 Spoon gives users the tools to easily test and deploy web applications. In this example, we will use the popular **[Ghost](http://ghost.org/)** web blogging application to showcase the features of the Spoon system that make it particularly useful for this purpose.
 
@@ -32,7 +32,7 @@ Downloading wget from https://spoon.net/users/spoonbrew
 Downloading 7zip from https://spoon.net/users/spoonbrew
 Downloading node from https://spoon.net/users/spoonbrew
 
-# This will pull these images into a new containerized command prompt (as shown in Tour I).
+# This will pull these images into a new containerized command prompt (as shown in the Hello World sample).
 ```
 
 Let's analyze this command:
@@ -40,12 +40,12 @@ Let's analyze this command:
 ```
 spoon run
 
-# Unlike Tour I, we skipped the `spoon pull` command. Why?
+# Unlike the Hello World sample, we skipped the `spoon pull` command. Why?
 # `spoon run` will simultaneously download and run images in a new container.
 
 wget,7zip,node
 
-# Unlike Tour I, we have omitted the "owner/" namespace from image names. Omitting the namespace causes Spoon Studio to first search for the named images on your local machine's image repository.
+# Unlike the Hello World sample, we have omitted the "owner/" namespace from image names. Omitting the namespace causes Spoon Studio to first search for the named images on your local machine's image repository.
 # If it doesn't find a match locally, Spoon Studio automatically searches images in the spoonbrew account on the Spoon Hub, as it did in this example.
 ```
 
@@ -60,7 +60,7 @@ In your container, make a directory for the Ghost web application.
 
 (c99f354f) C:\ghost>
 
-# Like Tour I, this directory exists inside your container - not on your local system.
+# Like the Hello World sample, this directory exists inside your container - not on your local system.
 ```
 
 Download the Ghost application into your container. Although we use the **--no-check-certificate** flag as a shortcut in this example, you should be validating SSL connections against a real certificate in a production environment.
@@ -94,7 +94,7 @@ Process returned exit code 0x0
 In your native command prompt, `commit` the container to create the Ghost image.
 
 ```
-# Like in Tour I, `commit` using your partial container ID and your chosen name for your new image.
+# Like in the Hello World sample, `commit` using your partial container ID and your chosen name for your new image.
 C:\>spoon commit c99f354f ghost:0.5.1
 
 Committing container c99f354fdf7847fe9be2261f8a475e15 to image ghost:0.5.1
@@ -131,7 +131,7 @@ Go ahead and make your first post! :) Don't forget to save and publish it.
 
 Your Ghost web application can then be used via any browser at **http://localhost:2368**.
 
-![](/components/docs/getting_started/tour_ii_-_a_web_application/ghost-first-post.png)
+![](/components/docs/getting_started/sample_ii_-_a_web_application/ghost-first-post.png)
 
 When you are done, press **Ctrl+C** to stop the server, then `exit` the container.
 
@@ -182,7 +182,7 @@ In each of the three Ghost containers, start the NodeJS server to make all three
 
 At this point, you should have three containers using the same image. Each Ghost instance operates on the 2368 port internally, but is accessible via the 808x port that is assigned to it on the host.
 
-![](/components/docs/getting_started/tour_ii_-_a_web_application/multiple.png)
+![](/components/docs/getting_started/sample_ii_-_a_web_application/multiple.png)
 
 ### Saving a Database to a Layer
 
@@ -229,7 +229,7 @@ Start the NodeJS server and verify that the blog has the database.
 (9a82febf) C:\> cd ghost & npm start
 ```
 
-![](/components/docs/getting_started/tour_ii_-_a_web_application/ghost-first-post-2.png)
+![](/components/docs/getting_started/sample_ii_-_a_web_application/ghost-first-post-2.png)
 
 ### Reverting the Container
 
@@ -255,7 +255,7 @@ Change directory to Ghost and start the server.
 # When you visit the website, the Ghost web application should be reverted to its original state.
 ```
 
-![](/components/docs/getting_started/tour_ii_-_a_web_application/ghost-revert.png)
+![](/components/docs/getting_started/sample_ii_-_a_web_application/ghost-revert.png)
 
 This command is especially useful if your database was somehow corrupted or an unrecoverable error made your web application unusable. Instead of trying to figure out where the problem is and attempting to clean your environment, which can take hours to do, you can simply `revert` the container to its original state with the `spoon revert` command.
 
