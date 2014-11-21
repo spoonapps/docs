@@ -139,10 +139,11 @@ Save your place and continue working on another device -- regardless of which Wi
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">Continue execution with 'spoon continue 1b7f5707'</p>
 </div>
 
-Now launch the same container in the same state in which you closed it on a different machine.
+Now move to a different machine and launch the same container in the same state in which you closed it.
 
 <div style="width: 605px; height: 230px; margin: 0 8px; min-height: 190px; background-color: #292929; color: #949799; padding: 15px; border-radius: 4px; margin-bottom: 28px;">
    <p style="font-size: 13px; margin-bottom: 0; color: #00FF00; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"># Seamlessly continue working on the same container in the same state by specifying the state ID</p>
+   <br>
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon continue 1b7f5707</p>
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">(98348bi3) &gt; </p>
 </div>
@@ -153,6 +154,7 @@ Try out an application or an image and leave no trace on your host machine with 
 
 <div style="width: 605px; height: 230px; margin: 0 8px; min-height: 190px; background-color: #292929; color: #949799; padding: 15px; border-radius: 4px; margin-bottom: 28px;">
    <p style="font-size: 13px; margin-bottom: 0; color: #00FF00; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"># 'try' works just like 'run' except nothing is persisted on your machine</p>
+   <br>
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon try jdk:7.65,mongo,node:0.10.29</p>
 </div>
 
@@ -162,5 +164,6 @@ Convert existing virtual applications from other services like ThinApp into Spoo
 
 <div style="width: 605px; height: 230px; margin: 0 8px; min-height: 190px; background-color: #292929; color: #949799; padding: 15px; border-radius: 4px; margin-bottom: 28px;">
    <p style="font-size: 13px; margin-bottom: 0; color: #00FF00; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"># Convert ThinApp configuration to Spoon image</p>
+   <br>
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon import -n=app thinapp C:\thinapp-project\package.ini </p>
 </div>
