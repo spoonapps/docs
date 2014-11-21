@@ -15,7 +15,7 @@ documents:
   - SpoonScript Automation
   - Migrate Containers Between Devices
   - Zero Footprint Testing
-  - Import Existing Configurations
+  - Import ThinApp Packages
 - title: Sample - Hello World
   sections:
   - Installation
