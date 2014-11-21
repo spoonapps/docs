@@ -42,8 +42,8 @@ Easily create container environments by combining pre-configured base images for
 
 ### Install Existing MSI Packages
 
-Install software from MSI installation packages or other traditional setups by simply running the regular setup processes within a container. There is no need for
-"sequencing", "snapshots", or other special packaging processes.
+Install software from MSI installation packages or other traditional setups by simply running the regular setup processes within a container. There is no
+longer any need for sequencing, snapshots, or other special packaging processes.
  
 <div style="width: 605px; height: 230px; margin: 0 8px; min-height: 190px; background-color: #292929; color: #949799; padding: 15px; border-radius: 4px; margin-bottom: 28px;">
    <p style="font-size: 13px; margin-bottom: 0; color: #00FF00; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"># Launch a clean virtual machine (MSI requires --admin)</p>
