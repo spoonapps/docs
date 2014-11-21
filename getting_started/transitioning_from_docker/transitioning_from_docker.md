@@ -25,7 +25,7 @@ Layers can be applied dynamically and programmatically, so you can present disti
 Spoon layering also enables *partial rollback* during container builds via the `using` command. This is especially useful when an external tool is required *during* the build process, but is *not* desired in the ultimate container. For example:
 
     using git
-	  // pull in stuff using git
+	// pull in stuff using git
 	
 	// use the stuff to complete container setup
 
