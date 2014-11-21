@@ -13,14 +13,17 @@ documents:
   - Share Development Environments
   - Network Virtualization
   - SpoonScript Automation
-- title: Tour I - Hello World
+  - Migrate Containers Between Devices
+  - Zero Footprint Testing
+  - Import Existing Configurations
+- title: Sample - Hello World
   sections:
   - Installation
   - Get Going
   - Pull an Image
   - Create a Container
   - Creating Files within a Container
-- title: Tour II - A Web Application
+- title: Sample - A Web Application
   sections:
   - Topics Covered
   - Create a Ghost Image
@@ -29,7 +32,7 @@ documents:
   - Saving a Database to a Layer
   - Reverting the Container
   - Pulling It All Together
-- title: Tour III - Automated Testing
+- title: Sample - Automated Testing
   sections:
   - Next Steps
 - title: Installation

@@ -1,4 +1,4 @@
-## Tour I - Hello World!
+## Sample - Hello World!
 
 ### Installation
 
