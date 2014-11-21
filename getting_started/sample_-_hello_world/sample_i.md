@@ -35,7 +35,7 @@ Let's analyze this command:
 
 ```
 spoon pull			# The pull command adds an image to your Spoon account.
-spoonbrew/clean	# Specify the repository owner, "spoonbrew," and the image name, "clean."
+spoonbrew/clean	    # Specify the repository owner, "spoonbrew," and the image name, "clean."
 ```
 
 There you go! If it worked as expected, you just pulled the **clean** image into your account; the clean image is completely empty and roughly equivalent to a freshly-installed, clean OS. You're ready to create your first container!
@@ -71,7 +71,7 @@ Let's break down what just happened:
 
 ```
 spoon run			# Here we tell Spoon to kick off a new container with a specified image.
-spoonbrew/clean	# Our desired repo owner, "spoonbrew," and the repo/image name, "clean."
+spoonbrew/clean	    # Our desired repo owner, "spoonbrew," and the repo/image name, "clean."
 echo Hello World!	# Command your container to start up with "Hello World!"
 exit				# This closes your container and generates your container ID.
 25fdso88...			# This output identifies the specific container you just ran.
@@ -186,7 +186,7 @@ View the newly created image with the `spoon images` command, which returns a li
 	
 Name                    Created					Size
 helloworld		 		7/31/2014 9:29:27 AM	0.1MB
-spoonbrew/clean	 	7/31/2014 9:20:26 AM	0.0MB
+spoonbrew/clean	 	    7/31/2014 9:20:26 AM	0.0MB
 ```
 
 Upload the **helloworld** image to the Spoon Hub with the `spoon push` command.
