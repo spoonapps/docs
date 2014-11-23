@@ -1,4 +1,4 @@
-## Walkthrough - A Web Application
+## Walkthrough - Web Application
 
 Spoon gives users the tools to easily test and deploy web applications. In this example, we will use the popular **[Ghost](http://ghost.org/)** web blogging application to showcase the features of the Spoon system that make it particularly useful for this purpose.
 

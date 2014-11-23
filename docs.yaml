@@ -23,7 +23,7 @@ documents:
   - Pull an Image
   - Create a Container
   - Creating Files within a Container
-- title: Walkthrough - A Web Application
+- title: Walkthrough - Web Application
   sections:
   - Topics Covered
   - Create a Ghost Image
@@ -226,12 +226,6 @@ documents:
   sections: []
 - title: XAPPL Configuration
   sections: []
-- title: Samples
-  sections:
-  - Java
-  - Node.js
-  - .NET
-  - Python
 ---
 topic: Contributing
 documents:
