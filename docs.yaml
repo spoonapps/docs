@@ -98,6 +98,11 @@ documents:
   - Runtimes and Components
   - Desktop Scan
   - Snapshotting
+- title: Spoon Studio
+  sections:
+  - Virtual Application Settings
+  - MSI Settings
+  - Building from the Command Line
 - title: Continuous Integration
   sections:
   - Create SpoonScript
@@ -138,6 +143,14 @@ documents:
   - Add the Application to Spoon Server
   - Optimize the Application Version (Optional)
   - Publish the Application
+- title: Spoon Server
+  sections:
+  - Getting Started
+  - Administration
+  - Manage Applications
+  - Advanced Topics
+  - Spoon Plugin and Console
+  - Troubleshooting
 - title: Portable EXE
   sections: []
 - title: MSI
@@ -190,20 +203,6 @@ documents:
   - version
   - vm
   - vms
-- title: Spoon Studio
-  sections:
-  - Virtual Application Settings
-  - MSI Settings
-  - XAPPL
-  - Building from the Command Line
-- title: Spoon Server
-  sections:
-  - Getting Started
-  - Administration
-  - Manage Applications
-  - Advanced Topics
-  - Spoon Plugin and Console
-  - Troubleshooting
 - title: SpoonScript
   sections:
   - batch
