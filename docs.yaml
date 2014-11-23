@@ -16,14 +16,14 @@ documents:
   - Migrate Containers Between Devices
   - Zero Footprint Testing
   - Import ThinApp Packages
-- title: Sample - Hello World
+- title: Walkthrough - Hello World
   sections:
   - Installation
   - Get Going
   - Pull an Image
   - Create a Container
   - Creating Files within a Container
-- title: Sample - A Web Application
+- title: Walkthrough - A Web Application
   sections:
   - Topics Covered
   - Create a Ghost Image
@@ -32,9 +32,15 @@ documents:
   - Saving a Database to a Layer
   - Reverting the Container
   - Pulling It All Together
-- title: Sample - Automated Testing
+- title: Walkthrough - Automated Testing
   sections:
   - Next Steps
+- title: Samples
+  sections:
+  - Java
+  - Node
+  - .NET
+  - Python
 - title: Installation
   sections:
   - Windows
@@ -217,6 +223,8 @@ documents:
 - title: Virtual Machine
   sections: []
 - title: VM Settings
+  sections: []
+- title: XAPPL Configuration
   sections: []
 - title: Samples
   sections:

@@ -1,4 +1,4 @@
-## Sample - Automated Testing
+## Walkthrough - Automated Testing
 
 *Automated testing tutorial coming soon.*
 

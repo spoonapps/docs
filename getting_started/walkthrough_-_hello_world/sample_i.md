@@ -1,4 +1,4 @@
-## Sample - Hello World!
+## Walkthrough - Hello World
 
 ### Installation
 
