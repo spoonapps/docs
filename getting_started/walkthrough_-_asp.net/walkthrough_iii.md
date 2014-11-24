@@ -1,6 +1,6 @@
-## Walkthrough - Automated Tests
+## Walkthrough - ASP.NET
 
-*Automated testing tutorial coming soon.*
+*ASP.NET example coming soon.*
 
 ### Next Steps 
 
