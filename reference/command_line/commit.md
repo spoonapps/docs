@@ -23,3 +23,7 @@ For example, if a container were created with the command `spoon run git/git,nug
 - The files and registry keys from the **nuget/nuget** image
 
 However, if the same container were committed with the command `spoon commit --no-base <container id> my-new-image`, `my-new-image` would only contain the files and registry keys created or modified in the container. The `git/git` and `nuget/nuget` images are included as a dependency at runtime.
+
+#### Startup file
+
+If original image had startup file specified then commited image will retain it. If original image had startup file not specified and container was run with `--startup-file` parameter then commited image will have its startup file set to this parameter value.
