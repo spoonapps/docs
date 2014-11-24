@@ -7,49 +7,102 @@ Spoon also supports running ASP.NET applications within a container. In this exa
 1. Creating a container using multiple base images
 2. Deploying an ASP.NET website
 3. Running IIS Express within a container
-4. Test with Firefox in the container
+4. Testing with Firefox in the container
+5. Pause testing and resume on another machine
+
+### Start the Container
 
 ```
-
 # Create a new container with git and ASP.NET and a DNS mapping
-C:\> spoon run microsoft/aspnet,mozilla/firefox,git/git
+C:\> spoon run microsoft/dotnet,microsoft/aspnet,mozilla/firefox,git/git
 
-Downloading git from https://spoon.net/users/git
+Downloading dotnet from https://spoon.net/users/microsoft
 Downloading aspnet from https://spoon.net/users/microsoft
 Downloading firefox from https://spoon.net/users/mozilla
-Running container b1275642 with visibility public (use '--private' for a private container)
+Downloading git from https://spoon.net/users/git
+Running container 249c4f3e with visibility public (use '--private' for a private container)
 
 # This will start a container that has git, Firefox and ASP.NET support.
 # Note that the startup file is selected based on the git image since that is last in the list.
-
 ```
 
-In your container, configure up the ASP.NET application.
+### Configure the ASP.NET application
 
 ```
+(249c4f3e) C:\> cd c:\
+(249c4f3e) C:\>git clone https://github.com/madskristensen/MiniBlog.git
 
-(c99f354f) C:\> cd c:\
-(c99f354f) C:\>git clone https://github.com/madskristensen/MiniBlog.git
-
-# Like the Hello World sample, this directory exists inside your container - not on your local system.
+# This clones the project into the container and not on your local system.
 
 # Start the ASP.NET application console
-(c99f354f) C:\> start "MiniBlog" "C:\Program Files (x86)\IIS Express\iisexpress.exe" /path:C:\MiniBlog\Website /port:80
-
+(249c4f3e) C:\> start "MiniBlog" "C:\Program Files (x86)\IIS Express\iisexpress.exe" /path:C:\MiniBlog\Website /port:80
 ```
 
-![](/components/docs/getting_started/walkthrough_-_asp.net/iis.png)
+The IIS output will be logged in a new console window.
 
 ```
+Copied template config file 'C:\Program Files (x86)\IIS Express\AppServer\applicationhost.config' to 'C:\Users\Administrator\appdata\local\temp\iisexpress\appli
+cationhost2014112420457848.config'
+Updated configuration file 'C:\Users\Administrator\appdata\local\temp\iisexpress\applicationhost2014112420457848.config' with given cmd line info.
+Starting IIS Express ...
+Successfully registered URL "http://localhost:80/" for site "Development Web Site" application "/"
+Registration completed
+IIS Express is running.
+Enter 'Q' to stop IIS Express
+```
 
+### Test the application
+
+```
 # Begin testing with Firefox
-(c99f354f) C:\> "C:\Program Files (x86)\Mozilla\firefox.exe"
-
+(249c4f3e) C:\> "C:\Program Files (x86)\Mozilla\firefox.exe"
 ```
 
-Go to http://localhost and test the blog application.
+Go to http://localhost and test the application.
 
 ![](/components/docs/getting_started/walkthrough_-_asp.net/miniblog.png)
+
+Login using demo/demo.
+
+![](/components/docs/getting_started/walkthrough_-_asp.net/miniblog-signin.png)
+
+Create a new post.
+
+![](/components/docs/getting_started/walkthrough_-_asp.net/savedpost.png)
+
+### Resume testing on new machine 
+
+Stop the IIS service and exit the container.
+
+```
+Container 249c4f3e stopped in state f478518f (continue execution with `spoon continue f478518f`)
+249c4f3ed9f343bbb74a738a4af24892
+Process exited with status 0
+```
+
+Go to a new machine and login to [Spoon.net](http://spoon.net).  Go to your containers and click the **Continue** button for the container that you want to resume.
+
+![](/components/docs/getting_started/walkthrough_-_asp.net/continue-from-spoonnet.png)
+
+```
+Creating container 249c4f3e and continuing execution in state f478518f
+Running container 249c4f3e with visibility public (use `--private` for a private container)
+Fetching Spoon VM version 11.6.378
+Downloading dotnet from https://spoon.net/users/microsoft
+Downloading aspnet from https://spoon.net/users/microsoft
+Downloading firefox from https://spoon.net/users/mozilla
+Downloading git from https://spoon.net/users/git
+Upgrading Clean to version 4.0
+```
+
+Verify that the web application is in the same state even though you are on a completely different system.
+
+```
+249c4f3e C:\> start "MiniBlog" "C:\Program Files (x86)\IIS Express\iisexpress.exe" /path:C:\MiniBlog\Website /port:80
+249c4f3e C:\> "C:\Program Files (x86)\Mozilla\firefox.exe"
+```
+
+Note that the blog is in the same state as when you last
 
 ### Next Steps 
 
