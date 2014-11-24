@@ -1,9 +1,7 @@
 ## Walkthrough - ASP.NET
-
 Spoon also supports running ASP.NET applications within a container. In this example, we will clone an ASP.NET application, MiniBlog, from GitHub, deploy it in a container and test it with Firefox.
 
 ### Topics Covered
-
 1. Creating a container using multiple base images
 2. Deploying an ASP.NET website
 3. Running IIS Express within a container
@@ -11,9 +9,8 @@ Spoon also supports running ASP.NET applications within a container. In this exa
 5. Pause testing and resume on another machine
 
 ### Start the Container
-
 ```
-# Create a new container with git and ASP.NET and a DNS mapping
+# Create a new container with .NET, ASP.NET, Firefox and git
 C:\> spoon run microsoft/dotnet,microsoft/aspnet,mozilla/firefox,git/git
 
 Downloading dotnet from https://spoon.net/users/microsoft
@@ -22,7 +19,6 @@ Downloading firefox from https://spoon.net/users/mozilla
 Downloading git from https://spoon.net/users/git
 Running container 249c4f3e with visibility public (use '--private' for a private container)
 
-# This will start a container that has git, Firefox and ASP.NET support.
 # Note that the startup file is selected based on the git image since that is last in the list.
 ```
 
@@ -32,7 +28,7 @@ Running container 249c4f3e with visibility public (use '--private' for a private
 (249c4f3e) C:\> cd c:\
 (249c4f3e) C:\>git clone https://github.com/madskristensen/MiniBlog.git
 
-# This clones the project into the container and not on your local system.
+# This clones the project into a folder in the container and not on your local system.
 
 # Start the ASP.NET application console
 (249c4f3e) C:\> start "MiniBlog" "C:\Program Files (x86)\IIS Express\iisexpress.exe" /path:C:\MiniBlog\Website /port:80
@@ -71,7 +67,6 @@ Create a new post.
 ![](/components/docs/getting_started/walkthrough_-_asp.net/savedpost.png)
 
 ### Resume Testing on a New Machine 
-
 Stop the IIS service and exit the container.
 
 ```
@@ -108,7 +103,6 @@ Go to `http://localhost` and you can see that the post we created earlier is sti
 
 
 ### Next Steps 
-
 In this demo we saw a few important capabilities of containers. First, we were able to create a container for an ASP.NET application with IIS running in the container. Next we were able to test the container and the state of the container was automatically synchronized to the Spoon Hub on shutdown. Then we went to a new system, went to the Spoon Hub and continued the container from the saved state.
 
 The next step would be to build a container with more testing capabilities like Selenium and use the container state to send bugs to the application developers.
