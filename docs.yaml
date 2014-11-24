@@ -98,8 +98,6 @@ documents:
   - Runtimes and Components
   - Desktop Scan
   - Snapshotting
-- title: Spoon Studio
-  sections:
   - Virtual Application Settings
   - MSI Settings
   - Building from the Command Line
