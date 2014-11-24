@@ -137,12 +137,7 @@ documents:
   sections: []
 - title: To a Spoon Server
   sections:
-  - Create a Virtual Application
-  - Add the Application to Spoon Server
-  - Optimize the Application Version (Optional)
-  - Publish the Application
-- title: Spoon Server
-  sections:
+  - Basic Walkthrough
   - Getting Started
   - Administration
   - Manage Applications
