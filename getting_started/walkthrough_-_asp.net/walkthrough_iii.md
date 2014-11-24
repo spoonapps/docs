@@ -58,7 +58,7 @@ Enter 'Q' to stop IIS Express
 (249c4f3e) C:\> "C:\Program Files (x86)\Mozilla\firefox.exe"
 ```
 
-Go to http://localhost and test the application.
+Go to `http://localhost` and test the application.
 
 ![](/components/docs/getting_started/walkthrough_-_asp.net/miniblog.png)
 
@@ -102,7 +102,7 @@ Verify that the web application is in the same state even though you are on a co
 249c4f3e C:\> "C:\Program Files (x86)\Mozilla\firefox.exe"
 ```
 
-Go to http://localhost and you can see that the post we created earlier is still there.
+Go to `http://localhost` and you can see that the post we created earlier is still there.
 
 ![](/components/docs/getting_started/walkthrough_-_asp.net/same-post-new-system.png)
 
