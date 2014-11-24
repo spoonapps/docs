@@ -26,7 +26,7 @@ Running container 249c4f3e with visibility public (use '--private' for a private
 # Note that the startup file is selected based on the git image since that is last in the list.
 ```
 
-### Configure the ASP.NET application
+### Configure the ASP.NET Application
 
 ```
 (249c4f3e) C:\> cd c:\
@@ -51,7 +51,7 @@ IIS Express is running.
 Enter 'Q' to stop IIS Express
 ```
 
-### Test the application
+### Test the Application
 
 ```
 # Begin testing with Firefox
@@ -70,7 +70,7 @@ Create a new post.
 
 ![](/components/docs/getting_started/walkthrough_-_asp.net/savedpost.png)
 
-### Resume testing on new machine 
+### Resume Testing on a New Machine 
 
 Stop the IIS service and exit the container.
 
@@ -109,6 +109,6 @@ Go to http://localhost and you can see that the post we created earlier is still
 
 ### Next Steps 
 
-In this demo we saw a few important capabilities of containers. First, we were able to create a container for an ASP.NET application with IIS running in the container. Next we were able to test the container and the state of the container was automatically synchronized to the Spoon Hub on shutdown. Then we went to a new system, logger into the Spoon Hub and continued the container from the saved state.
+In this demo we saw a few important capabilities of containers. First, we were able to create a container for an ASP.NET application with IIS running in the container. Next we were able to test the container and the state of the container was automatically synchronized to the Spoon Hub on shutdown. Then we went to a new system, went to the Spoon Hub and continued the container from the saved state.
 
 The next step would be to build a container with more testing capabilities like Selenium and use the container state to send bugs to the application developers.
