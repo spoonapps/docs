@@ -1,4 +1,4 @@
-### XAPPL
+### XAPPL Configuration
 
 XAPPL files specify the configuration for an image or virtual application created with Spoon Studio. XAPPL files are formatted in XML, so it's easy to edit a virtual application configuration in a text editor just as you can with Spoon Studio user interface.
 
