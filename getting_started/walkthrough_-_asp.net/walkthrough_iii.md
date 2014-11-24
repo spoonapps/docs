@@ -102,14 +102,14 @@ Verify that the web application is in the same state even though you are on a co
 249c4f3e C:\> "C:\Program Files (x86)\Mozilla\firefox.exe"
 ```
 
-Note that the blog is in the same state as when you last
+Go to http://localhost and you can see that the post we created earlier is still there.
+
+![](/components/docs/getting_started/walkthrough_-_asp.net/same-post-new-system.png)
+
+### Summary
+
+In this demo we saw a few important capabilities of containers. First, we were able to create a container for an ASP.NET application with IIS running in the container. Next we were able to test the container and the state of the container was automatically synchronized to the Spoon Hub on shutdown. Then we went to a new system, logger into the Spoon Hub and continued the container from the saved state.
 
 ### Next Steps 
 
-Learn more about:
-
-- [Building containers and advanced Spoon commands](/docs/building).
-- [Practical examples and use cases](/docs/reference/samples), such as containerizing Java, Node, Python, and .NET projects.
-
-
-Enjoy!
+Build containers with more testing capabilities like Selenium and use the container state to send bugs to the application developers.
