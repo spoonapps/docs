@@ -23,6 +23,14 @@ documents:
   - Pull an Image
   - Create a Container
   - Creating Files within a Container
+- title: Walkthrough - ASP.NET
+  sections:
+  - Topics Covered
+  - Start the Container
+  - Configure the ASP.NET Application
+  - Test the Application
+  - Resume Testing on a New Machine
+  - Next Steps
 - title: Walkthrough - Web Application
   sections:
   - Topics Covered
@@ -32,9 +40,6 @@ documents:
   - Saving a Database to a Layer
   - Reverting the Container
   - Pulling It All Together
-- title: Walkthrough - ASP.NET
-  sections:
-  - Next Steps
 - title: Samples
   sections:
   - Java

@@ -106,10 +106,9 @@ Go to http://localhost and you can see that the post we created earlier is still
 
 ![](/components/docs/getting_started/walkthrough_-_asp.net/same-post-new-system.png)
 
-### Summary
-
-In this demo we saw a few important capabilities of containers. First, we were able to create a container for an ASP.NET application with IIS running in the container. Next we were able to test the container and the state of the container was automatically synchronized to the Spoon Hub on shutdown. Then we went to a new system, logger into the Spoon Hub and continued the container from the saved state.
 
 ### Next Steps 
 
-Build containers with more testing capabilities like Selenium and use the container state to send bugs to the application developers.
+In this demo we saw a few important capabilities of containers. First, we were able to create a container for an ASP.NET application with IIS running in the container. Next we were able to test the container and the state of the container was automatically synchronized to the Spoon Hub on shutdown. Then we went to a new system, logger into the Spoon Hub and continued the container from the saved state.
+
+The next step would be to build a container with more testing capabilities like Selenium and use the container state to send bugs to the application developers.
