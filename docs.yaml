@@ -20,7 +20,7 @@ documents:
   sections:
   - Installation
   - Get Going
-  - Pull an Image	
+  - Pull an Image
   - Create a Container
   - Creating Files within a Container
 - title: Walkthrough - Web Application
