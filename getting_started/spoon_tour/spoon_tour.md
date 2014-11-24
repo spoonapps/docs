@@ -24,7 +24,6 @@ Need a clean machine to install or test something? Create one in seconds with a 
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">11/14/2014  09:34 AM    &lt;DIR&gt;          Users</p>
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">11/25/2013  03:40 PM    &lt;DIR&gt;          Windows</p>
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">...</p>
-   <br>
 </div>
 
 ### Instant Environment Configuration
@@ -53,7 +52,7 @@ longer any need for sequencing, snapshots, or other special packaging processes.
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">(42fa1211)&gt; setup.msi</p>
 </div>
 
-### Run Multiple Browser Versions Simultaneously
+### Run Multiple Browser Versions
 
 Run multiple browser versions side-by-side on a single device. Dynamically add browser plugins and runtimes such as Java, .NET, and Flash.
 
@@ -79,7 +78,6 @@ Skinning makes it easy to visually distinguish between container contexts.
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run jre:8,firefox+skin(green)</p>
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run jre:7,firefox+skin(red)</p>
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run jre:6,firefox+skin(0x0000ff)</p>   
-   <br>
 </div>
 
 ### Share Development Environments
@@ -159,7 +157,7 @@ Try out applications in temporary containers using the <strong>try</strong> prim
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon try jdk:7.65,mongo,node:0.10.29</p>
 </div>
 
-### Import from ThinApp
+### Import ThinApp Packages
 
 Import existing virtual application packages from ThinApp into containers with a single command.
 
