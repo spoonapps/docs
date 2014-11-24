@@ -2,7 +2,7 @@
 
 The [Spoon Hub](/hub) is a public, SaaS platform for hosting and distributing Spoon images. 
 
-Hub **repositories** host images for a single project. For example, images for each version of .NET can be found in the [spoonbrew/dotNet](/hub/spoonbrew/dotNET) repository. A repository houses the entire version history of a project.
+Hub **repositories** host images for a single project. For example, images for each version of .NET can be found in the [microsoft/dotnet](/hub/microsoft/dotnet) repository. A repository houses the entire version history of a project.
 
 The hub can aid in end-user deployment as well as internal development. New application releases can be pushed to a public repository, where they can instantly be pulled and run by your end-users. 
 

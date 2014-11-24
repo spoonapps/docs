@@ -19,8 +19,8 @@ The most used recent images are listed first.
 
 ID            Last used             Name            Tag
 --            ---------             ----            ---
-73dfe6973074  8/29/2014 4:51:08 PM  spoonbrew/node      
-07b66f57ed8d  8/29/2014 4:50:33 PM  spoonbrew/git       
+73dfe6973074  8/29/2014 4:51:08 PM  node/node      
+07b66f57ed8d  8/29/2014 4:50:33 PM  git/git       
 ```
     
 To show the history of a certain image, use `spoon history image-name`. 

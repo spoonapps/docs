@@ -26,9 +26,9 @@ db4d5baff206  spoonbrew/clean                    9/3/2014 11:26:35 AM  Stopped
 > spoon containers -n=3
 ID            Images                  Command      Created               Status
 --            ------                  -------      -------               ------
-db4d5baff206  spoonbrew/clean                    9/3/2014 11:26:35 AM  Stopped
-b5c63c6d242e  spoonbrew/node          node app.js  9/3/2014 11:25:18 AM  Running
-b92981a3dd27  spoonbrew/node          node app.js  9/3/2014 11:05:36 AM  Stopped
+db4d5baff206  spoonbrew/clean                      9/3/2014 11:26:35 AM  Stopped
+b5c63c6d242e  node/node               node app.js  9/3/2014 11:25:18 AM  Running
+b92981a3dd27  node/node               node app.js  9/3/2014 11:05:36 AM  Stopped
 ```
 
 If the value specified for `-n` is greater than the number of containers present on the local machine, all of the containers are listed (same result as running `spoon containers`). 

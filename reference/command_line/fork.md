@@ -14,11 +14,11 @@ Usage: spoon fork <options> <image> [<repository>/]<image>[:<tag>]
 If the repository specified in the command does not already exist, a new one is automatically created.  
 
 ```
-# Copy spoonbrew/node to a new repository
-> spoon fork spoonbrew/node my-node
+# Copy node/node to a new repository
+> spoon fork node/node my-node
 
 Output image: my-node
 
 # Fork the image to the existing repository with a new tag
-> spoon fork spoonbrew/node my-node:1.0
+> spoon fork node/node my-node:1.0
 ```

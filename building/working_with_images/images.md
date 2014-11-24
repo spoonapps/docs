@@ -29,7 +29,7 @@ You can automatically build images using a SpoonScript, which is a set of instru
 # Example script to automatically build a 7-Zip image
 
 # Pull dependency images
-FROM spoonbrew/wget
+FROM gnu/wget
 
 # Prepare environmnet
 CMD mkdir c:\7zip

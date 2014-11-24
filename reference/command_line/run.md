@@ -38,24 +38,24 @@ Spoon `run` can be used to specify multiple images by separating each image with
 Due to this "layering" approach, it is a good practice to specify images with newer versions of applications or libraries after images with older versions.
 
 ```
-# Create a container using the spoonbrew/apache image
-> spoon run spoonbrew/apache
+# Create a container using the apache/apache image
+> spoon run apache/apache
 
 # Create a container with apache and mysql
-> spoon run spoonbrew/apache,spoonbrew/mysql
+> spoon run apache/apache,mysql/mysql
 
 # Create a container with .NET 3 and 4
-> spoon run spoonbrew/dotnet:4.0.3,spoonbrew/dotnet:3.5.1
+> spoon run microsoft/dotnet:4.0.3,microsoft/dotnet:3.5.1
 ```
 
 Containers are started with the startup file specified in the last passed image. If a startup file is not set in the base image then `cmd.exe /k` is used. 
 	
 ```
 # Default startup file is used to start container
-> spoon run spoonbrew/jdk
+> spoon run oracle/jdk
 
 # Override the startup file to use the command prompt
-> spoon run --startup-file=cmd.exe spoonbrew/jdk
+> spoon run --startup-file=cmd.exe oracle/jdk
 ```
 
 When passing arguments to a startup file or command, we recommend separating these arguments from the rest of the command with a `--`. Arguments specified after the `--` mark are passed directly to the startup file/command.
@@ -86,12 +86,12 @@ The initial working directory for the container can be set with the `workdir` in
 
 ```
 # By default, a container's working directory matches the host's working directory
-C:\Users>spoon run spoonbrew/git
+C:\Users>spoon run git/git
 
 (0x3842xd) C:\Users>
 
 # This sets the working directory to the root of the C drive
-C:\Users> spoon run -w="C:\" spoonbrew/git
+C:\Users> spoon run -w="C:\" git/git
 
 (0x3842xd) C:\> 
 

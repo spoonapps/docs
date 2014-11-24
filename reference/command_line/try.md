@@ -29,36 +29,36 @@ Spoon `try` can be used to specify multiple images by separating each image with
 Due to this "layering" approach, it is a good practice to specify images with newer versions of applications or libraries after images with older versions.
 
 ```
-# Create a container using the spoonbrew/apache image
-> spoon try spoonbrew/apache
+# Create a container using the apache/apache image
+> spoon try apache/apache
 
 # Create a container with apache and mysql
-> spoon try spoonbrew/apache,spoonbrew/mysql
+> spoon try apache/apache,mysql/mysql
 
 # Create a container with .NET 3 and 4
-> spoon try spoonbrew/dotnet:4.0.3,spoonbrew/dotnet:3.5.1
+> spoon try microsoft/dotnet:4.0.3,microsoft/dotnet:3.5.1
 ```
 
 Containers are started with the startup file specified in the last passed image. If a startup file is not set in the base image then `cmd.exe /k` is used. 
 	
 ```
 # Default startup file is used to start container
-> spoon try spoonbrew/jdk
+> spoon try oracle/jdk
 
 # Override the startup file to use the command prompt
-> spoon try --startup-file=cmd.exe spoonbrew/jdk
+> spoon try --startup-file=cmd.exe oracle/jdk
 ```
 
 The initial working directory for the container can be set with the `workdir` instruction or the `-w` flag. The current directory will be used if `workdir` was not specified and no `--startup-file` parameter was provided when building the image. 
 
 ```
 # By default, a container's working directory matches the host's working directory
-C:\Users>spoon try spoonbrew/git
+C:\Users>spoon try git/git
 
 (0x3842xd) C:\Users>
 
 # This sets the working directory to the root of the C drive
-C:\Users> spoon try -w="C:\" spoonbrew/git
+C:\Users> spoon try -w="C:\" git/git
 
 (0x3842xd) C:\> 
 

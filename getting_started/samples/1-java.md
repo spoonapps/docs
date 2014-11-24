@@ -10,13 +10,13 @@ In this tutorial, we'll containerize a Java web server project. You'll learn to 
 
 #### Pull Required Dependencies
 
-Before beginning, we'll get all of the dependencies we'll need to run and containerize the Java project. In this case, that means we'll need both Java and Git inside our container. Luckily, both of these images can be found in the **spoonbrew** account on the Spoon hub. 
+Before beginning, we'll get all of the dependencies we'll need to run and containerize the Java project. In this case, that means we'll need both Java and Git inside our container. Luckily, both of these images can be found on the Spoon hub. 
 
 ```
 # Pull dependencies
-> spoon pull spoonbrew/jdk:7.65
+> spoon pull oracle/jdk:7.65
 
-> spoon pull spoonbrew/git
+> spoon pull git/git
 ```
 
 #### Configure the Container
@@ -25,7 +25,7 @@ Since we'll be pulling the sources into our container using Git, let's start the
 
 ```
 # Start the container
-> spoon run -w="C:\" -d --startup-file=cmd.exe spoonbrew/git,spoonbrew/jdk7
+> spoon run -w="C:\" -d --startup-file=cmd.exe git/git,oracle/jdk7
 
 # Create and navigate to C:\java
 (3df234f3) C:\> mkdir java & cd java
@@ -54,7 +54,7 @@ Let's say you want to use this new container as a basis for other projects -- pe
 > spoon commit 3df234f3 simple-java-webserver
 ```
 
-By default, this will create a new images that includes the base spoonbrew/git and spoonbrew/java images. If you wish to only include the container itself in the new image, add the **--no-base** flag to the commit command. 
+By default, this will create a new images that includes the base git/git and oracle/java images. If you wish to only include the container itself in the new image, add the **--no-base** flag to the commit command. 
 
 ```
 > spoon commit --no-base 3df234f3 simple-java-webserver
@@ -78,8 +78,8 @@ When `spoon images` is executed, you should now see a new entry for **simple-jav
 
 ID            Name                   Tag   Created                Size
 --            ----                   ---   -------                ----
-7a85fe8f7ad1  spoonbrew/jdk 		 7.65  8/22/2014 11:34:19 AM  74.3 MB
-9iejrk2a34hd  spoonbrew/git 		 1.94  8/21/2014 11:32:00 AM  50.4 MB
+7a85fe8f7ad1  oracle/jdk 		 	 7.65  8/22/2014 11:34:19 AM  74.3 MB
+9iejrk2a34hd  git/git 		         1.94  8/21/2014 11:32:00 AM  50.4 MB
 3j24fjdk3kj4  simple-java-webserver        8/22/2014 11:52:32 AM  20.2 MB
 3j24fjdk3kj4  simple-java-webserver  1.0   8/22/2014 11:59:59 AM  20.2 MB
 ```

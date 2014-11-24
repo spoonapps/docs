@@ -14,7 +14,7 @@ Due to this "layering" approach, it is a good practice to specify images with ne
 using <image 1> <image 2>
 
 # Start container with git and node
-from spoonbrew/git spoonbrew/node
+from git/git node/node
 ```
 
 **Note**: Images added with `using` keyword are **NOT** included in final image

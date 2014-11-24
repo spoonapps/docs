@@ -32,12 +32,12 @@ If the same image is forked or tagged multiple times then the `rmi` command will
 
 ID 			  Name  				Tag	 Created 				Size
 -- 			  ----  				---  -------    			----
-7a85fe8f7ad1  spoonbrew/chocolatey       8/22/2014 11:34:19 AM  3.6 MB
+7a85fe8f7ad1  chocolatey/chocolatey      8/22/2014 11:34:19 AM  3.6 MB
 7a85fe8f7ad1  chocolatey-forked		1.0  8/22/2014 12:00:01 PM  3.6 MB
 
-> spoon rmi spoonbrew/chocolatey
+> spoon rmi chocolatey/chocolatey
 
-Image spoonbrew/chocolatey was untagged
+Image chocolatey/chocolatey was untagged
 
 > spoon images
 

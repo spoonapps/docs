@@ -28,9 +28,9 @@ For this Ghost example, we will need to start our container with some basic util
 # Create a new container with basic utilities and the Node JS server.
 C:\> spoon run wget,7zip,node
 
-Downloading wget from https://spoon.net/users/spoonbrew
-Downloading 7zip from https://spoon.net/users/spoonbrew
-Downloading node from https://spoon.net/users/spoonbrew
+Downloading wget from https://spoon.net/users/gnu
+Downloading 7zip from https://spoon.net/users/7zip
+Downloading node from https://spoon.net/users/node
 
 # This will pull these images into a new containerized command prompt (as shown in the Hello World sample).
 ```
@@ -46,7 +46,7 @@ spoon run
 wget,7zip,node
 
 # Unlike the Hello World sample, we have omitted the "owner/" namespace from image names. Omitting the namespace causes Spoon Studio to first search for the named images on your local machine's image repository.
-# If it doesn't find a match locally, Spoon Studio automatically searches images in the spoonbrew account on the Spoon Hub, as it did in this example.
+# If it doesn't find a match locally, Spoon Studio automatically searches for the approved images on the Spoon Hub, as it did in this example.
 ```
 
 In your container, make a directory for the Ghost web application.

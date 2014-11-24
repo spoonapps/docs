@@ -16,7 +16,7 @@ Due to this "layering" approach, it is a good practice to specify images with ne
 from <image 1> <image 2>
 
 # Start container with git and node
-from spoonbrew/git spoonbrew/node
+from git/git node/node
 ```
 
 **Note**: To initialize an empty container, use the `spoonbrew/clean` image

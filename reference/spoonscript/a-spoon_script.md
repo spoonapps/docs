@@ -31,7 +31,7 @@ Comments cannot be made inline with a command. Comments must be specified at the
 ```
 # This is a valid comment
 
-from spoonbrew/node  # This is not a valid comment
+from node/node  # This is not a valid comment
 ```
 
 ### Command Reference

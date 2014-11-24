@@ -11,7 +11,7 @@ In this example we'll containerize aIRChat, an open source IRC client built on N
 
 #### Pull dependencies and start a container
 
-aIRChat has a few prerequisites. We'll need the Node.js image and the Git image, which are available from spoonbrew.
+aIRChat has a few prerequisites. We'll need the Node.js image and the Git image, which are available on the Spoon Hub.
 
 ```
 # The pull command downloads the images
@@ -22,8 +22,8 @@ aIRChat has a few prerequisites. We'll need the Node.js image and the Git image,
 > spoon images
 
 Name  				Size 		Created
-spoonbrew/git 		32.1MB   	7/16/2014 3:44:27 PM
-spoonbrew/node		10.2MB   	7/16/2014 3:45:10 PM
+git/git 		32.1MB   	7/16/2014 3:44:27 PM
+node/node		10.2MB   	7/16/2014 3:45:10 PM
 ```
 
 Now start a new container using the `spoon run` command, specifying the Node.js and Gt images and the start-up file `cmd` to launch the container in a new command window.
@@ -90,7 +90,7 @@ To verify the container information, us the `containers` command.
 > spoon containers
 
 ID  								Images							Command   						Created
-1be755fcfafc4cf0b8e1c0667f6d13f0	spoonbrew/git,spoonbrew/node   	C:\Windows\System32\cmd.exe   	7/16/2014 3:54:59 PM
+1be755fcfafc4cf0b8e1c0667f6d13f0	git/git,node/node   	        C:\Windows\System32\cmd.exe   	7/16/2014 3:54:59 PM
 ```
 
 If you need to access the container again in its current state to make changes, use `spoon start` command followed by the ID.
@@ -105,8 +105,8 @@ When you're finished configuring the container, committing it will create a new 
 # Specify a name for the new image
 > spoon commit 1be755fcfafc4cf0b8e1c0667f6d13f0 aIRChat
 
-decomposing spoonbrew/git...
-decomposing spoonbrew/node...
+decomposing git/git...
+decomposing node/node...
 merging base images...
 commit complete
 
@@ -115,8 +115,8 @@ commit complete
 
 Name  				Size 			Created
 aIRChat 		    120.8MB  		7/16/2014 4:05:12 PM
-spoonbrew/git 		32.1MB   		7/16/2014 3:44:27 PM
-spoonbrew/node		10.2MB   		7/16/2014 3:45:10 PM
+git/git 		    32.1MB   		7/16/2014 3:44:27 PM
+node/node		    10.2MB   		7/16/2014 3:45:10 PM
 
 # Push your container up to the Spoon Hub
 > spoon push aIRChat
@@ -134,7 +134,7 @@ Create a new text file and copy/paste this text:
 
 ```
 # Specify project dependencies
-from spoonbrew/git spoonbrew/node
+from git/git node/node
 
 # Create a new directory for the project
 cmd mkdir C:\projects\airchat

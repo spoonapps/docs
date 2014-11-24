@@ -15,7 +15,7 @@ The SpoonScript contains all the steps necessary to build the container.
 
 ```
 # Creates a new container from the specified images
-FROM spoonbrew/node spoonbrew/git
+FROM node/node git/git
 
 # Clone a project in the container
 CMD mkdir c:\root
