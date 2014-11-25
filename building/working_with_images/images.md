@@ -36,7 +36,7 @@ CMD mkdir c:\7zip
 
 # Download installation media
 WORKDIR C:\7zip
-CMD %spn_wget% http://downloads.sourceforge.net/sevenzip/7z920.exe
+CMD wget http://downloads.sourceforge.net/sevenzip/7z920.exe
 
 # Install 7-Zip
 CMD 7z920.exe /S /D=C:\7zip
