@@ -27,12 +27,12 @@ Running container 249c4f3e with visibility public (use '--private' for a private
 
 ```
 (249c4f3e) C:\> cd c:\
-(249c4f3e) C:\>git clone https://github.com/madskristensen/MiniBlog.git
+(249c4f3e) C:\> git clone https://github.com/madskristensen/MiniBlog.git
 
 # This clones the project into a folder in the container and not on your local system.
 
 # Start the ASP.NET application console
-(249c4f3e) C:\> start "MiniBlog" "C:\Program Files (x86)\IIS Express\iisexpress.exe" /path:C:\MiniBlog\Website /port:80
+(249c4f3e) C:\> start "MiniBlog" "C:\Program Files (x86)\IIS Express\iisexpress.exe" /path:C:\MiniBlog\Website
 ```
 
 The IIS output will be logged in a new console window.
@@ -42,7 +42,7 @@ Copied template config file 'C:\Program Files (x86)\IIS Express\AppServer\applic
 cationhost2014112420457848.config'
 Updated configuration file 'C:\Users\Administrator\appdata\local\temp\iisexpress\applicationhost2014112420457848.config' with given cmd line info.
 Starting IIS Express ...
-Successfully registered URL "http://localhost:80/" for site "Development Web Site" application "/"
+Successfully registered URL "http://localhost:8080/" for site "Development Web Site" application "/"
 Registration completed
 IIS Express is running.
 Enter 'Q' to stop IIS Express
@@ -55,7 +55,7 @@ Enter 'Q' to stop IIS Express
 (249c4f3e) C:\> "C:\Program Files (x86)\Mozilla\firefox.exe"
 ```
 
-Go to `http://localhost` and test the application.
+Go to `http://localhost:8080` and test the application.
 
 ![](/components/docs/getting_started/walkthrough_-_asp.net/miniblog.png)
 
@@ -94,11 +94,11 @@ Upgrading Clean to version 4.0
 Verify that the web application is in the same state even though you are on a completely different system.
 
 ```
-249c4f3e C:\> start "MiniBlog" "C:\Program Files (x86)\IIS Express\iisexpress.exe" /path:C:\MiniBlog\Website /port:80
+249c4f3e C:\> start "MiniBlog" "C:\Program Files (x86)\IIS Express\iisexpress.exe" /path:C:\MiniBlog\Website
 249c4f3e C:\> "C:\Program Files (x86)\Mozilla\firefox.exe"
 ```
 
-Go to `http://localhost` and you can see that the post we created earlier is still there.
+Go to `http://localhost:8080` and you can see that the post we created earlier is still there.
 
 ![](/components/docs/getting_started/walkthrough_-_asp.net/same-post-new-system.png)
 
