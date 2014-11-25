@@ -95,43 +95,15 @@ The status bar shows whether a user is signed in, when Spoon is synchronizing da
 
 **Main Console**
 
-The Spoon Console contains six links where users can access their **Applications** and any **Documents**, **Desktop**, **Music**, **Pictures** or **Videos** folders that have been synchronized to their account.
+The Spoon Console contains links to the logged in user's favorite applications and files and folders that have been synchronized to their Spoon.net account.
 
-Users can click on **Applications** to open the Application list. Users can click on the application name to open a new menu that allows them to launch the application as well as add or remove the applications from the start menu. Users can return to the main console menu by clicking the **Home** link at the top of the console.
+Users can click on **All Applications** to open the application list. Users can click on the application name to open a new menu that allows them to launch the application as well as add or remove the applications from the start menu. Users can return to the main console menu by clicking the **Home** link at the top of the console.
 
 When launching an application hosted on Spoon Server that has been added to the start menu, the Spoon Console will check to see if there is a new version available. If a new version is available, the user will be prompted for which version they would like to start.
 
 Clicking on any of the **Documents**, **Desktop**, **Music**, **Pictures** or **Videos** folder names will open the folder access menu. Users can add or remove the folders from their current device from this menu. Clicking on a device name will open the folder and allow the user to add, copy or remove files from that folder on the named device upon the next synchronization if the folder is synchronized on all devices. If the folder is only synchronized from one device, the folder will open in the user's web browser, either on their Spoon.net account or in the Spoon Server instance the plugin is connected to.
 
 **Note**: When viewing the files and folders connected via the Spoon Console, the browser's Internet Security settings can effect what is displayed on the web desktop. More restrictive settings can prevent files and folders from displaying and synchronizing.
-
-**Bottom Links**
-
-The bottom section of the Spoon Console contains the **Sign In**, **Log Out** and **Advanced** links.
-
-**Sign in/Log Out**: Enables a user to sign in or log out without the need for a web browser. 
-
-**Advanced**: Presents the user with the following options:
-
-- **Synchronize Now**: Enables users to manually start the Spoon Sync process and update applications, folders, and desktop information.
-
-- **Sign in to another host**: Prompts the sign-in window to appear. This option is enabled when at least one Spoon user is signed in.
-
-- **Synchronize folders with**: This option shows a user with multiple hosts a selectable list that the user can select where their data will be synchronized with.
-
-- **Upload Throttling**: Limits the upload bandwidth used by sync.
-
-- **Payment options**: Opens the Payment Information window for Spoon.net accounts. Users can add or update credit card information for their account.
-
-- **Upgrade to Spoon.net Pro**: Enables a user to subscribe to the Spoon.net Pro premium service. This is enabled only when a spoon.net user is signed in.
-
-- **Devices**: Shows a list of devices associated with the users login.
-
-- **Disconnect this desktop**: Disconnects the local desktop. If the synchronization account has not been set yet, these options do not appear.
-
-- **Repair desktop**: Prompts Spoon Console to repair itself if a user experiences trouble with Application launch.
-
-- **Shut down**: Stops the Spoon Console process, preventing further folder synchronization until it is restarted.
 
 #### Advanced Plugin Topics
 

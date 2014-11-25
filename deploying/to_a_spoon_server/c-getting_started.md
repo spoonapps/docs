@@ -118,7 +118,7 @@ Spoon Web Desktop contains the following links:
 
 ##### Logging Out
 
-Authenticated users can log out of the Spoon Server Portal Site by selecting Logout in the upper right corner of the webpage.
+Authenticated users can logout of the Spoon Server Portal Site by selecting Logout in the upper right corner of the webpage.
  
 ##### Signing In and Out via Spoon Console
 
