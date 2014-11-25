@@ -9,7 +9,7 @@ Usage: spoon logout
 #### Examples:
 
 ```
-# Log out the current user
+# Logout the current user
 > spoon logout
 
 spoonuser logged out at 8/25/2014 5:55:50 PM
