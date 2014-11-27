@@ -17,7 +17,7 @@ Usage: spoon run <options> <image>[+skin(color)] [<parameters>...]
       --env-file=VALUE       Read in a line delimited file of ENV variables
       --hosts=VALUE          Add an entry to the virtual /etc/hosts file (<redirect>:<name>)
       --link=VALUE           Add link to another container (<container>:<alias>)
-      --mount=VALUE          Mount a host folder into the sandbox, format: [other-sandbox:]<source>=<target>
+      --mount VALUE          Mount a host folder into the sandbox, format: [other-sandbox:]<source>=<target>
   -n, --name=VALUE           Name of created container
       --private              Synchronize this container privately, visible only to me
       --public               Synchronize this container publicly, visible to everyone
@@ -244,13 +244,13 @@ If the source folder doesn't exist, the `mount` option is ignored.
 Example for mounting a folder.
 
 ```
-spoon run --mount=C:\FolderOnHostSystem=C:\FolderInContainer clean
+spoon run --mount C:\FolderOnHostSystem=C:\FolderInContainer clean
 ```
 
 It is also possible to mount a folder from another container:
 
 ```
-spoon run --mount=<containerid>:C:\FolderInSourceContainer=C:\FolderInTargetContainer clean
+spoon run --mount <containerid>:C:\FolderInSourceContainer=C:\FolderInTargetContainer clean
 ```
 
 #### Exit code
