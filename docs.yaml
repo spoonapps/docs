@@ -53,7 +53,7 @@ documents:
   - EC2
 - title: Transitioning from Docker
   sections: 
-  - Supported Platforms
+  - Platform
   - Layering
   - Streaming
   - Variable Isolation
