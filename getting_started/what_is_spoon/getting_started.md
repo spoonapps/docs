@@ -41,7 +41,7 @@ Spoon is 100% free for open source projects. Set up a free organization at Spoon
 
 Spoon containers are built on the **Spoon Application Virtualization Engine** (SVM), a lightweight implementation of core operating system APIs, including the filesystem, registry, process, and threading subsystems. Applications executing within a container interact with a virtualized filesystem, registry, and process environment supplied by the SVM, rather than directly with the host machine. 
 
-### How is Spoon different from hardware virtualization?
+### <a name="how-is-spoon-different"></a>How is Spoon different from hardware virtualization?
 
 Unlike hardware virtualization systems like Microsoft Virtual PC and VMware, Spoon virtualizes only the operating system features required for application execution. This enables virtualized applications to operate efficiently, with the same performance characteristics as native executables.
 
