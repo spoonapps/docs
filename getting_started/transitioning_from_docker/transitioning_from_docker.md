@@ -10,7 +10,7 @@ Spoon was designed for the Windows platform and its containerization system is b
 
 For more information about the differences between application and OS virtualization, see the article [How Spoon is different from hardware virtualization](/docs/getting-started/what-is-spoon#how-is-spoon-different).
 
-Via the Spoon VM, Spoon containers support many Windows-specific constructs, such as Windows Services, COM/DCOM components, WinSxS side-by-side versioning, shell registration, and many other mechanisms that do not exist on Linux operating systems. 
+Via the Spoon VM, Spoon containers support many Windows-specific constructs, such as Windows Services, COM/DCOM components, named kernel object isolation, WinSxS side-by-side versioning, shell registration, clipboard data, and other mechanisms that do not directly apply to Linux operating systems. 
 
 Spoon also provides a desktop client with many features (GUI tool to launch applications, file extension associations, Start Menu integration) that allow containerized applications to interact with the user in the same way as traditionally installed desktop applications. Spoon also provides a small browser plugin that allows users to launch and stream containerized applications directly from any web browser.
 
