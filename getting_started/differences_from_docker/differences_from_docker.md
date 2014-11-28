@@ -84,6 +84,6 @@ To assist in building static configurations, Spoon offers a graphical **Spoon St
 
 For more information on Spoon Studio and snapshot tools, see the [Building](/docs/building) section in this documentation.
 
-### Partners
+### Support
 
 Spoon technology is integrated into select third-party enterprise application delivery platforms, including [Novell ZENworks Suite](https://www.novell.com/products/zenworks/zenworks-suite/), [Novell ZENworks Application Virtualization](http://novell.com/zav), and [LANDesk Management Suite](http://landesk.com).
