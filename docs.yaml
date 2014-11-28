@@ -52,7 +52,7 @@ documents:
   - Windows
   - Azure
   - EC2
-- title: Transitioning from Docker
+- title: Differences from Docker
   sections: 
   - Platform
   - Layering
