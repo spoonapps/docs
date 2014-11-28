@@ -56,7 +56,7 @@ Unlike Docker, Spoon containers are *not* required to be completely isolated fro
 
 A Spoon **isolation mode** may be specified on a per-object basis. For example, it is possible to specify that one directory subtree should be fully isolated while another one is visible from the host device. Supported isolation modes include **Full**, **Merge**, **Hide**, and **Write Copy**.
 
-For more information on isolation modes, please see the [Isolation Modes](/docs/reference/spoon-studio) section of this documentation.
+For more information on isolation modes, please see the [Isolation Modes](/docs/building/working-with-spoon-studio#virtual-filesystem) section of this documentation.
 
 ### Networking
 
@@ -69,7 +69,7 @@ Importantly, this contrasts with Docker, which *isolates* all ports by default. 
 
 Like Docker, Spoon provides command-line interfaces (`spoon`) and a scripting language (**SpoonScript**) for automating build processes. Spoon also provides a number of rich GUI- and web-based tools and services for building, configuring, and managing virtual environments.
 
-**[Spoon Studio](/docs/building/working-with-spoon-studio)** is a graphical integrated development environment that provides a visual design environment and easy-to-use wizards for creating images. Spoon Studio also includes a [Desktop Scan](/docs/building/desktop-scan) tool that automatically detects and captures settings for any applications that are locally installed on a desktop.
+**[Spoon Studio](/docs/building/working-with-spoon-studio)** is a graphical integrated development environment that provides a visual design environment and easy-to-use wizards for creating images. Spoon Studio also includes a [Desktop Scan](/docs/building/working-with-spoon-studio#desktop-scan) tool that automatically detects and captures settings for any applications that are locally installed on a desktop.
 
 **[Spoon Server](http://spoon.net/server)** is an on-premises version of Spoon.net that	provides the same functionality in a behind-firewall environment. In addition, Spoon Server provides enterprise-specific such as a web application portal, Active Directory and LDAP integration, centralized management, user data synchronization, license management, and usage analytics.
 
