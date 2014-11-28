@@ -39,7 +39,25 @@ Spoon is 100% free for open source projects. Set up a free organization at Spoon
 
 ## How does it work?
 
-Spoon containers are built on the **Spoon Virtual Machine** (SVM), a lightweight implementation of core operating system APIs, including the filesystem, registry, process, and threading subsystems. Applications executing within a container interact with a virtualized filesystem, registry, and process environment supplied by the SVM, rather than directly with the host machine. There are three main components to Spoon:
+Spoon containers are built on the **Spoon Application Virtualization Engine** (SVM), a lightweight implementation of core operating system APIs, including the filesystem, registry, process, and threading subsystems. Applications executing within a container interact with a virtualized filesystem, registry, and process environment supplied by the SVM, rather than directly with the host machine. 
+
+### How is Spoon different from hardware virtualization?
+
+Unlike hardware virtualization systems like Microsoft Virtual PC and VMware, Spoon virtualizes only the operating system features required for application execution. This enables virtualized applications to operate efficiently, with the same performance characteristics as native executables.
+
+There are several advantages in choosing Spoon containers over hardware virtualization systems:
+
+- Optimal performance. Spoon containers run at the same speed as applications running natively against the host hardware, with a minimal memory footprint. In contrast, applications running within hardware-virtualized environments experience significant slow-downs and impose a large memory footprint.
+
+- Dramatically reduced application size. Spoon containers require a footprint proportional to the size of the virtualized application, data, and included components. As a result, Spoon containers are small enough to be quickly downloaded by end-users. Hardware virtualization requires an entire host operating system image, including many basic subsystems that are already present on the end-user device. Each virtual machine may occupy several gigabytes of storage.
+
+- Multiple virtual applications capability. You can run multiple simultaneous Spoon containers per processor. Due to the high overhead of hardware virtualization, only a small number of hardware-virtualized environments per processor can run simultaneously.
+
+- Reduced licensing costs. Spoon does not require the purchase of separate operating system licenses to use a container. Hardware virtualization systems require a host operating system in order to function, which can impose additional licensing costs and restrictions.
+
+- Kernel mode. The Spoon Application Virtualization Engine only virtualizes user-mode operating system features, whereas hardware virtualization systems emulate the entire OS stack, including kernel mode components. Applications requiring device drivers or other non-user-mode software may require a hardware-virtualized environment to function properly.
+
+### The three main components of Spoon
 
 #### Images - Build component
 
