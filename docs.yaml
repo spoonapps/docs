@@ -2,7 +2,8 @@
 topic: Getting Started
 documents:
 - title: What is Spoon?
-  sections: []
+  sections:
+  - How does it work?
 - title: Spoon Tour
   sections:
   - Always Have a Clean Machine
