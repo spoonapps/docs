@@ -6,15 +6,15 @@ This section summarizes some of the substantial differences for those that are f
 
 ### Supported Platforms
 
-Spoon was designed for the Windows platform and provides its own **Spoon VM** virtual machine implementation. Docker was designed for use on Linux environments and depends on operating system support to provide virtualization.
+Spoon was designed for the Windows platform and provides its own **Spoon Application Virtualization Engine** implementation. Docker was designed for use on Linux environments and depends on operating system support to provide virtualization.
 
-Because of this, Spoon supports many Windows-specific constructs, such as Windows Services, COM/DCOM components, WinSxS side-by-side versioning, shell registration, and many other mechanisms that do not exist on Linux operating systems.
+Because of this, Spoon supports many Windows-specific constructs, such as Windows Services, COM/DCOM components, WinSxS side-by-side versioning, shell registration, and many other mechanisms that do not exist on Linux operating systems. Read more about [how Spoon is different from hardware virtualization](/docs/getting-started/what-is-spoon#how-is-spoon-different).
 
 Spoon also provides a desktop client with many features (GUI tool to launch applications, file extension associations, Start Menu integration) that allow containerized applications to interact with the user in the same way as traditionally installed desktop applications. Our plugin also allows users to launch and stream containerized applications directly from any web browser.
 
 ### Layering
 
-Spoon containers are designed to operate in a *layered* virtual machine architecture. Layers can be thought of as "transparent sheets" of virtual environment configuration that can be stacked on top of one another to build many distinct configurations out of discrete components.
+Spoon containers are designed to operate in a *layered* virtual application engine architecture. Layers can be thought of as "transparent sheets" of virtual environment configuration that can be stacked on top of one another to build many distinct configurations out of discrete components.
 
 For example, to build a container for a Java application that uses a MongoDB database, a Spoon user could combine a Java runtime layer with a MongoDB database layer, then stack the application code and content in an application layer on top of its dependency layers. Layers make it extremely easy to re-use shared components such as runtimes, databases, and plugins.
 
