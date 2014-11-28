@@ -42,7 +42,7 @@ Run multiple browser versions side-by-side on a single device. Dynamically add b
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run firefox:32</p>
    <br>
    <p style="font-size: 13px; margin-bottom: 0; color: #00FF00; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"># Launch another browser instance in a Java 6 environment</p>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run jre:6,firefox</p>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run jre:6.45,firefox</p>
 </div>
 
 ### Container Skinning
