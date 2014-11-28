@@ -6,7 +6,6 @@ documents:
   - How does it work?
 - title: Spoon Tour
   sections:
-  - Always Have a Clean Machine
   - Instant Environment Configuration
   - Install Existing MSI Packages
   - Run Multiple Browser Versions
@@ -17,6 +16,7 @@ documents:
   - Migrate Containers Between Devices
   - Zero Footprint Testing
   - Import ThinApp Packages
+  - Always Have a Clean Machine
 - title: Walkthrough - Hello World
   sections:
   - Installation
