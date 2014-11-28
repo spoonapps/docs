@@ -52,7 +52,7 @@ Enter 'Q' to stop IIS Express
 
 ```
 # Begin testing with Firefox
-(249c4f3e) C:\> "C:\Program Files (x86)\Mozilla\firefox.exe"
+(249c4f3e) C:\> "C:\Program Files (x86)\Mozilla Firefox\firefox.exe"
 ```
 
 Go to `http://localhost:8080` and test the application.
