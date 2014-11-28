@@ -54,11 +54,9 @@ Spoon provides a fully hosted application hosting service at [Turbo.net](http://
 
 Unlike Docker, Spoon containers are *not* required to be completely isolated from the host device resources. Spoon can fully or partially isolate objects as needed at a fine granularity.
 
-A Spoon **isolation mode** may be specified on a per-object basis. For example, it is possible to specify that one directory subtree should be fully isolated while another one is visible from the host device. Supported isolation modes include **full**, **merge**, and **write copy**.
+A Spoon **isolation mode** may be specified on a per-object basis. For example, it is possible to specify that one directory subtree should be fully isolated while another one is visible from the host device. Supported isolation modes include **full**, **merge**, **hide**, and **write-copy**.
 
-When a container is created, by default it is given a read-only view into the host device's file system and registry; however, any changes are isolated and written instead to the container's sandbox. This allows virtual applications to consume host-device data and services while preventing any changes that would alter the system configuration. 
-
-Isolation from the host device only applies to processes that are created within the container. Existing applications or system services will not be isolated, nor will their interactions with processes inside the container. For example, executing an MSI installer package will result in an application being installed to the host device, as the installation is executed by a Windows system service. For this reason, we recommend use of a pre-existing package or the [snapshot](/docs/building/snapshotting) method to install MSIs.
+When a container is created, by default it is given a read-only view into the host device's file system and registry; however, any changes are isolated and written instead to the container's sandbox. This allows virtual applications to consume host device data and services while preventing any changes that would alter the system configuration. 
 
 For more information on isolation modes, please see the [Isolation Modes](/docs/reference/spoon-studio) section of this documentation.
 
