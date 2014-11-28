@@ -4,13 +4,15 @@ Docker is a new containerization technology built on top of the `LXC` kernel con
 
 This section summarizes some of the substantial differences for those that are familiar with Docker.
 
-### Supported Platforms
+### Platform
 
-Spoon was designed for the Windows platform and provides its own **Spoon Application Virtualization Engine** implementation. Docker was designed for use on Linux environments and depends on operating system support to provide virtualization.
+Spoon was designed for the Windows platform and its containerization system is built on top of the Spoon application virtualization engine. Docker was designed for use on Linux environments and is built on top of the LXC application virtualization system. Put another way, the Spoon VM plays the same role for Spoon containers as LXC does for Docker.
 
-Because of this, Spoon supports many Windows-specific constructs, such as Windows Services, COM/DCOM components, WinSxS side-by-side versioning, shell registration, and many other mechanisms that do not exist on Linux operating systems. Read more about [how Spoon is different from hardware virtualization](/docs/getting-started/what-is-spoon#how-is-spoon-different).
+For more information about the differences between application and OS virtualization, see the article [How Spoon is different from hardware virtualization](/docs/getting-started/what-is-spoon#how-is-spoon-different).
 
-Spoon also provides a desktop client with many features (GUI tool to launch applications, file extension associations, Start Menu integration) that allow containerized applications to interact with the user in the same way as traditionally installed desktop applications. Our plugin also allows users to launch and stream containerized applications directly from any web browser.
+Via the Spoon VM, Spoon containers support many Windows-specific constructs, such as Windows Services, COM/DCOM components, WinSxS side-by-side versioning, shell registration, and many other mechanisms that do not exist on Linux operating systems. 
+
+Spoon also provides a desktop client with many features (GUI tool to launch applications, file extension associations, Start Menu integration) that allow containerized applications to interact with the user in the same way as traditionally installed desktop applications. Spoon also provides a small browser plugin that allows users to launch and stream containerized applications directly from any web browser.
 
 ### Layering
 
@@ -46,9 +48,9 @@ repository.
 
 In addition, Spoon provides the ability to efficiently *stream* containers over the Internet. The Spoon system includes a predictive streaming engine to launch containers efficiently over wide area networks (WANs) without requiring the endpoint to download the entire VM image. Because many applications can be multiple gigabytes in size, this prevents a large startup latency for remote end users. Spoon predictive streaming uses statistical techniques to predict application resource access patterns based on profiles of previous user interactions. We then adapt the stream data flow based on predictions of subsequent required resources.
 
-Spoon provides a fully hosted application hosting service at [Spoon.net](http://spoon.net), which hosts application streams, provides application and user portals, automatically synchronizes user settings and application state to the cloud, and provides file synchronization and shared folders. For more information, visit the [Spoon.net homepage](http://spoon.net).
+Spoon provides a fully hosted application hosting service at [Turbo.net](http://turbo.net), which hosts application streams, provides application and user portals, automatically synchronizes user settings and application state to the cloud, and provides file synchronization and shared folders. For more information, visit the [Turbo.net homepage](http://turbo.net).
 
-Spoon.net's capabilities are also available in an on-premises [Spoon Server](http://spoon.net/server). Spoon Server provides the same functionality as Spoon.net in a behind-firewall environment as well as additional enterprise features like Active Directory integration.
+Spoon.net's capabilities are also available in an on-premises [Spoon Server](http://spoon.net/server). Spoon Server provides the same functionality as Spoon.net in a behind-firewall environment as well as additional enterprise features like Active Directory integration, license management, and usage analytics.
 
 ### Variable Isolation
 
@@ -73,7 +75,7 @@ Importantly, this contrasts with Docker, which *isolates* all ports by default. 
 
 Like Docker, Spoon provides command-line interfaces (`spoon`) and a scripting language (**SpoonScript**) for automating build processes. Spoon also provides a number of rich GUI- and web-based tools and services for building, configuring, and managing virtual environments.
 
-The **[Spoon Studio](/docs/building/working-with-spoon-studio)** is a graphical integrated development environment that provides a visual design environment and easy-to-use wizards for creating images. Spoon Studio also includes a "[Desktop Scan](/docs/building/desktop-scan)" tool that automatically detects and captures settings for any applications that are locally installed on a desktop.
+The **[Spoon Studio](/docs/building/working-with-spoon-studio)** is a graphical integrated development environment that provides a visual design environment and easy-to-use wizards for creating images. Spoon Studio also includes a [Desktop Scan](/docs/building/desktop-scan) tool that automatically detects and captures settings for any applications that are locally installed on a desktop.
 
 Spoon also maintains an online database of validated application templates and images for thousands of popular
 software applications.
