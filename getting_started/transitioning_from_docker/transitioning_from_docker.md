@@ -54,9 +54,7 @@ Spoon provides a fully hosted application hosting service at [Turbo.net](http://
 
 Unlike Docker, Spoon containers are *not* required to be completely isolated from the host device resources. Spoon can fully or partially isolate objects as needed at a fine granularity.
 
-A Spoon **isolation mode** may be specified on a per-object basis. For example, it is possible to specify that one directory subtree should be fully isolated while another one is visible from the host device. Supported isolation modes include **full**, **merge**, **hide**, and **write-copy**.
-
-When a container is created, by default it is given a read-only view into the host device's file system and registry; however, any changes are isolated and written instead to the container's sandbox. This allows virtual applications to consume host device data and services while preventing any changes that would alter the system configuration. 
+A Spoon **isolation mode** may be specified on a per-object basis. For example, it is possible to specify that one directory subtree should be fully isolated while another one is visible from the host device. Supported isolation modes include **Full**, **Merge**, **Hide**, and **Write Copy**.
 
 For more information on isolation modes, please see the [Isolation Modes](/docs/reference/spoon-studio) section of this documentation.
 
