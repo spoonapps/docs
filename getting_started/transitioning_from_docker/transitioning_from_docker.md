@@ -50,8 +50,6 @@ In addition, Spoon provides the ability to efficiently *stream* containers over 
 
 Spoon provides a fully hosted application hosting service at [Turbo.net](http://turbo.net), which hosts application streams, provides application and user portals, automatically synchronizes user settings and application state to the cloud, and provides file synchronization and shared folders. For more information, visit the [Turbo.net homepage](http://turbo.net).
 
-Spoon.net's capabilities are also available in an on-premises [Spoon Server](http://spoon.net/server). Spoon Server provides the same functionality as Spoon.net in a behind-firewall environment as well as additional enterprise features like Active Directory integration, license management, and usage analytics.
-
 ### Variable Isolation
 
 Unlike Docker, Spoon containers are *not* required to be completely isolated from the host device resources. Spoon can fully or partially isolate objects as needed at a fine granularity.
@@ -76,6 +74,8 @@ Importantly, this contrasts with Docker, which *isolates* all ports by default. 
 Like Docker, Spoon provides command-line interfaces (`spoon`) and a scripting language (**SpoonScript**) for automating build processes. Spoon also provides a number of rich GUI- and web-based tools and services for building, configuring, and managing virtual environments.
 
 The **[Spoon Studio](/docs/building/working-with-spoon-studio)** is a graphical integrated development environment that provides a visual design environment and easy-to-use wizards for creating images. Spoon Studio also includes a [Desktop Scan](/docs/building/desktop-scan) tool that automatically detects and captures settings for any applications that are locally installed on a desktop.
+
+Spoon.net's capabilities are also available in an on-premises [Spoon Server](http://spoon.net/server). Spoon Server provides the same functionality as Spoon.net in a behind-firewall environment as well as additional enterprise features such as a web portal, Active Directory and LDAP integration, user data synchronization, license management, and usage analytics.
 
 Spoon also maintains an online database of validated application templates and images for thousands of popular
 software applications.
