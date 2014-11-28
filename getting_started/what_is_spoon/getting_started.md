@@ -31,13 +31,15 @@ With Spoon, system administrators can:
 - Simplify deployment of desktop applications by eliminating dependencies (.NET, Java, Flash) and conflicts
 - Improve security by locking down desktop and server environments while preserving application access
 
-And Spoon works seamlessly with [Spoon.net](http://spoon.net), an application hosting service that provides an application portal, desktop console, data synchronization, cloud storage, and more.
+And Spoon works seamlessly with [Turbo.net](http://turbo.net), an application hosting service that provides an application portal, desktop console, data synchronization, cloud storage, and more.
 
 ## How does it work?
 
-Spoon containers are built on the **Spoon Virtual Machine Engine** (SVM), an application virtualization engine which provides lightweight implementation of core operating system APIs, including the filesystem, registry, process, networking, and threading subsystems. Applications executing within a virtual machine interact with a virtualized filesystem, registry, network, and process environment supplied by the SVM, rather than directly with the host machine. 
+Spoon containers are built on top of the **Spoon Virtual Machine Engine** (SVM), an application virtualization engine which provides lightweight implementation of core operating system APIs, including the filesystem, registry, process, networking, and threading subsystems. Applications executing within the Spoon virtual machine interact with a virtualized filesystem, registry, network, and process environment supplied by the SVM, rather than directly with the host device operating system.
 
-Unlike hardware virtualization systems like Microsoft Virtual PC and VMWare, or hypervisor systems such as Hyper-V, Spoon operates on top of a base operating on the stack and virtualizes specific operating system features required for application execution. This enables virtualized applications to operate efficiently, with the same performance characteristics as native executables.
+The Spoon VM is required to implement containerization on the Windows platform since the underlying OS does not provide appropriate containerization primitives. Put another way, Spoon VM plays the same role for Spoon containers as LXC does for Docker containers.
+
+Unlike hardware virtualization systems like Microsoft Virtual PC and VMWare, or hypervisor systems such as Hyper-V, Spoon VM operates on top of the base operating on the execution stack and virtualizes specific operating system features required for application execution. This enables virtualized applications to operate efficiently, with the same performance characteristics as native executables.
 
 There are several advantages in choosing Spoon containers over hardware virtualization systems:
 
