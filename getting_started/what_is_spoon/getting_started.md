@@ -37,6 +37,8 @@ And Spoon works seamlessly with [Turbo.net](http://turbo.net), an application ho
 
 Spoon containers are built on top of the **Spoon Virtual Machine Engine** (SVM), an application virtualization engine which provides lightweight implementation of core operating system APIs, including the filesystem, registry, process, networking, and threading subsystems. Applications executing within the Spoon virtual machine interact with a virtualized filesystem, registry, network, and process environment supplied by the SVM, rather than directly with the host device operating system.
 
+![](/components/docs/getting_started/what_is_spoon/spoon-vm.png)
+
 The Spoon VM is required to implement containerization on the Windows platform since the underlying OS does not provide appropriate containerization primitives. Put another way, Spoon VM plays the same role for Spoon containers as LXC does for Docker containers.
 
 Unlike hardware virtualization systems like Microsoft Virtual PC and VMWare, or hypervisor systems such as Hyper-V, Spoon VM operates on top of the base operating on the execution stack and virtualizes specific operating system features required for application execution. This enables virtualized applications to operate efficiently, with the same performance characteristics as native executables.
