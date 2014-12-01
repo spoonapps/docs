@@ -1,12 +1,12 @@
 ### tag
 
-The `tag` command applies a new tag to an image 
+The `tag` command applies a new tag to an image.
 
 ```
 Usage: spoon tag <image> <tag>
 ```
 
-A new tag is applied to the image head. 
+Apply a new tag to the head version of an image. 
 
 ```
 > spoon tag my-image 1.0

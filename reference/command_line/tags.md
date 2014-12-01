@@ -1,15 +1,15 @@
 ### tags
 
-The `tags` command returns all the available tags for that image. 
+The `tags` command returns all the available tags for an image. 
 
 ```
-Usage: spoon tag <image>
+Usage: spoon tags <image>
 ```
 
 All the available tags are displayed.
 
 ```
-> spoon tag my-image
+> spoon tags my-image
 All available tags of my-image:
 head (local)
 1.0 (local)
