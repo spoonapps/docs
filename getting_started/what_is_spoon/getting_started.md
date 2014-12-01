@@ -35,7 +35,9 @@ And Spoon works seamlessly with [Turbo.net](http://turbo.net), an application ho
 
 ### How does it work?
 
-Spoon containers are built on top of the **Spoon Virtual Machine Engine** (SVM), an application virtualization engine which provides lightweight implementation of core operating system APIs, including the filesystem, registry, process, networking, and threading subsystems. Applications executing within the Spoon virtual machine interact with a virtualized filesystem, registry, network, and process environment supplied by the SVM, rather than directly with the host device operating system.
+Spoon containers are built on top of the **Spoon Virtual Machine Engine** (SVM), an application virtualization engine which provides lightweight implementation of core operating system APIs, including the filesystem, registry, process, networking, and threading subsystems. Applications executing within the Spoon virtual machine interact with a virtualized filesystem, registry, network, and process environment supplied by the SVM, rather than directly with the host device operating system. 
+
+The image below demonstrates how the SVM is isolated from the host environment.
 
 ![](/components/docs/getting_started/what_is_spoon/spoon-vm.png)
 
