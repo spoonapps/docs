@@ -95,7 +95,7 @@ Verify that the web application is in the same state even though you are on a co
 
 ```
 249c4f3e C:\> start "MiniBlog" "C:\Program Files (x86)\IIS Express\iisexpress.exe" /path:C:\MiniBlog\Website
-249c4f3e C:\> "C:\Program Files (x86)\Mozilla\firefox.exe"
+249c4f3e C:\> "C:\Program Files (x86)\Mozilla Firefox\firefox.exe"
 ```
 
 Go to `http://localhost:8080` and you can see that the post we created earlier is still there.
