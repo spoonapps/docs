@@ -195,7 +195,9 @@ documents:
   - run
   - search
   - start
+  - states
   - tag
+  - tags
   - try
   - unregister
   - upgrade
