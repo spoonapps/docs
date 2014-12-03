@@ -247,6 +247,11 @@ Example for mounting a folder.
 spoon run --mount C:\FolderOnHostSystem=C:\FolderInContainer clean
 ```
 
+Mounts are useful to share a cache folder, like a local Maven repository:
+```
+spoon run --mount --mount %USERPROFILE%\.m2=%USERPROFILE%\.m2 jdk,maven
+```
+
 Mounting multiple folder is done by repeating the mount parameter:
 
 ```
