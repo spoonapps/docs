@@ -3,7 +3,7 @@
 The `push` command syncs an image from your local registry to the remote registry. 
 
 ```
-Usage: spoon push <options> [<namespace>/]<image>[:<tag>]
+Usage: spoon push <options> <image> [<remote image>]
 
 <options> available:
       --wait-after-error     Leave program open after error
