@@ -247,6 +247,12 @@ Example for mounting a folder.
 spoon run --mount C:\FolderOnHostSystem=C:\FolderInContainer clean
 ```
 
+Mounting multiple folder is done by repeating the mount parameter:
+
+```
+spoon run --mount C:\Mount1=C:\InContainer1 --mount C:\Mount2=C:\InContainer2 clean
+```
+
 It is also possible to mount a folder from another container:
 
 ```
