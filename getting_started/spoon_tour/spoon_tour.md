@@ -2,30 +2,6 @@
 
 Spoon containerization dramatically simplifies the way developers and IT managers build, test, and deploy software. Here are a few of the amazing things you can do with Spoon:
 
-### Always Have a Clean Machine
-
-Need a clean machine to install or test something? Create one in seconds with a single command.
-
-<div style="width: 605px; margin: 0 8px; background-color: #292929; color: #949799; padding: 15px; border-radius: 4px; margin-bottom: 28px;">
-   <p style="font-size: 13px; margin-bottom: 0; color: #00FF00; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"># Launch a clean virtual machine</p>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run clean</p>
-   <br>
-   <p style="font-size: 13px; margin-bottom: 0; color: #00FF00; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"># Command prompt for a clean virtual machine with id 4aa232b1</p>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">(4aa232b1)&gt; dir C:\</p>
-   <br>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"> Volume in drive C has no label.</p>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"> Volume Serial Number is 7C90-F8ED</p>
-   <br>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"> Directory of C:\</p>
-   <br>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">06/10/2009  01:42 PM                24 autoexec.bat</p>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">06/10/2009  01:42 PM                10 config.sys</p>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">04/11/2011  06:24 PM    &lt;DIR&gt;          Program Files</p>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">11/14/2014  09:34 AM    &lt;DIR&gt;          Users</p>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">11/25/2013  03:40 PM    &lt;DIR&gt;          Windows</p>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">...</p>
-</div>
-
 ### Instant Environment Configuration
 
 Easily create container environments by combining pre-configured base images for popular development tools and frameworks.
@@ -58,15 +34,15 @@ Run multiple browser versions side-by-side on a single device. Dynamically add b
 
 <div style="width: 605px; margin: 0 8px; background-color: #292929; color: #949799; padding: 15px; border-radius: 4px; margin-bottom: 28px;">
    <p style="font-size: 13px; margin-bottom: 0; color: #00FF00; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"># Run a server application on Java 7 and 8</p>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run jre:8,server</p>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run jre:7,server</p>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run jre:8.0,server</p>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run jre:7.51,server</p>
    <br>
    <p style="font-size: 13px; margin-bottom: 0; color: #00FF00; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"># Run multiple versions of Firefox simultaneously</p>
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run firefox:33</p>
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run firefox:32</p>
    <br>
    <p style="font-size: 13px; margin-bottom: 0; color: #00FF00; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"># Launch another browser instance in a Java 6 environment</p>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run jre:6,firefox</p>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run jre:6.45,firefox</p>
 </div>
 
 ### Container Skinning
@@ -75,9 +51,9 @@ Skinning makes it easy to visually distinguish between container contexts.
 
 <div style="width: 605px; margin: 0 8px; background-color: #292929; color: #949799; padding: 15px; border-radius: 4px; margin-bottom: 28px;">
    <p style="font-size: 13px; margin-bottom: 0; color: #00FF00; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"># Identify different Java versions by window skin</p>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run jre:8,firefox+skin(green)</p>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run jre:7,firefox+skin(red)</p>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run jre:6,firefox+skin(0x0000ff)</p>   
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run jre:8.0,firefox+skin(green)</p>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run jre:7.51,firefox+skin(red)</p>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run jre:6.45,firefox+skin(0x0000ff)</p>   
 </div>
 
 ### Share Development Environments
@@ -165,4 +141,28 @@ Import existing virtual application packages from ThinApp into containers with a
    <p style="font-size: 13px; margin-bottom: 0; color: #00FF00; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"># Import the ThinApp package described by package.ini</p>
    <br>
    <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon import -n=app thinapp C:\thinapp-project\package.ini </p>
+</div>
+
+### Always Have a Clean Machine
+
+Need a clean machine to install or test something? Create one in seconds with a single command.
+
+<div style="width: 605px; margin: 0 8px; background-color: #292929; color: #949799; padding: 15px; border-radius: 4px; margin-bottom: 28px;">
+   <p style="font-size: 13px; margin-bottom: 0; color: #00FF00; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"># Launch a clean virtual machine</p>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon run clean</p>
+   <br>
+   <p style="font-size: 13px; margin-bottom: 0; color: #00FF00; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"># Command prompt for a clean virtual machine with id 4aa232b1</p>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">(4aa232b1)&gt; dir C:\</p>
+   <br>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"> Volume in drive C has no label.</p>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"> Volume Serial Number is 7C90-F8ED</p>
+   <br>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"> Directory of C:\</p>
+   <br>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">06/10/2009  01:42 PM                24 autoexec.bat</p>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">06/10/2009  01:42 PM                10 config.sys</p>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">04/11/2011  06:24 PM    &lt;DIR&gt;          Program Files</p>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">11/14/2014  09:34 AM    &lt;DIR&gt;          Users</p>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">11/25/2013  03:40 PM    &lt;DIR&gt;          Windows</p>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">...</p>
 </div>

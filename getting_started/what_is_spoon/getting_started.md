@@ -31,36 +31,28 @@ With Spoon, system administrators can:
 - Simplify deployment of desktop applications by eliminating dependencies (.NET, Java, Flash) and conflicts
 - Improve security by locking down desktop and server environments while preserving application access
 
-And Spoon works seamlessly with [Spoon.net](http://spoon.net), an application hosting service that provides an application portal, desktop console, data synchronization, cloud storage, and more.
+And Spoon works seamlessly with [Turbo.net](http://turbo.net), an application hosting service that provides an application portal, desktop console, data synchronization, cloud storage, and more.
 
-#### Open Source
+### How does it work?
 
-Spoon is 100% free for open source projects. Set up a free organization at Spoon.net and [contact us](/contact) if you need help or access to premium features.
+Spoon containers are built on top of the **Spoon Virtual Machine Engine** (SVM), an application virtualization engine which provides lightweight implementation of core operating system APIs, including the filesystem, registry, process, networking, and threading subsystems. Applications executing within the Spoon virtual machine interact with a virtualized filesystem, registry, network, and process environment supplied by the SVM, rather than directly with the host device operating system. 
 
-## How does it work?
+The image below illustrates how the SVM is isolated from the host environment.
 
-Spoon containers are built on the **Spoon Virtual Machine** (SVM), a lightweight implementation of core operating system APIs, including the filesystem, registry, process, and threading subsystems. Applications executing within a container interact with a virtualized filesystem, registry, and process environment supplied by the SVM, rather than directly with the host machine. There are three main components to Spoon:
+![](/components/docs/getting_started/what_is_spoon/spoon-vm.png)
 
-#### Images - Build component
+The Spoon VM is required to implement containerization on the Windows platform since the underlying OS does not provide appropriate containerization primitives. Put another way, Spoon VM plays the same role for Spoon containers as LXC does for Docker containers.
 
-Spoon images serve as a read-only filesystem and registry that your application will use while running in a container. They contain all of the information on a certain type of container.
+Unlike hardware virtualization systems like Microsoft Virtual PC and VMWare, or hypervisor systems such as Hyper-V, Spoon VM operates on top of the base operating on the execution stack and virtualizes specific operating system features required for application execution. This enables virtualized applications to operate efficiently, with the same performance characteristics as native executables.
 
-Verified images (like jdk, node, mongo)  are available for download from the [Spoon Hub](/hub), or a custom image can be created from any container with the `spoon commit` command. Thus, you can layer multiple dependency images together in a single container, rather than having to build one on top of another.
+There are several advantages in choosing Spoon containers over hardware virtualization systems:
 
-When instructed to run a container with the `spoon run` command, Spoon will automatically search for and download necessary images. Read more about [working with images](/docs/building/working-with-images).
+- Optimal performance: Spoon containers run at the same speed as applications running natively against the host hardware, with a minimal memory footprint. In contrast, applications running within hardware-virtualized environments experience significant slow-downs and impose a large memory footprint due to the need to run multiple instances of a base operating system.
 
-#### Repositories - Distribution component
+- Dramatically reduced virtual environment size: Spoon containers require a footprint proportional to the size of the virtualized application, data, and included components. As a result, Spoon containers are small enough to be quickly downloaded by end-users. Hardware virtualization requires an entire host operating system image, including many basic subsystems that are already present on the end-user device. Each virtual machine may occupy several gigabytes of storage.
 
-To share your public images and containers with others, we have the [Spoon Hub](/hub), which is filled with public repositories from both Spoon users and the [spoonbrew team](/hub/spoonbrew).
+- Application density: You can run multiple simultaneous Spoon environments per processor. Due to the high overhead of hardware virtualization, only a small number of hardware-virtualized environments per processor can run simultaneously.
 
-Free Spoon accounts come with unlimited public repositories. You can also upgrade to a [paid plan](/pricing) with private repositories, or host your own on-premises repositories (instructions found [here](/docs/deploying/to-a-spoon-server)).
+- Reduced licensing costs: Spoon does not require the purchase of separate operating system licenses to use a container. Hardware virtualization systems require a host operating system in order to function, which can impose additional licensing costs and restrictions.
 
-Once an image is on the Hub, you can run it from another location. Read more about [repositories](/docs/hub/repositories).
-
-#### Containers - Run component
-
-Containers are created from an image or from multiple images. They hold everything needed for applications to run, and they can be run/started/stopped/removed, and more.
-
-You can turn any container into a custom image template using the `spoon commit` command.
-
-Read more about [working with containers](/docs/building/working-with-containers) and about [how Spoon works](/docs/getting-started/about), or jump right in with our "Hello World!" tutorial below.
+- User mode implementation: The Spoon application virtualization engine is implemented entirely in user mode and does not require administrative privileges. Note that applications requiring hardware device drivers or other non-user-mode software may require a hardware-virtualized environment to function properly.

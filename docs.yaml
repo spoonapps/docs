@@ -2,10 +2,10 @@
 topic: Getting Started
 documents:
 - title: What is Spoon?
-  sections: []
+  sections:
+  - How does it work?
 - title: Spoon Tour
   sections:
-  - Always Have a Clean Machine
   - Instant Environment Configuration
   - Install Existing MSI Packages
   - Run Multiple Browser Versions
@@ -16,6 +16,7 @@ documents:
   - Migrate Containers Between Devices
   - Zero Footprint Testing
   - Import ThinApp Packages
+  - Always Have a Clean Machine
 - title: Walkthrough - Hello World
   sections:
   - Installation
@@ -51,16 +52,16 @@ documents:
   - Windows
   - Azure
   - EC2
-- title: Transitioning from Docker
+- title: Differences from Docker
   sections: 
-  - Supported Platforms
+  - Platform
   - Layering
   - Streaming
   - Variable Isolation
   - Networking
   - Toolchain
   - Configuration
-  - Partners
+  - Support
 - title: About
   sections:
   - Virtual Machine
@@ -194,7 +195,9 @@ documents:
   - run
   - search
   - start
+  - states
   - tag
+  - tags
   - try
   - unregister
   - upgrade
