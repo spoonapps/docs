@@ -1,28 +1,35 @@
 ### states
 
-The states command lists all container states on the hub.  
+The `states` command lists all of the container states on the Spoon.net Hub.  
 
 ```
-Usage: spoon containers [<container-prefix>] <options>
+Usage: spoon states [<container-prefix>] <options>
 
 <options> available:
       --csv                  Print output with tab-separated columns
-  -l, --latest               List the most recently created container
-  -n=VALUE                   List the 'n' most recently created containers
+  -l, --latest               List the most recently created container state
+  -n=VALUE                   List the 'n' most recently created container states
       --no-trunc             Don't truncate output
 ```
 
-Command line flags for the `states` flag serve to modify or filter the command's results. A `<container-prefix>` can be added to only display states of containers that starts with `<container-prefix>`.
+Command line flags can be used to filter or limit the results. 
 
 ```
-# Only show most recently created state
+# Use a container prefix to show states for containers that match
+> spoon states cf6ba
+
+Container  Created              State     Visibility
+---------  -------              -----     ----------
+cf6ba018   2014-12-01 18:34:55  5f2b7843  Public
+
+# Show the last state created
 > spoon states -l
 
 Container  Created              State     Visibility
 ---------  -------              -----     ----------
 e4b1ba0f   2014-12-01 18:48:47  2e981e1e  Public
 
-# Show last 'n' created containers
+# Show last 'n' container states that were created
 > spoon states -n=3
 Container  Created              State     Visibility
 ---------  -------              -----     ----------
@@ -31,17 +38,17 @@ cf6ba018   2014-12-01 18:34:55  5f2b7843  Public
 dfc32e73   2014-12-01 18:33:35  eafa3740  Public
 ```
 
-If the value specified for `-n` is greater than the number of states present on the hub, all of the states are listed (same result as running `spoon states`). 
+If the value specified for `-n` is greater than the number of container states present on the hub, all of the states will be listed. 
 
 #### Formatting Results
 
-The table that is returned by the states command is space-formatted. If you wish to return the table with tabs between each column then use the `--csv` flag. 
+The table returned by the `states` command is space-formatted by default. Use the `--csv` flag to return a tab delimited table. 
 
 ```
 > spoon states --csv
 ```
 
-Data in the table returned by the states command is truncated so that it prints nicely and is easily readable in a command prompt. If you wish to view the untruncated data in each column, use the `--no-trunc` flag. 
+Data in the table returned by the `states` command is truncated so that it prints nicely and is easily readable in a command prompt. Use the `--no-trunc` flag to view all of the data. 
 
 ```
 > spoon states --no-trunc
