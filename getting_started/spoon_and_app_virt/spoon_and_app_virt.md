@@ -19,7 +19,7 @@ the dynamic state of a container.
 
 The Spoon containerization system includes:
 
-* **`spoon` Command Processor:** The `spoon` console application provides a command-line interface for standard container
+* **Spoon Command Processor:** The `spoon` console application provides a command-line interface for standard container
   operations such as creating, stopping, committing, and pushing containers.
 * **SpoonScript:** SpoonScript is a scripting language that supports automation of container creation and maintenance tasks.
 * **SpoonDB:** SpoonDB is a deduplicated storage system optimized to support storage, rollback, and differential synchronization of containers.

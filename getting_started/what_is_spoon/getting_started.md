@@ -1,7 +1,6 @@
 ## What is Spoon?
 
-Spoon allows you to create a 
-Spoon allows you to package applications and their dependencies into a lightweight, isolated virtual environment called a "container." Containerized ("Spooned") applications can then be run on any Windows machine that has Spoon installed, no matter the underlying infrastructure. This eliminates installs, conflicts, breaks, and missing dependencies.
+Spoon allows you to package applications and their dependencies into a lightweight, isolated virtual environment called a "container." Containerized applications can then be run on any Windows machine that has Spoon installed, no matter the underlying infrastructure. This eliminates installs, conflicts, breaks, and missing dependencies.
 
 Spoon containers are built on top of the Spoon Virtual Machine, an *application virtualization* engine that provides lightweight
 namespace isolation of core operating system objects such as the filesystem, registry, process, networking, and threading subsystems.
