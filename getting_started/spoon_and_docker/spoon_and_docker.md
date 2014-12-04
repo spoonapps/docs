@@ -1,4 +1,4 @@
-## Differences from Docker
+## Spoon and Docker
 
 Docker is a new containerization technology built on top of the `LXC` kernel containment system, a component of the Linux OS. While there are some similarities between the Docker and Spoon platforms, there are also significant differences.
 
@@ -6,7 +6,11 @@ This section summarizes some of the substantial differences for those that are f
 
 ### Platform
 
-Spoon was designed for the Windows platform and its containerization system is built on top of the Spoon application virtualization engine. Docker was designed for use on Linux environments and is built on top of the LXC application virtualization system. Put another way, the Spoon VM plays the same role for Spoon containers as LXC does for Docker.
+Spoon was designed for the Windows platform and its containerization system is built on top of the Spoon application virtualization engine. Docker was designed for use on Linux environments and is built on top of the LXC application virtualization system. Put another way, the Spoon VM plays the same role for Spoon containers as LXC does for Docker. In fact, LXC can be viewed as a type of application virtualization implementation.
+
+Spoon **supports both desktop and server Windows applications**, and works on **all desktop and server editions of Windows** from Windows XP
+forward. Spoon does not require modifications to the base operating system kernel and Spoon does not execute a parallel copy of the base
+operating system.
 
 For more information about the differences between application and OS virtualization, see the article [How Spoon is different from hardware virtualization](/docs/getting-started/what-is-spoon#how-does-it-work).
 
@@ -27,9 +31,10 @@ Layers can be applied dynamically and programmatically, so you can present disti
 Spoon layering also enables *partial rollback* during container builds via the `using` command. This is especially useful when an external tool is required *during* the build process, but is *not* desired in the ultimate container. For example:
 
     using git
-	// pull in stuff using git
+	  // pull in content using git
 	
-	// use the stuff to complete container setup
+	// (git content no longer present in the container)
+	// use the content to complete container setup
 
 In this code, the contents of the `git` container will *not* be present in the output container. By contrast, Docker does not distinguish between content that is imported for use only during the build process and content required by the application container at runtime.
 
@@ -41,20 +46,14 @@ Layering can be used in the `spoon.me` automated build script to build container
 
 By contrast, Docker does *not* support creation of images from multiple base images. In other words, Spoon supports "multiple inheritance" through source layering, and "polymorphism" through post-layering.
 
-### Streaming
-
-Spoon, like Docker, supports the use of local containers and the ability to push and pull containers from a central
-repository.
-
-In addition, Spoon provides the ability to efficiently *stream* containers over the Internet. The Spoon system includes a predictive streaming engine to launch containers efficiently over wide area networks (WANs) without requiring the endpoint to download the entire VM image. Because many applications can be multiple gigabytes in size, this prevents a large startup latency for remote end users. Spoon predictive streaming uses statistical techniques to predict application resource access patterns based on profiles of previous user interactions. Spoon then adapts the stream data flow based on predictions of subsequent required resources.
-
-Spoon provides a fully hosted application hosting service at [Turbo.net](http://turbo.net), which hosts application streams, provides application and user portals, automatically synchronizes user settings and application state to the cloud, and provides file synchronization and shared folders. For more information, visit the [Turbo.net homepage](http://turbo.net).
-
 ### Variable Isolation
 
 Unlike Docker, Spoon containers are *not* required to be completely isolated from the host device resources. Spoon can fully or partially isolate objects as needed at a fine granularity.
 
-A Spoon **isolation mode** may be specified on a per-object basis. For example, it is possible to specify that one directory subtree should be fully isolated while another one is visible from the host device. Supported isolation modes include **Full**, **Merge**, **Hide**, and **Write Copy**.
+The Spoon `mount` command allows a specific path in a container to be mapped to a (possibly different) path in another container *or* on the
+host device. This is extremely useful, for example, to allow cached data to be persisted across resets of an application container image.
+
+At an even finer granularity, a Spoon **isolation mode** may be specified on a per-object basis. For example, it is possible to specify that one directory subtree should be fully isolated while another one is visible from the host device. Supported isolation modes include **Full**, **Merge**, **Hide**, and **Write Copy**.
 
 For more information on isolation modes, please see the [Isolation Modes](/docs/building/working-with-spoon-studio#virtual-filesystem) section of this documentation.
 
@@ -69,7 +68,7 @@ Importantly, this contrasts with Docker, which *isolates* all ports by default. 
 
 Like Docker, Spoon provides command-line interfaces (`spoon`) and a scripting language (**SpoonScript**) for automating build processes. Spoon also provides a number of rich GUI- and web-based tools and services for building, configuring, and managing virtual environments.
 
-**[Spoon Studio](/docs/building/working-with-spoon-studio)** is a graphical integrated development environment that provides a visual design environment and easy-to-use wizards for creating images. Spoon Studio also includes a [Desktop Scan](/docs/building/working-with-spoon-studio#desktop-scan) tool that automatically detects and captures settings for any applications that are locally installed on a desktop.
+**[Spoon Studio](/docs/building/working-with-spoon-studio)** provides a visual design environment and easy-to-use wizards for creating images. Spoon Studio also includes a [Desktop Scan](/docs/building/working-with-spoon-studio#desktop-scan) tool that automatically detects and captures settings for any applications that are locally installed on a desktop.
 
 **[Spoon Server](http://spoon.net/server)** is an on-premises version of Spoon.net that	provides the same functionality in a behind-firewall environment. In addition, Spoon Server provides enterprise-specific such as a web application portal, Active Directory and LDAP integration, centralized management, user data synchronization, license management, and usage analytics.
 
@@ -84,6 +83,18 @@ To assist in building static configurations, Spoon offers a graphical **Spoon St
 
 For more information on Spoon Studio and snapshot tools, see the [Building](/docs/building) section in this documentation.
 
+### Streaming
+
+Spoon, like Docker, supports the use of local containers and the ability to push and pull containers from a central
+repository.
+
+In addition, Spoon provides the ability to efficiently *stream* containers over the Internet. The Spoon system includes a predictive streaming engine to launch containers efficiently over wide area networks (WANs) without requiring the endpoint to download the entire VM image. Because many applications can be multiple gigabytes in size, this prevents a large startup latency for remote end users. Spoon predictive streaming uses statistical techniques to predict application resource access patterns based on profiles of previous user interactions. Spoon then adapts the stream data flow based on predictions of subsequent required resources.
+
+Spoon provides a fully hosted application hosting service at [Turbo.net](http://turbo.net), which hosts application streams, provides application and user portals, automatically synchronizes user settings and application state to the cloud, and provides file synchronization and shared folders.For more information, visit the [Turbo.net homepage](http://turbo.net).
+
 ### Support
 
-Spoon technology is integrated into select third-party enterprise application delivery platforms, including [Novell ZENworks Suite](https://www.novell.com/products/zenworks/zenworks-suite/), [Novell ZENworks Application Virtualization](http://novell.com/zav), and [LANDesk Management Suite](http://landesk.com).
+Spoon provides commercial support for all official Spoon repositories. Professional services are also available for organizations
+needing assistance with virtualizing specific applications or building customized solutions on top of Spoon.
+
+Spoon technology is integrated into select third-party enterprise application delivery platforms, including [Novell ZENworks Suite](https://www.novell.com/products/zenworks/zenworks-suite/), [Novell ZENworks Application Virtualization](http://novell.com/zav), and [LANDesk Management Suite](http://landesk.com). Novell and LANDesk provide commercial support for Spoon when purchased via these channels.

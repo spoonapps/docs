@@ -3,7 +3,9 @@ topic: Getting Started
 documents:
 - title: What is Spoon?
   sections:
+  - Why use Spoon?
   - How does it work?
+  - FAQ
 - title: Spoon Tour
   sections:
   - Instant Environment Configuration
@@ -52,15 +54,15 @@ documents:
   - Windows
   - Azure
   - EC2
-- title: Differences from Docker
+- title: Spoon and Docker
   sections: 
   - Platform
   - Layering
-  - Streaming
   - Variable Isolation
   - Networking
   - Toolchain
   - Configuration
+  - Streaming
   - Support
 - title: About
   sections:
