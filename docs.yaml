@@ -60,6 +60,7 @@ documents:
   sections: 
   - Platform
   - Layering
+  - Continuation
   - Variable Isolation
   - Networking
   - Toolchain

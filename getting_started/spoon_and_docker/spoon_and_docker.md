@@ -53,7 +53,7 @@ arbitrary, a state is identified with a hash value that aggregates the state of 
 *volatile* in that they vary continuously as execution occurs in the underlying container, and are indepenent of commit points. By default, the Spoon
 container engine captures state information at container startup and shutdown.
 
-Spoon's unique *continue* primitive allows execution to be continued from a specified state identifier. Importantly, the state identifier encodes all
+Spoon's unique `continue` command allows execution to be continued from a specified state identifier. Importantly, the state identifier encodes all
 information about a container and, in particular, allows for continuation of container execution **across different devices**.
 
 When a container is stopped or suspended, the Spoon container engine will report a state identifier for the container, such as `6aac21bf`. You can

@@ -44,8 +44,10 @@ implementation but differs in many details impacting compatibility coverage and 
 "sequencing" or "capture" of setups on a clean machine in order to create virtual environment packages.
 
 Neither App-V nor ThinApp offer a containerization system supporting essential container primitives such as image storage,
-versioning, rollback, network virtualization, or container linking. While application virtualization engines share some characteristics
-in common with containers, such as the ability to run software in an isolated namespace from the host device, XXXX "container" support.
-And, critically, neither App-V nor ThinApp support the ability to install software within a container without requiring a
-"sequencing" or "capture" process on an external operating system instance.
+versioning, rollback, network virtualization, or container linking. While app virtualization engines share some characteristics
+in common with containers, such as the ability to run software in an isolated namespace from the host device, containerization requires
+additional components such as the container storage system, command processor, scripting engine, and hub, as well as additional core app
+virtualization engine capabilities to support dynamic configuration of application packages. Critically, neither App-V nor ThinApp
+support the ability to install software within a container without requiring a "sequencing" or "capture" process on an external
+operating system instance.
 
