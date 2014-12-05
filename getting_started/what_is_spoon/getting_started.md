@@ -55,15 +55,15 @@ Unlike hardware virtualization systems like Microsoft Virtual PC and VMWare, or 
 
 There are several advantages in choosing Spoon containers over hardware virtualization systems:
 
-- Optimal performance: Spoon containers run at the same speed as applications running natively against the host hardware, with a minimal memory footprint. In contrast, applications running within hardware-virtualized environments experience significant slow-downs and impose a large memory footprint due to the need to run multiple instances of a base operating system.
+- *Optimal performance:* Spoon containers run at the same speed as applications running natively against the host hardware, with a minimal memory footprint. In contrast, applications running within hardware-virtualized environments experience significant slow-downs and impose a large memory footprint due to the need to run multiple instances of a base operating system.
 
-- Dramatically reduced virtual environment size: Spoon containers require a footprint proportional to the size of the virtualized application, data, and included components. As a result, Spoon containers are small enough to be quickly downloaded by end-users. Hardware virtualization requires an entire host operating system image, including many basic subsystems that are already present on the end-user device. Each virtual machine may occupy several gigabytes of storage.
+- *Dramatically reduced virtual environment size:* Spoon containers require a footprint proportional to the size of the virtualized application, data, and included components. As a result, Spoon containers are small enough to be quickly downloaded by end-users. Hardware virtualization requires an entire host operating system image, including many basic subsystems that are already present on the end-user device. Each virtual machine may occupy several gigabytes of storage.
 
-- Application density: You can run multiple simultaneous Spoon environments per processor. Due to the high overhead of hardware virtualization, only a small number of hardware-virtualized environments per processor can run simultaneously.
+- *Application density:* You can run multiple simultaneous Spoon environments per processor. Due to the high overhead of hardware virtualization, only a small number of hardware-virtualized environments per processor can run simultaneously.
 
-- Reduced licensing costs: Spoon does not require the purchase of separate operating system licenses to use a container. Hardware virtualization systems require a host operating system in order to function, which can impose additional licensing costs and restrictions.
+- *Reduced licensing costs:* Spoon does not require the purchase of separate operating system licenses to use a container. Hardware virtualization systems require a host operating system in order to function, which can impose additional licensing costs and restrictions.
 
-- User mode implementation: The Spoon application virtualization engine is implemented entirely in user mode and does not require administrative privileges. Note that applications requiring hardware device drivers or other non-user-mode software may require a hardware-virtualized environment to function properly.
+- *User mode implementation:* The Spoon application virtualization engine is implemented entirely in user mode and does not require administrative privileges. Note that applications requiring hardware device drivers or other non-user-mode software may require a hardware-virtualized environment to function properly.
 
 ### FAQ
 
