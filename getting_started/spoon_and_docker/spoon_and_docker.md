@@ -46,6 +46,25 @@ Layering can be used in the `spoon.me` automated build script to build container
 
 By contrast, Docker does *not* support creation of images from multiple base images. In other words, Spoon supports "multiple inheritance" through source layering, and "polymorphism" through post-layering.
 
+### Continuation
+
+In addition to images and containers, Spoon supports an additional abstraction level called a **state**. Unlike image and container identifiers, which are
+arbitrary, a state is identified with a hash value that aggregates the state of all objects within the container at a specific point in time. States are
+*volatile* in that they vary continuously as execution occurs in the underlying container, and are indepenent of commit points. By default, the Spoon
+container engine captures state information at container startup and shutdown.
+
+Spoon's unique *continue* primitive allows execution to be continued from a specified state identifier. Importantly, the state identifier encodes all
+information about a container and, in particular, allows for continuation of container execution **across different devices**.
+
+When a container is stopped or suspended, the Spoon container engine will report a state identifier for the container, such as `6aac21bf`. You can
+then continue execution of the container from that state with the command:
+
+    spoon continue 6aac21bf
+
+and this command can be executed from **any device**, not necessarily the original device hosting the container. Continuation can be used with any
+state, not necessarily the latest state, creating the effect of an inter-commit rollback; and multiple continuations can be executed from a single state,
+allowing forking of execution, potentially across multiple devices.
+
 ### Variable Isolation
 
 Unlike Docker, Spoon containers are *not* required to be completely isolated from the host device resources. Spoon can fully or partially isolate objects as needed at a fine granularity.
