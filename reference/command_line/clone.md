@@ -1,6 +1,7 @@
 ### clone
 
-The `clone` command creates copy of existing container
+The `clone` command creates a copy of an existing container.
+
 ```
 Usage: spoon clone  <existing container> [<new container name>]
 ```
@@ -8,10 +9,10 @@ Usage: spoon clone  <existing container> [<new container name>]
 #### Examples:
 
 ```
-# Create unnamed copy of container
+# Create unnamed copy of a container
 > spoon clone 28c
 
-# Create named copy of container
+# Create named copy of a container
 > spoon clone test-container copy-of-test-container
 
 ```

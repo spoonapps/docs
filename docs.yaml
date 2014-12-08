@@ -173,6 +173,7 @@ documents:
   - help
   - build
   - checkout
+  - clone
   - commit
   - config
   - containers
