@@ -116,7 +116,7 @@ with licensing requirements.
 
 **Where is the Spoon container hub?**
 
-The public Spoon Hub is hosted at [http://spoon.net/hub].
+The public Spoon Hub is hosted at [http://spoon.net/hub](http://spoon.net/hub).
 
 **What is the Spoon pricing model?**
 
