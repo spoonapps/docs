@@ -65,7 +65,7 @@ and this command can be executed from **any device**, not necessarily the origin
 state, not necessarily the latest state, creating the effect of an inter-commit rollback; and multiple continuations can be executed from a single state,
 allowing forking of execution, potentially across multiple devices.
 
-### Variable Isolation
+### Isolation Modes
 
 Unlike Docker, Spoon containers are *not* required to be completely isolated from the host device resources. Spoon can fully or partially isolate objects as needed at a fine granularity.
 

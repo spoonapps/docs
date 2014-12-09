@@ -61,7 +61,7 @@ documents:
   - Platform
   - Layering
   - Continuation
-  - Variable Isolation
+  - Isolation
   - Networking
   - Toolchain
   - Configuration
