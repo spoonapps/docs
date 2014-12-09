@@ -22,14 +22,14 @@ C:\> spoon login username password
 Logged in as username
 ```
 
-For this Ghost example, we will need to start our container with some basic utilities, such as wget and 7zip. We  will also pull and run the NodeJS server, which is required for the Ghost application. For this, we'll use `spoon run`, which will automatically pull the named images and begin running them in a new containerized command prompt.
+For this Ghost example, we will need to start our container with some basic utilities, such as wget and 7-zip. We  will also pull and run the NodeJS server, which is required for the Ghost application. For this, we'll use `spoon run`, which will automatically pull the named images and begin running them in a new containerized command prompt.
 
 ```
 # Create a new container with basic utilities and the Node JS server.
-C:\> spoon run wget,7zip,node
+C:\> spoon run wget,7-zip,node
 
 Downloading wget from https://spoon.net/users/gnu
-Downloading 7zip from https://spoon.net/users/7zip
+Downloading 7-zip from https://spoon.net/users/7-zip
 Downloading node from https://spoon.net/users/node
 
 # This will pull these images into a new containerized command prompt (as shown in the Hello World sample).
@@ -43,7 +43,7 @@ spoon run
 # Unlike the Hello World sample, we skipped the `spoon pull` command. Why?
 # `spoon run` will simultaneously download and run images in a new container.
 
-wget,7zip,node
+wget,7-zip,node
 
 # Unlike the Hello World sample, we have omitted the "owner/" namespace from image names. Omitting the namespace causes Spoon Studio to first search for the named images on your local machine's image repository.
 # If it doesn't find a match locally, Spoon Studio automatically searches for the approved images on the Spoon Hub, as it did in this example.
@@ -67,12 +67,12 @@ Download the Ghost application into your container. Although we use the **--no-c
 
 ```
 # Using wget, download and install the Ghost web application with the included tools.
-(c99f354f) C:\ghost> C:\wget\wget.exe http://ghost.org/zip/ghost-0.5.1.zip --no-check-certificate
+(c99f354f) C:\ghost> wget http://ghost.org/zip/ghost-0.5.1.zip --no-check-certificate
 
 'ghost-0.5.1.zip' saved
 
-# Using 7zip, extract the Ghost application.
-(c99f354f) C:\ghost> C:\7zip\7z.exe x ghost-0.5.1.zip
+# Using 7-zip, extract the Ghost application.
+(c99f354f) C:\ghost> 7z x ghost-0.5.1.zip
 
 Everything is Ok
 
@@ -194,7 +194,7 @@ First, we will need to create a blank container that will hold the database.
 
 ```
 # Create a container from clean
-C:\> spoon run spoonbrew/clean
+C:\> spoon run clean
 
 # Exit the container to get your blank container ID.
 (d65260ad) C:\> exit
