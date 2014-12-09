@@ -83,6 +83,16 @@ or remapped on an individual basis. Like Docker, Spoon supports mapping of TCP, 
 
 Importantly, this contrasts with Docker, which *isolates* all ports by default. With Spoon, a server container will work by default on the host device (ports open) and requires a separate command to close or relink the ports. Closing ports may be desired for various reasons, such as minimizing the network surface area in production environments.
 
+### Security Model
+
+Docker relies on root access to the host device at two levels. First, the LXC/`libcontainer` containerization engine that Docker is built on is
+implemented within the Linux kernel. Second, the Docker daemon itself runs with root privileges. Containers themselves are not run with root privileges
+when used in accordance with recommended practices. The use of code with kernel or root privileges opens the possibility of "break out" into privileged
+system resources.
+
+By contrast, Spoon is designed to run entirely in user mode with no privileges. Spoon containerization inherits this ability from the user mode Spoon
+app virtualization engine, which operates on top of (rather than within) the OS kernel. This approach has two critical advantages: Spoon can be used by unprivileged users on locked down desktops without elevation, improving accessibility and reducing administrative complexity; and, in the event of malware execution or a vulnerability in the Spoon implementation, the affected process does not have access to root privileges on the device.
+
 ### Toolchain
 
 Like Docker, Spoon provides command-line interfaces (`spoon`) and a scripting language (**SpoonScript**) for automating build processes. Spoon also provides a number of rich GUI- and web-based tools and services for building, configuring, and managing virtual environments.
@@ -91,8 +101,7 @@ Like Docker, Spoon provides command-line interfaces (`spoon`) and a scripting la
 
 **[Spoon Server](http://spoon.net/server)** is an on-premises version of Spoon.net that	provides the same functionality in a behind-firewall environment. In addition, Spoon Server provides enterprise-specific such as a web application portal, Active Directory and LDAP integration, centralized management, user data synchronization, license management, and usage analytics.
 
-Spoon also maintains an online database of validated application templates and images for thousands of popular
-software applications.
+Spoon also maintains an online database of validated application templates and images for thousands of popular software applications.
 
 ### Configuration
 
