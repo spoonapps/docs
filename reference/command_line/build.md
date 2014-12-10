@@ -9,13 +9,14 @@ Usage: spoon build <options> <path>
       --diagnostic           Enable diagnotic logging
   -e, --env=VALUE            Set environment variables inside the container
       --env-file=VALUE       Read in a line delimited file of ENV variables
-      --no-base              Do not merge the base image(s) into the new image
+      --mount=VALUE          Mount a host folder into the container. Format: [other-container:]SourceFolder=TargetFolder
   -n, --name=VALUE           Name of the image
+      --no-base              Do not merge the base image into the new image
       --overwrite            Overwrite existing image
       --vm=VALUE             The Spoon VM version to run the container with
   -w, --working-dir=VALUE    Set the initial working directory inside the container
       --wait-after-error     Leave program open after error
-      --wait-after-exit      Leave program open after exit
+      --wait-after-exit      Leave program open after it exits
 ```
 
 To build an image from an existing container, use the `commit` command.
