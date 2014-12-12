@@ -6,12 +6,17 @@ The `try` command creates a new, temporary container which is removed once it is
 Usage: spoon try <options> <image> [<parameters>...]
 
 <options> available:
+  -a, --attach               Attach to stdin, stdout, and stderr of the container
+      --admin                Run the container as admin user
+  -d, --detach               Run the container in the background
       --disable=VALUE        Disable the specified Spoon VM setting
   -e, --env=VALUE            Set environment variables inside the container
       --enable=VALUE         Enable the specified Spoon VM setting
       --env-file=VALUE       Read in a line delimited file of ENV variables
       --hosts=VALUE          Add an en to the virtual /etc/hosts file (<redirect>:<name>)
       --link=VALUE           Add link to another container (<container>:<alias>)
+  -n, --name=VALUE           Name of created container
+      
       --route-add=VALUE      Add a TCP or UDP mapping, format: [<hostPort>]:<containerPort>[/tcp|udp]
       --route-block=VALUE    Isolate all ports of specified protocol (TCP or UDP) by default
       --startup-file=VALUE   Override the default startup file
