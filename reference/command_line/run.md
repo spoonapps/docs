@@ -6,8 +6,8 @@ The `run` command creates a new container.
 Usage: spoon run <options> <image>[+skin(color)] [<parameters>...]
 
 <options> available:
-  -a, --attach               Attach to stdin, stdout, and stderr of the container
-      --admin                Run the container as admin user
+  -a, --attach               Attach to the stdin, stdout, and stderr of the container
+      --admin                Run the container as an administrator
   -d, --detach               Run the container in the background
       --diagnostic           Enable diagnotic logging
       --disable=VALUE        Disable the specified Spoon VM setting
@@ -18,7 +18,7 @@ Usage: spoon run <options> <image>[+skin(color)] [<parameters>...]
       --hosts=VALUE          Add an entry to the virtual /etc/hosts file (<redirect>:<name>)
       --link=VALUE           Add link to another container (<container>:<alias>)
       --mount VALUE          Mount a host folder into the container, format: [other-container:]<source>=<target>
-  -n, --name=VALUE           Name of created container
+  -n, --name=VALUE           Give a name to the container
       --private              Synchronize this container privately, visible only to me
       --public               Synchronize this container publicly, visible to everyone
       --route-add=VALUE      Add a TCP or UDP mapping, format: [<hostPort>]:<containerPort>[/tcp|udp]
