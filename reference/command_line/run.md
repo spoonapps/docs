@@ -26,6 +26,7 @@ Usage: spoon run <options> <image>[+skin(color)] [<parameters>...]
       --startup-file=VALUE   Override the default startup file
       --startup-file-commit=VALUE
                              Override the default startup file and save it to the committed image
+      --temp                 Remove container when it exists
       --trigger=VALUE        Execute named group of startup files
       --vm=VALUE             The Spoon VM version to run the container with
   -w, --working-dir=VALUE    Set the initial working directory inside the container
