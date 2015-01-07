@@ -26,12 +26,12 @@ startup file ("git.exe", "clone", "https://github.com/spoonapps/docs")
 
 #### As a Shell Command
 
-Using this syntax, each command is executed in its own command prompt -- a new command prompt being spawned for each instruction. Thus, any stateful commands (`cd`, for example), must be chained to other commands with an ampersand to have their desired effect. 
+Using this syntax, a command is interpreted by the Command Prompt, providing access to the shell's internal and external commands. By default, the Command Prompt is executed with the /k flag and the command is appended to it (cmd /k <command>). This means that the Command Prompt window will remain open after the specified command has completed.
 
-For example, to read a file in the **C:\Spoon** directory: 
+For example, to display a message on the screen and open a command prompt:
 
 ```
-# Hello world is passed to the 'echo' command
+# Hello world is passed to the 'echo' shell command
 startup file echo hello world
 ```
 
