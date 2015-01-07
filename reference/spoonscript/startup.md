@@ -21,7 +21,7 @@ If you wish to launch a process from an executable and optionally supply paramet
 
 ```
 # "clone" and "https://github.com/spoonapps/docs" are passed to git.exe
-startup file ["git.exe", "clone", "https://github.com/spoonapps/docs"]
+startup file ("git.exe", "clone", "https://github.com/spoonapps/docs")
 ```
 
 #### As a Shell Command
