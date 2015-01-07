@@ -57,7 +57,7 @@ A startup file, or collection of startup files, can be assigned a trigger name. 
 
 ```
 # in spoon.me file to create "test-trigger" image...
-startup file ["c:\windows\system32\notepad.exe", "c:\windows\regedit.exe"]
+startup file [("c:\windows\system32\notepad.exe"), ("c:\windows\regedit.exe")]
 startup file doc=[("c:\windows\system32\notepad.exe", "c:\doc\welcome.txt"), ("c:\windows\system32\notepad.exe", "c:\doc\howto.txt")]
 
 
