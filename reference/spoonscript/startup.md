@@ -28,7 +28,7 @@ startup file ("git.exe", "clone", "https://github.com/spoonapps/docs")
 
 Using this syntax, a command is interpreted by the Command Prompt, providing access to the shell's internal and external commands. By default, the Command Prompt is executed with the /k flag and the command is appended to it (cmd /k <command>). This means that the Command Prompt window will remain open after the specified command has completed.
 
-For example, to display a message on the screen and open a command prompt:
+For example, to open a Command Prompt window with a message:
 
 ```
 # Hello world is passed to the 'echo' shell command
