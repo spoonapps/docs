@@ -96,7 +96,7 @@ Images can be forked using the `spoon fork` command. This creates a link to the 
 
 ```
 # Pull an image
-> spoon pull account/image
+> spoon pull "account/image"
 
 # Check the image
 > spoon images

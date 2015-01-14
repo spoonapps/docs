@@ -42,7 +42,7 @@ Next, we'll containerize our application.
 First, pull the **spoonbrew/python** image from the hub -- this will be the base image for the application. 
 
 ```
-> spoon pull spoonbrew/python
+> spoon pull "spoonbrew/python"
 ```
 
 Before starting the container, download [get-pip.py](https://bootstrap.pypa.io/get-pip.py). We'll use this script to install `pip` in the container. 

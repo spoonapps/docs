@@ -14,9 +14,9 @@ Before beginning, we'll get all of the dependencies we'll need to run and contai
 
 ```
 # Pull dependencies
-> spoon pull oracle/jdk:7.65
+> spoon pull "oracle/jdk:7.65"
 
-> spoon pull git/git
+> spoon pull "git/git"
 ```
 
 #### Configure the Container

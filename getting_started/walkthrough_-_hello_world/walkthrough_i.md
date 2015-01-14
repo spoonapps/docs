@@ -25,7 +25,7 @@ Open a new command prompt and follow the example below.
 We'll begin by pulling (downloading) a blank image from our remote registry, the Spoon Hub.
 
 ```
-> spoon pull spoonbrew/clean
+> spoon pull "spoonbrew/clean"
 
 Pulling clean
 Pull complete
