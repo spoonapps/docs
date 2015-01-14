@@ -130,7 +130,7 @@ Try out applications in temporary containers using the <strong>try</strong> prim
 <div style="width: 605px; margin: 0 8px; background-color: #292929; color: #949799; padding: 15px; border-radius: 4px; margin-bottom: 28px;">
    <p style="font-size: 13px; margin-bottom: 0; color: #00FF00; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"># 'try' works like 'run' except the resulting container is automatically deleted</p>
    <br>
-   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon try jdk:7.65,mongo,node:0.10.29</p>
+   <p style="font-size: 13px; margin-bottom: 0; color: #A2DFFC; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;">&gt; spoon try "jdk:7.65,mongo,node:0.10.29"</p>
 </div>
 
 ### Import ThinApp Packages
