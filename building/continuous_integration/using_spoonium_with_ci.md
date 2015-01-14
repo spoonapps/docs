@@ -84,7 +84,7 @@ The CI server job that runs the tests inside a spoon container would look like t
 spoon login %SPOON_USER% %SPOON_PWD%
 
 rem pull latest changes and run the tests
-spoon run spoon/sample -n=ci-example --attach -w="C:\root\joda-time" /c git pull ^&^& mvm clean test
+spoon run "spoon/sample" -n=ci-example --attach -w="C:\root\joda-time" /c git pull ^&^& mvm clean test
 set TESTS_EXITCODE=%errorlevel%
 
 rem capture the test results from the container, make them available to the CI server

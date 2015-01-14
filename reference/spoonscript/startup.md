@@ -48,7 +48,7 @@ It is possible to specify multiple startup files which will be launched simultan
 startup file [("c:\windows\system32\notepad.exe"), ("c:\windows\regedit.exe")]
 
 # launch both notepad and regedit
-spoon run test-shotgun
+spoon run "test-shotgun"
 ```
 
 #### Startup File Triggers
@@ -64,8 +64,8 @@ startup file doc=[("c:\windows\system32\notepad.exe", "c:\doc\welcome.txt"), ("c
 # from command-prompt...
 
 # launch both notepad and regedit are launched
-> spoon run test-trigger
+> spoon run "test-trigger"
 
 # launch welcome.txt and howto.txt in notepad
-> spoon run test-trigger --trigger=doc
+> spoon run "test-trigger" --trigger=doc
 ```

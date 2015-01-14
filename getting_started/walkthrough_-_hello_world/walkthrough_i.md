@@ -49,7 +49,7 @@ Let's create a new container using the `spoon run` command, which will bootstrap
 For **spoonbrew/clean**, the default startup file is **cmd.exe** (the command prompt). 
 
 ```
-> spoon run spoonbrew/clean echo Hello World!
+> spoon run "spoonbrew/clean" echo Hello World!
 
 # A new, containerized command prompt will appear with your output:
 
@@ -85,7 +85,7 @@ In this example, we'll run a container and create a new text file within that co
 
 ```
 # To begin, create a new containerized command prompt with the `run` command.
-> spoon run spoonbrew/clean
+> spoon run "spoonbrew/clean"
 ```
 
 You should see a new command prompt appear. This prompt is running in the container. 

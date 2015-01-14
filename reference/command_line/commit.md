@@ -16,7 +16,7 @@ Usage: spoon commit <options> <container> <image>
 
 The `commit` command will merge all the base images used in the container. This behavior can be overridden with the `--no-base` flag. 
 
-For example, if a container were created with the command `spoon run git/git,nuget/nuget` and later committed with the command `spoon commit <container id> my-new-image`, the new image would contain: 
+For example, if a container were created with the command `spoon run "git/git,nuget/nuget"` and later committed with the command `spoon commit <container id> my-new-image`, the new image would contain: 
 
 - Any files and registry keys created or modified in the container
 - The files and registry keys from the **git/git** image
