@@ -15,8 +15,8 @@ aIRChat has a few prerequisites. We'll need the Node.js image and the Git image,
 
 ```
 # The pull command downloads the images
-> spoon pull "git"
-> spoon pull "node"
+> spoon pull git
+> spoon pull node
 
 # Use the next command to verify the downloads
 > spoon images

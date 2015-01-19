@@ -16,7 +16,7 @@ All source code for this example is available on [Github](https://github.com/mat
 For this project, we'll need .NET 4.0. To pull the .NET 4 image, run the following command: 
 
 ```
-> spoon pull "microsoft/dotnet:4.0"
+> spoon pull microsoft/dotnet:4.0
 ```
 
 To build the image, we'll construct a SpoonScript. The script should take the compiled Server executable, along with any DLLs, copy them into a new container, and build an image from this container. Below is the **spoon.me** file for the example project used in this tutorial. 
