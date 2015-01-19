@@ -12,7 +12,7 @@ Spoon also supports running ASP.NET applications within a container. In this exa
 
 ```
 # Create a new container with .NET, ASP.NET, Firefox and git
-C:\> spoon run "microsoft/dotnet,microsoft/aspnet,mozilla/firefox,git/git"
+C:\> spoon run microsoft/dotnet,microsoft/aspnet,mozilla/firefox,git/git
 
 Downloading dotnet from https://spoon.net/users/microsoft
 Downloading aspnet from https://spoon.net/users/microsoft

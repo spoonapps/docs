@@ -5,7 +5,7 @@ The behaviour of containers and images can be modified by changing **Spoon VM** 
 Effect the settings flags below using the `--enable=VALUE` or `--disable=VALUE` flags with the `spoon run` or `spoon build` command.
 
     # Example
-    spoon run --enable=IsolateWindowsClasses "node" cmd
+    spoon run --enable=IsolateWindowsClasses node cmd
 
 Altering VM settings for a container will override the settings of the base image(s).
 

@@ -8,7 +8,7 @@ The `spoon run` command starts new containers. You must specify a base image to 
 
 ```
 # Launch a command window in a new container with clean as the base image
-> spoon run "spoonbrew/clean"
+> spoon run spoonbrew/clean
 ```
 
 Operations executed in the new command window are applied to the container, not the host system.
@@ -17,7 +17,7 @@ To avoid confusion, the prompt is prepended by the first 8 characters of the con
 
 ```
 # Host command window
-> spoon run "spoonbrew/clean"
+> spoon run spoonbrew/clean
 
 # Container command window
 (8dpp9eb5) >

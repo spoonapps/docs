@@ -29,7 +29,7 @@ node/node		10.2MB   	7/16/2014 3:45:10 PM
 Now start a new container using the `spoon run` command, specifying the Node.js and Gt images and the start-up file `cmd` to launch the container in a new command window.
 
 ```
-> spoon run "git,node cmd"
+> spoon run git,node cmd
 ```
 
 #### Configure aIRChat
@@ -161,7 +161,7 @@ Save the file as SpoonScript in **C:\\spoon\aIRChat**.
 > spoon build -n=aIRChat C:\spoon\aIRChat
 
 # Run the image
-> spoon run "aIRChat"
+> spoon run aIRChat
 ```
 
 aIRChat is now running on port 3000. This automated method allows you to forego manual entry of commands to create a container.

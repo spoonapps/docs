@@ -50,7 +50,7 @@ Before starting the container, download [get-pip.py](https://bootstrap.pypa.io/g
 Next, run the image to create a new container with Python. The default startup file for **spoonbrew/python** is usually the python interpreter. For this tutorial, we'll change the startup file to **cmd.exe** so that we can configure the container.  
 
 ```
-> spoon run --startup-file=C:\system32\cmd.exe "spoonbrew/python"
+> spoon run --startup-file=C:\system32\cmd.exe spoonbrew/python
 ```
 
 A new command prompt should appear with a modified prompt. Any commands to configure the container should be run in this window. 

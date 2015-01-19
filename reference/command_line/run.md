@@ -41,23 +41,23 @@ Due to this "layering" approach, it is a good practice to specify images with ne
 
 ```
 # Create a container using the apache/apache image
-> spoon run "apache/apache"
+> spoon run apache/apache
 
 # Create a container with apache and mysql
-> spoon run "apache/apache,mysql/mysql"
+> spoon run apache/apache,mysql/mysql
 
 # Create a container with .NET 3 and 4
-> spoon run "microsoft/dotnet:4.0.3,microsoft/dotnet:3.5.1"
+> spoon run microsoft/dotnet:4.0.3,microsoft/dotnet:3.5.1
 ```
 
 Containers are started with the startup file specified in the last passed image. If a startup file is not set in the base image then `cmd.exe /k` is used. 
 	
 ```
 # Default startup file is used to start container
-> spoon run "oracle/jdk"
+> spoon run oracle/jdk
 
 # Override the startup file to use the command prompt
-> spoon run --startup-file=cmd.exe "oracle/jdk"
+> spoon run --startup-file=cmd.exe oracle/jdk
 ```
 
 When passing arguments to a startup file or command, we recommend separating these arguments from the rest of the command with a `--`. Arguments specified after the `--` mark are passed directly to the startup file/command.
@@ -66,10 +66,10 @@ If a `--` mark is not used, any argument matching a `run` command flag will be i
 
 ```
   # Spoon will interpret the /d flag and execute a container in detached mode
-  > spoon run "spoonbrew/clean" /d
+  > spoon run spoonbrew/clean /d
   
   # /d flag is passed to cmd.exe, disabling execution of AutoRun commands from the registry
-  > spoon run "spoonbrew/clean" -- /d 
+  > spoon run spoonbrew/clean -- /d 
 ```
 
 A container's standard streams (stdin/out/err) can be redirected to either the current command prompt or the background using the `--attach` and `--detach` flags. 
@@ -88,12 +88,12 @@ The initial working directory for the container can be set with the `workdir` in
 
 ```
 # By default, a container's working directory matches the host's working directory
-C:\Users>spoon run "git/git"
+C:\Users>spoon run git/git
 
 (0x3842xd) C:\Users>
 
 # This sets the working directory to the root of the C drive
-C:\Users> spoon run -w="C:\" "git/git"
+C:\Users> spoon run -w="C:\" git/git
 
 (0x3842xd) C:\> 
 
@@ -103,7 +103,7 @@ Containerized applications can be distinguished from normal apps with skin layer
 
 ```
 # Opens detached, containerized notepad with blue order around its window
-spoon run --startup-file=notepad -d "clean+skin(blue)"
+spoon run --startup-file=notepad -d clean+skin(blue)
 ```
 
 Spoon VM settings can be enabled or disabled with the `--enable` and `--disable` flags, respectively. For a list of Spoon VM settings, see **VM Settings** section of the documentation.
@@ -212,7 +212,7 @@ First create two containers, each exposing web sites on private port 80, but wit
 Then create a web browser container linked to the previously created containers.
 
 ```
-> spoon run --link 05bf:web1 --link 94a3:web2 "myself/webbrowser" http://web1 http://web2
+> spoon run --link 05bf:web1 --link 94a3:web2 myself/webbrowser http://web1 http://web2
 ```
 
 You will be able to browse websites served by the linked containers even though they are not publically available.
@@ -231,10 +231,10 @@ startup file doc=[("c:\windows\system32\notepad.exe", "c:\doc\welcome.txt"), ("c
 # from command-prompt...
 
 # launch both notepad and regedit are launched
-> spoon run "test-trigger"
+> spoon run test-trigger
 
 # launch welcome.txt and howto.txt in notepad
-> spoon run "test-trigger" --trigger=doc
+> spoon run test-trigger --trigger=doc
 ```
 
 #### Using Mount
@@ -245,24 +245,24 @@ If the source folder doesn't exist, the `mount` option is ignored.
 Example for mounting a folder.
 
 ```
-spoon run --mount "C:\FolderOnHostSystem=C:\FolderInContainer" "clean"
+spoon run --mount "C:\FolderOnHostSystem=C:\FolderInContainer" clean
 ```
 
 Mounts are useful to share a cache folder, like a local Maven repository:
 ```
-spoon run --mount "%USERPROFILE%\.m2=%USERPROFILE%\.m2" "jdk,maven"
+spoon run --mount "%USERPROFILE%\.m2=%USERPROFILE%\.m2" jdk,maven
 ```
 
 Mounting multiple folder is done by repeating the mount parameter:
 
 ```
-spoon run --mount "C:\Mount1=C:\InContainer1" --mount "C:\Mount2=C:\InContainer2" "clean"
+spoon run --mount "C:\Mount1=C:\InContainer1" --mount "C:\Mount2=C:\InContainer2" clean
 ```
 
 It is also possible to mount a folder from another container:
 
 ```
-spoon run --mount <containerid>:"C:\FolderInSourceContainer=C:\FolderInTargetContainer" "clean"
+spoon run --mount <containerid>:"C:\FolderInSourceContainer=C:\FolderInTargetContainer" clean
 ```
 
 #### Exit code

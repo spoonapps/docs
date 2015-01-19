@@ -49,7 +49,7 @@ You can also create a new repository from the command-line interface by pushing 
 
 ```
 # First run a container
-> spoon run "clean"
+> spoon run clean
 
 # Then commit the container to an image
 > spoon commit 125ee2932 <image>

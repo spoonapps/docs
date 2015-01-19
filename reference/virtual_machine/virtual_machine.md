@@ -23,11 +23,11 @@ For example, if a container includes a "git" image with **c:\git** set to full i
 The following command will create a container with the folder **c:\git** set to full isolation.
 
 ```
-> spoon run "git,node"
+> spoon run git,node
 ```
 
 The following command will create a container with the folder **c:\git** set to merge isolation.
 
 ```
-> spoon run "node,git"
+> spoon run node,git
 ```
