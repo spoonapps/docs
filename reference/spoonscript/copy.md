@@ -10,11 +10,11 @@ copy <source> <destination>
 cp <source> <destination>
 ```
 
-Path may point to an inner directory, but must not point above the
-directory mentioned above.
+Source path may point to an inner subdirectory of the one mentioned above,
+but must not point above it.
 
 Destination may either be absolute path, or relative. In the second case,
-file is copied into a location related to current working directory.
+file is copied into a location related to the current working directory.
 
 Examples:
 ```
