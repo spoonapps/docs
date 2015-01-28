@@ -214,6 +214,7 @@ documents:
   sections:
   - batch
   - cmd
+  - copy
   - disable
   - enable
   - env
