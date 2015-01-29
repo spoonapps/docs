@@ -28,6 +28,7 @@ Usage: spoon run <options> <image>[+skin(color)] [<parameters>...]
                              Override the default startup file and save it to the committed image
       --temp                 Remove container when it exists
       --trigger=VALUE        Execute named group of startup files
+      --using=VALUE          Use selected images as a temporary dependency
       --vm=VALUE             The Spoon VM version to run the container with
   -w, --working-dir=VALUE    Set the initial working directory inside the container
       --wait-after-error     Leave program open after error
@@ -35,7 +36,10 @@ Usage: spoon run <options> <image>[+skin(color)] [<parameters>...]
       --with-root=VALUE      Set the containers root directory
 ```
 
-Spoon `run` can be used to specify multiple images by separating each image with a comma. If the same file, registry entry, or environment variable exists in multiple images, then the one from whichever image was specified last will win the conflict and be used in the virtual environment. Virtual machine settings are taken from the last image specified in the `from` instruction.
+Spoon `run` can be used to specify multiple images by separating each image with a comma.
+If the same file, registry entry, or environment variable exists in multiple images, then the one from whichever image was specified last will win the conflict and be used in the virtual environment.
+Virtual machine settings are taken from the last specified image.
+To use image temporarily, without committing it to the final image (eg. a tool necessary only for installation), use `--using` switch.
 
 Due to this "layering" approach, it is a good practice to specify images with newer versions of applications or libraries after images with older versions.
 
