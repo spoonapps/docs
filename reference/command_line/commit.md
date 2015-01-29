@@ -8,6 +8,7 @@ Usage: spoon commit <options> <container> <image>
 <options> available:
       --no-base              Do not merge the base image(s) into the new image
       --overwrite            Overwrite existing image
+      --startup-file=VALUE   Override the default startup file and save it to the committed image
       --wait-after-error     Leave program open after error
       --wait-after-exit      Leave program open after exit
 ```
@@ -26,4 +27,4 @@ However, if the same container were committed with the command `spoon commit --n
 
 #### Startup file
 
-If original image had startup file specified then commited image will retain it. If original image had startup file not specified and container was run with `--startup-file` parameter then commited image will have its startup file set to this parameter value.
+To alter the selected startup file, apply the new value with `--startup-file` parameter.

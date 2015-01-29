@@ -23,9 +23,7 @@ Usage: spoon run <options> <image>[+skin(color)] [<parameters>...]
       --public               Synchronize this container publicly, visible to everyone
       --route-add=VALUE      Add a TCP or UDP mapping, format: [<hostPort>]:<containerPort>[/tcp|udp]
       --route-block=VALUE    Isolate all ports of specified protocol (TCP or UDP) by default
-      --startup-file=VALUE   Override the default startup file
-      --startup-file-commit=VALUE
-                             Override the default startup file and save it to the committed image
+      --startup-file=VALUE   Override the default startup file and save it to the committed image
       --temp                 Remove container when it exists
       --trigger=VALUE        Execute named group of startup files
       --using=VALUE          Use selected images as a temporary dependency
