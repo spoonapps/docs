@@ -242,7 +242,7 @@ startup file doc=[("c:\windows\system32\notepad.exe", "c:\doc\welcome.txt"), ("c
 #### Using Mount
 The `mount` option provides a way to mount folders from the host into the container, giving access to resources from the host system.
 The mounted folder's content is not committed to the image nor synchronized to the Spoon Hub and therefore is not available when using the `continue` command.
-If the source folder doesn't exist, the `mount` option is ignored.
+If the source folder doesn't exist, the `mount` option is ignored. If the target folder doesn't exist, it is created.
 
 Example for mounting a folder.
 
