@@ -23,6 +23,6 @@ To enable diagnostic logging for the container, specify the `--diagnostic` flag.
 
 To run the container in the background then specify the `-d` or `--detach` flag.
 
-To temporarily alter the startup file, specify it with `--startup-file` parameter.
+To temporarily alter the startup file, specify it with `--startup-file` parameter. The change overrides the original startup files and does not apply to a subsequent container starts or commits.
 
 When the container stops, the exit code of startup file is displayed in decimal form.
