@@ -26,7 +26,7 @@ Usage: spoon run <options> <image>[+skin(color)] [<parameters>...]
       --startup-file=VALUE   Override the default startup file and save it to the committed image
       --temp                 Remove container when it exists
       --trigger=VALUE        Execute named group of startup files
-      --using=VALUE          Use selected images as a temporary dependency
+      --using=VALUE          Use specified images as a temporary dependency
       --vm=VALUE             The Spoon VM version to run the container with
   -w, --working-dir=VALUE    Set the initial working directory inside the container
       --wait-after-error     Leave program open after error
@@ -34,15 +34,10 @@ Usage: spoon run <options> <image>[+skin(color)] [<parameters>...]
       --with-root=VALUE      Set the containers root directory
 ```
 
-Spoon `run` can be used to specify multiple images by separating each image with a comma.
-If the same file, registry entry, or environment variable exists in multiple images, then the one from whichever image was specified last will win the conflict and be used in the virtual environment.
-Virtual machine settings are taken from the last specified image.
-To use image temporarily, without committing it to the final image (eg. a tool necessary only for installation), use `--using` switch.
-
-Due to this "layering" approach, it is a good practice to specify images with newer versions of applications or libraries after images with older versions.
+Spoon `run` can be used to specify multiple images by separating each image with a comma. If the same file, registry entry, or environment variable exists in multiple images, then the one from whichever image was specified last will win the conflict and be used in the virtual environment. Virtual machine settings are taken from the last specified image. Due to this "layering" approach, it is a good practice to specify images with newer versions of applications or libraries after images with older versions.
 
 ```
-# Create a container using the apache/apache image
+# Create a container with the apache/apache image
 > spoon run apache/apache
 
 # Create a container with apache and mysql
@@ -50,6 +45,23 @@ Due to this "layering" approach, it is a good practice to specify images with ne
 
 # Create a container with .NET 3 and 4
 > spoon run microsoft/dotnet:4.0.3,microsoft/dotnet:3.5.1
+```
+
+To use images temporarily, without committing them to the final image, use the `--using` switch. This is handy for a tool like 7zip and Git that may only needed during the build process.
+
+```
+# Create a container using git temporarily to get a project
+> spoon run --using git/git clean
+
+# Clone a git project
+(0x3842xd) C:\> git clone https://github.com/JodaOrg/joda-time.git C:\root
+
+# Build project...
+
+# Exit and commit image 
+(0x3842xd) C:\> exit
+
+# Git will not be part of the container after shutdown
 ```
 
 Containers are started with the startup file specified in the last passed image. If a startup file is not set in the base image then `cmd.exe /k` is used. 
@@ -90,7 +102,7 @@ The initial working directory for the container can be set with the `workdir` in
 
 ```
 # By default, a container's working directory matches the host's working directory
-C:\Users>spoon run git/git
+C:\Users> spoon run git/git
 
 (0x3842xd) C:\Users>
 

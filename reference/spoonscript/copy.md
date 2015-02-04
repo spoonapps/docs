@@ -1,7 +1,6 @@
 ### copy
 
-The `copy` instruction is used to copy a file or directory from spoon.me script
-or .xappl configuration directory.
+The `copy` instruction is used to copy a file or directory from a SpoonScript or an XAPPL configuration directory.
 
 ```
 copy <source> <destination>
@@ -10,11 +9,9 @@ copy <source> <destination>
 cp <source> <destination>
 ```
 
-Source path may point to an inner subdirectory of the one mentioned above,
-but must not point above it.
+The source path may point to an inner subdirectory of the one mentioned above, but must not point above it.
 
-Destination may either be absolute path, or relative. In the second case,
-file is copied into a location related to the current working directory.
+The destination may either be an absolute path, or a relative path. In the latter case, the file is copied into a location relative to the current working directory.
 
 Examples:
 ```
