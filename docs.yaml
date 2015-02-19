@@ -185,6 +185,7 @@ documents:
   - history
   - images
   - import
+  - inspect
   - login
   - logout
   - logs
