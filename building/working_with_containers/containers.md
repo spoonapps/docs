@@ -25,6 +25,23 @@ To avoid confusion, the prompt is prepended by the first 8 characters of the con
 
 Edit and modify the container's virtual filesystem and registry using the same command-line interfaces available in Windows Command Prompt.
 
+### Installing MSI Packages in Containers
+
+Installing MSI packages in containers is supported, but a current limitation of the Spoon VM requires running a virtualized instance of the Windows Installer service with administrative privileges. To make things easier, Spoon VM automatically detects when an MSI installer is started and pops up a UAC consent elevation dialog if needed. Accepting the dialog is required for the installer to start.
+
+If running as a standard user (i.e., not member of the Administrators group) or in cases of installers that are not detected as such by Spoon VM, no UAC elevation dialog will be shown. Instead, to make the installer work, you can start the whole container elevated using the `--admin` flag as shown below.
+
+```
+# Start the container elevated
+> spoon run wget --admin
+
+# Download the installer
+(493a3d01) > wget http://example.com/installer.msi
+
+# Run it
+(493a3d01) > installer.msi
+```
+
 ### Managing Containers
 
 Once created, track and manage containers with these commands.

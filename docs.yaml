@@ -92,6 +92,7 @@ documents:
 - title: Working with Containers
   sections:
   - Creating Containers
+  - Installing MSI Packages in Containers
   - Managing Containers
   - Processes and Stopping Containers
   - Debugging
