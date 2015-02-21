@@ -27,9 +27,9 @@ Edit and modify the container's virtual filesystem and registry using the same c
 
 ### Installing MSI Packages in Containers
 
-Installing MSI packages in containers is supported, but a current limitation of the Spoon VM requires running a virtualized instance of the Windows Installer service with administrative privileges. To make things easier, Spoon VM automatically detects when an MSI installer is started and pops up a UAC consent elevation dialog if needed. Accepting the dialog is required for the installer to start.
+Installing MSI packages in containers is supported, but a current limitation of the Spoon VM requires running a virtualized instance of the Windows Installer service with administrative privileges. To make things easier, the container automatically detects when an MSI installer is started and pops up a UAC consent dialog if needed. Accepting the dialog is required for the installer to start.
 
-If running as a standard user (i.e., not member of the Administrators group) or in cases of installers that are not detected as such by Spoon VM, no UAC elevation dialog will be shown. Instead, to make the installer work, you can start the whole container elevated using the `--admin` flag as shown below.
+If the container instance is running as a standard user (i.e. not member of the Administrators group) or the installer is not detected as an MSI by the container, no UAC consent dialog will be shown. If you hit this issue, you can start the whole container elevated using the `--admin` flag as shown below.
 
 ```
 # Start the container elevated
