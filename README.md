@@ -15,7 +15,7 @@ When contributing to the docs on Spoon, please take the following style guidelin
 - Command-line comment: All comments should have a # followed by a space and the first word should be capitalized.
 
 ```
-# this is formatted properly :)
+# This is formatted properly :)
 
 #this is not :( 
 ```
