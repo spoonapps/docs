@@ -7,6 +7,7 @@ Usage: spoon containers <options>
 
 <options> available:
       --csv                  Print output with tab-separated columns
+      --format=VALUE         Use json format for output
   -l, --latest               List the most recently created container
   -n=VALUE                   List the 'n' most recently created containers
       --no-trunc             Don't truncate output
@@ -55,3 +56,7 @@ The `--no-trunc` flag includes additional columns in the output, **Ports**, **Se
 	d6e44ae706c44ed1bd75a0830bed3239  ghost:0.5.1           8/26/2014 3:22:14 PM  Stopped             SpawnVm   11.6.270
 
 The **Ports** column contains active port mappings. See the `spoon netstat` command for more information. The **VM version** contains version number of VM used to create and run container.
+
+# JSON output
+
+When `--format=json` option was passed this command will provide output in JSON format. It will contain either a `containers` array with information about available containers or an `error` object if command failed.

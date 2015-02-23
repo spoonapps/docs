@@ -6,6 +6,7 @@ The `fork` command copies an image to another repository on your local machine.
 Usage: spoon fork <options> <image> [<repository>/]<image>[:<tag>]
 
 <options> available:
+      --format=VALUE         Use json format for output
       --overwrite            Overwrite existing image
       --wait-after-error     Leave program open after error
       --wait-after-exit      Leave program open after exit
@@ -22,3 +23,7 @@ Output image: my-node
 # Fork the image to the existing repository with a new tag
 > spoon fork node/node my-node:1.0
 ```
+
+# JSON output
+
+When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `image` object with information about forked image or an `error` object if command failed.

@@ -9,6 +9,7 @@ Usage: spoon build <options> <path>
       --diagnostic           Enable diagnotic logging
   -e, --env=VALUE            Set environment variables inside the container
       --env-file=VALUE       Read in a line delimited file of ENV variables
+      --format=VALUE         Use json format for output
       --mount=VALUE          Mount a host folder into the container. Format: [other-container:]SourceFolder=TargetFolder
   -n, --name=VALUE           Name of the image
       --no-base              Do not merge the base image into the new image
@@ -105,3 +106,7 @@ The `--diagnostic` flag enables logging within the intermediate container. This 
 The `build` command will include all images, which are referenced with the `from` statement in the script.  For example, when the script uses `from spoonbrew/git, spoonbrew/nuget`, then these two containers will be merged and stored into the newly built container.
 
 The `--no-base` option will not merge in the script. Instead, the images are included at runtime. 
+
+# JSON output
+
+When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `image` object with information about result image or an `error` object if command failed.

@@ -6,6 +6,7 @@ The `import` command is used to add Spoon images or non-Spoon file types from yo
 Usage: spoon import <options> <type> <path>
 
 <options> available:
+      --format=VALUE         Use json format for output
   -n, --name=VALUE           Name of the image
       --overwrite            Overwrite existing image
       --wait-after-error     Leave program open after error
@@ -31,3 +32,7 @@ spoon import svm C:\s\old-image.svm
 ```
 
 **Spoon Studio** users can use this command to import their existing components. 
+
+# JSON output
+
+When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `image` object with information about imported image or an `error` object if command failed.

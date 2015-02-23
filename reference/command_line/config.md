@@ -6,6 +6,7 @@ The `config` command displays and allows modification of the current configurati
 Usage: spoon config <options>
 
 <options> available:
+      --format=VALUE         Use json format for output
       --hub=VALUE            The hub server to log into
       --reset                Reset configuration to default values
 ```
@@ -23,3 +24,7 @@ By default, Spoon is configured to connect to **https://spoon.net/hub**.
 #### Resetting Config Settings
 
 The configuration settings for Spoon can be reset to their default values by issuing the config command with the `--reset` flag.
+
+# JSON output
+
+When `--format=json` option was passed this command will provide output in JSON format. It will contain either a `configuration` object with information about configuration or an `error` object if command failed.

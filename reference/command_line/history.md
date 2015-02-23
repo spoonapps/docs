@@ -7,6 +7,7 @@ Usage: spoon history <options> <image>
 
 <options> available:
       --csv                  Print output with tab-separated columns
+      --format=VALUE         Use json format for output
   -n=VALUE                   List the 'n' most recently used images
       --no-trunc             Don't truncate output
 ```
@@ -30,3 +31,7 @@ By default 50 entries are shown. Specify `-n` flag to show more entries.
 The results of `spoon history` are truncated so that they are most readable in the command prompt. To prevent Spoon from truncating data, specify the `--no-trunc` flag. 
 
 The `--csv` flag can be specified to return the output as a tab-separated table. 
+
+# JSON output
+
+When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `images` array with information about list of recently images or an `error` object if command failed.
