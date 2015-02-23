@@ -17,7 +17,7 @@ env foo=bar
 env path="c:\path to executables\"
 ```
 
-In container these variables with have following values:
+In container these variables will have the following values:
 
 ```
 foo=bar
