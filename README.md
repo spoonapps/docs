@@ -15,7 +15,7 @@ When contributing to the docs on Spoon, please take the following style guidelin
 - Command-line comment: All comments should have a # followed by a space and the first word should be capitalized.
 
 ```
-# this is formatted properly :)
+# This is formatted properly :)
 
 #this is not :( 
 ```
@@ -70,7 +70,7 @@ https://github.com/spoonium/docs/tree/master/doc/getting_started/tour_ii/image.p
 If you are not a member of the **Spoon** org (AKA you don't work at Spoon), fork this repo, make changes, commit, and submit a pull request.
 
 Some basic terminology:
-- Topic: The horizontal items in the top nav.
+- Topic: The horizontal items in the top navbar.
 - Document: Items on the left nav, a topic contains a list of documents
 - Section: A document consists of 1 or more sections. If you define sections in docs.yaml the left nav will become expandable.
 
@@ -96,6 +96,6 @@ Edit the **docs.yaml** file following existing patterns.
 The overall structure of the page is dicated by the **docs.yaml** file, located at /docs.yaml.
 Each document in the yaml file specifies a topic that will appear in the top navbar of the docs page. A topic has the following properties:
 
-1. A `topic`. This is the actual wording that will appear in the top nav barl.
+1. A `topic`. This is the actual wording that will appear in the top navbar.
 2. A list of `documents`. This list is used to populate the topic's documents.
 3. A list of `sections`. This list is used to navigate within a document.
