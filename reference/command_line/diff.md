@@ -6,6 +6,7 @@ The `diff` command shows changes made in a container's filesystem.
 Usage: spoon diff <options> <container>
 
 <options> available:
+      --format=VALUE         Use json format for output
       --path=VALUE           Only show changes in subdirectories of the specified path
       --registry-path=VALUE  Only show changes in subkeys of the specified registry path
       --subsystems=VALUE     Show only diff for selected subsystems: files, registry
@@ -59,3 +60,7 @@ To only show changes beneath a certain node in the filesystem or registry direct
 # Only show changes in system32
 > spoon diff --path=C:\Windows\system32
 ```
+
+# JSON output
+
+When `--format=json` option was passed this command will provide output in JSON format. It will contain either a `diff` object with information about differences or an `error` object if command failed.

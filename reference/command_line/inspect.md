@@ -28,3 +28,7 @@ Usage: spoon inspect <options> <image>
 # Show all changes, but files and registry
 > spoon inspect --exclude=files,registry my-image
 ```
+
+# JSON output
+
+When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `inspect` object with all available information about image or an `error` object if command failed.

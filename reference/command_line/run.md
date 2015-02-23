@@ -15,6 +15,7 @@ Usage: spoon run <options> <image>[+skin(color)] [<parameters>...]
   -e, --env=VALUE            Set environment variables inside the container
       --enable=VALUE         Enable the specified Spoon VM setting
       --env-file=VALUE       Read in a line delimited file of ENV variables
+      --format=VALUE         Use json format for output
       --hosts=VALUE          Add an entry to the virtual /etc/hosts file (<redirect>:<name>)
       --link=VALUE           Add link to another container (<container>:<alias>)
       --mount VALUE          Mount a host folder into the container, format: [other-container:]<source>=<target>
@@ -286,3 +287,7 @@ When the container stops, the exit code of startup file is displayed in decimal 
 #### Selecting VM version
 
 A specific VM version can be selected by using the `--vm=version` flag. If the selected version is lower than the minimum version that is required by spoon.exe, then the minimum version will be used instead.
+
+# JSON output
+
+When `--format=json` option was passed this command will provide output in JSON format. It will contain either a `container` array with information about created container or an `error` object if command failed.

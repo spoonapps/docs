@@ -9,6 +9,7 @@ Usage: spoon start <options> <container>
   -d, --detach               Run the container in the background
       --diagnostic           Enable diagnotic logging
       --disable-sync         Automatic container pushes are disabled
+      --format=VALUE         Use json format for output
       --private              Synchronize this container privately, visible only to me
       --public               Synchronize this container publicly, visible to everyone
       --startup-file=VALUE   Override the default startup file
@@ -26,3 +27,7 @@ To run the container in the background then specify the `-d` or `--detach` flag.
 To temporarily alter the startup file, specify it with `--startup-file` parameter. The change overrides the original startup files and does not apply to a subsequent container starts or commits.
 
 When the container stops, the exit code of startup file is displayed in decimal form.
+
+# JSON output
+
+When `--format=json` option was passed this command will provide output in JSON format. It will contain `container` object with information about started container or an `error` object if command failed.

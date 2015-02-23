@@ -8,6 +8,7 @@ export - Export an image from the local registry to the specified path
 Usage: spoon export <options> <image> <path>
 
 <options> available:
+      --format=VALUE         Use json format for output
       --wait-after-error     Leave program open after error
       --wait-after-exit      Leave program open after exit
 ```
@@ -21,3 +22,7 @@ Usage: spoon export <options> <image> <path>
 # Copy an image to a network share
 > spoon export my-new-image \\server\folder
 ```
+
+# JSON output
+
+When `--format=json` option was passed this command will provide output in JSON format. It will contain either a `file` object with information about export file or an `error` object if command failed.

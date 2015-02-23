@@ -8,6 +8,7 @@ Usage: spoon logs <options> <container>
 <options> available:
       --diagnostic           Show diagnostic logs
   -f                         Follow log output
+      --format=VALUE         Use json format for output
       --list                 List available logs
       --pid=VALUE            Show logs for specified process (default: 0=main process of container)
   -s                         Show stream prefixes of log entries
@@ -50,3 +51,7 @@ Previous logs are kept until the next start of a given container instance. Logs 
 # List available logs
 > spoon logs --list 2de7fda8
 ```
+
+# JSON output
+
+When `--format=json` option was passed this command will provide output in JSON format. It can contain `streamLogs` and `diagnosticLogs` arrays if asked for list of logs, a `log` string if asked for specific log, or an `error` object if command failed.

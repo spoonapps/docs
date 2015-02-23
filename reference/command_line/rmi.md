@@ -8,6 +8,7 @@ Usage: spoon rmi <options> <image>
 <options> available:
   -a, --all                  Remove all images from the local machine
   -f, --force                Force removal of the image
+     --format=VALUE         Use json format for output
 
 ```
 
@@ -49,3 +50,7 @@ ID 			  Name  				Tag	 Created 				Size
 
 Image chocolatey-forked:1.0 was removed
 ```
+
+# JSON output
+
+When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `images` array with information about removed images or an `error` object if command failed.

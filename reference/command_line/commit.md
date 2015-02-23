@@ -6,6 +6,7 @@ The `commit` command builds an image from a container. The image is built from t
 Usage: spoon commit <options> <container> <image>
 
 <options> available:
+      --format=VALUE         Use json format for output
       --no-base              Do not merge the base image(s) into the new image
       --overwrite            Overwrite existing image
       --startup-file=VALUE   Override the default startup file and save it to the committed image
@@ -28,3 +29,7 @@ However, if the same container were committed with the command `spoon commit --n
 #### Startup file
 
 To alter the selected startup file, apply the new value with `--startup-file` parameter.
+
+# JSON output
+
+When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `image` object with information about commited image or an `error` object if command failed.
