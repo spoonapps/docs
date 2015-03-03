@@ -23,3 +23,4 @@ Altering VM settings for a container will override the settings of the base imag
 || **SpawnComServers** || Disabled || Yes || Forces any COM servers to be isolated from the host device. By default, COM servers are created outside the virtual environment to allow COM communication between containerized processes and native applications. ||
 || **SpawnVM** || Enabled || Yes || Forces all child processes of a container to be launched inside the container with access to the virtual environment. ||
 || **SuppressPopups** || Enabled || Yes || Suppresses any error popup dialogs that the virtual environment generates during application runtime. ||
+|| **WaitForChildOnly** || Disabled || Yes || Change default wait setting to WaitForChild. As a result, VM will exit with the last started process, not waiting for their detached children. ||
