@@ -24,4 +24,12 @@ foo=bar
 path=c:\path to executables;C:\WINDOWS\system32;C:\WINDOWS
 ```
 
-Environment variables can be overriden in a container by explicitly setting the variable to a new value or when an application or installer sets a new value.
+One environment variable can be set multiple times inside SpoonScript if `cmd` commands should have different environments. For each environment variable value from last `env` command is stored in final image. It is also possible to remove environment variable from final image with following syntax:
+
+```
+env foo=
+```
+
+Please note that if variable `foo` is also defined in one of `from` images and final image is created with `--no-base` flag then it will be still loaded into containers created with it.
+
+Environment variables can be overridden in a container by explicitly setting the variable to a new value or when an application or installer sets a new value.
