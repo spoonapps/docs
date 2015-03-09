@@ -6,7 +6,7 @@ The `env` instruction creates a new environment variable inside the working cont
 env <name>=<value>
 ```
 
-This environment variable will be persisted to the output image from the `build` command. 
+This environment variable will be persisted to the output image by the `build` command. 
 
 Only one environment variable can be added per `env` instruction. To add multiple environment variables to the working container, use multiple `env` instructions. Well known system paths like `C:\Windows\System32` will be replaced by a variable that will be converted at runtime to the appropriate path for the execution environment.
 
@@ -17,14 +17,14 @@ env foo=bar
 env path="c:\path to executables\"
 ```
 
-In container these variables will have the following values:
+In the container these variables will have the following values:
 
 ```
 foo=bar
 path=c:\path to executables;C:\WINDOWS\system32;C:\WINDOWS
 ```
 
-One environment variable can be set multiple times inside SpoonScript if `cmd` commands should have different environments. For each environment variable value from last `env` command is stored in final image. It is also possible to remove environment variable from final image with following syntax:
+Variables can be reset within the same SpoonScript by repeating the `env` command for the same variable name. The last value will be stored in the image. To remove the variable from the image, use the following command:
 
 ```
 env foo=
