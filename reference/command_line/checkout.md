@@ -21,6 +21,6 @@ The new image name has to be unique on the local machine or use the `--overwrite
 Restored the restored-image image
 ```
 
-# JSON output
+#### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `image` object with information about checked out image or an `error` object if command failed.
