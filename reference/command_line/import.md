@@ -33,6 +33,6 @@ spoon import svm C:\s\old-image.svm
 
 **Spoon Studio** users can use this command to import their existing components. 
 
-# JSON output
+#### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `image` object with information about imported image or an `error` object if command failed.

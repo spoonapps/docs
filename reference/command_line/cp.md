@@ -27,6 +27,6 @@ ERROR
 C:\Users> spoon cp 2de7:C:\project\file.txt \Spoonuser
 ```
 
-# JSON output
+#### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain only an exit code data or an `error` object if command failed.

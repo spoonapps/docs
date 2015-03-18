@@ -25,6 +25,6 @@ By default, Spoon is configured to connect to **https://spoon.net/hub**.
 
 The configuration settings for Spoon can be reset to their default values by issuing the config command with the `--reset` flag.
 
-# JSON output
+#### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either a `configuration` object with information about configuration or an `error` object if command failed.

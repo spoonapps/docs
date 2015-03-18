@@ -61,6 +61,6 @@ To only show changes beneath a certain node in the filesystem or registry direct
 > spoon diff --path=C:\Windows\system32
 ```
 
-# JSON output
+#### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either a `diff` object with information about differences or an `error` object if command failed.

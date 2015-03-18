@@ -107,6 +107,6 @@ The `build` command will include all images, which are referenced with the `from
 
 The `--no-base` option will not merge in the script. Instead, the images are included at runtime. 
 
-# JSON output
+#### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `image` object with information about result image or an `error` object if command failed.

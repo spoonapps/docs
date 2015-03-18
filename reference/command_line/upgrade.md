@@ -17,6 +17,6 @@ The available plans include:
 
 - `build-test-deploy` - All the features of the `build-test` subscription plus on-premise capabilities with Spoon Server.
 
-# JSON output
+#### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `redirect` object with URL to page that allows upgrade or an `error` object if command failed.

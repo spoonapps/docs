@@ -55,6 +55,6 @@ Data in the table returned by the `states` command is truncated so that it print
 > spoon states --no-trunc
 ```
 
-# JSON output
+#### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either `states` array with list of states available on hub or an `error` object if command failed.

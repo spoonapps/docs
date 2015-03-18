@@ -30,6 +30,6 @@ However, if the same container were committed with the command `spoon commit --n
 
 To alter the selected startup file, apply the new value with `--startup-file` parameter.
 
-# JSON output
+#### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `image` object with information about commited image or an `error` object if command failed.

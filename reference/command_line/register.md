@@ -19,6 +19,6 @@ There are three options for removing the image from the system:
 1. Use the uninstall shortcut on the **Start Menu**.
 1. Uninstall from the **Program and Features** menu in the **Windows Control Panel**.
 
-# JSON output
+#### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `image` array with information about registered image or an `error` object if command failed.

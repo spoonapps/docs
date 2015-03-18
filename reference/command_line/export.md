@@ -23,6 +23,6 @@ Usage: spoon export <options> <image> <path>
 > spoon export my-new-image \\server\folder
 ```
 
-# JSON output
+#### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either a `file` object with information about export file or an `error` object if command failed.

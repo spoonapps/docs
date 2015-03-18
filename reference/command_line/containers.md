@@ -57,6 +57,6 @@ The `--no-trunc` flag includes additional columns in the output, **Ports**, **Se
 
 The **Ports** column contains active port mappings. See the `spoon netstat` command for more information. The **VM version** contains version number of VM used to create and run container.
 
-# JSON output
+#### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either a `containers` array with information about available containers or an `error` object if command failed.

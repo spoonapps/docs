@@ -20,6 +20,6 @@ Usage: spoon clone  <existing container> [<new container name>]
 
 ```
 
-# JSON output
+#### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `container` object with information about cloned container or an `error` object if command failed.
