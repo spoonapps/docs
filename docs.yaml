@@ -204,8 +204,10 @@ documents:
   - search
   - start
   - states
+  - stop
   - tag
   - tags
+  - top
   - try
   - unregister
   - upgrade
@@ -222,8 +224,10 @@ documents:
   - env
   - from
   - hosts
+  - import
   - meta
   - route
+  - setworkdir
   - startup file
   - using
   - workdir
