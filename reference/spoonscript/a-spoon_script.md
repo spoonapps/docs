@@ -39,7 +39,7 @@ from node/node  # This is not a valid comment
 Any SpoonScript instruction can have an optional `when` clause at the end of the line to specify the conditions which must be met before the instruction will be executed. The general form is `instuction when expression`.
 
 ```
-cmd echo This is Windows7 when host has windows7
+cmd echo This is Windows7 when host has os:Windows7
 ```
 
 These are the currently supported expressions:
