@@ -9,7 +9,7 @@ copy <source> <destination>
 cp <source> <destination>
 ```
 
-The source path may point to an inner subdirectory of the one mentioned above, but must not point above it.
+The source path may point to an inner subdirectory of the one mentioned above, but must not point above it. This restriction does not apply to the Spoon Shell.
 
 The destination may either be an absolute path, or a relative path. In the latter case, the file is copied into a location relative to the current working directory.
 

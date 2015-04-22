@@ -220,6 +220,7 @@ documents:
   - cmd
   - copy
   - disable
+  - echo
   - enable
   - env
   - from
@@ -230,7 +231,12 @@ documents:
   - setworkdir
   - startup file
   - using
+  - var
   - workdir
+- title: Spoon Shell
+  sections:
+  - commit
+  - push
 - title: Dependencies
   sections: []
 - title: Virtual Machine

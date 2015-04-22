@@ -1,10 +1,10 @@
 ## SpoonScript
 
-Spoon can act as an automated builder by reading instructions from a `.me` file to create a new image. 
+Spoon command processor can act as an automated builder by reading instructions from a `.me` file to create a new image. Spoon Shell can act as an interactive interpreter of SpoonScript.
 
-A `.me` script is a text file containing a set of **instructions** that the Spoon command-line interface follows to create a container. At the end of the script, a new image is created from the container and the container is deleted. 
+A `.me` script is a text file containing a set of **instructions** that the Spoon command processor or the Spoon Shell follows to create a container. In Spoon command processor, at the end of the script, a new image is created from the container and the container is deleted.
 
-The syntax of a Spoon build script generally follows the pattern: 
+The syntax of a SpoonScript generally follows the pattern: 
 
 	instruction <arg 1> <arg 2> ...
 	instruction <arg 1> <arg 2> ...
