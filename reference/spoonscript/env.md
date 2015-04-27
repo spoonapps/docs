@@ -30,6 +30,6 @@ Variables can be reset within the same SpoonScript by repeating the `env` comman
 env foo=
 ```
 
-Please note that if variable `foo` is also defined in one of `from` images and final image is created with `--no-base` flag then it will be still loaded into containers created with it.
+Please note that if variable `foo` is also defined in one of `layer` images and final image is created with `--no-base` flag then it will be still loaded into containers created with it.
 
 Environment variables can be overridden in a container by explicitly setting the variable to a new value or when an application or installer sets a new value.

@@ -25,7 +25,7 @@ Begin by creating an empty text file named **spoon.me** in the project's root di
 
 ```
 # Should use the relevant version of .NET
-FROM microsoft/dotnet:4.0.3
+layer microsoft/dotnet:4.0.3
 
 # Make a new directory in the container for build outputs
 cmd mkdir C:\server

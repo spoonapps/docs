@@ -134,7 +134,7 @@ Create a new text file and copy/paste this text:
 
 ```
 # Specify project dependencies
-from git/git node/node
+layer git/git node/node
 
 # Create a new directory for the project
 cmd mkdir C:\projects\airchat

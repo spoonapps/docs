@@ -223,10 +223,10 @@ documents:
   - echo
   - enable
   - env
-  - from
   - hosts
   - import
   - isolate
+  - layer
   - meta
   - route
   - setworkdir
