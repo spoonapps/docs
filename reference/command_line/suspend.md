@@ -1,15 +1,15 @@
-### pause
+### suspend
 
-The `pause` command is used to pause a running container. 
+The `suspend` command is used to suspend a running container. 
 
 ```
-Usage: spoon pause <container>
+Usage: spoon suspend <container>
 
 <options> available:
      --format=VALUE         Use json format for output
 ```
 
-This will pause all processes and threads within the specified container. 
+This will suspend all processes and threads within the specified container. 
 
 #### JSON output
 
