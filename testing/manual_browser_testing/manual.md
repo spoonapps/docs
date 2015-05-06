@@ -22,8 +22,8 @@ Containerized browsers behave exactly like installed browsers, and because they 
 
 Spoon browsers support standard browser components like Java applets and ActiveX controls as well as popular browser plugins like Firebug, IE Developer Toolbar, and CSS and JavaScript debugging consoles. 
 
-#### Browser Studio
+#### Web Browser
 
-[http://browserstudio.com](http://browserstudio.com)
+[https://spoon.net/account/projects/new/application/browser](/account/projects/new/application/browser)
 
-Need to test a web application with a Java dependency? Want to see if Flash breaks your website? Browser Studio is Spoon's three-step tool for creating custom browser containers. Pick your browser and version, pick the runtimes and plugins you need, and click **Build**. We'll create your custom test environment in minutes, and you can save your new browser to Spoon.net for future use.
+Need to test a web application with a Java dependency? Want to see if Flash breaks your website? Web Browser is Spoon's three-step tool for creating custom browser containers. Pick your browser and version, pick the runtimes and plugins you need, and click **Create**. We'll create your custom test environment in minutes, and you can save your new browser to Spoon.net for future use.
