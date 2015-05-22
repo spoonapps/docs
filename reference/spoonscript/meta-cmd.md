@@ -22,7 +22,7 @@ Custom metadata can be specified using other name-value pairs.
 # Add a title
 meta title="application name"
 
-meta namespacce="organization"
+meta namespace="organization"
 meta name="application"
 meta tag="0.1"
 
