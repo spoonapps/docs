@@ -226,6 +226,7 @@ documents:
   - from
   - hosts
   - import
+  - isolate
   - meta
   - route
   - setworkdir
