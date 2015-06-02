@@ -25,7 +25,7 @@ startup file ("git.exe", "clone", "https://github.com/spoonapps/docs")
 
 #### As a Shell Command
 
-To open a Command Prompt window with a message:
+You may also launch a process using basic command prompt syntax. To open a Command Prompt window with a message:
 
 ```
 # Hello world is passed to the 'echo' shell command
