@@ -4,12 +4,11 @@ The `startup file` instruction is used to specify the startup file or script to 
 
 The instruction has multiple forms: 
 
-1. `startup file ("executable", "param1", "param2")` (executes the application directly)
-2. `startup file <command> <param1> <param2>` (command is interpreted by cmd.exe, defaults to using "cmd.exe /k")
-3. `startup file <param1> <param2>` (parameters are sent to the base image's startup file)
-4. `startup file [("executable1", "param1", "param2"), ("executable2", "param1", "param2"), ...]` (executes the list of applications directly)
-5. `startup file trigger=("executable", "param1", "param2")` (assigns a trigger name to a startup file)
-6. `startup file trigger=[("executable1", "param1", "param2"), ("executable2", "param1", "param2"), ...]` (assigns a trigger name to a collection of startup files)
+1. `startup file <command> <param1> <param2>` (executes the application directly)
+2. `startup file ("executable", "param1", "param2")` (executes the application directly)
+3. `startup file [("executable1", "param1", "param2"), ("executable2", "param1", "param2"), ...]` (executes the list of applications directly)
+4. `startup file trigger=("executable", "param1", "param2")` (assigns a trigger name to a startup file)
+5. `startup file trigger=[("executable1", "param1", "param2"), ("executable2", "param1", "param2"), ...]` (assigns a trigger name to a collection of startup files)
 
 This instruction is only applied to the output image and does not affect the intermediate container. 
 
@@ -26,18 +25,12 @@ startup file ("git.exe", "clone", "https://github.com/spoonapps/docs")
 
 #### As a Shell Command
 
-Using this syntax, a command is interpreted by the Command Prompt, providing access to the shell's internal and external commands. By default, the Command Prompt is executed with the /k flag and the command is appended to it (cmd /k <command>). This means that the Command Prompt window will remain open after the specified command has completed.
-
-For example, to open a Command Prompt window with a message:
+To open a Command Prompt window with a message:
 
 ```
 # Hello world is passed to the 'echo' shell command
-startup file echo hello world
+startup file cmd.exe /k echo hello world
 ```
-
-#### As Parameters
-
-Using this syntax, the parameters are sent to the default startup file in the base image. If multiple base images are specified, the startup file from the last specified image will be used.
 
 #### Multiple Startup Files
 
