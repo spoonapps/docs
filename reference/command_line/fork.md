@@ -1,29 +1,25 @@
 ### fork
 
-The `fork` command copies an image to another repository on your local machine. 
+The `fork` command creates a copy of an existing container.
 
 ```
-Usage: spoon fork <options> <image> [<repository>/]<image>[:<tag>]
+Usage: spoon fork  <existing container> [<new container name>]
 
 <options> available:
       --format=VALUE         Use json format for output
-      --overwrite            Overwrite existing image
-      --wait-after-error     Leave program open after error
-      --wait-after-exit      Leave program open after exit
 ```
 
-If the repository specified in the command does not already exist, a new one is automatically created.  
+#### Examples:
 
 ```
-# Copy node/node to a new repository
-> spoon fork node/node my-node
+# Create an unnamed copy of a container
+> spoon fork 28c
 
-Output image: my-node
+# Create a named copy of a container
+> spoon fork test-container copy-of-test-container
 
-# Fork the image to the existing repository with a new tag
-> spoon fork node/node my-node:1.0
 ```
 
 #### JSON output
 
-When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `image` object with information about forked image or an `error` object if command failed.
+When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `container` object with information about cloned container or an `error` object if command failed.
