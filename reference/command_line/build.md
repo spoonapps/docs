@@ -15,7 +15,6 @@ Usage: spoon build <options> <path>
       --no-base              Do not merge the base image into the new image
       --overwrite            Overwrite existing image
       --vm=VALUE             The Spoon VM version to run the container with
-  -w, --working-dir=VALUE    Set the initial working directory inside the container
       --wait-after-error     Leave program open after error
       --wait-after-exit      Leave program open after it exits
 ```
@@ -94,10 +93,6 @@ The build command will create the intermediate container and output image using 
 # Build the image using version 11.6.205 of the Spoon VM
 > spoon build --vm=11.6.205 C:\spoon.me 
 ```
-
-The working directory inside the container can be specified with the `-w` flag. This flag may be overridden by a `workdir` instruction in a SpoonScript.
-
-**Note**: This flag sets the woring directory within the intermediate container used to build the output image. It does *not* set the initial working directory of the image. 
 
 The `--diagnostic` flag enables logging within the intermediate container. This flag does not create diagnostic-mode images.
 
