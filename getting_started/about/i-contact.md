@@ -7,8 +7,7 @@ Fax: +1 206-388-3110
 [sales@spoon.net](mailto:sales@spoon.net)
 
 Spoon.net  
-1000 Dexter Ave N  
-5th Floor  
-Seattle, WA 98109
+568 1st Ave S STE 300
+Seattle, WA 98104
 
 
