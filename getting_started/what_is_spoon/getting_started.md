@@ -4,7 +4,6 @@ Spoon allows you to package applications and their dependencies into a lightweig
 
 Spoon containers are built on top of the Spoon Virtual Machine, an *application virtualization* engine that provides lightweight
 namespace isolation of core operating system objects such as the filesystem, registry, process, networking, and threading subsystems.
-Application virtualization can be used to package
 
 ### Why use Spoon?
 
