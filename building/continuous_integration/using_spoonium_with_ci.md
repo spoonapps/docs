@@ -25,7 +25,7 @@ CMD git clone https://github.com/project/repo c:\root
 CMD cd c:\root\server & npm install
 ```
 
-Save your script as a `.me` file. See the [SpoonScript reference](/docs/reference/SpoonScript) for more information on SpoonScript script instructions.
+Save your script as a `.me` file. See the [SpoonScript reference](/docs/reference/spoonscript) for more information on SpoonScript script instructions.
 
 ### Integrate into the CI server
 
