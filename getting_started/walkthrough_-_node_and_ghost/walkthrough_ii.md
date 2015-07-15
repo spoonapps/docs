@@ -26,7 +26,7 @@ For this Ghost example, we will need to start our container with some basic util
 
 ```
 # Create a new container with basic utilities and the Node JS server.
-C:\> spoon run wget,7-zip,node
+C:\> spoon run wget,7-zip,node:0.10.33
 
 Downloading wget from https://spoon.net/users/gnu
 Downloading 7-zip from https://spoon.net/users/7-zip
@@ -43,7 +43,7 @@ spoon run
 # Unlike the Hello World sample, we skipped the `spoon pull` command. Why?
 # `spoon run` will simultaneously download and run images in a new container.
 
-wget,7-zip,node
+wget,7-zip,node:0.10.33
 
 # Unlike the Hello World sample, we have omitted the "owner/" namespace from image names. Omitting the namespace causes Spoon Studio to first search for the named images on your local machine's image repository.
 # If it doesn't find a match locally, Spoon Studio automatically searches for the approved images on the Spoon Hub, as it did in this example.
