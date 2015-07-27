@@ -28,8 +28,9 @@ Altering VM settings for a container will override the settings of the base imag
 
 ### Variables
 
-The Spoon engine remaps well-known root folders, such as My Documents and Program Files, based on the host operating system at runtime. This ensures (for example) that a virtualized My Documents folder will be mapped to \User\USER NAME\Documents when running on Microsoft Windows Vista and Windows 7 or \Documents and Settings\USER NAME\My Documents when running on Microsoft Windows 2000 and Windows XP.
-Configurations are constructed using snapshots or in the graphical user interface. When manually modifying the configuration, the following well-known root folder variables may be used to configure virtual filesystem locations. Root folder variables are case sensitive. The following is a complete list of root folder variables recognized by Studio and the corresponding folder name displayed in the filesystem graphical user interface, followed by a brief description of the root folder.
+The Spoon engine remaps well-known root folders, such as My Documents and Program Files, based on the host operating system at runtime. This ensures that My Documents folder will be mapped to \User\USER NAME\Documents when running on recent versions of Microsoft Windows or \Documents and Settings\USER NAME\My Documents for older editions of Microsoft Windows.
+
+These variables may also be used in Spoon Scripts and as part of command-line arguments when building images or starting Spoon containers.
 
 || **Variable** || **Description** ||
 || **@APPDIR@** ||  (Application Directory): Folder where the virtual application executable resides. ||
