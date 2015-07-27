@@ -1,6 +1,8 @@
-## VM Settings
+## VM Settings and Variables
 
-The behaviour of containers and images can be modified by changing **Spoon VM** settings.
+### Command-line Settings
+
+The behaviour of containers and images can be modified by changing VM settings at runtime.
 
 Effect the settings flags below using the `--enable=VALUE` or `--disable=VALUE` flags with the `spoon run` or `spoon build` command.
 
@@ -23,3 +25,42 @@ Altering VM settings for a container will override the settings of the base imag
 || **SpawnComServers** || Enabled || Yes || Forces any COM servers to be isolated from the host device. By default, COM servers are created outside the virtual environment to allow COM communication between containerized processes and native applications. ||
 || **SpawnVM** || Enabled || Yes || Forces all child processes of a container to be launched inside the container with access to the virtual environment. ||
 || **SuppressPopups** || Enabled || Yes || Suppresses any error popup dialogs that the virtual environment generates during application runtime. ||
+
+### Variables
+
+The Spoon engine remaps well-known root folders, such as My Documents and Program Files, based on the host operating system at runtime. This ensures (for example) that a virtualized My Documents folder will be mapped to \User\USER NAME\Documents when running on Microsoft Windows Vista and Windows 7 or \Documents and Settings\USER NAME\My Documents when running on Microsoft Windows 2000 and Windows XP.
+Configurations are constructed using snapshots or in the graphical user interface. When manually modifying the configuration, the following well-known root folder variables may be used to configure virtual filesystem locations. Root folder variables are case sensitive. The following is a complete list of root folder variables recognized by Studio and the corresponding folder name displayed in the filesystem graphical user interface, followed by a brief description of the root folder.
+
+|| **Variable** || **Description** ||
+|| **@APPDIR@** ||  (Application Directory): Folder where the virtual application executable resides. ||
+|| **@WINDIR@** ||  (Windows): The operating system installation location root as in c:\windows. ||
+|| **@SYSDRIVE@** ||  (System Drive): The root folder of the drive containing the operating system installation as in c:\. ||
+|| **@PROGRAMFILES@** ||  (Program Files): The Program Files folder. ||
+|| **@PROGRAMFILESX86@** ||  (Program Files (x86)): The Program Files folder for 32 bit applications on a 64 bit platform. ||
+|| **@PROGRAMFILESCOMMON@** ||  (Program Files\Common): The Program Files\Common Files folder. ||
+|| **@PROGRAMFILESCOMMONX86@** ||  (Program Files (x86)\Common): The Program Files\Common Files folder for 32 bit applications on a 64 bit platform. ||
+|| **@SYSTEM@** ||  (System Drive\Windows\System32): The Windows System32 folder. ||
+|| **@SYSWOW64@** ||  (Windows\SysWOW64): The Windows folder that manages compatibility with 32 bit applications on a 64 bit platform. ||
+|| **@APPDATALOCAL@** ||  (Current User Directory\Local Application Data): The folder that serves as a common repository for application-specific data used by the current, non-roaming user. ||
+|| **@APPDATA@** ||  (Current User Directory\Application Data): The folder that serves as a common repository for application-specific data for the current roaming user. ||
+|| **@STARTUP@** ||  (Current User Directory\Start Menu\Programs\Startup): The folder containing the current user's startup items. ||
+|| **@PROGRAMS@** ||  (Current User Directory\Start Menu\Programs): The folder containing the user's program groups. ||
+|| **@STARTMENU@** ||  (Current User Directory\Start Menu): The folder containing the user's Start Menu contents. ||
+|| **@DESKTOP@** ||  (Current User Directory\Desktop): The current user's Desktop folder. ||
+|| **@TEMPLATES@** ||  (Current User Directory\Templates): The folder that serves as a common repository for the current user's document templates. ||
+|| **@FAVORITES@** ||  (Current User Directory\Favorites): The current user's Favorites folder. ||
+|| **@DOCUMENTS@** ||  (Current User Directory\My Documents): The current user's My Documents folder. ||
+|| **@MUSIC@** ||  (Current User Directory\My Music): The current user's My Music folder. ||
+|| **@PICTURES@** ||  (Current User Directory\My Pictures): The current user's My Pictures folder. ||
+|| **@PROFILE@** ||  (Current User Directory): The folder that stores the current user's profile data. ||
+|| **@APPDATACOMMON@** ||  (All Users Directory\Application Data): The folder that serves as a common repository for application-specific data shared by all users. ||
+|| **@STARTUPCOMMON@** ||  (All Users Directory\Start Menu\Programs\Startup): The folder containing startup items for all users. ||
+|| **@PROGRAMSCOMMON@** ||  (All Users Directory\Start Menu\Programs): The folder containing components shared across applications. ||
+|| **@STARTMENUCOMMON@** ||  (All Users Directory\Start Menu): The folder containing the Start Menu contents for all users. ||
+|| **@DESKTOPCOMMON@** ||  (All Users Directory\Desktop): The shared Desktop folder. ||
+|| **@TEMPLATESCOMMON@** ||  (All Users Directory\Templates): The folder that serves as a common repository for shared document templates. ||
+|| **@FAVORITESCOMMON@** ||  (All Users Directory\Favorites): The shared Favorites folder. ||
+|| **@DOCUMENTSCOMMON@** ||  (All Users Directory\Documents): The shared Documents folder. ||
+|| **@MUSICCOMMON@** ||  (All Users Directory\Music): The shared Music folder. ||
+|| **@PICTURESCOMMON@** ||  (All Users Directory\Pictures): The shared Pictures folder. ||
+|| **@PROFILECOMMON@** ||  (All Users Directory): The folder that stores shared profile data. ||
