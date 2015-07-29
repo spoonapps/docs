@@ -42,7 +42,7 @@ In this code, the contents of the `git` container will *not* be present in the o
 
 Layering can be used in the `spoon.me` automated build script to build containers on top of *multiple* base images. For example, in SpoonScript the following is valid:
 
-    from java, mongodb, redis
+    layer java, mongodb, redis
 
 By contrast, Docker does *not* support creation of images from multiple base images. In other words, Spoon supports "multiple inheritance" through source layering, and "polymorphism" through post-layering.
 

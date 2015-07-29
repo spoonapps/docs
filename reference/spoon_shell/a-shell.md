@@ -7,7 +7,6 @@ When Spoon Shell starts, it creates a working container and starts an interactiv
 Spoon Shell scripting capabilities are superset of capabilities offered by `spoon build`. The differences:
 
 * The working container is never implicitly committed to an image
-* Unlimited number of `from` commands can be issued
 * The `copy` instruction can be used to copy from anywhere on the host OS
 * There are a number of additional commands available
 
