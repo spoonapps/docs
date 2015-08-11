@@ -10,7 +10,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       <th>Description</th>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>OutputLocation</strong></p>
       </td>
       <td>
@@ -18,7 +18,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>OutputFile</strong></p>
       </td>
       <td>
@@ -26,7 +26,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Project-Type</strong></p>
       </td>
       <td>
@@ -34,7 +34,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Licensing</strong></p>
       </td>
       <td>
@@ -42,7 +42,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Output</strong></p>
       </td>
       <td>
@@ -50,7 +50,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>MSI</strong></p>
       </td>
       <td>
@@ -78,7 +78,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Packages</strong></p>
       </td>
       <td>
@@ -86,7 +86,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Clr</strong></p>
       </td>
       <td>
@@ -94,7 +94,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Direct X</strong></p>
       </td>
       <td>
@@ -102,7 +102,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Java</strong></p>
       </td>
       <td>
@@ -110,7 +110,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>RunTime</strong></p>
       </td>
       <td>
@@ -118,7 +118,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Settings</strong></p>
       </td>
       <td>
@@ -126,7 +126,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Package</strong></p>
       </td>
       <td>
@@ -138,38 +138,39 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Virtualization Settings</strong></p>
       </td>
       <td>
          <p>All sub-elements contain settings pertaining to the configuration of the virtual operating system.</p>
          <ul>
-            <li>The <strong>suppressBranding</strong> attribute controls the branding pop-up that is displayed (<strong>False</strong>), or not displayed (<strong>True</strong>) in the lower right-hand corner during application startup.</li>
-            <li>The <strong>isolateWindowClasses</strong> attribute is used to isolate windows classes, as registered via the <strong>Windows ::RegisterClass</strong> or <strong>::RegisterClassEx</strong> APIs.&nbsp;For example, this allows a virtualized Firefox instance to run while a non-virtualized instance is running.</li>
-            <li>The <strong>readOnlyVirtualization</strong> attribute denotes whether the virtual application has the ability to modify virtual files and registry settings (<strong>False</strong>) or not (<strong>True</strong>).&nbsp;Setting this attribute to <strong>True</strong> will prevent modification to the virtual filesystem and virtual registry.</li>
-            <li>The <strong>disableXenocodeCommandLine</strong> attribute controls the ability to execute (<strong>False</strong>) any file from within the virtual filesystem.</li>
-            <li>The <strong>subsystem</strong> attribute indicates the application output type.&nbsp;It can be inherited from the startup file (<strong>Inherit</strong>) or set explicitly to be a Windows application (<strong>GUI</strong>) or console application (<strong>Console</strong>).&nbsp;If <strong>Inherit</strong> is set, but the startup file is either not in the virtual filesystem or not an executable, then the output will be a Windows application.</li>
-            <li>The <strong>ie6Emulation</strong> attribute denotes a special mode required for the Internet Explorer 6 template (<strong>True</strong>). For all other apps, this should be disabled (<strong>False</strong>).</li>
-            <li>The <strong>sandboxPath</strong> attribute indicates the base path of the application sandbox <strong>@APPDATALOCAL@\Spoon\Sandbox\@TITLE\@\@VERSION@</strong>. The <strong>workingDirectory</strong> attribute defines what directory the application will run in.</li>
             <li>The <strong>compressPayload</strong> attribute controls whether the output executable will be compressed (<strong>True</strong>) or not (<strong>False</strong>).</li>
-            <li>The <strong>trimUACManifest</strong> attribute removes items from the manifest that may require elevation (<strong>True</strong>).</li>
-            <li>The <strong>enableDRMCompatibility</strong> attribute ensures compatibility (<strong>True</strong>) with applications protected by software formerly known as "Armadillo" and other DRM software.</li>
             <li>The <strong>deleteSandbox</strong> attribute will cause the sandbox to be reset automatically when the virtual application is shutdown (<strong>True</strong>).</li>
-            <li>The <strong>shutdownProcessTree</strong> attribute will cause the all child processes spawned within the virtual environment to be shutdown when the root process exits. By default, the root process is specified by setting the startup file.</li>
-            <li>The <strong>exeOptimization</strong> attribute will attempt to launch the startup executable with the initial virtual machine process, preventing the creation of a separate application process (<strong>True</strong>).</li>
+            <li>The <strong>disableXenocodeCommandLine</strong> attribute controls the ability to execute (<strong>False</strong>) any file from within the virtual filesystem.</li>
+            <li>The <strong>enableDRMCompatibility</strong> attribute ensures compatibility (<strong>True</strong>) with applications protected by software formerly known as "Armadillo" and other DRM software.</li>
             <li>The <strong>enhancedDEPCompatibility</strong> attribute provides compatibility for systems with Data Execution Protection enabled (<strong>True</strong>). This setting is used primarily for virtual applications running on Windows 2003.</li>
-            <li>The <strong>notifyProcessStarts</strong> attribute causes a notification to be sent as a debugging output string whenever a new process is started within the virtual environment (<strong>True</strong>).</li>
-            <li>The <strong>forceReadShareFiles</strong> attribute forces any file opened by any process within the virtual environment to do so with the READ_SHARE flag set (<strong>True</strong>).</li>
-            <li>The <strong>launchChildProcsAsUser</strong> attribute causes all child processes to be provided with the same level of privileges as the virtual machine root process (<strong>True</strong>).</li>
+            <li>The <strong>exeOptimization</strong> attribute will attempt to launch the startup executable with the initial virtual machine process, preventing the creation of a separate application process (<strong>True</strong>).</li>
             <li>The <strong>forceIndicateRunningElevated</strong> attribute forces the application to run as if it has elevated security privileges (<strong>True</strong>).</li>
-            <li>The <strong>suppressPopups</strong> attribute will prevent an error dialog popup if the virtual application encounters a fatal startup error, and will cause the application to exit silently (<strong>True</strong>).</li>
+            <li>The <strong>forceReadShareFiles</strong> attribute forces any file opened by any process within the virtual environment to do so with the READ_SHARE flag set (<strong>True</strong>).</li>
+            <li>The <strong>ie6Emulation</strong> attribute denotes a special mode required for the Internet Explorer 6 template (<strong>True</strong>). For all other apps, this should be disabled (<strong>False</strong>).</li>
+            <li>The <strong>isolateWindowClasses</strong> attribute is used to isolate windows classes, as registered via the <strong>Windows ::RegisterClass</strong> or <strong>::RegisterClassEx</strong> APIs.&nbsp;For example, this allows a virtualized Firefox instance to run while a non-virtualized instance is running.</li>
+            <li>The <strong>launchChildProcsAsUser</strong> attribute causes all child processes to be provided with the same level of privileges as the virtual machine root process (<strong>True</strong>).</li>
             <li>The <strong>minSandboxSpaceAvail</strong> attribute allows specifying a size in MBs. If set, the virtual application will enforce at startup that the sandbox volume has at least this much space available to the user. A value of -1 disables this enforcement.</li>
+            <li>The <strong>notifyProcessStarts</strong> attribute causes a notification to be sent as a debugging output string whenever a new process is started within the virtual environment (<strong>True</strong>).</li>
+            <li>The <strong>readOnlyVirtualization</strong> attribute denotes whether the virtual application has the ability to modify virtual files and registry settings (<strong>False</strong>) or not (<strong>True</strong>).&nbsp;Setting this attribute to <strong>True</strong> will prevent modification to the virtual filesystem and virtual registry.</li>
+            <li>The <strong>sandboxPath</strong> attribute indicates the base path of the application sandbox <strong>@APPDATALOCAL@\Spoon\Sandbox\@TITLE\@\@VERSION@</strong>. The <strong>workingDirectory</strong> attribute defines what directory the application will run in.</li>
+            <li>The <strong>shutdownProcessTree</strong> attribute will cause the all child processes spawned within the virtual environment to be shutdown when the root process exits. By default, the root process is specified by setting the startup file.</li>
+            <li>The <strong>subsystem</strong> attribute indicates the application output type.&nbsp;It can be inherited from the startup file (<strong>Inherit</strong>) or set explicitly to be a Windows application (<strong>GUI</strong>) or console application (<strong>Console</strong>).&nbsp;If <strong>Inherit</strong> is set, but the startup file is either not in the virtual filesystem or not an executable, then the output will be a Windows application.</li>
+            <li>The <strong>suppressBranding</strong> attribute controls the branding pop-up that is displayed (<strong>False</strong>), or not displayed (<strong>True</strong>) in the lower right-hand corner during application startup.</li>
+            <li>The <strong>suppressPopups</strong> attribute will prevent an error dialog popup if the virtual application encounters a fatal startup error, and will cause the application to exit silently (<strong>True</strong>).</li>
             <li>The <strong>suppressSandboxCollisionCheck</strong> attribute will enable or disable the ability to detect when multiple applications are trying to access the same sandbox at the same time. This attribute is set to "False" by default.</li>
+            <li>The <strong>trimUACManifest</strong> attribute removes items from the manifest that may require elevation (<strong>True</strong>).</li>
+            <li>The <strong>waitForChildOnly</strong> attribute will cause the initial virtual machine process to only wait for its child processes to exit before exiting (<strong>True</strong>). This only applies if the <strong>exeOptimization</strong> attribute is disabled. The default behavior is to wait until all processes in the sandbox exit (<strong>False</strong>).</li>
          </ul>
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>XLayers</strong></p>
       </td>
       <td>
@@ -181,7 +182,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>NamedObjectIsolation</strong></p>
       </td>
       <td>
@@ -189,7 +190,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Dns</strong></p>
       </td>
       <td>
@@ -197,7 +198,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>WorkingDirectory</strong></p>
       </td>
       <td>
@@ -209,7 +210,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>ChildProcessVirtualization</strong></p>
       </td>
       <td>
@@ -220,7 +221,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>ChildProcessException</strong></p>
       </td>
       <td>
@@ -228,7 +229,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>CustomMetadata</strong></p>
       </td>
       <td>
@@ -236,7 +237,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>CustomMetadataItem</strong></p>
       </td>
       <td>
@@ -247,7 +248,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>StandardMetadata</strong></p>
       </td>
       <td>
@@ -255,7 +256,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>StandardMetadataIte</strong></p>
       </td>
       <td>
@@ -270,7 +271,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>SplashImage</strong></p>
       </td>
       <td>
@@ -278,7 +279,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>StartupFiles</strong></p>
       </td>
       <td>
@@ -286,7 +287,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>StartupFile</strong></p>
       </td>
       <td>
@@ -294,7 +295,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>StartupShims</strong></p>
       </td>
       <td>
@@ -302,7 +303,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>StartupShim</strong></p>
       </td>
       <td>
@@ -315,7 +316,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Layers</strong></p>
       </td>
       <td>
@@ -323,7 +324,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Layer</strong></p>
       </td>
       <td>
@@ -334,7 +335,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Condition</strong></p>
       </td>
       <td>
@@ -350,7 +351,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Filesystem</strong></p>
       </td>
       <td>
@@ -358,7 +359,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Directory</strong></p>
       </td>
       <td>
@@ -412,7 +413,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>File</strong></p>
       </td>
       <td>
@@ -420,7 +421,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Registry</strong></p>
       </td>
       <td>
@@ -428,7 +429,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Key</strong></p>
       </td>
       <td>
@@ -456,7 +457,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Value</strong></p>
       </td>
       <td>
@@ -478,7 +479,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Environment Variables</strong></p>
       </td>
       <td>
@@ -486,7 +487,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Services</strong></p>
       </td>
       <td>
@@ -494,7 +495,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Shortcuts</strong></p>
       </td>
       <td>
@@ -502,7 +503,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Folder</strong></p>
       </td>
       <td>
@@ -510,7 +511,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Shortcut</strong></p>
       </td>
       <td>
@@ -518,7 +519,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>IconResource</strong></p>
       </td>
       <td>
@@ -526,7 +527,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>ProgIds</strong></p>
       </td>
       <td>
@@ -538,7 +539,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>IconResource</strong></p>
       </td>
       <td>
@@ -546,7 +547,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>HarvestSettings</strong></p>
       </td>
       <td>
@@ -554,7 +555,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Extension</strong></p>
       </td>
       <td>
@@ -566,7 +567,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>DefaultPrograms</strong></p>
       </td>
       <td>
@@ -594,7 +595,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
       </td>
    </tr>
    <tr>
-      <td>
+      <td valign="top">
          <p><strong>Verb</strong></p>
       </td>
       <td>
