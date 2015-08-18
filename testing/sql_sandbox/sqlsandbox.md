@@ -6,7 +6,7 @@ Every container has a unique name assigned, and this name can be used to connect
 
 #### Connecting to SQL Server
 
-To connect to a SQL Server instance, SQL Server Authentication must be used. In the server name field in the tool you are intending to connect to your SQL Server instance you can simply specify the SQL Server container's name. It will connect to the server on default TCP port 1433. The images are preconfigured to allow these login credentials:
+To connect to a SQL Server instance, SQL Server Authentication must be used. In the Server Name field of the tool you are intending to connect to your SQL Server instance you can simply specify the SQL Server container's name. It will connect to the server on default TCP port 1433. The images are preconfigured to allow the following login credentials:
 
 * **Login**: sa
 * **Password**: password1
