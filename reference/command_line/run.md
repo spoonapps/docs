@@ -117,7 +117,7 @@ C:\Users> spoon run -w="C:\" git/git
 Containerized applications can be distinguished from normal apps with skin layering. Passing `+skin(color)` switch after image names pulls skin layer from hub. Skin layer paints colored border around all containerized application windows.
 
 ```
-# Opens detached, containerized notepad with blue order around its window
+# Opens detached, containerized notepad with blue border around its window
 spoon run --startup-file=notepad -d clean+skin(blue)
 ```
 
