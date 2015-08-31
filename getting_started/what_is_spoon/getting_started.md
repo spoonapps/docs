@@ -92,11 +92,11 @@ Yes. Please enjoy responsibly.
 
 **Does Spoon support virtual networking?**
 
-Yes. See the `--route-add`, `--route-block`, `--link`, and `--hosts` commands.
+Yes. See the `--route-add`, `--route-block`, `--link`, `--hosts`, and `--network` commands.
 
 **Does Spoon support linking multiple containers?**
 
-Yes. See the `--link` command.
+Yes. See the `--link` and `--network` commands.
 
 **Is there a difference between server and desktop application containers?**
 
