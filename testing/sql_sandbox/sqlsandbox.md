@@ -9,7 +9,7 @@ To connect to a SQL Server instance, SQL Server Authentication must be used. In 
 * **Login**: sa
 * **Password**: password1
 
-### Getting started with MySQL
+#### Getting started with MySQL
 
 Launch the MySQL command line:
 
@@ -38,7 +38,7 @@ MYSQL> SHOW GRANTS FOR 'my_user';
 MySQL server will be accessible at http://localhost:3306
 
 
-### Getting started with MariaDB 
+#### Getting started with MariaDB 
 
 Launch the MariaDB command line:
 
@@ -47,13 +47,13 @@ Launch the MariaDB command line:
 (mar-xxxx) C:\MariaDB\bin> start "MariaDB" mysql.exe -u root
 ```
 
-### Getting started with MongoDB
+#### Getting started with MongoDB
 
 ```
 (mon-xxxx) C:\> mkdir c:\path\to\db
 (mon-xxxx) C:\> pushd "C:\Program Files (x86)\MongoDB 2.6 Standard\bin"
 (mon-xxxx) C:\> start "mongodb" mongod.exe --dbpath C:\path\to\db
-mongo localhost:port#
+mongo localhost:port
 ```
 
-* port number is shown when at the top when you run the start command (can also possibly specify on start) *
+The port number is shown when at the top when you run the start command.
