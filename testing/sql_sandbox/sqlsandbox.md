@@ -8,3 +8,52 @@ To connect to a SQL Server instance, SQL Server Authentication must be used. In 
 
 * **Login**: sa
 * **Password**: password1
+
+### Getting started with MySQL
+
+Launch the MySQL command line:
+
+```
+(mys-xxxx) C:\> pushd c:\mysql\bin
+(mys-xxxx) C:\mysql\bin> start "MySQL" mysql.exe -u root
+```
+
+Creating a new database:
+
+```
+MYSQL> SHOW DATABASES;
+MYSQL> CREATE DATABASE my_database;
+MYSQL> SHOW DATABASES;
+```
+Creating a new user and giving the user permissions to access the new database:
+
+```
+MYSQL> SELECT USER FROM mysql.user;
+MYSQL> CREATE USER 'my_user'@'%' IDENTIFIED BY 'my_password';
+MYSQL> SELECT USER FROM mysql.user;
+MYSQL> GRANT ALL PRIVILEGES ON my_database.* TO 'my_user' IDENTIFIED BY 'my_password';
+MYSQL> SHOW GRANTS FOR 'my_user';
+```
+
+MySQL server will be accessible at http://localhost:3306
+
+
+### Getting started with MariaDB 
+
+Launch the MariaDB command line:
+
+```
+(mar-xxxx) C:\> pushd c:\MariaDB\bin
+(mar-xxxx) C:\MariaDB\bin> start "MariaDB" mysql.exe -u root
+```
+
+### Getting started with MongoDB
+
+```
+(mon-xxxx) C:\> mkdir c:\path\to\db
+(mon-xxxx) C:\> pushd "C:\Program Files (x86)\MongoDB 2.6 Standard\bin"
+(mon-xxxx) C:\> start "mongodb" mongod.exe --dbpath C:\path\to\db
+mongo localhost:port#
+```
+
+* port number is shown when at the top when you run the start command (can also possibly specify on start) *
