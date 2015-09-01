@@ -1,6 +1,6 @@
-SQL Sandbox allows launching any number of preconfigured database servers and tools on a single machine. All VMs in a SQL Sandbox are connected together in a virtual network. Identically-configured database server instances run without having to worry about conflicting port numbers or instance names.
+SQL Sandbox allows launching any number of preconfigured database servers and tools on a single machine. All containers in a SQL Sandbox are connected together in a virtual network. Identically-configured database server instances run without having to worry about conflicting port numbers or instance names.
 
-Every VM has a unique name assigned, and this name can be used to connect to the VM from within the virtual network, e.g., in order to connect SSMS or other tool to a SQL Server instance. You can see the VM name in the bottom-right corner of the Sandbox page when the VM is running or below its icon at the top. It is also visible in the command prompt of the container.
+Every container has a unique name assigned, and this name can be used to connect to the container from within the virtual network, e.g., in order to connect SSMS or other tool to a SQL Server instance. You can see the container name in the bottom-right corner of the Sandbox page when the container is running or below its icon at the top. It is also visible in the command prompt of the container.
 
 #### Connecting to SQL Server
 
