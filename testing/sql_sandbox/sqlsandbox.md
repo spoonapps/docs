@@ -56,4 +56,4 @@ Launch the MariaDB command line:
 mongo localhost:port
 ```
 
-The port number is shown when at the top when you run the start command.
+The port number will be displayed in the command prompt.
