@@ -9,6 +9,17 @@ To connect to a SQL Server instance, SQL Server Authentication must be used. In 
 * **Login**: sa
 * **Password**: password1
 
+#### Getting started with LocalDB
+
+Create LocalDB instance and get its instance pipe name:
+
+```
+(sql-xxxx) sqllocaldb c <instance name> 12.0 -s
+(sql-xxxx) sqllocaldb i <instance name>
+```
+
+You can use printed instance pipe name as a server name to connect to the instance with SQL Server Management Studio.
+
 #### Getting started with MySQL
 
 Launch the MySQL command line:
