@@ -57,10 +57,10 @@ building "my image" from /path/to/spoon.me
 
 ```
 # GitHub location
-https://github.com/spoonium/docs/tree/master/doc/getting_started/tour_ii/image.png
+https://github.com/spoonapps/docs/tree/master/doc/getting_started/tour/image.png
 
 # Markdown would be
-![](/components/docs/getting_started/tour_ii/image.png)
+![](/components/docs/getting_started/tour/image.png)
 ```
 
 ### Contributing 

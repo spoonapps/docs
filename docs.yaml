@@ -6,6 +6,10 @@ documents:
   - Why use Spoon?
   - How does it work?
   - FAQ
+- title: About
+  sections:
+  - Company
+  - Contact
 ---
 topic: Testing
 documents:
