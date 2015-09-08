@@ -9,5 +9,3 @@ Spoon technology is integrated into select third-party enterprise application de
 To support our growth, we are currently enrolling partner companies into our Reseller Partner Program. This program offers solution providers the ability to enhance the value of their offerings with Spoon products and technologies.
 
 If you are interested in working with Spoon, either formally or informally, please email [partners@spoon.net](mailto:partners@spoon.net) with a brief description of your company and how you would like to work with Spoon, as well as your name, title, and contact information.
-
-![](/components/docs/getting_started/about/careers-montage.jpg)
