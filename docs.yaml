@@ -11,9 +11,11 @@ documents:
   - Company
   - Contact
 ---
-topic: Testing
+topic: Sandboxes
 documents:
-- title: Manual Browser Testing
+- title: Browser Sandbox
+  sections: []
+- title: SQL Sandbox
   sections: []
 - title: Selenium Testing
   sections:
@@ -21,19 +23,8 @@ documents:
   - Integrating Spoon with an Existing Grid
   - Testing Internal Sites
   - Testing Internet Explorer
+  - Reporting
   - Common Issues and Troubleshooting
-- title: SQL Sandbox
-  sections: []
-- title: JS Unit Testing
-  sections:
-  - Getting Started - Karma
-  - Getting Started - Mocha/Mochify
-- title: Test Reports
-  sections: []
-- title: Testing with CI
-  sections: []
-- title: Nightly Builds
-  sections: []
 ---
 topic: Contributing
 documents:
