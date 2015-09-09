@@ -1,5 +1,3 @@
-## Selenium Testing
-
 Spoon offers a solution for automated browser testing by running [Selenium](/selenium) tests on a variety of browser containers all on your local machine with minimal setup. This lets you avoid the pain and expense of setting up and maintaining a local Selenium Grid.
 
 Running your Selenium tests on Spoon is almost exactly like running them on a local Selenium Grid. What does this mean for you?
