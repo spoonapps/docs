@@ -13,11 +13,6 @@ Spoon dramatically simplifies testing:
 
 ### FAQ
 
-**Do Spoon containers work by running a full OS virtual machine?**
-
-No. Spoon containers use a special, lightweight *application-level VM* called Spoon VM. Spoon VM runs in user mode on top of a single instance
-of the base operating system.
-
 **How long does it take to start Spoon sandboxes?**
 
 Spoon sandboxes startup time is very fast -- on the order of seconds or less. (Startup time excludes any time required to download images.)
