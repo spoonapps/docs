@@ -17,7 +17,7 @@ documents:
   sections: []
 - title: SQL Sandbox
   sections: []
-- title: Selenium Testing
+- title: Selenium Sandbox
   sections:
   - Debugging Tests
   - Integrating Spoon with an Existing Grid
